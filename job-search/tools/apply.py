@@ -67,6 +67,7 @@ TEXT_RULES=[
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
  (r"^middle (name|initial)|middle name", "N/A"),
+ (r"(served|serve|service|served in|been in) (in )?(the )?(military|armed forces|u\.?s\.? military)|military (service|experience|background)", "No, I have not served in the military."),
  (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
  (r"able to travel|willing to travel|travel (for|requirements?|expectations?)|percentage of travel|% travel|days of travel|involve .{0,40}travel|travel (each|per|a) (month|week|quarter)|comfortable with .{0,20}travel", "Yes, I am comfortable with that and can travel as needed for the role."),
  (r"timeline for (starting|a new)|when (can|could|would) you (be able to )?(start|join)|how soon (can|could) you", "Immediately. I am available now with no notice period."),
