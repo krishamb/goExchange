@@ -100,6 +100,7 @@ CHOICE_RULES=[
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
  (r"previously (applied|worked|employed)|currently employed by|worked (for|at) .* before|former .{0,30}employee|current .{0,30}employee|current or former|former or current|ever (worked|been employed)|currently (work|employed)", ["No","no","Never worked","Never","None of the above","Not applicable","N/A"]),
  (r"outside business|advisory|consulting|board role|side business|conflict of interest|moonlight", ["No","no","None"]),
+ (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
