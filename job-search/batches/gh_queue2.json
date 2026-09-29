@@ -7,7 +7,9 @@
   "title": "Senior Systems Engineer, Enterprise AI Platforms",
   "comp": 242000.0,
   "loc": "Sunnyvale, CA / Bellevue, WA",
-  "posted_ts": 1790640000.0
+  "posted_ts": 1790640000.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -17,7 +19,9 @@
   "title": "Senior Software Engineer, KPI & Cryptographic Systems",
   "comp": null,
   "loc": "Hybrid",
-  "posted_ts": 1790640000.0
+  "posted_ts": 1790640000.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -27,7 +31,9 @@
   "title": "Director of Software Engineering - Distributed Systems, Serverless - Elasticsearch",
   "comp": 379300.0,
   "loc": "United States",
-  "posted_ts": 1790640000.0
+  "posted_ts": 1790640000.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -37,8 +43,10 @@
   "title": "Engineering Manager, Agentic Apps",
   "comp": 300000.0,
   "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Have you ever worked for Robinhood as an employee, intern or contractor? Note th"
+  ],
   "posted_ts": 1790553600.0
  },
  {
@@ -49,7 +57,9 @@
   "title": "Staff Software Engineer, AI Teammates",
   "comp": 282000.0,
   "loc": "San Francisco",
-  "posted_ts": 1790553600.0
+  "posted_ts": 1790553600.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -59,8 +69,23 @@
   "title": "Staff Software Engineer, Web Application Services",
   "comp": 215000.0,
   "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Tell us about a complex web product or system where you had significant responsi",
+   "Tell us about a broad technical problem where the path forward was unclear. What",
+   "Have you ever been a Thunderbird user?",
+   "Which of the following best describes your experience with open-source or commun",
+   "Which best describes your professional experience with JavaScript and your knowl",
+   "Which best describes your experience with web software architecture?",
+   "Which best describes your experience providing technical leadership?",
+   "Which best describes your experience with product management or product-focused ",
+   "Which best describes your professional experience with Python 3?",
+   "Which best describes your experience building backend web services?",
+   "How do you currently use AI-enabled tools in your work?",
+   "How many years have you worked at the Senior Software Engineer level or equivale",
+   "Which country will you be working from?",
+   "Which timezone do you reside in?"
+  ],
   "posted_ts": 1790467200.0
  },
  {
@@ -83,7 +108,9 @@
   "title": "Staff Software Engineer (Platform - Financial Engineering)",
   "comp": 256500.0,
   "loc": "Remote - USA",
-  "posted_ts": 1790294400.0
+  "posted_ts": 1790294400.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -93,7 +120,9 @@
   "title": "Senior Staff Software Engineer, Entity Management",
   "comp": 275000.0,
   "loc": "San Francisco, CA - Hybrid",
-  "posted_ts": 1790294400.0
+  "posted_ts": 1790294400.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -103,7 +132,9 @@
   "title": "Senior | Staff Software Engineer - AI / ML",
   "comp": 315000.0,
   "loc": "San Francisco, CA (Hybrid)",
-  "posted_ts": 1790294400.0
+  "posted_ts": 1790294400.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -137,7 +168,9 @@
   "title": "Staff Research Engineer, Frontier Data",
   "comp": 400000.0,
   "loc": "United States",
-  "posted_ts": 1790208000.0
+  "posted_ts": 1790208000.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -159,7 +192,9 @@
   "title": "Director, Wet Lab Engineering",
   "comp": 284000.0,
   "loc": "Somerville, MA",
-  "posted_ts": 1790208000.0
+  "posted_ts": 1790208000.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -193,7 +228,9 @@
   "title": "Staff Software Engineer - AI Compute, Together Cloud",
   "comp": 300000.0,
   "loc": "San Francisco",
-  "posted_ts": 1790121600.0
+  "posted_ts": 1790121600.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -203,7 +240,9 @@
   "title": "Senior Software Engineer, Sandboxes & Virtualization",
   "comp": 242000.0,
   "loc": "Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA",
-  "posted_ts": 1790121600.0
+  "posted_ts": 1790121600.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -213,7 +252,9 @@
   "title": "Discretionary Macro - Vice President",
   "comp": 265000.0,
   "loc": "Greenwich, CT",
-  "posted_ts": 1790121600.0
+  "posted_ts": 1790121600.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -223,7 +264,9 @@
   "title": "Senior Software Engineer - Orchestration",
   "comp": 196712.0,
   "loc": "Denver, Colorado, United States, AMER",
-  "posted_ts": 1790121600.0
+  "posted_ts": 1790121600.0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
