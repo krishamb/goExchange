@@ -9,7 +9,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -45,7 +47,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -57,7 +61,9 @@
   "loc": "Redwood City",
   "tier": 0,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -69,7 +75,9 @@
   "loc": "Silicon Valley, San Francisco Bay Area",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -93,7 +101,9 @@
   "loc": "Santa Clara",
   "tier": 0,
   "size": "SIZE_1001_5000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -105,7 +115,9 @@
   "loc": "Mountain View",
   "tier": 0,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -189,7 +201,9 @@
   "loc": "New York City, San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -201,7 +215,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_1001_5000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -285,7 +301,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -333,7 +351,9 @@
   "loc": "Mountain View",
   "tier": 0,
   "size": "SIZE_51_200",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -345,7 +365,9 @@
   "loc": "San Francisco Bay Area",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -369,17 +391,7 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4220113-founding-machine-learning-data-engineer",
-  "tag": "primitive_instruments_founding_machine_learning_data_engi",
-  "company": "Primitive Instruments",
-  "title": "Founding Machine Learning / Data Engineer",
-  "comp": 250000.0,
-  "loc": "New York City, San Francisco Bay Area",
-  "tier": 0,
+  "lang": "",
   "last_result": "(no report)",
   "last_unanswered": []
  },
@@ -417,7 +429,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -441,7 +455,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -501,7 +517,9 @@
   "loc": "Hong Kong, San Jose",
   "tier": 0,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -561,7 +579,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -657,7 +677,9 @@
   "loc": "San Jose, Oakland, San Francisco Bay Area",
   "tier": 0,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -669,7 +691,9 @@
   "loc": "San Francisco, Bengaluru, Shanghai",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -693,7 +717,9 @@
   "loc": "Denver, Los Angeles, New York City, Portland, San Diego, Sea",
   "tier": 0,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -897,7 +923,9 @@
   "loc": "San Mateo",
   "tier": 0,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -909,7 +937,9 @@
   "loc": "Boston, San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -921,7 +951,9 @@
   "loc": "San Francisco, Toronto",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -933,7 +965,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -945,7 +979,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -957,7 +993,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -969,7 +1007,9 @@
   "loc": "San Francisco, New York",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -981,7 +1021,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1017,7 +1059,9 @@
   "loc": "Redwood City",
   "tier": 0,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1041,7 +1085,9 @@
   "loc": "Santa Clara",
   "tier": 0,
   "size": "SIZE_1001_5000",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1077,7 +1123,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1113,7 +1161,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1149,7 +1199,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1161,7 +1213,9 @@
   "loc": "New York City, San Francisco Bay Area",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1221,7 +1275,9 @@
   "loc": "San Francisco, Bengaluru, Shanghai",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1269,7 +1325,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1281,7 +1339,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1293,7 +1353,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1317,7 +1379,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_1001_5000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1329,7 +1393,9 @@
   "loc": "Miami, New York City, Washington DC, San Francisco, San Jose",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1341,7 +1407,9 @@
   "loc": "San Francisco",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1365,7 +1433,9 @@
   "loc": "Miami, New York City, Washington DC, San Francisco, San Jose",
   "tier": 0,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1413,7 +1483,9 @@
   "loc": "California",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1449,7 +1521,9 @@
   "loc": "",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1461,7 +1535,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1485,7 +1561,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1509,7 +1587,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1569,7 +1649,9 @@
   "loc": "New York City",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1653,7 +1735,9 @@
   "loc": "Alabama",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1665,7 +1749,9 @@
   "loc": "Alabama",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1677,7 +1763,9 @@
   "loc": "Atlanta, Chicago, Cincinnati, Cleveland, Columbus, Dallas, D",
   "tier": 1,
   "size": "SIZE_1001_5000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1725,7 +1813,9 @@
   "loc": "Pittsburgh",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1736,7 +1826,9 @@
   "comp": 215000,
   "loc": "Massachusetts",
   "lang": "C++",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1880,7 +1972,9 @@
   "loc": "Canada, United States",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1940,7 +2034,9 @@
   "loc": "Paris",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1952,7 +2048,9 @@
   "loc": "Montreal",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2000,7 +2098,9 @@
   "loc": "Latin America",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2024,7 +2124,9 @@
   "loc": "Las Vegas",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2396,7 +2498,9 @@
   "loc": "Cleveland, Columbus, Detroit, Indianapolis, Fort Wayne, Tole",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2408,7 +2512,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2420,7 +2526,9 @@
   "loc": "Bengaluru, Hyderabad, Ahmedabad, Mumbai",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2432,7 +2540,9 @@
   "loc": "Dubai",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2444,7 +2554,9 @@
   "loc": "Nairobi, Lagos",
   "tier": 1,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2456,7 +2568,9 @@
   "loc": "Miami",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2468,7 +2582,9 @@
   "loc": "United Kingdom",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2480,7 +2596,9 @@
   "loc": "New Jersey",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2492,7 +2610,9 @@
   "loc": "Vancouver, Toronto",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2504,7 +2624,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2516,7 +2638,9 @@
   "loc": "New York",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2528,7 +2652,9 @@
   "loc": "",
   "tier": 1,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2564,7 +2690,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2576,7 +2704,9 @@
   "loc": "New York City",
   "tier": 1,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2588,7 +2718,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2612,7 +2744,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2780,7 +2914,9 @@
   "loc": "Los Angeles",
   "tier": 1,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2792,7 +2928,9 @@
   "loc": "United States",
   "tier": 1,
   "size": "SIZE_501_1000",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2936,7 +3074,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2972,7 +3112,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -2984,7 +3126,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3092,7 +3236,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3104,7 +3250,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3116,7 +3264,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3128,7 +3278,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3152,7 +3304,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3176,7 +3330,9 @@
   "loc": "New York",
   "tier": 2,
   "size": "SIZE_1_10",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3188,7 +3344,9 @@
   "loc": "Bengaluru",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3200,7 +3358,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3284,7 +3444,9 @@
   "loc": "New York",
   "tier": 2,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3320,7 +3482,9 @@
   "loc": "New York",
   "tier": 2,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3344,7 +3508,9 @@
   "loc": "New York City",
   "tier": 2,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3355,7 +3521,9 @@
   "comp": 260000,
   "loc": "Mountain View",
   "tier": 0,
-  "lang": "C++"
+  "lang": "C++",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3366,7 +3534,9 @@
   "comp": 250000,
   "loc": "San Francisco",
   "tier": 0,
-  "lang": "C++"
+  "lang": "C++",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -3377,6 +3547,8 @@
   "comp": 210000,
   "loc": "Palo Alto",
   "tier": 0,
-  "lang": "C++/Rust"
+  "lang": "C++/Rust",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
