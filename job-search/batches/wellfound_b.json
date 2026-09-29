@@ -1,53 +1,17 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748632-staff-autonomy-software-engineer-localization",
-  "tag": "kodiak_robotics_staff_autonomy_software_engineer_lo",
-  "company": "Kodiak Robotics",
-  "title": "Staff Autonomy Software Engineer, Localization ",
-  "comp": 260000,
-  "loc": "Mountain View",
-  "tier": 1,
-  "size": "SIZE_51_200",
-  "lang": "C++/Rust",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4701988-staff-site-reliability-engineer-sre",
-  "tag": "earnin_staff_site_reliability_engineer_sre",
-  "company": "EarnIn",
-  "title": "Staff Site Reliability Engineer (SRE)",
-  "comp": 308000,
-  "loc": "Mountain View",
-  "tier": 1,
-  "size": "SIZE_501_1000",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4770333-staff-engineer-data-remote-us",
-  "tag": "renew_home_staff_engineer_data_remote_us",
-  "company": "Renew Home",
-  "title": "Staff Engineer, Data (Remote, US)",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4733810-senior-manager-infrastructure",
   "tag": "netdocuments_senior_manager_infrastructure",
   "company": "NetDocuments",
   "title": "Senior Manager, Infrastructure",
   "loc": "Remote | Remote only",
   "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Have you previously been an employee of NetDocuments?",
+   "How would you describe your experience with AWS in production environments?"
+  ]
  },
  {
   "ats": "wellfound",
