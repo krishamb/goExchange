@@ -187,7 +187,7 @@ async def autocomplete_fill(page,h,text,prefer):
                 if await o.is_visible(): await o.click(timeout=3000); await page.wait_for_timeout(500); return "picked-first"
             except Exception: pass
         if n: await h.press("ArrowDown"); await h.press("Enter"); await page.wait_for_timeout(500); return "enter"
-        await page.keyboard.press("Escape"); return None   # no suggestions: Enter here would submit the form
+        await dismiss_menu(page,h); return None   # no suggestions: Enter here would submit the form
     except Exception: return None
 async def choose_select(page,h,options_pref):
     opts=await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())")
@@ -204,6 +204,23 @@ async def choose_select(page,h,options_pref):
                         return o
                     except Exception: pass
     return None
+CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
+async def dismiss_menu(page,inp=None):
+    """Close an open dropdown/autocomplete menu. Blur first: on Wellfound the Escape key closes the whole apply modal."""
+    try:
+        if inp is not None: await inp.evaluate("el=>el.blur()")
+    except Exception: pass
+    await page.wait_for_timeout(250)
+    if CUR_ATS!="wellfound":
+        try: await page.keyboard.press("Escape")
+        except Exception: pass
+async def body_text(page):
+    """document.body.innerText, tolerant of a navigation landing mid-call (e.g. Greenhouse jumping to /confirmation)."""
+    for i in range(3):
+        try: return await page.evaluate("()=>document.body.innerText")
+        except Exception:
+            if i==2: raise
+            await page.wait_for_timeout(2500)
 OPT_SEL='[role="option"]:visible:not(.iti__country), [class*="select__option"]:visible, [class*="Select__option"]:visible'
 async def visible_options(page):
     o=page.locator(OPT_SEL); n=await o.count(); t=[]
@@ -217,6 +234,12 @@ def _match(t,pref):
     if not tl or not pl: return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
     return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
+async def open_menu(control,inp):
+    """Focus a react-select: click its input, or the control when the placeholder overlays the input (Wellfound)."""
+    try: await inp.click(timeout=2000)
+    except Exception:
+        try: await control.click(timeout=3000)
+        except Exception: await inp.focus()
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
@@ -227,7 +250,7 @@ async def choose_react_select(page,control,options_pref,label):
         except Exception: return ""
     try:
         for pref in options_pref[:4]:
-            await inp.scroll_into_view_if_needed(timeout=3000); await inp.click(timeout=3000)
+            await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp)
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
             opts,texts=await visible_options(page)
@@ -238,15 +261,15 @@ async def choose_react_select(page,control,options_pref,label):
                 # no textual match: maybe options are unfiltered (async search); pick none
                 pass
             if hit is None:   # never press Enter here: with no menu match it submits the whole form
-                await inp.press("Control+A"); await inp.press("Backspace"); await page.keyboard.press("Escape"); continue
+                await inp.press("Control+A"); await inp.press("Backspace"); await dismiss_menu(page,inp); continue
             await opts.nth(hit).click(timeout=3000)
             await page.wait_for_timeout(500)
             cur=await current()
             if cur and cur.lower()!="select..." and (pref.lower()[:6] in cur.lower() or (hit is not None)): return cur[:80]
             # not selected: clear and try next preference
-            await inp.press("Control+A"); await inp.press("Backspace"); await page.keyboard.press("Escape")
+            await inp.press("Control+A"); await inp.press("Backspace"); await dismiss_menu(page,inp)
         # fallback: open the whole menu and scan every option against every preference (handles long option texts)
-        await inp.click(timeout=3000); await page.wait_for_timeout(700)
+        await open_menu(control,inp); await page.wait_for_timeout(700)
         opts,texts=await visible_options(page)
         if not texts:
             await inp.press("ArrowDown"); await page.wait_for_timeout(700); opts,texts=await visible_options(page)
@@ -262,9 +285,9 @@ async def choose_react_select(page,control,options_pref,label):
             await opts.nth(real[0]).click(timeout=3000); await page.wait_for_timeout(500)
             cur=await current()
             if cur and cur.lower()!="select...": return cur[:80]
-        await page.keyboard.press("Escape")
+        await dismiss_menu(page,inp)
     except Exception:
-        try: await page.keyboard.press("Escape")
+        try: await dismiss_menu(page,inp)
         except Exception: pass
     return None
 def fetch_email_code(max_wait=150):
@@ -430,6 +453,8 @@ async def run():
         json.dump(summary,open(f"{OUT}/batch_summary_{int(time.time())}.json","w"),indent=1)
         await b.close()
 async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
+    global CUR_ATS
+    CUR_ATS=ats
     if True:
         page=await ctx.new_page(); report={"ats":ats,"url":url,"tag":tag,"filled":{},"chosen":{},"unanswered":[],"submitted":False,"result":""}
         cl_text=""; cl_pdf=None
@@ -444,7 +469,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     report["submitted"]=True; report["result"]="ALREADY APPLIED (Wellfound shows this job as Applied)"; report["note"]="already applied earlier"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 await page.locator('button:has-text("Apply Now"), button:has-text("Apply now"), button:has-text("Apply")').first.click(timeout=10000); await page.wait_for_timeout(3500)
-                wf_body=await page.evaluate("()=>document.body.innerText")
+                wf_body=await body_text(page)
                 if re.search(r"not accepting applications from your current location|no longer accepting applications|this job is closed|position has been filled",wf_body,re.I):
                     report["result"]="NOT SUBMITTED: "+("location restricted by employer" if "current location" in wf_body else "job closed")
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
@@ -599,6 +624,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
                         cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
                         pref=[f"{cn} careers",f"{cn} website",f"{cn}.com",f"{cn} job",cn]+pref
+                        if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
                     if not pref:
                         # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
                         pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
@@ -748,10 +774,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     try: await btn.click(timeout=10000)
                     except Exception:
                         # a disabled submit button usually means the form was already sent and the code prompt is up
-                        body0=await page.evaluate("()=>document.body.innerText")
+                        body0=await body_text(page)
                         if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
                     await page.wait_for_timeout(9000)
-                    body=await page.evaluate("()=>document.body.innerText")
+                    body=await body_text(page)
                     if re.search(r"verification code|security code|confirm you.re a human",body,re.I) or await page.locator(CODE_BOXES).count():
                         if await enter_email_code(page,report,baseline):
                             await page.wait_for_timeout(800)
@@ -759,7 +785,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             except Exception:
                                 b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
                             await page.wait_for_timeout(9000)
-                            body=await page.evaluate("()=>document.body.innerText")
+                            body=await body_text(page)
                             if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
                     # Greenhouse's uploader occasionally drops the file ("Cannot read properties of undefined (reading 'uploadFile')"): re-attach and submit once more
                     errs0=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
