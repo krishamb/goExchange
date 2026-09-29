@@ -7,8 +7,10 @@
   "title": "Staff Platform Engineer",
   "comp": 220000.0,
   "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What IaC (infrastructure as code) tools have you used (ex. Terraform, Ansible, P"
+  ],
   "posted_ts": 1789344000.0
  }
 ]
