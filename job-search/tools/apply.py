@@ -809,7 +809,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         done_groups.add(gk)
                         want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
                         if want==["__ASK__"]: continue
-                        if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board"]+want   # applying through Wellfound: say so
+                        if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
+                        if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not re.search(r"linkedin",b[1],re.I)] or members   # never claim LinkedIn as the source
                         if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
                             # "which environments describe your experience (select all that apply)": tick every option true for the applicant's history
                             ticked=[]
