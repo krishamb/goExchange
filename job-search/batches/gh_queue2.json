@@ -1,6 +1,36 @@
 [
  {
   "ats": "greenhouse",
+  "url": "https://coreweave.com/careers/job?4717371006&board=coreweave&gh_jid=4717371006",
+  "tag": "coreweave_senior_systems_engineer_enterprise_",
+  "company": "coreweave",
+  "title": "Senior Systems Engineer, Enterprise AI Platforms",
+  "comp": 242000.0,
+  "loc": "Sunnyvale, CA / Bellevue, WA",
+  "posted_ts": 1790640000.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8237801?gh_jid=8237801",
+  "tag": "cloudflare_senior_software_engineer_kpi_crypto",
+  "company": "cloudflare",
+  "title": "Senior Software Engineer, KPI & Cryptographic Systems",
+  "comp": null,
+  "loc": "Hybrid",
+  "posted_ts": 1790640000.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8237959&gh_jid=8237959",
+  "tag": "elastic_director_of_software_engineering_di",
+  "company": "elastic",
+  "title": "Director of Software Engineering - Distributed Systems, Serverless - Elasticsearch",
+  "comp": 379300.0,
+  "loc": "United States",
+  "posted_ts": 1790640000.0
+ },
+ {
+  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/robinhood/jobs/8205579",
   "tag": "robinhood_engineering_manager_agentic_apps",
   "company": "robinhood",
@@ -9,6 +39,16 @@
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
+  "posted_ts": 1790553600.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.asana.com/jobs/apply/8237744?gh_jid=8237744",
+  "tag": "asana_staff_software_engineer_ai_teammate",
+  "company": "asana",
+  "title": "Staff Software Engineer, AI Teammates",
+  "comp": 282000.0,
+  "loc": "San Francisco",
   "posted_ts": 1790553600.0
  },
  {
@@ -37,6 +77,36 @@
  },
  {
   "ats": "greenhouse",
+  "url": "https://www.coinbase.com/careers/positions/8204243?gh_jid=8204243",
+  "tag": "coinbase_staff_software_engineer_platform_fi",
+  "company": "coinbase",
+  "title": "Staff Software Engineer (Platform - Financial Engineering)",
+  "comp": 256500.0,
+  "loc": "Remote - USA",
+  "posted_ts": 1790294400.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/gusto/jobs/8230894",
+  "tag": "gusto_senior_staff_software_engineer_enti",
+  "company": "gusto",
+  "title": "Senior Staff Software Engineer, Entity Management",
+  "comp": 275000.0,
+  "loc": "San Francisco, CA - Hybrid",
+  "posted_ts": 1790294400.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/snorkelai/jobs/6208931004",
+  "tag": "snorkelai_senior_staff_software_engineer_ai_m",
+  "company": "snorkelai",
+  "title": "Senior | Staff Software Engineer - AI / ML",
+  "comp": 315000.0,
+  "loc": "San Francisco, CA (Hybrid)",
+  "posted_ts": 1790294400.0
+ },
+ {
+  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/launchdarkly/jobs/8004607003",
   "tag": "launchdarkly_engineering_manager_cloud_engineeri",
   "company": "launchdarkly",
@@ -61,15 +131,13 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/gitlab/jobs/8623592002",
-  "tag": "gitlab_principal_site_reliability_engineer",
-  "company": "gitlab",
-  "title": "Principal Site Reliability Engineer, Platform Engineering: Dedicated",
-  "comp": 380400.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790121600.0
+  "url": "https://job-boards.greenhouse.io/turing/jobs/6198594004",
+  "tag": "turing_staff_research_engineer_frontier_da",
+  "company": "turing",
+  "title": "Staff Research Engineer, Frontier Data",
+  "comp": 400000.0,
+  "loc": "United States",
+  "posted_ts": 1790208000.0
  },
  {
   "ats": "greenhouse",
@@ -85,6 +153,28 @@
  },
  {
   "ats": "greenhouse",
+  "url": "https://generatebiomedicines.com/open-positions?gh_jid=4715785006",
+  "tag": "generatebiomedicines_director_wet_lab_engineering",
+  "company": "generatebiomedicines",
+  "title": "Director, Wet Lab Engineering",
+  "comp": 284000.0,
+  "loc": "Somerville, MA",
+  "posted_ts": 1790208000.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/gitlab/jobs/8623592002",
+  "tag": "gitlab_principal_site_reliability_engineer",
+  "company": "gitlab",
+  "title": "Principal Site Reliability Engineer, Platform Engineering: Dedicated",
+  "comp": 380400.0,
+  "source": "ATS board",
+  "last_result": "(no report)",
+  "last_unanswered": [],
+  "posted_ts": 1790121600.0
+ },
+ {
+  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/betterment/jobs/8212254",
   "tag": "betterment_sr_engineering_manager_api_auth_pla",
   "company": "betterment",
@@ -93,6 +183,46 @@
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
+  "posted_ts": 1790121600.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
+  "tag": "togetherai_staff_software_engineer_ai_compute_",
+  "company": "togetherai",
+  "title": "Staff Software Engineer - AI Compute, Together Cloud",
+  "comp": 300000.0,
+  "loc": "San Francisco",
+  "posted_ts": 1790121600.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://coreweave.com/careers/job?4715608006&board=coreweave&gh_jid=4715608006",
+  "tag": "coreweave_senior_software_engineer_sandboxes_",
+  "company": "coreweave",
+  "title": "Senior Software Engineer, Sandboxes & Virtualization",
+  "comp": 242000.0,
+  "loc": "Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA",
+  "posted_ts": 1790121600.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.aqr.com/jobs?gh_jid=8221812&gh_jid=8221812",
+  "tag": "aqr_discretionary_macro_vice_president",
+  "company": "aqr",
+  "title": "Discretionary Macro - Vice President",
+  "comp": 265000.0,
+  "loc": "Greenwich, CT",
+  "posted_ts": 1790121600.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.fivetran.com/careers/job?gh_jid=8003720003",
+  "tag": "fivetran_senior_software_engineer_orchestrat",
+  "company": "fivetran",
+  "title": "Senior Software Engineer - Orchestration",
+  "comp": 196712.0,
+  "loc": "Denver, Colorado, United States, AMER",
   "posted_ts": 1790121600.0
  },
  {
@@ -246,18 +376,6 @@
   "company": "appian",
   "title": "Lead Applied AI Engineer",
   "comp": 300000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789430400.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/samsara/jobs/8205146",
-  "tag": "samsara_staff_application_security_engineer",
-  "company": "samsara",
-  "title": "Staff Application Security Engineer",
-  "comp": 295000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
