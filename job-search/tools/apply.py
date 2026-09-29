@@ -93,6 +93,8 @@ CHOICE_RULES=[
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
  (r"previously (applied|worked|employed)|currently employed by|worked (for|at) .* before|former employee|current employee|current or former|former or current|ever (worked|been employed)|currently (work|employed)", ["No","no","Never worked","Never","None of the above","Not applicable","N/A"]),
+ (r"outside business|advisory|consulting|board role|side business|conflict of interest|moonlight", ["No","no","None"]),
+ (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
