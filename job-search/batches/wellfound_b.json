@@ -1,0 +1,937 @@
+[
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4751176-ai-engineer",
+  "tag": "unize_ai_engineer",
+  "company": "Unize",
+  "title": "AI Engineer",
+  "comp": null,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4716639-bioinformatics-intern-clone",
+  "tag": "utilyze_founding_engineer",
+  "company": "Utilyze",
+  "title": "Founding Engineer",
+  "comp": null,
+  "loc": "Austin, Boston, New York City, San Antonio, San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4698047-senior-applied-ai-engineer",
+  "tag": "mintlify_senior_applied_ai_engineer",
+  "company": "Mintlify",
+  "title": "Senior Applied AI Engineer",
+  "comp": 265000.0,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4777823-director-managing-director-ai-software-development",
+  "tag": "cohnreznick_director_managing_director_ai_softw",
+  "company": "CohnReznick",
+  "title": "Director/Managing Director, AI Software Development",
+  "loc": "Bay Area | Remote only",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4628460-founding-engineer",
+  "tag": "bearfoot_ai_founding_engineer",
+  "company": "Bearfoot AI",
+  "title": "Founding Engineer",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4706707-founding-engineer",
+  "tag": "leadervest_founding_engineer",
+  "company": "Leadervest",
+  "title": "Founding Engineer",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4726517-head-of-engineering",
+  "tag": "pi_security_head_of_engineering",
+  "company": "Pi Security",
+  "title": "Head of Engineering",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4602558-director-ai-platform-reliability",
+  "tag": "logicmonitor_director_ai_platform_reliability",
+  "company": "LogicMonitor",
+  "title": "Director, AI Platform Reliability",
+  "loc": "Bay Area | ?",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4644368-field-cto",
+  "tag": "weave_field_cto",
+  "company": "Weave",
+  "title": "Field CTO",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4748744-founding-engineer",
+  "tag": "fig_ai_founding_engineer",
+  "company": "Fig AI",
+  "title": "Founding Engineer",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4709944-senior-ai-ml-engineer",
+  "tag": "oryn_senior_ai_ml_engineer",
+  "company": "Oryn",
+  "title": "Senior AI/ML Engineer",
+  "comp": 160000.0,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4692109-senior-staff-software-engineer-agent",
+  "tag": "embedding_vc_senior_staff_software_engineer_agen",
+  "company": "Embedding VC",
+  "title": "Senior/Staff Software Engineer, Agent",
+  "comp": null,
+  "loc": "San Francisco",
+  "tier": 0,
+  "size": "SIZE_1_10",
+  "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/3704625-member-of-technical-staff-discovery-applications",
+  "tag": "mithrl_member_of_technical_staff_discovery",
+  "company": "Mithrl",
+  "title": "Member of Technical Staff, Discovery Applications",
+  "comp": 220000.0,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4775043-director-of-engineering",
+  "tag": "dynamism_io_director_of_engineering",
+  "company": "Dynamism.io",
+  "title": "Director of Engineering",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4755856-engineering-manager-dashboard",
+  "tag": "vercel_engineering_manager_dashboard",
+  "company": "Vercel",
+  "title": "Engineering Manager, Dashboard",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4710795-member-of-technical-staff-tlm-context-engineering",
+  "tag": "profound_member_of_technical_staff_tlm_conte",
+  "company": "Profound",
+  "title": "Member of Technical Staff, TLM, Context Engineering",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4682096-director-of-engineering",
+  "tag": "cushman_wakefield_director_of_engineering",
+  "company": "Cushman & Wakefield",
+  "title": "Director of Engineering",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4597817-engineering-manager",
+  "tag": "clever_engineering_manager",
+  "company": "Clever",
+  "title": "Engineering Manager",
+  "loc": "Bay Area | ?",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4163036-2-machine-learning-engineer",
+  "tag": "zenos_machine_learning_engineer",
+  "company": "Zenos",
+  "title": "Machine Learning Engineer",
+  "comp": 330000,
+  "loc": "Silicon Valley, San Francisco Bay Area",
+  "tier": 0,
+  "size": "SIZE_1_10",
+  "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4704687-senior-ai-ml-engineer",
+  "tag": "healmenow_senior_ai_ml_engineer",
+  "company": "Healmenow",
+  "title": "Senior AI/ML Engineer",
+  "comp": null,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4780522-engineering-manager-ai",
+  "tag": "deuna_engineering_manager_ai",
+  "company": "DEUNA",
+  "title": "Engineering Manager AI",
+  "loc": "Bay Area | Remote only",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/3909914-hpc-gpu-cluster-architect",
+  "tag": "san_francisco_compute_co_hpc_gpu_cluster_architect",
+  "company": "San Francisco Compute Company",
+  "title": "HPC/ GPU Cluster Architect",
+  "comp": 300000.0,
+  "loc": "San Francisco",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4775637-technical-lead-autonomy-evaluation",
+  "tag": "atoms_technical_lead_autonomy_evaluation",
+  "company": "Atoms",
+  "title": "Technical Lead - Autonomy Evaluation",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4756207-engineering-manager-parcel",
+  "tag": "doordash_engineering_manager_parcel",
+  "company": "DoorDash",
+  "title": "Engineering Manager, Parcel",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4696400-engineering-manager-of-managers-service-infrastructure",
+  "tag": "stripe_engineering_manager_of_managers_ser",
+  "company": "Stripe",
+  "title": "Engineering Manager of Managers, Service Infrastructure",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4686808-engineering-lead-engineering-manager-san-francisco",
+  "tag": "syndesus_engineering_lead_engineering_manage",
+  "company": "Syndesus",
+  "title": "Engineering Lead / Engineering Manager (San Francisco)",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4586115-senior-engineering-manager-estimation",
+  "tag": "hover_senior_engineering_manager_estimati",
+  "company": "HOVER",
+  "title": "Senior Engineering Manager, Estimation",
+  "loc": "Bay Area | In office",
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4102530-founding-engineer",
+  "tag": "wyshlist_founding_engineer_cto",
+  "company": "WyshList",
+  "title": "Founding Engineer (CTO)",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4757847-senior-director-ai-engineering-remote",
+  "tag": "wcg_senior_director_ai_engineering_remo",
+  "company": "WCG",
+  "title": "Senior Director, AI Engineering (Remote)",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4612616-cto-founding-engineer-scalyx",
+  "tag": "scalyx_ai_cto_founding_engineer_scalyx",
+  "company": "Scalyx AI",
+  "title": "CTO / Founding Engineer \u2014 Scalyx",
+  "loc": "Remote | Onsite or remote",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4704716-senior-manager-ai-deployment",
+  "tag": "general_motors_senior_manager_ai_deployment",
+  "company": "General Motors",
+  "title": "Senior Manager, AI Deployment",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4755423-engineering-manager-asset-personalization-platform",
+  "tag": "netflix_engineering_manager_asset_personali",
+  "company": "Netflix",
+  "title": "Engineering Manager - Asset Personalization Platform",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4734197-senior-engineering-manager-wirecutter",
+  "tag": "the_new_york_times_senior_engineering_manager_wirecutt",
+  "company": "The New York Times",
+  "title": "Senior Engineering Manager, Wirecutter",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4728045-cloud-platform-technical-lead",
+  "tag": "peraton_labs_cloud_platform_technical_lead",
+  "company": "Peraton Labs",
+  "title": "Cloud Platform Technical Lead",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4657024-founding-engineer",
+  "tag": "coda_founding_engineer",
+  "company": "Coda",
+  "title": "Founding Engineer",
+  "loc": "Remote | Onsite or remote",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4677915-engineering-manager-hands-on-product-engineering",
+  "tag": "satoriq_engineering_manager_hands_on_produc",
+  "company": "satoriq",
+  "title": "Engineering Manager \u2014 Hands-On Product Engineering",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4598048-backend-engineering-manager",
+  "tag": "dragos_backend_engineering_manager",
+  "company": "Dragos",
+  "title": "Backend Engineering Manager",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4748632-staff-autonomy-software-engineer-localization",
+  "tag": "kodiak_robotics_staff_autonomy_software_engineer_lo",
+  "company": "Kodiak Robotics",
+  "title": "Staff Autonomy Software Engineer, Localization ",
+  "comp": 260000,
+  "loc": "Mountain View",
+  "tier": 1,
+  "size": "SIZE_51_200",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4761610-director-ai-delivery-onboarding-enrollment",
+  "tag": "the_standard_director_ai_delivery_onboarding_enr",
+  "company": "The Standard",
+  "title": "Director, AI Delivery - Onboarding & Enrollment",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4701988-staff-site-reliability-engineer-sre",
+  "tag": "earnin_staff_site_reliability_engineer_sre",
+  "company": "EarnIn",
+  "title": "Staff Site Reliability Engineer (SRE)",
+  "comp": 308000,
+  "loc": "Mountain View",
+  "tier": 1,
+  "size": "SIZE_501_1000",
+  "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4702699-sr-manager-software-engineering-machine-learning-simulations",
+  "tag": "upstart_sr_manager_software_engineering_mac",
+  "company": "Upstart",
+  "title": "Sr. Manager, Software Engineering - Machine Learning Simulations",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4770333-staff-engineer-data-remote-us",
+  "tag": "renew_home_staff_engineer_data_remote_us",
+  "company": "Renew Home",
+  "title": "Staff Engineer, Data (Remote, US)",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4756117-manager-engineering",
+  "tag": "sailpoint_technologies_manager_engineering",
+  "company": "Sailpoint Technologies",
+  "title": "Manager, Engineering",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4733810-senior-manager-infrastructure",
+  "tag": "netdocuments_senior_manager_infrastructure",
+  "company": "NetDocuments",
+  "title": "Senior Manager, Infrastructure",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4725807-product-tech-lead",
+  "tag": "motley_fool_product_tech_lead",
+  "company": "Motley Fool",
+  "title": "Product Tech Lead",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4627365-founding-engineer",
+  "tag": "guile_founding_engineer",
+  "company": "Guile",
+  "title": "Founding Engineer",
+  "loc": "Remote | Onsite or remote",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4686584-vp-engineering",
+  "tag": "cotiviti_vp_engineering",
+  "company": "COTIVITI",
+  "title": "VP Engineering",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4753820-engineering-manager",
+  "tag": "delawarelife_engineering_manager",
+  "company": "DelawareLife",
+  "title": "Engineering Manager",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4735362-software-engineer-parsing-principal-staff-senior",
+  "tag": "allspice_io_software_engineer_parsing_principal",
+  "company": "AllSpice.io",
+  "title": "Software Engineer - Parsing (Principal/Staff/Senior)",
+  "comp": null,
+  "loc": "Boston, San Francisco",
+  "tier": 1,
+  "size": "SIZE_11_50",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4754786-data-engineering-manager-ecommerce-fulfillment",
+  "tag": "dick_s_sporting_goods_data_engineering_manager_ecommerce_",
+  "company": "Dick's Sporting Goods",
+  "title": "Data Engineering Manager \u2013 eCommerce & Fulfillment",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/3278567-head-of-engineering-ai-stack",
+  "tag": "cityzeen_head_of_engineering_ai_stack",
+  "company": "CityZeen",
+  "title": "Head of Engineering - AI Stack",
+  "loc": "Remote | Onsite or remote",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4723500-vp-ai-platform",
+  "tag": "hotel_engine_vp_ai_platform",
+  "company": "Hotel Engine",
+  "title": "VP, AI Platform",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4760993-manager-software-engineering",
+  "tag": "computer_services_csi_manager_software_engineering",
+  "company": "Computer Services (CSI)",
+  "title": "Manager, Software Engineering",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4750513-engineering-manager-trm",
+  "tag": "topstep_engineering_manager_trm",
+  "company": "Topstep",
+  "title": "Engineering Manager, TRM",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4629917-head-of-engineering",
+  "tag": "minervini_private_access_head_of_engineering",
+  "company": "Minervini Private Access",
+  "title": "Head of Engineering",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4225557-forward-deployed-engineer",
+  "tag": "statecraft_forward_deployed_engineer",
+  "company": "Statecraft",
+  "title": "Forward Deployed Engineer",
+  "loc": "Remote | Onsite or remote",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4648195-ai-engineering-manager-digital-transformation-innovation",
+  "tag": "bdo_usa_ai_engineering_manager_digital_tran",
+  "company": "BDO USA",
+  "title": "AI Engineering Manager, Digital Transformation & Innovation",
+  "loc": "Remote | Remote only",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4246013-vp-head-of-engineering-portfolio-company-role",
+  "tag": "equal_ventures_vp_head_of_engineering_portfolio_co",
+  "company": "Equal Ventures",
+  "title": "VP / Head of Engineering (Portfolio Company Role)",
+  "loc": "Remote | ?",
+  "tier": 1
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4266274-applied-ai-ml-engineer",
+  "tag": "mahway_applied_ai_ml_engineer",
+  "company": "Mahway",
+  "title": "Applied AI/ML Engineer",
+  "comp": null,
+  "loc": "Lima",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/3346686-agentic-engineer-voice-ai",
+  "tag": "super_agentic_engineer_voice_ai",
+  "company": "Super",
+  "title": "Agentic Engineer (Voice AI)",
+  "comp": 80000.0,
+  "loc": "Los Angeles, New York City",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4697895-principal-founding-engineer-full-stack-typescript-node-js-react-aws",
+  "tag": "employvision_principal_founding_engineer_full_st",
+  "company": "Employvision",
+  "title": "Principal Founding Engineer - Full Stack (TypeScript, Node.js, React, AWS)",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4701959-machine-learning-engineer-ii-ml-systems-models-and-analysis",
+  "tag": "clear_demand_machine_learning_engineer_ii_ml_sys",
+  "company": "Clear Demand",
+  "title": "Machine Learning Engineer II- ML Systems, Models and Analysis",
+  "comp": null,
+  "loc": "Chennai",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4762584-founding-engineer",
+  "tag": "mlabs_founding_engineer",
+  "company": "MLabs",
+  "title": "Founding Engineer",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4779603-director-engineering-lead-portfolio-performance-reporting",
+  "tag": "bny_director_engineering_lead_portfolio",
+  "company": "BNY",
+  "title": "Director, Engineering Lead \u2013 Portfolio Performance Reporting",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4768188-lead-engineer-engineering-edge-product-suite",
+  "tag": "noodle_partners_lead_engineer_engineering_edge_prod",
+  "company": "Noodle Partners",
+  "title": "Lead Engineer, Engineering (EDge Product Suite)",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4733523-tech-lead-manager",
+  "tag": "charta_health_tech_lead_manager",
+  "company": "Charta Health",
+  "title": "Tech Lead Manager",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4696759-engineering-manager-property-management",
+  "tag": "theguarantors_engineering_manager_property_manage",
+  "company": "TheGuarantors",
+  "title": "Engineering Manager - Property Management",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4721612-head-of-technology",
+  "tag": "john_varvatos_head_of_technology",
+  "company": "John Varvatos",
+  "title": "Head of Technology",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4656969-senior-manager-software-engineering",
+  "tag": "metropolis_senior_manager_software_engineering",
+  "company": "Metropolis",
+  "title": "Senior Manager, Software Engineering",
+  "loc": "NYC | ?",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4626191-engineering-manager-platform-engineering",
+  "tag": "gibson_dunn_crutcher_engineering_manager_platform_engine",
+  "company": "Gibson Dunn & Crutcher",
+  "title": "Engineering Manager, Platform Engineering",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4751823-machine-learning-engineer-personalization",
+  "tag": "constructor_io_machine_learning_engineer_personali",
+  "company": "Constructor.io",
+  "title": "Machine Learning Engineer: Personalization",
+  "comp": 120000.0,
+  "loc": "United Kingdom",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4722710-forward-deployed-data-engineer-iv-databricks",
+  "tag": "e_source_forward_deployed_data_engineer_iv_d",
+  "company": "E Source",
+  "title": "Forward Deployed Data Engineer IV, Databricks",
+  "comp": 200000.0,
+  "loc": "United States",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4756951-senior-engineering-manager-product-engineering",
+  "tag": "secfix_senior_engineering_manager_product_",
+  "company": "Secfix",
+  "title": "Senior Engineering Manager, Product Engineering",
+  "comp": null,
+  "loc": "Munich",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4728460-director-text-to-speech-synthesis-research",
+  "tag": "deepgram_director_text_to_speech_synthesis_r",
+  "company": "Deepgram",
+  "title": "Director, Text-to-Speech Synthesis Research",
+  "comp": 328000.0,
+  "loc": "",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4163102-founding-engineer",
+  "tag": "octozi_founding_engineer",
+  "company": "Octozi",
+  "title": "Founding Engineer",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4693309-founding-engineer-applied-ai",
+  "tag": "pockyt_formerly_known_as_yuansfer_founding_engineer_applied_ai",
+  "company": "Pockyt (formerly known as Yuansfer)",
+  "title": "Founding Engineer, Applied AI",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4755087-engineering-manager-advisor-experience",
+  "tag": "addepar_engineering_manager_advisor_experie",
+  "company": "Addepar",
+  "title": "Engineering Manager, Advisor Experience",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4736783-supervising-lead-engineer",
+  "tag": "e_j_electric_co_supervising_lead_engineer",
+  "company": "E-J Electric Co.",
+  "title": "Supervising Lead Engineer",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4710062-director-data-engineering",
+  "tag": "squire_director_data_engineering",
+  "company": "SQUIRE",
+  "title": "Director, Data Engineering",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4562732-sr-engineering-manager-pendo-for-agents",
+  "tag": "pendo_sr_engineering_manager_pendo_for_ag",
+  "company": "Pendo",
+  "title": "Sr. Engineering Manager - Pendo for Agents",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4235669-cto",
+  "tag": "settle_data_cto",
+  "company": "Settle Data",
+  "title": "CTO",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4719200-founding-engineer-dreamlever-ny",
+  "tag": "scope_labs_founding_engineer_dreamlever_ny",
+  "company": "Scope Labs",
+  "title": "Founding Engineer (DreamLever) - NY",
+  "loc": "NYC | ?",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4751482-staff-principal-software-engineer-ai-platform-contract",
+  "tag": "just_whole_care_staff_principal_software_engineer_a",
+  "company": "Just Whole Care",
+  "title": "Staff/Principal Software Engineer \u2014 AI Platform (contract)",
+  "comp": 340000,
+  "loc": "California",
+  "tier": 2,
+  "size": "SIZE_11_50",
+  "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4722512-lead-frontend-engineer-clone",
+  "tag": "niuro_senior_ai_engineer",
+  "company": "Niuro",
+  "title": "Senior AI Engineer",
+  "comp": 42000.0,
+  "loc": "Santiago",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4714863-ai-engineer",
+  "tag": "consumer_physical_ai_ai_engineer",
+  "company": "Consumer Physical AI",
+  "title": "AI Engineer",
+  "comp": null,
+  "loc": "California",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4775539-head-of-engineering-ai-healthcare-rcm-platform",
+  "tag": "d_e_shaw_co_head_of_engineering_ai_healthcare_r",
+  "company": "D.E. Shaw & Co.",
+  "title": "Head of Engineering & AI, Healthcare RCM Platform",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4546028-founding-engineer",
+  "tag": "thunder_founding_engineer",
+  "company": "Thunder",
+  "title": "Founding Engineer",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4771600-principal-engineer-migration-and-modernization",
+  "tag": "google_principal_engineer_migration_and_mo",
+  "company": "Google",
+  "title": "Principal Engineer, Migration and Modernization",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4732535-engineering-manager-head-of-engineering-dragonfly-portfolio",
+  "tag": "dragonfly_engineering_manager_head_of_enginee",
+  "company": "Dragonfly",
+  "title": "Engineering Manager / Head of Engineering - Dragonfly Portfolio",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4627510-manager-engineering",
+  "tag": "garner_health_manager_engineering",
+  "company": "Garner Health",
+  "title": "Manager, Engineering",
+  "loc": "NYC | ?",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4703705-environmental-engineering-director",
+  "tag": "stv_environmental_engineering_director",
+  "company": "STV",
+  "title": "Environmental Engineering Director",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4695094-head-of-engineering",
+  "tag": "trybe_head_of_engineering",
+  "company": "Trybe",
+  "title": "Head of Engineering",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4626856-simulation-engineering-manager",
+  "tag": "aaru_simulation_engineering_manager",
+  "company": "Aaru",
+  "title": "Simulation Engineering Manager",
+  "loc": "NYC | In office",
+  "tier": 2
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4762995-software-engineer-staff",
+  "tag": "check_software_engineer_staff",
+  "company": "Check",
+  "title": "Software Engineer, Staff",
+  "comp": 264000.0,
+  "loc": "United States",
+  "tier": 3
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4185263-staff-software-engineer",
+  "tag": "nextpatient_staff_software_engineer",
+  "company": "NextPatient",
+  "title": "Staff Software Engineer",
+  "comp": 300000,
+  "loc": "United States",
+  "tier": 3,
+  "size": "SIZE_11_50",
+  "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4735113-forward-deployed-engineer",
+  "tag": "zaimler_ai_forward_deployed_engineer",
+  "company": "zaimler.ai",
+  "title": "Forward Deployed Engineer",
+  "comp": null,
+  "loc": "New York City",
+  "tier": 4
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4664591-principal-engineer-digital-engineering",
+  "tag": "thresh_consulting_principal_engineer_digital_engineer",
+  "company": "Thresh Consulting",
+  "title": "Principal Engineer, Digital Engineering",
+  "comp": 250000.0,
+  "loc": "Chicago, Denver, New York City",
+  "tier": 4
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4766823-forward-deployed-engineer",
+  "tag": "domino_data_lab_forward_deployed_engineer",
+  "company": "Domino Data Lab",
+  "title": "Forward Deployed Engineer",
+  "comp": 200000.0,
+  "loc": "New York City",
+  "tier": 4
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4697823-forward-deployed-engineer",
+  "tag": "robotmoney_forward_deployed_engineer",
+  "company": "RobotMoney",
+  "title": "Forward Deployed Engineer",
+  "comp": 200000,
+  "loc": "New York City",
+  "tier": 4,
+  "size": "SIZE_1_10",
+  "lang": ""
+ }
+]
