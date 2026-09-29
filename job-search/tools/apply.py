@@ -678,24 +678,28 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 try: await btn.click(timeout=10000)
                 except Exception:
                     # a disabled submit button usually means the form was already sent and the code prompt is up
-                    body0=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
+                    body0=await page.evaluate("()=>document.body.innerText")
                     if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
                 await page.wait_for_timeout(9000)
-                body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
-                if re.search(r"verification code|security code|confirm you.re a human",body,re.I):
+                body=await page.evaluate("()=>document.body.innerText")
+                CODE_BOXES='input[autocomplete="one-time-code"]:visible, [class*="security-code"] input:visible, [class*="securityCode"] input:visible, input[name*="security_code"]:visible'
+                if re.search(r"verification code|security code|confirm you.re a human",body,re.I) or await page.locator(CODE_BOXES).count():
                     if await enter_email_code(page,report,baseline):
                         await page.wait_for_timeout(800)
                         try: await btn.click(timeout=10000)
                         except Exception:
                             b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
                         await page.wait_for_timeout(9000)
-                        body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
+                        body=await page.evaluate("()=>document.body.innerText")
                         if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
-                ok=bool(re.search(r"thank you|thanks for applying|application (has been |was )?(submitted|received|sent)|we('ve| have) received|successfully|you're all set|applied",body,re.I)) and not re.search(r"needs corrections|missing entry|is required|please (fill|complete)",body,re.I)
+                sm=re.search(r"thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was )?(submitted|received|sent)|we('ve| have) received your application|successfully submitted|you're all set",body,re.I)
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)
                 if m: errs=errs+[f"missing: {x.strip()}" for x in m]
-                report["submitted"]=ok; report["result"]=body[:400].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
+                still_code=await page.locator(CODE_BOXES).count()
+                ok=bool(sm) and not still_code and not any(re.search(r"required|invalid|correct|missing",e,re.I) for e in errs)
+                if still_code and not ok: errs.append("still on the security-code step")
+                report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
                 await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
             elif submit: report["result"]="NOT SUBMITTED: unanswered required questions"
         except Exception as e:
