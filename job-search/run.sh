@@ -17,7 +17,7 @@ for f in profile.json answers.json Ambarish_Krishnamurthy_Resume.pdf Ambarish_Kr
   if [ ! -f "$JOBS_DIR/$f" ]; then
     # try to pick it up from ~/Downloads automatically
     case "$f" in
-      Ambarish_Krishnamurthy_Resume.pdf) src=$(ls -t "$HOME"/Downloads/*Distinguished_Architect*.pdf 2>/dev/null | head -1 || true);;
+      Ambarish_Krishnamurthy_Resume.pdf) src=$(ls -t "$HOME"/Downloads/*Resume*.pdf "$HOME"/Downloads/*Distinguished_Architect*.pdf 2>/dev/null | head -1 || true);;
       Ambarish_Krishnamurthy_Cover_Letter.pdf) src=$(ls -t "$HOME"/Downloads/*Cover_Letter*.pdf 2>/dev/null | head -1 || true);;
       *) src=$(ls -t "$HOME"/Downloads/$f 2>/dev/null | head -1 || true);;
     esac
@@ -29,11 +29,11 @@ if [ "$missing" = 1 ]; then
 fi
 # The Greenhouse batches (cloud_gh_01/02) were submitted from the cloud session; only Ashby + Lever remain.
 # Ashby rejects cloud IPs as "possible spam" and Lever shows hCaptcha, so these must run from your own computer.
-echo "== 3/4 submitting batches (a Chrome window will open; leave it alone; solve any hCaptcha it shows)"
-for b in job-search/batches/local_01.json job-search/batches/local_02.json; do
+echo "== 3/4 submitting batches, one application every few minutes (a Chrome window will open; leave it alone; solve any hCaptcha it shows)"
+for b in job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
   [ -f "$b" ] || continue
   echo "---- $b"
-  $PY job-search/tools/apply.py batch "$b" --submit --headed || true
+  $PY job-search/tools/apply.py batch "$b" --submit --headed --pace 45 150 || true
 done
 
 echo "== 4/4 summary"
