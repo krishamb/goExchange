@@ -171,17 +171,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/sim/b26bbbec-f7cb-446a-8882-3f3d034c24d8",
-  "tag": "sim_forward_deployed_engineer",
-  "company": "sim",
-  "title": "Forward Deployed Engineer",
-  "comp": "$190K \u2013 $250K \u2022 0.25% \u2013 0.4%",
-  "loc": "San Francisco (OnSite)",
-  "posted_ts": 1790291761,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/goaly/70f6bbdd-e300-4a47-9875-ba2dfa4ded18",
   "tag": "goaly_founding_senior_applied_ai_enginee",
   "company": "goaly",
@@ -233,17 +222,6 @@
   "comp": "$200K \u2013 $300K \u2022 Offers Equity \u2022 Offers Bonus",
   "loc": "Palo Alto (Hybrid)",
   "posted_ts": 1790270111,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cardless/000459a0-7087-4dfb-911b-1ceab10e986e",
-  "tag": "cardless_forward_deployed_engineer",
-  "company": "cardless",
-  "title": "Forward Deployed Engineer",
-  "comp": "$190,000 - $295,000 ",
-  "loc": "San Francisco (OnSite)",
-  "posted_ts": 1790263797,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -413,6 +391,17 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/futureproofing/dfd25467-5a2d-4ddf-86ed-cad95fff8154",
+  "tag": "futureproofing_founding_ai_engineer",
+  "company": "futureproofing",
+  "title": "Founding AI Engineer ",
+  "comp": null,
+  "loc": "New York Official",
+  "posted_ts": 1790640000.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/true-talent-solutions-partners/ef60d418-9959-4213-83c9-1b1b4dd41394",
   "tag": "true_talent_solutions_partners_member_of_technical_staff_ml_system",
   "company": "true-talent-solutions-partners",
@@ -431,6 +420,28 @@
   "comp": 230000.0,
   "loc": "Remote - US",
   "posted_ts": 1789948800.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae",
+  "tag": "openai_applied_ai_engineer_digital_natives",
+  "company": "openai",
+  "title": "Applied AI Engineer, Digital Natives",
+  "comp": 278000.0,
+  "loc": "New York City",
+  "posted_ts": 1790640000.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/suno/f83463c2-2e7a-441e-85e9-9e509c9bac7e",
+  "tag": "suno_senior_staff_behavioral_engineer",
+  "company": "suno",
+  "title": "Senior / Staff Behavioral Engineer",
+  "comp": 363510.0,
+  "loc": "NYC",
+  "posted_ts": 1790640000.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -475,6 +486,39 @@
   "comp": 297000.0,
   "loc": "San Francisco",
   "posted_ts": 1790121600.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/pear-vc/ea6c119f-521b-40d5-9c0a-f6af6dfcda92",
+  "tag": "pear_vc_head_of_ai_deployment",
+  "company": "pear-vc",
+  "title": "Head of AI Deployment",
+  "comp": null,
+  "loc": "New York City",
+  "posted_ts": 1790121600.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/modal/9b33ebe7-e829-4f03-97ba-5c94dbd7daf6",
+  "tag": "modal_member_of_technical_staff_systems",
+  "company": "modal",
+  "title": "Member of Technical Staff - Systems",
+  "comp": 300000.0,
+  "loc": "New York",
+  "lang": "Rust",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cohere/2a989030-6d14-4924-88c1-d878911e26fa",
+  "tag": "cohere_member_of_technical_staff_model_eff",
+  "company": "cohere",
+  "title": "Member of Technical Staff, Model Efficiency",
+  "comp": 535000.0,
+  "loc": "New York",
+  "lang": "C++/Rust",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -651,18 +695,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/greptile/4cd025e1-dc19-4d78-bc3b-677e117d26f6/application",
-  "tag": "greptile_staff_generalist_engineer",
-  "company": "greptile",
-  "title": "Staff Generalist Engineer",
-  "comp": 750000.0,
-  "geo": "Bay Area",
-  "age": 20,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Edison%20Scientific/059399ca-4f0c-454d-ba18-c9d064c13f27/application",
   "tag": "edison_scientific_member_of_technical_staff_principal_infras",
   "company": "Edison Scientific",
@@ -687,18 +719,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/unify/07590b87-dc35-4375-8738-6482ea9998dd/application",
-  "tag": "unify_staff_software_engineer_platform",
-  "company": "unify",
-  "title": "Staff Software Engineer, Platform",
-  "comp": 295000.0,
-  "geo": "Bay Area",
-  "age": 28,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/airbyte/cbf66746-9e2a-4b23-a208-a6d78eb5ec63/application",
   "tag": "airbyte_senior_solutions_architect",
   "company": "airbyte",
@@ -706,18 +726,6 @@
   "comp": 255000.0,
   "geo": "NYC/Remote",
   "age": 13,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/tennr/3d7a5bf5-e1b0-4efd-a98a-7946b0fd5aab/application",
-  "tag": "tennr_principal_health_systems",
-  "company": "tennr",
-  "title": "Principal, Health Systems",
-  "comp": 500000.0,
-  "geo": "NYC (>350K)",
-  "age": 14,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },
@@ -2136,6 +2144,17 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/ramp/465799ed-c58b-4c6a-a290-2e95b52ef0bb",
+  "tag": "ramp_tech_lead_and_manager_tlm_productio",
+  "company": "ramp",
+  "title": "Tech Lead and Manager (TLM), Production Engineering",
+  "comp": 330000.0,
+  "loc": "New York, NY (HQ)",
+  "posted_ts": 1790553600.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/horizon3ai/2f20ccd7-cdeb-44c0-8aef-3981be23602f",
   "tag": "horizon3ai_senior_backend_engineer_integration",
   "company": "horizon3ai",
@@ -2425,6 +2444,18 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/tennr/3d7a5bf5-e1b0-4efd-a98a-7946b0fd5aab/application",
+  "tag": "tennr_principal_health_systems",
+  "company": "tennr",
+  "title": "Principal, Health Systems",
+  "comp": 500000.0,
+  "geo": "NYC (>350K)",
+  "age": 14,
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/tennr/3d7a5bf5-e1b0-4efd-a98a-7946b0fd5aab",
   "tag": "tennr_principal_health_systems",
   "company": "tennr",
@@ -2465,12 +2496,35 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cardless/000459a0-7087-4dfb-911b-1ceab10e986e",
+  "tag": "cardless_forward_deployed_engineer",
+  "company": "cardless",
+  "title": "Forward Deployed Engineer",
+  "comp": "$190,000 - $295,000 ",
+  "loc": "San Francisco (OnSite)",
+  "posted_ts": 1790263797,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/cardless/000459a0-7087-4dfb-911b-1ceab10e986e?utm_source=gOvdmb8yOp",
   "tag": "cardless_forward_deployed_engineer",
   "company": "Cardless",
   "title": "Forward Deployed Engineer",
   "comp": 295000.0,
   "source": "Indeed",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/unify/07590b87-dc35-4375-8738-6482ea9998dd/application",
+  "tag": "unify_staff_software_engineer_platform",
+  "company": "unify",
+  "title": "Staff Software Engineer, Platform",
+  "comp": 295000.0,
+  "geo": "Bay Area",
+  "age": 28,
+  "answers": {},
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2515,6 +2569,17 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/sim/b26bbbec-f7cb-446a-8882-3f3d034c24d8",
+  "tag": "sim_forward_deployed_engineer",
+  "company": "sim",
+  "title": "Forward Deployed Engineer",
+  "comp": "$190K \u2013 $250K \u2022 0.25% \u2013 0.4%",
+  "loc": "San Francisco (OnSite)",
+  "posted_ts": 1790291761,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/sim/b26bbbec-f7cb-446a-8882-3f3d034c24d8?utm_source=rzJDo2na2J",
   "tag": "sim_forward_deployed_engineer",
   "company": "SIM",
@@ -2541,6 +2606,18 @@
   "title": "Senior/Staff Software Engineer, Kubernetes Infrastructure",
   "comp": 250000.0,
   "source": "Indeed",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/greptile/4cd025e1-dc19-4d78-bc3b-677e117d26f6/application",
+  "tag": "greptile_staff_generalist_engineer",
+  "company": "greptile",
+  "title": "Staff Generalist Engineer",
+  "comp": 750000.0,
+  "geo": "Bay Area",
+  "age": 20,
+  "answers": {},
   "email": "amba_rish@hotmail.com"
  },
  {
