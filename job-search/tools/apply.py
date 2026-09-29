@@ -53,7 +53,7 @@ CHOICE_RULES=[
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
- (r"gender|sex\b", ["Male","Man"]),
+ (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"race|ethnicit", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Prefer not to say","Prefer not to answer","I do not wish to answer"]),
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
@@ -165,6 +165,7 @@ async def run():
         summary=[]
         for job in jobs:
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
+            ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors")})
             print(json.dumps(summary[-1])[:600]); sys.stdout.flush()
@@ -214,7 +215,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             # resume upload first (autofill may follow)
             files=page.locator('input[type="file"]'); nf=await files.count()
             for i in range(nf):
-                f=files.nth(i); lab=(await label_of(f)).lower()
+                f=files.nth(i)
+                try: lab=(await label_of(f)).lower()
+                except Exception: continue
                 try:
                     if re.search(r"cover",lab): await f.set_input_files(cl_pdf or P.get("cover_letter",P["resume"])); report["filled"]["cover_letter"]="uploaded"
                     elif i==0 or re.search(r"resume|cv",lab): await f.set_input_files(P["resume"]); report["filled"]["resume"]="uploaded"
@@ -305,6 +308,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     qlab=re.sub(r"\s+"," ",qlab).replace("✱","").strip()
                     opts=[]
                     for x in hs: opts.append(((await x.get_attribute("value")) or "", await label_of(x)))
+                    if not qlab or qlab.lower() in [o[1].lower() for o in opts]:
+                        # label picked an option text; walk up further for the question text
+                        qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<200) return prev.innerText; p=p.parentElement;} return '';}")
+                        qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip()
+                        if qlab2 and qlab2.lower() not in [o[1].lower() for o in opts]: qlab=qlab2
                     pref=None
                     for k,v in extra.items():
                         if k.lower() in qlab.lower(): pref=[v]; break
