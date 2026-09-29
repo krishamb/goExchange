@@ -773,16 +773,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/iambic-therapeutics/12a04101-8844-4843-90bd-1943c1931768",
-  "tag": "iambic_director_senior_director_immunology",
-  "company": "Iambic",
-  "title": "Director/Senior Director, Immunology ",
-  "comp": null,
-  "source": "healthcare list",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/triomics/df6ea402-6286-4461-b628-5821cfcb92b4",
   "tag": "triomics_forward_deployed_ml_engineer",
   "company": "Triomics",
@@ -1173,16 +1163,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/endgame/295da6d5-bd4f-46dc-a028-ac8feee67343",
-  "tag": "endgame_founding_product_marketer",
-  "company": "endgame",
-  "title": "Founding Product Marketer",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/MediCircle/a300f808-5c14-4fc1-9ad2-687bf18844ee?utm_source=mO29a27Z8D",
   "tag": "medicircle_vice_president_of_engineering",
   "company": "MEDICIRCLE",
@@ -1529,16 +1509,6 @@
   "title": "Staff Software Engineer",
   "comp": 250000.0,
   "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/veho-tech-inc/5c236fb0-8eaa-4241-bef4-abada0aef843?utm_source=bW1aRZOrLO",
-  "tag": "veho_regional_vice_president_ground_oper",
-  "company": "Veho",
-  "title": "Regional Vice President, Ground Operations",
-  "comp": 220000.0,
-  "source": "Indeed",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2173,17 +2143,6 @@
   "comp": 255000.0,
   "loc": "San Francisco, CA",
   "posted_ts": 1790294400.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/8a976851-9bef-4b07-8d36-567fa9540aef",
-  "tag": "perplexity_member_of_technical_staff_ai_infere",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (AI Inference Engineer)",
-  "comp": 485000.0,
-  "loc": "San Francisco",
-  "lang": "Rust",
   "email": "amba_rish@hotmail.com"
  },
  {
