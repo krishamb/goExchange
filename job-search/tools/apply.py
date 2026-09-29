@@ -579,12 +579,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     elif await is_required(h): report["unanswered"].append({"type":"select","label":lab[:160],"options":(await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())"))[:12]})
                 except Exception: pass
             # react-select style comboboxes (Greenhouse/Ashby)
-            combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"]')
+            combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"], input[id^="react-select-"][id$="-input"]:not([class*="select__input"])')
             n=await combos.count()
             for i in range(n):
                 h=combos.nth(i)
                 try:
                     if not await h.is_visible(): continue
+                    if await h.evaluate("(el)=>el.tagName==='INPUT'"): h=h.locator('xpath=ancestor::div[3]')   # unstyled react-select (Wellfound): use the control container
                     lab=await label_of(h)
                     if not lab: continue
                     cur=(await h.inner_text()).strip()
@@ -634,7 +635,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         for pv in pref:
                             for x,(v,l) in zip(hs,opts):
                                 if _match(l,pv) or v.lower()==pv.lower():
-                                    await x.check(timeout=3000); done=l or v; break
+                                    try: await x.check(timeout=3000)
+                                    except Exception:   # custom-styled radio (input hidden): click its label, else set it directly
+                                        try: await x.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else {el.click();} if(!el.checked){el.checked=true; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));}}")
+                                        except Exception: continue
+                                    done=l or v; break
                             if done: break
                         if done: break
                     report["chosen"][qlab[:60] or name]=done
