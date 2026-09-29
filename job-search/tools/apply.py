@@ -73,6 +73,7 @@ TEXT_RULES=[
  (r"state/region|state or province|\bstate\b.*(reside|live|located|residence)|\bregion\b|province", "California"),
  (r"how did you (first |initially )?hear|hear about|referral source|source", "Company careers page"),
  (r"^why\b|why (do you want|are you interested|.*join|.*this role|.*us)|interest(ed)? in (this|the) (role|position|company)|tell us (a little )?about yourself|cover letter|anything else|additional information|why .*good fit|what excites you", ANS.get("why_us","")),
+ (r"experience (managing|leading|building|running|owning|with|in).*(explain|describe|elaborate|tell us)|please (explain|describe|elaborate)|describe your (experience|background|leadership)|tell us about your (experience|background|leadership)|walk us through", "Yes. As CTO & Technical Co-Founder at Hyperion AI (2023-2026) I built and led the engineering team and owned customer-facing deployments end to end, from architecture through production rollouts with customers. Earlier, as VP / Lead Architect at JP Morgan Chase and VP / Technical Lead at Morgan Stanley, I led technical leads and architects delivering trading and application platforms directly with client and trading-desk teams, and at Cadence and Ankr I was the architect embedded with customer-facing engineering. In total 25+ years of hands-on engineering and 10+ years leading engineers, architects, and solutions-oriented teams."),
  (r"greatest (impact|achievement)|proudest|accomplishment", ANS.get("impact","")),
  (r"work environment|thrive|attributes", ANS.get("environment","")),
  (r"pronoun", "He/him"),
@@ -233,12 +234,19 @@ async def visible_options(page):
         try: t.append((await o.nth(i).inner_text()).strip())
         except Exception: t.append("")
     return o,t
-def _match(t,pref):
-    """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female')."""
+def _match(t,pref,strict=False):
+    """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female'). strict: equal/leading only."""
     tl,pl=t.lower().strip(),pref.lower().strip()
     if not tl or not pl: return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
+    if strict: return False
     return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
+def best_index(texts,pref):
+    """Index of the option best matching pref: an exact/leading match beats a whole-word one ('San Francisco Bay Area' over 'Other - willing to relocate to the San Francisco Bay Area')."""
+    for strict in (True,False):
+        for i,t in enumerate(texts):
+            if t and _match(t,pref,strict): return i
+    return None
 async def open_menu(control,inp):
     """Focus a react-select: click its input, or the control when the placeholder overlays the input (Wellfound)."""
     try: await inp.click(timeout=2000)
@@ -259,9 +267,7 @@ async def choose_react_select(page,control,options_pref,label):
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
             opts,texts=await visible_options(page)
-            hit=None
-            for i,t in enumerate(texts):
-                if t and _match(t,pref): hit=i; break
+            hit=best_index(texts,pref)
             if hit is None and texts:
                 # no textual match: maybe options are unfiltered (async search); pick none
                 pass
@@ -280,11 +286,11 @@ async def choose_react_select(page,control,options_pref,label):
             await inp.press("ArrowDown"); await page.wait_for_timeout(700); opts,texts=await visible_options(page)
         LAST_OPTIONS[label[:160]]=[t for t in texts if t][:25]
         for pref in options_pref:
-            for i,t in enumerate(texts):
-                if t and _match(t,pref):
-                    await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
-                    cur=await current()
-                    if cur and cur.lower()!="select...": return cur[:80]
+            i=best_index(texts,pref)
+            if i is not None:
+                await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
+                cur=await current()
+                if cur and cur.lower()!="select...": return cur[:80]
         real=[i for i,t in enumerate(texts) if t and not re.search(r"^no options",t,re.I)]
         if len(real)==1:   # a single-option dropdown ("I agree", "Confirmed", ...) is an acknowledgment: take it
             await opts.nth(real[0]).click(timeout=3000); await page.wait_for_timeout(500)
@@ -664,8 +670,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if p1==["__ASK__"]: cands=[]
                     for pref in cands:
                         for pv in pref:
+                          for strict in (True,False):   # exact/leading option first, then whole-word
                             for x,(v,l) in zip(hs,opts):
-                                if _match(l,pv) or v.lower()==pv.lower():
+                                if not done and (_match(l,pv,strict) or v.lower()==pv.lower()):
                                     try: await x.check(timeout=3000)
                                     except Exception:   # custom-styled radio (input hidden): click its label, else set it directly
                                         try: await x.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else {el.click();} if(!el.checked){el.checked=true; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));}}")
