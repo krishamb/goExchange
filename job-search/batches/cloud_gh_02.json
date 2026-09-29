@@ -1,42 +1,14 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8689236002",
-  "tag": "gitlab_staff_backend_engineer_core_devops",
-  "company": "gitlab",
-  "title": "Staff Backend Engineer, Core DevOps",
-  "comp": 259200.0,
-  "answers": {},
-  "startup": false,
-  "geo": "Remote US",
-  "age": 10,
-  "score": 3
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/gusto/jobs/8204399",
-  "tag": "gusto_senior_staff_software_engineer_benefits",
-  "company": "gusto",
-  "title": "Senior Staff Software Engineer, Benefits",
-  "comp": 265000.0,
-  "answers": {},
-  "startup": false,
-  "geo": "NYC/Remote",
-  "age": 11,
-  "score": 1
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/reddit/jobs/8178085",
   "tag": "reddit_staff_machine_learning_engineer_retrieval",
   "company": "reddit",
   "title": "Staff Machine Learning Engineer, Retrieval",
   "comp": 322000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 12,
-  "score": 4
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -45,11 +17,9 @@
   "company": "appian",
   "title": "Principal ML Platform Engineer",
   "comp": 325000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 13,
-  "score": 6
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -58,11 +28,9 @@
   "company": "affirm",
   "title": "Staff Security Engineer, Enterprise AI",
   "comp": 290000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 13,
-  "score": 6
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -71,11 +39,9 @@
   "company": "appian",
   "title": "Principal Applied AI Engineer",
   "comp": 350000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 13,
-  "score": 4
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -84,11 +50,9 @@
   "company": "reddit",
   "title": "Staff Software Engineer - Ingestion Platform",
   "comp": 303900.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 13,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -97,11 +61,9 @@
   "company": "reddit",
   "title": "Staff Software Engineer, Consumer Engineering",
   "comp": 303000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 13,
-  "score": 1
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -110,11 +72,9 @@
   "company": "reddit",
   "title": "Staff Machine Learning Engineer, AI Security",
   "comp": 322000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 14,
-  "score": 4
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -123,11 +83,9 @@
   "company": "gitlab",
   "title": "Principal Engineer, Duo Agent Platform",
   "comp": 325000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 17,
-  "score": 6
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -136,11 +94,9 @@
   "company": "coinbase",
   "title": "Senior Staff Software Engineer, Platform - IAM",
   "comp": 298700.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 19,
-  "score": 5
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -149,11 +105,9 @@
   "company": "gitlab",
   "title": "Staff Backend Engineer, Database Automation (Go)",
   "comp": 259200.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 19,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -162,11 +116,9 @@
   "company": "databricks",
   "title": "Sr. Solutions Architect - Travel and Hospitality",
   "comp": 301300.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 20,
-  "score": 2
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -175,11 +127,9 @@
   "company": "coinbase",
   "title": "Senior Staff Software Engineer, Institutional Exchange",
   "comp": 309000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 24,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -188,11 +138,9 @@
   "company": "affirm",
   "title": "Senior Staff Software Engineer, Fullstack (Marketplace and Consumer Experiences)",
   "comp": 325000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 25,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -201,11 +149,9 @@
   "company": "toast",
   "title": "Principal Software Engineer, Tech Lead, Retail",
   "comp": 368000.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 25,
-  "score": 1
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -214,11 +160,9 @@
   "company": "gitlab",
   "title": "Staff Backend Engineer, AMER",
   "comp": 259200.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 26,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -227,11 +171,9 @@
   "company": "reddit",
   "title": "Staff Software Engineer - Site Defense",
   "comp": 303900.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 26,
-  "score": 1
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -240,11 +182,9 @@
   "company": "elastic",
   "title": "Principal Software Engineer I - Serverless - Platform Control Plane",
   "comp": 303500.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 29,
-  "score": 3
+  "answers": {}
  },
  {
   "ats": "greenhouse",
@@ -253,10 +193,8 @@
   "company": "coinbase",
   "title": "Staff Software Engineer, Enterprise Apps",
   "comp": 256500.0,
-  "answers": {},
-  "startup": false,
   "geo": "Remote US",
   "age": 29,
-  "score": 3
+  "answers": {}
  }
 ]
