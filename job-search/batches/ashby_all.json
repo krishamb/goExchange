@@ -41,16 +41,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/neurophos/5d3da187-6d13-41b1-bcba-f7dad79e15c2",
-  "tag": "neurophos_staff_compiler_engineer",
-  "company": "neurophos",
-  "title": "Staff Compiler Engineer",
-  "loc": "Sunnyvale, CA",
-  "posted_ts": 1790719890.7307894,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/matx/251357c8-6176-4a12-bac4-2d85fcc87e24",
   "tag": "matx_lead_software_engineer_kernels",
   "company": "matx",
@@ -423,17 +413,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/futureproofing/dfd25467-5a2d-4ddf-86ed-cad95fff8154",
-  "tag": "futureproofing_founding_ai_engineer",
-  "company": "futureproofing",
-  "title": "Founding AI Engineer ",
-  "comp": null,
-  "loc": "New York Official",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/true-talent-solutions-partners/ef60d418-9959-4213-83c9-1b1b4dd41394",
   "tag": "true_talent_solutions_partners_member_of_technical_staff_ml_system",
   "company": "true-talent-solutions-partners",
@@ -452,28 +431,6 @@
   "comp": 230000.0,
   "loc": "Remote - US",
   "posted_ts": 1789948800.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae",
-  "tag": "openai_applied_ai_engineer_digital_natives",
-  "company": "openai",
-  "title": "Applied AI Engineer, Digital Natives",
-  "comp": 278000.0,
-  "loc": "New York City",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/suno/f83463c2-2e7a-441e-85e9-9e509c9bac7e",
-  "tag": "suno_senior_staff_behavioral_engineer",
-  "company": "suno",
-  "title": "Senior / Staff Behavioral Engineer",
-  "comp": 363510.0,
-  "loc": "NYC",
-  "posted_ts": 1790640000.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -518,39 +475,6 @@
   "comp": 297000.0,
   "loc": "San Francisco",
   "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/pear-vc/ea6c119f-521b-40d5-9c0a-f6af6dfcda92",
-  "tag": "pear_vc_head_of_ai_deployment",
-  "company": "pear-vc",
-  "title": "Head of AI Deployment",
-  "comp": null,
-  "loc": "New York City",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/modal/9b33ebe7-e829-4f03-97ba-5c94dbd7daf6",
-  "tag": "modal_member_of_technical_staff_systems",
-  "company": "modal",
-  "title": "Member of Technical Staff - Systems",
-  "comp": 300000.0,
-  "loc": "New York",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cohere/2a989030-6d14-4924-88c1-d878911e26fa",
-  "tag": "cohere_member_of_technical_staff_model_eff",
-  "company": "cohere",
-  "title": "Member of Technical Staff, Model Efficiency",
-  "comp": 535000.0,
-  "loc": "New York",
-  "lang": "C++/Rust",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2208,17 +2132,6 @@
   "comp": 250000.0,
   "loc": "San Francisco",
   "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/ramp/465799ed-c58b-4c6a-a290-2e95b52ef0bb",
-  "tag": "ramp_tech_lead_and_manager_tlm_productio",
-  "company": "ramp",
-  "title": "Tech Lead and Manager (TLM), Production Engineering",
-  "comp": 330000.0,
-  "loc": "New York, NY (HQ)",
-  "posted_ts": 1790553600.0,
   "email": "amba_rish@hotmail.com"
  },
  {
