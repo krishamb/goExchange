@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4697978-ai-engineer-clone",
-  "tag": "vitalis_ai_senior_ai_engineer",
-  "company": "Vitalis AI",
-  "title": "Senior AI Engineer",
-  "comp": 250000.0,
-  "loc": "New York City, San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4523599-staff-software-engineer-backend-infra-nyc-or-sf",
   "tag": "concurrence_staff_software_engineer_backend_inf",
   "company": "Concurrence",
