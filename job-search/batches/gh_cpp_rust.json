@@ -1,0 +1,232 @@
+[
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.withwaymo.com/jobs?gh_jid=7361509",
+  "tag": "waymo_embedded_software_technical_lead_ma",
+  "company": "waymo",
+  "title": "Embedded Software Technical Lead & Manager, Simulation",
+  "comp": 356000.0,
+  "loc": "Mountain View, CA, USA",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8052794",
+  "tag": "flowtraders_senior_software_engineer_c_market_d",
+  "company": "flowtraders",
+  "title": "Senior Software Engineer, C++ (Market Data)",
+  "comp": 300000.0,
+  "loc": "Chicago",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://nuro.ai/careersitem?gh_jid=7896065",
+  "tag": "nuro_senior_software_engineer_autonomy_v",
+  "company": "nuro",
+  "title": "Senior Software Engineer, Autonomy Visualization",
+  "comp": 291150.0,
+  "loc": "Mountain View, California (HQ)",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/drweng/jobs/7997877",
+  "tag": "drweng_senior_software_engineer_c_algo",
+  "company": "drweng",
+  "title": "Senior Software Engineer, C++ (Algo)",
+  "comp": 250000.0,
+  "loc": "Chicago",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8517555002",
+  "tag": "databricks_staff_software_engineer_public_sect",
+  "company": "databricks",
+  "title": "Staff Software Engineer- Public Sector",
+  "comp": 248150.0,
+  "loc": "Virginia",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.mongodb.com/careers/job/?gh_jid=8140620",
+  "tag": "mongodb_senior_software_engineer_identity_a",
+  "company": "mongodb",
+  "title": "Senior Software Engineer, Identity & Access Management (FedRamp)",
+  "comp": 248000.0,
+  "loc": "Austin; Boston; Chicago; New York City; Palo Alto; Philadelp",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.datadoghq.com/detail/3851927/?gh_jid=3851927",
+  "tag": "datadog_senior_software_engineer_distribute",
+  "company": "datadog",
+  "title": "Senior Software Engineer - Distributed Systems",
+  "comp": 240000.0,
+  "loc": "Boston, Massachusetts, USA; New York, New York, USA",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.coinbase.com/careers/positions/8179114?gh_jid=8179114",
+  "tag": "coinbase_senior_infrastructure_engineer_trad",
+  "company": "coinbase",
+  "title": "Senior Infrastructure Engineer, Trading ",
+  "comp": 218900.0,
+  "loc": "Remote - USA",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/celonis/jobs/7989845003?gh_jid=7989845003",
+  "tag": "celonis_senior_software_engineer",
+  "company": "celonis",
+  "title": "Senior Software Engineer",
+  "comp": 218000.0,
+  "loc": "New York, US, New York",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/singlestore/jobs/7868684",
+  "tag": "singlestore_senior_software_engineer",
+  "company": "singlestore",
+  "title": "Senior Software Engineer",
+  "comp": 215000.0,
+  "loc": "United States",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/endorlabs/jobs/4695848005",
+  "tag": "endorlabs_backend_software_engineer_mid_senio",
+  "company": "endorlabs",
+  "title": "Backend Software Engineer (Mid-Senior) ",
+  "comp": 200000.0,
+  "loc": "Palo Alto, CA",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.optiver.com/join-us/jobs/8521309002/?gh_jid=8521309002",
+  "tag": "optiverus_senior_software_engineer_c",
+  "company": "optiverus",
+  "title": "Senior Software Engineer C++",
+  "comp": null,
+  "loc": "Austin, Texas, United States",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.withwaymo.com/jobs?gh_jid=7438328",
+  "tag": "waymo_senior_data_engineer",
+  "company": "waymo",
+  "title": "Senior Data Engineer",
+  "comp": 310000.0,
+  "loc": "Mountain View, California, USA",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8052796",
+  "tag": "flowtraders_senior_software_engineer_c",
+  "company": "flowtraders",
+  "title": "Senior Software Engineer, C++",
+  "comp": 225000.0,
+  "loc": "Chicago",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://nuro.ai/careersitem?gh_jid=8163209",
+  "tag": "nuro_senior_software_engineer_networking",
+  "company": "nuro",
+  "title": "Senior Software Engineer, Networking & Real-Time Systems",
+  "comp": 291150.0,
+  "loc": "Mountain View, California (HQ)",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/drweng/jobs/8122202",
+  "tag": "drweng_senior_software_engineer_trading_pl",
+  "company": "drweng",
+  "title": "Senior Software Engineer, Trading Platform, C++",
+  "comp": 240000.0,
+  "loc": "Chicago",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8639477002",
+  "tag": "databricks_staff_software_engineer_technical_l",
+  "company": "databricks",
+  "title": "Staff Software Engineer, Technical Lead, Lakebase Manager (LBM)",
+  "comp": 247000.0,
+  "loc": "Bellevue, Washington",
+  "lang": "Rust"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.mongodb.com/careers/job/?gh_jid=7870876",
+  "tag": "mongodb_senior_software_engineer_query_opti",
+  "company": "mongodb",
+  "title": "Senior Software Engineer, Query Optimization",
+  "comp": 248000.0,
+  "loc": "Austin; New York City; United States",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.withwaymo.com/jobs?gh_jid=7905695",
+  "tag": "waymo_senior_software_engineer_booking",
+  "company": "waymo",
+  "title": "Senior Software Engineer, Booking",
+  "comp": 270000.0,
+  "loc": "Mountain View, CA, United States",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://nuro.ai/careersitem?gh_jid=7736012",
+  "tag": "nuro_senior_software_engineer_perception",
+  "company": "nuro",
+  "title": "Senior Software Engineer, Perception Data Infrastructure",
+  "comp": 291150.0,
+  "loc": "Mountain View, California (HQ)",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/drweng/jobs/7176348",
+  "tag": "drweng_senior_software_engineer_c_ficco_da",
+  "company": "drweng",
+  "title": "Senior Software Engineer, C/FICCO Data",
+  "comp": 225000.0,
+  "loc": "New York City",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8183195002",
+  "tag": "databricks_senior_software_engineer_applicatio",
+  "company": "databricks",
+  "title": "Senior Software Engineer  - Application Traffic team",
+  "comp": 225000.0,
+  "loc": "Mountain View, California",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://www.mongodb.com/careers/job/?gh_jid=7947560",
+  "tag": "mongodb_senior_software_engineer_storage_la",
+  "company": "mongodb",
+  "title": "Senior Software Engineer, Storage Layer Services",
+  "comp": 248000.0,
+  "loc": "New York City; United States",
+  "lang": "C++/Rust"
+ }
+]
