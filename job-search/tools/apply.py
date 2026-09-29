@@ -939,7 +939,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     try:
                         if await c.is_visible() and re.search(r"submit|apply|send",(await c.inner_text()) or (await c.get_attribute("value")) or "submit",re.I): btn=c; break
                     except Exception: pass
-                if btn is None: raise RuntimeError("no visible submit button")
+                if btn is None:
+                    if re.search(r"job board you were viewing is no longer active|Page not found|job (you are looking for )?(is )?no longer (open|available)|position (has been )?(filled|closed)",await body_text(page),re.I):
+                        report["result"]="NOT SUBMITTED: job closed (board or posting no longer active)"
+                        json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+                    raise RuntimeError("no visible submit button")
                 baseline=()
                 if ats=="greenhouse" and outlook_cfg():
                     op=await outlook_page()
