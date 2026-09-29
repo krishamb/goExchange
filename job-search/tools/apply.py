@@ -87,7 +87,8 @@ CHOICE_RULES=[
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
  (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
- (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man"]),
+ (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man","Cisgender man","Cis man","Cis-gender man"]),
+ (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office", ["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
@@ -190,7 +191,7 @@ def _match(t,pref):
     tl,pl=t.lower().strip(),pref.lower().strip()
     if not tl or not pl: return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
-    return len(pl)>=4 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
+    return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
