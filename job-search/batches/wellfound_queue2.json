@@ -1,19 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4766904-ai-engineer-founding-team",
-  "tag": "redwagon_ai_engineer_founding_team",
-  "company": "Redwagon",
-  "title": "AI Engineer - Founding Team",
-  "comp": 200000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790387679
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766936-analytics-engineer-clone",
   "tag": "snout_founding_data_engineer",
   "company": "Snout",
