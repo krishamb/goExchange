@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/celonis/jobs/7989845003?gh_jid=7989845003",
-  "tag": "celonis_senior_software_engineer",
-  "company": "celonis",
-  "title": "Senior Software Engineer",
-  "comp": 218000.0,
-  "loc": "New York, US, New York",
-  "lang": "C++",
-  "posted_ts": 1790208000.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.mongodb.com/careers/job/?gh_jid=8140620",
   "tag": "mongodb_senior_software_engineer_identity_a",
   "company": "mongodb",
