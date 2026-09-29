@@ -67,6 +67,7 @@ TEXT_RULES=[
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
  (r"^middle (name|initial)|middle name", "N/A"),
+ (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
  (r"able to travel|willing to travel|travel (for|requirements?|expectations?)|percentage of travel|% travel", "Yes, I can travel as needed for the role."),
  (r"know anyone (who works|at|employed)|anyone you know (works|at)|friends or family (at|who work)", "No"),
  (r"(average |typical |largest )?size of (the )?teams? (you've|you have|you) (managed|led)|how many (people|engineers|direct reports|reports) (have you|do you|did you) (managed|manage|lead|led)|team size|number of direct reports", "It varies by role: as Chief Architect at Yahoo Finance I directed 75+ engineers and partners across the platform modernization program; as CTO and Technical Co-Founder at Hyperion AI I led a small founding engineering team hands-on."),
@@ -106,6 +107,7 @@ CHOICE_RULES=[
  (r"level of experience with (ai|llm|genai|generative ai|ai tools|coding assistants)|experience with ai (tools|coding)|proficien(cy|t) with ai|how (often|much) do you use ai", ["4 - Cross-functional","Cross-functional","Expert","Advanced","Extensive","Daily","Every day","Power user","5","4"]),   # AI-tooling experience scale (not an AI-disclosure question)
  (r"personally built|built and (operated|shipped|deployed)|(built|shipped|deployed|operated) .{0,30}(ai agent|agentic|llm|ml model|machine learning).{0,30}(production|in prod)|production (ai|ml|llm|agent)", ["Yes","yes"]),   # hands-on AI/agent production experience
  (r"formal(ly)? (people |line )?manag|people management experience|formal manager", ["I have been the formal manager","Formal manager","I have managed","Yes","yes"]),   # has been the formal manager of engineers
+ (r"accommodation|assistance to participate|reasonable adjustment", ["No, I do not require","No, I do not","No","no"]),   # no accommodation needed
  (r"credentialed|been a (client|patient|provider|therapist|customer) of|used our (product|service|platform) as a", ["No","no"]),   # never a provider/client of the hiring company
  (r"immediate family|relatives? (who )?(work|employed)|family members? (who )?(work|employed)|debarred|excluded by the OIG|convicted|felony|criminal|non-?compete|conflict of interest|restrictive covenant", ["No","no"]),   # compliance questions: none apply
  (r"are you ready|ready to (take|do|complete|go through|participate)|actively involved in product development|technical (portion|assessment|interview|screen|take-?home|challenge)|hands[- ]on (coding|technical)|comfortable (writing|with) code|still (write|writing) code|willing to (code|write code)", ["Yes","yes"]),   # hands-on leader: yes to technical interviews
