@@ -7,30 +7,10 @@
   "title": "Engineering Manager, Machine Learning",
   "comp": null,
   "source": "healthcare list",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cleerlyhealth/jobs/6151686004",
-  "tag": "cleerly_sr_devops_engineering_manager",
-  "company": "Cleerly",
-  "title": "Sr. DevOps Engineering Manager",
-  "comp": null,
-  "source": "healthcare list",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cleerlyhealth/jobs/5973651004",
-  "tag": "cleerly_sr_engineering_manager_clinical_lab",
-  "company": "Cleerly",
-  "title": "Sr. Engineering Manager (Clinical Labs - Clinical Insights)",
-  "comp": null,
-  "source": "healthcare list",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "We utilize work space in NYC and Boston MA, are you able to commit to being in o"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -40,8 +20,15 @@
   "title": "Senior/Principal Data Engineer",
   "comp": null,
   "source": "healthcare list",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Will you now or in the future require employer sponsorship to work in the U.S.?",
+   "Have you worked directly with any of the following data formats in production: F",
+   "Have you built or owned data pipelines in a production environment - not just pr",
+   "Have you operated as a senior, staff, or principal-level individual contributor?",
+   "Have you led or owned a technical integration with an external healthcare partne",
+   "Have you designed or operated data systems that handle protected health informat"
+  ]
  },
  {
   "ats": "greenhouse",

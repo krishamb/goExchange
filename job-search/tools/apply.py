@@ -51,6 +51,7 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
  (r"zip|postal", "95050"),
+ (r"require (employer |visa |company )?sponsorship|sponsorship to work|need sponsorship", "No"),
  (r"where do you (currently )?(reside|live)|city,? state|current city|city and state|city of residence", "Santa Clara, CA"),
  (r"countries .{0,30}(right|authori[sz]ed|eligible) to work|(right|eligib\w+) to work|which countr|what countr", "United States"),
  (r"^company name|^(most recent |current )?(company|employer)( name)?$|name of your .{0,30}(company|employer)|(current|most recent|last) .{0,20}(company|employer)", P["org"]),
@@ -94,6 +95,8 @@ CHOICE_RULES=[
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
  (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
  (r"have you (ever )?used|are you a (current )?(user|customer)|used (our|the) (product|app|platform)", ["Yes","yes"]),
+ (r"FHIR|HL7|CCDA|HIPAA|\bPHI\b|\bEHR\b|EMR\b|clinical|healthcare partner|medical device|\bFDA\b|GxP|pharma|ICD-?10|CPT codes|claims data|payer", ["No","no"]),   # not in the applicant's background: answer honestly
+ (r"^have you (ever )?(worked|built|owned|operated|led|designed|managed|shipped|deployed|architected|scaled|mentored|hired|delivered|run|written)|experience (with|in|building|leading|managing|designing)|are you (comfortable|experienced|familiar|proficient)|do you have (hands-on )?experience|have you (previously )?(held|been in|served)", ["Yes","yes"]),
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
  (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
