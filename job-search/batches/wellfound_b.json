@@ -1,22 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4185263-staff-software-engineer",
-  "tag": "nextpatient_staff_software_engineer",
-  "company": "NextPatient",
-  "title": "Staff Software Engineer",
-  "comp": 300000,
-  "loc": "United States",
-  "tier": 3,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "How did you hear about this position?"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4735113-forward-deployed-engineer",
   "tag": "zaimler_ai_forward_deployed_engineer",
   "company": "zaimler.ai",
