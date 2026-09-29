@@ -562,6 +562,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     report["result"]="NOT SUBMITTED: job closed (listing no longer available)"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 report["recruiter_active"]=bool(re.search(r"RECRUITER RECENTLY ACTIVE",pre))
+                m=re.search(r"POSTED (TODAY|YESTERDAY|(\d+) (DAY|DAYS|WEEK|WEEKS|MONTH|MONTHS) AGO)",pre)
+                if m:
+                    age=0 if m.group(1)=="TODAY" else 1 if m.group(1)=="YESTERDAY" else int(m.group(2))*(1 if m.group(3).startswith("DAY") else 7 if m.group(3).startswith("WEEK") else 30)
+                    report["posted_days_ago"]=age
+                    if age>int(os.environ.get("WF_MAX_AGE_DAYS","30")):   # freshness first: skip stale listings
+                        report["result"]=f"NOT SUBMITTED: job closed / stale listing (posted {age} days ago)"
+                        json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 await page.locator('button:has-text("Apply Now"), button:has-text("Apply now"), button:has-text("Apply")').first.click(timeout=10000); await page.wait_for_timeout(3500)
                 wf_body=await body_text(page)
                 if re.search(r"not accepting applications from your current location|no longer accepting applications|this job is closed|position has been filled",wf_body,re.I):
