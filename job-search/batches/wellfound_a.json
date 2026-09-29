@@ -14,58 +14,20 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4698002-sr-engineering-manager",
-  "tag": "upbound_sr_engineering_manager",
-  "company": "Upbound",
-  "title": "Sr. Engineering Manager",
-  "loc": "Bay Area | ?",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4632620-forward-deployment-engineer-greater-nyc",
-  "tag": "singlestore_forward_deployment_engineer_greater",
-  "company": "SingleStore",
-  "title": "Forward Deployment Engineer- Greater NYC",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4767596-sr-manager-software-development-zelle-brokerage",
-  "tag": "early_warning_services_sr_manager_software_development_zel",
-  "company": "Early Warning Services",
-  "title": "Sr. Manager, Software Development -Zelle / Brokerage",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4703175-head-of-engineering-onchain",
-  "tag": "mesh_head_of_engineering_onchain",
-  "company": "Mesh",
-  "title": "Head of Engineering, Onchain",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4622879-senior-director-ai-enterprise-transformation",
   "tag": "sofi_senior_director_ai_enterprise_trans",
   "company": "SoFi",
   "title": "Senior Director, AI Enterprise Transformation",
   "loc": "Bay Area | In office",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Today's Date of Application (MM/DD/YY Format)",
+   "Are you authorized to lawfully work in the country where this role is located?",
+   "Are you currently a SoFi or SoFi Tech Solutions (formerly Galileo) employee?",
+   "Do you currently hold, or intend to hold, any FINRA licenses if employed by SoFi",
+   "If you selected \"Two or more races\", please check all racial categories with whi"
+  ]
  },
  {
   "ats": "wellfound",
