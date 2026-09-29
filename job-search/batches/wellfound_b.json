@@ -8,21 +8,10 @@
   "comp": 120000.0,
   "loc": "United Kingdom",
   "tier": 2,
-  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722710-forward-deployed-data-engineer-iv-databricks",
-  "tag": "e_source_forward_deployed_data_engineer_iv_d",
-  "company": "E Source",
-  "title": "Forward Deployed Data Engineer IV, Databricks",
-  "comp": 200000.0,
-  "loc": "United States",
-  "tier": 2,
   "last_result": "NOT SUBMITTED: unanswered required questions",
   "last_unanswered": [
-   "Are you able to show proof of employment authorization?*"
+   "I am currently in\u2026",
+   "Update your location preferences"
   ]
  },
  {
