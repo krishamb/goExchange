@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
-# ~/ashby.sh : every Ashby job-application command in one place (runs on your Mac).
+# ~/ashby.sh : every Ashby command in one place (runs on your Mac). It updates itself on every run.
 #
-#   bash ~/ashby.sh          get the newest job list, then start applying (background, no browser windows)
-#   bash ~/ashby.sh status   how many submitted / not submitted so far, plus the last log lines
-#   bash ~/ashby.sh log      watch the live log (Ctrl+C stops watching; the run keeps going)
-#   bash ~/ashby.sh stop     stop the run
-#   bash ~/ashby.sh update   only download the newest job list and scripts, do not start
-#   bash ~/ashby.sh help     show this list
-#
-# Safe to run again at any time: jobs already submitted are skipped, and no company gets more than two applications.
+#   bash ~/ashby.sh           get the newest job list, then start 5 parallel workers (background, no browser windows)
+#   bash ~/ashby.sh start 3   same, with 3 workers (any number)
+#   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
+#   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
+#   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
+#   bash ~/ashby.sh stop      stop all workers
+#   bash ~/ashby.sh update    only download the newest job list and scripts
+#   bash ~/ashby.sh help      show this list
 
 REPO="$HOME/goExchange"
 BRANCH="claude/ai-founding-engineer-jobs-l1urgc"
 URL="https://github.com/krishamb/goExchange.git"
-LOG="$HOME/jobs-private/ashby_run.log"
 
 update() {
   if [ ! -d "$REPO/.git" ]; then
@@ -24,14 +23,18 @@ update() {
   echo "== getting the newest job list"
   git fetch -q origin "$BRANCH" && git checkout -q "$BRANCH" && git pull -q --ff-only origin "$BRANCH" \
     || echo "   (could not update, using the copy already on this Mac)"
+  cp -f "$REPO/job-search/ashby.sh" "$HOME/ashby.sh" 2>/dev/null   # keep this script current
 }
 
+in_repo() { cd "$REPO" 2>/dev/null || { echo "Not set up yet. Run: bash ~/ashby.sh"; exit 1; }; }
+
 case "${1:-start}" in
-  start)  update; bash job-search/run_ashby.sh ;;
+  start)  update; bash job-search/run_ashby.sh start "${2:-5}" ;;
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
-  status) cd "$REPO" 2>/dev/null || { echo "Not set up yet. Run: bash ~/ashby.sh"; exit 1; }; bash job-search/run_ashby.sh status ;;
-  stop)   cd "$REPO" 2>/dev/null || { echo "Nothing to stop."; exit 0; }; bash job-search/run_ashby.sh stop ;;
-  log)    [ -f "$LOG" ] && tail -n 30 -f "$LOG" || echo "No log yet. Start with: bash ~/ashby.sh" ;;
-  help|-h|--help) sed -n '2,11p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,11p' "$0" ;;
+  status) in_repo; bash job-search/run_ashby.sh status ;;
+  manual) in_repo; bash job-search/run_ashby.sh manual ;;
+  stop)   in_repo; bash job-search/run_ashby.sh stop ;;
+  log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
+  help|-h|--help) sed -n '2,12p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,12p' "$0" ;;
 esac
