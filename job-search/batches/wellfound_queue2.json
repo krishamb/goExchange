@@ -1,6 +1,110 @@
 [
  {
   "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone",
+  "tag": "earthinia_company_services_founding_software_engineer",
+  "company": "Earthinia Company Services",
+  "title": "Founding Software Engineer",
+  "comp": 120000,
+  "loc": "Miami, New York City, Washington DC, San Francisco, San Jose",
+  "posted_ts": 1790344829,
+  "badges": [
+   "ACTIVELY_HIRING",
+   "GROWING_FAST",
+   "QUICK_RESPONDER",
+   "TOP_RESPONDER"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4763403-ai-engineer",
+  "tag": "visionsure_ai_engineer",
+  "company": "VisionSure",
+  "title": "AI Engineer",
+  "comp": null,
+  "loc": "New Delhi",
+  "posted_ts": 1790315456,
+  "badges": [
+   "ACTIVELY_HIRING",
+   "QUICK_RESPONDER",
+   "TOP_RESPONDER"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4760771-ai-engineer-i",
+  "tag": "klaviyo_ai_engineer_i",
+  "company": "Klaviyo",
+  "title": "AI Engineer I",
+  "comp": null,
+  "loc": "Boston",
+  "posted_ts": 1790237578,
+  "badges": [
+   "ACTIVELY_HIRING",
+   "B2B",
+   "COMPANY_STAGE",
+   "HIGHLY_RATED",
+   "STRONG_LEADERSHIP",
+   "TOP_INVESTORS",
+   "WORK_LIFE_BALANCE"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4760699-founding-voice-ai-engineer",
+  "tag": "libera_founding_voice_ai_engineer",
+  "company": "Libera",
+  "title": "Founding Voice AI Engineer",
+  "comp": 140000,
+  "loc": "Tokyo",
+  "posted_ts": 1790226053,
+  "badges": [
+   "ACTIVELY_HIRING"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4748883-staff-ai-engineer",
+  "tag": "pulley_staff_ai_engineer",
+  "company": "Pulley",
+  "title": "Staff AI Engineer",
+  "comp": 350000,
+  "loc": "Seattle",
+  "posted_ts": 1790033973,
+  "badges": [
+   "ACTIVELY_HIRING",
+   "B2B",
+   "COMPANY_STAGE",
+   "GROWING_FAST"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4299539-ai-engineer",
+  "tag": "frequency_cx_ai_engineer",
+  "company": "Frequency.cx",
+  "title": "AI Engineer",
+  "comp": null,
+  "loc": "Mumbai",
+  "posted_ts": 1789662671,
+  "badges": [
+   "ACTIVELY_HIRING"
+  ],
+  "ai": true,
+  "tier": 0
+ },
+ {
+  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766893-principal-solutions-consultant",
   "tag": "assured_principal_solutions_consultant",
   "company": "Assured",
@@ -109,19 +213,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790357680
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone",
-  "tag": "earthinia_company_servic_founding_software_engineer",
-  "company": "Earthinia Company Services",
-  "title": "Founding Software Engineer",
-  "comp": 120000.0,
-  "loc": "Miami, New York City, Washington DC, San Francisco, San Jose, Toronto, Fort Lauderdale",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790344829
  },
  {
   "ats": "wellfound",
@@ -384,21 +475,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4756885-machine-learning-engineer-internship-summer-2027",
-  "tag": "klaviyo_machine_learning_engineer_internshi",
-  "company": "Klaviyo",
-  "title": "Machine Learning Engineer Internship-Summer 2027",
-  "comp": null,
-  "loc": "Palo Alto",
-  "tier": 0,
-  "size": "SIZE_1001_5000",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790194415
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4756868-founding-ai-research-engineer-agent-harness-model-systems",
   "tag": "astoria_ai_founding_ai_research_engineer_agent",
   "company": "Astoria AI",
@@ -601,19 +677,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790035200
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3263464-senior-ai-engineer",
-  "tag": "pulley_senior_ai_engineer",
-  "company": "Pulley",
-  "title": "Senior AI Engineer",
-  "comp": 275000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790033972
  },
  {
   "ats": "wellfound",
