@@ -13,7 +13,8 @@ P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
 ANS=json.load(open(os.path.join(JOBS_DIR,"answers.json"))) if os.path.exists(os.path.join(JOBS_DIR,"answers.json")) else {}
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 HEADED="--headed" in sys.argv
-if HEADED and not os.environ.get("DISPLAY"):
+import shutil, platform
+if HEADED and platform.system()=="Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
     os.execvp("xvfb-run",["xvfb-run","-a","-s","-screen 0 1280x2000x24",sys.executable]+sys.argv)
 submit="--submit" in sys.argv
 BATCH = sys.argv[1]=="batch"
@@ -180,6 +181,54 @@ async def choose_react_select(page,control,options_pref,label):
         try: await page.keyboard.press("Escape")
         except Exception: pass
     return None
+def fetch_email_code(max_wait=150):
+    """Return the latest 8-character verification code from the inbox configured in wf_creds.json {"imap":{"host","user","password"}}
+    (Gmail: imap.gmail.com + an app password). Falls back to a terminal prompt when running interactively."""
+    creds_path=os.path.join(JOBS_DIR,"wf_creds.json")
+    cfg=(json.load(open(creds_path)).get("imap") if os.path.exists(creds_path) else None)
+    if cfg:
+        import imaplib, email, datetime
+        deadline=time.time()+max_wait
+        while time.time()<deadline:
+            try:
+                M=imaplib.IMAP4_SSL(cfg.get("host","imap.gmail.com")); M.login(cfg["user"],cfg["password"]); M.select("INBOX")
+                since=(datetime.datetime.utcnow()-datetime.timedelta(days=1)).strftime("%d-%b-%Y")
+                typ,data=M.search(None,f'(SINCE {since})'); ids=data[0].split()[-15:]
+                best=None
+                for i in reversed(ids):
+                    typ,msg=M.fetch(i,"(RFC822)"); m=email.message_from_bytes(msg[0][1])
+                    subj=str(m.get("Subject","")); body=""
+                    for part in (m.walk() if m.is_multipart() else [m]):
+                        if part.get_content_type() in ("text/plain","text/html"):
+                            try: body+=part.get_payload(decode=True).decode(part.get_content_charset() or "utf-8","ignore")
+                            except Exception: pass
+                    txt=re.sub(r"<[^>]+>"," ",subj+" "+body)
+                    if re.search(r"verification code|security code|confirm you.re a human|application code",txt,re.I):
+                        d=email.utils.parsedate_to_datetime(m.get("Date")) if m.get("Date") else None
+                        if d and (datetime.datetime.now(d.tzinfo)-d).total_seconds()>900: continue   # older than 15 min
+                        c=re.search(r"\b([A-Z0-9]{8})\b",txt)
+                        if c: best=c.group(1); break
+                M.logout()
+                if best: return best
+            except Exception as e: print("imap:",str(e)[:120])
+            time.sleep(10)
+        return None
+    if sys.stdin.isatty():
+        try: return input("Enter the 8-character verification code emailed to you (blank to skip): ").strip() or None
+        except Exception: return None
+    return None
+async def enter_email_code(page,report):
+    boxes=page.locator('input[autocomplete="one-time-code"], input[name*="security_code"], input[id*="security_code"], input[name*="verification"], [class*="security-code"] input, [class*="securityCode"] input, [class*="otp"] input')
+    n=await boxes.count()
+    if not n: return False
+    code=await asyncio.get_event_loop().run_in_executor(None,fetch_email_code)
+    if not code: report.setdefault("errors",[]).append("email verification code required (configure imap in wf_creds.json or run interactively)"); return False
+    try:
+        if n>=8:
+            for i,ch in enumerate(code[:n]): await boxes.nth(i).fill(ch)
+        else: await boxes.first.fill(code)
+        report["code_entered"]=True; return True
+    except Exception as e: report.setdefault("errors",[]).append(f"code entry failed: {e}"); return False
 async def run():
     async with async_playwright() as p:
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
@@ -432,6 +481,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if btn is None: raise RuntimeError("no visible submit button")
                 await btn.scroll_into_view_if_needed(); await btn.click(timeout=10000); await page.wait_for_timeout(9000)
                 body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
+                if re.search(r"verification code|security code|confirm you.re a human",body,re.I):
+                    if await enter_email_code(page,report):
+                        await page.wait_for_timeout(800)
+                        try: await btn.click(timeout=10000)
+                        except Exception:
+                            b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
+                        await page.wait_for_timeout(9000)
+                        body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
                 ok=bool(re.search(r"thank you|thanks for applying|application (has been |was )?(submitted|received|sent)|we('ve| have) received|successfully|you're all set|applied",body,re.I)) and not re.search(r"needs corrections|missing entry|is required|please (fill|complete)",body,re.I)
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)

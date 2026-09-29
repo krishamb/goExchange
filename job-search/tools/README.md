@@ -12,8 +12,11 @@ export JOBS_DIR=~/jobs-private            # NOT inside the repo
 mkdir -p $JOBS_DIR && cp Resume.pdf $JOBS_DIR/Ambarish_Krishnamurthy_Resume.pdf
 # $JOBS_DIR/profile.json: {"name","email","phone","location","org","linkedin","github","resume","cover_letter"}
 # $JOBS_DIR/answers.json: {"why_us","impact","environment"}  (free-text defaults)
-# $JOBS_DIR/wf_creds.json: Wellfound login (only if applying there)
-python job-search/tools/apply.py batch job-search/batches/bay_01.json --submit          # one approval, 50 jobs
+# $JOBS_DIR/wf_creds.json: {"email","password"} Wellfound login (optional) and, for Greenhouse's emailed
+#   verification code, "imap": {"host":"imap.gmail.com","user":"you@gmail.com","password":"<gmail app password>"}
+#   (forward the application mailbox to that Gmail). Without imap, the script prompts you for the code in the terminal.
+python job-search/tools/apply.py batch job-search/batches/local_01.json --submit --headed   # Ashby + Lever, 50 jobs
+python job-search/tools/apply.py batch job-search/batches/cloud_gh_01.json --submit --headed # Greenhouse, 50 jobs (needs emailed codes)
 python job-search/tools/apply.py ashby <apply-url> <tag> --submit                        # single job
 ```
 Reports and screenshots land in `$JOBS_DIR/out/`. Jobs with required questions the rules can't answer are left
