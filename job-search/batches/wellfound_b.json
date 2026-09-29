@@ -1,74 +1,16 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4163036-2-machine-learning-engineer",
-  "tag": "zenos_machine_learning_engineer",
-  "company": "Zenos",
-  "title": "Machine Learning Engineer",
-  "comp": 330000,
-  "loc": "Silicon Valley, San Francisco Bay Area",
-  "tier": 0,
-  "size": "SIZE_1_10",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4704687-senior-ai-ml-engineer",
-  "tag": "healmenow_senior_ai_ml_engineer",
-  "company": "Healmenow",
-  "title": "Senior AI/ML Engineer",
-  "comp": null,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4780522-engineering-manager-ai",
-  "tag": "deuna_engineering_manager_ai",
-  "company": "DEUNA",
-  "title": "Engineering Manager AI",
-  "loc": "Bay Area | Remote only",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3909914-hpc-gpu-cluster-architect",
-  "tag": "san_francisco_compute_co_hpc_gpu_cluster_architect",
-  "company": "San Francisco Compute Company",
-  "title": "HPC/ GPU Cluster Architect",
-  "comp": 300000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4775637-technical-lead-autonomy-evaluation",
-  "tag": "atoms_technical_lead_autonomy_evaluation",
-  "company": "Atoms",
-  "title": "Technical Lead - Autonomy Evaluation",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4756207-engineering-manager-parcel",
   "tag": "doordash_engineering_manager_parcel",
   "company": "DoorDash",
   "title": "Engineering Manager, Parcel",
   "loc": "Bay Area | In office",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How much did content from the DoorDash Engineering blog influence your decision "
+  ]
  },
  {
   "ats": "wellfound",
@@ -78,8 +20,10 @@
   "title": "Engineering Manager of Managers, Service Infrastructure",
   "loc": "Bay Area | In office",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please select the country where you currently reside."
+  ]
  },
  {
   "ats": "wellfound",
