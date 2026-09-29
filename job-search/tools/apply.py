@@ -523,7 +523,8 @@ def applied_elsewhere(tag,company=None,days=45):
         ks2=company_keys(r.get("tag"),r.get("company"))
         if ks & ks2: return r.get("tag")
         # 'doordashusa' vs 'doordash', 'acmeinc' vs 'acme': a key that is a prefix of the other (6+ chars) is the same company
-        if any(a.startswith(b) or b.startswith(a) for a in ks for b in ks2 if min(len(a),len(b))>=6): return r.get("tag")
+        SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
+        if any((a.startswith(b) and a[len(b):] in SUF) or (b.startswith(a) and b[len(a):] in SUF) for a in ks for b in ks2 if min(len(a),len(b))>=5): return r.get("tag")
     return None
 async def run():
     async with async_playwright() as p:
