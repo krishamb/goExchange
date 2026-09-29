@@ -1,49 +1,16 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/reddit/jobs/8226397",
-  "tag": "reddit_senior_director_data_science",
-  "company": "reddit",
-  "title": "Senior Director, Data Science",
-  "comp": 443800.0,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you a veteran/have you served in the military?"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/nuro/jobs/8031871",
-  "tag": "nuro_head_of_systems_engineering_senior_",
-  "company": "nuro",
-  "title": "Head of Systems Engineering (Senior Director)",
-  "comp": 425960.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/snorkelai/jobs/6020877004",
-  "tag": "snorkelai_director_research_evaluation_traini",
-  "company": "snorkelai",
-  "title": "Director, Research - Evaluation & Training",
-  "comp": 425000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/elastic/jobs/8207941",
   "tag": "elastic_sr_director_enterprise_data",
   "company": "elastic",
   "title": "Sr. Director, Enterprise Data",
   "comp": 403200.0,
   "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have prior experience owning the enterprise Golden Record, or Master Data"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -573,7 +540,7 @@
   "title": "Forward Deployed Engineering Manager",
   "comp": 250000.0,
   "source": "ATS board",
-  "last_result": "(no report)",
+  "last_result": " know why you are a good fit. | Phone* | Website | LinkedIn Profile | How did you hear about us? | W",
   "last_unanswered": []
  },
  {
