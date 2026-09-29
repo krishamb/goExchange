@@ -65,6 +65,7 @@ TEXT_RULES=[
  (r"current (title|role)|job title|^title$", "CTO & Technical Co-Founder / Principal Architect"),
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
+ (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
  (r"start date|available to start|availability|notice period", "Immediately"),
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
  (r"when (can|could|would|are you able to) you (realistically |potentially |ideally )?start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Immediately (available now, no notice period)"),
@@ -105,7 +106,9 @@ CHOICE_RULES=[
  (r"understand that .{0,40}(may )?use ai|company may use ai|we (may )?use ai|ai tools to assist in the (application|interview)", ["Yes","I understand","I acknowledge","Acknowledge"]),
  (r"how (do )?you use ai|use ai tools today|describes (how )?you use ai|your (use|usage) of ai tools|ai (proficiency|fluency)", ["I design or automate workflows with AI","I regularly use AI tools","I have experimented with AI tools","Advanced","Expert"]),
  (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
- (r"authori[sz]ed to work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
+ (r"authori[sz]ed to (lawfully |legally )?work|lawfully work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
+ (r"currently an? .{0,60}(employee|contractor|intern)\b|current(ly)? (employee|contractor) of|employed by .{0,40}(currently|now|today)", ["No","no"]),   # not a current employee of the hiring company
+ (r"\bFINRA\b|series (7|24|27|63|65|66|99)\b|securities licen[sc]e", ["No","no"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
  (r"(?=.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near)", ["Yes","yes","I currently live","I live in"]),   # the applicant lives in Santa Clara, CA
