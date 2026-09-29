@@ -1,29 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4751260-head-of-engineering",
-  "tag": "gabeo_ai_head_of_engineering",
-  "company": "Gabeo.ai",
-  "title": "Head of Engineering",
-  "comp": 225000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4708017-technical-lead-manager",
-  "tag": "point_technical_lead_manager",
-  "company": "Point",
-  "title": "Technical Lead Manager",
-  "loc": "Bay Area | ?",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4776835-directeur-trice-principal-e-de-l-ingenierie-senior-engineering-manager",
   "tag": "github_directeur_trice_principal_e_de_l_in",
   "company": "GitHub",
