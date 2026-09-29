@@ -1,21 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4762898-staff-applied-ai-engineer",
-  "tag": "rocket_money_staff_applied_ai_engineer",
-  "company": "Rocket Money",
-  "title": "Staff Applied AI Engineer",
-  "comp": 270000.0,
-  "loc": "New York City, Washington DC, San Francisco, Washington",
-  "tier": 0,
-  "last_result": "No | Will you require sponsorship in the future?* | Yes | No | Describe the platforms and techniques",
-  "last_unanswered": [],
-  "posted_ts": 1790280739,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4742402-senior-research-engineer-post-training-clone",
   "tag": "chai_ai_machine_learning_engineer",
   "company": "CHAI AI",
