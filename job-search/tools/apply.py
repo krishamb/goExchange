@@ -821,6 +821,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for k,v in extra.items():
                         if k.lower() in qlab.lower(): cands.append([v]); break
                     p1=pick(qlab,CHOICE_RULES); p2=pick(" ".join(o[1] for o in opts),CHOICE_RULES)
+                    if "wellfound" in (CUR_ATS or "").lower() and re.search(r"hear about|learn about|find out about|how did you (hear|find|learn)|source",qlab,re.I): cands.append(["Wellfound","AngelList","Wellfound (AngelList)"])   # applying through Wellfound: say so
                     if p1 and p1!=["__ASK__"]: cands.append(p1)
                     if p2 and p2!=["__ASK__"] and p2 not in cands: cands.append(p2)
                     done=None
