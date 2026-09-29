@@ -1,52 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4716639-bioinformatics-intern-clone",
-  "tag": "utilyze_founding_engineer",
-  "company": "Utilyze",
-  "title": "Founding Engineer",
-  "comp": null,
-  "loc": "Austin, Boston, New York City, San Antonio, San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4698047-senior-applied-ai-engineer",
-  "tag": "mintlify_senior_applied_ai_engineer",
-  "company": "Mintlify",
-  "title": "Senior Applied AI Engineer",
-  "comp": 265000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4777823-director-managing-director-ai-software-development",
-  "tag": "cohnreznick_director_managing_director_ai_softw",
-  "company": "CohnReznick",
-  "title": "Director/Managing Director, AI Software Development",
-  "loc": "Bay Area | Remote only",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4628460-founding-engineer",
-  "tag": "bearfoot_ai_founding_engineer",
-  "company": "Bearfoot AI",
-  "title": "Founding Engineer",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4706707-founding-engineer",
   "tag": "leadervest_founding_engineer",
   "company": "Leadervest",
