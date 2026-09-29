@@ -330,7 +330,7 @@ async def code_from_file(report,max_wait=None):
     deadline=time.time()+(max_wait or CODE_WAIT)
     while time.time()<deadline:
         if os.path.exists(ans):
-            c=re.sub(r"[^A-Za-z0-9]","",open(ans).read()).upper()
+            c=re.sub(r"[^A-Za-z0-9]","",open(ans).read())   # Greenhouse codes are mixed-case: keep them exactly as sent
             if len(c)>=6: report["code_source"]="file"; return c
         await asyncio.sleep(3)
     return None
