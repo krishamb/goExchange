@@ -61,18 +61,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/togetherai/jobs/5224090007",
-  "tag": "togetherai_staff_software_engineer_ai_compute_",
-  "company": "togetherai",
-  "title": "Staff Software Engineer - AI Compute, Together Cloud",
-  "comp": 300000.0,
-  "loc": "San Francisco",
-  "posted_ts": 1790121600.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://careers.aqr.com/jobs?gh_jid=8221812&gh_jid=8221812",
   "tag": "aqr_discretionary_macro_vice_president",
   "company": "aqr",
@@ -82,18 +70,6 @@
   "posted_ts": 1790121600.0,
   "last_result": "(no report)",
   "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/realchemistry/jobs/5431230008",
-  "tag": "real_chemistry_lead_front_end_architect_engineer",
-  "company": "Real Chemistry",
-  "title": "Lead Front End Architect/Engineer",
-  "comp": 200000.0,
-  "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790208000.0
  },
  {
   "ats": "greenhouse",
@@ -193,42 +169,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/ripple/jobs/8129066",
-  "tag": "ripple_manager_ai_platform_engineering",
-  "company": "ripple",
-  "title": "Manager, AI Platform Engineering",
-  "comp": 265000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789603200.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/chainguard/jobs/4715303006",
-  "tag": "chainguard_senior_manager_engineering_containe",
-  "company": "chainguard",
-  "title": "Senior Manager, Engineering (Container Product Engineering)",
-  "comp": 258000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789948800.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/turing/jobs/6192730004",
-  "tag": "turing_forward_deployed_ai_engineer",
-  "company": "turing",
-  "title": "Forward Deployed AI Engineer",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789603200.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/schonfeld/jobs/8209327",
   "tag": "schonfeld_forward_deployed_engineer",
   "company": "schonfeld",
@@ -253,18 +193,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/mercury/jobs/6196335004",
-  "tag": "mercury_senior_engineering_manager_custody",
-  "company": "mercury",
-  "title": "Senior Engineering Manager - Custody",
-  "comp": 298800.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789603200.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/huntress/jobs/7977223003",
   "tag": "huntress_staff_platform_engineer",
   "company": "huntress",
@@ -274,29 +202,5 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789344000.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/launchdarkly/jobs/7992639003",
-  "tag": "launchdarkly_engineering_manager_data_platform",
-  "company": "launchdarkly",
-  "title": "Engineering Manager, Data Platform",
-  "comp": 263670.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789084800.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/fivetran/jobs/7990752003",
-  "tag": "fivetran_senior_staff_site_reliability_engin",
-  "company": "fivetran",
-  "title": "Senior Staff Site Reliability Engineer",
-  "comp": 290422.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789084800.0
  }
 ]
