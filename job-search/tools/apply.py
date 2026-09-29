@@ -337,7 +337,14 @@ async def code_from_file(report,max_wait=None):
 async def enter_email_code(page,report,baseline=()):
     boxes=page.locator('input[autocomplete="one-time-code"], input[name*="security_code"], input[id*="security_code"], input[name*="verification"], [class*="security-code"] input, [class*="securityCode"] input, [class*="otp"] input')
     n=await boxes.count()
-    if not n: return False
+    if not n:   # Greenhouse job-boards: eight single-character boxes right after the "Security code" label
+        boxes=page.locator('input[maxlength="1"]:visible'); n=await boxes.count()
+    if not n:
+        boxes=page.locator('xpath=//*[contains(normalize-space(text()),"ecurity code")]/following::input[not(@type="hidden") and not(@type="file") and not(@type="checkbox")][position()<=8]'); n=await boxes.count()
+    if not n:
+        try: report["security_code_html"]=await page.evaluate("()=>{const e=[...document.querySelectorAll('label,div,span,p,legend')].find(x=>/security code/i.test(x.innerText||'')&&x.innerText.length<60); return e? (e.parentElement||e).outerHTML.slice(0,1500):''}")
+        except Exception: pass
+        return False
     code=None; report["code_required"]=True
     op=await outlook_page()
     if op:
