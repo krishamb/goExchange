@@ -1,6 +1,76 @@
 [
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/d-Matrix/505b7fa6-666a-44d5-9b23-88b7eec20502",
+  "tag": "d_matrix_director_site_reliability_engin",
+  "company": "d-Matrix",
+  "title": "Director Site Reliability Engineer, AI Infrastructure",
+  "loc": "Santa Clara, CA (hybrid)",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/volta/fc2c1221-2aba-4c3e-907c-20fc0db7758d",
+  "tag": "volta_team_lead_platform_engineering",
+  "company": "volta",
+  "title": "Team Lead, Platform Engineering",
+  "loc": "Palo Alto, CA",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/etched/6c60c888-1b0e-4fc8-b78a-31b9c994a0f4",
+  "tag": "etched_head_of_inference_performance_vis",
+  "company": "etched",
+  "title": "Head of Inference Performance Visibility",
+  "loc": "San Jose, CA",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/neurophos/8a329129-1218-489d-80d9-f5e877bd499b",
+  "tag": "neurophos_principal_fabric_network_archi",
+  "company": "neurophos",
+  "title": "Principal Fabric/Network Architect",
+  "loc": "Sunnyvale, CA / Austin, TX",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/neurophos/5d3da187-6d13-41b1-bcba-f7dad79e15c2",
+  "tag": "neurophos_staff_compiler_engineer",
+  "company": "neurophos",
+  "title": "Staff Compiler Engineer",
+  "loc": "Sunnyvale, CA",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/matx/251357c8-6176-4a12-bac4-2d85fcc87e24",
+  "tag": "matx_lead_software_engineer_kernels",
+  "company": "matx",
+  "title": "Lead Software Engineer, Kernels",
+  "loc": "Mountain View, CA",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/matx/83eeb688-261b-4723-8f3f-90475a6e10cf",
+  "tag": "matx_runtime_engineer",
+  "company": "matx",
+  "title": "Runtime Engineer",
+  "loc": "Mountain View, CA",
+  "posted_ts": 1790719890.7307894,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/traba/332a703a-d619-4ede-a82d-d0524dbfe623",
   "tag": "traba_staff_software_engineer_applied_ai",
   "company": "traba",
