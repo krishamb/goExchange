@@ -467,17 +467,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/5a4cec8b-5688-497c-a5ec-884f75d09511",
-  "tag": "perplexity_member_of_technical_staff_new_grad",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (New Grad)",
-  "comp": null,
-  "loc": "San Francisco",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/suno/f83463c2-2e7a-441e-85e9-9e509c9bac7e",
   "tag": "suno_senior_staff_behavioral_engineer",
   "company": "suno",
@@ -489,17 +478,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Sierra/89b2027d-d019-46ca-8071-f8a1a4e647d8",
-  "tag": "sierra_area_vice_president_public_sector",
-  "company": "Sierra",
-  "title": "Area Vice President, Public Sector",
-  "comp": 520000.0,
-  "loc": "US - Remote",
-  "posted_ts": 1790553600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/replit/659a8e1e-69ba-44c0-a632-96665051a3e8",
   "tag": "replit_senior_software_engineer_compute_pl",
   "company": "replit",
@@ -507,28 +485,6 @@
   "comp": 290000.0,
   "loc": "Foster City, CA",
   "posted_ts": 1790294400.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Serval/4b02e4b1-8d45-4c14-84b9-960f015ad26b",
-  "tag": "serval_head_of_associate_ae",
-  "company": "Serval",
-  "title": "Head of Associate AE",
-  "comp": 350000.0,
-  "loc": "San Francisco",
-  "posted_ts": 1790294400.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/factory/a6386a06-e9b4-4c0c-95c4-0d5a845c8d4e",
-  "tag": "factory_head_of_developer_relations",
-  "company": "factory",
-  "title": "Head of Developer Relations",
-  "comp": null,
-  "loc": "United States",
-  "posted_ts": 1790208000.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -572,17 +528,6 @@
   "title": "Head of AI Deployment",
   "comp": null,
   "loc": "New York City",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/99db1c40-ace4-4f39-a9a6-7da985fa91b5",
-  "tag": "abridge_member_of_product_staff_nursing",
-  "company": "abridge",
-  "title": "Member of Product Staff, Nursing",
-  "comp": 268800.0,
-  "loc": "NYC Office",
   "posted_ts": 1790121600.0,
   "email": "amba_rish@hotmail.com"
  },
@@ -794,18 +739,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/fireworks/82b41f4a-a945-4aee-a1fd-1ef9ab513e58/application",
-  "tag": "fireworks_member_of_technical_staff_research_2026_phd_new_gr",
-  "company": "fireworks",
-  "title": "Member of Technical Staff, Research (2026 PhD New Grad)",
-  "comp": 300000.0,
-  "geo": "Bay Area",
-  "age": 20,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Edison%20Scientific/059399ca-4f0c-454d-ba18-c9d064c13f27/application",
   "tag": "edison_scientific_member_of_technical_staff_principal_infras",
   "company": "Edison Scientific",
@@ -932,16 +865,6 @@
   "tag": "bunkerhill_health_forward_deployed_product_lead",
   "company": "Bunkerhill Health",
   "title": "Forward Deployed Product Lead",
-  "comp": null,
-  "source": "healthcare list",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/anterior/ec919309-7888-4ed7-b851-4df7cc579555",
-  "tag": "anterior_clinical_solutions_architect",
-  "company": "Anterior",
-  "title": "Clinical Solutions Architect",
   "comp": null,
   "source": "healthcare list",
   "email": "amba_rish@hotmail.com"
@@ -1678,16 +1601,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/weave-os/e8e1010b-ff04-4501-90c0-9489a275c44c?utm_source=dBk14E71Vm",
-  "tag": "weave_founding_developer_relations",
-  "company": "Weave",
-  "title": "Founding Developer Relations",
-  "comp": 225000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/veho-tech-inc/5c236fb0-8eaa-4241-bef4-abada0aef843?utm_source=bW1aRZOrLO",
   "tag": "veho_regional_vice_president_ground_oper",
   "company": "Veho",
@@ -1942,16 +1855,6 @@
   "tag": "cursor_regional_director_ai_deployment",
   "company": "cursor",
   "title": "Regional Director, AI Deployment",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/unstructured/9df95483-7177-4f98-850e-4abbdf530434",
-  "tag": "unstructured_ai_engineer_public_sector",
-  "company": "unstructured",
-  "title": "AI Engineer - Public Sector",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -2309,17 +2212,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/0a4fa789-4a22-49c9-8521-638c02c45bac",
-  "tag": "crusoe_director_international_project_mana",
-  "company": "crusoe",
-  "title": "Director, International Project Management - Spark",
-  "comp": 250000.0,
-  "loc": "Denver, CO - US",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/ramp/465799ed-c58b-4c6a-a290-2e95b52ef0bb",
   "tag": "ramp_tech_lead_and_manager_tlm_productio",
   "company": "ramp",
@@ -2458,18 +2350,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/harvey/6cb88307-4fa1-42d8-8c9e-e331e4364e4f/application",
-  "tag": "harvey_staff_solutions_architect_public_sector",
-  "company": "harvey",
-  "title": "Staff Solutions Architect, Public Sector",
-  "comp": 300900.0,
-  "geo": "Remote US",
-  "age": 0,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/decagon/508a6226-4ee4-4cfa-8a9c-04d48bef81a8/application",
   "tag": "decagon_staff_software_engineer_agent_product",
   "company": "decagon",
@@ -2478,16 +2358,6 @@
   "geo": "NYC (>350K)",
   "age": 0,
   "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/89db9a1b-a590-4f17-be65-ac21507945c0",
-  "tag": "abridge_member_of_clinical_staff",
-  "company": "Abridge",
-  "title": "Member of Clinical Staff",
-  "comp": null,
-  "source": "healthcare list",
   "email": "amba_rish@hotmail.com"
  },
  {
