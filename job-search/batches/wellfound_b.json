@@ -45,39 +45,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4755423-engineering-manager-asset-personalization-platform",
-  "tag": "netflix_engineering_manager_asset_personali",
-  "company": "Netflix",
-  "title": "Engineering Manager - Asset Personalization Platform",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4734197-senior-engineering-manager-wirecutter",
-  "tag": "the_new_york_times_senior_engineering_manager_wirecutt",
-  "company": "The New York Times",
-  "title": "Senior Engineering Manager, Wirecutter",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4728045-cloud-platform-technical-lead",
-  "tag": "peraton_labs_cloud_platform_technical_lead",
-  "company": "Peraton Labs",
-  "title": "Cloud Platform Technical Lead",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4657024-founding-engineer",
   "tag": "coda_founding_engineer",
   "company": "Coda",
@@ -125,17 +92,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4761610-director-ai-delivery-onboarding-enrollment",
-  "tag": "the_standard_director_ai_delivery_onboarding_enr",
-  "company": "The Standard",
-  "title": "Director, AI Delivery - Onboarding & Enrollment",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4701988-staff-site-reliability-engineer-sre",
   "tag": "earnin_staff_site_reliability_engineer_sre",
   "company": "EarnIn",
@@ -150,32 +106,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4702699-sr-manager-software-engineering-machine-learning-simulations",
-  "tag": "upstart_sr_manager_software_engineering_mac",
-  "company": "Upstart",
-  "title": "Sr. Manager, Software Engineering - Machine Learning Simulations",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4770333-staff-engineer-data-remote-us",
   "tag": "renew_home_staff_engineer_data_remote_us",
   "company": "Renew Home",
   "title": "Staff Engineer, Data (Remote, US)",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4756117-manager-engineering",
-  "tag": "sailpoint_technologies_manager_engineering",
-  "company": "Sailpoint Technologies",
-  "title": "Manager, Engineering",
   "loc": "Remote | Remote only",
   "tier": 1,
   "last_result": "(no report)",
@@ -194,44 +128,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4725807-product-tech-lead",
-  "tag": "motley_fool_product_tech_lead",
-  "company": "Motley Fool",
-  "title": "Product Tech Lead",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4627365-founding-engineer",
   "tag": "guile_founding_engineer",
   "company": "Guile",
   "title": "Founding Engineer",
   "loc": "Remote | Onsite or remote",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4686584-vp-engineering",
-  "tag": "cotiviti_vp_engineering",
-  "company": "COTIVITI",
-  "title": "VP Engineering",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4753820-engineering-manager",
-  "tag": "delawarelife_engineering_manager",
-  "company": "DelawareLife",
-  "title": "Engineering Manager",
-  "loc": "Remote | Remote only",
   "tier": 1,
   "last_result": "(no report)",
   "last_unanswered": []
@@ -247,17 +148,6 @@
   "tier": 1,
   "size": "SIZE_11_50",
   "lang": "C++/Rust",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4754786-data-engineering-manager-ecommerce-fulfillment",
-  "tag": "dick_s_sporting_goods_data_engineering_manager_ecommerce_",
-  "company": "Dick's Sporting Goods",
-  "title": "Data Engineering Manager \u2013 eCommerce & Fulfillment",
-  "loc": "Remote | Remote only",
-  "tier": 1,
   "last_result": "(no report)",
   "last_unanswered": []
  },
@@ -285,32 +175,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4760993-manager-software-engineering",
-  "tag": "computer_services_csi_manager_software_engineering",
-  "company": "Computer Services (CSI)",
-  "title": "Manager, Software Engineering",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4750513-engineering-manager-trm",
   "tag": "topstep_engineering_manager_trm",
   "company": "Topstep",
   "title": "Engineering Manager, TRM",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4629917-head-of-engineering",
-  "tag": "minervini_private_access_head_of_engineering",
-  "company": "Minervini Private Access",
-  "title": "Head of Engineering",
   "loc": "Remote | Remote only",
   "tier": 1,
   "last_result": "(no report)",
@@ -323,17 +191,6 @@
   "company": "Statecraft",
   "title": "Forward Deployed Engineer",
   "loc": "Remote | Onsite or remote",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4648195-ai-engineering-manager-digital-transformation-innovation",
-  "tag": "bdo_usa_ai_engineering_manager_digital_tran",
-  "company": "BDO USA",
-  "title": "AI Engineering Manager, Digital Transformation & Innovation",
-  "loc": "Remote | Remote only",
   "tier": 1,
   "last_result": "(no report)",
   "last_unanswered": []
@@ -375,17 +232,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4697895-principal-founding-engineer-full-stack-typescript-node-js-react-aws",
-  "tag": "employvision_principal_founding_engineer_full_st",
-  "company": "Employvision",
-  "title": "Principal Founding Engineer - Full Stack (TypeScript, Node.js, React, AWS)",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4701959-machine-learning-engineer-ii-ml-systems-models-and-analysis",
   "tag": "clear_demand_machine_learning_engineer_ii_ml_sys",
   "company": "Clear Demand",
@@ -402,28 +248,6 @@
   "tag": "mlabs_founding_engineer",
   "company": "MLabs",
   "title": "Founding Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779603-director-engineering-lead-portfolio-performance-reporting",
-  "tag": "bny_director_engineering_lead_portfolio",
-  "company": "BNY",
-  "title": "Director, Engineering Lead \u2013 Portfolio Performance Reporting",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4768188-lead-engineer-engineering-edge-product-suite",
-  "tag": "noodle_partners_lead_engineer_engineering_edge_prod",
-  "company": "Noodle Partners",
-  "title": "Lead Engineer, Engineering (EDge Product Suite)",
   "loc": "NYC | In office",
   "tier": 2,
   "last_result": "(no report)",
@@ -453,33 +277,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4721612-head-of-technology",
-  "tag": "john_varvatos_head_of_technology",
-  "company": "John Varvatos",
-  "title": "Head of Technology",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4656969-senior-manager-software-engineering",
   "tag": "metropolis_senior_manager_software_engineering",
   "company": "Metropolis",
   "title": "Senior Manager, Software Engineering",
   "loc": "NYC | ?",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4626191-engineering-manager-platform-engineering",
-  "tag": "gibson_dunn_crutcher_engineering_manager_platform_engine",
-  "company": "Gibson Dunn & Crutcher",
-  "title": "Engineering Manager, Platform Engineering",
-  "loc": "NYC | In office",
   "tier": 2,
   "last_result": "(no report)",
   "last_unanswered": []
@@ -567,17 +369,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4736783-supervising-lead-engineer",
-  "tag": "e_j_electric_co_supervising_lead_engineer",
-  "company": "E-J Electric Co.",
-  "title": "Supervising Lead Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4710062-director-data-engineering",
   "tag": "squire_director_data_engineering",
   "company": "SQUIRE",
@@ -648,29 +439,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4714863-ai-engineer",
-  "tag": "consumer_physical_ai_ai_engineer",
-  "company": "Consumer Physical AI",
-  "title": "AI Engineer",
-  "comp": null,
-  "loc": "California",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4775539-head-of-engineering-ai-healthcare-rcm-platform",
-  "tag": "d_e_shaw_co_head_of_engineering_ai_healthcare_r",
-  "company": "D.E. Shaw & Co.",
-  "title": "Head of Engineering & AI, Healthcare RCM Platform",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4546028-founding-engineer",
   "tag": "thunder_founding_engineer",
   "company": "Thunder",
@@ -682,43 +450,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4771600-principal-engineer-migration-and-modernization",
-  "tag": "google_principal_engineer_migration_and_mo",
-  "company": "Google",
-  "title": "Principal Engineer, Migration and Modernization",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4732535-engineering-manager-head-of-engineering-dragonfly-portfolio",
   "tag": "dragonfly_engineering_manager_head_of_enginee",
   "company": "Dragonfly",
   "title": "Engineering Manager / Head of Engineering - Dragonfly Portfolio",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627510-manager-engineering",
-  "tag": "garner_health_manager_engineering",
-  "company": "Garner Health",
-  "title": "Manager, Engineering",
-  "loc": "NYC | ?",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4703705-environmental-engineering-director",
-  "tag": "stv_environmental_engineering_director",
-  "company": "STV",
-  "title": "Environmental Engineering Director",
   "loc": "NYC | In office",
   "tier": 2,
   "last_result": "(no report)",
@@ -748,18 +483,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4762995-software-engineer-staff",
-  "tag": "check_software_engineer_staff",
-  "company": "Check",
-  "title": "Software Engineer, Staff",
-  "comp": 264000.0,
-  "loc": "United States",
-  "tier": 3,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4185263-staff-software-engineer",
   "tag": "nextpatient_staff_software_engineer",
   "company": "NextPatient",
@@ -780,18 +503,6 @@
   "title": "Forward Deployed Engineer",
   "comp": null,
   "loc": "New York City",
-  "tier": 4,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4664591-principal-engineer-digital-engineering",
-  "tag": "thresh_consulting_principal_engineer_digital_engineer",
-  "company": "Thresh Consulting",
-  "title": "Principal Engineer, Digital Engineering",
-  "comp": 250000.0,
-  "loc": "Chicago, Denver, New York City",
   "tier": 4,
   "last_result": "(no report)",
   "last_unanswered": []
