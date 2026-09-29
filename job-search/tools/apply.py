@@ -206,6 +206,8 @@ async def choose_select(page,h,options_pref):
                     except Exception: pass
     return None
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
+# work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)
+ENV_TRUE=r"start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
 # option statements that are true for the applicant (Santa Clara, CA; hybrid in SF Bay Area fine; open to relocation elsewhere)
 OPTION_TRUE=r"(currently )?(live|based|located|reside) in (the )?(sf |san francisco |greater )?bay area|santa clara|(live|based|located|reside) in (the )?(san francisco|silicon valley|california)|comfortable with a hybrid position commuting to the (san francisco|sf) office"
 async def dismiss_menu(page,inp=None):
@@ -725,8 +727,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if not await h.is_visible() or await h.is_checked(): continue
                     lab=await label_of(h)
                     if re.search(r"pronoun|newsletter|marketing|updates|subscribe|text message|sms",lab,re.I): continue
-                    grp=await h.evaluate(r"""(el)=>{const fs=el.closest('fieldset,[role=group]'); const n=(el.getAttribute('name')||'').replace(/\[\d+\]$/,'');
+                    grp=await h.evaluate(r"""(el)=>{const fs=el.closest('fieldset,[role=group]'); let n=(el.getAttribute('name')||'').replace(/\[\d+\]$/,'');
+                        if(!fs&&!n&&el.id){n='id:'+el.id.replace(/(--|-|_)\d+$/,'').replace(/\[\d+\]$/,'');}   // Wellfound: options share an id prefix, no name/fieldset
                         let q=''; if(fs){const l=fs.querySelector('legend,.application-label,[class*=label]'); q=l?l.innerText:'';}
+                        if(!q){let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText){const t=prev.innerText.trim(); if(t.length>3&&t.length<300&&/\?|select|choose|which|apply/i.test(t)){q=t;break;}} p=p.parentElement;}}
                         return [fs?('fs:'+(fs.id||q||n)):n, q.replace(/\s+/g,' ').replace(/[✱*]/g,'').trim()];}""")
                     boxes.append((h,lab,grp[0] or f"cb{i}",grp[1]))
                 except Exception: pass
@@ -742,6 +746,16 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         done_groups.add(gk)
                         want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
                         if want==["__ASK__"]: continue
+                        if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
+                            # "which environments describe your experience (select all that apply)": tick every option true for the applicant's history
+                            ticked=[]
+                            for b in members:
+                                if re.search(ENV_TRUE,b[1],re.I) and not re.search(r"none of the above|not applicable|n/a|prefer not|other",b[1],re.I):
+                                    try: await b[0].check(timeout=3000); ticked.append(b[1][:40])
+                                    except Exception:
+                                        try: await b[0].evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else el.click();}"); ticked.append(b[1][:40])
+                                        except Exception: pass
+                            if ticked: report["chosen"][(q or lab)[:60]]=", ".join(ticked); continue
                         choice=None
                         for pv in want:
                             for b in members:
