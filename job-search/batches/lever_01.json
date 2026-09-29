@@ -1,0 +1,42 @@
+[
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/1c01bf84-38e3-42db-990c-29c9195443ba/apply",
+  "tag": "waabi_senior_staff_ml_ops_engineer",
+  "company": "waabi",
+  "title": "Senior / Staff ML Ops Engineer",
+  "comp": 272000.0,
+  "bucket": 1,
+  "answers": {}
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/moonpay/1891b692-26f1-4bc0-81df-74e753b1e3a3/apply",
+  "tag": "moonpay_staff_engineer_agents",
+  "company": "moonpay",
+  "title": "Staff Engineer, Agents",
+  "comp": 250000.0,
+  "bucket": 3,
+  "answers": {}
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/0614b22d-699e-4d08-9149-968e0b010bf4/apply",
+  "tag": "waabi_senior_staff_software_engineer_ml_based_controls",
+  "company": "waabi",
+  "title": "Senior / Staff Software Engineer, ML-based Controls",
+  "comp": 320000.0,
+  "bucket": 3,
+  "answers": {}
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/cb383962-ad2d-40ab-93ce-e3aead4b3838/apply",
+  "tag": "waabi_staff_systems_engineer_safety_methodologies",
+  "company": "waabi",
+  "title": "Staff Systems Engineer - Safety Methodologies",
+  "comp": 256000.0,
+  "bucket": 3,
+  "answers": {}
+ }
+]

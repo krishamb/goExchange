@@ -160,7 +160,7 @@ async def choose_react_select(page,control,options_pref,label):
     return None
 async def run():
     async with async_playwright() as p:
-        b=await p.chromium.launch(executable_path="/opt/pw-browsers/chromium",headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
+        b=await p.chromium.launch(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
         summary=[]
         for job in jobs:
