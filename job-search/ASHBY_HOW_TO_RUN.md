@@ -12,13 +12,17 @@ It creates `~/ashby.sh`.
 ## Commands
 
 ```
-bash ~/ashby.sh          # get the newest job list, then start applying
-bash ~/ashby.sh status   # submitted / not submitted so far, plus the last log lines
-bash ~/ashby.sh log      # watch the live log (Ctrl+C stops watching; the run keeps going)
-bash ~/ashby.sh stop     # stop the run
-bash ~/ashby.sh update   # only download the newest job list, do not start
-bash ~/ashby.sh help     # show this list
+bash ~/ashby.sh           # get the newest job list, then start 5 parallel workers
+bash ~/ashby.sh status    # submitted / blocked by Ashby's spam check / need your answer
+bash ~/ashby.sh manual    # open a page with every job to finish by hand (links + answers ready to paste)
+bash ~/ashby.sh log       # watch the workers live (Ctrl+C stops watching; the run keeps going)
+bash ~/ashby.sh stop      # stop all workers
+bash ~/ashby.sh start 3   # use a different number of workers
 ```
+
+About Ashby's spam check: Ashby blocks some automated submissions ("use a different connection / pause browser
+extensions"). The script does not try to get around that. Those jobs are not retried automatically; they appear on
+the `manual` page with the answers prepared, so each one takes about a minute by hand.
 
 `bash ~/ashby.sh` downloads the repo to `~/goExchange` the first time, and updates it every time after that.
 

@@ -66,6 +66,11 @@ TEXT_RULES=[
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
+ (r"current (occupation|job title|title|role|position)|^occupation|your occupation|what do you (currently )?do for work", "CTO"),   # applicant's answer
+ (r"earliest .{0,50}start|when .{0,40}(start|join|begin)|start date|available to start|availability", "Immediately"),   # applicant's answer
+ (r"(what is |what's )?your current location|current location|where (are|do) you (currently )?(located|based|live|living|reside)|city,? state", "Santa Clara, California"),   # applicant's answer
+ (r"sponsor", "No sponsorship required. I am a US citizen."),   # applicant's answer
+ (r"citizenship|citizen", "US Citizen"),
  (r"^middle (name|initial)|middle name", "N/A"),
  (r"(served|serve|service|served in|been in) (in )?(the )?(military|armed forces|u\.?s\.? military)|military (service|experience|background)", "No, I have not served in the military."),
  (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
@@ -552,6 +557,15 @@ async def run():
         summary=[]; default_email=P["email"]
         for job in jobs:
             set_email(job.get("email") or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses)
+            try:
+                _prev=json.load(open(f"{OUT}/{job['tag']}_report.json"))
+            except Exception: _prev={}
+            if _prev.get("submitted") and "ALREADY" not in (_prev.get("result") or ""):
+                print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":True,"result":"ALREADY SUBMITTED earlier (skipped)"}),flush=True); continue
+            if _prev.get("spam_blocked") or re.search(r"spam check|pause browser extensions|different (network )?connection instead",_prev.get("result") or ""):
+                if not _prev.get("spam_blocked"):
+                    _prev["spam_blocked"]=True; _prev["result"]="NOT SUBMITTED: blocked by the site's spam check - apply by hand"; json.dump(_prev,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
+                print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":False,"result":"SKIPPED: the site's spam check blocked this earlier - apply by hand"}),flush=True); continue
             prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site (a correction resubmit is exempt)
             if prior:
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
@@ -1006,6 +1020,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 ok=bool(sm) and not still_code and not any(re.search(r"required|invalid|correct|missing",e,re.I) for e in errs)
                 if still_code and not ok: errs.append("still on the security-code step")
                 report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
+                if not ok and re.search(r"possible spam|flagged as (possible )?spam|pause browser extensions|pause ad ?blockers|different (network )?connection instead|could not verify|verify you are (a )?human",body,re.I):
+                    report["result"]="NOT SUBMITTED: blocked by the site's spam check - apply by hand"; report["spam_blocked"]=True
                 await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
             elif submit and any(re.search(r"update your location preferences|^i am currently in",u.get("label",""),re.I) for u in report["unanswered"]):
                 report["result"]="NOT SUBMITTED: location restricted by employer (location picker offers no US option)"
