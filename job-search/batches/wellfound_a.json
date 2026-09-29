@@ -8,10 +8,8 @@
   "comp": 230000.0,
   "loc": "Seattle",
   "tier": 2,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "In your last role, how often did you interact directly with non-technical stakeh"
-  ]
+  "last_result": "al API call (e.g., to a third-party service for enrichment or notification)* | This question is requ",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
