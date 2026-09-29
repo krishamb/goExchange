@@ -49,18 +49,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/redwoodsoftware/jobs/4421079009",
-  "tag": "redwood_software_inc_principal_software_engineer_ibm_z_o",
-  "company": "Redwood Software Inc.",
-  "title": "Principal Software Engineer \u2013 IBM z/OS Connectivity",
-  "comp": null,
-  "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790294400.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/realchemistry/jobs/5430021008",
   "tag": "real_chemistry_lead_back_end_architect_engineer",
   "company": "Real Chemistry",
@@ -193,35 +181,11 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/janestreet/jobs/8827451002",
-  "tag": "janestreet_residential_director_academy_of_mat",
-  "company": "janestreet",
-  "title": "Residential Director, Academy of Math and Programming (AMP)",
-  "comp": null,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789948800.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/mercury/jobs/6201177004",
   "tag": "mercury_senior_engineering_manager_credit_c",
   "company": "mercury",
   "title": "Senior Engineering Manager - Credit Cards",
   "comp": 298800.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789689600.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/mitratech/jobs/8192108",
-  "tag": "mitratech_director_of_product_program_managem",
-  "company": "mitratech",
-  "title": "Director of Product Program Management",
-  "comp": 220000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
@@ -253,18 +217,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cockroachlabs/jobs/8209735",
-  "tag": "cockroachlabs_director_fp_a",
-  "company": "cockroachlabs",
-  "title": "Director, FP&A",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789603200.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/turing/jobs/6192730004",
   "tag": "turing_forward_deployed_ai_engineer",
   "company": "turing",
@@ -274,18 +226,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789603200.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/instacart/jobs/8198282",
-  "tag": "instacart_director_of_product_logistics",
-  "company": "instacart",
-  "title": "Director of Product, Logistics",
-  "comp": 307000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789516800.0
  },
  {
   "ats": "greenhouse",
@@ -337,30 +277,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/axiom/jobs/8795445002",
-  "tag": "axiom_director_ai_client_solutions",
-  "company": "axiom",
-  "title": "Director, AI Client Solutions",
-  "comp": 280000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789344000.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/lightmatter/jobs/5286549008",
-  "tag": "lightmatter_electro_optic_systems_architect",
-  "company": "lightmatter",
-  "title": "Electro-Optic Systems Architect",
-  "comp": 321000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789344000.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/huntress/jobs/7977223003",
   "tag": "huntress_staff_platform_engineer",
   "company": "huntress",
@@ -390,18 +306,6 @@
   "company": "launchdarkly",
   "title": "Engineering Manager, Data Platform",
   "comp": 263670.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789084800.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/point72/jobs/8773520002",
-  "tag": "point72_network_engineering_manager",
-  "company": "point72",
-  "title": "Network Engineering Manager",
-  "comp": 325000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
@@ -443,29 +347,5 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1788998400.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/sambanovasystems/jobs/6187673004",
-  "tag": "sambanovasystems_director_of_product_ecosystem",
-  "company": "sambanovasystems",
-  "title": "Director of Product, Ecosystem",
-  "comp": 297000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788912000.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cribl/jobs/6173732004",
-  "tag": "cribl_sr_engineering_manager_sdet",
-  "company": "cribl",
-  "title": "Sr. Engineering Manager, SDET",
-  "comp": 270000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788912000.0
  }
 ]
