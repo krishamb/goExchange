@@ -19,46 +19,10 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/quanthealth/jobs/4943005101",
-  "tag": "quanthealth_director_of_algorithms_development",
-  "company": "QuantHealth",
-  "title": "Director of Algorithms Development",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/phasev/jobs/4000221009",
-  "tag": "phasev_senior_backend_developer",
-  "company": "PhaseV",
-  "title": "Senior Backend Developer",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/layerhealth/jobs/5423731008",
-  "tag": "layer_health_head_of_corporate_and_information_s",
-  "company": "Layer Health",
-  "title": "Head of Corporate and Information Security",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/cleerlyhealth/jobs/5973651004",
   "tag": "cleerly_sr_engineering_manager_clinical_lab",
   "company": "Cleerly",
   "title": "Sr. Engineering Manager (Clinical Labs - Clinical Insights)",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/quanthealth/jobs/4906873101",
-  "tag": "quanthealth_senior_ai_research_engineer",
-  "company": "QuantHealth",
-  "title": "Senior AI Research Engineer",
   "comp": null,
   "source": "healthcare list"
  },
@@ -77,24 +41,6 @@
   "tag": "layer_health_machine_learning_engineer",
   "company": "Layer Health",
   "title": "Machine Learning Engineer",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/phasev/jobs/4003205009",
-  "tag": "phasev_senior_software_engineer",
-  "company": "PhaseV",
-  "title": "Senior Software Engineer",
-  "comp": null,
-  "source": "healthcare list"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cleerlyhealth/jobs/6118783004",
-  "tag": "cleerly_software_engineer_iii",
-  "company": "Cleerly",
-  "title": "Software Engineer III",
   "comp": null,
   "source": "healthcare list"
  },
