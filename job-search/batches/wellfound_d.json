@@ -1,52 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4763404-founding-developer",
-  "tag": "nixora_founding_developer",
-  "company": "Nixora",
-  "title": "Founding Developer",
-  "comp": null,
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4757047-founding-engineer-tech-lead-help-us-fix-how-america-s-retail-stores-restock",
-  "tag": "wholesale_hub_founding_engineer_tech_lead_help_us",
-  "company": "Wholesale Hub",
-  "title": "Founding Engineer & Tech Lead: Help Us Fix How America's Retail Stores Restock",
-  "comp": "$12k \u2013 $15k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4752094-mts-research-cybersecurity",
-  "tag": "collinear_ai_mts_research_cybersecurity",
-  "company": "Collinear.ai",
-  "title": "MTS - Research (Cybersecurity)",
-  "comp": null,
-  "loc": "Remote",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Collinear.ai"
-  ]
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4756915-founding-ios-engineer",
-  "tag": "the_legendary_lab_founding_ios_engineer",
-  "company": "The Legendary Lab",
-  "title": "Founding iOS Engineer",
-  "comp": "$210k \u2013 $290k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3768862-founding-team-backend-engineer-equity-based",
   "tag": "palette_founding_backend_engineer_product_i",
   "company": "Palette",
@@ -146,50 +100,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4163043-founding-forward-deployed-engineer",
-  "tag": "pythagoras_ai_forward_deployed_engineer",
-  "company": "Pythagoras AI",
-  "title": "Forward Deployed Engineer",
-  "comp": "$120k \u2013 $180k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3532881-founding-backend-engineer-remote-usa",
-  "tag": "flocker_founding_backend_engineer_remote_us",
-  "company": "Flocker",
-  "title": "Founding Backend Engineer - Remote (USA)",
-  "comp": null,
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4616101-principal-machine-learning-engineer-graph-ml-code-intelligence",
-  "tag": "ir_labs_principal_machine_learning_engineer",
-  "company": "IR Labs",
-  "title": "Principal Machine Learning Engineer - Graph ML & Code Intelligence",
-  "comp": "$350k \u2013 $430k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4557440-founding-engineer",
-  "tag": "endgap_founding_engineer_ai_construction_s",
-  "company": "Endgap",
-  "title": "Founding Engineer - AI Construction Software",
-  "comp": "$145k \u2013 $225k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/2889543-founding-software-engineer",
   "tag": "carbon_trail_founding_software_engineer",
   "company": "Carbon Trail",
@@ -250,17 +160,6 @@
   "company": "Gray Swan AI",
   "title": "Senior Forward Deployed Engineer \u2013\u00a0Enterprise",
   "comp": "$175k \u2013 $220k",
-  "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4610056-senior-staff-machine-learning-platform-engineer",
-  "tag": "faire_senior_staff_machine_learning_platf",
-  "company": "Faire",
-  "title": "Senior Staff Machine Learning Platform Engineer",
-  "comp": "$295k \u2013 $406k",
   "loc": "Remote",
   "last_result": "(no report)",
   "last_unanswered": []
