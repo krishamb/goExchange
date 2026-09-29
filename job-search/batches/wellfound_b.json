@@ -1,29 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748744-founding-engineer",
-  "tag": "fig_ai_founding_engineer",
-  "company": "Fig AI",
-  "title": "Founding Engineer",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4709944-senior-ai-ml-engineer",
-  "tag": "oryn_senior_ai_ml_engineer",
-  "company": "Oryn",
-  "title": "Senior AI/ML Engineer",
-  "comp": 160000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692109-senior-staff-software-engineer-agent",
   "tag": "embedding_vc_senior_staff_software_engineer_agen",
   "company": "Embedding VC",
