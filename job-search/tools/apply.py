@@ -95,6 +95,7 @@ CHOICE_RULES=[
  (r"authori[sz]ed? .{0,40}without (company |employer |visa |any )?sponsorship|without (company |employer |visa )?sponsorship|legal(ly)? authori[sz]ation to work in the (us|u\.s\.|united states)", ["Yes","yes"]),   # US citizen: authorized without sponsorship
  (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["No","no"]),   # applicant: no fully on-site 5-day roles
  (r"engineering blog|influence your decision|how much did .{0,60}influence", ["3 = Neutral","Neutral","3","Moderate","4 = Moderate"]),   # marketing-attribution scale questions
+ (r"immediate family|relatives? (who )?(work|employed)|family members? (who )?(work|employed)|debarred|excluded by the OIG|convicted|felony|criminal|non-?compete|conflict of interest|restrictive covenant", ["No","no"]),   # compliance questions: none apply
  (r"are you ready|ready to (take|do|complete|go through|participate)|actively involved in product development|technical (portion|assessment|interview|screen|take-?home|challenge)|hands[- ]on (coding|technical)|comfortable (writing|with) code|still (write|writing) code|willing to (code|write code)", ["Yes","yes"]),   # hands-on leader: yes to technical interviews
  (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
  (r"select your (current )?location|your current location|which (hub|location|city|metro) (are you|is closest|do you)|where (are|do) you (currently )?(based|live|located|reside)", ["San Francisco Bay Area","SF Bay Area","Bay Area","San Francisco","San Jose","Santa Clara","Bay Area, CA","California","Remote, United States","Remote - United States","Remote (US)","US Remote","United States","Remote"]),
@@ -491,7 +492,10 @@ def applied_elsewhere(tag,company=None,days=45):
         try: r=json.load(open(f))
         except Exception: continue
         if not r.get("submitted") or "ALREADY APPLIED" in (r.get("result") or ""): continue
-        if ks & company_keys(r.get("tag"),r.get("company")): return r.get("tag")
+        ks2=company_keys(r.get("tag"),r.get("company"))
+        if ks & ks2: return r.get("tag")
+        # 'doordashusa' vs 'doordash', 'acmeinc' vs 'acme': a key that is a prefix of the other (6+ chars) is the same company
+        if any(a.startswith(b) or b.startswith(a) for a in ks for b in ks2 if min(len(a),len(b))>=6): return r.get("tag")
     return None
 async def run():
     async with async_playwright() as p:
@@ -767,7 +771,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     # the nearest preceding text is usually the question; prefer it over a distant heading when it reads like one
                     qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<420) return prev.innerText; p=p.parentElement;} return '';}")
                     qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip(); optl=[o[1].lower() for o in opts]
-                    if qlab2 and qlab2.lower() not in optl and (not qlab or qlab.lower() in optl or (qlab2.rstrip("* ").endswith("?") and not qlab.rstrip("* ").endswith("?"))): qlab=qlab2
+                    if qlab2 and qlab2.lower() not in optl and (not qlab or qlab.lower() in optl or (qlab2.rstrip("* ").endswith("?") and not qlab.rstrip("* ").endswith("?")) or (len(qlab.split())<=3 and len(qlab2)>len(qlab)+10)): qlab=qlab2   # a 1-3 word heading (often the company name) is not the question
                     cands=[]
                     for k,v in extra.items():
                         if k.lower() in qlab.lower(): cands.append([v]); break
