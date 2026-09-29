@@ -248,5 +248,115 @@
   "comp": null,
   "loc": "Italy",
   "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/lancedb/d86e0295-d4f3-45b7-93c2-b45309db9f89",
+  "tag": "lancedb_senior_product_security_engineer",
+  "company": "lancedb",
+  "title": "Senior Product Security Engineer",
+  "comp": 250000.0,
+  "loc": "United States | Canada",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/clickhouse/caf49f06-ed35-4637-9372-f4df114e852f",
+  "tag": "clickhouse_senior_software_engineer_cloud_infr",
+  "company": "clickhouse",
+  "title": "Senior Software Engineer - Cloud Infrastructure - (US Remote)",
+  "comp": 230000.0,
+  "loc": "AMER",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/svix/3a4bc7e8-0756-4033-b210-bd6d275cfbee",
+  "tag": "svix_team_lead",
+  "company": "svix",
+  "title": "Team lead",
+  "comp": 210000.0,
+  "loc": "San Francisco (On-Site)",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/crusoe/88259992-3dff-4e15-9758-9df012be2bac",
+  "tag": "crusoe_senior_performance_engineer",
+  "company": "crusoe",
+  "title": "Senior Performance Engineer",
+  "comp": 205000.0,
+  "loc": "San Francisco, CA - US",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cerebras/ea44d96f-37e9-4d59-8749-621013176832",
+  "tag": "cerebras_senior_runtime_engineer",
+  "company": "cerebras",
+  "title": "Senior Runtime Engineer",
+  "comp": null,
+  "loc": "United States and Canada",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/lightning/21a591d9-d731-4f2d-935d-841d3a779ec9",
+  "tag": "lightning_senior_security_engineer_remote",
+  "company": "lightning",
+  "title": "Senior Security Engineer (Remote)",
+  "comp": null,
+  "loc": "Lightning Labs",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cribl/23d44117-6f6d-4a8f-acaf-5f40b191f72d",
+  "tag": "cribl_sr_software_engineer_stream_integra",
+  "company": "cribl",
+  "title": "Sr Software Engineer, Stream Integrations",
+  "comp": null,
+  "loc": "US - California",
+  "lang": "C++"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/jobgether/1c0400f1-d804-4689-a884-6d5049d45dc1",
+  "tag": "jobgether_contract_staff_software_engineer_pe",
+  "company": "jobgether",
+  "title": "Contract Staff Software Engineer - Performance Graphics (C++,Rust, WebGL)",
+  "comp": null,
+  "loc": "US",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/lancedb/9454302d-3d40-4ed4-832e-c1590ff497fc",
+  "tag": "lancedb_senior_software_engineer",
+  "company": "lancedb",
+  "title": "Senior Software Engineer",
+  "comp": 250000.0,
+  "loc": "United States",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/clickhouse/db498a8c-c8d8-405b-b86a-0943a5122e7d",
+  "tag": "clickhouse_senior_cloud_software_engineer_effi",
+  "company": "clickhouse",
+  "title": "Senior Cloud Software Engineer - Efficiency Engineering",
+  "comp": null,
+  "loc": "AMER",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/clickhouse/a11e0267-85fb-4eaa-920b-849edbb5b625",
+  "tag": "clickhouse_principal_software_engineer_postgre",
+  "company": "clickhouse",
+  "title": "Principal Software Engineer - Postgres",
+  "comp": null,
+  "loc": "AMER",
+  "lang": "C++/Rust"
  }
 ]

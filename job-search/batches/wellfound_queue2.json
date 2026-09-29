@@ -3345,5 +3345,38 @@
   "tier": 2,
   "size": "SIZE_11_50",
   "lang": ""
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4766855-senior-autonomy-software-engineer-mapping",
+  "tag": "kodiak_robotics_senior_autonomy_software_engineer_m",
+  "company": "Kodiak Robotics",
+  "title": "Senior Autonomy Software Engineer, Mapping",
+  "comp": 260000,
+  "loc": "Mountain View",
+  "tier": 0,
+  "lang": "C++"
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4779138-senior-full-stack-software-engineer",
+  "tag": "naijaluxemart_senior_full_stack_software_engineer",
+  "company": "Naijaluxemart",
+  "title": "Senior Full-Stack Software Engineer",
+  "comp": 250000,
+  "loc": "San Francisco",
+  "tier": 0,
+  "lang": "C++"
+ },
+ {
+  "ats": "wellfound",
+  "url": "https://wellfound.com/jobs/4167096-senior-software-engineer-network-observability",
+  "tag": "clockwork_systems_senior_software_engineer_network_ob",
+  "company": "Clockwork Systems",
+  "title": "Senior Software Engineer \u2013 Network Observability",
+  "comp": 210000,
+  "loc": "Palo Alto",
+  "tier": 0,
+  "lang": "C++/Rust"
  }
 ]
