@@ -18,3 +18,13 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Oklo | Director of Development Engineering | Wellfound | Reactor engineering role, not a fit. | Consider withdrawing. |
 | TechSpace | Marketo Solution Architect | Wellfound | Marketing-automation role, not a fit. | Consider withdrawing. |
 | Pallet | Two roles (Greenhouse + Wellfound) | both | Two applications to one company before the one-per-company check existed. | Withdraw one if you prefer. |
+
+## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
+
+Elastic (Director of Software Engineering; Principal Software Engineer I, Serverless Platform), Airbnb (Senior Staff
+Data Engineer; Senior Staff Software Engineer, Tech Foundations) and Figma (Manager, Software Engineering, AI
+Observability) were each submitted again with the corrected answers: sanctioned-country citizenship No, non-compete
+No, former Figma employee No. Each company now holds both the original and the corrected application; if a recruiter
+asks, the corrected one (submitted later the same day) is the accurate one.
+Not resubmitted: Netskope (the role is Taiwan-based; withdraw it) and Metriport (Wellfound allows one application per
+account; tell them you are a US citizen if they reply).
