@@ -49,6 +49,9 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
  (r"zip|postal", "95050"),
+ (r"^company name|^(most recent |current )?(company|employer)( name)?$", P["org"]),
+ (r"start (date )?year|^from year|start \(year\)", "2023"),
+ (r"end (date )?year|^to year|end \(year\)", "2026"),
  (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
  (r"^(street |home |mailing )?address", P["location"]),
  (r"linkedin", P["linkedin"]),(r"github", P["github"]),(r"portfolio|website|personal site", P["github"]),
@@ -77,7 +80,9 @@ CHOICE_RULES=[
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
  (r"in[- ]person|open to working|come into the office|days? (a|per) week|days (from|in|at) (one of )?our office|office hub", ["Yes","yes"]),
- (r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|generative ai", ["__ASK__"]),
+ (r"understand that .{0,40}(may )?use ai|company may use ai|we (may )?use ai|ai tools to assist in the (application|interview)", ["Yes","I understand","I acknowledge","Acknowledge"]),
+ (r"how (do )?you use ai|use ai tools today|describes (how )?you use ai|your (use|usage) of ai tools|ai (proficiency|fluency)", ["I design or automate workflows with AI","I regularly use AI tools","I have experimented with AI tools","Advanced","Expert"]),
+ (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
  (r"authori[sz]ed to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility", ["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"relocat", ["Yes","yes"]),
@@ -89,6 +94,10 @@ CHOICE_RULES=[
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
  (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man","Cisgender man","Cis man","Cis-gender man"]),
  (r"programming language|language\(s\)|which language|coding language", ["Either","Both","Python","Go"]),
+ (r"start (date )?month|^from month", ["January"]),
+ (r"end (date )?month|^to month", ["September"]),
+ (r"start (date )?year|^from year", ["2023"]),
+ (r"end (date )?year|^to year", ["2026"]),
  (r"metropolitan area|metro area|closest to your (city|residence|home)|nearest (city|metro)|city of residence", ["San Jose, California","San Jose, CA","San Jose","Santa Clara","San Francisco, California","San Francisco, CA","San Francisco","Sunnyvale","Oakland"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
@@ -98,14 +107,14 @@ CHOICE_RULES=[
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
  (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content|talent community", ["No","no"]),
- (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","I have read","Acknowledge","Agree","Accept","yes"]),
+ (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
  (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
  (r"school|university|college", ["University of Madras","Other","University"]),
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
  (r"previously,? (applied|worked|employed)|currently,? (or have you|work|employed)|currently employed by|worked (for|at) .* before|have you (ever )?worked (at|for)|worked at .*(employee|contractor|consultant)|former .{0,30}employee|current .{0,30}employee|current or former|former or current|ever (worked|been employed)",["No","no","I have not worked","have not worked","Never worked","Never","None of the above","Not applicable","N/A"]),
- (r"outside business|advisory|consulting|board role|side business|conflict of interest|moonlight", ["No","no","None"]),
- (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by", ["No","no","None"]),
+ (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
+ (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
@@ -498,12 +507,12 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"captcha|search",name+lab,re.I): continue
                     ph=(await h.get_attribute("placeholder") or "")
                     if lab.strip().lower() in ("select...","select") or re.search(r"select2",(await h.get_attribute("class")) or ""): continue
-                    if re.search(r"^location$|current location|^city$|where are you (based|located)",lab,re.I) or (ats=="lever" and name=="location") or (re.search(r"start typing",ph,re.I) and re.search(r"location|city",lab,re.I)):
+                    if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select|requiredInput/i.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')||!!(el.parentElement&&el.parentElement.querySelector('[class*=select__control],[class*=Select__control]'))"): continue   # dropdowns are handled below
+                    if re.search(r"^(current |your )?location( \(city\))?$|^city$|^where are you (based|located)",lab,re.I) or (ats=="lever" and name=="location") or (re.search(r"start typing",ph,re.I) and re.search(r"location|city",lab,re.I)):
                         if not (await h.input_value()).strip():
                             got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara")
                             report["filled"][lab[:60] or name]=f"autocomplete:{got}"
                         continue
-                    if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select|requiredInput/i.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')||!!(el.parentElement&&el.parentElement.querySelector('[class*=select__control],[class*=Select__control]'))"): continue
                     if re.search(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai",lab,re.I): report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
                     key=lab or name
                     val=None
@@ -653,7 +662,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             for h,lab,gk,q in boxes:
                 try:
                     members=[b for b in boxes if b[2]==gk]
-                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true",lab,re.I):
+                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present",lab,re.I):
                         await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
