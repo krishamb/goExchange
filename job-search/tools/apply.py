@@ -99,6 +99,7 @@ CHOICE_RULES=[
  (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
  (r"have you (ever )?used|are you a (current )?(user|customer)|used (our|the) (product|app|platform)", ["Yes","yes"]),
  (r"FHIR|HL7|CCDA|HIPAA|\bPHI\b|\bEHR\b|EMR\b|clinical|healthcare partner|medical device|\bFDA\b|GxP|pharma|ICD-?10|CPT codes|claims data|payer", ["No","no"]),   # not in the applicant's background: answer honestly
+ (r"previously,? (applied|worked|employed)|currently,? (or have you|work|employed)|currently employed by|worked (for|at) .* before|have you (ever )?worked (at|for)|worked at .*(employee|contractor|consultant)|former .{0,30}employee|current .{0,30}employee|current or former|former or current|ever (worked|been employed)|(previously|ever) been employed|been employed (at|by|with)",["No","no","I have not previously been employed","I have not been employed","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),
  (r"^(?!.*(veteran|military|armed forces))(have you (ever )?(worked|built|owned|operated|led|designed|managed|shipped|deployed|architected|scaled|mentored|hired|delivered|run|written)|.*experience (with|in|building|leading|managing|designing)|.*are you (comfortable|experienced|familiar|proficient)|.*do you have (hands-on )?experience|.*have you (previously )?(held|been in|served as))", ["Yes","yes"]),
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
  (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
@@ -129,7 +130,6 @@ CHOICE_RULES=[
  (r"school|university|college", ["University of Madras","Other","University"]),
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
- (r"previously,? (applied|worked|employed)|currently,? (or have you|work|employed)|currently employed by|worked (for|at) .* before|have you (ever )?worked (at|for)|worked at .*(employee|contractor|consultant)|former .{0,30}employee|current .{0,30}employee|current or former|former or current|ever (worked|been employed)|(previously|ever) been employed|been employed (at|by|with)",["No","no","I have not previously been employed","I have not been employed","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),
  (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
