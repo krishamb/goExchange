@@ -12,7 +12,7 @@ It creates `~/ashby.sh`.
 ## Commands
 
 ```
-bash ~/ashby.sh           # get the newest job list, then start 5 parallel workers
+bash ~/ashby.sh           # get the newest job list, then start 2 parallel workers
 bash ~/ashby.sh status    # submitted / blocked by Ashby's spam check / need your answer
 bash ~/ashby.sh manual    # open a page with every job to finish by hand (links + answers ready to paste)
 bash ~/ashby.sh log       # watch the workers live (Ctrl+C stops watching; the run keeps going)

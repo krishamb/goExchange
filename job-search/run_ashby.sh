@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Ashby runner for your Mac (Ashby rejects applications sent from cloud servers). Called by ~/ashby.sh.
 #
-#   bash job-search/run_ashby.sh start [N]   start N parallel workers (default 5), background, no browser windows
+#   bash job-search/run_ashby.sh start [N]   start N parallel workers (default 2), background, no browser windows
 #   bash job-search/run_ashby.sh status      submitted / blocked / needs-answers counts, worker state, last log lines
 #   bash job-search/run_ashby.sh stop        stop all workers
 #   bash job-search/run_ashby.sh manual      build and open a page listing every job to finish by hand, with the links
@@ -90,7 +90,7 @@ EOF
   *) echo "usage: bash job-search/run_ashby.sh [start [N]|status|stop|manual]"; exit 2;;
 esac
 
-N="${2:-5}"
+N="${2:-2}"
 echo "== checking $JOBS_DIR"
 missing=0
 for f in profile.json answers.json Ambarish_Krishnamurthy_Resume.pdf Ambarish_Krishnamurthy_Cover_Letter.pdf; do

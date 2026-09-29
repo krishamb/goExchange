@@ -72,6 +72,9 @@ TEXT_RULES=[
  (r"sponsor", "No sponsorship required. I am a US citizen."),   # applicant's answer
  (r"citizenship|citizen", "US Citizen"),
  (r"dog or a ghost|ghost or a dog", "Dog. Loyal to the team, curious about everything, and always shows up with energy."),   # applicant's choice (Miter)
+ (r"what city|which city|city (do|are) you (currently )?(live|living|based|located)", "Santa Clara, CA"),   # applicant's answer
+ (r"physical technology|invented in the last \d+ years|invention (do you|you) (most )?admire|technology .{0,30}(most )?admire", "The railroad, together with the electrical switch and the light bulb. Railroads turned distance into a schedule, switches made control programmable, and the light bulb turned time into something we design around; the same systems thinking is what I bring to software."),   # applicant's picks
+ (r"customer feedback .{0,60}(feature|roadmap|product)|feedback .{0,40}translated? .{0,40}(feature|roadmap)", "At JPMorgan Chase and Morgan Stanley I led technical leads and architects delivering trading and application platforms directly with client and trading-desk teams, so their feedback on latency, reliability and workflow went straight into the roadmap: we prioritised the execution-path and tooling changes they asked for and shipped them in phased releases with the desks validating each step. Later, at Cadence and Ankr, I was the architect embedded with customer-facing engineering, turning recurring customer requests into platform features, and at Hyperion AI I work directly with early users to decide what the agentic platform builds next."),   # based on the applicant's resume
  (r"^middle (name|initial)|middle name", "N/A"),
  (r"(served|serve|service|served in|been in) (in )?(the )?(military|armed forces|u\.?s\.? military)|military (service|experience|background)", "No, I have not served in the military."),
  (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
@@ -125,6 +128,7 @@ CHOICE_RULES=[
  (r"accommodation|assistance to participate|reasonable adjustment", ["No, I do not require","No, I do not","No","no"]),   # no accommodation needed
  (r"how often did you (interact|work|meet|communicate)|how frequently .{0,40}(stakeholders|customers|clients)|interact directly with (non-technical|customers|clients|stakeholders)", ["Daily","Every day","Weekly"]),   # CTO/co-founder: daily stakeholder contact
  (r"coordination hours|core (working )?hours|available for meetings|impromptu communication|overlap(ping)? hours", ["Yes","yes"]),
+ (r"headquartered in .{0,40}(mountain view|san francisco|palo alto|menlo park|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|berkeley|bay area|cupertino|foster city|burlingame|los altos|campbell|milpitas)", ["Yes","yes"]),   # applicant lives in Santa Clara
  (r"athlete|esports? (competitor|player)|professional (gamer|player)|participate in (games|contests)", ["No","no"]),
  (r"proof of (employment |work )?authori[sz]ation|employment authori[sz]ation|provide (proof|documentation) .{0,30}(eligib|authori)", ["Yes","yes"]),
  (r"(EST|EDT|ET|Eastern|PST|PDT|PT|Pacific|CST|Central|MST|Mountain)\b.{0,30}(business )?hours|work (in|during) .{0,20}(time ?zone|hours)|overlap with .{0,30}(hours|time ?zone)", ["Yes","yes"]),   # remote: works any US business hours
@@ -197,7 +201,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()

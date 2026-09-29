@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # ~/ashby.sh : every Ashby command in one place (runs on your Mac). It updates itself on every run.
 #
-#   bash ~/ashby.sh           get the newest job list, then start 5 parallel workers (background, no browser windows)
-#   bash ~/ashby.sh start 3   same, with 3 workers (any number)
+#   bash ~/ashby.sh           get the newest job list, then start 2 parallel workers (background, no browser windows)
+#   bash ~/ashby.sh start 3   same, with 3 workers (default 2)
 #   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
 #   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
@@ -29,7 +29,7 @@ update() {
 in_repo() { cd "$REPO" 2>/dev/null || { echo "Not set up yet. Run: bash ~/ashby.sh"; exit 1; }; }
 
 case "${1:-start}" in
-  start)  update; bash job-search/run_ashby.sh start "${2:-5}" ;;
+  start)  update; bash job-search/run_ashby.sh start "${2:-2}" ;;
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
   status) in_repo; bash job-search/run_ashby.sh status ;;
   manual) in_repo; bash job-search/run_ashby.sh manual ;;
