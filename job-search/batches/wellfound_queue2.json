@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4658838-engineering-manager-landing-pages",
-  "tag": "braze_engineering_manager_landing_pages",
-  "company": "Braze",
-  "title": "Engineering Manager, Landing Pages",
-  "comp": 320000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4678046-senior-engineering-manager",
   "tag": "sydecar_senior_engineering_manager",
   "company": "Sydecar",
@@ -20,8 +8,11 @@
   "comp": 260000.0,
   "loc": "New York City, San Francisco",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Sydecar",
+   "How many years of engineering management experience do you have?*"
+  ]
  },
  {
   "ats": "wellfound",
@@ -32,8 +23,11 @@
   "comp": 250000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "We are currently prioritizing candidates based in one of our hubs. Please select",
+   "We are currently prioritizing candidates based in one of our hubs. Please select"
+  ]
  },
  {
   "ats": "wellfound",
