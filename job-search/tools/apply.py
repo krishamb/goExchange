@@ -537,7 +537,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 elif re.search(r"gh_jid=(\d+)",url) and company:   # company site hosting a Greenhouse job (nuro.ai/careersitem?gh_jid=...): the board is the company slug
                     board=re.sub(r"[^a-z0-9]","",company.lower()); token=re.search(r"gh_jid=(\d+)",url).group(1)
                     url=f"https://job-boards.greenhouse.io/embed/job_app?for={board}&token={token}"
-            if ats!="wellfound": await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
+            if ats!="wellfound":
+                for attempt in range(3):   # transient proxy/network errors ("upstream request failed", 502/503): reload after a pause
+                    await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
+                    if not re.search(r"^\s*upstream request failed|502 Bad Gateway|503 Service|504 Gateway|ERR_|This site can.t be reached",await body_text(page),re.I): break
+                    await page.wait_for_timeout(8000)
             for sel in ['button:has-text("Accept All")','button:has-text("Accept all")','button:has-text("Accept")','button:has-text("I agree")','button:has-text("Got it")','button:has-text("Decline All")']:
                 try:
                     el=page.locator(sel).first
