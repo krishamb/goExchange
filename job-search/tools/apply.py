@@ -49,6 +49,7 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
  (r"zip|postal", "95050"),
+ (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
  (r"^(street |home |mailing )?address", P["location"]),
  (r"linkedin", P["linkedin"]),(r"github", P["github"]),(r"portfolio|website|personal site", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
