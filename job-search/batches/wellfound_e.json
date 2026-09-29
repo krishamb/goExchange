@@ -1,75 +1,14 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4203314-machine-learning-engineer-underwriting",
-  "tag": "bree_technologies_yc21_machine_learning_engineer_underwrit",
-  "company": "Bree Technologies (YC21)",
-  "title": "Machine Learning Engineer, Underwriting",
-  "comp": "$180k \u2013 $250k",
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4203466-machine-learning-engineer-voice-ai",
-  "tag": "vih_labs_and_innovation_machine_learning_engineer_voice_ai",
-  "company": "ViH Labs and Innovation",
-  "title": "Machine Learning Engineer (Voice AI)",
-  "comp": null,
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4500444-senior-machine-learning-engineer",
-  "tag": "chattermill_senior_machine_learning_engineer",
-  "company": "Chattermill",
-  "title": "Senior Machine Learning Engineer",
-  "comp": null,
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4084652-senior-machine-learning-engineer-i-ii",
-  "tag": "signifyd_senior_machine_learning_engineer_i_",
-  "company": "Signifyd",
-  "title": "Senior Machine Learning Engineer I // II",
-  "comp": "$140k \u2013 $190k",
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4571302-senior-machine-learning-engineer-personalization-decision-science",
-  "tag": "cooklist_senior_machine_learning_engineer_pe",
-  "company": "Cooklist",
-  "title": "Senior Machine Learning Engineer, Personalization & Decision Science",
-  "comp": "$150k \u2013 $200k",
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4465172-senior-machine-learning-engineer-reinforcement-learning-world-model",
-  "tag": "path_robotics_inc_we_re_hiring_senior_machine_learning_engineer_re",
-  "company": "Path Robotics, Inc (We're Hiring!)",
-  "title": "Senior Machine Learning Engineer (Reinforcement Learning/World Model)",
-  "comp": null,
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602337-ai-machine-learning-engineer-at-human-centered-social-network-startup",
-  "tag": "lifebonder_ai_machine_learning_engineer_at_hum",
-  "company": "LifeBonder",
-  "title": "AI & Machine Learning Engineer at Human-Centered Social Network Startup",
-  "comp": null,
-  "loc": "Remote"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3151084-lead-ml-engineer",
   "tag": "intuition_machines_lead_ml_engineer",
   "company": "Intuition Machines",
   "title": "Lead ML Engineer",
   "comp": "$90k \u2013 $120k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -78,7 +17,9 @@
   "company": "Smart Audit",
   "title": "AI Engineer",
   "comp": "$25k \u2013 $50k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -87,7 +28,9 @@
   "company": "SKM Group",
   "title": "Lead AI Engineer [3d2m3]",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -96,7 +39,9 @@
   "company": "EveoAI",
   "title": "AI-ML Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -105,7 +50,9 @@
   "company": "senzcraft technologies",
   "title": "*Urgent* Gen AI Engineer/2+ Yrs/Immediate-30 days preferred",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -114,7 +61,9 @@
   "company": "ApiceFlow",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -123,7 +72,9 @@
   "company": "GOVSTAR",
   "title": "AI Engineer (Remote)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -132,7 +83,9 @@
   "company": "Casino Alpha",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -141,7 +94,9 @@
   "company": "TurboMail",
   "title": "Ai Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -150,7 +105,9 @@
   "company": "Ravenna Software",
   "title": "AI Engineer",
   "comp": "$160k \u2013 $200k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -159,7 +116,9 @@
   "company": "Codepulgz",
   "title": "AI/ML Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -168,7 +127,9 @@
   "company": "Compethic",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -177,7 +138,9 @@
   "company": "MantriAI",
   "title": "Senior Gen AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -186,7 +149,9 @@
   "company": "Cricketpedia",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -195,7 +160,9 @@
   "company": "Dharmik Vibes",
   "title": "Fullstack AI/GenAI Engineer \u2013 DharmikVibes",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -204,7 +171,9 @@
   "company": "PlutusAI",
   "title": "AI Engineer",
   "comp": "$90k \u2013 $120k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -213,7 +182,9 @@
   "company": "Consumer Physical AI",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -222,7 +193,9 @@
   "company": "Marble",
   "title": "AI Engineer",
   "comp": "$150k \u2013 $200k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -231,7 +204,9 @@
   "company": "Tapcart",
   "title": "Sr. AI Engineer",
   "comp": "$175k \u2013 $350k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -240,7 +215,9 @@
   "company": "Fintricity",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -249,7 +226,9 @@
   "company": "Monte Carlo",
   "title": "Applied AI Engineer",
   "comp": "$200k \u2013 $260k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -258,7 +237,9 @@
   "company": "Gilgamesh",
   "title": "Agentic AI Engineer - Gandiva.ai + Colosseum",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -267,7 +248,9 @@
   "company": "Innovify",
   "title": "Full-Stack AI Engineer (Intermediate)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -276,7 +259,9 @@
   "company": "Emplay",
   "title": "Lead- AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -285,7 +270,9 @@
   "company": "Mapgenesys",
   "title": "Sr AI Engineer",
   "comp": "$80k \u2013 $150k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -294,7 +281,9 @@
   "company": "Crediflow AI",
   "title": "AI/ML engineer \u2013 AI Fintech",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -303,7 +292,9 @@
   "company": "HeartStamp",
   "title": "SENIOR PYTHON / AI AGENT ENGINEER",
   "comp": "$24k \u2013 $42k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -312,7 +303,9 @@
   "company": "Working EU",
   "title": "AI Solutions Architect",
   "comp": "$60k \u2013 $70k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -321,7 +314,9 @@
   "company": "Broadcastwell",
   "title": "AI Solutions Architect",
   "comp": "$140k \u2013 $190k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -330,7 +325,9 @@
   "company": "Oneseven Technology",
   "title": "AI/ML Engineer \u2014 MCP",
   "comp": "$48k \u2013 $60k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -339,7 +336,9 @@
   "company": "Ennismore",
   "title": "AI Tech Lead (Golang/ MCP)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -348,7 +347,9 @@
   "company": "timepay.ai",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -357,7 +358,9 @@
   "company": "Gunpowder Innovations",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -366,7 +369,9 @@
   "company": "Innomium",
   "title": "Embodied AI Engineer \u2014 Robotics",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -375,7 +380,9 @@
   "company": "Kasisto",
   "title": "Solution Architect, Agentic AI Delivery",
   "comp": "$120k \u2013 $140k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -384,7 +391,9 @@
   "company": "Digital Renovations",
   "title": "Senior AI/ML Architect \u2014 Human-Centered LLM Systems",
   "comp": "$130k \u2013 $170k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -393,7 +402,9 @@
   "company": "Brenin Technologies",
   "title": "Tech Lead - AI",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -402,7 +413,9 @@
   "company": "Wistkey",
   "title": "AI / ML Engineer \u2014 Core Product AI",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -411,7 +424,9 @@
   "company": "Reflow",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -420,7 +435,9 @@
   "company": "Automatisor",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -429,7 +446,9 @@
   "company": "Internet Sciences",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -438,7 +457,9 @@
   "company": "Reedsy",
   "title": "AI Engineer - Remote Europe",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -447,7 +468,9 @@
   "company": "BraindAI",
   "title": "Senior AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -456,7 +479,9 @@
   "company": "Hmlet",
   "title": "Senior AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -465,7 +490,9 @@
   "company": "Axle Mobility",
   "title": "Applied AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -474,7 +501,9 @@
   "company": "drytis",
   "title": "AI engineer",
   "comp": "$20k \u2013 $40k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -483,7 +512,9 @@
   "company": "RedBlackTree",
   "title": "Fullstack AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -492,7 +523,9 @@
   "company": "Saela",
   "title": "Backend + AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -501,7 +534,9 @@
   "company": "Collaboration.Ai",
   "title": "Senior AI Engineer - Agentic Systems & Data Pipelines",
   "comp": "$100k \u2013 $180k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -510,7 +545,9 @@
   "company": "Thalmaar",
   "title": "Full Stack AI Engineer - India",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -519,7 +556,9 @@
   "company": "Quantum Elements",
   "title": "AI Engineer (LLM / Agentic Workflows) \u2014 Quantum SaaS",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -528,7 +567,9 @@
   "company": "GENTY recruitment",
   "title": "Senior AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -537,7 +578,9 @@
   "company": "The Strong AI",
   "title": "AI Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -546,7 +589,9 @@
   "company": "Bynario",
   "title": "AI Engineer - Model Adaptation & Evaluation",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -555,7 +600,9 @@
   "company": "Lemonade Stand",
   "title": "Senior Agentic AI Engineer",
   "comp": "$115k \u2013 $170k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -564,7 +611,9 @@
   "company": "SuperQ Quantum Computing",
   "title": "AI Engineer (GPU & LLM Optimisation) \u2013 Canada / UAE / Remote",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -573,7 +622,9 @@
   "company": "AgentPress",
   "title": "Full-Stack AI Engineer",
   "comp": "$62k \u2013 $100k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -582,7 +633,9 @@
   "company": "Ekshvaku Tech Innovations",
   "title": "Generative AI Engineer (LLMs & RAG) \u2013 Healthcare SaaS",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -591,7 +644,9 @@
   "company": "VeriZ Services",
   "title": "Senior AI Engineer \u2013 AI Automation & Agent Implementation",
   "comp": "$20k \u2013 $28k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -600,7 +655,9 @@
   "company": "Hudl",
   "title": "Machine Learning Engineering Manager",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -609,7 +666,9 @@
   "company": "Procurify",
   "title": "Engineering Manager, AI Engineering",
   "comp": "$184k \u2013 $205k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -618,7 +677,9 @@
   "company": "Caribou (formerly MotoRefi)",
   "title": "Engineering Manager (Agentic Orchestration and Loan Origination)",
   "comp": "$174k \u2013 $217k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -627,7 +688,9 @@
   "company": "Caribou Financial",
   "title": "Engineering Manager (Agentic Orchestration and Loan Origination)",
   "comp": "$174k \u2013 $217k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -636,7 +699,9 @@
   "company": "Talenqora",
   "title": "Engineering Manager \u2013 AI-Powered Social Platform",
   "comp": "$150k \u2013 $200k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -645,7 +710,9 @@
   "company": "Bhrigu",
   "title": "AI Architect",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -654,7 +721,9 @@
   "company": "Textlayer",
   "title": "AI Architect I",
   "comp": "$215k \u2013 $250k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -663,7 +732,9 @@
   "company": "Code for America",
   "title": "Staff Software Engineer",
   "comp": "$129k \u2013 $158k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -672,7 +743,9 @@
   "company": "Fluxx",
   "title": "Principal Engineer",
   "comp": "$147k \u2013 $210k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -681,7 +754,9 @@
   "company": "MEDvidi",
   "title": "Staff DevOps Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -690,7 +765,9 @@
   "company": "Marco",
   "title": "Head of Engineering",
   "comp": "$150k \u2013 $200k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -699,7 +776,9 @@
   "company": "OfferUp",
   "title": "Staff Software Development Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -708,7 +787,9 @@
   "company": "LawnStarter",
   "title": "Principal Quality Engineer",
   "comp": "$80k \u2013 $100k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -717,7 +798,9 @@
   "company": "Afresh",
   "title": "Staff Data Engineer / Tech Lead (Distribution Center)",
   "comp": "$148k \u2013 $222k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -726,7 +809,9 @@
   "company": "Standard Bots",
   "title": "Staff Software Engineer",
   "comp": "$215k \u2013 $250k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -735,7 +820,9 @@
   "company": "Ashby",
   "title": "Staff Product Engineer - Americas",
   "comp": "$232k \u2013 $323k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -744,7 +831,9 @@
   "company": "SentiLink",
   "title": "Staff Infrastructure Engineer",
   "comp": "$180k \u2013 $250k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -753,7 +842,9 @@
   "company": "Fact Finders Pro",
   "title": "Engineering Manager (Contractor Role - PIU Based Compensation Only, No Salary)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -762,7 +853,9 @@
   "company": "Tenna",
   "title": "Principal Architect",
   "comp": "$175k \u2013 $225k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -771,7 +864,9 @@
   "company": "Zippy MH",
   "title": "Staff Software Engineer",
   "comp": "$70k \u2013 $150k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -780,7 +875,9 @@
   "company": "IonQ",
   "title": "Staff Software Engineer (SDK), Developer Tools",
   "comp": "$162k \u2013 $233k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -789,7 +886,9 @@
   "company": "Minervini Private Access",
   "title": "Head of Engineering",
   "comp": "$180k \u2013 $220k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -798,7 +897,9 @@
   "company": "Enurgen",
   "title": "Staff Software Engineer, Product",
   "comp": "$175k \u2013 $195k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -807,7 +908,9 @@
   "company": "Warmo",
   "title": "Head of Engineering",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -816,7 +919,9 @@
   "company": "Pomelo Care",
   "title": "Senior/Staff Security Engineer",
   "comp": "$190k \u2013 $260k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -825,7 +930,9 @@
   "company": "Forma.ai",
   "title": "Staff Frontend Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -834,7 +941,9 @@
   "company": "Maven AGI",
   "title": "Principal Solutions Architect",
   "comp": "$180k \u2013 $235k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -843,7 +952,9 @@
   "company": "Simplview",
   "title": "Fractional CTO / Strategic Technical Advisor",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -852,7 +963,9 @@
   "company": "Made Card",
   "title": "Staff Backend Engineer",
   "comp": "$150k \u2013 $200k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -861,7 +974,9 @@
   "company": "FunnelStory",
   "title": "Principal Backend Engineer (Go)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -870,7 +985,9 @@
   "company": "Federis",
   "title": "Staff Backend Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -879,7 +996,9 @@
   "company": "PAVE Bank",
   "title": "Senior/Staff Golang Backend Engineer",
   "comp": "$75k \u2013 $150k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -888,7 +1007,9 @@
   "company": "Siro",
   "title": "Staff Software Engineer, Full Stack",
   "comp": "$284k \u2013 $325k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -897,7 +1018,9 @@
   "company": "Allminds",
   "title": "Staff Software Engineer",
   "comp": "$45k \u2013 $80k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -906,7 +1029,9 @@
   "company": "Purpose Unlimited",
   "title": "Staff Software Engineer",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -915,7 +1040,9 @@
   "company": "Beam Health",
   "title": "Principal Software Engineer",
   "comp": "$200k \u2013 $250k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -924,7 +1051,9 @@
   "company": "Litmos.com",
   "title": "Software Engineering Manager - Technical Owner",
   "comp": "$160k \u2013 $180k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -933,7 +1062,9 @@
   "company": "Databento",
   "title": "Software Engineer (C++/Rust)",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -942,7 +1073,9 @@
   "company": "Just Appraised",
   "title": "Engineering Manager",
   "comp": "$165k \u2013 $205k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -951,7 +1084,9 @@
   "company": "Take-Two Interactive Software",
   "title": "Engineering Manager",
   "comp": "$215k \u2013 $215k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -960,7 +1095,9 @@
   "company": "Tremendous",
   "title": "Engineering Manager",
   "comp": "$250k \u2013 $300k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -969,7 +1106,9 @@
   "company": "TaxDome",
   "title": "Engineering Manager",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -978,7 +1117,9 @@
   "company": "RhealthNYC",
   "title": "Engineering Manager",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -987,7 +1128,9 @@
   "company": "Glide",
   "title": "Software Engineering Manager",
   "comp": "$200k \u2013 $250k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -996,7 +1139,9 @@
   "company": "Phare Health",
   "title": "Engineering Manager",
   "comp": "$140k \u2013 $300k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1005,7 +1150,9 @@
   "company": "Prokeep",
   "title": "Software Engineering Manager",
   "comp": "$145k \u2013 $155k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1014,7 +1161,9 @@
   "company": "Amplemarket",
   "title": "Engineering Manager",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1023,7 +1172,9 @@
   "company": "Siena AI",
   "title": "Engineering Manager, Channels & Platform",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1032,7 +1183,9 @@
   "company": "W.W. Grainger",
   "title": "Engineering Manager - Search Engine Team",
   "comp": "$121k \u2013 $202k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1041,7 +1194,9 @@
   "company": "QBA",
   "title": "Transition Technical Lead",
   "comp": "$190k \u2013 $210k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1050,7 +1205,9 @@
   "company": "Speckle",
   "title": "Solution Architect",
   "comp": "$120k \u2013 $140k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1059,7 +1216,9 @@
   "company": "Digit88",
   "title": "Solution Architect",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1068,7 +1227,9 @@
   "company": "Well Beam",
   "title": "Integrations Architect / Tech Lead",
   "comp": "$120k \u2013 $170k",
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -1077,6 +1238,8 @@
   "company": "DisruptZero3",
   "title": "Backend Developer - Rust/Golang [0-2]",
   "comp": null,
-  "loc": "Remote"
+  "loc": "Remote",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
