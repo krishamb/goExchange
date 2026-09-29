@@ -107,19 +107,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8208468",
-  "tag": "doordashusa_staff_producer_studio_central",
-  "company": "doordashusa",
-  "title": "Staff Producer Studio Central",
-  "comp": 260000.0,
-  "geo": "Bay Area",
-  "age": 12,
-  "answers": {},
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/robinhood/jobs/8189867",
   "tag": "robinhood_senior_staff_software_engineer_developer_infrastru",
   "company": "robinhood",

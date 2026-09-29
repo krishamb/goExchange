@@ -519,7 +519,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 locm=re.search(r"\nLocation\s*\n\s*([^\n]+)",wf_body)
                 locs=((locm.group(1) if locm else "")+" "+(jtitle or ""))
                 report["work_policy"]=pol.group(1) if pol else None; report["listing_location"]=locm.group(1)[:80] if locm else None
-                if pol and pol.group(1).lower()=="in office" and re.search(r"New York|NYC|Brooklyn|Manhattan|Chicago",locs,re.I) and not re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley",locs,re.I) and not re.search(r"hybrid",wf_body,re.I):
+                if not os.environ.get("WF_ALLOW_ONSITE") and pol and pol.group(1).lower()=="in office" and re.search(r"New York|NYC|Brooklyn|Manhattan|Chicago",locs,re.I) and not re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley",locs,re.I) and not re.search(r"hybrid",wf_body,re.I):
                     report["result"]="NOT SUBMITTED: in-office NYC/Chicago listing (no hybrid mentioned)"; report["skipped"]="work-mode rule"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 ta=page.locator('textarea').first

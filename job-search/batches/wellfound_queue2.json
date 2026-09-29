@@ -544,23 +544,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4751395-creative-director-brand",
-  "tag": "nex_creative_director_brand",
-  "company": "Nex",
-  "title": "Creative Director, Brand",
-  "comp": 210000,
-  "loc": "Hong Kong, San Jose",
-  "tier": 1,
-  "size": "SIZE_51_200",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790108638,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748852-staff-software-engineer-infrastructure-san-francisco-hq",
   "tag": "orb_staff_software_engineer_infrastruct",
   "company": "Orb",

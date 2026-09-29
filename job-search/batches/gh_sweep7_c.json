@@ -469,15 +469,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/togetherai/jobs/5238654007",
-  "tag": "togetherai_director_of_brand",
-  "company": "togetherai",
-  "title": "Director of Brand",
-  "comp": 295000.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/adyen/jobs/8096256",
   "tag": "adyen_engineering_manager_identity_and_ac",
   "company": "adyen",
@@ -932,15 +923,6 @@
   "tag": "figureai_helix_ai_engineer_reinforcement_lea",
   "company": "figureai",
   "title": "Helix AI Engineer, Reinforcement Learning",
-  "comp": 400000.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/figureai/jobs/4671703006",
-  "tag": "figureai_helix_ai_engineer_video_pretraining",
-  "company": "figureai",
-  "title": "Helix AI Engineer, Video Pretraining",
   "comp": 400000.0,
   "source": "ATS board"
  },
