@@ -1,23 +1,15 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4739736-founding-electrical-engineer-clone",
-  "tag": "solderable_founding_software_engineer",
-  "company": "Solderable",
-  "title": "Founding Software Engineer",
-  "comp": 200000.0,
-  "loc": "San Francisco",
-  "tier": 0
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4751260-head-of-engineering",
   "tag": "gabeo_ai_head_of_engineering",
   "company": "Gabeo.ai",
   "title": "Head of Engineering",
   "comp": 225000.0,
   "loc": "San Francisco",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -27,7 +19,9 @@
   "title": "Staff Software Engineer (Applied AI)",
   "comp": 300000.0,
   "loc": "New York City, San Francisco",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -36,7 +30,9 @@
   "company": "Point",
   "title": "Technical Lead Manager",
   "loc": "Bay Area | ?",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -45,7 +41,9 @@
   "company": "GitHub",
   "title": "directeur(trice) principal(e) de l\u2019ing\u00e9nierie / Senior Engineering Manager",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -54,7 +52,9 @@
   "company": "Hanwha Q CELLS America",
   "title": "Project Engineering Manager",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -63,7 +63,9 @@
   "company": "Salesforce",
   "title": "Slack Field CTO",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -72,7 +74,9 @@
   "company": "Thirdbase",
   "title": "CTO / Lead Engineer, Thirdbase Capital",
   "loc": "Bay Area | Onsite or remote",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -81,7 +85,9 @@
   "company": "Postman",
   "title": "Head of Engineering, Infrastructure & SRE",
   "loc": "Bay Area | ?",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -91,7 +97,9 @@
   "title": "Forward-Deployed Software Engineer",
   "comp": 160000.0,
   "loc": "New York City, Oakland",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -101,7 +109,9 @@
   "title": "Founding Full Stack AI Engineer",
   "comp": 140000.0,
   "loc": "San Francisco",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -110,7 +120,9 @@
   "company": "Koreon AI",
   "title": "Founding Engineer, Compiler / ML Systems",
   "loc": "Bay Area | Onsite or remote",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -122,7 +134,9 @@
   "loc": "Palo Alto",
   "tier": 0,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -131,7 +145,9 @@
   "company": "Cloudflare",
   "title": "Senior Manager, Engineering",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -140,7 +156,9 @@
   "company": "Simbe Robotics",
   "title": "VP, Engineering - Integrated Robotics Systems",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -149,7 +167,9 @@
   "company": "Proteus Bio",
   "title": "Founding Engineer",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -158,7 +178,9 @@
   "company": "MSCI",
   "title": "Managing Director, Engineering Fellow",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -167,7 +189,9 @@
   "company": "Gridware",
   "title": "Director of Engineering, Data",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -177,7 +201,9 @@
   "title": "Senior AI/ML Engineer",
   "comp": 260000.0,
   "loc": "San Francisco",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -187,7 +213,9 @@
   "title": "Solution Architect",
   "comp": null,
   "loc": "San Francisco, London",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -197,7 +225,9 @@
   "title": "Senior Member of Technical Staff, Product Engineering",
   "comp": 265000.0,
   "loc": "San Francisco, New York",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -206,7 +236,9 @@
   "company": "Introd",
   "title": "Founding Engineer (Early Employee #1\u20133)",
   "loc": "Bay Area | Onsite or remote",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -215,7 +247,9 @@
   "company": "Ember AI",
   "title": "Founding Engineer, AI Platform",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -224,7 +258,9 @@
   "company": "Happen",
   "title": "VP, Platform Engineering",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -233,7 +269,9 @@
   "company": "HeartFlow",
   "title": "Engineering Manager - Agentic AI",
   "loc": "Bay Area | In office",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -242,7 +280,9 @@
   "company": "Perfect Venue",
   "title": "Head of Engineering",
   "loc": "Bay Area | ?",
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -251,7 +291,9 @@
   "company": "Codexa Intelligence",
   "title": "Founding Engineer (AI & Agentic Systems)",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -260,7 +302,9 @@
   "company": "Amgen",
   "title": "Director, AI & Machine Learning",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -269,7 +313,9 @@
   "company": "iRhythm Technologies",
   "title": "Director, AI Platform & Transformation",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -278,7 +324,9 @@
   "company": "Ziply Fiber",
   "title": "Senior Manager, Engineering",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -287,7 +335,9 @@
   "company": "Stardust",
   "title": "Head of Engineering",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -296,7 +346,9 @@
   "company": "GE Vernova",
   "title": "Engineering Manager, Verification and Validation (STATCOM)",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -305,7 +357,9 @@
   "company": "Motional",
   "title": "Principal Engineer Team Lead, Safety & Targets",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -314,7 +368,9 @@
   "company": "MyFitnessPal",
   "title": "Staff Data Engineer",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -323,7 +379,9 @@
   "company": "Sight Beyond Sight Technology",
   "title": "Title: Founding CTO \u2014 Sight Beyond Sight Technology",
   "loc": "Remote | Onsite or remote",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -332,7 +390,9 @@
   "company": "Lone Wolf",
   "title": "Software Engineering Manager .NET",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -341,7 +401,9 @@
   "company": "Elation Health",
   "title": "Engineering Manager",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -351,7 +413,9 @@
   "title": "Senior / Staff Software Engineer, Backend (Picks - DFS & Prediction Markets)",
   "comp": 300000.0,
   "loc": "New York City, San Francisco",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -360,7 +424,9 @@
   "company": "BioSpace",
   "title": "Sr. Director, AI",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -369,7 +435,9 @@
   "company": "Battlement Systems",
   "title": "Founding Engineer",
   "loc": "Remote | Onsite or remote",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -378,7 +446,9 @@
   "company": "Red Ventures",
   "title": "Data Engineering Manager | Home Client Services",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -387,7 +457,9 @@
   "company": "LI-COR Biosciences",
   "title": "Principal System Architect",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -396,7 +468,9 @@
   "company": "Mercury",
   "title": "Senior Engineering Manager - Custody",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -405,7 +479,9 @@
   "company": "CoLab Software",
   "title": "Engineering Manager - AutoReview",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -414,7 +490,9 @@
   "company": "8th Light",
   "title": "Principal Data Engineer (Remote)",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -423,7 +501,9 @@
   "company": "Hawkline",
   "title": "Founding Engineer, Firmware/Software",
   "loc": "Remote | Onsite or remote",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -432,7 +512,9 @@
   "company": "Feathr",
   "title": "VP of Engineering",
   "loc": "Remote | ?",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -441,7 +523,9 @@
   "company": "Rula",
   "title": "Engineering Manager - AI/ML (Remote)",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -451,7 +535,9 @@
   "title": "Staff Engineer",
   "comp": 275000.0,
   "loc": "San Francisco",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -460,7 +546,9 @@
   "company": "GoodRx",
   "title": "Sr. Engineering Manager, AI and Agents",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -469,7 +557,9 @@
   "company": "LabCorp",
   "title": "Executive Director, Technology Strategy & Value Management",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -478,7 +568,9 @@
   "company": "Levi Strauss & Co",
   "title": "Senior Manager, ERP AI Engineering",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -487,7 +579,9 @@
   "company": "Zillow",
   "title": "Senior Manager, Software Development Engineering",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -496,7 +590,9 @@
   "company": "Credit Acceptance",
   "title": "Software Engineering Manager II, Consumer 360",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -505,7 +601,9 @@
   "company": "PrizePicks",
   "title": "Engineering Manager",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -514,7 +612,9 @@
   "company": "Pave AI",
   "title": "Founding Engineer",
   "loc": "Remote | Onsite or remote",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -523,7 +623,9 @@
   "company": "Cedar",
   "title": "Sr. Engineering Manager - Payments",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -532,7 +634,9 @@
   "company": "Censys",
   "title": "Engineering Manager",
   "loc": "Remote | Remote only",
-  "tier": 1
+  "tier": 1,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -542,7 +646,9 @@
   "title": "Founding AI Research Engineer: Agent Harness & Model Systems",
   "comp": null,
   "loc": "New York City",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -552,7 +658,9 @@
   "title": "Forward Deployed Engineer",
   "comp": 170000.0,
   "loc": "New York",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -562,7 +670,9 @@
   "title": "Senior AI Engineer (Python, Django, Angular, RAG)",
   "comp": null,
   "loc": "Kyiv",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -572,7 +682,9 @@
   "title": "Staff ML Platform Engineer (MLOps)",
   "comp": 220000.0,
   "loc": "New York City",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -581,7 +693,9 @@
   "company": "Amazon Web Services",
   "title": "Senior Forward Deployed Engineering Manager, AWS Forward Deployed Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -590,7 +704,9 @@
   "company": "Logicbroker",
   "title": "Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -599,7 +715,9 @@
   "company": "Intel",
   "title": "Intel Foundry Advanced Device Development Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -608,7 +726,9 @@
   "company": "Dassault Systemes",
   "title": "Director, Software Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -617,7 +737,9 @@
   "company": "Evvy",
   "title": "Head of Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -626,7 +748,9 @@
   "company": "River",
   "title": "Founding Engineer",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -635,7 +759,9 @@
   "company": "The Farmer's Dog",
   "title": "Engineering Manager",
   "loc": "NYC | ?",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -645,7 +771,9 @@
   "title": "AI / Machine Learning Engineer (Voice AI, Agentic Systems & Telephony)",
   "comp": null,
   "loc": "Stockholm",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -655,7 +783,9 @@
   "title": "Lead AI Engineer [3d2m3]",
   "comp": null,
   "loc": "Germany, Poland",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -664,7 +794,9 @@
   "company": "PermitFlow",
   "title": "Engineering Manager, AI",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -674,7 +806,9 @@
   "title": "Founding Engineer, Applied AI",
   "comp": 280000.0,
   "loc": "New York City",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -683,7 +817,9 @@
   "company": "American Express",
   "title": "Director - AI Engineering - Enterprise AI Platforms",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -692,7 +828,9 @@
   "company": "Compass Real Estate - Peninsula",
   "title": "Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -701,7 +839,9 @@
   "company": "LPL Financial",
   "title": "VP, Infrastructure Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -710,7 +850,9 @@
   "company": "National Grid",
   "title": "Senior Data Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -719,7 +861,9 @@
   "company": "Qichuang Future (Hangzhou)",
   "title": "Overseas Technical Founding Partner",
   "loc": "NYC | Onsite or remote",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -728,7 +872,9 @@
   "company": "Paramount Pictures",
   "title": "Sr Manager, Software Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -737,7 +883,9 @@
   "company": "H1",
   "title": "Director, Software Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -746,7 +894,9 @@
   "company": "Stealth",
   "title": "Head of Engineering",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -758,7 +908,9 @@
   "loc": "Denver, Los Angeles, New York City, Portland, San Diego, Sea",
   "tier": 2,
   "size": "SIZE_201_500",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -768,7 +920,9 @@
   "title": "Machine Learning Engineer",
   "comp": null,
   "loc": "Gurgaon",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -777,7 +931,9 @@
   "company": "TTC",
   "title": "Founding Engineer / Technical Architect",
   "loc": "NYC | Onsite or remote",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -786,7 +942,9 @@
   "company": "HYPR",
   "title": "Director of Engineering",
   "loc": "NYC | ?",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -795,7 +953,9 @@
   "company": "Deckers Brands",
   "title": "Sr. Manager, AI Engineering",
   "loc": "NYC | Remote only",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -804,7 +964,9 @@
   "company": "J.P. Morgan",
   "title": "Senior Manager of Software Engineering - Front office Technology",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -813,7 +975,9 @@
   "company": "UG2",
   "title": "Regional Engineering Manager",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -822,7 +986,9 @@
   "company": "Meta",
   "title": "Engineering Manager - Strategic Infrastructure Capacity Planning",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -831,7 +997,9 @@
   "company": "Duolingo",
   "title": "Senior Engineering Manager, AI Platform",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -840,7 +1008,9 @@
   "company": "Cortex",
   "title": "Founding Engineer",
   "loc": "NYC | In office",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -849,7 +1019,9 @@
   "company": "Bubble",
   "title": "Engineering Manager",
   "loc": "NYC | ?",
-  "tier": 2
+  "tier": 2,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -859,7 +1031,9 @@
   "title": "Engineering Manager",
   "comp": null,
   "loc": "",
-  "tier": 3
+  "tier": 3,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -869,7 +1043,9 @@
   "title": "Staff Software Engineer, Python",
   "comp": 220000.0,
   "loc": "",
-  "tier": 3
+  "tier": 3,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -879,7 +1055,9 @@
   "title": "Technical Architect",
   "comp": null,
   "loc": "Ahmedabad",
-  "tier": 3
+  "tier": 3,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -889,7 +1067,9 @@
   "title": "Founding Engineer",
   "comp": 300000.0,
   "loc": "New York",
-  "tier": 4
+  "tier": 4,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -901,7 +1081,9 @@
   "loc": "New York City",
   "tier": 4,
   "size": "SIZE_11_50",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -913,7 +1095,9 @@
   "loc": "New York City",
   "tier": 4,
   "size": "SIZE_51_200",
-  "lang": ""
+  "lang": "",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -923,6 +1107,8 @@
   "title": "Staff Backend Engineer (NYC)",
   "comp": 220000.0,
   "loc": "New York City",
-  "tier": 4
+  "tier": 4,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
