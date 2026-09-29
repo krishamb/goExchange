@@ -1,8 +1,12 @@
 # Local runbook (for Claude Code, or the applicant, on the applicant's own computer)
 
-Goal: submit the remaining job applications listed in the local batches with `job-search/tools/apply.py`:
-`local_05_fresh.json` (36 Ashby/Lever roles posted in the last 7 days, run first), `local_04_cpp_rust.json`
-(36 C++/Rust roles), then `local_01.json`, `local_02.json`, `local_03.json` (511 Ashby + 88 Lever in total).
+Goal: submit the remaining job applications listed in the local batches with `job-search/tools/apply.py`.
+`run.sh` runs them in this order: `local_08_fresh7.json` (13 Ashby/Lever roles posted in the last 7 days, incl.
+two Lever links found through Wellfound), `local_06_bay_ai.json`, `local_07_fresh14.json`, `local_05_fresh.json`,
+`local_04_cpp_rust.json` (C++/Rust), then `local_01.json`, `local_02.json`, `local_03.json`.
+Before every run: `git pull` on branch `claude/ai-founding-engineer-jobs-l1urgc` (new batches and filler fixes
+land there through the day). The filler submits one application per company: it skips any job whose company already
+has a submitted report in `~/jobs-private/out/`, so re-running the whole list never double-applies.
 Every local batch entry carries `"email": "amba_rish@hotmail.com"` (the filler uses it instead of the profile
 email), so Ashby/Lever confirmations arrive in that Hotmail inbox; Greenhouse stays on Gmail (security codes)
 and Wellfound on ambarishmd23@hotmail.com (the account email).
@@ -18,9 +22,11 @@ already submitted from the cloud session (see the report the session produced), 
    `~/Downloads` first:
    `profile.json` (email is ambarishkrishnamurthy@gmail.com), `answers.json`,
    `Ambarish_Krishnamurthy_Resume.pdf`, `Ambarish_Krishnamurthy_Cover_Letter.pdf`.
-2. Run `bash job-search/run.sh`. It installs Playwright + Chromium, checks the folder, runs both batches with
-   `--submit --headed`, and prints a summary. Each application takes about a minute. When Lever shows an hCaptcha,
-   solve it in the Chrome window; the script waits.
+2. Run it in the background so no browser windows appear (the run is headless):
+   `nohup bash job-search/run.sh > ~/jobs-private/run.log 2>&1 &` and follow it with `tail -f ~/jobs-private/run.log`.
+   It installs Playwright + Chromium, checks the folder, runs every batch with `--submit` and a 20-60 s pace, and
+   prints a summary. A Lever hCaptcha cannot be solved headless: those jobs are reported as not submitted with the
+   URL, to finish by hand.
 3. For every report in `~/jobs-private/out/*_report.json` with `submitted: false`:
    - `unanswered` non-empty → the report lists the question and its options; write label→answer pairs to a JSON
      file and re-run that single job:
