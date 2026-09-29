@@ -1,18 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://jobs.elastic.co/jobs?gh_jid=8237959&gh_jid=8237959",
-  "tag": "elastic_director_of_software_engineering_di",
-  "company": "elastic",
-  "title": "Director of Software Engineering - Distributed Systems, Serverless - Elasticsearch",
-  "comp": 379300.0,
-  "loc": "United States",
-  "posted_ts": 1790640000.0,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.asana.com/jobs/apply/8237744?gh_jid=8237744",
   "tag": "asana_staff_software_engineer_ai_teammate",
   "company": "asana",
@@ -20,7 +8,7 @@
   "comp": 282000.0,
   "loc": "San Francisco",
   "posted_ts": 1790553600.0,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
@@ -31,8 +19,10 @@
   "title": "Applied AI Engineer",
   "comp": null,
   "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you heard about us from a friend or family member at HRT, please enter their "
+  ],
   "posted_ts": 1790294400.0
  },
  {
