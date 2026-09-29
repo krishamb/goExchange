@@ -853,7 +853,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         # a disabled submit button usually means the form was already sent and the code prompt is up
                         body0=await body_text(page)
                         if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
-                    await page.wait_for_timeout(9000)
+                    for _w in range(15):   # let the submission settle (Greenhouse shows a spinner): stop when a code prompt, confirmation, success text or error appears
+                        await page.wait_for_timeout(3000)
+                        body=await body_text(page)
+                        if re.search(r"verification code|security code|confirm you.re a human|thank you for|thanks for|application (has been |was |is )?(submitted|received|sent|in\b)|good news|/confirmation",body+" "+page.url,re.I) or await page.locator(CODE_BOXES).count() or await page.locator('[class*=error]:visible, [role=alert]:visible, [aria-invalid=true]').count(): break
                     body=await body_text(page)
                     if re.search(r"verification code|security code|confirm you.re a human",body,re.I) or await page.locator(CODE_BOXES).count():
                         if await enter_email_code(page,report,baseline):
