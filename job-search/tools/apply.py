@@ -83,7 +83,7 @@ CHOICE_RULES=[
  (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
- (r"in[- ]person|open to working|come into the office|days? (a|per) week|days (from|in|at) (one of )?our office|office hub", ["Yes","yes"]),
+ (r"in[- ]person|open to working|come into the office|days? (a|per) week|times (a|per) week|commit to being in|being in (one of )?(these|our|the) offices?|days (from|in|at) (one of )?our office|office hub", ["Yes","yes"]),
  (r"understand that .{0,40}(may )?use ai|company may use ai|we (may )?use ai|ai tools to assist in the (application|interview)", ["Yes","I understand","I acknowledge","Acknowledge"]),
  (r"how (do )?you use ai|use ai tools today|describes (how )?you use ai|your (use|usage) of ai tools|ai (proficiency|fluency)", ["I design or automate workflows with AI","I regularly use AI tools","I have experimented with AI tools","Advanced","Expert"]),
  (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
