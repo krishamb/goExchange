@@ -353,19 +353,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4351533-director-client-solutions",
-  "tag": "courier_health_director_client_solutions",
-  "company": "Courier Health",
-  "title": "Director, Client Solutions",
-  "comp": 225000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790367884
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766823-forward-deployed-engineer",
   "tag": "domino_data_lab_forward_deployed_engineer",
   "company": "Domino Data Lab",
@@ -1436,19 +1423,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789766293
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4735294-director-of-product",
-  "tag": "recidiviz_director_of_product",
-  "company": "Recidiviz",
-  "title": "Director of Product",
-  "comp": 201000.0,
-  "loc": "New York City, Oakland",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789762648
  },
  {
   "ats": "wellfound",
