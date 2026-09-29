@@ -103,6 +103,8 @@ CHOICE_RULES=[
  (r"start (date )?year|^from year", ["2023"]),
  (r"end (date )?year|^to year", ["2026"]),
  (r"metropolitan area|metro area|closest to your (city|residence|home)|nearest (city|metro)|city of residence", ["San Jose, California","San Jose, CA","San Jose","Santa Clara","San Francisco, California","San Francisco, CA","San Francisco","Sunnyvale","Oakland"]),
+ (r"cities .{0,30}available|available to work in|which (cities|locations)|what cities|preferred cit", ["San Francisco","New York","Remote","Any","Open to any"]),
+ (r"languages? (you|do you) (speak|are proficient)|select all the languages|languages? .{0,20}proficient|spoken languages?|fluent in", ["English","Python","Go"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
@@ -436,16 +438,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 await page.locator('button:has-text("Apply Now"), button:has-text("Apply now"), button:has-text("Apply")').first.click(timeout=10000); await page.wait_for_timeout(3500)
                 ta=page.locator('textarea').first
                 if await ta.count(): await ta.fill(extra.get("note") or ANS.get("why_us","")); report["filled"]["note"]="ok"
-                await page.screenshot(path=f"{OUT}/{tag}_filled.png",full_page=True)
-                if submit:
-                    await page.locator('button:has-text("Send application")').first.click(timeout=10000); await page.wait_for_timeout(6000)
-                    report["submitted"]=True; report["result"]=(await page.evaluate("()=>document.body.innerText.slice(0,500)")).replace("\n"," | ")
-                    await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
-                json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+                if not await page.locator('button:has-text("Send application")').count():
+                    report["result"]="ERROR: Wellfound apply form did not open (login failed or job closed)"
+                    await page.screenshot(path=f"{OUT}/{tag}_error.png",full_page=True); json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+                # the modal often carries the employer's own required questions: fall through to the generic filler below
             if ats=="greenhouse":
                 m=re.search(r"greenhouse\.io/([^/]+)/jobs/(\d+)",url)
                 if m: url=f"https://job-boards.greenhouse.io/embed/job_app?for={m.group(1)}&token={m.group(2)}"
-            await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
+            if ats!="wellfound": await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
             for sel in ['button:has-text("Accept All")','button:has-text("Accept all")','button:has-text("Accept")','button:has-text("I agree")','button:has-text("Got it")','button:has-text("Decline All")']:
                 try:
                     el=page.locator(sel).first
@@ -707,7 +707,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             cap=await page.evaluate("()=>!!document.querySelector('iframe[src*=hcaptcha], iframe[src*=recaptcha], [data-sitekey]')")
             report["captcha_present"]=cap
             if submit and not report["unanswered"]:
-                cands=page.locator('button#btn-submit, button[type="submit"], input[type="submit"], button:has-text("Submit application"), button:has-text("Submit Application"), button:has-text("Submit")')
+                cands=page.locator('button:has-text("Send application"), button#btn-submit, button[type="submit"], input[type="submit"], button:has-text("Submit application"), button:has-text("Submit Application"), button:has-text("Submit")')
                 btn=None
                 for i in range(await cands.count()):
                     c=cands.nth(i)
@@ -748,6 +748,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     break
                 sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set|task complete|good news",body,re.I)
                 if not sm and re.search(r"/confirmation\b",page.url): sm=re.search(r"\S.{0,60}",body)   # Greenhouse confirmation page URL
+                if ats=="wellfound":   # success = the apply modal is gone (or says sent) and no question is still flagged required
+                    modal_gone=(await page.locator('button:has-text("Send application")').count())==0
+                    sm=(re.search(r"application (has been )?sent|Applied",body,re.I) or re.search(r"\S.{0,60}",body)) if (modal_gone or re.search(r"application (has been )?sent",body,re.I)) and not re.search(r"This question is required",body) else None
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)
                 if m: errs=errs+[f"missing: {x.strip()}" for x in m]
