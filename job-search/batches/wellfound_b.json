@@ -8,8 +8,11 @@
   "comp": null,
   "loc": "Munich",
   "tier": 2,
-  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "I am currently in\u2026",
+   "Update your location preferences"
+  ]
  },
  {
   "ats": "wellfound",
