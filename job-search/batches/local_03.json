@@ -1711,16 +1711,6 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/espace/e027dcbb-d73f-441c-81cc-f4b957d76ccc",
-  "tag": "e_space_principal_dsp_sw_engineer",
-  "company": "E-Space",
-  "title": "Principal DSP SW Engineer",
-  "comp": 200000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
   "url": "https://jobs.lever.co/hhaexchange/094743d3-2933-43d3-affd-5859f8f4d068?lever-source=Indeed",
   "tag": "hhaexchange_principal_software_engineer",
   "company": "HHAeXchange",
@@ -2125,16 +2115,6 @@
   "tag": "reka_member_of_technical_staff_ml",
   "company": "reka",
   "title": "Member of Technical Staff (ML)",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/liquid-ai/2bb55437-1799-4ea9-acc3-f5f86bb492e5",
-  "tag": "liquid_ai_member_of_technical_staff_applied_m",
-  "company": "liquid-ai",
-  "title": "Member of Technical Staff - Applied ML, RecSys",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"

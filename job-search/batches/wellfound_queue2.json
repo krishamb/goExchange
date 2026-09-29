@@ -1,23 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4742402-senior-research-engineer-post-training-clone",
-  "tag": "chai_ai_machine_learning_engineer",
-  "company": "CHAI AI",
-  "title": "Machine Learning Engineer",
-  "comp": 660000,
-  "loc": "Palo Alto",
-  "tier": 0,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790176749,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4756790-engineering-manager",
   "tag": "trashlab_engineering_manager",
   "company": "TrashLab",
@@ -452,21 +435,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523612-forward-deployed-engineer",
-  "tag": "flowgen_labs_forward_deployed_engineer",
-  "company": "FlowGen Labs",
-  "title": "Forward Deployed Engineer",
-  "comp": 375000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789084800,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698047-senior-applied-ai-engineer",
   "tag": "mintlify_senior_applied_ai_engineer",
   "company": "Mintlify",
@@ -870,21 +838,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790205908,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4756915-founding-ios-engineer",
-  "tag": "the_legendary_lab_founding_ios_engineer",
-  "company": "The Legendary Lab",
-  "title": "Founding iOS Engineer",
-  "comp": 290000.0,
-  "loc": "Denver",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790195826,
   "recruiter_active": true,
   "unavailable": false
  },
