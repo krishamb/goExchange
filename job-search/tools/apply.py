@@ -112,7 +112,7 @@ CHOICE_RULES=[
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
- (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
+ (r"veteran|military", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
