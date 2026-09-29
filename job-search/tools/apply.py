@@ -186,7 +186,7 @@ CHOICE_RULES=[
 def pick(label,rules):
     l=label.lower()
     for pat,val in rules:
-        if re.search(pat,l): return val
+        if re.search(pat,l,re.I): return val   # patterns may carry capitals (EST, FINRA, QPS): match case-insensitively
     return None
 LABEL_JS=r"""
 (el)=>{let t='';
