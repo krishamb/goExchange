@@ -852,6 +852,16 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                                     done=l or v; break
                             if done: break
                         if done: break
+                    if not done and len(opts)>=2 and all(re.search(r",\s*[A-Z]{2}\b|,\s*[A-Z][a-z]+|remote|hybrid",(l or v),re.I) for v,l in opts):   # an office-location list with no question text: choose the Bay Area office
+                        for pref in (r"santa clara",r"san jose|sunnyvale|mountain view|palo alto|menlo park|cupertino|redwood city|san mateo",r"san francisco|bay area|south san francisco|oakland",r"remote.{0,15}(us|united states)|united states.{0,10}remote",r"remote"):
+                            for x,(v,l) in zip(hs,opts):
+                                if not done and re.search(pref,l or v,re.I):
+                                    try: await x.check(timeout=3000)
+                                    except Exception:
+                                        try: await x.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else {el.click();} if(!el.checked){el.checked=true; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));}}")
+                                        except Exception: continue
+                                    done=l or v
+                            if done: break
                     if not done:   # statement-style options ("I currently live in the SF Bay Area and can work hybrid"): pick the one that is true for the applicant
                         for x,(v,l) in zip(hs,opts):
                             if l and re.search(OPTION_TRUE,l,re.I) and not re.search(r"\b(not|unable|outside|don't|do not)\b",l,re.I):
