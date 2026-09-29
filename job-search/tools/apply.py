@@ -51,6 +51,7 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
  (r"zip|postal", "95050"),
+ (r"country( of residence| you (live|reside) in)?$|^country\b|which country|country of residence", "United States"),
  (r"require (employer |visa |company )?sponsorship|sponsorship to work|need sponsorship", "No"),
  (r"where do you (currently )?(reside|live)|city,? state|current city|city and state|city of residence", "Santa Clara, CA"),
  (r"countries .{0,30}(right|authori[sz]ed|eligible) to work|(right|eligib\w+) to work|which countr|what countr", "United States"),
