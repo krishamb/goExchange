@@ -1,28 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4668533-managing-director-engineering-fellow",
-  "tag": "msci_managing_director_engineering_fello",
-  "company": "MSCI",
-  "title": "Managing Director, Engineering Fellow",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634867-director-of-engineering-data",
-  "tag": "gridware_director_of_engineering_data",
-  "company": "Gridware",
-  "title": "Director of Engineering, Data",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4678064-senior-ai-ml-engineer",
   "tag": "metriport_senior_ai_ml_engineer",
   "company": "Metriport",
@@ -30,52 +8,7 @@
   "comp": 260000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722622-senior-member-of-technical-staff-product-engineering",
-  "tag": "pallet_senior_member_of_technical_staff_pr",
-  "company": "Pallet",
-  "title": "Senior Member of Technical Staff, Product Engineering",
-  "comp": 265000.0,
-  "loc": "San Francisco, New York",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3683442-founding-engineer-early-employee-1-3",
-  "tag": "introd_founding_engineer_early_employee_1_",
-  "company": "Introd",
-  "title": "Founding Engineer (Early Employee #1\u20133)",
-  "loc": "Bay Area | Onsite or remote",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4712310-founding-engineer-ai-platform",
-  "tag": "ember_ai_founding_engineer_ai_platform",
-  "company": "Ember AI",
-  "title": "Founding Engineer, AI Platform",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4743238-vp-platform-engineering",
-  "tag": "happen_vp_platform_engineering",
-  "company": "Happen",
-  "title": "VP, Platform Engineering",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
+  "last_result": "e to verify how you will appear to recruiters. | Improve your odds | Your profile shows you\u2019re worki",
   "last_unanswered": []
  },
  {
@@ -86,8 +19,11 @@
   "title": "Engineering Manager - Agentic AI",
   "loc": "Bay Area | In office",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have any immediate family that work at Heartflow?",
+   "Have you ever been or currently debarred by the U.S. FDA or excluded by the OIG?"
+  ]
  },
  {
   "ats": "wellfound",
