@@ -1,0 +1,68 @@
+[
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/moonpay/1891b692-26f1-4bc0-81df-74e753b1e3a3/apply",
+  "tag": "moonpay_staff_engineer_agents",
+  "company": "moonpay",
+  "title": "Staff Engineer, Agents",
+  "comp": 250000.0,
+  "geo": "Remote US",
+  "age": 25,
+  "answers": {}
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/0614b22d-699e-4d08-9149-968e0b010bf4/apply",
+  "tag": "waabi_senior_staff_software_engineer_ml_based_controls",
+  "company": "waabi",
+  "title": "Senior / Staff Software Engineer, ML-based Controls",
+  "comp": 320000.0,
+  "geo": "Remote US",
+  "age": 25,
+  "answers": {}
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/prefect/77b15c02-eb1c-45f2-baf4-177657921220/application",
+  "tag": "prefect_staff_platform_engineer",
+  "company": "prefect",
+  "title": "Staff Platform Engineer",
+  "comp": 309000.0,
+  "geo": "Remote US",
+  "age": 26,
+  "answers": {}
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/harvey/6cb88307-4fa1-42d8-8c9e-e331e4364e4f/application",
+  "tag": "harvey_staff_solutions_architect_public_sector",
+  "company": "harvey",
+  "title": "Staff Solutions Architect, Public Sector",
+  "comp": 300900.0,
+  "geo": "Remote US",
+  "age": 0,
+  "answers": {}
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/decagon/508a6226-4ee4-4cfa-8a9c-04d48bef81a8/application",
+  "tag": "decagon_staff_software_engineer_agent_product",
+  "company": "decagon",
+  "title": "Staff Software Engineer, Agent Product",
+  "comp": 400000.0,
+  "geo": "NYC (>350K)",
+  "age": 0,
+  "answers": {}
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/temporal/dc4021c5-b1d0-49a8-8342-6c68969192b5/application",
+  "tag": "temporal_staff_software_engineer_replication_foundations",
+  "company": "temporal",
+  "title": "Staff Software Engineer, Replication Foundations",
+  "comp": 278250.0,
+  "geo": "Remote US",
+  "age": 0,
+  "answers": {}
+ }
+]

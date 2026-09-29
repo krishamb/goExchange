@@ -45,6 +45,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"location \(city\)|^location$|current location|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
  (r"in[- ]person|open to working in|come into the office|days? (a|per) week", ["Yes","yes"]),
@@ -102,7 +103,7 @@ async def autocomplete_fill(page,h,text,prefer):
     try:
         await h.scroll_into_view_if_needed(timeout=3000); await h.click(timeout=3000); await h.fill("")
         await h.type(text,delay=40); await page.wait_for_timeout(1800)
-        opts=page.locator('[role="option"], [role="listbox"] li, [class*="dropdown"] li, [class*="option"], [class*="Option"], [class*="suggestion"]')
+        opts=page.locator('[role="option"]:visible:not(.iti__country), [role="listbox"] li:visible, [class*="dropdown"] li:visible, [class*="option"]:visible, [class*="Option"]:visible, [class*="suggestion"]:visible')
         n=await opts.count()
         for i in range(min(n,30)):
             o=opts.nth(i)
@@ -124,43 +125,53 @@ async def choose_select(page,h,options_pref):
                 try: await h.select_option(label=o); return o
                 except Exception: pass
     return None
+OPT_SEL='[role="option"]:visible:not(.iti__country), [class*="select__option"]:visible, [class*="Select__option"]:visible'
+async def visible_options(page):
+    o=page.locator(OPT_SEL); n=await o.count(); t=[]
+    for i in range(min(n,60)):
+        try: t.append((await o.nth(i).inner_text()).strip())
+        except Exception: t.append("")
+    return o,t
+def _match(t,pref):
+    tl,pl=t.lower(),pref.lower()
+    return tl==pl or tl.startswith(pl) or (pl in tl and len(pl)>=4)
 async def choose_react_select(page,control,options_pref,label):
-    # click control, read listbox options, click best
+    """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
+    if options_pref==["__ASK__"]: return None
+    inp=control.locator('input[role="combobox"], input.select__input, input').first
+    if not await inp.count(): return None
+    async def current():
+        try: return (await control.inner_text()).strip()
+        except Exception: return ""
     try:
-        await control.scroll_into_view_if_needed(timeout=3000); await control.click(timeout=4000); await page.wait_for_timeout(600)
-        if options_pref==["__ASK__"]:
-            await page.keyboard.press("Escape"); return None
-        async def visible_opts():
-            o=page.locator('[class*="select__option"], [role="option"], [class*="Select__option"], li[id*="option"], div[id*="-option-"]')
-            n=await o.count(); t=[]
-            for i in range(min(n,80)):
-                try: t.append((await o.nth(i).inner_text()).strip())
-                except Exception: t.append("")
-            return o,t
-        opts,texts=await visible_opts()
-        if not texts:
-            inp=control.locator('input').first
-            if await inp.count(): await inp.click(timeout=2000); await page.wait_for_timeout(500); opts,texts=await visible_opts()
-        for pref in options_pref:
+        for pref in options_pref[:4]:
+            await inp.scroll_into_view_if_needed(timeout=3000); await inp.click(timeout=3000)
+            await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
+            await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
+            opts,texts=await visible_options(page)
+            hit=None
             for i,t in enumerate(texts):
-                if t and (t.lower()==pref.lower() or pref.lower() in t.lower()):
-                    await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(300); return t
-        inp=control.locator('input').first
-        if await inp.count():
-            for pref in options_pref[:3]:
-                await inp.fill(""); await inp.type(pref[:25],delay=15); await page.wait_for_timeout(700); opts,texts=await visible_opts()
-                for i,t in enumerate(texts):
-                    if t and (t.lower()==pref.lower() or pref.lower() in t.lower()):
-                        await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(300); return t
-            await page.keyboard.press("Escape")
+                if t and _match(t,pref): hit=i; break
+            if hit is None and texts:
+                # no textual match: maybe options are unfiltered (async search); pick none
+                pass
+            if hit is not None: await opts.nth(hit).click(timeout=3000)
+            else: await inp.press("Enter")
+            await page.wait_for_timeout(500)
+            cur=await current()
+            if cur and cur.lower()!="select..." and (pref.lower()[:6] in cur.lower() or (hit is not None)): return cur[:80]
+            # not selected: clear and try next preference
+            await inp.press("Control+A"); await inp.press("Backspace"); await page.keyboard.press("Escape")
         await page.keyboard.press("Escape")
-    except Exception as e:
+    except Exception:
         try: await page.keyboard.press("Escape")
         except Exception: pass
     return None
 async def run():
     async with async_playwright() as p:
-        b=await p.chromium.launch(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
+        launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
+        if os.path.exists("/opt/pw-browsers/chromium"): launch_kw["executable_path"]="/opt/pw-browsers/chromium"   # cloud container
+        b=await p.chromium.launch(**launch_kw)
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
         summary=[]
         for job in jobs:
@@ -375,9 +386,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"pronoun|newsletter|marketing|updates|subscribe|text message|sms",lab,re.I): continue
                     if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true",lab,re.I) or await is_required(h): await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"
                 except Exception: pass
+            answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
             for u in report["unanswered"]:
-                if u["label"] in seen: continue
+                if u["label"] in seen or u["label"].lower()[:40] in answered: continue
                 seen.add(u["label"]); uu.append(u)
             report["unanswered"]=uu
             await page.wait_for_timeout(800)
