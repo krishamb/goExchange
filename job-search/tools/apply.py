@@ -100,6 +100,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
+ (r"(located|based|reside|residing|live|living) in (north america|the americas|the us or canada|us or canada|canada or the (us|united states))", ["Yes","yes"]),
  (r"authori[sz]ed? .{0,40}without (company |employer |visa |any )?sponsorship|without (company |employer |visa )?sponsorship|legal(ly)? authori[sz]ation to work in the (us|u\.s\.|united states)", ["Yes","yes"]),   # US citizen: authorized without sponsorship
  (r"(require|need|will you .{0,30}require) .{0,30}(work authori[sz]ation|visa|sponsorship|immigration)", ["No","no"]),   # US citizen: will never require work authorization / sponsorship (Wellfound's standard question)
  (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["No","no"]),   # applicant: no fully on-site 5-day roles
@@ -132,7 +134,7 @@ CHOICE_RULES=[
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
  (r"(?=.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near)", ["Yes","yes","I currently live","I live in"]),   # the applicant lives in Santa Clara, CA
- (r"(?!.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near) ", ["No","no"]),   # any other named place (NYC, Chicago, Taipei, ...): the applicant is in Santa Clara, CA
+ (r"(?!.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|north america|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near) ", ["No","no"]),   # any other named place (NYC, Chicago, Taipei, ...): the applicant is in Santa Clara, CA
  (r"currently live (in|or)|live (in|near) (this |the )?(job|role|position)|live or (are you )?willing to relocate", ["I currently live in this job's location","I currently live","I live in","Yes, I live","I am willing to relocate","Willing to relocate","Yes"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
