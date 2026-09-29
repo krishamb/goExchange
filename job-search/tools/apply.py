@@ -220,11 +220,77 @@ def fetch_email_code(max_wait=150):
         try: return input("Enter the 8-character verification code emailed to you (blank to skip): ").strip() or None
         except Exception: return None
     return None
-async def enter_email_code(page,report):
+BROWSER=None; OUTLOOK={"page":None}
+def outlook_cfg():
+    p=os.path.join(JOBS_DIR,"wf_creds.json")
+    if not os.path.exists(p): return None
+    c=json.load(open(p)).get("outlook")
+    return c if c and c.get("email") and c.get("password") else None
+CODE_RE=re.compile(r"\b([A-Z0-9]{8})\b")
+def _codes_in(text):
+    out=[]
+    for m in re.finditer(r"code[^A-Za-z0-9]{0,120}([A-Za-z0-9]{8})\b",text,re.I|re.S): out.append(m.group(1))
+    for m in CODE_RE.finditer(text): out.append(m.group(1))
+    return [c for c in out if re.search(r"\d",c)] or out
+async def outlook_page():
+    """Open (once) a logged-in Outlook.com tab in its own browser context; reuse it for every code lookup."""
+    if OUTLOOK["page"] and not OUTLOOK["page"].is_closed(): return OUTLOOK["page"]
+    cfg=outlook_cfg()
+    if not cfg or BROWSER is None: return None
+    state=os.path.join(JOBS_DIR,"outlook_state.json")
+    ctx=await BROWSER.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":900},storage_state=state if os.path.exists(state) else None)
+    ctx.set_default_timeout(8000); page=await ctx.new_page()
+    await page.goto("https://outlook.live.com/mail/0/",wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(5000)
+    for _ in range(6):
+        if "outlook.live.com/mail" in page.url and await page.locator('[role="main"], #app, [aria-label="Search"]').count(): break
+        try:
+            e=page.locator('input[name="loginfmt"], input[type="email"]').first
+            if await e.count() and await e.is_visible(): await e.fill(cfg["email"]); await page.locator('#idSIButton9, button[type="submit"]').first.click(timeout=4000); await page.wait_for_timeout(3000)
+            for sel in ['button:has-text("Use your password")','a:has-text("Use your password")','a:has-text("Other ways to sign in")']:
+                el=page.locator(sel).first
+                if await el.count() and await el.is_visible(): await el.click(timeout=3000); await page.wait_for_timeout(2000)
+            pw=page.locator('input[name="passwd"], input[type="password"]').first
+            if await pw.count() and await pw.is_visible(): await pw.fill(cfg["password"]); await page.locator('#idSIButton9, button[type="submit"]').first.click(timeout=4000); await page.wait_for_timeout(5000)
+            for sel in ['#idSIButton9','button:has-text("Yes")','button:has-text("Skip for now")','a:has-text("Skip for now")','button:has-text("Not now")','#iCancel','button:has-text("Cancel")','#iNext','button:has-text("Maybe later")']:
+                el=page.locator(sel).first
+                if await el.count() and await el.is_visible(): await el.click(timeout=3000); await page.wait_for_timeout(3000)
+        except Exception: pass
+        await page.wait_for_timeout(2000)
+    if "outlook.live.com/mail" not in page.url:
+        print("outlook: login did not complete (2-step verification or a sign-in challenge?); falling back to manual code entry")
+        await page.screenshot(path=f"{OUT}/outlook_login_problem.png"); return None
+    try: await ctx.storage_state(path=state)
+    except Exception: pass
+    OUTLOOK["page"]=page; return page
+async def outlook_codes(page,query="verification code"):
+    """Codes found in the newest few messages matching the search, newest first."""
+    found=[]
+    try:
+        sb=page.locator('input[aria-label="Search"], #topSearchInput, input[placeholder*="Search"]').first
+        await sb.click(timeout=5000); await sb.fill(""); await sb.type(query,delay=20); await sb.press("Enter"); await page.wait_for_timeout(4500)
+        items=page.locator('[role="listbox"] [role="option"], div[data-convid]'); n=await items.count()
+        for i in range(min(n,4)):
+            try:
+                await items.nth(i).click(timeout=4000); await page.wait_for_timeout(2500)
+                body=await page.evaluate("()=>{const r=document.querySelector('[aria-label=\"Message body\"], #UniqueMessageBody, [role=\"document\"], .allowTextSelection'); return (r? r.innerText : document.body.innerText).slice(0,6000)}")
+                found+=_codes_in(body)
+            except Exception: pass
+    except Exception as e: print("outlook search:",str(e)[:100])
+    return found
+async def enter_email_code(page,report,baseline=()):
     boxes=page.locator('input[autocomplete="one-time-code"], input[name*="security_code"], input[id*="security_code"], input[name*="verification"], [class*="security-code"] input, [class*="securityCode"] input, [class*="otp"] input')
     n=await boxes.count()
     if not n: return False
-    code=await asyncio.get_event_loop().run_in_executor(None,fetch_email_code)
+    code=None
+    op=await outlook_page()
+    if op:
+        deadline=time.time()+180
+        while time.time()<deadline and not code:
+            for c in await outlook_codes(op):
+                if c not in baseline: code=c; break
+            if not code: await asyncio.sleep(12)
+        report["code_source"]="outlook"
+    if not code: code=await asyncio.get_event_loop().run_in_executor(None,fetch_email_code)
     if not code: report.setdefault("errors",[]).append("email verification code required (configure imap in wf_creds.json or run interactively)"); return False
     try:
         if n>=8:
@@ -237,6 +303,7 @@ async def run():
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
         if os.path.exists("/opt/pw-browsers/chromium"): launch_kw["executable_path"]="/opt/pw-browsers/chromium"   # cloud container
         b=await p.chromium.launch(**launch_kw)
+        global BROWSER; BROWSER=b
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
         summary=[]
         for job in jobs:
@@ -482,10 +549,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if await c.is_visible() and re.search(r"submit|apply|send",(await c.inner_text()) or (await c.get_attribute("value")) or "submit",re.I): btn=c; break
                     except Exception: pass
                 if btn is None: raise RuntimeError("no visible submit button")
+                baseline=()
+                if ats=="greenhouse" and outlook_cfg():
+                    op=await outlook_page()
+                    if op: baseline=tuple(await outlook_codes(op))   # codes already in the inbox before this submission
                 await btn.scroll_into_view_if_needed(); await btn.click(timeout=10000); await page.wait_for_timeout(9000)
                 body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
                 if re.search(r"verification code|security code|confirm you.re a human",body,re.I):
-                    if await enter_email_code(page,report):
+                    if await enter_email_code(page,report,baseline):
                         await page.wait_for_timeout(800)
                         try: await btn.click(timeout=10000)
                         except Exception:
