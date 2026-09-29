@@ -1,34 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4781412-director-of-artificial-intelligence-machine-learning",
-  "tag": "thorn_director_of_artificial_intelligence",
-  "company": "THORN",
-  "title": "Director of Artificial Intelligence & Machine Learning",
-  "comp": 302000,
-  "loc": "",
-  "tier": 1,
-  "size": "SIZE_51_200",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790669473
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4780429-machine-learning-engineer",
-  "tag": "payle_machine_learning_engineer",
-  "company": "Payle",
-  "title": "Machine Learning Engineer",
-  "comp": 90000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790668274
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4779935-staff-software-engineer-replication-foundations",
   "tag": "temporal_technologies_staff_software_engineer_replication",
   "company": "Temporal Technologies",
