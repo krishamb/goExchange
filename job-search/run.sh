@@ -27,22 +27,10 @@ done
 if [ "$missing" = 1 ]; then
   echo "Put the missing file(s) in $JOBS_DIR (or in ~/Downloads) and run this again."; exit 1
 fi
-if ! grep -q '"outlook"' "$JOBS_DIR/wf_creds.json" 2>/dev/null; then
-  echo "   Greenhouse emails a verification code to your Hotmail for every application."
-  read -r -s -p "   Hotmail password for the address in profile.json (used only to read those codes; press Enter to type codes yourself): " HOTPW; echo
-  if [ -n "$HOTPW" ]; then
-    HOTPW="$HOTPW" $PY - <<'EOF'
-import json, os
-d=os.environ["JOBS_DIR"]; p=os.path.join(d,"wf_creds.json")
-c=json.load(open(p)) if os.path.exists(p) else {}
-c["outlook"]={"email":json.load(open(os.path.join(d,"profile.json")))["email"],"password":os.environ["HOTPW"]}
-json.dump(c,open(p,"w"),indent=1); os.chmod(p,0o600); print("   saved to",p)
-EOF
-  fi
-fi
-
-echo "== 3/4 submitting batches (a Chrome window will open; leave it alone)"
-for b in job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/cloud_gh_01.json job-search/batches/cloud_gh_02.json; do
+# The Greenhouse batches (cloud_gh_01/02) were submitted from the cloud session; only Ashby + Lever remain.
+# Ashby rejects cloud IPs as "possible spam" and Lever shows hCaptcha, so these must run from your own computer.
+echo "== 3/4 submitting batches (a Chrome window will open; leave it alone; solve any hCaptcha it shows)"
+for b in job-search/batches/local_01.json job-search/batches/local_02.json; do
   [ -f "$b" ] || continue
   echo "---- $b"
   $PY job-search/tools/apply.py batch "$b" --submit --headed || true
