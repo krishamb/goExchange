@@ -63,33 +63,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/mozilla/jobs/8233080",
-  "tag": "mozilla_corporation_staff_software_engineer_web_applica",
-  "company": "Mozilla Corporation",
-  "title": "Staff Software Engineer, Web Application Services",
-  "comp": 215000.0,
-  "source": "Indeed",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Tell us about a complex web product or system where you had significant responsi",
-   "Tell us about a broad technical problem where the path forward was unclear. What",
-   "Have you ever been a Thunderbird user?",
-   "Which of the following best describes your experience with open-source or commun",
-   "Which best describes your professional experience with JavaScript and your knowl",
-   "Which best describes your experience with web software architecture?",
-   "Which best describes your experience providing technical leadership?",
-   "Which best describes your experience with product management or product-focused ",
-   "Which best describes your professional experience with Python 3?",
-   "Which best describes your experience building backend web services?",
-   "How do you currently use AI-enabled tools in your work?",
-   "How many years have you worked at the Senior Software Engineer level or equivale",
-   "Which country will you be working from?",
-   "Which timezone do you reside in?"
-  ],
-  "posted_ts": 1790467200.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/wehrtyou/jobs/8234195",
   "tag": "wehrtyou_applied_ai_engineer",
   "company": "wehrtyou",
