@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4630197-forward-deployed-ai-engineer-senior",
-  "tag": "azx_forward_deployed_ai_engineer_senior",
-  "company": "AZX",
-  "title": "Forward Deployed AI Engineer (Senior)",
-  "comp": 230000.0,
-  "loc": "Seattle",
-  "tier": 2,
-  "last_result": "al API call (e.g., to a third-party service for enrichment or notification)* | This question is requ",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4710181-director-of-engineering-enterprise-product",
   "tag": "seatgeek_director_of_engineering_enterprise_",
   "company": "SeatGeek",
