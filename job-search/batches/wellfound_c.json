@@ -1,17 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4617981-head-of-engineering-infrastructure-sre",
-  "tag": "postman_head_of_engineering_infrastructure_",
-  "company": "Postman",
-  "title": "Head of Engineering, Infrastructure & SRE",
-  "loc": "Bay Area | ?",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3994681-forward-deployed-software-engineer",
   "tag": "recidiviz_forward_deployed_software_engineer",
   "company": "Recidiviz",
@@ -19,20 +8,10 @@
   "comp": 160000.0,
   "loc": "New York City, Oakland",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3531728-full-stack-ai-engineer",
-  "tag": "rhizome_ai_founding_full_stack_ai_engineer",
-  "company": "Rhizome AI",
-  "title": "Founding Full Stack AI Engineer",
-  "comp": 140000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Our compensation is standardized based on roles and responsibilities. This ensur"
+  ]
  },
  {
   "ats": "wellfound",
