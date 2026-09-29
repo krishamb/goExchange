@@ -1,77 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/elastic/jobs/8207941",
-  "tag": "elastic_sr_director_enterprise_data",
-  "company": "elastic",
-  "title": "Sr. Director, Enterprise Data",
-  "comp": 403200.0,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you have prior experience owning the enterprise Golden Record, or Master Data"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/scaleai/jobs/4718618005",
-  "tag": "scaleai_director_of_engineering_physical_ai",
-  "company": "scaleai",
-  "title": "Director of Engineering, Physical AI",
-  "comp": 378000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/nuro/jobs/7577458",
-  "tag": "nuro_director_of_engineering_eval_platfo",
-  "company": "nuro",
-  "title": "Director of Engineering, Eval Platform",
-  "comp": 387000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/snorkelai/jobs/5828338004",
-  "tag": "snorkelai_head_of_forward_deployed_engineerin",
-  "company": "snorkelai",
-  "title": "Head of Forward Deployed Engineering",
-  "comp": 403200.0,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Where do you currently reside? (City, State)",
-   "Your authorization to work in the country where you live:"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/okta/jobs/8214882",
-  "tag": "okta_director_of_engineering_ai_takeoff_",
-  "company": "okta",
-  "title": "Director of Engineering, AI Takeoff Team",
-  "comp": 378000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/waymo/jobs/7686010",
-  "tag": "waymo_tech_lead_manager_ml_optimization",
-  "company": "waymo",
-  "title": "Tech Lead  Manager ML Optimization",
-  "comp": 378000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/figma/jobs/5807963004",
   "tag": "figma_manager_software_engineering_ai_obs",
   "company": "figma",
@@ -99,17 +28,6 @@
   "company": "scaleai",
   "title": "Tech Lead Manager- MLRE, ML Systems",
   "comp": 363000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/waymo/jobs/8140393",
-  "tag": "waymo_site_reliability_engineering_techni",
-  "company": "waymo",
-  "title": "Site Reliability Engineering, Technical Lead Manager",
-  "comp": 368000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": []
@@ -508,17 +426,6 @@
   "comp": 263670.0,
   "source": "ATS board",
   "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/labelbox/jobs/5158989007",
-  "tag": "labelbox_forward_deployed_engineering_manage",
-  "company": "labelbox",
-  "title": "Forward Deployed Engineering Manager",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "last_result": " know why you are a good fit. | Phone* | Website | LinkedIn Profile | How did you hear about us? | W",
   "last_unanswered": []
  },
  {
@@ -1821,22 +1728,14 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://careers.withwaymo.com/jobs?gh_jid=8164291",
-  "tag": "waymo_staff_software_engineer_fleet_optim",
-  "company": "waymo",
-  "title": "Staff Software Engineer, Fleet Optimization",
-  "comp": 310000.0,
-  "loc": "San Francisco, CA ; Mountain View, CA ",
-  "lang": "C++"
- },
- {
-  "ats": "greenhouse",
   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8798198002",
   "tag": "databricks_staff_software_engineer_lakeflow_pi",
   "company": "databricks",
   "title": "Staff Software Engineer, Lakeflow Pipelines DR",
   "comp": 260000.0,
   "loc": "Mountain View, California; San Francisco, California",
-  "lang": "C++"
+  "lang": "C++",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]

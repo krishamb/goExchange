@@ -12,6 +12,11 @@ Source: the **Applied** page of the Wellfound account (wellfound.com/jobs/applic
 | 3 | Unlearn.AI | VP of Engineering | Applied (Status Updates Offsite) |
 | 4 | Checkr | Senior Engineering Manager, Mortgage | Applied (Status Updates Offsite) |
 | 5 | Braze | Engineering Manager, Landing Pages | Applied (Status Updates Offsite) |
+| 6 | Sydecar | Senior Engineering Manager | Applied (Status Updates Offsite) |
+| 7 | Labelbox | Forward Deployed Engineering Manager | Applied (Pending) |
+| 8 | Checkr | Engineering Manager, Verifications | Applied (Status Updates Offsite) |
+| 9 | Adeia | Co-Packaged Optics Director | Applied — **judgment miss**: photonics/hardware role, consider withdrawing |
+| 10 | Oklo | Director of Development Engineering | Applied — **flag**: reactor development engineering (Santa Clara, $200–250K), consider withdrawing |
 
 ## Ongoing (earlier applications still open on Wellfound)
 
@@ -56,7 +61,7 @@ Source: the **Applied** page of the Wellfound account (wellfound.com/jobs/applic
 | Feb 23 | Grove | Head of Engineering | Expired |
 | Feb 23 | Five9 | Senior Manager, Engineering | Status Updates Offsite |
 
-Totals: 5 today, 15 earlier ongoing, 18 archived = 38 applications on the account (the stream keeps adding; see the batch reports for the live count).
+Totals: 10 today so far, 15 earlier ongoing, 18 archived (the stream keeps adding; see the batch reports for the live count). Since the widened sweep, the queue holds 282 roles at 201 startups with no pay floor, Bay Area first, and every application note opens by greeting the listing's hiring contact by name.
 
 ## Today's Wellfound attempts that did not submit
 
