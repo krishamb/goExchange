@@ -1,30 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4772245-senior-engineering-manager-member-experience",
-  "tag": "omada_health_senior_engineering_manager_member_e",
-  "company": "Omada Health",
-  "title": "Senior Engineering Manager, Member Experience",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "r | Which of the following best represents your racial or ethnic background: (Check more than one if",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4708074-engineering-manager",
-  "tag": "prizepicks_engineering_manager",
-  "company": "PrizePicks",
-  "title": "Engineering Manager",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you an athlete or esports competitor who participates in games or contests f"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4319266-staff-ml-platform-engineer-mlops",
   "tag": "futurefit_ai_staff_ml_platform_engineer_mlops",
   "company": "FutureFit AI",
