@@ -78,7 +78,7 @@ TEXT_RULES=[
  (r"programming language|language\(s\) do you prefer|preferred language|which languages?", "Python and Go (also Rust and C++)"),
  (r"legal address|full address|home address|\baddress\b", P["location"]),
  (r"state/region|state or province|\bstate\b.*(reside|live|located|residence)|\bregion\b|province", "California"),
- (r"how did you (first |initially )?hear|hear about|referral source|source", "Company careers page"),
+ (r"(how|where) did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|referral source|source", "Company careers page"),
  (r"^why\b|why (do you want|are you interested|.*join|.*this role|.*us)|interest(ed)? in (this|the) (role|position|company)|tell us (a little )?about yourself|cover letter|anything else|additional information|why .*good fit|what excites you", ANS.get("why_us","")),
  (r"romanticize|startup life|early[- ]stage life|what (do you )?(dislike|hate) about|hardest part of", "People romanticize the pace and the upside; the reality is long stretches of unglamorous work: infrastructure, correctness, hiring, and keeping customers happy while the roadmap keeps changing. What genuinely excites me is owning outcomes end to end, shipping code that matters, and building the team and the architecture at the same time, which is exactly what I did as CTO and Technical Co-Founder at Hyperion AI."),
  (r"makes you excited|excited to contribute|excites? you|mission or approach|why (this|our) (mission|company|team|startup)|not somewhere else|what draws you|what attracts you|what motivates you|your motivation", ANS.get("why_us","")),
@@ -94,6 +94,8 @@ TEXT_RULES=[
 CHOICE_RULES=[
  (r"authori[sz]ed? .{0,40}without (company |employer |visa |any )?sponsorship|without (company |employer |visa )?sponsorship|legal(ly)? authori[sz]ation to work in the (us|u\.s\.|united states)", ["Yes","yes"]),   # US citizen: authorized without sponsorship
  (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["No","no"]),   # applicant: no fully on-site 5-day roles
+ (r"engineering blog|influence your decision|how much did .{0,60}influence", ["3 = Neutral","Neutral","3","Moderate","4 = Moderate"]),   # marketing-attribution scale questions
+ (r"are you ready|ready to (take|do|complete|go through|participate)|actively involved in product development|technical (portion|assessment|interview|screen|take-?home|challenge)|hands[- ]on (coding|technical)|comfortable (writing|with) code|still (write|writing) code|willing to (code|write code)", ["Yes","yes"]),   # hands-on leader: yes to technical interviews
  (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
  (r"select your (current )?location|your current location|which (hub|location|city|metro) (are you|is closest|do you)|where (are|do) you (currently )?(based|live|located|reside)", ["San Francisco Bay Area","SF Bay Area","Bay Area","San Francisco","San Jose","Santa Clara","Bay Area, CA","California","Remote, United States","Remote - United States","Remote (US)","US Remote","United States","Remote"]),
  (r"sponsor", ["No","no"]),
@@ -470,6 +472,27 @@ async def enter_email_code(page,report,baseline=()):
         else: await boxes.first.fill(code)
         report["code_entered"]=True; return True
     except Exception as e: report.setdefault("errors",[]).append(f"code entry failed: {e}"); return False
+GENERIC_TOKENS={"the","ai","san","new","open","one","first","next","big","blue","red","green","smart","data","cloud","tech","labs","lab","inc","co","company","team","global","digital","alpha","beta","meta","x","a","an","of","and"}
+def company_keys(tag,company=None):
+    toks=[t for t in (tag or "").split("_") if t]
+    ks=set()
+    if company: ks.add(re.sub(r"[^a-z0-9]","",str(company).lower()))
+    if toks and len(toks[0])>=5 and toks[0] not in GENERIC_TOKENS: ks.add(toks[0])
+    if len(toks)>1: ks.add(toks[0]+toks[1])
+    return {k for k in ks if len(k)>=4}
+def applied_elsewhere(tag,company=None,days=45):
+    """Return the tag of an earlier submitted application at the same company (any ATS, last `days` days), else None."""
+    import glob as _glob
+    ks=company_keys(tag,company)
+    if not ks: return None
+    cutoff=time.time()-days*86400
+    for f in _glob.glob(f"{OUT}/*_report.json"):
+        if os.path.basename(f)==f"{tag}_report.json" or os.path.getmtime(f)<cutoff: continue
+        try: r=json.load(open(f))
+        except Exception: continue
+        if not r.get("submitted") or "ALREADY APPLIED" in (r.get("result") or ""): continue
+        if ks & company_keys(r.get("tag"),r.get("company")): return r.get("tag")
+    return None
 async def run():
     async with async_playwright() as p:
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
@@ -487,6 +510,11 @@ async def run():
         summary=[]; default_email=P["email"]
         for job in jobs:
             set_email(job.get("email") or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses)
+            prior=applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site
+            if prior:
+                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today ({prior})","unanswered":[],"errors":[]}
+                json.dump(r,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
+                summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
@@ -664,6 +692,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for k,v in extra.items():
                         if k.lower() in (name+" "+lab).lower(): val=v; break
                     if val is None: val=pick(key,TEXT_RULES)
+                    if val=="Company careers page" and "wellfound" in (ats or "").lower(): val="Wellfound"   # applying through Wellfound: say so
                     if re.search(r"cover letter",lab,re.I) and cl_text: val=cl_text
                     if ats=="lever" and re.search(r"^location$",name): val=P["location"]
                     if val is None and (await h.get_attribute("placeholder") or ""): val=pick(await h.get_attribute("placeholder"),TEXT_RULES)
