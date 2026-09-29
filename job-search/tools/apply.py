@@ -76,7 +76,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
- (r"location \(city\)|^location$|current location|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
+ (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
  (r"in[- ]person|open to working|come into the office|days? (a|per) week|days (from|in|at) (one of )?our office|office hub", ["Yes","yes"]),
