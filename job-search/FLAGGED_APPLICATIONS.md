@@ -22,6 +22,7 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Fact Finders Pro | Engineering Manager (contract) | Wellfound | Contract role, not full-time. | Withdraw if you only want full-time. |
 | Minervini Private Access | Head of Engineering | Wellfound | Trading-education company rather than a tech startup; I had excluded it from an earlier slice. | Keep or withdraw as you prefer. |
 | Pallet | Two roles (Greenhouse + Wellfound) | both | Two applications to one company before the one-per-company check existed. | Withdraw one if you prefer. |
+| Thalmaar | Full Stack AI Engineer - India | Wellfound | The listing said "Remote", but the title shows the role is based in India, and it is an individual-contributor role below your level. | Withdraw on Wellfound. |
 
 ## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
 
