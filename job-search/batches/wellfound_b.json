@@ -13,109 +13,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4562732-sr-engineering-manager-pendo-for-agents",
-  "tag": "pendo_sr_engineering_manager_pendo_for_ag",
-  "company": "Pendo",
-  "title": "Sr. Engineering Manager - Pendo for Agents",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": " information which will enable us to better understand the diversity of our applicants. Please note,",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4235669-cto",
-  "tag": "settle_data_cto",
-  "company": "Settle Data",
-  "title": "CTO",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4719200-founding-engineer-dreamlever-ny",
-  "tag": "scope_labs_founding_engineer_dreamlever_ny",
-  "company": "Scope Labs",
-  "title": "Founding Engineer (DreamLever) - NY",
-  "loc": "NYC | ?",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4751482-staff-principal-software-engineer-ai-platform-contract",
-  "tag": "just_whole_care_staff_principal_software_engineer_a",
-  "company": "Just Whole Care",
-  "title": "Staff/Principal Software Engineer \u2014 AI Platform (contract)",
-  "comp": 340000,
-  "loc": "California",
-  "tier": 2,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722512-lead-frontend-engineer-clone",
-  "tag": "niuro_senior_ai_engineer",
-  "company": "Niuro",
-  "title": "Senior AI Engineer",
-  "comp": 42000.0,
-  "loc": "Santiago",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4546028-founding-engineer",
-  "tag": "thunder_founding_engineer",
-  "company": "Thunder",
-  "title": "Founding Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4732535-engineering-manager-head-of-engineering-dragonfly-portfolio",
-  "tag": "dragonfly_engineering_manager_head_of_enginee",
-  "company": "Dragonfly",
-  "title": "Engineering Manager / Head of Engineering - Dragonfly Portfolio",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4695094-head-of-engineering",
-  "tag": "trybe_head_of_engineering",
-  "company": "Trybe",
-  "title": "Head of Engineering",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4626856-simulation-engineering-manager",
-  "tag": "aaru_simulation_engineering_manager",
-  "company": "Aaru",
-  "title": "Simulation Engineering Manager",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4185263-staff-software-engineer",
   "tag": "nextpatient_staff_software_engineer",
   "company": "NextPatient",
@@ -125,8 +22,10 @@
   "tier": 3,
   "size": "SIZE_11_50",
   "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How did you hear about this position?"
+  ]
  },
  {
   "ats": "wellfound",
