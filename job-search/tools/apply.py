@@ -49,7 +49,7 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
  (r"zip|postal", "95050"),
- (r"^company name|^(most recent |current )?(company|employer)( name)?$", P["org"]),
+ (r"^company name|^(most recent |current )?(company|employer)( name)?$|name of your .{0,30}(company|employer)|(current|most recent|last) .{0,20}(company|employer)", P["org"]),
  (r"start (date )?year|^from year|start \(year\)", "2023"),
  (r"end (date )?year|^to year|end \(year\)", "2026"),
  (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
