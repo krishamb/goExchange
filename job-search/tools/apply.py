@@ -55,7 +55,7 @@ CHOICE_RULES=[
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
  (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
- (r"race|ethnicit", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Prefer not to say","Prefer not to answer","I do not wish to answer"]),
+ (r"race|ethnicit|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18 (years|or older)|age of 18|over 18", ["Yes","yes"]),
@@ -168,7 +168,7 @@ async def run():
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors")})
-            print(json.dumps(summary[-1])[:600]); sys.stdout.flush()
+            print(json.dumps(summary[-1])); sys.stdout.flush()
             await ctx.close()
         json.dump(summary,open(f"{OUT}/batch_summary_{int(time.time())}.json","w"),indent=1)
         await b.close()
@@ -313,18 +313,21 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<200) return prev.innerText; p=p.parentElement;} return '';}")
                         qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip()
                         if qlab2 and qlab2.lower() not in [o[1].lower() for o in opts]: qlab=qlab2
-                    pref=None
+                    cands=[]
                     for k,v in extra.items():
-                        if k.lower() in qlab.lower(): pref=[v]; break
-                    pref=pref or pick(qlab,CHOICE_RULES) or pick(" ".join(o[1] for o in opts),CHOICE_RULES)
+                        if k.lower() in qlab.lower(): cands.append([v]); break
+                    p1=pick(qlab,CHOICE_RULES); p2=pick(" ".join(o[1] for o in opts),CHOICE_RULES)
+                    if p1 and p1!=["__ASK__"]: cands.append(p1)
+                    if p2 and p2!=["__ASK__"] and p2 not in cands: cands.append(p2)
                     done=None
-                    if pref==["__ASK__"]: pref=None
-                    if pref:
+                    if p1==["__ASK__"]: cands=[]
+                    for pref in cands:
                         for pv in pref:
                             for x,(v,l) in zip(hs,opts):
                                 if l.lower()==pv.lower() or v.lower()==pv.lower() or pv.lower() in l.lower():
                                     await x.check(timeout=3000); done=l or v; break
                             if done: break
+                        if done: break
                     report["chosen"][qlab[:60] or name]=done
                     if not done: report["unanswered"].append({"type":"radio","label":qlab[:160],"options":[o[1] or o[0] for o in opts][:10]})
                 except Exception: pass
