@@ -153,21 +153,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3683446-founding-head-of-product-early-employee-1-3",
-  "tag": "introd_founding_head_of_product_early_empl",
-  "company": "Introd",
-  "title": "Founding Head of Product (Early Employee #1\u20133)",
-  "comp": 30000.0,
-  "loc": "Austin, New York City, San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790026042,
-  "recruiter_active": true,
-  "unavailable": false
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748744-founding-engineer",
   "tag": "fig_ai_founding_engineer",
   "company": "Fig AI",
