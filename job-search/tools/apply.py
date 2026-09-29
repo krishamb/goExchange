@@ -107,7 +107,7 @@ CHOICE_RULES=[
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
- (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content|talent community", ["No","no"]),
+ (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
  (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
  (r"school|university|college", ["University of Madras","Other","University"]),
@@ -246,6 +246,11 @@ async def choose_react_select(page,control,options_pref,label):
                     await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
                     cur=await current()
                     if cur and cur.lower()!="select...": return cur[:80]
+        real=[i for i,t in enumerate(texts) if t and not re.search(r"^no options",t,re.I)]
+        if len(real)==1:   # a single-option dropdown ("I agree", "Confirmed", ...) is an acknowledgment: take it
+            await opts.nth(real[0]).click(timeout=3000); await page.wait_for_timeout(500)
+            cur=await current()
+            if cur and cur.lower()!="select...": return cur[:80]
         await page.keyboard.press("Escape")
     except Exception:
         try: await page.keyboard.press("Escape")
