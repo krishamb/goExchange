@@ -1,46 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/hark/jobs/4423663009",
-  "tag": "hark_member_of_technical_staff_digital_w",
-  "company": "hark",
-  "title": "Member of Technical Staff, Digital World Engineer ",
-  "comp": "$170,000 - $400,000 ",
-  "loc": "San Jose",
-  "posted_ts": 1790655919
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/midihealth/jobs/4738013005",
-  "tag": "midihealth_staff_software_engineer_ai_en",
-  "company": "midihealth",
-  "title": "Staff Software Engineer, AI Engineer",
-  "comp": "$210,000-$250,000",
-  "loc": "Hybrid - SF Bay Area",
-  "posted_ts": 1790351944
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/atoms/jobs/8842793002",
-  "tag": "atoms_staff_machine_learning_engineer_pe",
-  "company": "atoms",
-  "title": "Staff Machine Learning Engineer - Perception",
-  "comp": "$275,000 - $321,000 ",
-  "loc": "San Francisco, CA",
-  "posted_ts": 1790274778
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/altanaai/jobs/7996189003",
-  "tag": "altanaai_senior_engineering_manager_clou",
-  "company": "altanaai",
-  "title": "Senior Engineering Manager, Cloud Engineering",
-  "comp": "$240,000 - $280,000",
-  "loc": "Brooklyn, NY; San Francisco, CA",
-  "posted_ts": 1790598624
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/workstream/jobs/6208106004",
   "tag": "workstream_staff_engineer_ai_native_serv",
   "company": "workstream",
@@ -48,35 +8,5 @@
   "comp": null,
   "loc": "Georgia, Texas, Virginia, Washington ",
   "posted_ts": 1790292849
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/turnkeycareers/jobs/4420362009",
-  "tag": "turnkeycareers_director_of_engineering_p",
-  "company": "turnkeycareers",
-  "title": "Director of Engineering, Platform",
-  "comp": null,
-  "loc": "United States (Remote)",
-  "posted_ts": 1790284821
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/hightouch/jobs/6207542004",
-  "tag": "hightouch_forward_deployed_architect",
-  "company": "hightouch",
-  "title": "Forward Deployed Architect",
-  "comp": "$175,000 - $225,000 ",
-  "loc": "Remote (North America)",
-  "posted_ts": 1790262961
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/engine/jobs/7994750003",
-  "tag": "engine_staff_software_engineer",
-  "company": "engine",
-  "title": "Staff Software Engineer",
-  "comp": null,
-  "loc": "Remote - US",
-  "posted_ts": 1790256552
  }
 ]
