@@ -8,10 +8,8 @@
   "comp": 320000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Your hiring contact is Aleks Piasecka"
-  ]
+  "last_result": "This field requires a response | Will you now or in the future require visa sponsorship?* | Yes | No",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
