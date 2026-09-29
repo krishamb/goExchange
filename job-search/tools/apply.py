@@ -110,6 +110,10 @@ CHOICE_RULES=[
  (r"partner(ed|ship)? with product|collaborat\w* with product|co-?own(ed)? product|work(ed)? with product (teams|managers)", ["I co-owned product direction","Co-owned","I regularly collaborated","Regularly","Yes"]),   # co-founder/CTO: co-owned product direction
  (r"formal(ly)? (people |line )?manag|people management experience|formal manager", ["I have been the formal manager","Formal manager","I have managed","Yes","yes"]),   # has been the formal manager of engineers
  (r"accommodation|assistance to participate|reasonable adjustment", ["No, I do not require","No, I do not","No","no"]),   # no accommodation needed
+ (r"how often did you (interact|work|meet|communicate)|how frequently .{0,40}(stakeholders|customers|clients)|interact directly with (non-technical|customers|clients|stakeholders)", ["Daily","Every day","Weekly"]),   # CTO/co-founder: daily stakeholder contact
+ (r"athlete|esports? (competitor|player)|professional (gamer|player)|participate in (games|contests)", ["No","no"]),
+ (r"proof of (employment |work )?authori[sz]ation|employment authori[sz]ation|provide (proof|documentation) .{0,30}(eligib|authori)", ["Yes","yes"]),
+ (r"(EST|EDT|ET|Eastern|PST|PDT|PT|Pacific|CST|Central|MST|Mountain)\b.{0,30}(business )?hours|work (in|during) .{0,20}(time ?zone|hours)|overlap with .{0,30}(hours|time ?zone)", ["Yes","yes"]),   # remote: works any US business hours
  (r"credentialed|been a (client|patient|provider|therapist|customer) of|used our (product|service|platform) as a", ["No","no"]),   # never a provider/client of the hiring company
  (r"immediate family|relatives? (who )?(work|employed)|family members? (who )?(work|employed)|debarred|excluded by the OIG|convicted|felony|criminal|non-?compete|conflict of interest|restrictive covenant", ["No","no"]),   # compliance questions: none apply
  (r"are you ready|ready to (take|do|complete|go through|participate)|actively involved in product development|technical (portion|assessment|interview|screen|take-?home|challenge)|hands[- ]on (coding|technical)|comfortable (writing|with) code|still (write|writing) code|willing to (code|write code)", ["Yes","yes"]),   # hands-on leader: yes to technical interviews
@@ -591,7 +595,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if not os.environ.get("WF_ALLOW_ONSITE") and pol and pol.group(1).lower()=="in office" and re.search(r"New York|NYC|Brooklyn|Manhattan|Chicago",locs,re.I) and not re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley",locs,re.I) and not re.search(r"hybrid",wf_body,re.I):
                     report["result"]="NOT SUBMITTED: in-office NYC/Chicago listing (no hybrid mentioned)"; report["skipped"]="work-mode rule"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
-                ta=page.locator('textarea').first
+                ta=page.locator('textarea:not([disabled])').first   # a disabled conditional-question box can come first
                 if await ta.count():
                     note=extra.get("note") or ANS.get("why_us","")
                     first=None

@@ -1,62 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4701959-machine-learning-engineer-ii-ml-systems-models-and-analysis",
-  "tag": "clear_demand_machine_learning_engineer_ii_ml_sys",
-  "company": "Clear Demand",
-  "title": "Machine Learning Engineer II- ML Systems, Models and Analysis",
-  "comp": null,
-  "loc": "Chennai",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4762584-founding-engineer",
-  "tag": "mlabs_founding_engineer",
-  "company": "MLabs",
-  "title": "Founding Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4733523-tech-lead-manager",
-  "tag": "charta_health_tech_lead_manager",
-  "company": "Charta Health",
-  "title": "Tech Lead Manager",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4696759-engineering-manager-property-management",
-  "tag": "theguarantors_engineering_manager_property_manage",
-  "company": "TheGuarantors",
-  "title": "Engineering Manager - Property Management",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4656969-senior-manager-software-engineering",
-  "tag": "metropolis_senior_manager_software_engineering",
-  "company": "Metropolis",
-  "title": "Senior Manager, Software Engineering",
-  "loc": "NYC | ?",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4751823-machine-learning-engineer-personalization",
   "tag": "constructor_io_machine_learning_engineer_personali",
   "company": "Constructor.io",
@@ -99,50 +43,6 @@
   "title": "Director, Text-to-Speech Synthesis Research",
   "comp": 328000.0,
   "loc": "",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4163102-founding-engineer",
-  "tag": "octozi_founding_engineer",
-  "company": "Octozi",
-  "title": "Founding Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4693309-founding-engineer-applied-ai",
-  "tag": "pockyt_formerly_known_as_yuansfer_founding_engineer_applied_ai",
-  "company": "Pockyt (formerly known as Yuansfer)",
-  "title": "Founding Engineer, Applied AI",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4755087-engineering-manager-advisor-experience",
-  "tag": "addepar_engineering_manager_advisor_experie",
-  "company": "Addepar",
-  "title": "Engineering Manager, Advisor Experience",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4710062-director-data-engineering",
-  "tag": "squire_director_data_engineering",
-  "company": "SQUIRE",
-  "title": "Director, Data Engineering",
-  "loc": "NYC | In office",
   "tier": 2,
   "last_result": "(no report)",
   "last_unanswered": []
