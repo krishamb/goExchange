@@ -211,6 +211,11 @@ async def choose_select(page,h,options_pref):
                         return o
                     except Exception: pass
     return None
+def set_email(em):
+    """Switch the applicant email for the next application (profile value + the e-mail text rule)."""
+    P["email"]=em
+    for i,(pat,val) in enumerate(TEXT_RULES):
+        if pat==r"e-?mail": TEXT_RULES[i]=(pat,em)
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
 # work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)
 ENV_TRUE=r"start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
@@ -462,8 +467,9 @@ async def run():
                 await op.screenshot(path=f"{OUT}/outlook_test.png")
             await b.close(); return
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
-        summary=[]
+        summary=[]; default_email=P["email"]
         for job in jobs:
+            set_email(job.get("email") or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses)
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
@@ -494,6 +500,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 wf_body=await body_text(page)
                 if re.search(r"not accepting applications from your current location|no longer accepting applications|this job is closed|position has been filled",wf_body,re.I):
                     report["result"]="NOT SUBMITTED: "+("location restricted by employer" if "current location" in wf_body else "job closed")
+                    json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+                # work-mode rule: remote anywhere in the US and Bay Area hybrid are fine; NYC only hybrid; no Chicago on-site
+                pol=re.search(r"Remote work policy\s*\|?\s*(In office|Onsite or remote|Remote only|Hybrid)",wf_body,re.I)
+                locm=re.search(r"\nLocation\s*\n\s*([^\n]+)",wf_body)
+                locs=((locm.group(1) if locm else "")+" "+(jtitle or ""))
+                report["work_policy"]=pol.group(1) if pol else None; report["listing_location"]=locm.group(1)[:80] if locm else None
+                if pol and pol.group(1).lower()=="in office" and re.search(r"New York|NYC|Brooklyn|Manhattan|Chicago",locs,re.I) and not re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley",locs,re.I) and not re.search(r"hybrid",wf_body,re.I):
+                    report["result"]="NOT SUBMITTED: in-office NYC/Chicago listing (no hybrid mentioned)"; report["skipped"]="work-mode rule"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 ta=page.locator('textarea').first
                 if await ta.count():
