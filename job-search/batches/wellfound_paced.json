@@ -1,47 +1,11 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4470382-vp-of-engineering-san-francisco-hq",
-  "tag": "orb_vp_of_engineering_san_francisco_hq",
-  "company": "Orb",
-  "title": "VP of Engineering- San Francisco HQ",
-  "comp": 475000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3309010-vp-software-engineering",
-  "tag": "6sense_vp_software_engineering",
-  "company": "6sense",
-  "title": "VP, Software Engineering",
-  "comp": 396000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692244-manager-engineering-data-platform",
   "tag": "garner_health_manager_engineering_data_platform",
   "company": "Garner Health",
   "title": "Manager, Engineering (Data Platform)",
   "comp": 385000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3335958-senior-engineering-manager-data-pipelines-apis",
-  "tag": "mixpanel_senior_engineering_manager_data_pip",
-  "company": "Mixpanel",
-  "title": "Senior Engineering Manager, Data Pipelines & APIs",
-  "comp": 377000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3304344-engineering-manager-ii-ml-platform",
-  "tag": "pinterest_engineering_manager_ii_ml_platform",
-  "company": "Pinterest",
-  "title": "Engineering Manager II, ML Platform",
-  "comp": 351000.0,
   "source": "Wellfound"
  },
  {
@@ -55,101 +19,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627510-manager-engineering",
-  "tag": "garner_health_manager_engineering",
-  "company": "Garner Health",
-  "title": "Manager, Engineering",
-  "comp": 385000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4005023-engineering-manager",
-  "tag": "mochi_health_engineering_manager",
-  "company": "Mochi Health",
-  "title": "Engineering Manager",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3306575-engineering-manager-ii-generative-ai-products",
-  "tag": "pinterest_engineering_manager_ii_generative_a",
-  "company": "Pinterest",
-  "title": "Engineering Manager II, Generative AI Products",
-  "comp": 351000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4491982-senior-engineering-manager-entitlements-spend-platform-san-francisco-hq",
-  "tag": "orb_senior_engineering_manager_entitlem",
-  "company": "Orb",
-  "title": "Senior Engineering Manager, Entitlements & Spend Platform - San Francisco HQ",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627626-engineering-manager",
-  "tag": "forus_engineering_manager",
-  "company": "Forus",
-  "title": "Engineering Manager",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627445-cto-hands-on-experience-clone",
-  "tag": "influur_head_of_engineering_ai_hands_on_exp",
-  "company": "Influur",
-  "title": "Head of Engineering & AI (Hands-On Experience)",
-  "comp": 330000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3317959-engineering-manager-ii-ads-ml-training-infrastructure",
-  "tag": "pinterest_engineering_manager_ii_ads_ml_train",
-  "company": "Pinterest",
-  "title": "Engineering Manager II, Ads ML Training Infrastructure",
-  "comp": 351000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4505726-director-analytics-engineering",
-  "tag": "current_director_analytics_engineering",
-  "company": "Current",
-  "title": "Director, Analytics Engineering ",
-  "comp": 330000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4658838-engineering-manager-landing-pages",
   "tag": "braze_engineering_manager_landing_pages",
   "company": "Braze",
   "title": "Engineering Manager, Landing Pages",
   "comp": 320000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4490133-senior-engineering-manager-data",
-  "tag": "chime_senior_engineering_manager_data",
-  "company": "Chime",
-  "title": "Senior Engineering Manager, Data",
-  "comp": 319000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3315708-engineering-manager-ii-search-discovery-experience",
-  "tag": "pinterest_engineering_manager_ii_search_disco",
-  "company": "Pinterest",
-  "title": "Engineering Manager II, Search Discovery Experience",
-  "comp": 351000.0,
   "source": "Wellfound"
  },
  {
@@ -163,29 +37,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4262684-senior-engineering-manager-discovery",
-  "tag": "faire_senior_engineering_manager_discover",
-  "company": "Faire",
-  "title": "Senior Engineering Manager - Discovery",
-  "comp": 318000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4716628-senior-engineering-manager-mortgage",
   "tag": "checkr_senior_engineering_manager_mortgage",
   "company": "Checkr",
   "title": "Senior Engineering Manager, Mortgage",
   "comp": 316000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3310048-engineering-manager-ii-ads-indexing-infra",
-  "tag": "pinterest_engineering_manager_ii_ads_indexing",
-  "company": "Pinterest",
-  "title": " Engineering Manager II, Ads Indexing Infra",
-  "comp": 351000.0,
   "source": "Wellfound"
  },
  {
@@ -199,119 +55,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3044245-engineering-manager-new-verticals-fulfillment",
-  "tag": "doordash_engineering_manager_new_verticals_f",
-  "company": "DoorDash",
-  "title": "Engineering Manager, New Verticals - Fulfillment",
-  "comp": 303000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4288751-director-of-partner-management",
-  "tag": "ivo_director_of_partner_management",
-  "company": "Ivo",
-  "title": "Director of Partner Management",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3976528-engineering-manager-onboarding",
-  "tag": "brex_engineering_manager_onboarding",
-  "company": "Brex",
-  "title": "Engineering Manager, Onboarding",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4079989-engineering-manager-infrastructure-platform",
-  "tag": "speak_engineering_manager_infrastructure_",
-  "company": "Speak",
-  "title": "Engineering Manager, Infrastructure / Platform",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3022781-engineering-manager-fraud-experience",
-  "tag": "doordash_engineering_manager_fraud_experienc",
-  "company": "DoorDash",
-  "title": "Engineering Manager, Fraud Experience",
-  "comp": 303000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4592876-tech-lead-manager-integration",
-  "tag": "mosaic_tech_lead_manager_integration",
-  "company": "Mosaic",
-  "title": "Tech Lead Manager, Integration",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4171862-engineering-manager-cloud-infrastructure",
-  "tag": "brex_engineering_manager_cloud_infrastru",
-  "company": "Brex",
-  "title": "Engineering Manager, Cloud Infrastructure",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4144354-tech-lead-manager-full-stack",
-  "tag": "forecareer_tech_lead_manager_full_stack",
-  "company": "Forecareer",
-  "title": "Tech Lead Manager, Full Stack",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2966217-engineering-manager-order-accuracy",
-  "tag": "doordash_engineering_manager_order_accuracy",
-  "company": "DoorDash",
-  "title": "Engineering Manager, Order Accuracy",
-  "comp": 303000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4114865-engineering-manager",
-  "tag": "tremendous_engineering_manager",
-  "company": "Tremendous",
-  "title": "Engineering Manager",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3834597-engineering-manager",
-  "tag": "phare_health_engineering_manager",
-  "company": "Phare Health",
-  "title": "Engineering Manager",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4664594-founding-director-digital-engineering",
   "tag": "thresh_consulting_founding_director_digital_engineeri",
   "company": "Thresh Consulting",
   "title": "Founding Director, Digital Engineering",
   "comp": 295000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2923812-engineering-manager-ads-demand",
-  "tag": "doordash_engineering_manager_ads_demand",
-  "company": "DoorDash",
-  "title": "Engineering Manager, Ads Demand",
-  "comp": 303000.0,
   "source": "Wellfound"
  },
  {
@@ -325,15 +73,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4584444-director-developer-platform-experience",
-  "tag": "motive_director_developer_platform_experie",
-  "company": "Motive",
-  "title": "Director, Developer Platform & Experience",
-  "comp": 285000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692290-engineering-manager-ai",
   "tag": "permitflow_engineering_manager_ai",
   "company": "PermitFlow",
@@ -343,28 +82,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3040859-engineering-manager-new-verticals-categories",
-  "tag": "doordash_engineering_manager_new_verticals_c",
-  "company": "DoorDash",
-  "title": "Engineering Manager, New Verticals - Categories",
-  "comp": 303000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4713672-founding-engineer-applied-ai",
   "tag": "parisi_labs_founding_engineer_applied_ai",
   "company": "Parisi Labs",
   "title": "Founding Engineer, Applied AI",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597863-senior-engineering-manager-infrastructure",
-  "tag": "glossgenius_senior_engineering_manager_infrastr",
-  "company": "GlossGenius",
-  "title": "Senior Engineering Manager, Infrastructure ",
   "comp": 280000.0,
   "source": "Wellfound"
  },
@@ -379,110 +100,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2994477-engineering-manager-ads-consumer-experience",
-  "tag": "doordash_engineering_manager_ads_consumer_ex",
-  "company": "DoorDash",
-  "title": "Engineering Manager, Ads Consumer Experience",
-  "comp": 303000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3543490-engineering-manager-canada",
-  "tag": "ashby_engineering_manager_canada",
-  "company": "Ashby",
-  "title": "Engineering Manager - Canada",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4545084-director-consulting-healthcare",
-  "tag": "kizen_director_consulting_healthcare",
-  "company": "Kizen",
-  "title": "Director, Consulting - Healthcare",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4657129-engineering-manager",
   "tag": "permitflow_engineering_manager",
   "company": "PermitFlow",
   "title": "Engineering Manager",
   "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4511415-engineering-manager-api-product",
-  "tag": "convex_engineering_manager_api_product",
-  "company": "Convex",
-  "title": "Engineering Manager, API/Product",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4630027-software-engineering-manager-android",
-  "tag": "current_software_engineering_manager_androi",
-  "company": "Current",
-  "title": "Software Engineering Manager, Android",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4545083-director-consulting-financial-services",
-  "tag": "kizen_director_consulting_financial_servi",
-  "company": "Kizen",
-  "title": "Director, Consulting - Financial Services",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4220209-senior-engineering-manager-product",
-  "tag": "glossgenius_senior_engineering_manager_product",
-  "company": "GlossGenius",
-  "title": "Senior Engineering Manager, Product",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4493421-engineering-manager-infra-systems",
-  "tag": "convex_engineering_manager_infra_systems",
-  "company": "Convex",
-  "title": "Engineering Manager, Infra/Systems",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3651299-engineering-manager",
-  "tag": "lead_bank_engineering_manager",
-  "company": "Lead Bank",
-  "title": "Engineering Manager",
-  "comp": 279000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4545082-director-consulting-insurance",
-  "tag": "kizen_director_consulting_insurance",
-  "company": "Kizen",
-  "title": "Director, Consulting - Insurance",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4430661-enterprise-solutions-engineering-manager",
-  "tag": "ashby_enterprise_solutions_engineering_ma",
-  "company": "Ashby",
-  "title": "Enterprise Solutions Engineering Manager",
-  "comp": 277000.0,
   "source": "Wellfound"
  },
  {
@@ -505,33 +127,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4150299-engineering-manager",
-  "tag": "adaptive_engineering_manager",
-  "company": "Adaptive",
-  "title": "Engineering Manager",
-  "comp": 270000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3543489-engineering-manager-americas",
-  "tag": "ashby_engineering_manager_americas",
-  "company": "Ashby",
-  "title": "Engineering Manager - Americas",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4325601-engineering-manager",
-  "tag": "sigma_computing_engineering_manager",
-  "company": "Sigma Computing",
-  "title": "Engineering Manager",
-  "comp": 270000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4658545-associate-director-data-engineering",
   "tag": "trialspark_associate_director_data_engineering",
   "company": "TrialSpark",
@@ -541,36 +136,9 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4064792-director-applied-ai",
-  "tag": "metropolis_director_applied_ai",
-  "company": "Metropolis",
-  "title": "Director, Applied AI",
-  "comp": 265000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634373-engineering-manager-agentcontrol",
-  "tag": "launchdarkly_engineering_manager_agentcontrol",
-  "company": "LaunchDarkly",
-  "title": "Engineering Manager, AgentControl",
-  "comp": 264000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4678046-senior-engineering-manager",
   "tag": "sydecar_senior_engineering_manager",
   "company": "Sydecar",
-  "title": "Senior Engineering Manager",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602480-senior-engineering-manager",
-  "tag": "tekmetric_senior_engineering_manager",
-  "company": "tekmetric",
   "title": "Senior Engineering Manager",
   "comp": 260000.0,
   "source": "Wellfound"
@@ -586,64 +154,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4555177-senior-engineering-manager-backend-platform",
-  "tag": "sentilink_senior_engineering_manager_backend_",
-  "company": "SentiLink",
-  "title": "Senior Engineering Manager, Backend/Platform",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4557531-senior-solutions-engineering-manager-product-specialist",
-  "tag": "motive_senior_solutions_engineering_manage",
-  "company": "Motive",
-  "title": "Senior Solutions Engineering Manager, Product Specialist",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4618041-engineering-manager",
-  "tag": "bubble_engineering_manager",
-  "company": "Bubble",
-  "title": "Engineering Manager",
-  "comp": 258000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3358373-founding-staff-ai-engineer",
-  "tag": "qumis_founding_staff_ai_engineer",
-  "company": "Qumis",
-  "title": "Founding Staff AI Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4497047-founding-ai-engineer",
-  "tag": "kos_ai_founding_ai_engineer",
-  "company": "kos.ai",
-  "title": "Founding AI Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698010-engineering-manager-product-engineering-new-york",
   "tag": "toggle_engineering_manager_product_enginee",
   "company": "Toggle",
   "title": "Engineering Manager, Product Engineering - New York",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4630172-vp-of-engineering",
-  "tag": "feathr_vp_of_engineering",
-  "company": "Feathr",
-  "title": "VP of Engineering",
   "comp": 250000.0,
   "source": "Wellfound"
  },
@@ -676,15 +190,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4497048-founding-platform-engineer",
-  "tag": "kos_ai_founding_platform_engineer",
-  "company": "kos.ai",
-  "title": "Founding Platform Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4704031-founding-principal-engineer",
   "tag": "employvision_founding_principal_engineer",
   "company": "Employvision",
@@ -694,73 +199,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4235669-cto",
-  "tag": "settle_data_cto",
-  "company": "Settle Data",
-  "title": "CTO",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3829076-head-of-engineering-cto",
-  "tag": "kinetic_trials_head_of_engineering_cto",
-  "company": "Kinetic Trials",
-  "title": "Head of Engineering / CTO",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420108-founding-engineer",
-  "tag": "hera_founding_engineer",
-  "company": "Hera",
-  "title": "Founding Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4697895-principal-founding-engineer-full-stack-typescript-node-js-react-aws",
   "tag": "employvision_principal_founding_engineer_full_st",
   "company": "Employvision",
   "title": "Principal Founding Engineer - Full Stack (TypeScript, Node.js, React, AWS)",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4522653-engineering-manager",
-  "tag": "coast_engineering_manager",
-  "company": "Coast",
-  "title": "Engineering Manager ",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4536787-engineering-manager",
-  "tag": "metabase_engineering_manager",
-  "company": "Metabase",
-  "title": "Engineering Manager",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3045417-software-engineering-manager",
-  "tag": "assured_software_engineering_manager",
-  "company": "Assured",
-  "title": "Software Engineering Manager",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4589664-senior-engineering-manager-client-group",
-  "tag": "virta_health_senior_engineering_manager_client_g",
-  "company": "Virta Health",
-  "title": "Senior Engineering Manager - Client Group",
   "comp": 250000.0,
   "source": "Wellfound"
  },
@@ -793,37 +235,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4573003-senior-engineering-manager-security-it",
-  "tag": "fingerprint_senior_engineering_manager_security",
-  "company": "Fingerprint",
-  "title": "Senior Engineering Manager, Security & IT ",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4235374-senior-engineering-manager",
-  "tag": "scan_com_senior_engineering_manager",
-  "company": "Scan.com",
-  "title": "Senior Engineering Manager",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4697825-founding-engineer-builder",
   "tag": "slipway_ai_solutions_founding_engineer_builder",
   "company": "Slipway AI Solutions",
   "title": "Founding Engineer / Builder",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4481101-engineering-manager-platform",
-  "tag": "rec_engineering_manager_platform",
-  "company": "Rec",
-  "title": "Engineering Manager (Platform)",
   "comp": 240000.0,
   "source": "Wellfound"
  },
@@ -856,65 +271,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4412270-platform-engineering-manager",
-  "tag": "comity_platform_engineering_manager",
-  "company": "Comity",
-  "title": "Platform Engineering Manager",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3934040-founding-software-engineer",
-  "tag": "askew_founding_software_engineer",
-  "company": "Askew",
-  "title": "Founding Software Engineer",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597817-engineering-manager",
-  "tag": "clever_engineering_manager",
-  "company": "Clever",
-  "title": "Engineering Manager",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4505457-engineering-manager-platform",
-  "tag": "dealpath_engineering_manager_platform",
-  "company": "Dealpath",
-  "title": "Engineering Manager, Platform",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4708017-technical-lead-manager",
   "tag": "point_technical_lead_manager",
   "company": "Point",
   "title": "Technical Lead Manager",
   "comp": 227000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4557440-founding-engineer",
-  "tag": "endgap_founding_engineer_ai_construction_s",
-  "company": "Endgap",
-  "title": "Founding Engineer - AI Construction Software",
-  "comp": 225000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4121759-founding-applied-ai-engineer",
-  "tag": "matterhaul_founding_applied_ai_engineer",
-  "company": "Matterhaul",
-  "title": "Founding Applied AI Engineer",
-  "comp": 225000.0,
   "source": "Wellfound"
  },
  {
@@ -932,15 +293,6 @@
   "tag": "stepful_engineering_manager_data",
   "company": "Stepful",
   "title": "Engineering Manager, Data",
-  "comp": 225000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3128018-engineering-manager-platform-nyc",
-  "tag": "regard_engineering_manager_platform_nyc",
-  "company": "Regard",
-  "title": "Engineering Manager, Platform (NYC)",
   "comp": 225000.0,
   "source": "Wellfound"
  },
@@ -964,69 +316,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4302148-engineering-manager",
-  "tag": "astra_engineering_manager",
-  "company": "Astra",
-  "title": "Engineering Manager",
-  "comp": 225000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3392244-founding-engineer-senior-staff",
-  "tag": "sailor_health_founding_engineer_senior_staff",
-  "company": "Sailor Health",
-  "title": "Founding Engineer (Senior/Staff)",
-  "comp": 225000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4639825-forward-deployed-engineer-public-sector",
-  "tag": "domino_data_lab_forward_deployed_engineer_public_se",
-  "company": "Domino Data Lab",
-  "title": "Forward Deployed Engineer, Public Sector",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4484786-founding-ai-engineer-fully-remote-up-to-220k-year",
-  "tag": "bluepina_founding_ai_engineer_fully_remote_u",
-  "company": "Bluepina",
-  "title": "Founding AI Engineer (Fully Remote | Up to $220k/year)",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4546285-founding-senior-ai-engineer",
-  "tag": "peerbound_founding_senior_ai_engineer",
-  "company": "Peerbound",
-  "title": "Founding Senior AI Engineer",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4040727-head-of-engineering",
-  "tag": "zania_head_of_engineering",
-  "company": "Zania",
-  "title": "Head of Engineering",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4395939-founding-backend-engineer",
-  "tag": "backpack_founding_backend_engineer",
-  "company": "Backpack",
-  "title": "Founding Backend Engineer",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4751437-director-technical-program-management",
   "tag": "cyberhaven_director_technical_program_manageme",
   "company": "Cyberhaven",
@@ -1036,82 +325,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4546284-founding-software-engineer-product",
-  "tag": "peerbound_founding_software_engineer_product",
-  "company": "Peerbound",
-  "title": "Founding Software Engineer, Product",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523929-engineering-manager-agentic-orchestration-and-loan-origination",
-  "tag": "caribou_formerly_motoref_engineering_manager_agentic_orchest",
-  "company": "Caribou (formerly MotoRefi)",
-  "title": "Engineering Manager (Agentic Orchestration and Loan Origination)",
-  "comp": 217000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4550932-engineering-manager-data-platform-ml-ops",
-  "tag": "fingerprint_engineering_manager_data_platform_m",
-  "company": "Fingerprint",
-  "title": "Engineering Manager, Data Platform & ML Ops",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4696259-director-global-programs",
   "tag": "braze_director_global_programs",
   "company": "Braze",
   "title": "Director, Global Programs",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3839764-electronics-engineering-manager",
-  "tag": "astranis_electronics_engineering_manager",
-  "company": "Astranis",
-  "title": "Electronics Engineering Manager",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4622547-engineering-manager",
-  "tag": "the_farmer_s_dog_engineering_manager",
-  "company": "The Farmer's Dog",
-  "title": "Engineering Manager",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4395838-engineering-manager",
-  "tag": "take_two_interactive_sof_engineering_manager",
-  "company": "Take-Two Interactive Software",
-  "title": "Engineering Manager",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4505451-senior-data-engineering-manager",
-  "tag": "yipitdata_senior_data_engineering_manager",
-  "company": "YipitData",
-  "title": "Senior Data Engineering Manager",
-  "comp": 215000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4243404-engineering-manager-identification-accuracy",
-  "tag": "fingerprint_engineering_manager_identification_",
-  "company": "Fingerprint",
-  "title": "Engineering Manager, Identification Accuracy",
   "comp": 215000.0,
   "source": "Wellfound"
  },
@@ -1126,38 +343,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4004374-engineering-manager-ai-engineering",
-  "tag": "procurify_engineering_manager_ai_engineering",
-  "company": "Procurify",
-  "title": "Engineering Manager, AI Engineering",
-  "comp": 205000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698009-tech-lead-manager-new-york",
   "tag": "toggle_tech_lead_manager_new_york",
   "company": "Toggle",
   "title": "Tech Lead Manager - New York",
   "comp": 205000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3965727-engineering-manager",
-  "tag": "just_appraised_engineering_manager",
-  "company": "Just Appraised",
-  "title": "Engineering Manager",
-  "comp": 205000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3460411-engineering-manager-search-engine-team",
-  "tag": "w_w_grainger_engineering_manager_search_engine_t",
-  "company": "W.W. Grainger",
-  "title": "Engineering Manager - Search Engine Team",
-  "comp": 202000.0,
   "source": "Wellfound"
  },
  {
@@ -1175,33 +365,6 @@
   "tag": "redwagon_ai_engineer_founding_team",
   "company": "Redwagon",
   "title": "AI Engineer - Founding Team",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644371-founding-ai-engineer",
-  "tag": "weave_founding_ai_engineer",
-  "company": "Weave",
-  "title": "Founding AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3311652-forward-deployed-engineering-manager",
-  "tag": "actively_forward_deployed_engineering_manage",
-  "company": "Actively",
-  "title": "Forward Deployed Engineering Manager",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4546140-engineering-manager-ai-powered-social-platform",
-  "tag": "talenqora_engineering_manager_ai_powered_soci",
-  "company": "Talenqora",
-  "title": "Engineering Manager \u2013 AI-Powered Social Platform",
   "comp": 200000.0,
   "source": "Wellfound"
  },
@@ -1243,82 +406,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634547-founding-engineer-payments",
-  "tag": "payos_founding_engineer_payments",
-  "company": "PayOS",
-  "title": "Founding Engineer, Payments",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4084224-director-of-payer-ops-and-rcm",
-  "tag": "alpaca_health_director_of_payer_ops_and_rcm",
-  "company": "Alpaca Health",
-  "title": "Director of Payer Ops and RCM",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4616155-data-analytics-engineering-manager",
-  "tag": "understood_data_analytics_engineering_manager",
-  "company": "Understood",
-  "title": "Data & Analytics Engineering Manager",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3313198-founding-engineer",
-  "tag": "sidekick_founding_engineer",
-  "company": "Sidekick",
-  "title": "Founding Engineer",
-  "comp": 195000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4319129-director-of-data",
-  "tag": "spoiler_alert_director_of_data",
-  "company": "Spoiler Alert",
-  "title": "Director of Data",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3625680-founding-engineer",
-  "tag": "anagram_founding_engineer",
-  "company": "Anagram",
-  "title": "Founding Engineer",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3540060-engineering-manager",
-  "tag": "oneimaging_engineering_manager",
-  "company": "OneImaging",
-  "title": "Engineering Manager",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766936-analytics-engineer-clone",
   "tag": "snout_founding_data_engineer",
   "company": "Snout",
   "title": "Founding Data Engineer",
-  "comp": 185000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634196-director-publishers-and-platforms",
-  "tag": "samba_director_publishers_and_platforms",
-  "company": "Samba ",
-  "title": "Director Publishers and Platforms",
   "comp": 185000.0,
   "source": "Wellfound"
  },
@@ -1333,109 +424,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4612695-engineering-manager",
-  "tag": "pantheon_platform_engineering_manager",
-  "company": "Pantheon Platform",
-  "title": "Engineering Manager",
-  "comp": 181000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4435474-founding-ai-engineer",
-  "tag": "lunera_health_founding_ai_engineer",
-  "company": "Lunera Health",
-  "title": "Founding AI Engineer",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4351559-applications-engineering-manager-boston",
-  "tag": "standard_bots_applications_engineering_manager_bo",
-  "company": "Standard Bots",
-  "title": "Applications Engineering Manager (Boston)",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4475799-founding-infrastructure-engineer",
-  "tag": "influxion_founding_infrastructure_engineer",
-  "company": "Influxion",
-  "title": "Founding Infrastructure Engineer",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3756534-founding-software-engineer",
-  "tag": "nero_founding_software_engineer",
-  "company": "Nero",
-  "title": "Founding Software Engineer",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3454557-software-engineering-manager-technical-owner",
-  "tag": "litmos_com_software_engineering_manager_techni",
-  "company": "Litmos.com",
-  "title": "Software Engineering Manager - Technical Owner",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4573094-applications-engineering-manager-west-coast",
-  "tag": "standard_bots_applications_engineering_manager_we",
-  "company": "Standard Bots",
-  "title": "Applications Engineering Manager (West Coast)",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4536852-security-engineering-manager",
-  "tag": "blend_security_engineering_manager",
-  "company": "Blend",
-  "title": "Security Engineering Manager",
-  "comp": 179000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3212873-engineering-manager-competitive",
-  "tag": "hudl_engineering_manager_competitive",
-  "company": "Hudl",
-  "title": "Engineering Manager - Competitive",
-  "comp": 179000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4772671-founding-full-stack-ai-engineer-saas-enterprise-platforms",
   "tag": "the_merritt_method_founding_full_stack_ai_engineer_saa",
   "company": "The Merritt Method",
   "title": "Founding Full-Stack / AI Engineer \u2014 SaaS & Enterprise Platforms",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4201523-solutions-engineering-manager",
-  "tag": "artian_ai_solutions_engineering_manager",
-  "company": "Artian AI",
-  "title": "Solutions Engineering Manager",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4607282-platform-engineering-manager-us-remote",
-  "tag": "perfectserve_platform_engineering_manager_us_rem",
-  "company": "PerfectServe",
-  "title": "Platform Engineering Manager - US Remote",
   "comp": 175000.0,
   "source": "Wellfound"
  },
@@ -1468,24 +460,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4365696-software-engineering-manager",
-  "tag": "prokeep_software_engineering_manager",
-  "company": "Prokeep",
-  "title": "Software Engineering Manager",
-  "comp": 155000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597444-founding-ai-engineer",
-  "tag": "flowlinker_founding_ai_engineer",
-  "company": "FlowLinker",
-  "title": "Founding AI Engineer",
-  "comp": 150000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3531728-full-stack-ai-engineer",
   "tag": "rhizome_ai_founding_full_stack_ai_engineer",
   "company": "Rhizome AI",
@@ -1500,24 +474,6 @@
   "company": "LawnStarter",
   "title": "Software Engineering Manager",
   "comp": 140000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602761-engineering-manager-agentic-integrations",
-  "tag": "constructor_io_engineering_manager_agentic_integra",
-  "company": "Constructor.io",
-  "title": "Engineering Manager: Agentic Integrations",
-  "comp": 130000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4434506-quantum-algorithms-engineer-clone",
-  "tag": "superq_quantum_computing_engineering_manager",
-  "company": "SuperQ Quantum Computing",
-  "title": "Engineering Manager",
-  "comp": 130000.0,
   "source": "Wellfound"
  },
  {
@@ -1540,56 +496,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4329781-engineering-manager-personalization",
-  "tag": "constructor_io_engineering_manager_personalization",
-  "company": "Constructor.io",
-  "title": "Engineering Manager: Personalization",
-  "comp": 130000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4575954-engineering-manager",
-  "tag": "sierra_studio_engineering_manager",
-  "company": "Sierra Studio",
-  "title": "Engineering Manager",
-  "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone",
   "tag": "earthinia_company_servic_founding_software_engineer",
   "company": "Earthinia Company Services",
   "title": "Founding Software Engineer",
   "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4492782-founding-engineer-path-to-cto",
-  "tag": "ponce_ai_founding_engineer_path_to_cto",
-  "company": "Ponce AI",
-  "title": "Founding Engineer \u2014 Path to CTO",
-  "comp": 110000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4491920-director-ai-transformation",
-  "tag": "human_agency_director_ai_transformation",
-  "company": "Human Agency",
-  "title": "Director, AI Transformation",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4326103-vp-forward-deployed-lead",
-  "tag": "galaxy_digital_vp_forward_deployed_lead",
-  "company": "Galaxy Digital",
-  "title": "VP, Forward Deployed Lead",
-  "comp": null,
   "source": "Wellfound"
  },
  {
@@ -1603,181 +514,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4199871-ml-ops-infrastructure-fellow-health",
-  "tag": "fairwai_ml_ops_infrastructure_fellow_health",
-  "company": "FairwAI",
-  "title": "ML Ops / Infrastructure Fellow (Health)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3783782-founding-engineer-applied-ai-lead",
-  "tag": "equi_founding_engineer_applied_ai_lead",
-  "company": "Equi",
-  "title": "Founding Engineer, Applied AI Lead",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4521143-founding-ai-engineer-agentic-systems",
-  "tag": "astoria_ai_founding_ai_engineer_agentic_system",
-  "company": "Astoria AI",
-  "title": "Founding AI Engineer \u2014 Agentic Systems",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4173472-founding-ai-engineer",
-  "tag": "mirian_ai_founding_ai_engineer",
-  "company": "Mirian AI",
-  "title": "Founding AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3859771-ml-ops-infrastructure-fellow",
-  "tag": "fairwai_ml_ops_infrastructure_fellow",
-  "company": "FairwAI",
-  "title": "ML Ops / Infrastructure Fellow",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2996531-applied-ai-engineer-global-public-sector",
-  "tag": "scale_ai_applied_ai_engineer_global_public_s",
-  "company": "Scale AI",
-  "title": "Applied AI Engineer, Global Public Sector",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4756868-founding-ai-research-engineer-agent-harness-model-systems",
   "tag": "astoria_ai_founding_ai_research_engineer_agent",
   "company": "Astoria AI",
   "title": "Founding AI Research Engineer: Agent Harness & Model Systems",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3725654-founding-agentic-ai-engineer-boock-ai-remote-india",
-  "tag": "boock_ai_founding_agentic_ai_engineer_boock_",
-  "company": "Boock.ai",
-  "title": "Founding Agentic AI Engineer - Boock.ai (Remote India)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4545966-head-of-engineering-aws-mongodb-ai-products-online-safety",
-  "tag": "sierra_studio_head_of_engineering_aws_mongodb_ai_",
-  "company": "Sierra Studio",
-  "title": "Head of Engineering (AWS / MongoDB / AI Products), Online Safety",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602743-software-engineering-manager-agentic-engineering",
-  "tag": "coder_software_engineering_manager_agenti",
-  "company": "Coder",
-  "title": "Software Engineering Manager (Agentic Engineering)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602616-engineering-manager-agent-developer-platform",
-  "tag": "ledgy_engineering_manager_agent_developer",
-  "company": "Ledgy",
-  "title": "Engineering Manager: Agent & Developer Platform",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4573049-engineering-manager-ai-platform",
-  "tag": "vannevar_labs_engineering_manager_ai_platform",
-  "company": "Vannevar Labs",
-  "title": "Engineering Manager, AI Platform",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/1839334-lead-engineer-vp-of-engineering",
-  "tag": "inkah_lead_engineer_vp_of_engineering",
-  "company": "Inkah",
-  "title": "Lead Engineer / VP of Engineering",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4497049-managing-director-defense-space",
-  "tag": "kos_ai_managing_director_defense_space",
-  "company": "kos.ai",
-  "title": "Managing Director, Defense + Space",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4521145-founding-full-stack-engineer",
-  "tag": "astoria_ai_founding_full_stack_engineer",
-  "company": "Astoria AI",
-  "title": "Founding Full-Stack Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4234285-manager-engineering-data-science",
-  "tag": "ltk_manager_engineering_data_science",
-  "company": "LTK",
-  "title": "Manager, Engineering - Data Science",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2944353-engineering-manager-eu",
-  "tag": "ashby_engineering_manager_eu",
-  "company": "Ashby",
-  "title": "Engineering Manager - EU",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4497050-managing-director-digital-infrastructure",
-  "tag": "kos_ai_managing_director_digital_infrastru",
-  "company": "kos.ai",
-  "title": "Managing Director, Digital Infrastructure",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3204824-tech-lead-engineering-manager",
-  "tag": "dharmik_vibes_tech_lead_engineering_manager",
-  "company": "Dharmik Vibes",
-  "title": "Tech Lead/Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4246013-vp-head-of-engineering-portfolio-company-role",
-  "tag": "equal_ventures_vp_head_of_engineering_portfolio_co",
-  "company": "Equal Ventures",
-  "title": "VP / Head of Engineering (Portfolio Company Role)",
   "comp": null,
   "source": "Wellfound"
  },
@@ -1792,45 +532,9 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4486343-fractional-cto-strategic-technical-advisor",
-  "tag": "simplview_fractional_cto_strategic_technical_",
-  "company": "Simplview",
-  "title": "Fractional CTO / Strategic Technical Advisor",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4193149-director-of-devops-it-and-security",
-  "tag": "zippy_mh_director_of_devops_it_and_security",
-  "company": "Zippy MH",
-  "title": "Director of DevOps, IT, and Security",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/545767-director-software-engineering",
-  "tag": "agent_iq_director_software_engineering",
-  "company": "Agent IQ",
-  "title": "Director, Software Engineering",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4716639-bioinformatics-intern-clone",
   "tag": "utilyze_founding_engineer",
   "company": "Utilyze",
-  "title": "Founding Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3410828-founding-engineer",
-  "tag": "braind_founding_engineer",
-  "company": "braind",
   "title": "Founding Engineer",
   "comp": null,
   "source": "Wellfound"
@@ -1841,15 +545,6 @@
   "tag": "wholesale_hub_founding_engineer_tech_lead_help_us",
   "company": "Wholesale Hub",
   "title": "Founding Engineer & Tech Lead: Help Us Fix How America's Retail Stores Restock",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4579171-applied-ai-engineer-clone-clone-clone-clone",
-  "tag": "cruitical_founding_engineer",
-  "company": "Cruitical",
-  "title": "Founding Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -1891,46 +586,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3991962-managing-director-of-technology",
-  "tag": "human_agency_managing_director_of_technology",
-  "company": "Human Agency",
-  "title": "Managing Director of Technology",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3703542-founding-full-stack-software-engineer-mern",
-  "tag": "boock_ai_founding_full_stack_software_engine",
-  "company": "Boock.ai",
-  "title": "Founding Full Stack Software Engineer (MERN)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4248509-founding-engineer-electron-node-js",
   "tag": "shin_ai_labs_founding_engineer_electron_node_js",
   "company": "Shin AI Labs",
   "title": "Founding Engineer - Electron + Node.js",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3532881-founding-backend-engineer-remote-usa",
-  "tag": "flocker_founding_backend_engineer_remote_us",
-  "company": "Flocker",
-  "title": "Founding Backend Engineer - Remote (USA)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3251810-project-management-fellow",
-  "tag": "fairwai_project_management_fellow",
-  "company": "FairwAI",
-  "title": "Project Management Fellow",
   "comp": null,
   "source": "Wellfound"
  },
@@ -1945,15 +604,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4408975-engineering-manager",
-  "tag": "medvidi_engineering_manager",
-  "company": "MEDvidi",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698002-sr-engineering-manager",
   "tag": "upbound_sr_engineering_manager",
   "company": "Upbound",
@@ -1963,54 +613,9 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4465235-engineering-manager",
-  "tag": "taxdome_engineering_manager",
-  "company": "TaxDome",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523853-engineering-manager",
-  "tag": "rhealthnyc_engineering_manager",
-  "company": "RhealthNYC",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597973-engineering-manager",
-  "tag": "sunset_engineering_manager",
-  "company": "Sunset",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4493287-founding-engineer",
-  "tag": "adai_founding_engineer",
-  "company": "AdAI",
-  "title": "Founding Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748816-engineering-manager",
   "tag": "nametag_engineering_manager",
   "company": "Nametag",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4446001-engineering-manager",
-  "tag": "amplemarket_engineering_manager",
-  "company": "Amplemarket",
   "title": "Engineering Manager",
   "comp": null,
   "source": "Wellfound"
@@ -2044,119 +649,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3142656-2-senior-engineering-manager",
-  "tag": "omnea_senior_engineering_manager",
-  "company": "Omnea",
-  "title": "Senior Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4446280-engineering-manager",
-  "tag": "breezeway_engineering_manager",
-  "company": "Breezeway",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718955-engineering-manager-tradeify-platform",
   "tag": "tradeify_co_engineering_manager_tradeify_platfo",
   "company": "Tradeify.co",
   "title": "Engineering Manager - Tradeify Platform",
   "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4121670-engineering-manager-product-engineering",
-  "tag": "secfix_engineering_manager_product_enginee",
-  "company": "Secfix",
-  "title": "Engineering Manager, Product Engineering",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3807671-qa-engineering-manager",
-  "tag": "blockstream_qa_engineering_manager",
-  "company": "Blockstream",
-  "title": "QA Engineering Manager",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3938106-engineering-manager-data",
-  "tag": "hackerrank_engineering_manager_data",
-  "company": "Hackerrank",
-  "title": "Engineering Manager - Data",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4475463-engineering-manager-hands-on",
-  "tag": "ledgy_engineering_manager_hands_on",
-  "company": "Ledgy",
-  "title": "Engineering Manager (Hands-on)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4546628-engineering-manager-channels-platform",
-  "tag": "siena_ai_engineering_manager_channels_platfo",
-  "company": "Siena AI",
-  "title": "Engineering Manager, Channels & Platform",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4307651-engineering-manager-security-platform",
-  "tag": "vannevar_labs_engineering_manager_security_platfo",
-  "company": "Vannevar Labs",
-  "title": "Engineering Manager, Security Platform",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/649437-founding-team-tech-co-founder",
-  "tag": "oni_founding_team_tech_co_founder",
-  "company": "ONI",
-  "title": "Founding Team / Tech / Co- Founder",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3541606-vice-president-senior-backend-developer-lending-commercial-mumbai",
-  "tag": "galaxy_digital_vice_president_senior_backend_devel",
-  "company": "Galaxy Digital",
-  "title": "Vice President, Senior Backend Developer - Lending/Commercial (Mumbai)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4050926-soc-architect-remote",
-  "tag": "matx_soc_architect_remote",
-  "company": "MatX",
-  "title": "SOC Architect (Remote)",
-  "comp": 600000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3261557-principal-engineer",
-  "tag": "pinterest_principal_engineer",
-  "company": "Pinterest",
-  "title": "Principal Engineer",
-  "comp": 480000.0,
   "source": "Wellfound"
  },
  {
@@ -2170,29 +667,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4557398-ai-engineering-lead-at-aios-remote-200-400k-yr-equity",
-  "tag": "aios_ai_engineering_lead_at_aios_remote_",
-  "company": "AIOS",
-  "title": "AI Engineering Lead at AIOS \u2014 Remote, $200-$400k/yr + equity",
-  "comp": 400000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3994821-2-data-engineer-staff-principal-lead",
   "tag": "green_data_engineer_staff_principal_lead",
   "company": "Green",
   "title": "Data Engineer (Staff, Principal, Lead)",
   "comp": 380000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3317962-sr-staff-software-engineer-conversion-visibility",
-  "tag": "pinterest_sr_staff_software_engineer_conversi",
-  "company": "Pinterest",
-  "title": "Sr. Staff Software Engineer, Conversion Visibility",
-  "comp": 413000.0,
   "source": "Wellfound"
  },
  {
@@ -2224,42 +703,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4391342-sr-ai-engineer",
-  "tag": "tapcart_sr_ai_engineer",
-  "company": "Tapcart",
-  "title": "Sr. AI Engineer",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4220354-principal-forward-deployed-engineer",
-  "tag": "maybern_principal_forward_deployed_engineer",
-  "company": "Maybern",
-  "title": "Principal Forward Deployed Engineer",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4085383-member-of-technical-staff-security",
-  "tag": "prime_intellect_member_of_technical_staff_security",
-  "company": "Prime Intellect",
-  "title": "Member of Technical Staff - Security",
-  "comp": 350000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4532096-forward-deployed-lead-ai-architect",
-  "tag": "tribe_ai_forward_deployed_lead_ai_architect",
-  "company": "tribe.ai",
-  "title": "Forward Deployed Lead AI Architect",
-  "comp": 340000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4656970-senior-staff-software-engineer-recognition-platform",
   "tag": "metropolis_senior_staff_software_engineer_reco",
   "company": "Metropolis",
@@ -2269,65 +712,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3480511-staff-software-engineer-backend",
-  "tag": "siro_staff_software_engineer_backend",
-  "company": "Siro",
-  "title": "Staff Software Engineer, Backend",
-  "comp": 325000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4180619-principal-cybersecurity-architect-network-security-posture-management",
-  "tag": "ionq_principal_cybersecurity_architect_n",
-  "company": "IonQ",
-  "title": "Principal Cybersecurity Architect \u2013 Network Security Posture Management",
-  "comp": 325000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4191889-2-principal-ai-engineer",
-  "tag": "zero_rfi_principal_ai_engineer",
-  "company": "Zero RFI",
-  "title": "Principal AI Engineer ",
-  "comp": 320000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4140096-staff-backend-engineer-search-fx-discovery-experience",
-  "tag": "faire_staff_backend_engineer_search_fx_di",
-  "company": "Faire",
-  "title": "Staff Backend Engineer - Search FX (Discovery Experience)",
-  "comp": 318000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4777747-member-of-mathematical-staff",
   "tag": "san_francisco_tensor_com_member_of_mathematical_staff",
   "company": "San Francisco Tensor Company",
   "title": "Member of Mathematical Staff",
   "comp": 315000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523074-staff-software-engineer",
-  "tag": "pulley_staff_software_engineer",
-  "company": "Pulley",
-  "title": "Staff Software Engineer",
-  "comp": 310000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4191751-staff-software-engineer",
-  "tag": "flowcode_staff_software_engineer",
-  "company": "Flowcode",
-  "title": "Staff Software Engineer ",
-  "comp": 310000.0,
   "source": "Wellfound"
  },
  {
@@ -2346,33 +735,6 @@
   "company": "Homebase",
   "title": "Principal Engineer, Core Product (Hybrid)",
   "comp": 305000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4630164-staff-ai-research-engineer",
-  "tag": "standard_bots_staff_ai_research_engineer",
-  "company": "Standard Bots",
-  "title": "Staff AI Research Engineer",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4592877-ai-engineer",
-  "tag": "mosaic_ai_engineer",
-  "company": "Mosaic",
-  "title": "AI Engineer",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4489206-senior-ai-engineer",
-  "tag": "chronicle_senior_ai_engineer",
-  "company": "Chronicle",
-  "title": "Senior AI Engineer",
-  "comp": 300000.0,
   "source": "Wellfound"
  },
  {
@@ -2404,64 +766,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4576417-senior-ai-engineer",
-  "tag": "brellium_senior_ai_engineer",
-  "company": "Brellium",
-  "title": "Senior AI Engineer",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3120547-staff-software-engineer-ai-ml",
-  "tag": "maven_clinic_staff_software_engineer_ai_ml",
-  "company": "Maven Clinic",
-  "title": "Staff Software Engineer, AI/ML",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3834598-ml-engineer",
-  "tag": "phare_health_ml_engineer",
-  "company": "Phare Health",
-  "title": "ML Engineer",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420081-staff-forward-deployed-engineer-nyc-or-sf",
-  "tag": "concurrence_staff_forward_deployed_engineer_nyc",
-  "company": "Concurrence",
-  "title": "Staff Forward Deployed Engineer [NYC or SF]",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3722104-2-genai-solutions-architect",
-  "tag": "tribe_ai_genai_solutions_architect",
-  "company": "tribe.ai",
-  "title": "GenAi Solutions Architect",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718913-senior-staff-software-engineer-backend-picks-dfs-prediction-markets",
   "tag": "sleeper_senior_staff_software_engineer_back",
   "company": "Sleeper",
   "title": "Senior / Staff Software Engineer, Backend (Picks - DFS & Prediction Markets)",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3480637-member-of-technical-staff-research-engineer",
-  "tag": "crosby_member_of_technical_staff_research_",
-  "company": "Crosby",
-  "title": "Member of Technical Staff, Research Engineer",
   "comp": 300000.0,
   "source": "Wellfound"
  },
@@ -2494,83 +802,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4136687-staff-software-engineer",
-  "tag": "arch_staff_software_engineer",
-  "company": "Arch",
-  "title": "Staff Software Engineer",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3495817-software-engineer-infrastructure-staff",
-  "tag": "lightfield_software_engineer_infrastructure_st",
-  "company": "Lightfield",
-  "title": "Software Engineer, Infrastructure (Staff)",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4464489-member-of-technical-staff-sre",
-  "tag": "basis_ai_member_of_technical_staff_sre",
-  "company": "Basis AI",
-  "title": "Member of Technical Staff - SRE",
-  "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3909914-hpc-gpu-cluster-architect",
   "tag": "san_francisco_compute_co_hpc_gpu_cluster_architect",
   "company": "San Francisco Compute Company",
   "title": "HPC/ GPU Cluster Architect",
   "comp": 300000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597878-staff-frontend-engineer-feature-management",
-  "tag": "launchdarkly_staff_frontend_engineer_feature_man",
-  "company": "LaunchDarkly",
-  "title": "Staff Frontend Engineer, Feature Management",
-  "comp": 295000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3907183-staff-engineer",
-  "tag": "arya_health_staff_engineer",
-  "company": "Arya Health",
-  "title": "Staff Engineer",
-  "comp": 290000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3972556-senior-staff-software-engineer-data",
-  "tag": "juniper_square_senior_staff_software_engineer_data",
-  "company": "Juniper Square",
-  "title": "Senior Staff Software Engineer, Data ",
-  "comp": 285000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3938710-staff-software-engineer-frontend",
-  "tag": "glossgenius_staff_software_engineer_frontend",
-  "company": "GlossGenius",
-  "title": "Staff Software Engineer, Frontend",
-  "comp": 284000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4153248-senior-staff-software-architect-network-monitoring-platform",
-  "tag": "ionq_senior_staff_software_architect_net",
-  "company": "IonQ",
-  "title": "Senior Staff Software Architect \u2013 Network Monitoring Platform",
-  "comp": 283000.0,
   "source": "Wellfound"
  },
  {
@@ -2584,24 +820,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3775430-forward-deployed-engineer",
-  "tag": "kepler_forward_deployed_engineer",
-  "company": "Kepler",
-  "title": "Forward Deployed Engineer",
-  "comp": 280000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4307581-staff-software-engineer-backend",
-  "tag": "glossgenius_staff_software_engineer_backend",
-  "company": "GlossGenius",
-  "title": "Staff Software Engineer, Backend",
-  "comp": 284000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4658936-staff-software-engineer-ai-foundations-ai-agent-optimization",
   "tag": "temporal_technologies_staff_software_engineer_ai_foundati",
   "company": "Temporal Technologies",
@@ -2611,28 +829,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4562615-principal-solutions-architect-quantum-safe-networks",
-  "tag": "ionq_principal_solutions_architect_quant",
-  "company": "IonQ",
-  "title": "Principal Solutions Architect - Quantum-Safe Networks",
-  "comp": 276000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3263464-senior-ai-engineer",
   "tag": "pulley_senior_ai_engineer",
   "company": "Pulley",
   "title": "Senior AI Engineer",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4092831-solutions-architect-ai-infrastructure",
-  "tag": "prime_intellect_solutions_architect_ai_infrastructu",
-  "company": "Prime Intellect",
-  "title": "Solutions Architect - AI Infrastructure",
   "comp": 275000.0,
   "source": "Wellfound"
  },
@@ -2656,42 +856,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3933989-staff-software-engineer",
-  "tag": "permitflow_staff_software_engineer",
-  "company": "PermitFlow",
-  "title": "Staff Software Engineer",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4468445-senior-staff-software-engineer-backend",
-  "tag": "medal_senior_staff_software_engineer_back",
-  "company": "Medal",
-  "title": "Senior/Staff Software Engineer \u2013 Backend",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4456195-staff-software-engineer-fullstack",
-  "tag": "assured_staff_software_engineer_fullstack",
-  "company": "Assured",
-  "title": "Staff Software Engineer, Fullstack",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4147619-staff-engineer-fraud-prevention",
-  "tag": "sardine_staff_engineer_fraud_prevention",
-  "company": "Sardine",
-  "title": "Staff Engineer - Fraud Prevention ",
-  "comp": 275000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4762898-staff-applied-ai-engineer",
   "tag": "rocket_money_staff_applied_ai_engineer",
   "company": "Rocket Money",
@@ -2701,47 +865,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4325621-staff-ai-ml-engineer",
-  "tag": "sigma_computing_staff_ai_ml_engineer",
-  "company": "Sigma Computing",
-  "title": "Staff AI/ML Engineer",
-  "comp": 270000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4436755-staff-ai-engineer",
-  "tag": "twin_health_staff_ai_engineer",
-  "company": "Twin Health",
-  "title": "Staff AI Engineer",
-  "comp": 265000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698047-senior-applied-ai-engineer",
   "tag": "mintlify_senior_applied_ai_engineer",
   "company": "Mintlify",
   "title": "Senior Applied AI Engineer",
   "comp": 265000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4379635-senior-staff-software-engineer-ai",
-  "tag": "juniper_square_senior_staff_software_engineer_ai",
-  "company": "Juniper Square",
-  "title": "Senior Staff Software Engineer (AI)",
-  "comp": 265000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4325619-senior-ai-ml-engineer",
-  "tag": "sigma_computing_senior_ai_ml_engineer",
-  "company": "Sigma Computing",
-  "title": "Senior AI/ML Engineer",
-  "comp": 270000.0,
   "source": "Wellfound"
  },
  {
@@ -2764,15 +892,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3307206-senior-solutions-architect",
-  "tag": "mongodb_senior_solutions_architect",
-  "company": "MongoDB",
-  "title": "Senior Solutions Architect",
-  "comp": 265000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4762995-software-engineer-staff",
   "tag": "check_software_engineer_staff",
   "company": "Check",
@@ -2782,64 +901,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3261150-senior-applied-ai-engineer",
-  "tag": "bubble_senior_applied_ai_engineer",
-  "company": "Bubble",
-  "title": "Senior Applied AI Engineer",
-  "comp": 261000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4678064-senior-ai-ml-engineer",
   "tag": "metriport_senior_ai_ml_engineer",
   "company": "Metriport",
   "title": "Senior AI/ML Engineer",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3347544-staff-ml-engineer-product",
-  "tag": "rocket_money_staff_ml_engineer_product",
-  "company": "Rocket Money",
-  "title": "Staff ML Engineer, Product",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4205428-applied-ai-engineer",
-  "tag": "daydream_applied_ai_engineer",
-  "company": "daydream",
-  "title": "Applied AI Engineer",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4463656-staff-applied-ai-engineer",
-  "tag": "doss_staff_applied_ai_engineer",
-  "company": "Doss",
-  "title": "Staff Applied AI Engineer",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4639961-applied-ai-engineer",
-  "tag": "monte_carlo_applied_ai_engineer",
-  "company": "Monte Carlo",
-  "title": "Applied AI Engineer",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3992242-senior-staff-security-engineer",
-  "tag": "pomelo_care_senior_staff_security_engineer",
-  "company": "Pomelo Care",
-  "title": "Senior/Staff Security Engineer",
   "comp": 260000.0,
   "source": "Wellfound"
  },
@@ -2854,56 +919,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3650871-staff-software-engineer-product-security",
-  "tag": "maven_clinic_staff_software_engineer_product_sec",
-  "company": "Maven Clinic",
-  "title": "Staff Software Engineer - Product Security",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4296010-staff-backend-engineer",
   "tag": "astra_staff_backend_engineer",
   "company": "Astra",
   "title": "Staff Backend Engineer",
   "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4642719-staff-software-engineer-patient-experience",
-  "tag": "pomelo_care_staff_software_engineer_patient_exp",
-  "company": "Pomelo Care",
-  "title": "Staff Software Engineer, Patient Experience",
-  "comp": 260000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4452676-staff-forward-deployed-engineer",
-  "tag": "afresh_staff_forward_deployed_engineer",
-  "company": "Afresh",
-  "title": "Staff Forward Deployed Engineer",
-  "comp": 253000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3537979-forward-deployed-engineer",
-  "tag": "opal_forward_deployed_engineer",
-  "company": "Opal",
-  "title": "Forward Deployed Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4522724-forward-deployed-engineer",
-  "tag": "onos_health_forward_deployed_engineer",
-  "company": "Onos Health",
-  "title": "Forward Deployed Engineer",
-  "comp": 250000.0,
   "source": "Wellfound"
  },
  {
@@ -2917,46 +937,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4391531-staff-data-engineer-tech-lead-distribution-center",
-  "tag": "afresh_staff_data_engineer_tech_lead_distr",
-  "company": "Afresh",
-  "title": "Staff Data Engineer / Tech Lead (Distribution Center)",
-  "comp": 253000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4664588-lead-ai-engineer",
   "tag": "employvision_lead_ai_engineer",
   "company": "Employvision",
   "title": "Lead AI Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523579-ai-engineer-agents-for-biochemistry",
-  "tag": "cortex_biosciences_ai_engineer_agents_for_biochemistry",
-  "company": "Cortex Biosciences",
-  "title": "AI Engineer, Agents for Biochemistry",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3933982-applied-ai-engineer",
-  "tag": "permitflow_applied_ai_engineer",
-  "company": "PermitFlow",
-  "title": "Applied AI Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3977631-staff-software-engineer-mission-planning",
-  "tag": "kodiak_robotics_staff_software_engineer_mission_pla",
-  "company": "Kodiak Robotics",
-  "title": "Staff Software Engineer, Mission Planning",
   "comp": 250000.0,
   "source": "Wellfound"
  },
@@ -2971,60 +955,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420517-staff-software-engineer-product",
-  "tag": "lunar_staff_software_engineer_product",
-  "company": "Lunar",
-  "title": "Staff Software Engineer, Product",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3625843-staff-infrastructure-engineer",
-  "tag": "sentilink_staff_infrastructure_engineer",
-  "company": "SentiLink",
-  "title": "Staff Infrastructure Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4329892-staff-engineer",
-  "tag": "the_farmer_s_dog_staff_engineer",
-  "company": "The Farmer's Dog",
-  "title": "Staff Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4180506-2-staff-ios-engineer",
-  "tag": "cloaked_staff_ios_engineer",
-  "company": "Cloaked",
-  "title": "Staff iOS Engineer",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420516-staff-software-engineer-platform",
-  "tag": "lunar_staff_software_engineer_platform",
-  "company": "Lunar",
-  "title": "Staff Software Engineer, Platform",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4540106-solutions-architect-east",
-  "tag": "endor_labs_solutions_architect_east",
-  "company": "Endor Labs",
-  "title": "Solutions Architect - East",
-  "comp": 250000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4267095-staff-software-engineer-1",
   "tag": "stepful_staff_software_engineer_1",
   "company": "Stepful",
@@ -3034,29 +964,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4136415-sr-ii-ml-engineer",
-  "tag": "trunk_tools_sr_ii_ml_engineer",
-  "company": "Trunk Tools",
-  "title": "Sr. II ML Engineer ",
-  "comp": 246000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4735277-senior-lead-go-to-market-architect",
   "tag": "klaviyo_senior_lead_go_to_market_architect",
   "company": "Klaviyo",
   "title": "Senior Lead Go-To-Market Architect",
   "comp": 246000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4174516-enterprise-solutions-architect-americas",
-  "tag": "ashby_enterprise_solutions_architect_amer",
-  "company": "Ashby",
-  "title": "Enterprise Solutions Architect - Americas",
-  "comp": 245000.0,
   "source": "Wellfound"
  },
  {
@@ -3079,74 +991,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4391264-ai-engineer-ecosystem",
-  "tag": "brex_ai_engineer_ecosystem",
-  "company": "Brex",
-  "title": "AI Engineer, Ecosystem",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4307320-staff-software-development-engineer-hybrid-bellevue-wa-or-remote-florida",
-  "tag": "offerup_staff_software_development_engineer",
-  "company": "OfferUp",
-  "title": "Staff Software Development Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718910-staff-software-engineer-patient-onboarding-remote",
   "tag": "rula_staff_software_engineer_patient_onb",
   "company": "Rula",
   "title": "Staff Software Engineer - Patient Onboarding (Remote)",
   "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3792864-principal-data-engineer-analytics",
-  "tag": "drivewealth_principal_data_engineer_analytics",
-  "company": "DriveWealth",
-  "title": "Principal Data Engineer, Analytics",
-  "comp": 240000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3122514-senior-applied-ai-engineer",
-  "tag": "omada_health_senior_applied_ai_engineer",
-  "company": "Omada Health",
-  "title": "Senior Applied AI Engineer",
-  "comp": 236000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4435594-senior-solutions-architect-ai-focus",
-  "tag": "launchdarkly_senior_solutions_architect_ai_focus",
-  "company": "LaunchDarkly",
-  "title": "Senior Solutions Architect, AI Focus",
-  "comp": 235000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4150283-principal-solutions-architect",
-  "tag": "maven_agi_principal_solutions_architect",
-  "company": "Maven AGI",
-  "title": "Principal Solutions Architect",
-  "comp": 235000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602585-staff-software-engineer-platform",
-  "tag": "motive_staff_software_engineer_platform",
-  "company": "Motive",
-  "title": "Staff Software Engineer, Platform",
-  "comp": 235000.0,
   "source": "Wellfound"
  },
  {
@@ -3160,73 +1009,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3351553-staff-software-engineer-sdk-developer-tools",
-  "tag": "ionq_staff_software_engineer_sdk_develop",
-  "company": "IonQ",
-  "title": "Staff Software Engineer (SDK), Developer Tools",
-  "comp": 233000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4452656-staff-software-engineer-data-platform",
-  "tag": "pantheon_platform_staff_software_engineer_data_platfo",
-  "company": "Pantheon Platform",
-  "title": "Staff Software Engineer - Data Platform",
-  "comp": 232000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/1450954-ai-engineer",
-  "tag": "stochastic_ai_engineer",
-  "company": "Stochastic",
-  "title": "AI Engineer",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3934794-senior-ml-ai-engineer-agentic-intelligence",
-  "tag": "merciv_senior_ml_ai_engineer_agentic_intel",
-  "company": "Merciv",
-  "title": " Senior ML/AI Engineer, Agentic Intelligence",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4656847-senior-ml-engineer-client-solutions",
   "tag": "azx_senior_ml_engineer_client_solutions",
   "company": "AZX",
   "title": "Senior ML Engineer (Client Solutions)",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4547643-ai-engineer",
-  "tag": "arcade_dev_ai_engineer",
-  "company": "Arcade.dev",
-  "title": "AI Engineer ",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4375940-principal-quality-engineer",
-  "tag": "dealpath_principal_quality_engineer",
-  "company": "Dealpath",
-  "title": "Principal Quality Engineer",
-  "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4276204-staff-implementation-engineer-federal-spanish-speaking",
-  "tag": "altana_technologies_staff_implementation_engineer_feder",
-  "company": "Altana Technologies",
-  "title": "Staff Implementation Engineer, Federal (Spanish Speaking)",
   "comp": 230000.0,
   "source": "Wellfound"
  },
@@ -3237,15 +1023,6 @@
   "company": "AZX",
   "title": "Forward Deployed AI Engineer (Senior)",
   "comp": 230000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4639749-principal-architect",
-  "tag": "tenna_principal_architect",
-  "company": "Tenna",
-  "title": "Principal Architect",
-  "comp": 225000.0,
   "source": "Wellfound"
  },
  {
@@ -3268,46 +1045,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3480407-senior-ai-engineer",
-  "tag": "twin_health_senior_ai_engineer",
-  "company": "Twin Health",
-  "title": "Senior AI Engineer",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3612759-senior-staff-software-engineer-ai-agents",
-  "tag": "actively_senior_staff_software_engineer_ai_a",
-  "company": "Actively",
-  "title": "Senior / Staff Software Engineer (AI Agents)",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692559-staff-solutions-architect-majors-central",
   "tag": "temporal_technologies_staff_solutions_architect_majors_ce",
   "company": "Temporal Technologies",
   "title": "Staff Solutions Architect, Majors (Central)",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4152804-principal-sr-staff-engineer",
-  "tag": "canopy_connect_principal_sr_staff_engineer",
-  "company": "Canopy Connect",
-  "title": "Principal/Sr Staff Engineer",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3827911-lead-quantitative-engineer-architect",
-  "tag": "grey_rhino_lead_quantitative_engineer_architec",
-  "company": "Grey Rhino",
-  "title": "Lead Quantitative Engineer/Architect",
   "comp": 220000.0,
   "source": "Wellfound"
  },
@@ -3322,28 +1063,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4321987-staff-data-platform-engineer",
-  "tag": "honor_staff_data_platform_engineer",
-  "company": "Honor",
-  "title": "Staff Data Platform Engineer",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3704625-member-of-technical-staff-discovery-applications",
   "tag": "mithrl_member_of_technical_staff_discovery",
   "company": "Mithrl",
   "title": "Member of Technical Staff, Discovery Applications",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4093522-senior-staff-software-engineer-data-platform",
-  "tag": "actively_senior_staff_software_engineer_data",
-  "company": "Actively",
-  "title": "Senior/Staff Software Engineer (Data Platform)",
   "comp": 220000.0,
   "source": "Wellfound"
  },
@@ -3358,65 +1081,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3798245-implementation-architect-san-francisco-hq",
-  "tag": "orb_implementation_architect_san_franci",
-  "company": "Orb",
-  "title": "Implementation Architect- San Francisco HQ",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3722095-member-of-technical-staff",
-  "tag": "mithrl_member_of_technical_staff",
-  "company": "Mithrl",
-  "title": "Member of Technical Staff",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4670747-staff-solutions-architect-majors-east",
   "tag": "temporal_technologies_staff_solutions_architect_majors_ea",
   "company": "Temporal Technologies",
   "title": "Staff Solutions Architect, Majors - East",
   "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4452677-senior-forward-deployed-engineer",
-  "tag": "afresh_senior_forward_deployed_engineer",
-  "company": "Afresh",
-  "title": "Senior Forward Deployed Engineer",
-  "comp": 211000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4144804-forward-deployed-ai-engineer",
-  "tag": "sardine_forward_deployed_ai_engineer",
-  "company": "Sardine",
-  "title": "Forward Deployed AI Engineer",
-  "comp": 210000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3704068-member-of-technical-staff-platforms",
-  "tag": "mithrl_member_of_technical_staff_platforms",
-  "company": "Mithrl",
-  "title": "Member of Technical Staff, Platforms",
-  "comp": 220000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4125961-senior-ai-engineer",
-  "tag": "metropolis_senior_ai_engineer",
-  "company": "Metropolis",
-  "title": "Senior AI Engineer",
-  "comp": 210000.0,
   "source": "Wellfound"
  },
  {
@@ -3430,74 +1099,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4424651-member-of-technical-staff-research-engineer",
-  "tag": "ataraxis_ai_member_of_technical_staff_research_",
-  "company": "Ataraxis AI",
-  "title": "Member of Technical Staff, Research Engineer",
-  "comp": 210000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644229-principal-engineer",
-  "tag": "fluxx_principal_engineer",
-  "company": "Fluxx",
-  "title": "Principal Engineer",
-  "comp": 210000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4063719-senior-staff-software-engineer-full-stack-engineer",
-  "tag": "actively_senior_staff_software_engineer_full",
-  "company": "Actively",
-  "title": "Senior/Staff Software Engineer (Full-Stack Engineer)",
-  "comp": 210000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3532989-solutions-architect-integrations-us-ca",
-  "tag": "sardine_solutions_architect_integrations_us",
-  "company": "Sardine",
-  "title": "Solutions Architect, Integrations (US/CA)",
-  "comp": 210000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4215283-staff-software-engineer",
-  "tag": "earnest_staff_software_engineer",
-  "company": "Earnest",
-  "title": "Staff Software Engineer",
-  "comp": 207000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/2884680-forward-deployed-engineer-ts-sci-clearance-required",
-  "tag": "vannevar_labs_forward_deployed_engineer_ts_sci_cl",
-  "company": "Vannevar Labs",
-  "title": "Forward Deployed Engineer (TS/SCI Clearance Required)",
-  "comp": 205000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766823-forward-deployed-engineer",
   "tag": "domino_data_lab_forward_deployed_engineer",
   "company": "Domino Data Lab",
   "title": "Forward Deployed Engineer",
   "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4574806-solutions-architect-integrations-aus",
-  "tag": "sardine_solutions_architect_integrations_au",
-  "company": "Sardine",
-  "title": "Solutions Architect, Integrations (AUS)",
-  "comp": 210000.0,
   "source": "Wellfound"
  },
  {
@@ -3511,64 +1117,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3345197-applied-ai-engineer",
-  "tag": "zania_applied_ai_engineer",
-  "company": "Zania",
-  "title": "Applied AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4262858-senior-ml-engineer",
-  "tag": "quilter_senior_ml_engineer",
-  "company": "Quilter",
-  "title": "Senior ML Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4697948-ai-engineer",
   "tag": "vitalis_ai_ai_engineer",
   "company": "Vitalis AI",
   "title": "AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644369-forward-deployed-engineer",
-  "tag": "weave_forward_deployed_engineer",
-  "company": "Weave",
-  "title": "Forward Deployed Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597945-applied-ai-engineer",
-  "tag": "mintlify_applied_ai_engineer",
-  "company": "Mintlify",
-  "title": "Applied AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3338743-forward-deployed-engineer",
-  "tag": "stuut_forward_deployed_engineer",
-  "company": "Stuut",
-  "title": "Forward Deployed Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4185322-ai-engineer-agentic-ai-platform",
-  "tag": "awear_ai_ai_engineer_agentic_ai_platform",
-  "company": "Awear.ai",
-  "title": "AI ENGINEER \u2014 AGENTIC AI PLATFORM",
   "comp": 200000.0,
   "source": "Wellfound"
  },
@@ -3601,91 +1153,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4574038-ai-engineer",
-  "tag": "marble_ai_engineer",
-  "company": "Marble",
-  "title": "AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4689807-forward-deployed-engineer-ny",
   "tag": "scope_labs_forward_deployed_engineer_ny",
   "company": "Scope Labs",
   "title": "Forward Deployed Engineer - NY ",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4126071-senior-ai-engineer-stealth-startup",
-  "tag": "stealth_startup_senior_ai_engineer_stealth_startup",
-  "company": "Stealth Startup",
-  "title": "Senior AI Engineer -- Stealth Startup",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3982817-ai-engineer",
-  "tag": "ravenna_software_ai_engineer",
-  "company": "Ravenna Software",
-  "title": "AI Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3377959-senior-ai-engineer-llms-agents",
-  "tag": "cooklist_senior_ai_engineer_llms_agents",
-  "company": "Cooklist",
-  "title": "Senior AI Engineer (LLMs & Agents)",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4632620-forward-deployment-engineer-greater-nyc",
-  "tag": "singlestore_forward_deployment_engineer_greater",
-  "company": "SingleStore",
-  "title": "Forward Deployment Engineer- Greater NYC ",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523062-forward-deployed-expert",
-  "tag": "trunk_tools_forward_deployed_expert",
-  "company": "Trunk Tools",
-  "title": "Forward Deployed Expert",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4639746-senior-solutions-architect-cloud-economics-ai-finops",
-  "tag": "nops_senior_solutions_architect_cloud_ec",
-  "company": "nOps",
-  "title": "Senior Solutions Architect \u2014 Cloud Economics & AI FinOps",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4320896-forward-deployed-engineer-fde",
-  "tag": "zoomlogi_forward_deployed_engineer_fde",
-  "company": "ZoomLogi",
-  "title": "Forward Deployed Engineer (FDE)",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4547612-forward-deployed-engineer",
-  "tag": "madhive_forward_deployed_engineer",
-  "company": "Madhive",
-  "title": "Forward Deployed Engineer",
   "comp": 200000.0,
   "source": "Wellfound"
  },
@@ -3700,146 +1171,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3338741-member-of-the-technical-staff-ui-ux-engineer",
-  "tag": "stuut_member_of_the_technical_staff_ui_ux",
-  "company": "Stuut",
-  "title": "Member of the Technical Staff \u2014 UI/UX Engineer",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4536728-operations-architect-payments",
-  "tag": "yuzu_health_operations_architect_payments",
-  "company": "Yuzu Health",
-  "title": "Operations Architect (Payments) ",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4262859-senior-staff-software-engineer-c",
-  "tag": "quilter_senior_staff_software_engineer_c",
-  "company": "Quilter",
-  "title": "Senior/Staff Software Engineer (C++)",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4266239-sr-data-architect",
-  "tag": "upclear_sr_data_architect",
-  "company": "UpClear",
-  "title": "Sr. Data Architect",
-  "comp": 200000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4491796-staff-data-engineer",
-  "tag": "butterfly_network_staff_data_engineer",
-  "company": "Butterfly Network",
-  "title": "Staff Data Engineer",
-  "comp": 195000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4491793-staff-data-engineer",
-  "tag": "4catalyzer_staff_data_engineer",
-  "company": "4Catalyzer",
-  "title": "Staff Data Engineer",
-  "comp": 195000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4778768-ai-ml-engineer-us",
   "tag": "edgeq_technologies_ai_ml_engineer_us",
   "company": "EdgeQ Technologies",
   "title": "AI/ML Engineer (US)",
   "comp": 193000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4602723-forward-deployed-engineer",
-  "tag": "flagler_health_forward_deployed_engineer",
-  "company": "Flagler Health",
-  "title": "Forward Deployed Engineer",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4348422-forward-deployed-ai-engineer-west",
-  "tag": "arize_ai_forward_deployed_ai_engineer_west",
-  "company": "Arize AI",
-  "title": "Forward Deployed AI Engineer, West",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4538868-ai-solutions-architect",
-  "tag": "broadcastwell_ai_solutions_architect",
-  "company": "Broadcastwell",
-  "title": "AI Solutions Architect",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4594755-staff-software-engineer",
-  "tag": "codepath_staff_software_engineer",
-  "company": "CodePath",
-  "title": "Staff Software Engineer",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4102159-staff-software-engineer-cloud-platform",
-  "tag": "signifyd_staff_software_engineer_cloud_platf",
-  "company": "Signifyd",
-  "title": "Staff Software Engineer, Cloud Platform",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4201766-forward-deployed-ai-engineer-east",
-  "tag": "arize_ai_forward_deployed_ai_engineer_east",
-  "company": "Arize AI",
-  "title": "Forward Deployed AI Engineer, East",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4005114-solutions-architect",
-  "tag": "maybern_solutions_architect",
-  "company": "Maybern",
-  "title": "Solutions Architect",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4557589-open-systems-solutions-architect-defense-mosa",
-  "tag": "pacific_impact_zone_solu_open_systems_solutions_architect_de",
-  "company": "Pacific Impact Zone Solutions",
-  "title": "Open Systems Solutions Architect (Defense / MOSA)",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4391524-staff-mobile-engineer",
-  "tag": "madison_reed_staff_mobile_engineer",
-  "company": "Madison Reed",
-  "title": "Staff Mobile Engineer",
-  "comp": 185000.0,
   "source": "Wellfound"
  },
  {
@@ -3862,55 +1198,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4607315-open-systems-solutions-architect-defense-mosa-clone",
-  "tag": "pacific_impact_zone_solu_open_systems_solutions_architect_de",
-  "company": "Pacific Impact Zone Solutions",
-  "title": "Open Systems Solutions Architect (Defense / MOSA) 20Aug26",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4664633-ai-engineer",
   "tag": "unlearn_ai_ai_engineer",
   "company": "Unlearn.AI",
   "title": "AI Engineer",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4223951-forward-deployment",
-  "tag": "nirvana_forward_deployment",
-  "company": "Nirvana",
-  "title": "Forward Deployment",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4170471-full-stack-senior-ai-engineer",
-  "tag": "partyplace_full_stack_senior_ai_engineer",
-  "company": "PartyPlace",
-  "title": "Full Stack Senior AI Engineer",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523341-senior-ai-engineer-agentic-systems-data-pipelines",
-  "tag": "collaboration_ai_senior_ai_engineer_agentic_systems_",
-  "company": "Collaboration.Ai",
-  "title": "Senior AI Engineer - Agentic Systems & Data Pipelines",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4518513-senior-devops-engineer-clone",
-  "tag": "hive_collective_senior_software_ai_engineer",
-  "company": "Hive Collective",
-  "title": "Senior Software & AI Engineer",
   "comp": 180000.0,
   "source": "Wellfound"
  },
@@ -3925,24 +1216,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4295823-solution-architect",
-  "tag": "sigma_computing_solution_architect",
-  "company": "Sigma Computing",
-  "title": "Solution Architect",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4622525-cloud-solution-architect-azure",
-  "tag": "bicloud_tech_cloud_solution_architect_azure",
-  "company": "BICloud Tech",
-  "title": "Cloud Solution Architect - Azure",
-  "comp": 180000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4704065-principal-software-engineer",
   "tag": "code_for_america_principal_software_engineer",
   "company": "Code for America",
@@ -3952,110 +1225,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4639895-applied-ai-engineer",
-  "tag": "arize_ai_applied_ai_engineer",
-  "company": "Arize AI",
-  "title": "Applied AI Engineer",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4393850-forward-deployed-gtme",
-  "tag": "starbridge_ai_forward_deployed_gtme",
-  "company": "Starbridge.AI",
-  "title": "Forward Deployed GTME",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3081754-senior-solutions-architect",
-  "tag": "plato_systems_senior_solutions_architect",
-  "company": "Plato Systems",
-  "title": "Senior Solutions Architect",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420419-staff-software-engineer-core",
-  "tag": "madison_reed_staff_software_engineer_core",
-  "company": "Madison Reed",
-  "title": "Staff Software Engineer, Core",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4325779-senior-agentic-ai-engineer",
-  "tag": "lemonade_stand_senior_agentic_ai_engineer",
-  "company": "Lemonade Stand",
-  "title": "Senior Agentic AI Engineer",
-  "comp": 170000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3845218-forward-deployed-engineer",
   "tag": "teleskope_forward_deployed_engineer",
   "company": "Teleskope",
   "title": "Forward Deployed Engineer",
   "comp": 170000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4265957-grc-solutions-architect",
-  "tag": "zania_grc_solutions_architect",
-  "company": "Zania",
-  "title": "GRC Solutions Architect",
-  "comp": 170000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420418-staff-software-engineer-color-cloud",
-  "tag": "madison_reed_staff_software_engineer_color_cloud",
-  "company": "Madison Reed",
-  "title": "Staff Software Engineer, Color Cloud",
-  "comp": 175000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4612654-integrations-architect-tech-lead",
-  "tag": "well_beam_integrations_architect_tech_lead",
-  "company": "Well Beam",
-  "title": "Integrations Architect / Tech Lead",
-  "comp": 170000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4622527-cloud-solution-architect-modern-work-microsoft-365",
-  "tag": "bicloud_tech_cloud_solution_architect_modern_wor",
-  "company": "BICloud Tech",
-  "title": "Cloud Solution Architect - Modern Work (Microsoft 365)",
-  "comp": 170000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4579540-sr-ai-systems-solutions-architect-global-services",
-  "tag": "klaviyo_sr_ai_systems_solutions_architect_g",
-  "company": "Klaviyo",
-  "title": "Sr. AI Systems & Solutions Architect, Global Services",
-  "comp": 168000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634396-staff-client-engineer",
-  "tag": "ionq_staff_client_engineer",
-  "company": "IonQ",
-  "title": "Staff Client Engineer",
-  "comp": 166000.0,
   "source": "Wellfound"
  },
  {
@@ -4096,119 +1270,11 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4494896-solution-architect",
-  "tag": "tabs_solution_architect",
-  "company": "Tabs",
-  "title": "Solution Architect",
-  "comp": 160000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4361870-staff-solutions-engineer",
   "tag": "code_for_america_staff_solutions_engineer",
   "company": "Code for America",
   "title": "Staff Solutions Engineer",
   "comp": 158000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4584460-forward-deployed-engineer",
-  "tag": "clariti_forward_deployed_engineer",
-  "company": "Clariti",
-  "title": "Forward Deployed Engineer",
-  "comp": 155000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627463-senior-technical-implementation-architect-interoperability",
-  "tag": "unite_us_senior_technical_implementation_arc",
-  "company": "Unite Us",
-  "title": "Senior Technical Implementation Architect, Interoperability",
-  "comp": 155000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4612622-sr-ai-engineer",
-  "tag": "mapgenesys_sr_ai_engineer",
-  "company": "Mapgenesys",
-  "title": "Sr AI Engineer",
-  "comp": 150000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3722091-staff-software-engineer",
-  "tag": "zippy_mh_staff_software_engineer",
-  "company": "Zippy MH",
-  "title": "Staff Software Engineer",
-  "comp": 150000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4126129-ai-ml-engineer",
-  "tag": "e_source_ai_ml_engineer",
-  "company": "E Source",
-  "title": "AI / ML Engineer",
-  "comp": 145000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4536850-forward-deployment-engineer-ai-us-remote",
-  "tag": "perfectserve_forward_deployment_engineer_ai_us_r",
-  "company": "PerfectServe",
-  "title": "Forward Deployment Engineer, AI - US Remote",
-  "comp": 140000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3884483-solution-architect-agentic-ai-delivery",
-  "tag": "kasisto_solution_architect_agentic_ai_deliv",
-  "company": "Kasisto",
-  "title": "Solution Architect, Agentic AI Delivery",
-  "comp": 140000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4109219-solution-architect",
-  "tag": "speckle_solution_architect",
-  "company": "Speckle",
-  "title": "Solution Architect",
-  "comp": 140000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4493319-ai-engineer",
-  "tag": "makai_labs_ai_engineer",
-  "company": "Makai Labs",
-  "title": "AI Engineer ",
-  "comp": 130000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4053619-ai-engineer",
-  "tag": "sharebite_ai_engineer",
-  "company": "Sharebite",
-  "title": "AI Engineer",
-  "comp": 130000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/37711-senior-platform-architect-engineer",
-  "tag": "albeado_senior_platform_architect_engineer",
-  "company": "Albeado",
-  "title": "Senior Platform Architect/Engineer",
-  "comp": 130000.0,
   "source": "Wellfound"
  },
  {
@@ -4231,37 +1297,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4417497-ai-engineer",
-  "tag": "plutusai_ai_engineer",
-  "company": "PlutusAI",
-  "title": "AI Engineer",
-  "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4735369-lead-ai-engineer",
   "tag": "sierra_studio_lead_ai_engineer",
   "company": "Sierra Studio",
   "title": "Lead AI Engineer ",
-  "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4627431-ai-engineer-gpu-llm-optimisation-canada-uae-remote",
-  "tag": "superq_quantum_computing_ai_engineer_gpu_llm_optimisation_ca",
-  "company": "SuperQ Quantum Computing",
-  "title": "AI Engineer (GPU & LLM Optimisation) \u2013 Canada / UAE / Remote",
-  "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3776696-ai-solutions-architect-voice-telephony",
-  "tag": "bizecho_ai_solutions_architect_voice_teleph",
-  "company": "bizecho",
-  "title": "AI Solutions Architect (Voice & Telephony)",
   "comp": 120000.0,
   "source": "Wellfound"
  },
@@ -4276,15 +1315,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3226860-architect",
-  "tag": "civilmix_architect",
-  "company": "CivilMix",
-  "title": "Architect",
-  "comp": 120000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4547656-software-engineer-clone",
   "tag": "harmony_ai_forward_deployed_engineer",
   "company": "Harmony AI",
@@ -4294,37 +1324,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4362207-full-stack-ai-engineer",
-  "tag": "agentpress_full_stack_ai_engineer",
-  "company": "AgentPress",
-  "title": "Full-Stack AI Engineer",
-  "comp": 100000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4084025-software-architect-part-time-code-review-equity",
-  "tag": "agentologist_software_architect_part_time_code_r",
-  "company": "Agentologist",
-  "title": "Software Architect - Part-Time Code Review (Equity+)",
-  "comp": 100000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3346686-agentic-engineer-voice-ai",
   "tag": "super_agentic_engineer_voice_ai",
   "company": "Super",
   "title": "Agentic Engineer (Voice AI)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4220015-engineering-lead-agentic-ai-platform",
-  "tag": "awear_ai_engineering_lead_agentic_ai_platfor",
-  "company": "Awear.ai",
-  "title": "ENGINEERING LEAD \u2014 AGENTIC AI PLATFORM",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4339,55 +1342,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3256487-sr-staff-ai-software-engineer-product",
-  "tag": "gusto_sr_staff_ai_software_engineer_produ",
-  "company": "Gusto",
-  "title": "Sr Staff AI Software Engineer, Product",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4377497-ai-ml-engineer",
-  "tag": "evonaire_ai_ml_engineer",
-  "company": "Evonaire",
-  "title": "AI/ML Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4420351-forward-deployed-engineer-life-sciences",
-  "tag": "domino_data_lab_forward_deployed_engineer_life_scie",
-  "company": "Domino Data Lab",
-  "title": "Forward Deployed Engineer, Life Sciences",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4617912-staff-engineer-ai-search-india",
-  "tag": "yieldmo_staff_engineer_ai_search_india",
-  "company": "Yieldmo",
-  "title": "Staff Engineer, AI & Search (India)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766884-senior-ai-ml-engineer-remote",
   "tag": "roadpass_digital_senior_ai_ml_engineer_remote",
   "company": "Roadpass Digital",
   "title": "Senior AI/ML Engineer (REMOTE)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4235671-ai-engineer",
-  "tag": "smart_audit_ai_engineer",
-  "company": "Smart Audit",
-  "title": "AI Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4429,51 +1387,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4505871-applied-ai-engineer",
-  "tag": "cruitical_applied_ai_engineer",
-  "company": "Cruitical",
-  "title": "Applied AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4385587-agentic-ai-engineer",
-  "tag": "kargo_agentic_ai_engineer",
-  "company": "Kargo",
-  "title": "Agentic AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3264442-applied-ai-engineer",
-  "tag": "safetykit_applied_ai_engineer",
-  "company": "SafetyKit",
-  "title": "Applied AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634141-ai-engineer-early-career",
-  "tag": "embedding_vc_ai_engineer_early_career",
-  "company": "Embedding VC",
-  "title": "AI Engineer (Early Career)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3989349-member-of-technical-staff-applied-ai-engineer",
-  "tag": "valthos_member_of_technical_staff_applied_a",
-  "company": "Valthos",
-  "title": "Member of Technical Staff - Applied AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4704687-senior-ai-ml-engineer",
   "tag": "healmenow_senior_ai_ml_engineer",
   "company": "Healmenow",
@@ -4487,24 +1400,6 @@
   "tag": "netskope_staff_engineer_ai_gateway",
   "company": "Netskope",
   "title": " Staff Engineer, AI Gateway",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4630007-ai-engineer",
-  "tag": "internet_sciences_ai_engineer",
-  "company": "Internet Sciences",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4048335-member-of-technical-staff-forward-deployed-engineer",
-  "tag": "valthos_member_of_technical_staff_forward_d",
-  "company": "Valthos",
-  "title": "Member of Technical Staff - Forward Deployed Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4537,15 +1432,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4522949-ai-engineer",
-  "tag": "datadome_ai_engineer",
-  "company": "DataDome",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4750179-associate-ai-engineer",
   "tag": "emplay_associate_ai_engineer",
   "company": "Emplay",
@@ -4559,15 +1445,6 @@
   "tag": "vraify_principal_ai_engineer_us_nyc_job_id",
   "company": "Vraify",
   "title": "Principal AI Engineer - US NYC | Job ID 100485",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4519629-ai-engineer",
-  "tag": "compethic_ai_engineer",
-  "company": "Compethic",
-  "title": "AI Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4609,28 +1486,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4523636-ai-engineer-methods",
-  "tag": "pst_ag_ai_engineer_methods",
-  "company": "pst.ag",
-  "title": "AI Engineer - Methods",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4750163-senior-associate-ai-engineer",
   "tag": "emplay_senior_associate_ai_engineer",
   "company": "Emplay",
   "title": "Senior Associate AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3828017-ai-engineer",
-  "tag": "timepay_ai_ai_engineer",
-  "company": "timepay.ai",
-  "title": "AI Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4645,78 +1504,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4560710-ai-engineer-hermes-agent",
-  "tag": "pst_ag_ai_engineer_hermes_agent",
-  "company": "pst.ag",
-  "title": "AI Engineer-Hermes Agent",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4446108-ai-engineer",
-  "tag": "fintricity_ai_engineer",
-  "company": "Fintricity",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4461848-ai-engineer",
-  "tag": "apiceflow_ai_engineer",
-  "company": "ApiceFlow",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4573088-ai-engineer-remote",
-  "tag": "govstar_ai_engineer_remote",
-  "company": "GOVSTAR",
-  "title": "AI Engineer (Remote)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3974534-ai-engineer",
-  "tag": "turbomail_ai_engineer",
-  "company": "TurboMail",
-  "title": "Ai Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4452821-ai-engineer-for-uk-onsite-only-please-only-apply-if-you-live-in-the-uk",
-  "tag": "fintricity_ai_engineer_for_uk_onsite_only_plea",
-  "company": "Fintricity",
-  "title": "AI Engineer (for UK Onsite only) - PLEASE ONLY APPLY IF YOU LIVE IN THE UK",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3533326-ai-engineer",
-  "tag": "casino_alpha_ai_engineer",
-  "company": "Casino Alpha",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3722084-ai-engineer-korea",
-  "tag": "fieldguide_ai_engineer_korea",
-  "company": "Fieldguide",
-  "title": "AI Engineer (Korea)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4656856-embodied-ai-engineer-robotics",
   "tag": "innomium_embodied_ai_engineer_robotics",
   "company": "Innomium",
@@ -4726,45 +1513,9 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3800544-ai-engineer",
-  "tag": "reflow_ai_engineer",
-  "company": "Reflow",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597735-ai-engineer-internship",
-  "tag": "rxgpt_ai_engineer_internship",
-  "company": "RxGPT",
-  "title": "AI Engineer (Internship)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4025130-senior-ai-engineer-korea",
-  "tag": "fieldguide_senior_ai_engineer_korea",
-  "company": "Fieldguide",
-  "title": "Senior AI Engineer (Korea)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4666137-ai-engineer",
   "tag": "automatisor_ai_engineer",
   "company": "Automatisor",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/1347358-ai-engineer",
-  "tag": "cricketpedia_ai_engineer",
-  "company": "Cricketpedia",
   "title": "AI Engineer",
   "comp": null,
   "source": "Wellfound"
@@ -4780,82 +1531,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3365364-ai-engineer-remote-europe",
-  "tag": "reedsy_ai_engineer_remote_europe",
-  "company": "Reedsy",
-  "title": "AI Engineer - Remote Europe",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3939394-senior-ai-engineer",
-  "tag": "braindai_senior_ai_engineer",
-  "company": "BraindAI",
-  "title": "Senior AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718606-senior-ai-engineer",
   "tag": "hmlet_senior_ai_engineer",
   "company": "Hmlet",
   "title": "Senior AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644173-senior-gen-ai-engineer",
-  "tag": "mantriai_senior_gen_ai_engineer",
-  "company": "MantriAI",
-  "title": "Senior Gen AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4395937-ai-engineer",
-  "tag": "particle41_ai_engineer",
-  "company": "Particle41",
-  "title": "AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3363534-applied-ai-engineer",
-  "tag": "axle_mobility_applied_ai_engineer",
-  "company": "Axle Mobility",
-  "title": "Applied AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3933898-applied-ai-engineer",
-  "tag": "human_agency_applied_ai_engineer",
-  "company": "Human Agency",
-  "title": "Applied AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3794754-ai-engineer",
-  "tag": "drytis_ai_engineer",
-  "company": "drytis",
-  "title": "AI engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4437132-forward-deployed-ai-engineer",
-  "tag": "aicore_forward_deployed_ai_engineer",
-  "company": "AiCore",
-  "title": "Forward Deployed AI Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4879,46 +1558,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4144601-fullstack-ai-engineer",
-  "tag": "redblacktree_fullstack_ai_engineer",
-  "company": "RedBlackTree",
-  "title": "Fullstack AI Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4572801-ai-engineer-inern",
   "tag": "edxso_ai_engineer_inern",
   "company": "edxso",
   "title": "AI Engineer Inern",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4572904-full-stack-ai-engineer-india",
-  "tag": "thalmaar_full_stack_ai_engineer_india",
-  "company": "Thalmaar",
-  "title": "Full Stack AI Engineer - India",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4025259-ai-engineer-llm-agentic-workflows-quantum-saas",
-  "tag": "quantum_elements_ai_engineer_llm_agentic_workflows_q",
-  "company": "Quantum Elements",
-  "title": "AI Engineer (LLM / Agentic Workflows) \u2014 Quantum SaaS",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644416-senior-ai-engineer",
-  "tag": "genty_recruitment_senior_ai_engineer",
-  "company": "GENTY recruitment",
-  "title": "Senior AI Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -4933,46 +1576,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4133762-ai-engineer-model-adaptation-evaluation",
-  "tag": "bynario_ai_engineer_model_adaptation_evalua",
-  "company": "Bynario",
-  "title": "AI Engineer - Model Adaptation & Evaluation",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3783479-ai-engineer-internship-deep-learning-research-focus",
   "tag": "vaiu_ai_ai_engineer_internship",
   "company": "vaiu.ai",
   "title": "AI Engineer \u2013 Internship",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3976914-ai-engineer-interns",
-  "tag": "buimb_research_ai_engineer_interns",
-  "company": "BUIMB RESEARCH",
-  "title": "AI Engineer Interns",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3907445-urgent-gen-ai-engineer-2-yrs-immediate-30-days-preferred",
-  "tag": "senzcraft_technologies_urgent_gen_ai_engineer_2_yrs_immedi",
-  "company": "senzcraft technologies",
-  "title": "*Urgent* Gen AI Engineer/2+ Yrs/Immediate-30 days preferred",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3568452-generative-ai-engineer-llms-rag-healthcare-saas",
-  "tag": "ekshvaku_tech_innovation_generative_ai_engineer_llms_rag_hea",
-  "company": "Ekshvaku Tech Innovations",
-  "title": "Generative AI Engineer (LLMs & RAG) \u2013 Healthcare SaaS",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5014,15 +1621,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4505884-staff-principal-software-engineer-ai-security",
-  "tag": "cyberhaven_staff_principal_software_engineer_a",
-  "company": "Cyberhaven",
-  "title": "Staff/Principal Software Engineer (AI Security)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4717779-equity-only-principal-genai-forward-deployed-architect",
   "tag": "stealthstartup_equity_only_principal_genai_forward",
   "company": "Stealthstartup",
@@ -5036,24 +1634,6 @@
   "tag": "vraify_forward_deployed_engineer_data_engi",
   "company": "Vraify",
   "title": "Forward Deployed Engineer \u2014 Data Engineering & GenAI | Job ID 100556",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4511153-ai-solutions-architect",
-  "tag": "working_eu_ai_solutions_architect",
-  "company": "Working EU",
-  "title": "AI Solutions Architect",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3930381-ai-agent-engineer-microsoft-copilot-foundry-stack",
-  "tag": "vops_ai_agent_engineer_microsoft_copilot",
-  "company": "VOPS",
-  "title": "AI Agent Engineer (Microsoft Copilot & Foundry Stack)",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5077,33 +1657,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4377649-solution-architect",
-  "tag": "truefoundry_solution_architect",
-  "company": "TrueFoundry",
-  "title": "Solution Architect ",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4634450-staff-software-engineer-cloud-infrastructure",
-  "tag": "accord_staff_software_engineer_cloud_infra",
-  "company": "Accord",
-  "title": "Staff Software Engineer, Cloud Infrastructure",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3134873-staff-frontend-engineer",
-  "tag": "forma_ai_staff_frontend_engineer",
-  "company": "Forma.ai",
-  "title": "Staff Frontend Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4688404-sr-staff-engineer-data-engineering",
   "tag": "netskope_sr_staff_engineer_data_engineering",
   "company": "Netskope",
@@ -5113,55 +1666,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4521013-member-of-technical-staff-simulation-engineer",
-  "tag": "embedding_vc_member_of_technical_staff_simulatio",
-  "company": "Embedding VC",
-  "title": "Member of Technical Staff - Simulation Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3239136-staff-software-engineer-india",
-  "tag": "altimate_ai_staff_software_engineer_india",
-  "company": "Altimate AI",
-  "title": "Staff Software Engineer - India",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3989351-member-of-technical-staff-software-engineer",
-  "tag": "valthos_member_of_technical_staff_software_",
-  "company": "Valthos",
-  "title": "Member of Technical Staff - Software Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4670449-staff-engineer-full-stack-ui",
   "tag": "netskope_staff_engineer_full_stack_ui",
   "company": "Netskope",
   "title": "Staff Engineer, Full-Stack UI",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3276154-staff-data-engineer",
-  "tag": "cookunity_staff_data_engineer",
-  "company": "CookUnity",
-  "title": "Staff Data Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3264443-senior-backend-engineer-staff",
-  "tag": "safetykit_senior_backend_engineer_staff",
-  "company": "SafetyKit",
-  "title": "Senior Backend Engineer (Staff)",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5185,37 +1693,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3335846-senior-staff-software-engineer-data-platform",
-  "tag": "reach_security_senior_staff_software_engineer_data",
-  "company": "Reach Security",
-  "title": "Senior Staff Software Engineer (Data Platform)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4464727-staff-software-engineer",
-  "tag": "watney_robotics_staff_software_engineer",
-  "company": "Watney Robotics",
-  "title": "Staff Software Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692209-aem-architect",
   "tag": "techspace_aem_architect",
   "company": "TechSpace",
   "title": "AEM Architect",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4628816-staff-site-reliability-engineer",
-  "tag": "netskope_staff_site_reliability_engineer",
-  "company": "Netskope",
-  "title": "Staff Site Reliability Engineer",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5230,55 +1711,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4605461-senior-architect-australia",
-  "tag": "arcanys_senior_architect_australia",
-  "company": "Arcanys",
-  "title": "Senior Architect (Australia)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4722456-technical-architect",
   "tag": "fx31_labs_ahmedabad_technical_architect",
   "company": "Fx31 Labs Ahmedabad",
   "title": "Technical Architect",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3828891-staff-software-engineer",
-  "tag": "engagedmd_staff_software_engineer",
-  "company": "EngagedMD",
-  "title": "Staff Software Engineer",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4258543-senior-solutions-architect-engagement-lead",
-  "tag": "gocloud_iq_senior_solutions_architect_engageme",
-  "company": "GoCloud iQ",
-  "title": "Senior Solutions Architect / Engagement Lead",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4584503-monday-com-solutions-architect",
-  "tag": "coconut_va_monday_com_solutions_architect",
-  "company": "Coconut VA",
-  "title": "Monday.com Solutions Architect",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597854-solutions-architect",
-  "tag": "540_solutions_architect",
-  "company": "540",
-  "title": "Solutions Architect",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5293,28 +1729,10 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3532994-solutions-architect-integrations-uk-eu",
-  "tag": "sardine_solutions_architect_integrations_uk",
-  "company": "Sardine",
-  "title": "Solutions Architect, Integrations (UK/EU)",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748527-backend-lead-solutions-architect-node-js-nestjs-aws",
   "tag": "vagmine_tech_it_pty_backend_lead_solutions_architect_no",
   "company": "Vagmine Tech IT Pty",
   "title": "Backend Lead / Solutions Architect \u2013 Node.js / NestJS / AWS",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597856-associate-solutions-architect",
-  "tag": "540_associate_solutions_architect",
-  "company": "540",
-  "title": "Associate Solutions Architect",
   "comp": null,
   "source": "Wellfound"
  },
@@ -5342,24 +1760,6 @@
   "tag": "xohani_solutions_data_modeler_data_architect_banking",
   "company": "Xohani  Solutions",
   "title": "Data Modeler / Data Architect \u2013 Banking Domain",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597853-senior-solutions-architect",
-  "tag": "540_senior_solutions_architect",
-  "company": "540",
-  "title": "Senior Solutions Architect",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3337094-security-architect",
-  "tag": "vectra_ai_security_architect",
-  "company": "Vectra AI",
-  "title": "Security Architect",
   "comp": null,
   "source": "Wellfound"
  }

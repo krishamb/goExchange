@@ -440,8 +440,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 ta=page.locator('textarea').first
                 if await ta.count(): await ta.fill(extra.get("note") or ANS.get("why_us","")); report["filled"]["note"]="ok"
                 if not await page.locator('button:has-text("Send application")').count():
-                    report["result"]="ERROR: Wellfound apply form did not open (login failed or job closed)"
-                    await page.screenshot(path=f"{OUT}/{tag}_error.png",full_page=True); json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+                    ext=page.locator('a:has-text("Apply on website"), a:has-text("Apply on company website")').first
+                    href=(await ext.get_attribute("href")) if await ext.count() else None
+                    if href and re.search(r"greenhouse\.io|gh_jid=",href):
+                        # Wellfound hands off to the company's Greenhouse form: apply there (same code flow as any Greenhouse job)
+                        report["external"]=href; ats="greenhouse"; url=href; report["ats"]="greenhouse (via Wellfound)"
+                    else:
+                        report["result"]=f"NOT SUBMITTED: managed outside Wellfound ({href or 'no apply form'})"; report["external"]=href
+                        await page.screenshot(path=f"{OUT}/{tag}_error.png",full_page=True); json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 # the modal often carries the employer's own required questions: fall through to the generic filler below
             if ats=="greenhouse":
                 m=re.search(r"greenhouse\.io/([^/]+)/jobs/(\d+)",url)
