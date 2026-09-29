@@ -31,7 +31,7 @@ fi
 # Ashby rejects cloud IPs as "possible spam" and Lever shows hCaptcha, so these must run from your own computer.
 echo "== 3/4 submitting batches in the background (headless), one application every 45-150 seconds"
 # Freshest postings first (local_05_fresh = posted in the last 7 days), then C++/Rust, then the older leadership/AI batches.
-for b in job-search/batches/local_08_fresh7.json job-search/batches/local_06_bay_ai.json job-search/batches/local_07_fresh14.json job-search/batches/local_05_fresh.json job-search/batches/local_04_cpp_rust.json job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
+for b in job-search/batches/local_09_agent_ashby.json job-search/batches/local_08_fresh7.json job-search/batches/local_06_bay_ai.json job-search/batches/local_07_fresh14.json job-search/batches/local_05_fresh.json job-search/batches/local_04_cpp_rust.json job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
   [ -f "$b" ] || continue
   echo "---- $b"
   $PY job-search/tools/apply.py batch "$b" --submit --pace 20 60 || true   # headless: no browser window; Lever roles that need an hCaptcha are reported as not submitted
