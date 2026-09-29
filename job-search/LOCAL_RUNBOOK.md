@@ -1,7 +1,13 @@
 # Local runbook (for Claude Code, or the applicant, on the applicant's own computer)
 
-Goal: submit the remaining job applications listed in `job-search/batches/local_01.json` and `local_02.json`
-(48 Ashby postings + 4 Lever postings) with `job-search/tools/apply.py`.
+Goal: submit the remaining job applications listed in the local batches with `job-search/tools/apply.py`:
+`local_05_fresh.json` (36 Ashby/Lever roles posted in the last 7 days, run first), `local_04_cpp_rust.json`
+(36 C++/Rust roles), then `local_01.json`, `local_02.json`, `local_03.json` (511 Ashby + 88 Lever in total).
+Every local batch entry carries `"email": "amba_rish@hotmail.com"` (the filler uses it instead of the profile
+email), so Ashby/Lever confirmations arrive in that Hotmail inbox; Greenhouse stays on Gmail (security codes)
+and Wellfound on ambarishmd23@hotmail.com (the account email).
+Re-tested on 2026-09-29 19:05 UTC: Ashby still returns "Your application submission was flagged as possible
+spam" for any submission from the cloud IP, so these batches only work from the applicant's own computer.
 
 Why local: Ashby rejects every submission from a cloud IP as "possible spam" (tested twice, with two email
 addresses), and Lever shows an hCaptcha at submit. The Greenhouse postings (batches `cloud_gh_01/02`) were

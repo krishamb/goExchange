@@ -30,7 +30,8 @@ fi
 # The Greenhouse batches (cloud_gh_01/02) were submitted from the cloud session; only Ashby + Lever remain.
 # Ashby rejects cloud IPs as "possible spam" and Lever shows hCaptcha, so these must run from your own computer.
 echo "== 3/4 submitting batches, one application every few minutes (a Chrome window will open; leave it alone; solve any hCaptcha it shows)"
-for b in job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
+# Freshest postings first (local_05_fresh = posted in the last 7 days), then C++/Rust, then the older leadership/AI batches.
+for b in job-search/batches/local_05_fresh.json job-search/batches/local_04_cpp_rust.json job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
   [ -f "$b" ] || continue
   echo "---- $b"
   $PY job-search/tools/apply.py batch "$b" --submit --headed --pace 45 150 || true

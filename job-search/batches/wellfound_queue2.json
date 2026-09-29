@@ -1,21 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779420-founding-mobile-developer",
-  "tag": "sentilink_founding_mobile_developer",
-  "company": "SentiLink",
-  "title": "Founding Mobile Developer",
-  "comp": 240000.0,
-  "loc": "United States",
-  "tier": 1,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "SentiLink"
-  ],
-  "posted_ts": 1790639637
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4689807-forward-deployed-engineer-ny",
   "tag": "scope_labs_forward_deployed_engineer_ny",
   "company": "Scope Labs",
