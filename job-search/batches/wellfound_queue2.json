@@ -1,19 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4689807-forward-deployed-engineer-ny",
-  "tag": "scope_labs_forward_deployed_engineer_ny",
-  "company": "Scope Labs",
-  "title": "Forward Deployed Engineer - NY ",
-  "comp": 200000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790640000
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4779329-software-engineering-manager",
   "tag": "lawnstarter_software_engineering_manager",
   "company": "LawnStarter",
