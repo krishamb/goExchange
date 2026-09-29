@@ -8,7 +8,8 @@
   "comp": 250000.0,
   "geo": "Remote US",
   "age": 25,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "lever",
@@ -19,7 +20,8 @@
   "comp": 320000.0,
   "geo": "Remote US",
   "age": 25,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
@@ -30,7 +32,8 @@
   "comp": 309000.0,
   "geo": "Remote US",
   "age": 26,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
@@ -41,7 +44,8 @@
   "comp": 300900.0,
   "geo": "Remote US",
   "age": 0,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
@@ -52,7 +56,8 @@
   "comp": 400000.0,
   "geo": "NYC (>350K)",
   "age": 0,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
@@ -63,6 +68,7 @@
   "comp": 278250.0,
   "geo": "Remote US",
   "age": 0,
-  "answers": {}
+  "answers": {},
+  "email": "amba_rish@hotmail.com"
  }
 ]
