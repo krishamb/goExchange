@@ -436,6 +436,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 await page.fill('input[type="email"]',C["email"]); await page.fill('input[type="password"]',C["password"])
                 await page.locator('button[type="submit"], input[type="submit"]').first.click(timeout=10000); await page.wait_for_timeout(5000)
                 await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(4000)
+                if await page.locator('button:has-text("Applied")').count():
+                    report["submitted"]=True; report["result"]="ALREADY APPLIED (Wellfound shows this job as Applied)"; report["note"]="already applied earlier"
+                    json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 await page.locator('button:has-text("Apply Now"), button:has-text("Apply now"), button:has-text("Apply")').first.click(timeout=10000); await page.wait_for_timeout(3500)
                 wf_body=await page.evaluate("()=>document.body.innerText")
                 if re.search(r"not accepting applications from your current location|no longer accepting applications|this job is closed|position has been filled",wf_body,re.I):
