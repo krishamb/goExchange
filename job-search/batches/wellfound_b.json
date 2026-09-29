@@ -1,21 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4756951-senior-engineering-manager-product-engineering",
-  "tag": "secfix_senior_engineering_manager_product_",
-  "company": "Secfix",
-  "title": "Senior Engineering Manager, Product Engineering",
-  "comp": null,
-  "loc": "Munich",
-  "tier": 2,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "I am currently in\u2026",
-   "Update your location preferences"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4728460-director-text-to-speech-synthesis-research",
   "tag": "deepgram_director_text_to_speech_synthesis_r",
   "company": "Deepgram",
