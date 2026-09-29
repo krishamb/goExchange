@@ -1,18 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://coreweave.com/careers/job?4717371006&board=coreweave&gh_jid=4717371006",
-  "tag": "coreweave_senior_systems_engineer_enterprise_",
-  "company": "coreweave",
-  "title": "Senior Systems Engineer, Enterprise AI Platforms",
-  "comp": 242000.0,
-  "loc": "Sunnyvale, CA / Bellevue, WA",
-  "posted_ts": 1790640000.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8237801?gh_jid=8237801",
   "tag": "cloudflare_senior_software_engineer_kpi_crypto",
   "company": "cloudflare",
@@ -20,8 +8,10 @@
   "comp": null,
   "loc": "Hybrid",
   "posted_ts": 1790640000.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you currently live or are you willing to relocate to the job\u2019s location?"
+  ]
  },
  {
   "ats": "greenhouse",
