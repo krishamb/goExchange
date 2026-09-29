@@ -195,7 +195,9 @@ CHOICE_RULES=[
 def pick(label,rules):
     l=label.lower()
     for pat,val in rules:
-        if re.search(pat,l,re.I): return val   # patterns may carry capitals (EST, FINRA, QPS): match case-insensitively
+        # lowercase alternatives match the lowercased label; CAPITALISED acronyms (EAR, ITAR, EST, FINRA) match only where the
+        # original label has them in capitals, so 'EAR' never matches 'hear' / 'year' / 'learn'
+        if re.search(pat,l) or (re.search(r"[A-Z]",pat) and re.search(pat,label)): return val
     return None
 LABEL_JS=r"""
 (el)=>{let t='';
