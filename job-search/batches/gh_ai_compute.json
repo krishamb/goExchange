@@ -1,0 +1,34 @@
+[
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.anz.greenhouse.io/furiosaai/jobs/4005944201",
+  "tag": "furiosaai_solutions_architect_us",
+  "company": "FuriosaAI",
+  "title": "Solutions Architect - US",
+  "loc": "Santa Clara, CA"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/enchargeai36/jobs/4375746009",
+  "tag": "encharge_ai_principal_solutions_engineer",
+  "company": "EnCharge AI",
+  "title": "Principal Solutions Engineer",
+  "loc": "US Remote"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/tenstorrent/jobs/5056085007",
+  "tag": "tenstorrent_risc_v_ai_hpc_agentic_softwa",
+  "company": "Tenstorrent",
+  "title": "RISC-V AI / HPC & Agentic Software Engineering Lead",
+  "loc": "Santa Clara, CA"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/tenstorrent/jobs/5023661007",
+  "tag": "tenstorrent_staff_software_engineer_clou",
+  "company": "Tenstorrent",
+  "title": "Staff Software Engineer, Cloud Infrastructure",
+  "loc": "Santa Clara, CA"
+ }
+]
