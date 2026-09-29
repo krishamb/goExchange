@@ -996,6 +996,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if still_code and not ok: errs.append("still on the security-code step")
                 report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
                 await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
+            elif submit and any(re.search(r"update your location preferences|^i am currently in",u.get("label",""),re.I) for u in report["unanswered"]):
+                report["result"]="NOT SUBMITTED: location restricted by employer (location picker offers no US option)"
             elif submit: report["result"]="NOT SUBMITTED: unanswered required questions"
         except Exception as e:
             report["result"]=f"ERROR {type(e).__name__}: {str(e)[:300]}"
