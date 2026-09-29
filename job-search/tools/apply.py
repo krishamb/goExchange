@@ -479,7 +479,9 @@ async def run():
             print(json.dumps(summary[-1]),flush=True)
             await ctx.close()
             if PACE and job is not jobs[-1]:
-                import random; gap=random.uniform(*PACE); print(f"PACE waiting {int(gap)}s before the next application",flush=True); await asyncio.sleep(gap)
+                import random; gap=random.uniform(*PACE)
+                if not r.get("submitted") and re.search(r"location restricted|in-office NYC|job closed|managed outside|ALREADY APPLIED",r.get("result") or ""): gap=min(gap,20)   # nothing was submitted: no need for the full human-paced gap
+                print(f"PACE waiting {int(gap)}s before the next application",flush=True); await asyncio.sleep(gap)
         json.dump(summary,open(f"{OUT}/batch_summary_{int(time.time())}.json","w"),indent=1)
         await b.close()
 async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
