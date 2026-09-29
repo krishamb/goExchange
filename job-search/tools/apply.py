@@ -23,6 +23,8 @@ submit="--submit" in sys.argv
 BATCH = sys.argv[1]=="batch"
 if BATCH:
     JOBS=json.load(open(sys.argv[2])); ats=url=tag=None; extra={}
+elif sys.argv[1]=="outlook-test":
+    ats=url=tag=None; extra={}
 else:
     ats,url,tag=sys.argv[1],sys.argv[2],sys.argv[3]
     extra=json.load(open(sys.argv[sys.argv.index("--answers")+1])) if "--answers" in sys.argv else {}
@@ -304,6 +306,13 @@ async def run():
         if os.path.exists("/opt/pw-browsers/chromium"): launch_kw["executable_path"]="/opt/pw-browsers/chromium"   # cloud container
         b=await p.chromium.launch(**launch_kw)
         global BROWSER; BROWSER=b
+        if sys.argv[1]=="outlook-test":
+            op=await outlook_page()
+            print("outlook login:", "ok" if op else "FAILED")
+            if op:
+                codes=await outlook_codes(op); print("codes found (newest first):",codes[:6])
+                await op.screenshot(path=f"{OUT}/outlook_test.png")
+            await b.close(); return
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
         summary=[]
         for job in jobs:
