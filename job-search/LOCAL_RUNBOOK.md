@@ -17,6 +17,14 @@ Why local: Ashby rejects every submission from a cloud IP as "possible spam" (te
 addresses), and Lever shows an hCaptcha at submit. The Greenhouse postings (batches `cloud_gh_01/02`) were
 already submitted from the cloud session (see the report the session produced), so `run.sh` no longer runs them.
 
+## Ashby only (simplest)
+From the repo folder on your Mac:
+1. `git pull origin claude/ai-founding-engineer-jobs-l1urgc`
+2. `bash job-search/run_ashby.sh` (starts in the background, no browser windows, keeps the Mac awake)
+Progress: `bash job-search/run_ashby.sh status`. Stop: `bash job-search/run_ashby.sh stop`.
+It submits `batches/ashby_all.json`: every queued Ashby role, freshest first, one per company, with companies
+already applied to from the cloud removed.
+
 ## Steps
 1. Put four files in `~/jobs-private/` (never inside the repo). They were provided in the cloud session; look in
    `~/Downloads` first:
