@@ -8,31 +8,7 @@
   "comp": 320000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "zed to work in the country where this job is located?* | Yes | No | Will you now or in the future re",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4728475-vp-of-engineering",
-  "tag": "unlearn_ai_vp_of_engineering",
-  "company": "Unlearn.AI",
-  "title": "VP of Engineering",
-  "comp": 310000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4716628-senior-engineering-manager-mortgage",
-  "tag": "checkr_senior_engineering_manager_mortgage",
-  "company": "Checkr",
-  "title": "Senior Engineering Manager, Mortgage",
-  "comp": 316000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
