@@ -65,6 +65,7 @@ TEXT_RULES=[
  (r"greatest (impact|achievement)|proudest|accomplishment", ANS.get("impact","")),
  (r"work environment|thrive|attributes", ANS.get("environment","")),
  (r"pronoun", "He/him"),
+ (r"gender identity|^gender$|\bgender\b", "Male"),
  (r"university|school|college|alma mater", "University of Madras"),
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
@@ -78,6 +79,8 @@ CHOICE_RULES=[
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
+ (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
+ (r"have you (ever )?used|are you a (current )?(user|customer)|used (our|the) (product|app|platform)", ["Yes","yes"]),
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
  (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
