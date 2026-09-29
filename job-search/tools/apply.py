@@ -711,7 +711,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         await page.wait_for_timeout(9000)
                         body=await page.evaluate("()=>document.body.innerText")
                         if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
-                sm=re.search(r"thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was )?(submitted|received|sent)|we('ve| have) received your application|successfully submitted|you're all set",body,re.I)
+                sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set|task complete|good news",body,re.I)
+                if not sm and re.search(r"/confirmation\b",page.url): sm=re.search(r"\S.{0,60}",body)   # Greenhouse confirmation page URL
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)
                 if m: errs=errs+[f"missing: {x.strip()}" for x in m]
