@@ -96,9 +96,9 @@ CHOICE_RULES=[
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
- (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing)|marketing communications|newsletter|opt.in", ["No","no"]),
+ (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content|talent community", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","I have read","Acknowledge","Agree","yes"]),
- (r"how did you (first |initially )?hear|hear about|source", ["Company Website","Company website","Careers page","Career Page","Other","Job Board","Other/Not Listed","Google Search","Search engine"]),
+ (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
  (r"school|university|college", ["University of Madras","Other","University"]),
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
@@ -554,6 +554,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     pref=pref or pick(lab,CHOICE_RULES)
                     if pref==["__ASK__"]:
                         report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
+                    if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
+                        cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
+                        pref=[f"{cn} careers",f"{cn} website",f"{cn}.com",f"{cn} job",cn]+pref
                     if not pref:
                         # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
                         pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
