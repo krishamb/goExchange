@@ -1,61 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4670361-founding-engineer",
-  "tag": "kort_systems_founding_engineer",
-  "company": "Kort Systems",
-  "title": "Founding Engineer",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4759950-founding-engineer",
-  "tag": "jack_founding_engineer",
-  "company": "JACK",
-  "title": "Founding Engineer",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4770995-senior-vice-president-software-engineering",
-  "tag": "mastercard_senior_vice_president_software_engi",
-  "company": "Mastercard",
-  "title": "Senior Vice President, Software Engineering",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4737316-product-engineering-manager",
-  "tag": "twitch_product_engineering_manager",
-  "company": "Twitch",
-  "title": "Product Engineering Manager",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4655343-founding-engineer-voice-ai",
-  "tag": "heard_founding_engineer_voice_ai",
-  "company": "Heard",
-  "title": "Founding Engineer, Voice + AI",
-  "loc": "Bay Area | Onsite or remote",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4681079-engineering-manager",
   "tag": "project_playlist_engineering_manager",
   "company": "Project Playlist",
