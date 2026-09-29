@@ -8,19 +8,10 @@
   "comp": 230000.0,
   "loc": "Seattle",
   "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4761501-founding-engineer",
-  "tag": "raydar_founding_engineer",
-  "company": "Raydar",
-  "title": "Founding Engineer",
-  "loc": "NYC | In office",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "In your last role, how often did you interact directly with non-technical stakeh"
+  ]
  },
  {
   "ats": "wellfound",
@@ -30,8 +21,10 @@
   "title": "Director of Engineering, Enterprise Product",
   "loc": "NYC | In office",
   "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Is the following statement True or False? SeatGeek was founded in 2008"
+  ]
  },
  {
   "ats": "wellfound",
