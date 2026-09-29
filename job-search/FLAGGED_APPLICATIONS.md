@@ -18,6 +18,7 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Oklo | Director of Development Engineering | Wellfound | Reactor engineering role, not a fit. | Consider withdrawing. |
 | TechSpace | Marketo Solution Architect | Wellfound | Marketing-automation role, not a fit. | Consider withdrawing. |
 | Pendo | Sr. Engineering Manager, Pendo for Agents | Greenhouse via Wellfound | "How did you hear about Pendo?" answered "University Recruiting" (a matching bug, now fixed). Minor. | No action needed; mention Wellfound if asked. |
+| TaskClan | Founding Game Engineer (AI 3D, equity) | Wellfound | Title suggests equity-only pay and a game-engine focus; weak fit. | Withdraw if you do not want an equity-only or game role. |
 | Pallet | Two roles (Greenhouse + Wellfound) | both | Two applications to one company before the one-per-company check existed. | Withdraw one if you prefer. |
 
 ## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
