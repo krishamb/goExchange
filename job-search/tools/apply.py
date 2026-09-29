@@ -131,7 +131,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years", ["10+ years","10+","Expert","Yes"]),
+ (r"experience with|familiar|proficien|years", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()
@@ -205,6 +205,8 @@ async def choose_select(page,h,options_pref):
                     except Exception: pass
     return None
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
+# option statements that are true for the applicant (Santa Clara, CA; hybrid in SF Bay Area fine; open to relocation elsewhere)
+OPTION_TRUE=r"(currently )?(live|based|located|reside) in (the )?(sf |san francisco |greater )?bay area|santa clara|(live|based|located|reside) in (the )?(san francisco|silicon valley|california)|comfortable with a hybrid position commuting to the (san francisco|sf) office"
 async def dismiss_menu(page,inp=None):
     """Close an open dropdown/autocomplete menu. Blur first: on Wellfound the Escape key closes the whole apply modal."""
     try:
@@ -668,6 +670,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                                     done=l or v; break
                             if done: break
                         if done: break
+                    if not done:   # statement-style options ("I currently live in the SF Bay Area and can work hybrid"): pick the one that is true for the applicant
+                        for x,(v,l) in zip(hs,opts):
+                            if l and re.search(OPTION_TRUE,l,re.I) and not re.search(r"\b(not|unable|outside|don't|do not)\b",l,re.I):
+                                try: await x.check(timeout=3000)
+                                except Exception:
+                                    try: await x.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else {el.click();} if(!el.checked){el.checked=true; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));}}")
+                                    except Exception: continue
+                                done=l; break
                     report["chosen"][qlab[:60] or name]=done
                     if not done: report["unanswered"].append({"type":"radio","label":qlab[:160],"options":[o[1] or o[0] for o in opts][:10]})
                 except Exception: pass
