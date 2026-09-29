@@ -34,7 +34,7 @@ echo "== 3/4 submitting batches in the background (headless), one application ev
 for b in job-search/batches/local_05_fresh.json job-search/batches/local_04_cpp_rust.json job-search/batches/local_01.json job-search/batches/local_02.json job-search/batches/local_03.json; do
   [ -f "$b" ] || continue
   echo "---- $b"
-  $PY job-search/tools/apply.py batch "$b" --submit --pace 45 150 || true   # headless: no browser window; Lever roles that need an hCaptcha are reported as not submitted
+  $PY job-search/tools/apply.py batch "$b" --submit --pace 20 60 || true   # headless: no browser window; Lever roles that need an hCaptcha are reported as not submitted
 done
 
 echo "== 4/4 summary"

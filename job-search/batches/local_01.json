@@ -73,18 +73,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/b69c0bdb-e44e-4d8a-996b-d98558e65d07/application",
-  "tag": "crusoe_staff_software_engineer_cape",
-  "company": "crusoe",
-  "title": "Staff Software Engineer, CAPE",
-  "comp": 253000.0,
-  "geo": "Bay Area",
-  "age": 5,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/vapi/250ac759-97a6-46b8-ad7c-9bb4f223dd26/application",
   "tag": "vapi_member_of_technical_staff_agentic_release_engineer",
   "company": "vapi",
@@ -92,18 +80,6 @@
   "comp": 264000.0,
   "geo": "Bay Area",
   "age": 7,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/modal/e5935496-bd80-48ca-9cf9-906ab1352662/application",
-  "tag": "modal_member_of_technical_staff_storage",
-  "company": "modal",
-  "title": "Member of Technical Staff - Storage",
-  "comp": 300000.0,
-  "geo": "Bay Area",
-  "age": 6,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },
@@ -145,18 +121,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/PrimeIntellect/8597d151-46db-4c67-a809-5d40daae7185/application",
-  "tag": "primeintellect_member_of_technical_staff_prime_agent",
-  "company": "PrimeIntellect",
-  "title": "Member of Technical Staff - Prime Agent",
-  "comp": 300000.0,
-  "geo": "Bay Area",
-  "age": 11,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/render/f846e1fc-0099-4456-9232-9abe83dff272/application",
   "tag": "render_senior_staff_data_engineer",
   "company": "render",
@@ -164,18 +128,6 @@
   "comp": 268000.0,
   "geo": "Bay Area",
   "age": 11,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/anyscale/5f4d4f60-e8b8-4e03-a709-0117b3e7d48e/application",
-  "tag": "anyscale_staff_software_engineer_ray_core",
-  "company": "anyscale",
-  "title": "Staff Software Engineer, Ray Core",
-  "comp": 270000.0,
-  "geo": "Bay Area",
-  "age": 12,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },
@@ -205,18 +157,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/openai/1baad891-43b8-4e2a-9e6c-f68741e718a4/application",
-  "tag": "openai_applied_ai_architect_healthcare_life_sciences",
-  "company": "openai",
-  "title": "Applied AI Architect, Healthcare & Life Sciences",
-  "comp": 278000.0,
-  "geo": "Bay Area",
-  "age": 12,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/perplexity/a172ada5-1a6e-4646-8e0d-26747422af24/application",
   "tag": "perplexity_member_of_technical_staff_ai_software_engineer_ag",
   "company": "perplexity",
@@ -236,18 +176,6 @@
   "comp": 325000.0,
   "geo": "Bay Area",
   "age": 16,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/vapi/a3bde43c-4762-4cf2-86f5-464abd4a78e6/application",
-  "tag": "vapi_member_of_technical_staff_infrastructure_engineer",
-  "company": "vapi",
-  "title": "Member of Technical Staff, Infrastructure Engineer",
-  "comp": 314000.0,
-  "geo": "Bay Area",
-  "age": 17,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },
@@ -289,18 +217,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/5c561bd0-c180-4ee1-b079-647f3c20bdc0/application",
-  "tag": "perplexity_member_of_technical_staff_applied_ai_engineer_age",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (Applied AI Engineer, Agent Capabilities)",
-  "comp": 405000.0,
-  "geo": "Bay Area",
-  "age": 18,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Edison%20Scientific/059399ca-4f0c-454d-ba18-c9d064c13f27/application",
   "tag": "edison_scientific_member_of_technical_staff_principal_infras",
   "company": "Edison Scientific",
@@ -337,18 +253,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/handshake/08651bf1-c977-49d4-9a82-e8a770bb9970/application",
-  "tag": "handshake_member_of_technical_staff_data_ai",
-  "company": "handshake",
-  "title": "Member of Technical Staff, Data AI",
-  "comp": 350000.0,
-  "geo": "Bay Area",
-  "age": 0,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/horizon3ai/137d7079-5630-4cd5-890e-37c3b2995f79/application",
   "tag": "horizon3ai_senior_staff_developer_experience_engineer",
   "company": "horizon3ai",
@@ -368,18 +272,6 @@
   "comp": 272000.0,
   "geo": "Remote US",
   "age": 5,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Edison%20Scientific/10b16075-4077-4758-a507-51d724a312e5/application",
-  "tag": "edison_scientific_member_of_technical_staff_principal_full_s",
-  "company": "Edison Scientific",
-  "title": "Member of Technical Staff, Principal Full-Stack Engineer",
-  "comp": 350000.0,
-  "geo": "Bay Area",
-  "age": 24,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },
@@ -421,18 +313,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/horizon3ai/079c71cc-2203-46da-97d2-e39a6e9eb8c9/application",
-  "tag": "horizon3ai_senior_staff_platform_engineer",
-  "company": "horizon3ai",
-  "title": "Senior/Staff Platform Engineer",
-  "comp": 270000.0,
-  "geo": "Remote US",
-  "age": 4,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/tennr/3d7a5bf5-e1b0-4efd-a98a-7946b0fd5aab/application",
   "tag": "tennr_principal_health_systems",
   "company": "tennr",
@@ -440,30 +320,6 @@
   "comp": 500000.0,
   "geo": "NYC (>350K)",
   "age": 14,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/drata/4b5cd1ca-7d7d-4985-ba77-a9870fbd3d1a/application",
-  "tag": "drata_solutions_architect_apac",
-  "company": "drata",
-  "title": "Solutions Architect - APAC",
-  "comp": 318000.0,
-  "geo": "Remote US",
-  "age": 14,
-  "answers": {},
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/cb383962-ad2d-40ab-93ce-e3aead4b3838/apply",
-  "tag": "waabi_staff_systems_engineer_safety_methodologies",
-  "company": "waabi",
-  "title": "Staff Systems Engineer - Safety Methodologies",
-  "comp": 256000.0,
-  "geo": "Remote US",
-  "age": 17,
   "answers": {},
   "email": "amba_rish@hotmail.com"
  },

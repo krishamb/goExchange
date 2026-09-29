@@ -68,19 +68,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4766905-ai-engineer-founding-team-clone",
-  "tag": "redwagon_data_engineer_founding_team",
-  "company": "Redwagon",
-  "title": "Data Engineer - Founding Team",
-  "comp": 200000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790379281
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766880-founding-lead-developer-gaming-tcg-pokemon-collecting",
   "tag": "relic_packs_founding_lead_developer_gaming_tcg_",
   "company": "Relic packs",
@@ -217,19 +204,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4766766-business-analyst-us-educational-raters-gemini-job-id-100063-clone",
-  "tag": "vraify_principal_ai_engineer_us_nyc_job_id",
-  "company": "Vraify",
-  "title": "Principal AI Engineer - US NYC | Job ID 100485",
-  "comp": null,
-  "loc": "New York City",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790358250
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3246874-forward-deployed-engineer",
   "tag": "pepper_forward_deployed_engineer",
   "company": "Pepper",
@@ -242,21 +216,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790303661
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone",
-  "tag": "earthinia_company_services_founding_software_engineer",
-  "company": "Earthinia Company Services",
-  "title": "Founding Software Engineer",
-  "comp": 120000,
-  "loc": "Miami, New York City, Washington DC, San Francisco, San Jose",
-  "tier": 0,
-  "size": "SIZE_1_10",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790344829
  },
  {
   "ats": "wellfound",
@@ -584,19 +543,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4751443-ai-engineer",
-  "tag": "writer_ai_engineer",
-  "company": "Writer",
-  "title": "AI engineer ",
-  "comp": 259000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790119406
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3768862-founding-team-backend-engineer-equity-based",
   "tag": "palette_founding_backend_engineer_product_i",
   "company": "Palette",
@@ -609,32 +555,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790117689
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3511584-software-engineer-staff-full-stack",
-  "tag": "lightfield_software_engineer_staff_full_stack",
-  "company": "Lightfield",
-  "title": "Software Engineer, Staff (Full Stack)",
-  "comp": 300000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790121600
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3358184-ios-swift-software-engineer-staff-principal-lead",
-  "tag": "green_ios_swift_software_engineer_staff_p",
-  "company": "Green",
-  "title": "iOS / Swift Software Engineer (Staff, Principal, Lead)",
-  "comp": 380000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790110341
  },
  {
   "ats": "wellfound",
@@ -730,19 +650,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790033972
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748857-engineering-manager-ai-ml-remote",
-  "tag": "rula_engineering_manager_ai_ml_remote",
-  "company": "Rula",
-  "title": "Engineering Manager - AI/ML (Remote)",
-  "comp": 260000.0,
-  "loc": "Los Angeles",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790033269
  },
  {
   "ats": "wellfound",
@@ -925,19 +832,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3947525-senior-ai-engineer-cd300",
-  "tag": "skm_group_senior_ai_engineer_cd300",
-  "company": "SKM Group",
-  "title": "Senior AI Engineer [cd300]",
-  "comp": null,
-  "loc": "Germany, Poland",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790008254
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4163036-2-machine-learning-engineer",
   "tag": "zenos_machine_learning_engineer",
   "company": "Zenos",
@@ -963,19 +857,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789929715
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4675561-staff-machine-learning-engineer",
-  "tag": "thorn_staff_machine_learning_engineer",
-  "company": "THORN",
-  "title": "Staff Machine Learning Engineer",
-  "comp": 236000.0,
-  "loc": "",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789891824
  },
  {
   "ats": "wellfound",
@@ -1085,19 +966,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4735277-senior-lead-go-to-market-architect",
-  "tag": "klaviyo_senior_lead_go_to_market_architect",
-  "company": "Klaviyo",
-  "title": "Senior Lead Go-To-Market Architect",
-  "comp": 246000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789762366
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4735113-forward-deployed-engineer",
   "tag": "zaimler_ai_forward_deployed_engineer",
   "company": "zaimler.ai",
@@ -1121,19 +989,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789689666
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4728466-member-of-technical-staff-prime-agent",
-  "tag": "prime_intellect_member_of_technical_staff_prime_age",
-  "company": "Prime Intellect",
-  "title": "Member of Technical Staff - Prime Agent",
-  "comp": 300000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789688009
  },
  {
   "ats": "wellfound",
@@ -1180,19 +1035,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4724417-staff-machine-learning-engineer-ml-platform",
-  "tag": "braze_staff_machine_learning_engineer_ml_",
-  "company": "Braze",
-  "title": "Staff Machine Learning Engineer, ML Platform",
-  "comp": 314000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789632583
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4722710-forward-deployed-data-engineer-iv-databricks",
   "tag": "e_source_forward_deployed_data_engineer_iv_d",
   "company": "E Source",
@@ -1229,19 +1071,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789590051
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722611-staff-software-engineer",
-  "tag": "garner_health_staff_software_engineer",
-  "company": "Garner Health",
-  "title": "Staff Software Engineer",
-  "comp": 356000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789589797
  },
  {
   "ats": "wellfound",
@@ -1288,19 +1117,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722690-machine-learning-engineer",
-  "tag": "watney_robotics_machine_learning_engineer",
-  "company": "Watney Robotics",
-  "title": "Machine Learning Engineer",
-  "comp": null,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789602453
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4722456-technical-architect",
   "tag": "fx31_labs_ahmedabad_technical_architect",
   "company": "Fx31 Labs Ahmedabad",
@@ -1311,19 +1127,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789559128
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4722410-senior-member-of-technical-staff-infrastructure-engineer",
-  "tag": "pallet_senior_member_of_technical_staff_in",
-  "company": "Pallet",
-  "title": "Senior Member of Technical Staff, Infrastructure Engineer",
-  "comp": 265000.0,
-  "loc": "New York City, San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789546764
  },
  {
   "ats": "wellfound",
@@ -1433,19 +1236,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4718954-engineering-manager-arcnine",
-  "tag": "tradeify_co_engineering_manager_arcnine",
-  "company": "Tradeify.co",
-  "title": "Engineering Manager - Arcnine",
-  "comp": null,
-  "loc": "Americas 1",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789516580
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718606-senior-ai-engineer",
   "tag": "hmlet_senior_ai_engineer",
   "company": "Hmlet",
@@ -1456,21 +1246,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789465249
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4718882-principal-engineer",
-  "tag": "vitalize_care_yc_w23_principal_engineer",
-  "company": "Vitalize Care (YC W23)",
-  "title": "Principal Engineer",
-  "comp": 275000,
-  "loc": "San Francisco",
-  "tier": 0,
-  "size": "SIZE_51_200",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789513234
  },
  {
   "ats": "wellfound",
@@ -1510,19 +1285,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789430400
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3853061-principal-health-systems",
-  "tag": "tennr_principal_health_systems",
-  "company": "tennr",
-  "title": "Principal, Health Systems",
-  "comp": 500000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789429435
  },
  {
   "ats": "wellfound",
@@ -1580,19 +1342,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4527067-staff-software-engineer",
-  "tag": "metriport_staff_software_engineer",
-  "company": "Metriport",
-  "title": "Staff Software Engineer",
-  "comp": 260000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789430400
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4716489-marketo-solution-architect",
   "tag": "techspace_marketo_solution_architect",
   "company": "TechSpace",
@@ -1613,32 +1362,6 @@
   "comp": 300000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789344000
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4492787-senior-machine-learning-engineer-identity-audience",
-  "tag": "vibe_co_senior_machine_learning_engineer_id",
-  "company": "Vibe.co",
-  "title": "Senior Machine Learning Engineer - Identity & Audience",
-  "comp": null,
-  "loc": "Paris",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789344000
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4446041-applied-ml-engineer-edge-devices",
-  "tag": "deepgram_applied_ml_engineer_edge_devices",
-  "company": "Deepgram",
-  "title": "Applied ML Engineer -  Edge Devices",
-  "comp": 245000.0,
-  "loc": "",
-  "tier": 1,
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789344000
@@ -1681,21 +1404,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789316848
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3909914-hpc-gpu-cluster-architect",
-  "tag": "san_francisco_compute_company_hpc_gpu_cluster_architect",
-  "company": "San Francisco Compute Company",
-  "title": "HPC/ GPU Cluster Architect",
-  "comp": 300000,
-  "loc": "San Francisco",
-  "tier": 0,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789344000
  },
  {
   "ats": "wellfound",
@@ -1779,49 +1487,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4713671-founding-commercial-lead-energy",
-  "tag": "parisi_labs_founding_commercial_lead_energy",
-  "company": "Parisi Labs",
-  "title": "Founding Commercial Lead, Energy",
-  "comp": 178000,
-  "loc": "New York City",
-  "tier": 1,
-  "size": "SIZE_1_10",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789262570
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4263154-senior-machine-learning-engineer-ml-recall",
-  "tag": "constructor_io_senior_machine_learning_engineer_ml",
-  "company": "Constructor.io",
-  "title": "Senior Machine Learning Engineer: ML Recall",
-  "comp": 120000.0,
-  "loc": "United Kingdom",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789171381
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4704131-program-director-radiologic-technology",
-  "tag": "stepful_program_director_radiologic_technol",
-  "company": "Stepful",
-  "title": "Program Director, Radiologic Technology",
-  "comp": 125000,
-  "loc": "United States",
-  "tier": 1,
-  "size": "SIZE_51_200",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789170010
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3484389-ai-forward-deployed-engineer",
   "tag": "magical_ai_forward_deployed_engineer",
   "company": "Magical",
@@ -1847,21 +1512,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789157435
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4704054-principal-engineer-secure-web-gateway",
-  "tag": "netskope_principal_engineer_secure_web_gatew",
-  "company": "Netskope",
-  "title": "Principal Engineer, Secure Web Gateway",
-  "comp": 272000,
-  "loc": "Santa Clara",
-  "tier": 0,
-  "size": "SIZE_1001_5000",
-  "lang": "C++/Rust",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789157241
  },
  {
   "ats": "wellfound",
@@ -1918,19 +1568,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789112471
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4704065-principal-software-engineer",
-  "tag": "code_for_america_principal_software_engineer",
-  "company": "Code for America",
-  "title": "Principal Software Engineer",
-  "comp": 176000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789157432
  },
  {
   "ats": "wellfound",
@@ -2053,19 +1690,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4697895-principal-founding-engineer-full-stack-typescript-node-js-react-aws",
-  "tag": "employvision_principal_founding_engineer_full_st",
-  "company": "Employvision",
-  "title": "Principal Founding Engineer - Full Stack (TypeScript, Node.js, React, AWS)",
-  "comp": 250000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789048624
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4697825-founding-engineer-builder",
   "tag": "slipway_ai_solutions_founding_engineer_builder",
   "company": "Slipway AI Solutions",
@@ -2076,32 +1700,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789039677
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4697948-ai-engineer",
-  "tag": "vitalis_ai_ai_engineer",
-  "company": "Vitalis AI",
-  "title": "AI Engineer",
-  "comp": 200000.0,
-  "loc": "New York City, San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789072287
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4698009-tech-lead-manager-new-york",
-  "tag": "toggle_tech_lead_manager_new_york",
-  "company": "Toggle",
-  "title": "Tech Lead Manager - New York",
-  "comp": 205000.0,
-  "loc": "New York",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789071498
  },
  {
   "ats": "wellfound",
@@ -2120,19 +1718,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4692209-aem-architect",
-  "tag": "techspace_aem_architect",
-  "company": "TechSpace",
-  "title": "AEM Architect",
-  "comp": null,
-  "loc": "California, New York City, San Jose",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789027588
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4689845-associate-director",
   "tag": "sannam_s4_associate_director",
   "company": "SANNAM S4",
@@ -2145,21 +1730,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789026688
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3614360-staff-software-engineer",
-  "tag": "casca_staff_software_engineer",
-  "company": "Casca",
-  "title": "Staff Software Engineer",
-  "comp": 255000,
-  "loc": "San Francisco",
-  "tier": 0,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788997609
  },
  {
   "ats": "wellfound",
@@ -2202,19 +1772,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4692226-forward-deployed-engineer-new-grad-2027",
-  "tag": "domino_data_lab_forward_deployed_engineer_new_grad_",
-  "company": "Domino Data Lab",
-  "title": "Forward Deployed Engineer - New Grad, 2027",
-  "comp": 165000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788984430
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4692215-founding-engineer-technical-architect",
   "tag": "ttc_founding_engineer_technical_archite",
   "company": "TTC",
@@ -2240,34 +1797,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1788954588
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4692046-senior-director-forward-deployed-engineering-americas",
-  "tag": "c3_ai_senior_director_forward_deployed_en",
-  "company": "C3 AI",
-  "title": "Senior Director, Forward Deployed Engineering, Americas",
-  "comp": 350000,
-  "loc": "Redwood City",
-  "tier": 0,
-  "size": "SIZE_501_1000",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788941413
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4692290-engineering-manager-ai",
-  "tag": "permitflow_engineering_manager_ai",
-  "company": "PermitFlow",
-  "title": "Engineering Manager, AI",
-  "comp": 280000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788996680
  },
  {
   "ats": "wellfound",

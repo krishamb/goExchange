@@ -92,32 +92,6 @@
  },
  {
   "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=0842f8179612a5ba",
-  "apply_url": "https://jobs.comcast.com/job/-/-/45483/100808638896?source=ind_orga_at",
-  "tag": "indeed_comcast_manager_software_engineering_c",
-  "company": "Comcast",
-  "title": "Manager, Software Engineering (C++, GoLang, or Java) - 4 Days Onsite - Englewood, CO - FreeWheel",
-  "comp": 215866.0,
-  "loc": "Englewood, CO, US",
-  "lang": "C++",
-  "posted_ts": 1789689600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=a71245a22afa1008",
-  "apply_url": "https://grnh.se/oqr8dx4w7us",
-  "tag": "indeed_anduril_senior_software_engineer_c",
-  "company": "Anduril",
-  "title": "Senior Software Engineer, C++",
-  "comp": 252000.0,
-  "loc": "Denver, CO, US",
-  "lang": "C++",
-  "posted_ts": 1790035200.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
   "url": "https://www.indeed.com/viewjob?jk=2630cdeed878f2c5",
   "apply_url": "https://thomsonreuters.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/United-States-of-America-New-York-New-York/Staff-Data-Platform-Engineer_JREQ203915-7",
   "tag": "indeed_thomson_reuters_staff_data_platform_engineer",
@@ -209,19 +183,6 @@
  },
  {
   "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=041281682cee4d35",
-  "apply_url": "https://app.workwolf.com/pipelineLink/HPZXWPLF?utm_source=indeed",
-  "tag": "indeed_nan_founding_backend_engineer",
-  "company": "nan",
-  "title": "Founding Backend Engineer",
-  "comp": 300000.0,
-  "loc": "San Francisco, CA, US",
-  "lang": "Rust",
-  "posted_ts": 1790553600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
   "url": "https://www.indeed.com/viewjob?jk=6d71e63c107a6b4a",
   "apply_url": "https://app.jobvite.com/CompanyJobs/Job.aspx?j=outNAfw4&s=Indeed",
   "tag": "indeed_spectra_logic_senior_software_engineer_c",
@@ -235,32 +196,6 @@
  },
  {
   "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=f6c065860d01c61d",
-  "apply_url": "https://careers.ll.mit.edu/job/Lexington-Assistant-Staff-Signal-Processing-&-Software-Engineer-MA-02420/1431321300/",
-  "tag": "indeed_mit_lincoln_laboratory_assistant_staff_signal_process",
-  "company": "MIT Lincoln Laboratory",
-  "title": "Assistant Staff - Signal Processing & Software Engineer",
-  "comp": 150000.0,
-  "loc": "Lexington, MA, US",
-  "lang": "Rust",
-  "posted_ts": 1789603200.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=f7108a0c4a46a925",
-  "apply_url": "https://careers.google.com/jobs/results/105715304486576838-senior-principal-ondevice-and-voice-llm-architecture-software-engineer/",
-  "tag": "indeed_google_senior_principal_on_device_and",
-  "company": "Google",
-  "title": "Senior Principal On-Device and Voice LLM Architecture Software Engineer, XR",
-  "comp": 427000.0,
-  "loc": "San Jose, CA, US",
-  "lang": "Rust",
-  "posted_ts": 1789689600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
   "url": "https://www.indeed.com/viewjob?jk=1b5381b0e24f7cbe",
   "apply_url": "https://ats.rippling.com/salad/jobs/699d9ff3-5bbb-4a6a-a482-c933196c4e91?jobSite=Indeed",
   "tag": "indeed_salad_technologies_staff_software_engineer_ai_inf",
@@ -270,19 +205,6 @@
   "loc": "Remote, US",
   "lang": "Rust",
   "posted_ts": 1789689600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=79aad544257f163a",
-  "apply_url": "https://jobs.baesystems.com/global/en/job/129767BR",
-  "tag": "indeed_bae_systems_usa_senior_principal_engineer_grou",
-  "company": "BAE Systems USA",
-  "title": "Senior Principal Engineer \u2013 Ground/Application Software",
-  "comp": 226035.0,
-  "loc": "Broomfield, CO, US",
-  "lang": "Rust",
-  "posted_ts": 1788998400.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -387,19 +309,6 @@
   "loc": "New York, NY, US",
   "lang": "Rust",
   "posted_ts": 1789603200.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
-  "url": "https://www.indeed.com/viewjob?jk=66a4e4ab5d92cbdc",
-  "apply_url": "https://careers.arm.com/job/seattle/principal-software-engineer-ai-inference-runtime/33099/100399715424",
-  "tag": "indeed_arm_principal_software_engineer_ai",
-  "company": "Arm",
-  "title": "Principal Software Engineer, AI Inference Runtime",
-  "comp": 355400.0,
-  "loc": "Seattle, WA, US",
-  "lang": "Rust",
-  "posted_ts": 1788912000.0,
   "email": "amba_rish@hotmail.com"
  }
 ]

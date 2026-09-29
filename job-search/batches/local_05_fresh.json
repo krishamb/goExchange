@@ -66,17 +66,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/jobgether/60394e51-0657-4206-8c8d-0ea493f9462e",
-  "tag": "jobgether_director_financial_integrations",
-  "company": "jobgether",
-  "title": "Director, Financial Integrations",
-  "comp": null,
-  "loc": "US",
-  "posted_ts": 1790677643.957,
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/crusoe/0a4fa789-4a22-49c9-8521-638c02c45bac",
   "tag": "crusoe_director_international_project_mana",
@@ -96,28 +85,6 @@
   "comp": null,
   "loc": "Arlington, VA",
   "posted_ts": 1790612262.767,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Clera/265e1517-44e5-4f36-8b01-f7175a28222e",
-  "tag": "clera_founding_cloud_infrastructure_engin",
-  "company": "Clera",
-  "title": "Founding Cloud Infrastructure Engineer",
-  "comp": null,
-  "loc": "San Mateo",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/openai/b073abb1-cf6c-4fd9-a318-732fdd2f1408",
-  "tag": "openai_platform_engineering_manager_forwar",
-  "company": "openai",
-  "title": "Platform Engineering Manager, Forward Deployed Engineering (FDE)",
-  "comp": 335000.0,
-  "loc": "San Francisco",
-  "posted_ts": 1790553600.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -154,39 +121,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/8b7fce51-1d4d-4ead-9e7e-e2d851fcbbdc",
-  "tag": "crusoe_staff_integrated_capacity_planner",
-  "company": "crusoe",
-  "title": "Staff Integrated Capacity Planner",
-  "comp": 240000.0,
-  "loc": "San Francisco, CA - US",
-  "posted_ts": 1790553600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/dc4021c5-b1d0-49a8-8342-6c68969192b5",
-  "tag": "temporal_staff_software_engineer_replication",
-  "company": "temporal",
-  "title": "Staff Software Engineer, Replication Foundations",
-  "comp": 278250.0,
-  "loc": "United States (Remote)",
-  "posted_ts": 1790553600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/19d535e2-e0f5-42b6-a995-662d69772168",
-  "tag": "perplexity_engineering_manager_multimodal",
-  "company": "perplexity",
-  "title": "Engineering Manager (Multimodal)",
-  "comp": 405000.0,
-  "loc": "San Francisco",
-  "posted_ts": 1790380800.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "lever",
   "url": "https://jobs.lever.co/extremenetworks/08896f00-7c5c-403e-b682-b9f4bca495c5",
   "tag": "extremenetworks_vice_president_of_engineering_wirel",
@@ -216,17 +150,6 @@
   "title": "Senior Software Engineer, Compute Platform",
   "comp": 290000.0,
   "loc": "Foster City, CA",
-  "posted_ts": 1790294400.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/horizon3ai/137d7079-5630-4cd5-890e-37c3b2995f79",
-  "tag": "horizon3ai_senior_staff_developer_experience_e",
-  "company": "horizon3ai",
-  "title": "Senior/Staff Developer Experience Engineer",
-  "comp": 270000.0,
-  "loc": "US, Remote",
   "posted_ts": 1790294400.0,
   "email": "amba_rish@hotmail.com"
  },
@@ -272,17 +195,6 @@
   "comp": null,
   "loc": "United States",
   "posted_ts": 1790208000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/replit/4df82fb0-0bcb-4034-89ce-09e679b00fe7",
-  "tag": "replit_staff_software_engineer_agentic_ads",
-  "company": "replit",
-  "title": " Staff Software Engineer, Agentic Ads ",
-  "comp": 360000.0,
-  "loc": "Foster City, CA",
-  "posted_ts": 1790294400.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -359,39 +271,6 @@
   "title": "Member of Product Staff, Nursing",
   "comp": 268800.0,
   "loc": "NYC Office",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/suno/d9a5e520-efb1-4024-b9d1-215b9ac3cad9",
-  "tag": "suno_privacy_engineering_lead",
-  "company": "suno",
-  "title": "Privacy Engineering Lead",
-  "comp": 363510.0,
-  "loc": "NYC",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/handshake/bd6c7320-2bfc-4015-8ee1-5b0997b6a9d1",
-  "tag": "handshake_member_of_technical_staff_post_trai",
-  "company": "handshake",
-  "title": "Member of Technical Staff, Post-Training",
-  "comp": 350000.0,
-  "loc": "Remote (USA)",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/1a61daf7-45cf-46a0-b030-cf9617741e23",
-  "tag": "abridge_head_of_workplaces",
-  "company": "abridge",
-  "title": "Head of Workplaces",
-  "comp": 240000.0,
-  "loc": "SF Office",
   "posted_ts": 1790121600.0,
   "email": "amba_rish@hotmail.com"
  }

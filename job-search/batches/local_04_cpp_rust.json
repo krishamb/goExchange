@@ -89,34 +89,12 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315",
-  "tag": "perplexity_member_of_technical_staff_ai_infras",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (AI Infrastructure Engineer)",
-  "comp": 405000.0,
-  "loc": "San Francisco",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/liquid-ai/ebadd261-6908-43fd-bd96-d6259b6a6c31",
   "tag": "liquid_ai_member_of_technical_staff_inference",
   "company": "liquid-ai",
   "title": "Member of Technical Staff -  Inference Systems",
   "comp": null,
   "loc": "Boston",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/inferact/384d9db8-c712-4caa-8091-444b4189e161",
-  "tag": "inferact_member_of_technical_staff_kernel_en",
-  "company": "inferact",
-  "title": "Member of Technical Staff, Kernel Engineering",
-  "comp": 400000.0,
-  "loc": "San Francisco",
   "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
@@ -129,28 +107,6 @@
   "comp": 260000.0,
   "loc": "San Francisco, CA - US",
   "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/cdabd368-1989-4ea8-801d-2be138c16523",
-  "tag": "temporal_staff_solutions_architect_majors_ea",
-  "company": "temporal",
-  "title": "Staff Solutions Architect, Majors - East",
-  "comp": 220500.0,
-  "loc": "Boston, Massachusetts",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/reka/9cdfc4f4-9594-49eb-9eaa-08aff01aa22f",
-  "tag": "reka_member_of_technical_staff_robotics",
-  "company": "reka",
-  "title": "Member of Technical Staff (Robotics)",
-  "comp": null,
-  "loc": "UK, Remote",
-  "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -210,39 +166,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/88259992-3dff-4e15-9758-9df012be2bac",
-  "tag": "crusoe_senior_performance_engineer",
-  "company": "crusoe",
-  "title": "Senior Performance Engineer",
-  "comp": 205000.0,
-  "loc": "San Francisco, CA - US",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/eedaf111-0efd-4f8f-9c2d-ce829b5cb0eb",
-  "tag": "waabi_senior_staff_ml_training_optimizati",
-  "company": "waabi",
-  "title": "Senior / Staff ML Training Optimization Engineer",
-  "comp": 249000.0,
-  "loc": "Remote US & Canada",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cerebras/ea44d96f-37e9-4d59-8749-621013176832",
-  "tag": "cerebras_senior_runtime_engineer",
-  "company": "cerebras",
-  "title": "Senior Runtime Engineer",
-  "comp": null,
-  "loc": "United States and Canada",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/lightning/21a591d9-d731-4f2d-935d-841d3a779ec9",
   "tag": "lightning_senior_security_engineer_remote",
   "company": "lightning",
@@ -260,39 +183,6 @@
   "title": "Sr Software Engineer, Stream Integrations",
   "comp": null,
   "loc": "US - California",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/jobgether/1c0400f1-d804-4689-a884-6d5049d45dc1",
-  "tag": "jobgether_contract_staff_software_engineer_pe",
-  "company": "jobgether",
-  "title": "Contract Staff Software Engineer - Performance Graphics (C++,Rust, WebGL)",
-  "comp": null,
-  "loc": "US",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/lancedb/9454302d-3d40-4ed4-832e-c1590ff497fc",
-  "tag": "lancedb_senior_software_engineer",
-  "company": "lancedb",
-  "title": "Senior Software Engineer",
-  "comp": 250000.0,
-  "loc": "United States",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/clickhouse/db498a8c-c8d8-405b-b86a-0943a5122e7d",
-  "tag": "clickhouse_senior_cloud_software_engineer_effi",
-  "company": "clickhouse",
-  "title": "Senior Cloud Software Engineer - Efficiency Engineering",
-  "comp": null,
-  "loc": "AMER",
   "lang": "C++",
   "email": "amba_rish@hotmail.com"
  }
