@@ -1,77 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone",
-  "tag": "earthinia_company_services_founding_software_engineer",
-  "company": "Earthinia Company Services",
-  "title": "Founding Software Engineer",
-  "comp": 120000,
-  "loc": "Miami, New York City, Washington DC, San Francisco, San Jose",
-  "posted_ts": 1790344829,
-  "badges": [
-   "ACTIVELY_HIRING",
-   "GROWING_FAST",
-   "QUICK_RESPONDER",
-   "TOP_RESPONDER"
-  ],
-  "ai": true,
-  "tier": 0
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4763403-ai-engineer",
-  "tag": "visionsure_ai_engineer",
-  "company": "VisionSure",
-  "title": "AI Engineer",
-  "comp": null,
-  "loc": "New Delhi",
-  "posted_ts": 1790315456,
-  "badges": [
-   "ACTIVELY_HIRING",
-   "QUICK_RESPONDER",
-   "TOP_RESPONDER"
-  ],
-  "ai": true,
-  "tier": 0
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4760771-ai-engineer-i",
-  "tag": "klaviyo_ai_engineer_i",
-  "company": "Klaviyo",
-  "title": "AI Engineer I",
-  "comp": null,
-  "loc": "Boston",
-  "posted_ts": 1790237578,
-  "badges": [
-   "ACTIVELY_HIRING",
-   "B2B",
-   "COMPANY_STAGE",
-   "HIGHLY_RATED",
-   "STRONG_LEADERSHIP",
-   "TOP_INVESTORS",
-   "WORK_LIFE_BALANCE"
-  ],
-  "ai": true,
-  "tier": 0
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4760699-founding-voice-ai-engineer",
-  "tag": "libera_founding_voice_ai_engineer",
-  "company": "Libera",
-  "title": "Founding Voice AI Engineer",
-  "comp": 140000,
-  "loc": "Tokyo",
-  "posted_ts": 1790226053,
-  "badges": [
-   "ACTIVELY_HIRING"
-  ],
-  "ai": true,
-  "tier": 0
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748883-staff-ai-engineer",
   "tag": "pulley_staff_ai_engineer",
   "company": "Pulley",
@@ -87,39 +16,6 @@
   ],
   "ai": true,
   "tier": 0
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4299539-ai-engineer",
-  "tag": "frequency_cx_ai_engineer",
-  "company": "Frequency.cx",
-  "title": "AI Engineer",
-  "comp": null,
-  "loc": "Mumbai",
-  "posted_ts": 1789662671,
-  "badges": [
-   "ACTIVELY_HIRING"
-  ],
-  "ai": true,
-  "tier": 0
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4766893-principal-solutions-consultant",
-  "tag": "assured_principal_solutions_consultant",
-  "company": "Assured",
-  "title": "Principal Solutions Consultant",
-  "comp": 195000,
-  "loc": "Palo Alto",
-  "tier": 0,
-  "size": "SIZE_201_500",
-  "lang": "",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Assured",
-   "Do you have basic understanding of either SQL, JSON and APIs?*"
-  ],
-  "posted_ts": 1790378668
  },
  {
   "ats": "wellfound",
@@ -228,21 +124,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790344245
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4763404-founding-developer",
-  "tag": "nixora_founding_developer",
-  "company": "Nixora",
-  "title": "Founding Developer",
-  "comp": null,
-  "loc": "Dubai",
-  "tier": 1,
-  "size": "SIZE_1_10",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790316424
  },
  {
   "ats": "wellfound",
@@ -583,21 +464,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3768862-founding-team-backend-engineer-equity-based",
-  "tag": "palette_founding_backend_engineer_product_i",
-  "company": "Palette",
-  "title": "Founding Backend Engineer \u2014 Product Infrastructure & Data",
-  "comp": null,
-  "loc": "Vancouver, Toronto",
-  "tier": 1,
-  "size": "SIZE_1_10",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790117689
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4751395-creative-director-brand",
   "tag": "nex_creative_director_brand",
   "company": "Nex",
@@ -649,19 +515,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1790067455
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4750136-lead-ai-engineer",
-  "tag": "emplay_lead_ai_engineer",
-  "company": "Emplay",
-  "title": "Lead- AI Engineer",
-  "comp": null,
-  "loc": "Bengaluru",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790056216
  },
  {
   "ats": "wellfound",
@@ -830,19 +683,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789978914
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748548-solution-architect",
-  "tag": "digit88_solution_architect",
-  "company": "Digit88",
-  "title": "Solution Architect",
-  "comp": null,
-  "loc": "Bangalore Urban",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789974359
  },
  {
   "ats": "wellfound",
@@ -1237,19 +1077,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4718739-ai-engineer",
-  "tag": "gunpowder_innovations_ai_engineer",
-  "company": "Gunpowder Innovations",
-  "title": "AI Engineer",
-  "comp": null,
-  "loc": "Bangalore Urban",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789485321
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3704625-member-of-technical-staff-discovery-applications",
   "tag": "mithrl_member_of_technical_staff_discovery",
   "company": "Mithrl",
@@ -1260,19 +1087,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789472588
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4718606-senior-ai-engineer",
-  "tag": "hmlet_senior_ai_engineer",
-  "company": "Hmlet",
-  "title": "Senior AI Engineer",
-  "comp": null,
-  "loc": "Hong Kong, Singapore",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789465249
  },
  {
   "ats": "wellfound",
@@ -1485,19 +1299,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789200624
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3352299-ai-ml-engineer",
-  "tag": "eveoai_ai_ml_engineer",
-  "company": "EveoAI",
-  "title": "AI-ML Engineer",
-  "comp": null,
-  "loc": "India, Delhi, Pune, Hyderabad, Rajkot, Ahmedabad, Surat, Mumbai, Gujarat, Thane, Bangalore Rural, Bangalore Urban, Pune, Surat, Ahmedabad, Mumbai",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789198106
  },
  {
   "ats": "wellfound",
