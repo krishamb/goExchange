@@ -20,6 +20,7 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Pendo | Sr. Engineering Manager, Pendo for Agents | Greenhouse via Wellfound | "How did you hear about Pendo?" answered "University Recruiting" (a matching bug, now fixed). Minor. | No action needed; mention Wellfound if asked. |
 | TaskClan | Founding Game Engineer (AI 3D, equity) | Wellfound | Title suggests equity-only pay and a game-engine focus; weak fit. | Withdraw if you do not want an equity-only or game role. |
 | Fact Finders Pro | Engineering Manager (contract) | Wellfound | Contract role, not full-time. | Withdraw if you only want full-time. |
+| Minervini Private Access | Head of Engineering | Wellfound | Trading-education company rather than a tech startup; I had excluded it from an earlier slice. | Keep or withdraw as you prefer. |
 | Pallet | Two roles (Greenhouse + Wellfound) | both | Two applications to one company before the one-per-company check existed. | Withdraw one if you prefer. |
 
 ## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
