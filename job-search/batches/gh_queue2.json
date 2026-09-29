@@ -8,22 +8,8 @@
   "comp": 379300.0,
   "loc": "United States",
   "posted_ts": 1790640000.0,
-  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/robinhood/jobs/8205579",
-  "tag": "robinhood_engineering_manager_agentic_apps",
-  "company": "robinhood",
-  "title": "Engineering Manager, Agentic Apps",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Have you ever worked for Robinhood as an employee, intern or contractor? Note th"
-  ],
-  "posted_ts": 1790553600.0
  },
  {
   "ats": "greenhouse",
