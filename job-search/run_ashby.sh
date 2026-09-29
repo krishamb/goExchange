@@ -6,8 +6,8 @@
 #   bash job-search/run_ashby.sh stop     stop the run
 #
 # It submits job-search/batches/ashby_all.json: every open Ashby role in the queue, freshest first,
-# one role per company, companies already applied to from the cloud session removed.
-# Re-running is safe: any company that already has a submitted report in ~/jobs-private/out is skipped.
+# at most two roles per company, companies already at two cloud applications removed.
+# Re-running is safe: submitted jobs are skipped, and no company gets more than two applications.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export JOBS_DIR="${JOBS_DIR:-$HOME/jobs-private}"
