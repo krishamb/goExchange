@@ -66,6 +66,7 @@ TEXT_RULES=[
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
+ (r"able to travel|willing to travel|travel (for|requirements?|expectations?)|percentage of travel|% travel", "Yes, I can travel as needed for the role."),
  (r"know anyone (who works|at|employed)|anyone you know (works|at)|friends or family (at|who work)", "No"),
  (r"(average |typical |largest )?size of (the )?teams? (you've|you have|you) (managed|led)|how many (people|engineers|direct reports|reports) (have you|do you|did you) (managed|manage|lead|led)|team size|number of direct reports", "It varies by role: as Chief Architect at Yahoo Finance I directed 75+ engineers and partners across the platform modernization program; as CTO and Technical Co-Founder at Hyperion AI I led a small founding engineering team hands-on."),
  (r"start date|available to start|availability|notice period", "Immediately"),
