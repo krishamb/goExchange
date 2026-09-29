@@ -152,6 +152,7 @@ LABEL_JS=r"""
     let lab=null; for(const c of p.querySelectorAll('label, legend')){ if(!c.contains(el) && !el.contains(c) && c.innerText.trim()){lab=c; break;} }
     if(!lab){ for(const c of p.querySelectorAll('.application-label, [class*="label"], [class*="Label"], h3, h4, .field-label, .question')){ if(c!==el && !c.contains(el) && !el.contains(c) && c.innerText.trim() && !/^select\.\.\.$/i.test(c.innerText.trim())){lab=c; break;} } }
     if(lab){t=lab.innerText; break;} p=p.parentElement;}}
+ if(!t){let p=el; for(let i=0;i<4&&p;i++){const prev=p.previousElementSibling; if(prev){const s=(prev.innerText||'').trim(); if(s.length>3&&s.length<220&&!/^(select|-|—)/i.test(s)){t=s; break;}} p=p.parentElement;}}
  return (t||'').trim().replace(/\s+/g,' ').replace(/[✱*]/g,'').trim();}
 """
 STILL_VISIBLE_JS=r"""(lab)=>{lab=lab.toLowerCase().replace(/\s+/g,' ').slice(0,45); if(lab.length<4) return true;
@@ -552,7 +553,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if ats=="lever" and re.search(r"^location$",name): val=P["location"]
                     if val is None and (await h.get_attribute("placeholder") or ""): val=pick(await h.get_attribute("placeholder"),TEXT_RULES)
                     cur=await h.input_value()
-                    if val: 
+                    if cur.strip() and await h.evaluate("(el)=>el.tagName==='TEXTAREA'") and not re.search(r"cover letter",lab,re.I): continue   # keep a note already written (e.g. Wellfound)
+                    if val:
                         if cur.strip()!=val: await fill_text(page,h,val)
                         report["filled"][key[:60]]=val[:40]
                     elif not cur.strip() and await is_required(h): report["unanswered"].append({"type":"text","label":key[:160],"name":name})
@@ -616,11 +618,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     qlab=re.sub(r"\s+"," ",qlab).replace("✱","").strip()
                     opts=[]
                     for x in hs: opts.append(((await x.get_attribute("value")) or "", await label_of(x)))
-                    if not qlab or qlab.lower() in [o[1].lower() for o in opts]:
-                        # label picked an option text; walk up further for the question text
-                        qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<200) return prev.innerText; p=p.parentElement;} return '';}")
-                        qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip()
-                        if qlab2 and qlab2.lower() not in [o[1].lower() for o in opts]: qlab=qlab2
+                    # the nearest preceding text is usually the question; prefer it over a distant heading when it reads like one
+                    qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<200) return prev.innerText; p=p.parentElement;} return '';}")
+                    qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip(); optl=[o[1].lower() for o in opts]
+                    if qlab2 and qlab2.lower() not in optl and (not qlab or qlab.lower() in optl or (qlab2.rstrip("* ").endswith("?") and not qlab.rstrip("* ").endswith("?"))): qlab=qlab2
                     cands=[]
                     for k,v in extra.items():
                         if k.lower() in qlab.lower(): cands.append([v]); break
