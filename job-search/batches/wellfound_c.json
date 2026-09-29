@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4763379-ai-machine-learning-engineer-voice-ai-agentic-systems-telephony",
-  "tag": "menodi_ai_machine_learning_engineer_voice_",
-  "company": "Menodi",
-  "title": "AI / Machine Learning Engineer (Voice AI, Agentic Systems & Telephony)",
-  "comp": null,
-  "loc": "Stockholm",
-  "tier": 2,
-  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748816-engineering-manager",
   "tag": "nametag_engineering_manager",
   "company": "Nametag",
