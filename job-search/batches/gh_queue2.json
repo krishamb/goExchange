@@ -138,28 +138,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/affirm/jobs/7607567003",
-  "tag": "affirm_director_information_technology_sec",
-  "company": "affirm",
-  "title": "Director, Information Technology & Security",
-  "comp": 360000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/vercel/jobs/5995789004",
-  "tag": "vercel_senior_manager_solutions_architect",
-  "company": "vercel",
-  "title": "Senior Manager, Solutions Architect",
-  "comp": 350000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/verkada/jobs/5198815007",
   "tag": "verkada_engineering_manager_agentic_workflo",
   "company": "verkada",
@@ -820,17 +798,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/datadog/jobs/8010585",
-  "tag": "datadog_director_technical_program_manageme",
-  "company": "datadog",
-  "title": "Director, Technical Program Management - Technical Solutions Operations",
-  "comp": 280000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/instacart/jobs/8084349",
   "tag": "instacart_senior_engineering_manager_core_pic",
   "company": "instacart",
@@ -902,17 +869,6 @@
   "company": "celonis",
   "title": "Director, Value Engineering - Financial Services",
   "comp": 265000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/liberate/jobs/5370479008",
-  "tag": "liberate_founding_deployment_strategist",
-  "company": "liberate",
-  "title": "Founding Deployment Strategist ",
-  "comp": 260000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": []
@@ -1183,17 +1139,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/fireblocks/jobs/4699994006",
-  "tag": "fireblocks_solutions_architect_amer",
-  "company": "fireblocks",
-  "title": "Solutions Architect, AMER",
-  "comp": 268000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/cribl/jobs/5992317004",
   "tag": "cribl_staff_software_engineer_cribl_ai",
   "company": "cribl",
@@ -1315,17 +1260,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/endorlabs/jobs/4720548005",
-  "tag": "endorlabs_solutions_architect_east",
-  "company": "endorlabs",
-  "title": "Solutions Architect - East",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/samsara/jobs/8064742",
   "tag": "samsara_staff_software_engineer",
   "company": "samsara",
@@ -1419,17 +1353,6 @@
   "company": "dominodatalab",
   "title": "Forward Deployed Engineer, Public Sector",
   "comp": 220000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/bitgo/jobs/8802524002",
-  "tag": "bitgo_director_technical_program_manageme",
-  "company": "bitgo",
-  "title": "Director, Technical Program Management ",
-  "comp": 230000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": []
@@ -1568,28 +1491,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cockroachlabs/jobs/8191652",
-  "tag": "cockroachlabs_principal_partner_solutions_archite",
-  "company": "cockroachlabs",
-  "title": "Principal Partner Solutions Architect",
-  "comp": 210000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/typeface/jobs/4989851007",
-  "tag": "typeface_solutions_architect",
-  "company": "typeface",
-  "title": "Solutions Architect ",
-  "comp": 210000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/mitratech/jobs/8155220",
   "tag": "mitratech_principal_ai_engineer",
   "company": "mitratech",
@@ -1651,17 +1552,6 @@
   "title": "Lead Back End Architect/Engineer",
   "comp": 200000.0,
   "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/pulumicorporation/jobs/7677578003",
-  "tag": "pulumicorporation_solutions_architect",
-  "company": "pulumicorporation",
-  "title": "Solutions Architect",
-  "comp": 190000.0,
-  "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": []
  },
@@ -1887,45 +1777,12 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/hiddenlayer/jobs/5162409007",
-  "tag": "hiddenlayer_ai_solutions_architect_federal",
-  "company": "hiddenlayer",
-  "title": "AI Solutions Architect- Federal",
-  "comp": null,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/nice/jobs/4981245101",
   "tag": "nice_forward_deployed_engineer",
   "company": "NiCE",
   "title": "Forward Deployed Engineer",
   "comp": null,
   "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/workato/jobs/8738037002",
-  "tag": "workato_solutions_architect",
-  "company": "workato",
-  "title": "Solutions Architect",
-  "comp": null,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/cloudflare/jobs/8024889",
-  "tag": "cloudflare_principal_partner_solutions_enginee",
-  "company": "cloudflare",
-  "title": "Principal Partner Solutions Engineer, SAARC (Based in Bangalore)",
-  "comp": null,
-  "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": []
  },
@@ -1961,5 +1818,25 @@
   "source": "Indeed",
   "last_result": "(no report)",
   "last_unanswered": []
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://careers.withwaymo.com/jobs?gh_jid=8164291",
+  "tag": "waymo_staff_software_engineer_fleet_optim",
+  "company": "waymo",
+  "title": "Staff Software Engineer, Fleet Optimization",
+  "comp": 310000.0,
+  "loc": "San Francisco, CA ; Mountain View, CA ",
+  "lang": "C++"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8798198002",
+  "tag": "databricks_staff_software_engineer_lakeflow_pi",
+  "company": "databricks",
+  "title": "Staff Software Engineer, Lakeflow Pipelines DR",
+  "comp": 260000.0,
+  "loc": "Mountain View, California; San Francisco, California",
+  "lang": "C++"
  }
 ]

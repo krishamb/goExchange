@@ -1,0 +1,252 @@
+[
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/modal/9b33ebe7-e829-4f03-97ba-5c94dbd7daf6",
+  "tag": "modal_member_of_technical_staff_systems",
+  "company": "modal",
+  "title": "Member of Technical Staff - Systems",
+  "comp": 300000.0,
+  "loc": "New York",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cohere/2a989030-6d14-4924-88c1-d878911e26fa",
+  "tag": "cohere_member_of_technical_staff_model_eff",
+  "company": "cohere",
+  "title": "Member of Technical Staff, Model Efficiency",
+  "comp": 535000.0,
+  "loc": "New York",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/perplexity/8a976851-9bef-4b07-8d36-567fa9540aef",
+  "tag": "perplexity_member_of_technical_staff_ai_infere",
+  "company": "perplexity",
+  "title": "Member of Technical Staff (AI Inference Engineer)",
+  "comp": 485000.0,
+  "loc": "San Francisco",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315",
+  "tag": "perplexity_member_of_technical_staff_ai_infras",
+  "company": "perplexity",
+  "title": "Member of Technical Staff (AI Infrastructure Engineer)",
+  "comp": 405000.0,
+  "loc": "San Francisco",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/perplexity/32a36cae-ad73-4198-9354-a72b141ff055",
+  "tag": "perplexity_member_of_technical_staff_secure_in",
+  "company": "perplexity",
+  "title": "Member of Technical Staff (Secure Intelligence Institute)",
+  "comp": 405000.0,
+  "loc": "San Francisco",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/perplexity/5c561bd0-c180-4ee1-b079-647f3c20bdc0",
+  "tag": "perplexity_member_of_technical_staff_applied_a",
+  "company": "perplexity",
+  "title": "Member of Technical Staff (Applied AI Engineer, Agent Capabilities)",
+  "comp": 405000.0,
+  "loc": "San Francisco",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/PrimeIntellect/6d77793a-ee30-41ea-9e28-1f3f3eb9ceb9",
+  "tag": "primeintellect_member_of_technical_staff_compute_p",
+  "company": "PrimeIntellect",
+  "title": "Member of Technical Staff - Compute Platform",
+  "comp": null,
+  "loc": "San Francisco",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/inferact/7f934a1b-1845-4f25-8fe4-1def2b039f60",
+  "tag": "inferact_member_of_technical_staff_performan",
+  "company": "inferact",
+  "title": "Member of Technical Staff, Performance and Scale",
+  "comp": 400000.0,
+  "loc": "San Francisco",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/inferact/384d9db8-c712-4caa-8091-444b4189e161",
+  "tag": "inferact_member_of_technical_staff_kernel_en",
+  "company": "inferact",
+  "title": "Member of Technical Staff, Kernel Engineering",
+  "comp": 400000.0,
+  "loc": "San Francisco",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cerebras/4af81ff3-6f27-4d29-a811-85ccff5585fb",
+  "tag": "cerebras_staff_software_engineer_observabili",
+  "company": "cerebras",
+  "title": "Staff Software Engineer - Observability",
+  "comp": null,
+  "loc": "Sunnyvale, CA",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/openai/1b268692-70d8-46c2-a347-2f7705b5c174",
+  "tag": "openai_machine_learning_engineer_multimoda",
+  "company": "openai",
+  "title": "Machine Learning Engineer, Multimodal Perception and Authentication",
+  "comp": 399000.0,
+  "loc": "San Francisco",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/reka/6595a48b-8dfc-479d-ba2a-0bf9d188ec4d",
+  "tag": "reka_member_of_technical_staff_gpu_perfo",
+  "company": "reka",
+  "title": "Member of Technical Staff (GPU Performance Engineer)",
+  "comp": null,
+  "loc": "US, UK, Singapore, Remote",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/reka/9cdfc4f4-9594-49eb-9eaa-08aff01aa22f",
+  "tag": "reka_member_of_technical_staff_robotics",
+  "company": "reka",
+  "title": "Member of Technical Staff (Robotics)",
+  "comp": null,
+  "loc": "UK, Remote",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/liquid-ai/ebadd261-6908-43fd-bd96-d6259b6a6c31",
+  "tag": "liquid_ai_member_of_technical_staff_inference",
+  "company": "liquid-ai",
+  "title": "Member of Technical Staff -  Inference Systems",
+  "comp": null,
+  "loc": "Boston",
+  "lang": "C++"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/crusoe/f28a39ed-6b2e-42ff-9f3a-23cab436abbe",
+  "tag": "crusoe_staff_software_engineer_storage",
+  "company": "crusoe",
+  "title": "Staff Software Engineer, Storage",
+  "comp": 260000.0,
+  "loc": "San Francisco, CA - US",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/temporal/cdabd368-1989-4ea8-801d-2be138c16523",
+  "tag": "temporal_staff_solutions_architect_majors_ea",
+  "company": "temporal",
+  "title": "Staff Solutions Architect, Majors - East",
+  "comp": 220500.0,
+  "loc": "Boston, Massachusetts",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/temporal/0b03268c-92ba-4092-9eec-05eb16e41b95",
+  "tag": "temporal_staff_solutions_architect_majors_we",
+  "company": "temporal",
+  "title": "Staff Solutions Architect, Majors (West)",
+  "comp": 220500.0,
+  "loc": "San Francisco, California",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/temporal/e8dc6efc-67da-4a5d-859c-85865d6ed21d",
+  "tag": "temporal_staff_solutions_architect_majors_ce",
+  "company": "temporal",
+  "title": "Staff Solutions Architect, Majors (Central)",
+  "comp": 220500.0,
+  "loc": "Dallas, Texas",
+  "lang": "Rust"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/temporal/c07bba44-5506-4b5b-a0e0-5367a18afe29",
+  "tag": "temporal_staff_solutions_architect_banking_c",
+  "company": "temporal",
+  "title": "Staff Solutions Architect, Banking (Central)",
+  "comp": 210000.0,
+  "loc": "Dallas, Texas",
+  "lang": "Rust"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/12052535-2f24-44b0-800d-eca98a6405b5",
+  "tag": "waabi_senior_staff_ml_onboard_optimizatio",
+  "company": "waabi",
+  "title": "Senior / Staff ML Onboard Optimization Engineer",
+  "comp": 249000.0,
+  "loc": "Remote US & Canada",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/eedaf111-0efd-4f8f-9c2d-ce829b5cb0eb",
+  "tag": "waabi_senior_staff_ml_training_optimizati",
+  "company": "waabi",
+  "title": "Senior / Staff ML Training Optimization Engineer",
+  "comp": 249000.0,
+  "loc": "Remote US & Canada",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/ca67aa9c-d647-41d5-a45b-38d94304344a",
+  "tag": "waabi_senior_staff_software_engineer_loca",
+  "company": "waabi",
+  "title": "Senior / Staff Software Engineer, Localization",
+  "comp": 242000.0,
+  "loc": "San Francisco, CA",
+  "lang": "Rust"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/39f0345f-177c-4feb-8c27-7de26645eb14",
+  "tag": "waabi_senior_staff_software_engineer_moti",
+  "company": "waabi",
+  "title": "Senior / Staff Software Engineer, Motion Planning",
+  "comp": 269000.0,
+  "loc": "Remote US & Canada",
+  "lang": "C++"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/8ba014bf-a0f8-422f-8686-5cde55f12bf6",
+  "tag": "waabi_senior_staff_software_engineer_sens",
+  "company": "waabi",
+  "title": "Senior / Staff Software Engineer, Sensors Integration",
+  "comp": 249000.0,
+  "loc": "San Francisco, CA",
+  "lang": "C++/Rust"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/jobgether/62dd213f-d20b-4317-ad27-0b39bad62fbf",
+  "tag": "jobgether_rust_engineering_lead_linux_and_ope",
+  "company": "jobgether",
+  "title": "Rust Engineering Lead - Linux and Open Source",
+  "comp": null,
+  "loc": "Italy",
+  "lang": "Rust"
+ }
+]
