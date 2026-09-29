@@ -8,8 +8,10 @@
   "comp": 400000.0,
   "loc": "United States",
   "posted_ts": 1790208000.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Your country of residence"
+  ]
  },
  {
   "ats": "greenhouse",
