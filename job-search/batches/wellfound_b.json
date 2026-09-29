@@ -1,20 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4735362-software-engineer-parsing-principal-staff-senior",
-  "tag": "allspice_io_software_engineer_parsing_principal",
-  "company": "AllSpice.io",
-  "title": "Software Engineer - Parsing (Principal/Staff/Senior)",
-  "comp": null,
-  "loc": "Boston, San Francisco",
-  "tier": 1,
-  "size": "SIZE_11_50",
-  "lang": "C++/Rust",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/3278567-head-of-engineering-ai-stack",
   "tag": "cityzeen_head_of_engineering_ai_stack",
   "company": "CityZeen",
