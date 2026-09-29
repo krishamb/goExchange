@@ -1,41 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4246013-vp-head-of-engineering-portfolio-company-role",
-  "tag": "equal_ventures_vp_head_of_engineering_portfolio_co",
-  "company": "Equal Ventures",
-  "title": "VP / Head of Engineering (Portfolio Company Role)",
-  "loc": "Remote | ?",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4266274-applied-ai-ml-engineer",
-  "tag": "mahway_applied_ai_ml_engineer",
-  "company": "Mahway",
-  "title": "Applied AI/ML Engineer",
-  "comp": null,
-  "loc": "Lima",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3346686-agentic-engineer-voice-ai",
-  "tag": "super_agentic_engineer_voice_ai",
-  "company": "Super",
-  "title": "Agentic Engineer (Voice AI)",
-  "comp": 80000.0,
-  "loc": "Los Angeles, New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4701959-machine-learning-engineer-ii-ml-systems-models-and-analysis",
   "tag": "clear_demand_machine_learning_engineer_ii_ml_sys",
   "company": "Clear Demand",
