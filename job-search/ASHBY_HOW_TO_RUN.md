@@ -1,44 +1,32 @@
-# Ashby applications — how to run them on your Mac
+# Ashby applications: one script in your home folder
 
-Ashby blocks applications sent from cloud servers, so this part runs on your own Mac. It runs in the
-background, opens no browser windows, keeps the Mac awake, and can be stopped and restarted at any time
-without applying twice.
+Ashby blocks applications sent from cloud servers, so this part runs on your own Mac. The script runs in the
+background, opens no browser windows, keeps the Mac awake, and can be stopped and restarted at any time without
+applying twice.
 
-## Every time (2 commands)
+## Install once (paste into Terminal)
 
-Open **Terminal** and paste:
+Paste the whole block from the chat message (or copy `job-search/ashby.sh` from this repo to `~/ashby.sh`).
+It creates `~/ashby.sh`.
 
-```
-cd ~/goExchange && git checkout claude/ai-founding-engineer-jobs-l1urgc && git pull origin claude/ai-founding-engineer-jobs-l1urgc
-bash job-search/run_ashby.sh
-```
-
-That's it. The first line gets the newest job list. The second line starts applying and returns you to the
-prompt right away; the applications continue in the background.
-
-## Check progress, or stop
+## Commands
 
 ```
-bash job-search/run_ashby.sh status
-bash job-search/run_ashby.sh stop
+bash ~/ashby.sh          # get the newest job list, then start applying
+bash ~/ashby.sh status   # submitted / not submitted so far, plus the last log lines
+bash ~/ashby.sh log      # watch the live log (Ctrl+C stops watching; the run keeps going)
+bash ~/ashby.sh stop     # stop the run
+bash ~/ashby.sh update   # only download the newest job list, do not start
+bash ~/ashby.sh help     # show this list
 ```
 
-`status` shows how many were submitted, the last few that were not (with the reason and link), and the end of
-the log. You can close Terminal; the run keeps going. If the Mac restarts, run the two commands again. Jobs
-already submitted are skipped automatically.
+`bash ~/ashby.sh` downloads the repo to `~/goExchange` the first time, and updates it every time after that.
 
-## Only the very first time on a new Mac
+## Private files it needs
 
-If `cd ~/goExchange` says "No such file or directory", download the repo once:
-
-```
-git clone -b claude/ai-founding-engineer-jobs-l1urgc https://github.com/krishamb/goExchange.git ~/goExchange
-```
-
-The script also needs four private files in the folder `~/jobs-private` (never in the repo):
-`profile.json`, `answers.json`, `Ambarish_Krishnamurthy_Resume.pdf`, `Ambarish_Krishnamurthy_Cover_Letter.pdf`.
-They are already there from your earlier run. If one is missing, the script copies it from `~/Downloads`
-or tells you exactly which file to put back.
+Folder `~/jobs-private` (never in the repo): `profile.json`, `answers.json`, `Ambarish_Krishnamurthy_Resume.pdf`,
+`Ambarish_Krishnamurthy_Cover_Letter.pdf`. They are already there from your earlier run. If one is missing, the
+script copies it from `~/Downloads` or tells you exactly which file to put back.
 
 ## What it applies to
 
@@ -48,6 +36,6 @@ applications. Confirmation emails go to amba_rish@hotmail.com.
 
 ## If something looks wrong
 
-- "Already running": a run is in progress; use `status`.
+- "Already running": a run is in progress; use `bash ~/ashby.sh status`.
 - An older full run (`run.sh`) is also going: stop it with `pkill -f "apply.py batch"`, then start again.
 - Jobs listed as not submitted with "unanswered" questions need a human answer; open the link and apply by hand.
