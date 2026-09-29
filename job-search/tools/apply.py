@@ -220,6 +220,12 @@ async def dismiss_menu(page,inp=None):
     if CUR_ATS!="wellfound":
         try: await page.keyboard.press("Escape")
         except Exception: pass
+async def tick(h):
+    """Check a checkbox/radio; custom-styled inputs are hidden, so fall back to clicking their label or setting the state directly."""
+    try: await h.check(timeout=3000); return True
+    except Exception:
+        await h.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else {el.click();} if(!el.checked){el.checked=true; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));}}")
+        return True
 async def body_text(page):
     """document.body.innerText, tolerant of a navigation landing mid-call (e.g. Greenhouse jumping to /confirmation)."""
     for i in range(3):
@@ -731,8 +737,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             for i in range(n):
                 h=cbs.nth(i)
                 try:
-                    if not await h.is_visible() or await h.is_checked(): continue
+                    if await h.is_checked(): continue
                     lab=await label_of(h)
+                    if not await h.is_visible() and not lab: continue   # hidden custom-styled boxes (Wellfound) are fine when they carry a label
                     if re.search(r"pronoun|newsletter|marketing|updates|subscribe|text message|sms",lab,re.I): continue
                     grp=await h.evaluate(r"""(el)=>{const fs=el.closest('fieldset,[role=group]'); let n=(el.getAttribute('name')||'').replace(/\[\d+\]$/,'');
                         if(!fs&&!n&&el.id){n='id:'+el.id.replace(/(--|-|_)\d+$/,'').replace(/\[\d+\]$/,'');}   // Wellfound: options share an id prefix, no name/fieldset
@@ -746,7 +753,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 try:
                     members=[b for b in boxes if b[2]==gk]
                     if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present",lab,re.I):
-                        await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"; continue
+                        await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
                         if gk in done_groups: continue
@@ -758,10 +765,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             ticked=[]
                             for b in members:
                                 if re.search(ENV_TRUE,b[1],re.I) and not re.search(r"none of the above|not applicable|n/a|prefer not|other",b[1],re.I):
-                                    try: await b[0].check(timeout=3000); ticked.append(b[1][:40])
-                                    except Exception:
-                                        try: await b[0].evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l) l.click(); else el.click();}"); ticked.append(b[1][:40])
-                                        except Exception: pass
+                                    try: await tick(b[0]); ticked.append(b[1][:40])
+                                    except Exception: pass
                             if ticked: report["chosen"][(q or lab)[:60]]=", ".join(ticked); continue
                         choice=None
                         for pv in want:
@@ -770,8 +775,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             if choice: break
                         if not choice and (await is_required(members[0][0]) or re.search(r"hear about|source",q+" "+lab,re.I)):
                             choice=next((b for b in members if re.search(r"other",b[1],re.I)),members[0])
-                        if choice: await choice[0].check(timeout=3000); report["chosen"][(q or lab)[:60]]=choice[1][:60]
-                    elif await is_required(h): await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"
+                        if choice: await tick(choice[0]); report["chosen"][(q or lab)[:60]]=choice[1][:60]
+                    elif await is_required(h): await tick(h); report["chosen"][lab[:60]]="checked"
                 except Exception: pass
             answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
