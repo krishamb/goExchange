@@ -12,58 +12,16 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3042066-senior-machine-learning-engineer-data",
-  "tag": "luma_ai_senior_machine_learning_engineer_da",
-  "company": "Luma AI",
-  "title": "Senior Machine Learning Engineer- Data",
-  "comp": "$180k \u2013 $250k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/545767-director-software-engineering",
-  "tag": "agent_iq_director_software_engineering",
-  "company": "Agent IQ",
-  "title": "Director, Software Engineering",
-  "comp": null,
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3264443-senior-backend-engineer-staff",
-  "tag": "safetykit_senior_backend_engineer_staff",
-  "company": "SafetyKit",
-  "title": "Senior Backend Engineer (Staff)",
-  "comp": null,
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4173486-staff-software-engineer-early-product",
   "tag": "atomus_staff_software_engineer_early_produ",
   "company": "Atomus",
   "title": "Staff Software Engineer (Early Product)",
   "comp": "$290k \u2013 $370k",
   "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4320899-principal-systems-engineer-linux-kernel",
-  "tag": "cedana_ai_principal_systems_engineer_linux_ke",
-  "company": "Cedana AI",
-  "title": "Principal Systems Engineer: Linux Kernel",
-  "comp": "$140k \u2013 $180k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Did you do your undergraduate in Computer Science, Computer Engineering or a rel"
+  ]
  },
  {
   "ats": "wellfound",
