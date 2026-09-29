@@ -1,16 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://careers.withwaymo.com/jobs?gh_jid=7361509",
-  "tag": "waymo_embedded_software_technical_lead_ma",
-  "company": "waymo",
-  "title": "Embedded Software Technical Lead & Manager, Simulation",
-  "comp": 356000.0,
-  "loc": "Mountain View, CA, USA",
-  "lang": "C++"
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8052794",
   "tag": "flowtraders_senior_software_engineer_c_market_d",
   "company": "flowtraders",
@@ -121,16 +111,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://careers.withwaymo.com/jobs?gh_jid=7438328",
-  "tag": "waymo_senior_data_engineer",
-  "company": "waymo",
-  "title": "Senior Data Engineer",
-  "comp": 310000.0,
-  "loc": "Mountain View, California, USA",
-  "lang": "C++"
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8052796",
   "tag": "flowtraders_senior_software_engineer_c",
   "company": "flowtraders",
@@ -177,16 +157,6 @@
   "title": "Senior Software Engineer, Query Optimization",
   "comp": 248000.0,
   "loc": "Austin; New York City; United States",
-  "lang": "C++"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://careers.withwaymo.com/jobs?gh_jid=7905695",
-  "tag": "waymo_senior_software_engineer_booking",
-  "company": "waymo",
-  "title": "Senior Software Engineer, Booking",
-  "comp": 270000.0,
-  "loc": "Mountain View, CA, United States",
   "lang": "C++"
  },
  {
