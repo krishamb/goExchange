@@ -854,7 +854,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     grp=await h.evaluate(r"""(el)=>{const fs=el.closest('fieldset,[role=group]'); let n=(el.getAttribute('name')||'').replace(/\[\d+\]$/,'');
                         if(!fs&&!n&&el.id){n='id:'+el.id.replace(/(--|-|_)\d+$/,'').replace(/\[\d+\]$/,'');}   // Wellfound: options share an id prefix, no name/fieldset
                         let q=''; if(fs){const l=fs.querySelector('legend,.application-label,[class*=label]'); q=l?l.innerText:'';}
-                        if(!q){let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText){const t=prev.innerText.trim(); if(t.length>3&&t.length<300&&/\?|select|choose|which|apply/i.test(t)){q=t;break;}} p=p.parentElement;}}
+                        if(!q){let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText){const t=prev.innerText.trim(); if(t.length>3&&t.length<300&&/\?|select|choose|which|apply|[*✱]$|pronoun|gender|ethnic|race|veteran|disab|hear about|source/i.test(t)){q=t;break;}} p=p.parentElement;}}
                         return [fs?('fs:'+(fs.id||q||n)):n, q.replace(/\s+/g,' ').replace(/[✱*]/g,'').trim()];}""")
                     boxes.append((h,lab,grp[0] or f"cb{i}",grp[1]))
                 except Exception: pass
@@ -868,6 +868,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
                         if gk in done_groups: continue
                         done_groups.add(gk)
+                        if not q and any(re.search(r"he/him|she/her|they/them",b[1],re.I) for b in members): q="Preferred pronouns"   # pronoun pick-list without a captured heading
                         want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
                         if want==["__ASK__"]: continue
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
