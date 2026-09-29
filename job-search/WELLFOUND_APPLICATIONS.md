@@ -17,6 +17,7 @@ Source: the **Applied** page of the Wellfound account (wellfound.com/jobs/applic
 | 8 | Checkr | Engineering Manager, Verifications | Applied (Status Updates Offsite) |
 | 9 | Adeia | Co-Packaged Optics Director | Applied — **judgment miss**: photonics/hardware role, consider withdrawing |
 | 10 | Oklo | Director of Development Engineering | Applied — **flag**: reactor development engineering (Santa Clara, $200–250K), consider withdrawing |
+| 13 | FlowGen Labs | Staff Software Engineer | Applied — **flag**: the form asked for 5 days/week in the SF office and was answered Yes before the 5-day rule existed; withdraw if you don't want fully on-site |
 
 ## Ongoing (earlier applications still open on Wellfound)
 
