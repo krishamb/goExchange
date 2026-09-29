@@ -1,19 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4766936-analytics-engineer-clone",
-  "tag": "snout_founding_data_engineer",
-  "company": "Snout",
-  "title": "Founding Data Engineer",
-  "comp": 185000.0,
-  "loc": "Austin, Boston, Chicago, Dallas, Los Angeles, New York City, Seattle, Washington DC, San Francisco, Irvine",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790381335
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766893-principal-solutions-consultant",
   "tag": "assured_principal_solutions_consultant",
   "company": "Assured",
@@ -23,8 +10,11 @@
   "tier": 0,
   "size": "SIZE_201_500",
   "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Assured",
+   "Do you have basic understanding of either SQL, JSON and APIs?*"
+  ],
   "posted_ts": 1790378668
  },
  {
