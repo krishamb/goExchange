@@ -3,3 +3,4 @@
 - Mozilla — Staff Software Engineer, Web Application Services (Greenhouse): 14-question essay form including an AI-use question.
 - Schonfeld — Forward Deployed Engineer (Greenhouse, https://job-boards.greenhouse.io/schonfeld): the race question offers no 'decline to answer' option, so it is left for the applicant.
 - Watney Robotics — Staff Machine Learning Engineer (Wellfound): personal essay questions ('When was the hardest you worked in your life?', 'Tell us about your biggest professional failure') left for the applicant; also asks for 5 days/week on-site in San Francisco.
+- Mithrl — Member of Technical Staff, Discovery Applications (Wellfound, https://wellfound.com/jobs/3704625-member-of-technical-staff-discovery-applications): three required personal-essay questions ('one decision you made that turned out to be wrong', 'something you built without being asked', 'worked in a science-based or biotech company before') left for the applicant.

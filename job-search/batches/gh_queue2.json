@@ -1,16 +1,12 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/huntress/jobs/7977223003",
-  "tag": "huntress_staff_platform_engineer",
-  "company": "huntress",
-  "title": "Staff Platform Engineer",
-  "comp": 220000.0,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What IaC (infrastructure as code) tools have you used (ex. Terraform, Ansible, P"
-  ],
-  "posted_ts": 1789344000.0
+  "url": "https://job-boards.greenhouse.io/singlestore/jobs/8185161",
+  "tag": "singlestore_staff_software_engineer",
+  "company": "singlestore",
+  "title": "Staff Software Engineer",
+  "comp": "$160,000 - $210,000 ",
+  "loc": "United States",
+  "posted_ts": 1790553600.0
  }
 ]
