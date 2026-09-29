@@ -96,7 +96,7 @@ CHOICE_RULES=[
  (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
  (r"have you (ever )?used|are you a (current )?(user|customer)|used (our|the) (product|app|platform)", ["Yes","yes"]),
  (r"FHIR|HL7|CCDA|HIPAA|\bPHI\b|\bEHR\b|EMR\b|clinical|healthcare partner|medical device|\bFDA\b|GxP|pharma|ICD-?10|CPT codes|claims data|payer", ["No","no"]),   # not in the applicant's background: answer honestly
- (r"^have you (ever )?(worked|built|owned|operated|led|designed|managed|shipped|deployed|architected|scaled|mentored|hired|delivered|run|written)|experience (with|in|building|leading|managing|designing)|are you (comfortable|experienced|familiar|proficient)|do you have (hands-on )?experience|have you (previously )?(held|been in|served)", ["Yes","yes"]),
+ (r"^(?!.*(veteran|military|armed forces))(have you (ever )?(worked|built|owned|operated|led|designed|managed|shipped|deployed|architected|scaled|mentored|hired|delivered|run|written)|.*experience (with|in|building|leading|managing|designing)|.*are you (comfortable|experienced|familiar|proficient)|.*do you have (hands-on )?experience|.*have you (previously )?(held|been in|served as))", ["Yes","yes"]),
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
  (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
