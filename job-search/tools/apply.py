@@ -549,14 +549,16 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         btn=page.locator('button:has-text("Apply on website"), button:has-text("Apply on company website")').first
                         if await btn.count():
                             try:
-                                async with page.context.expect_page(timeout=8000) as pinfo: await btn.click(timeout=5000)
+                                async with page.context.expect_page(timeout=15000) as pinfo: await btn.click(timeout=5000)
                                 newp=await pinfo.value
                                 try: await newp.wait_for_load_state("domcontentloaded",timeout=20000)
                                 except Exception: pass
                                 href=newp.url; await newp.close()
                             except Exception:
-                                await page.wait_for_timeout(4000)
-                                if "wellfound.com" not in page.url: href=page.url
+                                await page.wait_for_timeout(5000)
+                                others=[pp for pp in page.context.pages if pp is not page and "wellfound.com" not in pp.url]
+                                if others: href=others[0].url; [await pp.close() for pp in others]
+                                elif "wellfound.com" not in page.url: href=page.url
                             if href and "wellfound.com" in href: href=None
                     if href and re.search(r"greenhouse\.io|gh_jid=",href):
                         # Wellfound hands off to the company's Greenhouse form: apply there (same code flow as any Greenhouse job)
