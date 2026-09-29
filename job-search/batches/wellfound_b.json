@@ -1,19 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4644368-field-cto",
-  "tag": "weave_field_cto",
-  "company": "Weave",
-  "title": "Field CTO",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "How likely are you to start a startup in the next 5 years?*"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748744-founding-engineer",
   "tag": "fig_ai_founding_engineer",
   "company": "Fig AI",
