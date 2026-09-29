@@ -1,113 +1,16 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/1839334-lead-engineer-vp-of-engineering",
-  "tag": "inkah_lead_engineer_vp_of_engineering",
-  "company": "Inkah",
-  "title": "Lead Engineer / VP of Engineering",
-  "comp": "$40k \u2013 $70k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3079112-senior-staff-backend-engineer",
-  "tag": "complete_yc_w22_senior_staff_backend_engineer",
-  "company": "Complete (YC W22)",
-  "title": "Senior/Staff Backend Engineer",
-  "comp": null,
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4204791-2-staff-software-engineer-backend",
-  "tag": "ivo_staff_software_engineer_backend",
-  "company": "Ivo",
-  "title": "Staff Software Engineer, Backend",
-  "comp": "$287k \u2013 $485k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4099721-staff-senior-backend-engineer",
-  "tag": "prysm_health_staff_senior_backend_engineer",
-  "company": "Prysm Health",
-  "title": "Staff / Senior Backend Engineer",
-  "comp": "$170k \u2013 $230k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3714087-member-of-technical-staff",
-  "tag": "eudia_member_of_technical_staff",
-  "company": "Eudia",
-  "title": "Member of Technical Staff",
-  "comp": "$180k \u2013 $210k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3081754-senior-solutions-architect",
-  "tag": "plato_systems_senior_solutions_architect",
-  "company": "Plato Systems",
-  "title": "Senior Solutions Architect",
-  "comp": "$145k \u2013 $175k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4144354-tech-lead-manager-full-stack",
-  "tag": "forecareer_tech_lead_manager_full_stack",
-  "company": "Forecareer",
-  "title": "Tech Lead Manager, Full Stack",
-  "comp": "$230k \u2013 $300k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4377649-solution-architect",
-  "tag": "truefoundry_solution_architect",
-  "company": "TrueFoundry",
-  "title": "Solution Architect",
-  "comp": null,
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3031520-rust-backend-engineer",
-  "tag": "svix_yc_w21_rust_backend_engineer",
-  "company": "Svix (YC W21)",
-  "title": "Rust Backend Engineer",
-  "comp": "$130k \u2013 $180k",
-  "loc": "Bay Area",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4752094-mts-research-cybersecurity",
   "tag": "collinear_ai_mts_research_cybersecurity",
   "company": "Collinear.ai",
   "title": "MTS - Research (Cybersecurity)",
   "comp": null,
   "loc": "Remote",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Collinear.ai"
+  ]
  },
  {
   "ats": "wellfound",
