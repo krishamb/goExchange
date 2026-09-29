@@ -9,7 +9,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cover
 JOBS_DIR=os.environ.get("JOBS_DIR","/tmp/claude-0/-home-user-goExchange/8d20ffb7-2488-5f8f-a666-35334b9e3ba6/scratchpad/f")
 OUT=os.path.join(JOBS_DIR,"out"); os.makedirs(OUT,exist_ok=True)
+JOBS_DIR=os.path.expanduser(JOBS_DIR)
 P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
+for _k in ("resume","cover_letter"):
+    if P.get(_k): P[_k]=os.path.expanduser(P[_k])
 ANS=json.load(open(os.path.join(JOBS_DIR,"answers.json"))) if os.path.exists(os.path.join(JOBS_DIR,"answers.json")) else {}
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 HEADED="--headed" in sys.argv
