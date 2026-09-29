@@ -1,28 +1,16 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748852-staff-software-engineer-infrastructure-san-francisco-hq",
-  "tag": "orb_staff_software_engineer_infrastruct",
-  "company": "Orb",
-  "title": "Staff Software Engineer, Infrastructure - San Francisco HQ",
-  "comp": 367000,
-  "loc": "San Francisco",
-  "tier": 1,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "you willing to come in 3 days per week?* | Yes | No | LinkedIn Profile | U.S. Work Authorization* | ",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4589664-senior-engineering-manager-client-group",
   "tag": "virta_health_senior_engineering_manager_client_g",
   "company": "Virta Health",
   "title": "Senior Engineering Manager - Client Group",
   "loc": "Remote | ?",
   "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Select a response that accurately describes your level of experience with AI too"
+  ]
  },
  {
   "ats": "wellfound",
