@@ -115,6 +115,8 @@ CHOICE_RULES=[
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
+ (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
+ (r"export control|u\.?s\.? person|ITAR|EAR", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
  (r"veteran|military", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
@@ -492,7 +494,15 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     report["result"]="NOT SUBMITTED: "+("location restricted by employer" if "current location" in wf_body else "job closed")
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 ta=page.locator('textarea').first
-                if await ta.count(): await ta.fill(extra.get("note") or ANS.get("why_us",""),timeout=15000); report["filled"]["note"]="ok"
+                if await ta.count():
+                    note=extra.get("note") or ANS.get("why_us","")
+                    first=None
+                    try:   # the note is the message the hiring contact (often the founder) receives with the application: address them by name
+                        hc=re.search(r"Your hiring contact is ([A-Z][\w.'-]+(?: [A-Z][\w.'-]+){0,3})",await body_text(page))
+                        first=hc.group(1).split()[0] if hc else None
+                    except Exception: pass
+                    if jtitle and company: note=(f"Hi {first}, " if first else "Hi, ")+f"I'm applying for the {jtitle} role at {company}. "+note
+                    await ta.fill(note,timeout=15000); report["filled"]["note"]="ok"; report["hiring_contact"]=first
                 if not await page.locator('button:has-text("Send application")').count():
                     ext=page.locator('a:has-text("Apply on website"), a:has-text("Apply on company website")').first
                     href=(await ext.get_attribute("href")) if await ext.count() else None
@@ -664,7 +674,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     opts=[]
                     for x in hs: opts.append(((await x.get_attribute("value")) or "", await label_of(x)))
                     # the nearest preceding text is usually the question; prefer it over a distant heading when it reads like one
-                    qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<200) return prev.innerText; p=p.parentElement;} return '';}")
+                    qlab2=await hs[0].evaluate("(el)=>{let p=el.parentElement; for(let i=0;i<9&&p;i++){const prev=p.previousElementSibling; if(prev&&prev.innerText&&prev.innerText.trim().length>3&&prev.innerText.trim().length<420) return prev.innerText; p=p.parentElement;} return '';}")
                     qlab2=re.sub(r"\s+"," ",qlab2).replace("✱","").strip(); optl=[o[1].lower() for o in opts]
                     if qlab2 and qlab2.lower() not in optl and (not qlab or qlab.lower() in optl or (qlab2.rstrip("* ").endswith("?") and not qlab.rstrip("* ").endswith("?"))): qlab=qlab2
                     cands=[]
@@ -761,6 +771,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         done_groups.add(gk)
                         want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
                         if want==["__ASK__"]: continue
+                        if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board"]+want   # applying through Wellfound: say so
                         if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
                             # "which environments describe your experience (select all that apply)": tick every option true for the applicant's history
                             ticked=[]
