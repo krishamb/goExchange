@@ -589,7 +589,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     lab=await label_of(h)
                     if not lab: continue
                     cur=(await h.inner_text()).strip()
-                    if cur and not re.search(r"select|choose|--",cur,re.I): continue
+                    if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
                     pref=None
                     for k,v in extra.items():
                         if k.lower() in lab.lower(): pref=[v]; break
