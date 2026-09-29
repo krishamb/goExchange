@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4754607-principal-engineer",
-  "tag": "cocoon_principal_engineer",
-  "company": "Cocoon",
-  "title": "Principal Engineer",
-  "comp": 120000.0,
-  "loc": "New York City",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4698050-senior-machine-learning-engineer-ads-quora-remote",
   "tag": "quora_senior_machine_learning_engineer_ad",
   "company": "Quora",
@@ -20,8 +8,10 @@
   "comp": 275000.0,
   "loc": "United States",
   "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "I understand that all employees for this position will be expected to be availab"
+  ]
  },
  {
   "ats": "wellfound",
