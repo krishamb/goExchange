@@ -518,6 +518,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             if ats=="greenhouse":
                 m=re.search(r"greenhouse\.io/([^/]+)/jobs/(\d+)",url)
                 if m: url=f"https://job-boards.greenhouse.io/embed/job_app?for={m.group(1)}&token={m.group(2)}"
+                elif re.search(r"gh_jid=(\d+)",url) and company:   # company site hosting a Greenhouse job (nuro.ai/careersitem?gh_jid=...): the board is the company slug
+                    board=re.sub(r"[^a-z0-9]","",company.lower()); token=re.search(r"gh_jid=(\d+)",url).group(1)
+                    url=f"https://job-boards.greenhouse.io/embed/job_app?for={board}&token={token}"
             if ats!="wellfound": await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
             for sel in ['button:has-text("Accept All")','button:has-text("Accept all")','button:has-text("Accept")','button:has-text("I agree")','button:has-text("Got it")','button:has-text("Decline All")']:
                 try:
