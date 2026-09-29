@@ -94,6 +94,7 @@ CHOICE_RULES=[
  (r"authori[sz]ed to work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
+ (r"currently live (in|or)|live (in|near) (this |the )?(job|role|position)|live or (are you )?willing to relocate", ["I currently live in this job's location","I currently live","I live in","Yes, I live","I am willing to relocate","Willing to relocate","Yes"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
  (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
