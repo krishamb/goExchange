@@ -713,24 +713,33 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if ats=="greenhouse" and outlook_cfg():
                     op=await outlook_page()
                     if op: baseline=tuple(await outlook_codes(op))   # codes already in the inbox before this submission
-                await btn.scroll_into_view_if_needed()
-                try: await btn.click(timeout=10000)
-                except Exception:
-                    # a disabled submit button usually means the form was already sent and the code prompt is up
-                    body0=await page.evaluate("()=>document.body.innerText")
-                    if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
-                await page.wait_for_timeout(9000)
-                body=await page.evaluate("()=>document.body.innerText")
                 CODE_BOXES='input[autocomplete="one-time-code"]:visible, [class*="security-code"] input:visible, [class*="securityCode"] input:visible, input[name*="security_code"]:visible'
-                if re.search(r"verification code|security code|confirm you.re a human",body,re.I) or await page.locator(CODE_BOXES).count():
-                    if await enter_email_code(page,report,baseline):
-                        await page.wait_for_timeout(800)
-                        try: await btn.click(timeout=10000)
-                        except Exception:
-                            b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
-                        await page.wait_for_timeout(9000)
-                        body=await page.evaluate("()=>document.body.innerText")
-                        if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
+                for attempt in range(2):
+                    await btn.scroll_into_view_if_needed()
+                    try: await btn.click(timeout=10000)
+                    except Exception:
+                        # a disabled submit button usually means the form was already sent and the code prompt is up
+                        body0=await page.evaluate("()=>document.body.innerText")
+                        if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
+                    await page.wait_for_timeout(9000)
+                    body=await page.evaluate("()=>document.body.innerText")
+                    if re.search(r"verification code|security code|confirm you.re a human",body,re.I) or await page.locator(CODE_BOXES).count():
+                        if await enter_email_code(page,report,baseline):
+                            await page.wait_for_timeout(800)
+                            try: await btn.click(timeout=10000)
+                            except Exception:
+                                b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
+                            await page.wait_for_timeout(9000)
+                            body=await page.evaluate("()=>document.body.innerText")
+                            if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
+                    # Greenhouse's uploader occasionally drops the file ("Cannot read properties of undefined (reading 'uploadFile')"): re-attach and submit once more
+                    errs0=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
+                    if attempt==0 and any(re.search(r"uploadFile|Resume/CV is required",e) for e in errs0):
+                        try:
+                            await page.locator('input[type="file"]').first.set_input_files(P["resume"],timeout=15000); await page.wait_for_timeout(6000)
+                            report.setdefault("notes",[]).append("resume re-attached after uploader error"); continue
+                        except Exception: pass
+                    break
                 sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set|task complete|good news",body,re.I)
                 if not sm and re.search(r"/confirmation\b",page.url): sm=re.search(r"\S.{0,60}",body)   # Greenhouse confirmation page URL
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
