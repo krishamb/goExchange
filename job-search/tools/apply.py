@@ -69,6 +69,7 @@ TEXT_RULES=[
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
  (r"when (can|could|are you able to) you start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Immediately (available now, no notice period)"),
  (r"heard about us from a (friend|family|current|former)|referr(ed|al).*(name|who)|name of (the |your )?(employee|referrer|person who)|who referred you|referred by", "N/A"),
+ (r"how your (experience|background) aligns|aligns? (to|with) (the )?(role|position|requirements|job)|why (are you|would you be|you are) a (good |great |strong )?fit|what makes you a (good |great |strong )?fit|relevant experience for this role", "25+ years building and leading distributed, low-latency systems at JPMorgan Chase, Morgan Stanley, Bloomberg and Yahoo Finance (Chief Architect for the AWS modernization serving ~40M daily users), and most recently CTO & Technical Co-Founder of Hyperion AI, where I built agentic AI platforms end to end. I combine hands-on architecture and code (Python, Rust, C++, Go) with leading engineering teams through delivery and 24x7 operation."),
  (r"(iac|infrastructure as code).*(tools|used|experience)|(which|what) (iac |infrastructure |devops |cloud )?(tools|technologies|platforms|frameworks) (have you|do you)", "Terraform and Kubernetes on AWS and GCP (plus Azure), with Jenkins and Puppet deployment pipelines earlier at JPMorgan Chase and Morgan Stanley; CI/CD with correctness gates and observability via OpenTelemetry and Prometheus/Grafana."),
  (r"from where do you (intend|plan|expect) to work|where (will|would|do) you (be )?work(ing)? from|intended (work )?location|where would you (be )?(based|located)", "Santa Clara, CA (San Francisco Bay Area); open to hybrid in the SF Bay Area or New York City"),
  (r"willing to (work|come|be)|open to working|days? (a|per) week|days (from|in|at) (one of )?our office|office hub|in.office|on.?site|hybrid", "Yes"),
@@ -148,7 +149,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()
