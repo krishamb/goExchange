@@ -13,61 +13,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4775043-director-of-engineering",
-  "tag": "dynamism_io_director_of_engineering",
-  "company": "Dynamism.io",
-  "title": "Director of Engineering",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4755856-engineering-manager-dashboard",
-  "tag": "vercel_engineering_manager_dashboard",
-  "company": "Vercel",
-  "title": "Engineering Manager, Dashboard",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4710795-member-of-technical-staff-tlm-context-engineering",
-  "tag": "profound_member_of_technical_staff_tlm_conte",
-  "company": "Profound",
-  "title": "Member of Technical Staff, TLM, Context Engineering",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4682096-director-of-engineering",
-  "tag": "cushman_wakefield_director_of_engineering",
-  "company": "Cushman & Wakefield",
-  "title": "Director of Engineering",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4597817-engineering-manager",
-  "tag": "clever_engineering_manager",
-  "company": "Clever",
-  "title": "Engineering Manager",
-  "loc": "Bay Area | ?",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4163036-2-machine-learning-engineer",
   "tag": "zenos_machine_learning_engineer",
   "company": "Zenos",
