@@ -82,6 +82,7 @@ TEXT_RULES=[
 ]
 CHOICE_RULES=[
  (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
+ (r"select your (current )?location|your current location|which (hub|location|city|metro) (are you|is closest|do you)|where (are|do) you (currently )?(based|live|located|reside)", ["San Francisco Bay Area","SF Bay Area","Bay Area","San Francisco","San Jose","Santa Clara","Bay Area, CA","California","Remote, United States","Remote - United States","Remote (US)","US Remote","United States","Remote"]),
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
  (r"in[- ]person|open to working|come into the office|days? (a|per) week|times (a|per) week|commit to being in|being in (one of )?(these|our|the) offices?|days (from|in|at) (one of )?our office|office hub", ["Yes","yes"]),
