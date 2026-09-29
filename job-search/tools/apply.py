@@ -126,6 +126,7 @@ CHOICE_RULES=[
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
  (r"support of .{0,40} to maintain (that |your )?(work )?authori[sz]ation|maintain (that |your )?(work )?authori[sz]ation|visa support|immigration support", ["No","no"]),
  (r"how much notice|notice period|notice do you (require|need)", ["No notice needed","No notice","None","Immediately","Available immediately","0 weeks","Less than 2 weeks","2 weeks"]),
+ (r"compensation is standardi[sz]ed|comfortable with the (salary|compensation|pay)|salary (range |band )?(is )?non-negotiable|salary being offered|within (the|this) (salary|compensation|pay) range|acceptable to you", ["Yes","yes","I understand","Yes, I understand"]),   # applicant: salary is not a filter
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|ITAR|EAR", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
