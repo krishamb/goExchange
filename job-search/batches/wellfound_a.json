@@ -1,25 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4628406-data-engineering-manager",
-  "tag": "opensesame_data_engineering_manager",
-  "company": "OpenSesame",
-  "title": "Data Engineering Manager",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "How would you characterize your formal people management experience with technic",
-   "What level of hands-on responsibility have you had for Snowflake in a production",
-   "What best describes your role in designing and maintaining production ETL/ELT pi",
-   "Which statement best describes your experience preparing data platforms for AI o",
-   "Which statement best reflects your experience establishing data governance pract",
-   "How have you applied software engineering standards within data engineering envi",
-   "Which best explains your experience with data modeling and performance optimizat"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4718955-engineering-manager-tradeify-platform",
   "tag": "tradeify_co_engineering_manager_tradeify_platfo",
   "company": "Tradeify.co",
