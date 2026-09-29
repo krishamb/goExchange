@@ -165,6 +165,11 @@ TEXT_RULES=[
 ]
 CHOICE_RULES=[
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
+ (r"(authori[sz]ed|eligible|able|permitted|legally allowed) to (lawfully )?work .{0,80}without (the )?(need (for|of) |requiring |any )?(visa |employer |company |employment )?sponsorship", ["Yes","yes"]),   # "authorized ... without sponsorship" is a Yes, not a sponsorship request
+ (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
+ (r"requir\w* (spon?orship|sponsership)", ["No","no"]),   # misspelt "sponsorship" on some forms; US citizen needs none
+ (r"from 0.?(→|->|to).?1|0 ?to ?1 .{0,40}(model|ml)|new ml model or ml-powered system", ["Yes","yes"]),   # Yahoo TFX recommendation/clustering models, Hyperion fraud-detection ML
+ (r"metaview|ai notetaking tool|record(ing)? and summariz", ["Yes","yes"]),   # consent to an AI notetaker in interviews
  (r"geographical requirements", ["I can be based in the US where I do not need visa support"]),
  (r"delivered production technical solutions in complex enterprise", ["Yes, and I've led strategic enterprise deployments","Yes, regularly"]),
  (r"knowledge/experience do you have with n8n|experience (do you have )?with n8n", ["I've used other automation tools in current or previous roles"]),
