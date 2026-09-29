@@ -56,10 +56,10 @@ CHOICE_RULES=[
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
  (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
- (r"race|ethnicit|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
+ (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
- (r"18 (years|or older)|age of 18|over 18", ["Yes","yes"]),
+ (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree", ["Yes","I agree","I acknowledge","I consent","yes"]),
  (r"how did you hear|source", ["Company Website","Company website","Careers page","Career Page","Other","Job Board","Other/Not Listed"]),
  (r"school|university|college", ["University of Madras","Other","University"]),
@@ -79,12 +79,18 @@ def pick(label,rules):
     return None
 LABEL_JS=r"""
 (el)=>{let t='';
- if(el.id){const l=document.querySelector('label[for="'+CSS.escape(el.id)+'"]'); if(l) t=l.innerText;}
+ const byId=(id)=>{const l=document.querySelector('label[for="'+CSS.escape(id)+'"]'); return l? l.innerText:'';};
+ const byLabelledBy=(e)=>{const a=e.getAttribute('aria-labelledby'); if(!a) return ''; return a.split(/\s+/).map(i=>{const x=document.getElementById(i); return x? x.innerText:'';}).join(' ');};
+ if(el.id) t=byId(el.id);
  if(!t){const l=el.closest('label'); if(l) t=l.innerText;}
  if(!t && el.getAttribute('aria-label')) t=el.getAttribute('aria-label');
- if(!t && el.getAttribute('aria-labelledby')){const l=document.getElementById(el.getAttribute('aria-labelledby')); if(l) t=l.innerText;}
+ if(!t) t=byLabelledBy(el);
+ if(!t){const inp=el.querySelector('input[aria-labelledby], input[id], select[id]'); if(inp){ t=byLabelledBy(inp) || (inp.id? byId(inp.id):''); }}
  if(!t){const fs=el.closest('fieldset'); if(fs){const lg=fs.querySelector('legend'); if(lg) t=lg.innerText;}}
- if(!t){let p=el.parentElement; for(let i=0;i<6&&p;i++){const lab=p.querySelector('label, legend, .application-label, [class*="label"], [class*="Label"], h3, h4, .field-label, .question'); if(lab && lab.innerText.trim()){t=lab.innerText; break;} p=p.parentElement;}}
+ if(!t){let p=el.parentElement; for(let i=0;i<6&&p;i++){
+    let lab=null; for(const c of p.querySelectorAll('label, legend')){ if(!c.contains(el) && !el.contains(c) && c.innerText.trim()){lab=c; break;} }
+    if(!lab){ for(const c of p.querySelectorAll('.application-label, [class*="label"], [class*="Label"], h3, h4, .field-label, .question')){ if(c!==el && !c.contains(el) && !el.contains(c) && c.innerText.trim() && !/^select\.\.\.$/i.test(c.innerText.trim())){lab=c; break;} } }
+    if(lab){t=lab.innerText; break;} p=p.parentElement;}}
  return (t||'').trim().replace(/\s+/g,' ').replace(/[✱*]/g,'').trim();}
 """
 async def label_of(h): return await h.evaluate(LABEL_JS)
@@ -121,9 +127,16 @@ async def choose_select(page,h,options_pref):
     opts=await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())")
     for pref in options_pref:
         for o in opts:
-            if o.lower()==pref.lower() or pref.lower() in o.lower():
-                try: await h.select_option(label=o); return o
-                except Exception: pass
+            if o and (o.lower()==pref.lower() or pref.lower() in o.lower()):
+                try:
+                    if await h.is_visible(): await h.select_option(label=o)
+                    else: raise RuntimeError("hidden")
+                    return o
+                except Exception:
+                    try:
+                        await h.evaluate("(s,label)=>{for(const op of s.options){if(op.text.trim()===label){s.value=op.value; op.selected=true;}} s.dispatchEvent(new Event('input',{bubbles:true})); s.dispatchEvent(new Event('change',{bubbles:true})); if(window.jQuery){try{window.jQuery(s).trigger('change');}catch(e){}}}",o)
+                        return o
+                    except Exception: pass
     return None
 OPT_SEL='[role="option"]:visible:not(.iti__country), [class*="select__option"]:visible, [class*="Select__option"]:visible'
 async def visible_options(page):
@@ -203,7 +216,15 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     report["submitted"]=True; report["result"]=(await page.evaluate("()=>document.body.innerText.slice(0,500)")).replace("\n"," | ")
                     await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
                 json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
+            if ats=="greenhouse":
+                m=re.search(r"greenhouse\.io/([^/]+)/jobs/(\d+)",url)
+                if m: url=f"https://job-boards.greenhouse.io/embed/job_app?for={m.group(1)}&token={m.group(2)}"
             await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
+            for sel in ['button:has-text("Accept All")','button:has-text("Accept all")','button:has-text("Accept")','button:has-text("I agree")','button:has-text("Got it")','button:has-text("Decline All")']:
+                try:
+                    el=page.locator(sel).first
+                    if await el.count() and await el.is_visible(): await el.click(timeout=2000); await page.wait_for_timeout(500); break
+                except Exception: pass
             if ats=="ashby" and "/application" not in page.url:
                 for sel in ['a:has-text("Apply for this Job")','a:has-text("Apply")','button:has-text("Apply")']:
                     try:
@@ -228,7 +249,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             for i in range(nf):
                 f=files.nth(i)
                 try: lab=(await label_of(f)).lower()
-                except Exception: continue
+                except Exception: lab="cover" if i==1 else ("resume" if i==0 else "")
+                if not lab: lab="cover" if i==1 else ("resume" if i==0 else "")
                 try:
                     if re.search(r"cover",lab): await f.set_input_files(cl_pdf or P.get("cover_letter",P["resume"])); report["filled"]["cover_letter"]="uploaded"
                     elif i==0 or re.search(r"resume|cv",lab): await f.set_input_files(P["resume"]); report["filled"]["resume"]="uploaded"
@@ -247,6 +269,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     name=await h.get_attribute("name") or ""; lab=await label_of(h)
                     if re.search(r"captcha|search",name+lab,re.I): continue
                     ph=(await h.get_attribute("placeholder") or "")
+                    if lab.strip().lower() in ("select...","select") or re.search(r"select2",(await h.get_attribute("class")) or ""): continue
                     if re.search(r"^location$|current location|^city$|where are you (based|located)",lab,re.I) or (ats=="lever" and name=="location") or (re.search(r"start typing",ph,re.I) and re.search(r"location|city",lab,re.I)):
                         if not (await h.input_value()).strip():
                             got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara")
@@ -273,8 +296,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             for i in range(n):
                 h=sels.nth(i)
                 try:
-                    if not await h.is_visible(): continue
+                    vis=await h.is_visible()
+                    if not vis and not await h.evaluate("(s)=>!!(s.id||s.name)"): continue
                     lab=await label_of(h); name=await h.get_attribute("name") or ""
+                    if not lab and not vis: continue
                     pref=None
                     for k,v in extra.items():
                         if k.lower() in (name+" "+lab).lower(): pref=[v]; break
