@@ -94,6 +94,7 @@ TEXT_RULES=[
 ]
 CHOICE_RULES=[
  (r"authori[sz]ed? .{0,40}without (company |employer |visa |any )?sponsorship|without (company |employer |visa )?sponsorship|legal(ly)? authori[sz]ation to work in the (us|u\.s\.|united states)", ["Yes","yes"]),   # US citizen: authorized without sponsorship
+ (r"(require|need|will you .{0,30}require) .{0,30}(work authori[sz]ation|visa|sponsorship|immigration)", ["No","no"]),   # US citizen: will never require work authorization / sponsorship (Wellfound's standard question)
  (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["No","no"]),   # applicant: no fully on-site 5-day roles
  (r"engineering blog|influence your decision|how much did .{0,60}influence", ["3 = Neutral","Neutral","3","Moderate","4 = Moderate"]),   # marketing-attribution scale questions
  (r"immediate family|relatives? (who )?(work|employed)|family members? (who )?(work|employed)|debarred|excluded by the OIG|convicted|felony|criminal|non-?compete|conflict of interest|restrictive covenant", ["No","no"]),   # compliance questions: none apply
@@ -106,7 +107,7 @@ CHOICE_RULES=[
  (r"understand that .{0,40}(may )?use ai|company may use ai|we (may )?use ai|ai tools to assist in the (application|interview)", ["Yes","I understand","I acknowledge","Acknowledge"]),
  (r"how (do )?you use ai|use ai tools today|describes (how )?you use ai|your (use|usage) of ai tools|ai (proficiency|fluency)", ["I design or automate workflows with AI","I regularly use AI tools","I have experimented with AI tools","Advanced","Expert"]),
  (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
- (r"authori[sz]ed to (lawfully |legally )?work|lawfully work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
+ (r"authori[sz]ed to (lawfully |legally )?work|lawfully work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","Can work for any employer","Any employer","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
  (r"currently an? .{0,60}(employee|contractor|intern)\b|current(ly)? (employee|contractor) of|employed by .{0,40}(currently|now|today)", ["No","no"]),   # not a current employee of the hiring company
  (r"\bFINRA\b|series (7|24|27|63|65|66|99)\b|securities licen[sc]e", ["No","no"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
