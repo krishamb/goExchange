@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4748816-engineering-manager",
-  "tag": "nametag_engineering_manager",
-  "company": "Nametag",
-  "title": "Engineering Manager",
-  "comp": null,
-  "loc": "",
-  "tier": 3,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4748815-staff-software-engineer-python",
   "tag": "northbeam_staff_software_engineer_python",
   "company": "Northbeam",
