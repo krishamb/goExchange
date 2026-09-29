@@ -1,21 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779935-staff-software-engineer-replication-foundations",
-  "tag": "temporal_technologies_staff_software_engineer_replication",
-  "company": "Temporal Technologies",
-  "title": "Staff Software Engineer, Replication Foundations",
-  "comp": 278000,
-  "loc": "United States",
-  "tier": 1,
-  "size": "SIZE_501_1000",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790640518
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4757035-ai-engineer-ny",
   "tag": "scope_labs_ai_engineer_ny",
   "company": "Scope Labs",
@@ -23,7 +8,7 @@
   "comp": 200000.0,
   "loc": "New York City",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": "NOT SUBMITTED: location restricted by employer",
   "last_unanswered": [],
   "posted_ts": 1790640000
  },
