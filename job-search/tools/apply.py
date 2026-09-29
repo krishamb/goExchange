@@ -437,8 +437,12 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 await page.locator('button[type="submit"], input[type="submit"]').first.click(timeout=10000); await page.wait_for_timeout(5000)
                 await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(4000)
                 await page.locator('button:has-text("Apply Now"), button:has-text("Apply now"), button:has-text("Apply")').first.click(timeout=10000); await page.wait_for_timeout(3500)
+                wf_body=await page.evaluate("()=>document.body.innerText")
+                if re.search(r"not accepting applications from your current location|no longer accepting applications|this job is closed|position has been filled",wf_body,re.I):
+                    report["result"]="NOT SUBMITTED: "+("location restricted by employer" if "current location" in wf_body else "job closed")
+                    json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 ta=page.locator('textarea').first
-                if await ta.count(): await ta.fill(extra.get("note") or ANS.get("why_us","")); report["filled"]["note"]="ok"
+                if await ta.count(): await ta.fill(extra.get("note") or ANS.get("why_us",""),timeout=15000); report["filled"]["note"]="ok"
                 if not await page.locator('button:has-text("Send application")').count():
                     ext=page.locator('a:has-text("Apply on website"), a:has-text("Apply on company website")').first
                     href=(await ext.get_attribute("href")) if await ext.count() else None
