@@ -1,18 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4751446-director-solutions-architecture",
-  "tag": "writer_director_solutions_architecture",
-  "company": "Writer",
-  "title": "Director, solutions architecture ",
-  "comp": 353000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "ERROR TimeoutError: Locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator(\"butt",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4658838-engineering-manager-landing-pages",
   "tag": "braze_engineering_manager_landing_pages",
   "company": "Braze",
@@ -20,8 +8,10 @@
   "comp": 320000.0,
   "loc": "San Francisco",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Your hiring contact is Aleks Piasecka"
+  ]
  },
  {
   "ats": "wellfound",
