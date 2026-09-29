@@ -1,20 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/turing/jobs/6198594004",
-  "tag": "turing_staff_research_engineer_frontier_da",
-  "company": "turing",
-  "title": "Staff Research Engineer, Frontier Data",
-  "comp": 400000.0,
-  "loc": "United States",
-  "posted_ts": 1790208000.0,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Your country of residence"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/betterment/jobs/8212254",
   "tag": "betterment_sr_engineering_manager_api_auth_pla",
   "company": "betterment",
@@ -27,18 +13,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://careers.aqr.com/jobs?gh_jid=8221812&gh_jid=8221812",
-  "tag": "aqr_discretionary_macro_vice_president",
-  "company": "aqr",
-  "title": "Discretionary Macro - Vice President",
-  "comp": 265000.0,
-  "loc": "Greenwich, CT",
-  "posted_ts": 1790121600.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.fivetran.com/careers/job?gh_jid=8003720003",
   "tag": "fivetran_senior_software_engineer_orchestrat",
   "company": "fivetran",
@@ -48,18 +22,6 @@
   "posted_ts": 1790121600.0,
   "last_result": "(no report)",
   "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/gitlab/jobs/8828009002",
-  "tag": "gitlab_inc_staff_enterprise_architect",
-  "company": "GitLab Inc",
-  "title": "Staff Enterprise Architect",
-  "comp": 285600.0,
-  "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790035200.0
  },
  {
   "ats": "greenhouse",
