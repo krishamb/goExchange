@@ -66,6 +66,7 @@ TEXT_RULES=[
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"start date|available to start|availability|notice period", "Immediately"),
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
+ (r"from where do you (intend|plan|expect) to work|where (will|would|do) you (be )?work(ing)? from|intended (work )?location|where would you (be )?(based|located)", "Santa Clara, CA (San Francisco Bay Area); open to hybrid in the SF Bay Area or New York City"),
  (r"willing to (work|come|be)|open to working|days? (a|per) week|days (from|in|at) (one of )?our office|office hub|in.office|on.?site|hybrid", "Yes"),
  (r"(ever|currently|previously) (work|employ|been employed)|worked (at|for) .* before|former .{0,30}(employee|contractor)|current or former", "No"),
  (r"programming language|language\(s\) do you prefer|preferred language|which languages?", "Python and Go (also Rust and C++)"),
@@ -115,6 +116,7 @@ CHOICE_RULES=[
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
+ (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|ITAR|EAR", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
  (r"veteran|military", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
