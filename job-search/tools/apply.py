@@ -92,11 +92,11 @@ CHOICE_RULES=[
  (r"school|university|college", ["University of Madras","Other","University"]),
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
- (r"previously (applied|worked|employed)|currently employed by|worked (for|at) .* before|former employee|current employee|current or former|former or current|ever (worked|been employed)|currently (work|employed)", ["No","no"]),
+ (r"previously (applied|worked|employed)|currently employed by|worked (for|at) .* before|former employee|current employee|current or former|former or current|ever (worked|been employed)|currently (work|employed)", ["No","no","Never worked","Never","None of the above","Not applicable","N/A"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
- (r"state|province", ["California","CA"]),
+ (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"experience with|familiar|proficien|years", ["10+ years","10+","Expert","Yes"]),
 ]
 def pick(label,rules):
@@ -489,7 +489,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara")
                             report["filled"][lab[:60] or name]=f"autocomplete:{got}"
                         continue
-                    if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select/.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')"): continue
+                    if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select|requiredInput/i.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')||!!(el.parentElement&&el.parentElement.querySelector('[class*=select__control],[class*=Select__control]'))"): continue
                     if re.search(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai",lab,re.I): report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
                     key=lab or name
                     val=None
