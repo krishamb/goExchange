@@ -15,7 +15,9 @@
    "GROWING_FAST"
   ],
   "ai": true,
-  "tier": 0
+  "tier": 0,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
