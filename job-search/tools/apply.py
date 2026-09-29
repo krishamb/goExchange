@@ -85,7 +85,7 @@ CHOICE_RULES=[
  (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
  (r"authori[sz]ed to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility", ["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
- (r"(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
+ (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
  (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
