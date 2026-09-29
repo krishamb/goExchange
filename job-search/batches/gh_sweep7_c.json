@@ -1,0 +1,992 @@
+[
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8568151002",
+  "tag": "databricks_sr_director_enterprise_retail_verti",
+  "company": "databricks",
+  "title": "Sr. Director, Enterprise - Retail Vertical - Strategic Accounts ",
+  "comp": 605000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/tenstorrent/jobs/5148052007",
+  "tag": "tenstorrent_cpu_verification_fellow_risc_v_high",
+  "company": "tenstorrent",
+  "title": "CPU Verification Fellow, RISC-V High-Performance Processor",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/okta/jobs/8122478",
+  "tag": "okta_global_alliance_director_pwc",
+  "company": "okta",
+  "title": "Global Alliance Director- PwC ",
+  "comp": 470000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/bitgo/jobs/8158666002",
+  "tag": "bitgo_director_listings_ecosystem_develop",
+  "company": "bitgo",
+  "title": "Director - Listings & Ecosystem Development",
+  "comp": 450000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/datadog/jobs/7966795",
+  "tag": "datadog_distinguished_architect_ai",
+  "company": "datadog",
+  "title": "Distinguished Architect, AI",
+  "comp": 440000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/nuro/jobs/8031871",
+  "tag": "nuro_head_of_systems_engineering_senior_",
+  "company": "nuro",
+  "title": "Head of Systems Engineering (Senior Director)",
+  "comp": 425960.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/reddit/jobs/8142128",
+  "tag": "reddit_director_intellectual_property",
+  "company": "reddit",
+  "title": "Director, Intellectual Property",
+  "comp": 418000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/snorkelai/jobs/5828338004",
+  "tag": "snorkelai_head_of_forward_deployed_engineerin",
+  "company": "snorkelai",
+  "title": "Head of Forward Deployed Engineering",
+  "comp": 403200.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8569461002",
+  "tag": "databricks_lakebase_associate_director_healthc",
+  "company": "databricks",
+  "title": "Lakebase Associate Director, Healthcare & Life Sciences",
+  "comp": 402150.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/brex/jobs/8842998002",
+  "tag": "brex_director_head_of_private_equity",
+  "company": "brex",
+  "title": "Director, Head of Private Equity",
+  "comp": 395500.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/nuro/jobs/7577458",
+  "tag": "nuro_director_of_engineering_eval_platfo",
+  "company": "nuro",
+  "title": "Director of Engineering, Eval Platform",
+  "comp": 387000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/okta/jobs/8214882",
+  "tag": "okta_director_of_engineering_ai_takeoff_",
+  "company": "okta",
+  "title": "Director of Engineering, AI Takeoff Team",
+  "comp": 378000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figma/jobs/6201114004",
+  "tag": "figma_director_product_design_ai_context",
+  "company": "figma",
+  "title": "Director, Product Design - AI & Context",
+  "comp": 376000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figma/jobs/6130865004",
+  "tag": "figma_director_data_science",
+  "company": "figma",
+  "title": "Director, Data Science",
+  "comp": 376000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figma/jobs/5778796004",
+  "tag": "figma_manager_software_engineering_intera",
+  "company": "figma",
+  "title": "Manager, Software Engineering - Interaction Design",
+  "comp": 376000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/affirm/jobs/7999793003",
+  "tag": "affirm_senior_director_product_management_",
+  "company": "affirm",
+  "title": "Senior Director, Product Management (Financial Platforms)",
+  "comp": 375000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/chime/jobs/8681193002",
+  "tag": "chime_director_engineering",
+  "company": "chime",
+  "title": "Director Engineering",
+  "comp": 373000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/toast/jobs/8144016",
+  "tag": "toast_senior_software_engineering_manager",
+  "company": "toast",
+  "title": "Senior Software Engineering Manager, ToastNow",
+  "comp": 368000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/8140393",
+  "tag": "waymo_site_reliability_engineering_techni",
+  "company": "waymo",
+  "title": "Site Reliability Engineering, Technical Lead Manager",
+  "comp": 368000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/okta/jobs/8130437",
+  "tag": "okta_senior_director_grc",
+  "company": "okta",
+  "title": "Senior Director, GRC",
+  "comp": 363000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/asana/jobs/8097669",
+  "tag": "asana_director_of_engineering_ai_platform",
+  "company": "asana",
+  "title": "Director of Engineering, AI Platform",
+  "comp": 360000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/asana/jobs/8174102",
+  "tag": "asana_director_of_security_engineering",
+  "company": "asana",
+  "title": "Director of Security Engineering",
+  "comp": 360000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/nuro/jobs/8205545",
+  "tag": "nuro_technical_lead_manager_motion_valid",
+  "company": "nuro",
+  "title": "Technical Lead Manager, Motion Validation",
+  "comp": 352290.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/datadog/jobs/7583609",
+  "tag": "datadog_senior_director_product_management_",
+  "company": "datadog",
+  "title": "Senior Director, Product Management - Platforms",
+  "comp": 350000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figma/jobs/6112112004",
+  "tag": "figma_director_research_ai_evals",
+  "company": "figma",
+  "title": "Director, Research - AI Evals",
+  "comp": 348000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8306218002",
+  "tag": "databricks_field_cto_america_industries",
+  "company": "databricks",
+  "title": "Field CTO - America Industries",
+  "comp": 343400.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/discord/jobs/8537955002",
+  "tag": "discord_engineering_manager_notifications",
+  "company": "discord",
+  "title": "Engineering Manager, Notifications",
+  "comp": 341000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/verkada/jobs/5198815007",
+  "tag": "verkada_engineering_manager_agentic_workflo",
+  "company": "verkada",
+  "title": "Engineering Manager, Agentic Workflows ",
+  "comp": 340000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/ripple/jobs/8157399",
+  "tag": "ripple_director_of_engineering_infrastruct",
+  "company": "ripple",
+  "title": "Director of Engineering, Infrastructure",
+  "comp": 340000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/vercel/jobs/5701765004",
+  "tag": "vercel_engineering_manager_cdn",
+  "company": "vercel",
+  "title": "Engineering Manager, CDN",
+  "comp": 336000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8632399002",
+  "tag": "databricks_sr_director_procure_to_pay",
+  "company": "databricks",
+  "title": "Sr. Director, Procure to Pay",
+  "comp": 326700.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/sambanovasystems/jobs/6011958004",
+  "tag": "sambanovasystems_software_engineering_director_infer",
+  "company": "sambanovasystems",
+  "title": "Software Engineering Director - Inference Platform",
+  "comp": 325000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8779014002",
+  "tag": "databricks_sr_manager_ai_forward_deployed_engi",
+  "company": "databricks",
+  "title": "Sr. Manager, AI Forward Deployed Engineering (AI FDE)",
+  "comp": 320200.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8109902002",
+  "tag": "databricks_senior_engineering_manager_enzyme",
+  "company": "databricks",
+  "title": "Senior Engineering Manager - Enzyme",
+  "comp": 317233.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/verkada/jobs/5192924007",
+  "tag": "verkada_engineering_manager_atlas_spatial_s",
+  "company": "verkada",
+  "title": "Engineering Manager, Atlas (Spatial Systems)",
+  "comp": 315000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/7641390002",
+  "tag": "databricks_senior_manager_infrastructure_data_",
+  "company": "databricks",
+  "title": "Senior Manager, Infrastructure Data Science",
+  "comp": 314250.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/8142909",
+  "tag": "robinhood_senior_engineering_manager_agent_ex",
+  "company": "robinhood",
+  "title": "Senior Engineering Manager - Agent Experience",
+  "comp": 310000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/7963516",
+  "tag": "waymo_technical_lead_manager_prediction_m",
+  "company": "waymo",
+  "title": "Technical Lead Manager, Prediction, ML Evaluation",
+  "comp": 310000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/discord/jobs/8649856002",
+  "tag": "discord_engineering_manager_platform_securi",
+  "company": "discord",
+  "title": "Engineering Manager, Platform Security",
+  "comp": 310000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/7561880",
+  "tag": "waymo_technical_lead_manager_perception_t",
+  "company": "waymo",
+  "title": "Technical Lead Manager, Perception, Traffic Control Understanding",
+  "comp": 310000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/alphasense/jobs/8678097002",
+  "tag": "alphasense_director_product_design_ai_experien",
+  "company": "alphasense",
+  "title": "Director, Product Design (AI Experience)",
+  "comp": 308000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/instacart/jobs/8198282",
+  "tag": "instacart_director_of_product_logistics",
+  "company": "instacart",
+  "title": "Director of Product, Logistics",
+  "comp": 307000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/reddit/jobs/8095476",
+  "tag": "reddit_engineering_manager_notifications_p",
+  "company": "reddit",
+  "title": "Engineering Manager, Notifications Platform",
+  "comp": 303000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/7483051",
+  "tag": "waymo_staff_technical_lead_manager_simula",
+  "company": "waymo",
+  "title": "Staff Technical Lead Manager, Simulation, Machine Learning ",
+  "comp": 302000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/7460470",
+  "tag": "waymo_technical_lead_manager_route_motion",
+  "company": "waymo",
+  "title": "Technical Lead Manager, Route & Motion Generation",
+  "comp": 302000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/togetherai/jobs/5101202007",
+  "tag": "togetherai_director_data_center_operations",
+  "company": "togetherai",
+  "title": "Director, Data Center Operations",
+  "comp": 300000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/gleanwork/jobs/4686315005",
+  "tag": "gleanwork_tech_lead_manager_admin_console",
+  "company": "gleanwork",
+  "title": "Tech Lead Manager, Admin Console",
+  "comp": 300000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/gemini/jobs/8074982",
+  "tag": "gemini_senior_manager_platform_security",
+  "company": "gemini",
+  "title": "Senior Manager, Platform Security",
+  "comp": 300000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/ripple/jobs/8129029",
+  "tag": "ripple_director_product_management_global_",
+  "company": "ripple",
+  "title": "Director, Product Management, Global Payouts",
+  "comp": 300000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/fireblocks/jobs/4662147006",
+  "tag": "fireblocks_director_of_engineering_dynamic_pla",
+  "company": "fireblocks",
+  "title": "Director of Engineering, Dynamic Platform",
+  "comp": 300000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/mercury/jobs/6196335004",
+  "tag": "mercury_senior_engineering_manager_custody",
+  "company": "mercury",
+  "title": "Senior Engineering Manager - Custody",
+  "comp": 298800.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/mongodb/jobs/8163000",
+  "tag": "mongodb_senior_engineering_manager_storage_",
+  "company": "mongodb",
+  "title": "Senior Engineering Manager, Storage Execution",
+  "comp": 297000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/togetherai/jobs/5238654007",
+  "tag": "togetherai_director_of_brand",
+  "company": "togetherai",
+  "title": "Director of Brand",
+  "comp": 295000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/adyen/jobs/8096256",
+  "tag": "adyen_engineering_manager_identity_and_ac",
+  "company": "adyen",
+  "title": "Engineering Manager - Identity and Access Management",
+  "comp": 293000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/affirm/jobs/7918497003",
+  "tag": "affirm_manager_software_engineering_app_ex",
+  "company": "affirm",
+  "title": "Manager, Software Engineering (App Experiences)",
+  "comp": 290000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/8209572",
+  "tag": "doordashusa_director_new_restaurant_models_stra",
+  "company": "doordashusa",
+  "title": "Director, New Restaurant Models- Strategy & Operations",
+  "comp": 290000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/huntress/jobs/7780668003",
+  "tag": "huntress_director_product_management_identit",
+  "company": "huntress",
+  "title": "Director, Product Management, Identity",
+  "comp": 290000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/7456678",
+  "tag": "doordashusa_engineering_manager_merchant_ai_ml",
+  "company": "doordashusa",
+  "title": "Engineering Manager, Merchant, AI/ML",
+  "comp": 285000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/7580712",
+  "tag": "doordashusa_engineering_manager_data",
+  "company": "doordashusa",
+  "title": "Engineering Manager, Data",
+  "comp": 285000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/8119303",
+  "tag": "doordashusa_engineering_manager_mobile_develope",
+  "company": "doordashusa",
+  "title": "Engineering Manager, Mobile Developer Experience",
+  "comp": 285000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/8160819",
+  "tag": "doordashusa_engineering_manager_proactive_secur",
+  "company": "doordashusa",
+  "title": "Engineering Manager, Proactive Security - Pods",
+  "comp": 285000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/verkada/jobs/4185105007",
+  "tag": "verkada_solutions_engineering_manager_selec",
+  "company": "verkada",
+  "title": "Solutions Engineering Manager, Select & Territory",
+  "comp": 285000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/8232448",
+  "tag": "waymo_technical_lead_manager_motion_contr",
+  "company": "waymo",
+  "title": "Technical Lead Manager, Motion Control Test Engineering",
+  "comp": 284000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/okta/jobs/8107083",
+  "tag": "okta_engineering_manager_okta_identity_g",
+  "company": "okta",
+  "title": "Engineering Manager, Okta Identity Governance",
+  "comp": 280500.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/instacart/jobs/8084349",
+  "tag": "instacart_senior_engineering_manager_core_pic",
+  "company": "instacart",
+  "title": "Senior Engineering Manager, Core Picking",
+  "comp": 279500.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/dropbox/jobs/8096461",
+  "tag": "dropbox_director_of_media_strategy_activati",
+  "company": "dropbox",
+  "title": "Director of Media Strategy & Activation (Paid Media)",
+  "comp": 278400.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/coreweave/jobs/4710657006",
+  "tag": "coreweave_senior_engineering_manager_security",
+  "company": "coreweave",
+  "title": "Senior Engineering Manager, Security Products",
+  "comp": 275000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/chime/jobs/8795524002",
+  "tag": "chime_tech_lead_manager_lending",
+  "company": "chime",
+  "title": "Tech Lead Manager, Lending",
+  "comp": 275000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/mongodb/jobs/8077491",
+  "tag": "mongodb_director_partner_programs",
+  "company": "mongodb",
+  "title": "Director, Partner Programs",
+  "comp": 275000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/fastly/jobs/8049212",
+  "tag": "fastly_senior_engineering_manager_containe",
+  "company": "fastly",
+  "title": "Senior Engineering Manager - Containers at Edge",
+  "comp": 273936.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/gleanwork/jobs/4659412005",
+  "tag": "gleanwork_founding_forward_deployed_engineer",
+  "company": "gleanwork",
+  "title": "Founding Forward Deployed Engineer",
+  "comp": 270000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/verkada/jobs/5136810007",
+  "tag": "verkada_enterprise_solutions_engineering_ma",
+  "company": "verkada",
+  "title": "Enterprise Solutions Engineering Manager, Central SLED",
+  "comp": 270000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/8131201",
+  "tag": "robinhood_director_of_benefits",
+  "company": "robinhood",
+  "title": "Director of Benefits",
+  "comp": 265000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/verkada/jobs/5155848007",
+  "tag": "verkada_director_of_global_security",
+  "company": "verkada",
+  "title": "Director of Global Security",
+  "comp": 265000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/coreweave/jobs/4652799006",
+  "tag": "coreweave_director_energy_market_development",
+  "company": "coreweave",
+  "title": "Director, Energy Market Development",
+  "comp": 264000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/launchdarkly/jobs/7819651003",
+  "tag": "launchdarkly_engineering_manager_experimentation",
+  "company": "launchdarkly",
+  "title": "Engineering Manager, Experimentation",
+  "comp": 263670.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8472398002",
+  "tag": "databricks_engineering_manager_databricks_sql_",
+  "company": "databricks",
+  "title": "Engineering Manager - Databricks SQL Control Plane",
+  "comp": 261250.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/liberate/jobs/5370479008",
+  "tag": "liberate_founding_deployment_strategist",
+  "company": "liberate",
+  "title": "Founding Deployment Strategist ",
+  "comp": 260000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/chainguard/jobs/4715303006",
+  "tag": "chainguard_senior_manager_engineering_containe",
+  "company": "chainguard",
+  "title": "Senior Manager, Engineering (Container Product Engineering)",
+  "comp": 258000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/lyft/jobs/8782314002",
+  "tag": "lyft_director_trust_safety",
+  "company": "lyft",
+  "title": "Director, Trust & Safety",
+  "comp": 253750.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/fastly/jobs/8119301",
+  "tag": "fastly_director_enterprise_architecture_au",
+  "company": "fastly",
+  "title": "Director, Enterprise Architecture, Automation and Integration",
+  "comp": 253644.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/twilio/jobs/8208337",
+  "tag": "twilio_executive_communications_director_c",
+  "company": "twilio",
+  "title": "Executive Communications Director, Chief Product & Technology Officer",
+  "comp": 251600.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8632188002",
+  "tag": "databricks_sr_forward_deployed_engineer_public",
+  "company": "databricks",
+  "title": "Sr. Forward Deployed Engineer - Public Sector ",
+  "comp": 250208.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/8088954",
+  "tag": "robinhood_director_of_accounting",
+  "company": "robinhood",
+  "title": "Director of Accounting",
+  "comp": 250000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/datadog/jobs/7536402",
+  "tag": "datadog_datadog_for_startups_founding_engin",
+  "company": "datadog",
+  "title": "Datadog for Startups Founding Engineering Lead",
+  "comp": 250000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/sambanovasystems/jobs/6145241004",
+  "tag": "sambanovasystems_principal_product_engineer",
+  "company": "sambanovasystems",
+  "title": "Principal Product Engineer",
+  "comp": 999999.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/veeamsoftware/jobs/4837207101",
+  "tag": "veeamsoftware_principal_technical_architect_produ",
+  "company": "veeamsoftware",
+  "title": "Principal Technical Architect, Product Management (AWS/Azure)",
+  "comp": 581400.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/3cloud/jobs/8715165002",
+  "tag": "3cloud_principal_architect_applied_ai_mach",
+  "company": "3cloud",
+  "title": "Principal Architect - Applied AI & Machine Learning SME ",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/tenstorrent/jobs/5204648007",
+  "tag": "tenstorrent_staff_forward_deployed_engineer",
+  "company": "tenstorrent",
+  "title": "Staff Forward Deployed Engineer",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/tenstorrent/jobs/5062896007",
+  "tag": "tenstorrent_interconnect_and_compute_architect",
+  "company": "tenstorrent",
+  "title": "Interconnect and Compute Architect ",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/tenstorrent/jobs/5229569007",
+  "tag": "tenstorrent_sr_staff_engineer_cpu_front_end_ver",
+  "company": "tenstorrent",
+  "title": "Sr. Staff Engineer, CPU (Front-End) Verification",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/tenstorrent/jobs/5247936007",
+  "tag": "tenstorrent_staff_engineer_post_silicon_validat",
+  "company": "tenstorrent",
+  "title": "Staff Engineer,Post-Silicon Validation ",
+  "comp": 500000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/veeamsoftware/jobs/4977661101",
+  "tag": "veeamsoftware_staff_software_development_engineer",
+  "company": "veeamsoftware",
+  "title": "Staff Software Development Engineer in Test (Graph Database)",
+  "comp": 465100.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/pinterest/jobs/8011719",
+  "tag": "pinterest_principal_engineer_shopping_deliver",
+  "company": "pinterest",
+  "title": "Principal Engineer, Shopping & Delivery Infra",
+  "comp": 449541.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/xai/jobs/5133071007",
+  "tag": "xai_member_of_technical_staff_cloud_inf",
+  "company": "xai",
+  "title": "Member Of Technical Staff - Cloud Infrastructure",
+  "comp": 440000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/xai/jobs/5052027007",
+  "tag": "xai_member_of_technical_staff_imagine_p",
+  "company": "xai",
+  "title": "Member of Technical Staff - Imagine Product",
+  "comp": 440000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/xai/jobs/5111374007",
+  "tag": "xai_member_of_technical_staff_multimoda",
+  "company": "xai",
+  "title": "Member of Technical Staff - Multimodal Understanding",
+  "comp": 440000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/xai/jobs/5051970007",
+  "tag": "xai_member_of_technical_staff_voice_pro",
+  "company": "xai",
+  "title": "Member of Technical Staff - Voice Product",
+  "comp": 440000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/pinterest/jobs/8001913",
+  "tag": "pinterest_sr_staff_software_engineer_ios_sear",
+  "company": "pinterest",
+  "title": "Sr. Staff Software Engineer, iOS Search and Shopping Journeys",
+  "comp": 429454.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/reddit/jobs/7772274",
+  "tag": "reddit_senior_staff_machine_learning_engin",
+  "company": "reddit",
+  "title": "Senior Staff Machine Learning Engineer, GenAI Platform",
+  "comp": 409500.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/adyen/jobs/8050072",
+  "tag": "adyen_member_of_technical_staff",
+  "company": "adyen",
+  "title": "Member of Technical Staff",
+  "comp": 401000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figureai/jobs/4345915006",
+  "tag": "figureai_helix_ai_engineer_data_infrastructu",
+  "company": "figureai",
+  "title": "Helix AI Engineer, Data Infrastructure ",
+  "comp": 400000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figureai/jobs/4671712006",
+  "tag": "figureai_helix_ai_engineer_modeling",
+  "company": "figureai",
+  "title": "Helix AI Engineer, Modeling",
+  "comp": 400000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figureai/jobs/4671707006",
+  "tag": "figureai_helix_ai_engineer_reinforcement_lea",
+  "company": "figureai",
+  "title": "Helix AI Engineer, Reinforcement Learning",
+  "comp": 400000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/figureai/jobs/4671703006",
+  "tag": "figureai_helix_ai_engineer_video_pretraining",
+  "company": "figureai",
+  "title": "Helix AI Engineer, Video Pretraining",
+  "comp": 400000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/doordashusa/jobs/7947255",
+  "tag": "doordashusa_principal_software_engineer_ads",
+  "company": "doordashusa",
+  "title": "Principal Software Engineer, Ads",
+  "comp": 395000.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/pinterest/jobs/8049465",
+  "tag": "pinterest_staff_machine_learning_engineer_sho",
+  "company": "pinterest",
+  "title": "Staff Machine Learning Engineer, Shopping Ads",
+  "comp": 389753.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/gitlab/jobs/8623592002",
+  "tag": "gitlab_principal_site_reliability_engineer",
+  "company": "gitlab",
+  "title": "Principal Site Reliability Engineer, Platform Engineering: Dedicated",
+  "comp": 380400.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/databricks/jobs/8612863002",
+  "tag": "databricks_principal_security_field_engineer",
+  "company": "databricks",
+  "title": "Principal Security Field Engineer",
+  "comp": 371700.0,
+  "source": "ATS board"
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/waymo/jobs/8171684",
+  "tag": "waymo_sr_staff_tech_lead_machine_learning",
+  "company": "waymo",
+  "title": "Sr Staff Tech Lead, Machine Learning Engineer, Perception",
+  "comp": 368000.0,
+  "source": "ATS board"
+ }
+]

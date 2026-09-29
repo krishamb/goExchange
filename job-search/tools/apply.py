@@ -34,6 +34,8 @@ import shutil, platform
 if HEADED and platform.system()=="Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
     os.execvp("xvfb-run",["xvfb-run","-a","-s","-screen 0 1280x2000x24",sys.executable]+sys.argv)
 submit="--submit" in sys.argv
+# --pace MIN MAX: in batch mode, wait a random MIN..MAX seconds between applications (one at a time, human-paced)
+PACE=(float(sys.argv[sys.argv.index("--pace")+1]),float(sys.argv[sys.argv.index("--pace")+2])) if "--pace" in sys.argv else None
 BATCH = sys.argv[1]=="batch"
 if BATCH:
     JOBS=json.load(open(sys.argv[2])); ats=url=tag=None; extra={}
@@ -416,6 +418,8 @@ async def run():
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors","code_required","code_source")})
             print(json.dumps(summary[-1]),flush=True)
             await ctx.close()
+            if PACE and job is not jobs[-1]:
+                import random; gap=random.uniform(*PACE); print(f"PACE waiting {int(gap)}s before the next application",flush=True); await asyncio.sleep(gap)
         json.dump(summary,open(f"{OUT}/batch_summary_{int(time.time())}.json","w"),indent=1)
         await b.close()
 async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
