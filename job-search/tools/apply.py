@@ -510,22 +510,24 @@ def company_keys(tag,company=None):
     if len(toks)>1: ks.add(toks[0]+toks[1])
     return {k for k in ks if len(k)>=4}
 def applied_elsewhere(tag,company=None,days=45):
-    """Return the tag of an earlier submitted application at the same company (any ATS, last `days` days), else None."""
+    """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
+    (MAX_PER_COMPANY, default 2: the applicant allows two roles per company when both match the resume), else None."""
     import glob as _glob
+    cap=int(os.environ.get("MAX_PER_COMPANY","2"))
     ks=company_keys(tag,company)
     if not ks: return None
     cutoff=time.time()-days*86400
+    SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
+    hits=[]
     for f in _glob.glob(f"{OUT}/*_report.json"):
         if os.path.basename(f)==f"{tag}_report.json" or os.path.getmtime(f)<cutoff: continue
         try: r=json.load(open(f))
         except Exception: continue
-        if not r.get("submitted") or "ALREADY APPLIED" in (r.get("result") or ""): continue
+        if not r.get("submitted") or "ALREADY APPLIED" in (r.get("result") or "") or (r.get("tag") or "").endswith("_r2"): continue   # correction resubmits do not count
         ks2=company_keys(r.get("tag"),r.get("company"))
-        if ks & ks2: return r.get("tag")
-        # 'doordashusa' vs 'doordash', 'acmeinc' vs 'acme': a key that is a prefix of the other (6+ chars) is the same company
-        SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
-        if any((a.startswith(b) and a[len(b):] in SUF) or (b.startswith(a) and b[len(a):] in SUF) for a in ks for b in ks2 if min(len(a),len(b))>=5): return r.get("tag")
-    return None
+        if (ks & ks2) or any((a.startswith(b) and a[len(b):] in SUF) or (b.startswith(a) and b[len(a):] in SUF) for a in ks for b in ks2 if min(len(a),len(b))>=5):
+            hits.append(r.get("tag"))
+    return hits[0] if len(hits)>=cap else None
 async def run():
     async with async_playwright() as p:
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
@@ -543,9 +545,9 @@ async def run():
         summary=[]; default_email=P["email"]
         for job in jobs:
             set_email(job.get("email") or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses)
-            prior=applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site
+            prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site (a correction resubmit is exempt)
             if prior:
-                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today ({prior})","unanswered":[],"errors":[]}
+                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
                 json.dump(r,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
                 summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
