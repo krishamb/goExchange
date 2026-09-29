@@ -4034,3 +4034,505 @@ Bay Area, NYC and remote-US roles from the ATS boards, Wellfound, Built In and I
 | 583 | VALERIS | Software Engineering Architect | Remote, US · Remote |  | Indeed | [Workday](https://valeris.wd108.myworkdayjobs.com/Valeris/job/Morrisville-NC/Software-Engineering-Architect_JR367) |
 | 584 | General Motors (GM) | Staff Software Engineer, Autonomy Evaluation | Remote, US · Remote |  | Indeed | [Workday](https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Remote---United-States/Staff-Software-Engineer--Autonomy-Evaluation_JR-202611038) |
 
+
+## Bay Area start-ups: leadership, founding, and Principal/Staff AI roles (378)
+
+ATS boards and Wellfound only, large companies excluded, Bay Area locations.
+
+| # | Company | Title | Location | Pay | Apply |
+|---|---|---|---|---|---|
+| 1 | arcinstitute | Director, Machine Learning, Alzheimer's Disease Initiative | Palo Alto, CA | $380,000-$420,000.  | [Greenhouse](https://boards.greenhouse.io/arcinstitute/jobs/5565374004) |
+| 2 | arcinstitute | Director, Machine Learning, Virtual Cell Initiative | Palo Alto, CA | $380,000-$420,000.  | [Greenhouse](https://boards.greenhouse.io/arcinstitute/jobs/5982590004) |
+| 3 | snorkelai | Head of Forward Deployed Engineering | New York City, NY (Hybrid); San Francisco, CA (Hybrid) | $268,800 to $403,200.  | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/5828338004) |
+| 4 | snorkelai | Manager, Forward Deployed Engineering | New York City, NY (Hybrid); San Francisco, CA (Hybrid) | $200,000 – $320,000 | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/5830807004) |
+| 5 | labelbox | Forward Deployed Engineering Manager | San Francisco Bay Area |  | [Greenhouse](https://boards.greenhouse.io/labelbox/jobs/5158989007) |
+| 6 | tenstorrent | CPU Verification Fellow, RISC-V High-Performance Processor | Austin, Texas, United States; Santa Clara, California, United States | $100k - $500k | [Greenhouse](https://boards.greenhouse.io/tenstorrent/jobs/5148052007) |
+| 7 | tenstorrent | Director, Strategy & Solutions  | Austin, Texas, United States; Boston, Massachusetts, United States; Santa Clara, California, United States | $100k - $500k | [Greenhouse](https://boards.greenhouse.io/tenstorrent/jobs/5075764007) |
+| 8 | tenstorrent | Sr. Strategic Sourcing Manager, Engineering Infrastructure | Austin, Texas, United States; Santa Clara, California, United States; Toronto, Ontario, Canada | $100k - $500k | [Greenhouse](https://boards.greenhouse.io/tenstorrent/jobs/5227927007) |
+| 9 | bitgo | Director - Listings & Ecosystem Development | New York, United States; San Francisco, California, United States | $150,000 - $175,000  | [Greenhouse](https://boards.greenhouse.io/bitgo/jobs/8158666002) |
+| 10 | snorkelai | Director, Research - Evaluation & Training | New York City, NY (Hybrid); San Francisco, CA (Hybrid); United States (Remote) |  | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/6020877004) |
+| 11 | sambanovasystems | Director of ASIC Design Verification | San Jose, California, United States |  | [Greenhouse](https://boards.greenhouse.io/sambanovasystems/jobs/6145376004) |
+| 12 | vercel | Engineering Manager - Next.js | Hybrid - San Francisco, New York City | $230,000 to $340,000.  | [Greenhouse](https://boards.greenhouse.io/vercel/jobs/6140055004) |
+| 13 | vercel | Engineering Manager, CDN | Hybrid - San Francisco | $196,000.00 - $336,000.00.  | [Greenhouse](https://boards.greenhouse.io/vercel/jobs/5701765004) |
+| 14 | arcinstitute | Senior Director, Disease Biology | Palo Alto, CA | $263,500 to $325,500.  | [Greenhouse](https://boards.greenhouse.io/arcinstitute/jobs/6151564004) |
+| 15 | turing | Client Director, Frontier Data - US | Palo Alto, California, United States; San Francisco, California, United States | $255,000 to $325,000  | [Greenhouse](https://boards.greenhouse.io/turing/jobs/5652980004) |
+| 16 | sambanovasystems | Software Engineering Director - Inference Platform | San Jose, California, United States |  | [Greenhouse](https://boards.greenhouse.io/sambanovasystems/jobs/6011958004) |
+| 17 | vercel | Engineering Manager, Dashboard | Hybrid - San Francisco | $226,000-$325,000.  | [Greenhouse](https://boards.greenhouse.io/vercel/jobs/6115908004) |
+| 18 | togetherai | Director, Data Center Operations | San Francisco | $250,000 - $300,000  | [Greenhouse](https://boards.greenhouse.io/togetherai/jobs/5101202007) |
+| 19 | togetherai | Director of Technical Accounting | San Francisco | $245k - $300k | [Greenhouse](https://boards.greenhouse.io/togetherai/jobs/5210729007) |
+| 20 | gleanwork | Tech Lead Manager, Admin Console | San Francisco, CA | $250,000 - $300,000  | [Greenhouse](https://boards.greenhouse.io/gleanwork/jobs/4686315005) |
+| 21 | snorkelai | Director of TA Operations & Insights | New York City, NY (Hybrid); San Francisco, CA (Hybrid) |  | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/6122605004) |
+| 22 | snorkelai | Director of Technical Recruiting | New York City, NY (Hybrid); San Francisco, CA (Hybrid) | $170,000 - $300,000.  | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/6122805004) |
+| 23 | mercury | Senior Engineering Manager - Credit Cards | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States |  | [Greenhouse](https://boards.greenhouse.io/mercury/jobs/6201177004) |
+| 24 | mercury | Senior Engineering Manager - Custody | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States |  | [Greenhouse](https://boards.greenhouse.io/mercury/jobs/6196335004) |
+| 25 | sambanovasystems | Director of Product, Ecosystem | San Jose, California, United States |  | [Greenhouse](https://boards.greenhouse.io/sambanovasystems/jobs/6187673004) |
+| 26 | togetherai | Director of Brand | San Francisco | $250-295K | [Greenhouse](https://boards.greenhouse.io/togetherai/jobs/5238654007) |
+| 27 | fastly | Senior Engineering Manager - Containers at Edge | Denver, CO; New York City, NY; San Francisco, CA | $228,280 to $273,936. | [Greenhouse](https://boards.greenhouse.io/fastly/jobs/8049212) |
+| 28 | liberate | Founding Deployment Strategist  | Boston, Berkeley | $185,000 - $260,000  | [Greenhouse](https://boards.greenhouse.io/liberate/jobs/5370479008) |
+| 29 | fastly | Director, Enterprise Architecture, Automation and Integration | Denver, CO; New York City, NY; San Francisco, CA | $179,670.00 to $253,644.00. | [Greenhouse](https://boards.greenhouse.io/fastly/jobs/8119301) |
+| 30 | cockroachlabs | Director, FP&A | New York, NY; San Mateo, CA |  | [Greenhouse](https://boards.greenhouse.io/cockroachlabs/jobs/8209735) |
+| 31 | pagerduty | Corporate Strategy Director  | San Francisco | $147,000 - $246,400  | [Greenhouse](https://boards.greenhouse.io/pagerduty/jobs/5831906004) |
+| 32 | fastly | Director, Deal Desk & Strategy | San Francisco, CA | $195,720.00 - $234,864.00. | [Greenhouse](https://boards.greenhouse.io/fastly/jobs/7990049) |
+| 33 | bitgo | Director, Technical Program Management  | Palo Alto, California, United States | $200,000 - $230,000  | [Greenhouse](https://boards.greenhouse.io/bitgo/jobs/8802524002) |
+| 34 | pallet | Technical Recruiter (Founding Team) | San Francisco  | $165,000-$220,000,  | [Greenhouse](https://boards.greenhouse.io/pallet/jobs/5225673007) |
+| 35 | fivetran | Director Workplace Operations | Oakland, California, United States, AMER |  | [Greenhouse](https://boards.greenhouse.io/fivetran/jobs/7978897003) |
+| 36 | endorlabs | Director of Product Design | Palo Alto, CA | $140,000 - $200,000.  | [Greenhouse](https://boards.greenhouse.io/endorlabs/jobs/4730246005) |
+| 37 | suki | Director of Demand Generation | Redwood City, CA | $170,000 -215,000.  | [Greenhouse](https://boards.greenhouse.io/suki/jobs/7805013003) |
+| 38 | workato | Director, Product Management (Platform, Security & Enterprise Readiness) | Palo Alto, California |  | [Greenhouse](https://boards.greenhouse.io/workato/jobs/8497003002) |
+| 39 | mercury | Open Call for Founders / Founding Teams - Product Management and Engineering | San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States |  | [Greenhouse](https://boards.greenhouse.io/mercury/jobs/6107075004) |
+| 40 | pagerduty | Director of Pricing & Monetization | San Francisco |  | [Greenhouse](https://boards.greenhouse.io/pagerduty/jobs/5841387004) |
+| 41 | fivetran | Sr. Principal AI Systems Architect | Oakland, California, United States, AMER |  | [Greenhouse](https://boards.greenhouse.io/fivetran/jobs/7651403003) |
+| 42 | alphasense | Staff AI Platform Engineer | San Francisco, California, United States |  | [Greenhouse](https://boards.greenhouse.io/alphasense/jobs/8213367002) |
+| 43 | togetherai | Staff Engineer, Distributed Storage and HPC & AI Infrastructure | San Francisco | $250,000 - $300,000  | [Greenhouse](https://boards.greenhouse.io/togetherai/jobs/5155722007) |
+| 44 | sambanovasystems | Senior Principal Machine Learning Engineer | San Jose, California, United States |  | [Greenhouse](https://boards.greenhouse.io/sambanovasystems/jobs/6089843004) |
+| 45 | fivetran | Principal Software Engineer, AI Tooling & Adoption | Oakland, California, United States, AMER |  | [Greenhouse](https://boards.greenhouse.io/fivetran/jobs/7812269003) |
+| 46 | togetherai | Staff Machine Learning Engineer, Voice AI  | San Francisco | $220,000 - $280,000  | [Greenhouse](https://boards.greenhouse.io/togetherai/jobs/5140763007) |
+| 47 | labelbox | Staff ML Engineer, Agent Training & Environments | San Francisco Bay Area |  | [Greenhouse](https://boards.greenhouse.io/labelbox/jobs/5199053007) |
+| 48 | labelbox | Staff Software Engineer, AI Data Platform | San Francisco Bay Area |  | [Greenhouse](https://boards.greenhouse.io/labelbox/jobs/5159327007) |
+| 49 | figureai | Staff AI Inference and Acceleration Engineer | San Jose, CA | $180,000 - $275,000  | [Greenhouse](https://boards.greenhouse.io/figureai/jobs/4692572006) |
+| 50 | fivetran | Staff R&D Software Engineer, Fivetran AI | Oakland, California, United States, AMER |  | [Greenhouse](https://boards.greenhouse.io/fivetran/jobs/7810220003) |
+| 51 | snorkelai | Senior / Staff AI Engineer | New York City, NY (Hybrid); San Francisco, CA (Hybrid) |  | [Greenhouse](https://boards.greenhouse.io/snorkelai/jobs/6185944004) |
+| 52 | liberate | Staff AI Agent Engineer | San Francisco Bay Area  |  | [Greenhouse](https://boards.greenhouse.io/liberate/jobs/5118380008) |
+| 53 | tenstorrent | Principal CPU Microarchitect - RISC-V & AI Compute | Austin, Texas, United States; Santa Clara, California, United States; Toronto, Ontario, Canada |  | [Greenhouse](https://boards.greenhouse.io/tenstorrent/jobs/4796552007) |
+| 54 | decagon | Engineering Manager, Agent Orchestration | San Francisco | $280K – $430K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/decagon/b295b323-3d01-4126-94c1-9fc7489ebdf0) |
+| 55 | decagon | Engineering Manager, Agent Product | San Francisco | $280K – $430K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/decagon/2f64e63b-e825-4fdc-89be-978ae22e4ad4) |
+| 56 | perplexity | Engineering Manager (TLM, Agents) | San Francisco | $300K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/656b4b2e-5670-411c-9091-f355983a92a0) |
+| 57 | openai | Manager, Applied AI Engineering (Digital Natives) | San Francisco | $302K – $335K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/ba2ead69-d118-4a91-a4d7-c880d17fa7f9) |
+| 58 | openai | Platform Engineering Manager, Forward Deployed Engineering (FDE) | San Francisco | $302K – $335K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/b073abb1-cf6c-4fd9-a318-732fdd2f1408) |
+| 59 | openai | Manager, Applied AI Engineering (Startups) | San Francisco | $302K – $335K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/7bdb15f0-1e3b-4352-b948-47fb35f25d71) |
+| 60 | openai | Manager, Applied AI Engineering (Codex) | San Francisco | $302K – $335K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/b28b990c-54e4-4be4-a33a-d5518dc3e117) |
+| 61 | decagon | Director of Agent Deployment Engineering | San Francisco | $250K – $320K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/decagon/3aa855e4-164b-4246-aaa0-b602339bfe06) |
+| 62 | crusoe | Senior Manager, Engineering - AI Inference | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/15c35458-7da0-4d69-9269-344244093f89) |
+| 63 | maintainx | Software Development Manager, AI Builder Tools | San Francisco | $150K – $265K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/maintainx/e4108253-fad1-4d6d-b94d-52865cf1e97a) |
+| 64 | commure | Engineering Manager, AI Orchestrator | Mountain View, CA | $200K – $250K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/commure/93777ef3-e710-4f10-9475-3804d36390ad) |
+| 65 | crusoe | Engineering Manager, AI Platform | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/62476ae3-87b9-41df-9d3b-3d0e95bdb930) |
+| 66 | Clera | Founding AI Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/3dc0a0f6-6a53-4a8c-bc70-b007113c348a) |
+| 67 | Clera | Founding Engineer (AI/ML) | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/23074307-3442-471e-89d7-257e1defd979) |
+| 68 | cerebras | Director/Sr. Manager, AI Inference Model Scaling | Sunnyvale, CA |  | [Ashby](https://jobs.ashbyhq.com/cerebras/3fb6d1f7-a45c-4827-87ac-e0f7944b6350) |
+| 69 | pear-vc | Founding Engineer – Baton AI | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/fe28c1f0-c166-4bef-8962-759d0cbf636a) |
+| 70 | pear-vc | Founding Engineer, AI — Shiplight AI | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/e681cf11-9b8a-4630-86ac-b995a76a77d7) |
+| 71 | pear-vc | Founding AI Engineer - Manhattan Labs | San Francisco Bay Area |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/f48cecb3-841e-4e38-87db-0ad1115a7a46) |
+| 72 | Clera | Founding Engineer: Agent Infrastructure | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/9843b97e-dee1-4c09-b5e0-84654085aa48) |
+| 73 | Clera | Founding Forward Deployed Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/622f67f7-d744-4160-a921-3a916150ca78) |
+| 74 | backbone | Founding Engineer, Forward Deployed | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/backbone/6900ff42-1dde-4fa5-9695-a7ecad7402eb) |
+| 75 | withremy | Founding AI/ML Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/withremy/2bdde95a-620f-40b9-85dc-036c19d8bd1c) |
+| 76 | cursor | Regional Director, AI Deployment | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/fb97e304-9d99-4b07-9474-1290121a87d5) |
+| 77 | cursor | Engineering Manager, ML | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/3752886b-a6e2-402c-ba2a-47d0659ff335) |
+| 78 | cursor | Regional Director, Forward Deployed Engineering | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/f7ec7811-a573-42fa-8ade-01e2d07681ef) |
+| 79 | openai | Engineering Manager, MLE | San Francisco | $500K – $555K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/8caa3654-aa0e-48f3-a231-5e9dc276253d) |
+| 80 | openai | Engineering Manager, Rosalind Workbench | San Francisco | $401K – $536K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/4ca2e49f-83bb-4276-be17-d85a9a0c58e9) |
+| 81 | openai | Technical Lead Manager - Training Runtime, Data(set) Movement | San Francisco | $380K – $500K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/4cbbf0b1-7c0b-4c42-bf38-48377f847e91) |
+| 82 | thinkingmachines | Engineering Manager | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/thinkingmachines/1161c2d5-17a1-41cb-a2c8-5558d5e42acb) |
+| 83 | Clera | Co-Founder & CTO | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/244a69d1-80bc-4881-b6fa-8457cc88f508) |
+| 84 | openai | Engineering Manager, Multimodal (API) | San Francisco | $401K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/1d7f4747-54a3-4141-a39a-c6e7700e969b) |
+| 85 | openai | Engineering Manager, Distillation & Detection Platform | San Francisco | $400K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/6fbb72e6-1d69-4863-aaf3-3c5830e49e8a) |
+| 86 | openai | Engineering Manager, Online Data Systems | San Francisco | $335K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/cb050c48-2e42-4dc0-8860-e6b3e5e6baff) |
+| 87 | openai | Tech Lead Manager, Education | San Francisco | $401K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/6922ab5c-5b90-4da2-ab10-cbc46d4f4860) |
+| 88 | openai | Engineering Manager, Client Platform Engineering | San Francisco | $401K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/5df9e349-f8e1-4cfd-ba20-ec9e4115d564) |
+| 89 | openai | Engineering Manager, ChatGPT Search Infrastructure | San Francisco | $401K – $445K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/9d6520c0-4c28-472f-ae1f-82b03ee9429d) |
+| 90 | decagon | Engineering Manager, Research | San Francisco | $280K – $430K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/decagon/c7cd7c5b-0ec9-44cd-9e74-c973acdfa4ba) |
+| 91 | openai | Partner Director, McKinsey Alliance  | San Francisco | $380K – $420K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/28c96920-a412-47c0-88f8-342790d779ff) |
+| 92 | openai | Partner Director, HCL, Wipro & Cognizant  | San Francisco | $380K – $420K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/a51b521c-d3bf-4653-99c6-c9152827cfb8) |
+| 93 | openai | Partner Director, PwC | San Francisco | $380K – $420K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/90cf64cc-4276-433f-bdf0-7cf69309bbd2) |
+| 94 | perplexity | Member of Technical Staff (Software Engineer, Connector Platform) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/daafcaba-cc39-487a-b941-d7a407753788) |
+| 95 | perplexity | Engineering Manager (API Platform) | San Francisco | $300K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/29625b7a-5470-463b-8446-21fac84e80b9) |
+| 96 | perplexity | Engineering Manager (Multimodal) | San Francisco | $300K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/19d535e2-e0f5-42b6-a995-662d69772168) |
+| 97 | pear-vc | Founding Engineer - FlowGen Labs | San Francisco Bay Area |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/59a35e98-18c4-48c0-a998-2f2691928502) |
+| 98 | openai | Engineering Manager, Core Services  | San Francisco | $293K – $385K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/ebc65e7d-d86a-4066-aa82-3a7758d97bb6) |
+| 99 | openai | Director, Compute & Infrastructure FP&A | San Francisco | $293K – $385K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/7536171d-0f98-4964-8f22-7968db062105) |
+| 100 | perplexity | Director, Litigation | San Francisco | $275K – $375K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/ea29039d-3900-43d3-a555-ff790677cbe9) |
+| 101 | cartesia | Engineering Manager, Data | *HQ - San Francisco, CA | $250K – $375K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/cartesia/6f65b698-4c1d-4439-9990-2a31c847dd21) |
+| 102 | cartesia | Engineering Manager, Infrastructure | *HQ - San Francisco, CA | $250K – $375K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/cartesia/eb5ca11e-86c6-4a8b-9c94-95d90a1b0cf0) |
+| 103 | cartesia | Engineering Manager, Product | *HQ - San Francisco, CA | $250K – $375K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/cartesia/af90c0c2-cabc-4c31-a214-77c3014ac91d) |
+| 104 | crusoe | Senior Director, Analytics & Data Science | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/a47eea20-0f86-4d60-ab86-4e4f9ad9abc7) |
+| 105 | writer | Director, solutions architecture  | San Francisco, CA | $300K – $353K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/writer/1258273b-7cb1-490e-8a2b-14c27ea725fd) |
+| 106 | openai | Field CTO | San Francisco | $302K – $352K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/23239cae-2a91-4985-94d1-a2acbb3ffa25) |
+| 107 | replit | Director of Product Design | Foster City, CA | $275K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/replit/b386f0ef-41e1-48e4-abe3-d35ce627de95) |
+| 108 | Edison Scientific | Engineering Manager, Enterprise Cloud Deployments | San Francisco | $250K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/Edison%20Scientific/51f6aeac-1852-4f86-9370-cf1abe07f198) |
+| 109 | Edison Scientific | Product Engineering Manager | San Francisco | $250K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/Edison%20Scientific/5035a1aa-3b63-4fc7-8a97-8beb70dcdd41) |
+| 110 | campfire | Director, Engineering | San Francisco | $250K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/campfire/24db306e-0265-4ece-b33d-6d4a61eec8e2) |
+| 111 | harvey | Engineering Manager, Production Engineering | San Francisco | $260K – $340K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/harvey/8e420b36-6711-49dd-8a64-f246270af7d3) |
+| 112 | harvey | Engineering Manager, Model Infrastructure | San Francisco | $260K – $340K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/harvey/fae2f3df-b785-4aaa-b11d-2bc328a47a48) |
+| 113 | crusoe | Director of Engineering, Flex Compute | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/7af9050a-114b-4b7c-b2c9-1e95d03e7103) |
+| 114 | crusoe | Director, Infrastructure Security | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/b829a1d0-3a4d-4a77-bda0-5ba8703486aa) |
+| 115 | baseten | Engineering Manager, Runtime Fabric | San Francisco | $165K – $330K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/baseten/aae72bd3-6f75-4238-9741-95fec11facb9) |
+| 116 | baseten | Engineering Manager, Cloud Platform | San Francisco | $165K – $330K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/baseten/0870ed34-7365-4b9f-a50a-481783b8c266) |
+| 117 | notion | Engineering Manager, Search & Context Platform | San Francisco, California |  | [Ashby](https://jobs.ashbyhq.com/notion/eb46a31c-a258-4b19-afe6-f2c65eaa2dcc) |
+| 118 | replit | Engineering Manager, Cloud Infrastructure | Foster City, CA | $250K – $325K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/replit/1015fa18-69d0-49e5-a785-afe5cbcc4760) |
+| 119 | replit | Engineering Manager, Site Reliability Engineering | Foster City, CA | $250K – $325K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/replit/226d0562-2420-4991-ac18-23c827ed119c) |
+| 120 | anyscale | Engineering Manager, Platform Infrastructure (Foundations) | San Francisco | $270K – $320K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/anyscale/c7b78c30-5df7-4351-a136-f9e9f1486b19) |
+| 121 | maintainx | Director of Platform Engineering | San Francisco | $228K – $313K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/maintainx/2a5996f1-99d9-4ea2-989a-bfcba1a4df17) |
+| 122 | harvey | Director Global Benefits | San Francisco | $227.1K – $310K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/harvey/940d071d-5093-44f3-97c8-afa5b78cd869) |
+| 123 | crusoe | Senior Director, Construction | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/5bb98387-3239-4b7d-9a9f-779bccf77011) |
+| 124 | langchain | Software Engineering Manager, Database (SmithDB) | San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/langchain/d81c35c1-7243-45e4-bfe2-7fc8746c76b9) |
+| 125 | replit | Engineering Manager, UX  | Foster City, CA | $200K – $300K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/replit/7e48291b-6188-46d7-bc21-1d66a512ffcb) |
+| 126 | crusoe | Senior Engineering Manager, SDN Control Plane | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/2844eeaf-48ea-4273-8e12-f96c33164050) |
+| 127 | numeric | Engineering Manager | San Francisco | $225K – $300K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/numeric/ae832151-652a-4b77-aba9-d529d5ba0a9c) |
+| 128 | elicit | Engineering Manager | Oakland, CA (or remote within US timezones) |  | [Ashby](https://jobs.ashbyhq.com/elicit/6d979836-e243-4bb0-aa8c-0f6a7ae7b122) |
+| 129 | insitro | Senior Director, Project & Portfolio Management | South San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/insitro/de685a17-397d-4b09-9980-ba492df957b4) |
+| 130 | vapi | Engineering Manager, Trust & Safety | San Francisco | $264K – $297K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/vapi/c0431a81-0640-483a-8605-f5cbf1fc45e7) |
+| 131 | insitro | Senior Director, Quality Assurance | South San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/insitro/e7288bb3-49e0-4268-a27e-ed61a275f3df) |
+| 132 | crusoe | Senior Staff Software Engineer, Founding BMC | Sunnyvale, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/dbc41e5c-97be-4859-9bca-2b2bfb41fa00) |
+| 133 | semgrep | Senior Engineering Manager, Guardian | San Francisco, Boston, New York, Denver |  | [Ashby](https://jobs.ashbyhq.com/semgrep/0ad27864-ce95-4797-ab5d-b24de8f78d94) |
+| 134 | openai | Strategic Sourcing Manager, Data Center Infrastructure, Owner Furnished Equipment | San Francisco | $226K – $285K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/openai/831e2f91-c213-4208-9eb3-4ce2cc6b9acf) |
+| 135 | crusoe | Senior Director, Portfolio Management | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/f173e5d9-3f51-4d10-8779-df43c6f67a9c) |
+| 136 | crusoe | Director of Engineering, Compute Cloud | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/6c4d634c-fd4a-4709-b836-72e5d6087e94) |
+| 137 | sesame | Creative Director | San Francisco | $200K – $280K | [Ashby](https://jobs.ashbyhq.com/sesame/e0054cca-978c-4a50-b0c2-21ef95fb38bf) |
+| 138 | crusoe | Director of Construction | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/87b4037f-927c-46de-972c-0c7b1807bf76) |
+| 139 | convex-dev | Engineering Manager, Infra/Systems | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/convex-dev/d82f63c9-490f-43d1-b30a-91fece4d39da) |
+| 140 | convex-dev | Engineering Manager, API/Product | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/convex-dev/25c60b55-9184-43de-b7fc-9fb085d07fb1) |
+| 141 | notable | Engineering Manager | San Mateo, CA | $220K – $275K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/notable/97276828-f2a7-44d0-9ee3-5976b366fd6f) |
+| 142 | commure | Senior Engineering Manager, Financial Data, Reporting & Analytics | Mountain View, CA | $240K – $275K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/commure/ef398821-8ee9-4f7c-824b-fac83d0a3023) |
+| 143 | insitro | Senior Manager / Director, Statistical Genetics | South San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/insitro/1253d6c7-f9ce-4bda-ab08-2abe1a9fbfd0) |
+| 144 | replit | Director of Compensation Strategy  | Foster City, CA | $171K – $270K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/replit/6b9b25d2-cf44-446e-8e1f-dacb5ade7b6c) |
+| 145 | crusoe | Engineering Manager, Data Platform | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/a603f157-4346-42a4-82ea-7bd67c11548f) |
+| 146 | crusoe | Engineering Manager, SDN Control Plane | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/ca281030-19cc-4bd1-83ef-4d8d7ee2e8f8) |
+| 147 | crusoe | Engineering Manager, Cloud Monitoring Services Platform | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/6b2457c5-26ad-4934-9974-52e60d0ea020) |
+| 148 | airbyte | Engineering Manager, Platform | San Francisco | $217K – $260K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/airbyte/efe55756-f28b-4030-b9a0-539f6c8ed8ff) |
+| 149 | suno | Director, Trust & Safety | San Francisco | $195.2K – $256.2K | [Ashby](https://jobs.ashbyhq.com/suno/9ed2cea6-b250-4b49-bd75-b761793af0f8) |
+| 150 | crusoe | Director, Recruiting, Digital Infrastructure | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/09b085c5-dc6e-4009-b330-378ff0c11fb2) |
+| 151 | handshake | Director of Internal Communications | San Francisco, CA | $174.4K – $255K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/handshake/83a7dcd6-5f78-47a1-8640-01f5f6cab8b3) |
+| 152 | AgentMail | Founding Engineer | San Francisco | $150K – $250K • 0.5% – 2% | [Ashby](https://jobs.ashbyhq.com/AgentMail/6e99881b-595c-44e0-8f82-eb431ef98623) |
+| 153 | Clera | Founding Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/a0aaad7e-8282-49fd-b580-2ea0abda78df) |
+| 154 | Clera | Founding Engineer - Full Stack | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/cea943d6-817f-441c-baa1-d295916ace46) |
+| 155 | Clera | Ex-Founder / Ex-CTO | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/5877ead9-98d7-495e-b467-3e8ef3546da0) |
+| 156 | happyrobot.ai | Founding Design Engineer | San Francisco | $140K – $250K | [Ashby](https://jobs.ashbyhq.com/happyrobot.ai/d8724b4b-a974-40aa-9982-8c5cd1de8282) |
+| 157 | sfcompute | Director of GRC | San Francisco, CA | $180K – $250K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/sfcompute/e322ba7e-1022-4aef-9f65-d12342f91f38) |
+| 158 | graphite | Engineering Manager | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/graphite/95538ed3-fbfb-4b08-8b57-abc6745119f5) |
+| 159 | endgame | Founding Product Marketer | Bay Area | $200K – $250K | [Ashby](https://jobs.ashbyhq.com/endgame/295da6d5-bd4f-46dc-a028-ac8feee67343) |
+| 160 | commure | Senior Engineering Manager, Payments & Reconciliation | Mountain View, CA | $200K – $250K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/commure/04fc9c4e-7ff1-49ac-8f5d-b1b70a0567c8) |
+| 161 | convex-dev | Creative Director / Head of Design | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/convex-dev/cbeb022f-7277-4fdc-8a97-0359ba347b81) |
+| 162 | vapi | Head of Data | San Francisco | $200K – $240K | [Ashby](https://jobs.ashbyhq.com/vapi/4b08d69e-9d72-49bb-9a54-397cd8cef5c7) |
+| 163 | crusoe | Engineering Manager, Deployment | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/241cf464-7e87-43a7-baaf-6472ee823b69) |
+| 164 | crusoe | Director, EDG Commercial Development (Thermal) | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/29d1d2ef-9a42-4962-a0b5-e1114bcb9327) |
+| 165 | Clera | Head of Engineering | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/5d412cbd-9605-4a39-af3b-89b659a32f7e) |
+| 166 | Clera | Founding Design Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/2e5c0f56-070f-4343-b98d-0a00e2114f72) |
+| 167 | litellm | Founding Developer Relations | San Francisco | $150K – $220K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/litellm/791652d5-1b40-4a54-bc22-a75c16131ddc) |
+| 168 | crusoe | Director, Commercial Operations | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/1877a89a-6948-43d4-b23b-5561a72fc2e3) |
+| 169 | Clera | Founding Product Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/51a42fb5-11a6-4e4f-b088-754cbfd37955) |
+| 170 | pear-vc | Founding Product Engineer - Listen Labs | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/5ac6dad3-b866-457f-973d-d75567964eba) |
+| 171 | pear-vc | Founding Engineer | San Francisco Bay Area | $140K – $200K • 0.75% – 1.5% | [Ashby](https://jobs.ashbyhq.com/pear-vc/dc1969ab-e197-4949-9bb8-a765af2b02c7) |
+| 172 | pear-vc | Founding Engineer - Elo | San Francisco | $140K – $200K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/pear-vc/d0544171-c8d5-43e8-b385-9198e3a6297e) |
+| 173 | Clera | Founding Software Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/a4a3f45b-6227-491f-af9b-4f18f77878cc) |
+| 174 | eliseai | Founding Technical Recruiter | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/eliseai/c1e78a97-68a0-4f71-8239-e62ab8fe8646) |
+| 175 | harvey | Strategic Sourcing Manager, Engineering Technology & Software | San Francisco | $130K – $161.6K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/harvey/5803bb75-c647-45d4-ac3b-b97e83facc8d) |
+| 176 | cleric | Founding Marketer | San Francisco | $120K – $160K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/cleric/d15cbc60-8642-424a-ad16-306d88420531) |
+| 177 | cognition | Partner Director - US | San Francisco, Austin, New York City |  | [Ashby](https://jobs.ashbyhq.com/cognition/9b77007b-02f8-4d25-8f46-fab3a06ea1c0) |
+| 178 | inferact | Head of Engineering | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/inferact/20df5968-cafb-4007-a6f6-ad854411b501) |
+| 179 | cerebras | Director / Senior Director, Critical Facility Operations  | Sunnyvale, CA |  | [Ashby](https://jobs.ashbyhq.com/cerebras/1e1e6848-b35e-465e-96b3-3cd5538cc1f1) |
+| 180 | braintrust | Founding Data Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/braintrust/d1756ad8-be7c-4acd-961e-7e81e4f69024) |
+| 181 | braintrust | Director, Product Engineering | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/braintrust/2174aa8f-3ecc-4fe0-b726-db4c73d73e37) |
+| 182 | hyperbolic | VP of Engineering | San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/hyperbolic/c6039f86-4915-4d1d-9e10-ac7c2a484d5c) |
+| 183 | factory | Regional Director, Mid-Market, SF | San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/factory/800e4567-e641-405c-9cae-a3cc87522c98) |
+| 184 | factory | Regional Director, Mid-Market, NYC | San Francisco, CA |  | [Ashby](https://jobs.ashbyhq.com/factory/db900e58-9738-4d17-86a3-e9ab754de8ca) |
+| 185 | pear-vc | Founding Engineer - Abacus | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/d8b852b5-f083-4210-8b9b-69a08b9e0236) |
+| 186 | pear-vc | Operations Associate - Founding Team Member | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/d795e78b-a5bd-42ef-8fc2-76cc298e24b9) |
+| 187 | pear-vc | Founding Social Creative Lead - Known | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/6b89b9bd-13d5-40c0-8dc8-8998f1bd03e1) |
+| 188 | pear-vc | Founding SDR  - SF Bay Area (Onsite only) | San Francisco Bay Area |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/a66ad667-df4e-44e0-a656-35e5f414bef5) |
+| 189 | pear-vc | Founding Full-Stack Engineer - Takt | San Francisco Bay Area |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/09bf2cd9-ce10-4d7f-818f-17be05805583) |
+| 190 | pear-vc | Founding Software Engineer - TruTec | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/81fc5f20-1fcd-40a4-a108-5739b6fab0e8) |
+| 191 | pear-vc | Founding Pharmacist-in-Charge & Head of Compounding - Turnkey Robotics | San Francisco Bay Area |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/b1fa23f3-6640-4f9b-9856-fab569433489) |
+| 192 | Clera | Founding Engineer ($3M pre-seed) | Palo Alto |  | [Ashby](https://jobs.ashbyhq.com/Clera/92772b85-5b90-4de9-a659-2c403b7f3b7b) |
+| 193 | mangodesk | Founding Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/mangodesk/ad4f871b-d704-4227-b72e-6418210c0ef9) |
+| 194 | backbone | Founding Engineer, Backend & Infra | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/backbone/ba8c05b9-5553-4b47-bf89-ff841ba0d163) |
+| 195 | backbone | Founding Engineer, Applied Research | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/backbone/cbfce5dc-e2c7-452e-bb23-2dac1198df7d) |
+| 196 | Hippocratic AI | Director, Regulatory  | Menlo Park, CA |  | [Ashby](https://jobs.ashbyhq.com/Hippocratic%20AI/c8e7cb17-1934-499d-8f0b-7a5976a8ffd2) |
+| 197 | Hippocratic AI | Director of Quality | Menlo Park, CA |  | [Ashby](https://jobs.ashbyhq.com/Hippocratic%20AI/fc993da9-fd9c-4c76-9ac2-7a3e056fb9fc) |
+| 198 | Ricursive Intelligence | Founding Security Engineer | Palo Alto |  | [Ashby](https://jobs.ashbyhq.com/Ricursive%20Intelligence/e2ad6f70-6d8c-472b-abdc-7400f20ab4e2) |
+| 199 | withremy | Founding Product Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/withremy/ffbb6d57-c6f1-43ef-82a2-734d2ab46e6e) |
+| 200 | withremy | Founding Full Stack Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/withremy/ec1bde77-807a-41b3-be8a-701bb58156ec) |
+| 201 | withremy | Founding Backend/Infra Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/withremy/a5faf110-dcf3-4aa7-9742-d265605abe3b) |
+| 202 | cursor | Regional Director, Field Engineering  | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/3d9da649-b3e6-4b4c-943d-1d081dae9497) |
+| 203 | cursor | Engineering Manager, Infrastructure | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/aca52072-00b0-4c2b-9371-18689910cd14) |
+| 204 | cursor | Engineering Manager, Core Services | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/e5d8ed7a-b93d-464f-a8d1-a4fa60e808d5) |
+| 205 | cursor | Engineering Manager, Evals | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/74a6ac48-d85f-45a0-9775-3cdb8b713e1a) |
+| 206 | cursor | Regional Director, Field Engineering, Healthcare  | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/cursor/646f20fa-9cea-4a23-a245-4339619a5497) |
+| 207 | midjourney | Director of Verification and Validation | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/midjourney/25c42c72-7547-4542-b139-7af4b255e7a1) |
+| 208 | socket | VP of Engineering | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/socket/09d8b0c5-6335-4edb-909e-00face1c9325) |
+| 209 | ghost | Founding Engineer | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/ghost/a286999a-de8d-486f-9a06-a0de5d947bfd) |
+| 210 | cohere | Senior Member of Technical Staff, Multimodal AI | San Francisco | CA$250K – CA$535K • Offers Equity • Multiple Ranges | [Ashby](https://jobs.ashbyhq.com/cohere/443368a3-6276-4b90-9671-27fed40fd6d2) |
+| 211 | perplexity | Member of Technical Staff (AI Inference Engineer) | San Francisco | $220K – $485K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/8a976851-9bef-4b07-8d36-567fa9540aef) |
+| 212 | perplexity | Member of Technical Staff (AI Infrastructure Engineer) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315) |
+| 213 | perplexity | Member of Technical Staff (Software Engineer, Applied AI) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/3c656963-876a-458d-bca6-916a42a24c1a) |
+| 214 | perplexity | Member of Technical Staff (ML Engineer, Recommendations & User Modeling) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/affd3040-91e4-4e0c-bd2f-4b022c613f91) |
+| 215 | perplexity | Member of Technical Staff (Applied AI Engineer, Agent Capabilities) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/5c561bd0-c180-4ee1-b079-647f3c20bdc0) |
+| 216 | perplexity | Member of Technical Staff (AI Software Engineer, Agents) | San Francisco | $220K – $405K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/a172ada5-1a6e-4646-8e0d-26747422af24) |
+| 217 | Edison Scientific | Member of Technical Staff, Machine Learning Engineer | San Francisco | $240K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/Edison%20Scientific/0d208029-1d9d-4919-a5bf-5bbcdc678868) |
+| 218 | handshake | Member of Technical Staff, Data AI | San Francisco, CA | $200K – $350K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/handshake/08651bf1-c977-49d4-9a82-e8a770bb9970) |
+| 219 | harvey | Staff Software Engineer, AI Platform | San Francisco | $231K – $340K | [Ashby](https://jobs.ashbyhq.com/harvey/01da8934-d3e3-4ebb-beb9-681b3c24fb9c) |
+| 220 | artisan | Staff AI Engineer - Agent Architecture & Behavior | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/artisan/4e533b35-d89d-4801-89d2-a77f8b4d5290) |
+| 221 | fireworks | Member of Technical Staff, AI Training Infrastructure | San Mateo | $210K – $320K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/fireworks/a2850702-dea3-4e2c-a3ec-7ae257d36eb7) |
+| 222 | Deepgram | Software Engineer - Applied AI (Senior or Staff Level) | San Francisco, CA | $197K – $307K • Offers Equity • Offers Bonus • Multiple Ranges | [Ashby](https://jobs.ashbyhq.com/Deepgram/68372d7d-b7a9-439e-a0a7-76690576aba4) |
+| 223 | Deepgram | Software Engineer, Voice Agents & AI (Senior or Staff Level) | San Francisco, CA | $197K – $307K • Offers Equity • Offers Bonus • Multiple Ranges | [Ashby](https://jobs.ashbyhq.com/Deepgram/4a873ede-8555-42ae-9ddc-ac89afdd7278) |
+| 224 | crusoe | Senior Staff Applied AI Inference Engineer | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/cdca4752-d6b5-4df4-b121-57826b41d4b5) |
+| 225 | fireworks | Member of Technical Staff - AI Infrastructure Reliability | San Mateo | $200K – $290K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/fireworks/ff11ca2c-d95f-4802-8370-09c2cf394842) |
+| 226 | cerebras | Senior Staff AI Accelerator Performance Architect | Sunnyvale, CA |  | [Ashby](https://jobs.ashbyhq.com/cerebras/d1754f03-8011-40ff-b85c-691abf23d59c) |
+| 227 | perplexity | Member of Technical Staff, AI Products (Early Career - Industry) | San Francisco | $180K – $270K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/perplexity/daa9120e-94ff-46e0-b4bd-4d2d290cb409) |
+| 228 | opusclip | Member of Technical Staff, AI Engineer | Mountain View | $220K – $270K • Offers Equity • Offers Bonus | [Ashby](https://jobs.ashbyhq.com/opusclip/02c5fdd5-5818-4a7f-999c-6071ddbe00fe) |
+| 229 | crusoe | Staff Applied AI Inference Engineer | San Francisco, CA - US |  | [Ashby](https://jobs.ashbyhq.com/crusoe/0aae94c4-9fe6-4275-be3c-6c397345f7f4) |
+| 230 | Clera | Staff Engineer - Agentic AI | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/Clera/e9fcbd0f-21b0-4a42-8f39-a37207c4eaef) |
+| 231 | Edison Scientific | Member of Technical Staff, Applied AI Engineer | San Francisco | $175K – $240K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/Edison%20Scientific/3312b8e0-77d9-4351-9a81-aee4d508924a) |
+| 232 | fireworks | Member of Technical Staff, LLM Infrastructure | San Mateo | $175K – $220K • Offers Equity | [Ashby](https://jobs.ashbyhq.com/fireworks/82013447-2713-46ca-aab1-b0a34f7b565a) |
+| 233 | cerebras | Principal ML Investigator | Sunnyvale, CA |  | [Ashby](https://jobs.ashbyhq.com/cerebras/58cebd9f-5a5c-4435-843a-aca160d66a32) |
+| 234 | cerebras | Principal SRE - AI Inference | Sunnyvale, CA |  | [Ashby](https://jobs.ashbyhq.com/cerebras/1bf0ea92-b0fd-4163-b44c-3564e67b15c1) |
+| 235 | pear-vc | Member of Technical Staff, Machine Learning - NomadicML | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/47d8a676-7f3e-4ea7-b89e-0ef87b34bf1e) |
+| 236 | pear-vc | Member of Technical Staff, AI Agents | Mountain View, CA |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/9be18753-6951-4054-9098-d497adcaef1f) |
+| 237 | Hippocratic AI | LLM  Inference Engineer (Mid, Sr, Staff) | Menlo Park, CA |  | [Ashby](https://jobs.ashbyhq.com/Hippocratic%20AI/eef8a721-23de-4c20-bff0-56088b39afa0) |
+| 238 | Hippocratic AI | AI Engineer (Senior, Staff, Senior Staff, Principal) | Menlo Park, CA |  | [Ashby](https://jobs.ashbyhq.com/Hippocratic%20AI/16bc4536-04ae-41c7-94f7-53b66b2572a3) |
+| 239 | midjourney | Principal Machine Learning Engineer (Reconstruction / Quantitative Imaging) | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/midjourney/9d54d241-0824-405a-bc8a-a64483e67cee) |
+| 240 | pear-vc | Member of Technical Staff, Backend - NomadicML | San Francisco |  | [Ashby](https://jobs.ashbyhq.com/pear-vc/88497440-ca98-46cc-b990-1347a9e7688f) |
+| 241 | extremenetworks | Innovation Lead - Office of the CTO | AI (10505) | San Jose, California, United States | $200000-230000 USD | [Lever](https://jobs.lever.co/extremenetworks/8504f93a-9ff8-4069-b05c-57826d61383d) |
+| 242 | extremenetworks | Director, Cloud Operations (10364) | San Jose, California, United States | $250000-300000 USD | [Lever](https://jobs.lever.co/extremenetworks/05b2b1bb-08ce-48b2-b122-81179930d682) |
+| 243 | hive | Engineering Manager | San Francisco |  | [Lever](https://jobs.lever.co/hive/36233884-41a7-47d7-90b5-73369d32d68c) |
+| 244 | hive | Staff Machine Learning Engineer | San Francisco |  | [Lever](https://jobs.lever.co/hive/7e00cd85-9442-46e7-927d-d0e21b23ea56) |
+| 245 | Checkr | Senior Engineering Manager, Machine Learning | San Francisco | $302k – $355k | [Wellfound](https://wellfound.com/jobs/4716627-senior-engineering-manager-machine-learning) |
+| 246 | DoorDash | Engineering Manager, New Verticals - Fulfillment | Seattle, San Francisco, Sunnyvale | $202k – $303k | [Wellfound](https://wellfound.com/jobs/3044245-engineering-manager-new-verticals-fulfillment) |
+| 247 | Primitive Instruments | Founding Machine Learning / Data Engineer | New York City, San Francisco Bay Area | $180k – $250k • 0.0% – 1.0% | [Wellfound](https://wellfound.com/jobs/4220113-founding-machine-learning-data-engineer) |
+| 248 | kos.ai | Founding AI Engineer | San Francisco | $170k – $250k | [Wellfound](https://wellfound.com/jobs/4497047-founding-ai-engineer) |
+| 249 | Matterhaul | Founding Applied AI Engineer | San Francisco | $175k – $225k | [Wellfound](https://wellfound.com/jobs/4121759-founding-applied-ai-engineer) |
+| 250 | Bluepina | Founding AI Engineer (Fully Remote | Up to $220k/year) | New York City, San Francisco | $160k – $220k • 1.0% – 3.0% | [Wellfound](https://wellfound.com/jobs/4484786-founding-ai-engineer-fully-remote-up-to-220k-year) |
+| 251 | NameCoach | Founding Voice AI Engineer (Part-time, potential path to Chief AI Officer) | San Francisco | $130k – $210k • 0.25% – 1.5% | [Wellfound](https://wellfound.com/jobs/4218443-founding-voice-ai-engineer-part-time-potential-path-to-chief-ai-officer) |
+| 252 | Redwagon | AI Engineer - Founding Team | San Francisco | $120k – $200k • 0.1% – 2.0% | [Wellfound](https://wellfound.com/jobs/4766904-ai-engineer-founding-team) |
+| 253 | Weave | Founding AI Engineer | San Francisco | $150k – $200k • 0.1% – 0.2% | [Wellfound](https://wellfound.com/jobs/4644371-founding-ai-engineer) |
+| 254 | Coalition, inc.  | Senior Manager, Machine Learning (Data Operations) | Austin, Canada, Denver, United States, Virginia, Washington DC, San Francisco, Provo, Portugal | $134k – $200k | [Wellfound](https://wellfound.com/jobs/4486278-senior-manager-machine-learning-data-operations) |
+| 255 | Lunera Health | Founding AI Engineer | New York City, San Francisco | $140k – $180k • 1.0% – 4.0% | [Wellfound](https://wellfound.com/jobs/4435474-founding-ai-engineer) |
+| 256 | Rhizome AI | Founding Full Stack AI Engineer | San Francisco | $70k – $140k • 0.5% – 2.0% | [Wellfound](https://wellfound.com/jobs/3531728-full-stack-ai-engineer) |
+| 257 | Earthinia Company Services | Founding Agentic AI Engineer | Miami, New York City, Washington DC, San Francisco, San Jose, Toronto, Fort Lauderdale | $80k – $120k • 2.0% – 5.0% | [Wellfound](https://wellfound.com/jobs/4733647-founding-agentic-ai-engineer) |
+| 258 | Human Agency | Director, AI Transformation | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4491920-director-ai-transformation) |
+| 259 | FairwAI | ML Ops / Infrastructure Fellow (Health) | Atlanta, Austin, Boston, Chicago, Los Angeles, San Diego, Texas, San Francisco, Toronto, Montreal, Pittsburgh, Michigan, Raleigh, Rochester, Maryland, New York, Charlotte, Dartmouth, Los Angeles County |  | [Wellfound](https://wellfound.com/jobs/4199871-ml-ops-infrastructure-fellow-health) |
+| 260 | FairwAI | ML Ops / Infrastructure Fellow | Atlanta, Austin, Boston, Chicago, Los Angeles, San Diego, Texas, San Francisco, Toronto, Montreal, Pittsburgh, Michigan, Raleigh, Rochester, Maryland, New York, Charlotte, Dartmouth, Los Angeles County |  | [Wellfound](https://wellfound.com/jobs/3859771-ml-ops-infrastructure-fellow) |
+| 261 | Orb | VP of Engineering- San Francisco HQ | San Francisco | $383k – $475k | [Wellfound](https://wellfound.com/jobs/4470382-vp-of-engineering-san-francisco-hq) |
+| 262 | Weave | Field CTO | San Francisco | $200k – $400k • 0.5% – 1.0% | [Wellfound](https://wellfound.com/jobs/4644368-field-cto) |
+| 263 | 6sense | VP, Software Engineering | San Francisco | $270k – $396k | [Wellfound](https://wellfound.com/jobs/3309010-vp-software-engineering) |
+| 264 | Mixpanel | Senior Engineering Manager, Data Pipelines & APIs | San Francisco | $279k – $377k | [Wellfound](https://wellfound.com/jobs/3335958-senior-engineering-manager-data-pipelines-apis) |
+| 265 | Mochi Health | Engineering Manager | San Francisco | $280k – $350k | [Wellfound](https://wellfound.com/jobs/4005023-engineering-manager) |
+| 266 | Orb | Senior Engineering Manager, Entitlements & Spend Platform - San Francisco HQ | San Francisco | $230k – $350k | [Wellfound](https://wellfound.com/jobs/4491982-senior-engineering-manager-entitlements-spend-platform-san-francisco-hq) |
+| 267 | Braze | Engineering Manager, Landing Pages | San Francisco | $189k – $320k | [Wellfound](https://wellfound.com/jobs/4658838-engineering-manager-landing-pages) |
+| 268 | Faire | Senior Engineering Manager - Discovery | San Francisco | $231k – $318k | [Wellfound](https://wellfound.com/jobs/4262684-senior-engineering-manager-discovery) |
+| 269 | Checkr | Senior Engineering Manager, Mortgage | San Francisco | $269k – $316k | [Wellfound](https://wellfound.com/jobs/4716628-senior-engineering-manager-mortgage) |
+| 270 | Unlearn.AI | VP of Engineering | San Francisco | $260k – $310k | [Wellfound](https://wellfound.com/jobs/4728475-vp-of-engineering) |
+| 271 | DoorDash | Engineering Manager, Fraud Experience | Los Angeles, San Francisco, Sunnyvale | $202k – $303k | [Wellfound](https://wellfound.com/jobs/3022781-engineering-manager-fraud-experience) |
+| 272 | DoorDash | Engineering Manager, Order Accuracy | Seattle, San Francisco, Sunnyvale | $202k – $303k | [Wellfound](https://wellfound.com/jobs/2966217-engineering-manager-order-accuracy) |
+| 273 | Ivo | Director of Partner Management | San Francisco | $267k – $300k | [Wellfound](https://wellfound.com/jobs/4288751-director-of-partner-management) |
+| 274 | Speak | Engineering Manager, Infrastructure / Platform | San Francisco | $220k – $300k | [Wellfound](https://wellfound.com/jobs/4079989-engineering-manager-infrastructure-platform) |
+| 275 | Mosaic | Tech Lead Manager, Integration | San Francisco | $220k – $300k • 0.01% – 0.02% | [Wellfound](https://wellfound.com/jobs/4592876-tech-lead-manager-integration) |
+| 276 | Forecareer | Tech Lead Manager, Full Stack | San Francisco, Vancouver, Toronto | $230k – $300k | [Wellfound](https://wellfound.com/jobs/4144354-tech-lead-manager-full-stack) |
+| 277 | Motive | Director, Developer Platform & Experience | San Francisco | $229k – $285k | [Wellfound](https://wellfound.com/jobs/4584444-director-developer-platform-experience) |
+| 278 | GlossGenius | Senior Engineering Manager, Infrastructure  | San Francisco | $230k – $280k | [Wellfound](https://wellfound.com/jobs/4597863-senior-engineering-manager-infrastructure) |
+| 279 | Convex | Engineering Manager, API/Product | San Francisco | $280k – $280k | [Wellfound](https://wellfound.com/jobs/4511415-engineering-manager-api-product) |
+| 280 | Convex | Engineering Manager, Infra/Systems | San Francisco | $280k – $280k | [Wellfound](https://wellfound.com/jobs/4493421-engineering-manager-infra-systems) |
+| 281 | Lead Bank | Engineering Manager | New York City, San Francisco, Sunnyvale | $250k – $279k | [Wellfound](https://wellfound.com/jobs/3651299-engineering-manager) |
+| 282 | Cyberhaven | Director, Product Management  (Ecosystem & Integrations) | Austin, Seattle, San Francisco | $250k – $275k | [Wellfound](https://wellfound.com/jobs/4689934-director-product-management-ecosystem-integrations) |
+| 283 | Checkr | Engineering Manager, Verifications | Denver, San Francisco | $233k – $274k | [Wellfound](https://wellfound.com/jobs/4779248-engineering-manager-verifications) |
+| 284 | Sigma Computing | Engineering Manager | San Francisco | $230k – $270k | [Wellfound](https://wellfound.com/jobs/4325601-engineering-manager) |
+| 285 | Pave | Engineering Manager, Compensation Planning | San Francisco | $196k – $265k | [Wellfound](https://wellfound.com/jobs/4417609-engineering-manager-compensation-planning) |
+| 286 | Sydecar | Senior Engineering Manager | New York City, San Francisco | $220k – $260k | [Wellfound](https://wellfound.com/jobs/4678046-senior-engineering-manager) |
+| 287 | Oklo | Director of Development Engineering  | Santa Clara | $200k – $250k | [Wellfound](https://wellfound.com/jobs/4667505-director-of-development-engineering) |
+| 288 | Adeia | Co-Packaged Optics, Director | San Jose | $202k – $250k • 75.0% – 75.0% | [Wellfound](https://wellfound.com/jobs/4722550-co-packaged-optics-director) |
+| 289 | kos.ai | Founding Platform Engineer | San Francisco | $170k – $250k | [Wellfound](https://wellfound.com/jobs/4497048-founding-platform-engineer) |
+| 290 | Assured | Software Engineering Manager | Palo Alto | $230k – $250k | [Wellfound](https://wellfound.com/jobs/3045417-software-engineering-manager) |
+| 291 | Oklo | Director of Transmission & Interconnection  | Santa Clara | $200k – $245k | [Wellfound](https://wellfound.com/jobs/4667500-director-of-transmission-interconnection) |
+| 292 | Adeia | Semiconductor 3D Architecture, Director | San Jose | $195k – $245k • 75.0% – 75.0% | [Wellfound](https://wellfound.com/jobs/4722548-semiconductor-3d-architecture-director) |
+| 293 | Slipway AI Solutions | Founding Engineer / Builder | San Francisco | $160k – $240k • 0.5% – 2.0% | [Wellfound](https://wellfound.com/jobs/4697825-founding-engineer-builder) |
+| 294 | Rec | Engineering Manager (Platform) | San Francisco | $190k – $240k | [Wellfound](https://wellfound.com/jobs/4481101-engineering-manager-platform) |
+| 295 | Askew | Founding Software Engineer | New York City, Seattle, San Francisco | $180k – $230k • 1.0% – 2.0% | [Wellfound](https://wellfound.com/jobs/3934040-founding-software-engineer) |
+| 296 | Clever | Engineering Manager | San Francisco, Continental | $167k – $230k | [Wellfound](https://wellfound.com/jobs/4597817-engineering-manager) |
+| 297 | Dealpath | Engineering Manager, Platform | San Francisco | $200k – $230k | [Wellfound](https://wellfound.com/jobs/4505457-engineering-manager-platform) |
+| 298 | Point | Technical Lead Manager | San Francisco | $168k – $227k CAD | [Wellfound](https://wellfound.com/jobs/4708017-technical-lead-manager) |
+| 299 | Gabeo.ai | Head of Engineering | San Francisco | $150k – $225k • 0.1% – 1.0% | [Wellfound](https://wellfound.com/jobs/4751260-head-of-engineering) |
+| 300 | Zania | Head of Engineering | San Francisco | $160k – $220k | [Wellfound](https://wellfound.com/jobs/4040727-head-of-engineering) |
+| 301 | Backpack | Founding Backend Engineer | Austin, Boston, New York City, Philadelphia, Seattle, San Francisco, Salt Lake City | $170k – $220k • 0.1% – 0.5% | [Wellfound](https://wellfound.com/jobs/4395939-founding-backend-engineer) |
+| 302 | Braze | Director, Global Programs | San Francisco | $153k – $215k | [Wellfound](https://wellfound.com/jobs/4696259-director-global-programs) |
+| 303 | Astranis | Electronics Engineering Manager | San Francisco | $160k – $215k | [Wellfound](https://wellfound.com/jobs/3839764-electronics-engineering-manager) |
+| 304 | Just Appraised | Engineering Manager | Palo Alto | $165k – $205k | [Wellfound](https://wellfound.com/jobs/3965727-engineering-manager) |
+| 305 | Recidiviz | Director of Product | New York City, Oakland | $201k – $201k | [Wellfound](https://wellfound.com/jobs/4735294-director-of-product) |
+| 306 | Redwagon | Data Engineer - Founding Team | San Francisco | $120k – $200k • 0.1% – 2.0% | [Wellfound](https://wellfound.com/jobs/4766905-ai-engineer-founding-team-clone) |
+| 307 | Solderable | Founding Software Engineer | San Francisco | $160k – $200k • 0.5% – 1.0% | [Wellfound](https://wellfound.com/jobs/4739736-founding-electrical-engineer-clone) |
+| 308 | PayOS | Founding Engineer, Payments | San Francisco | $140k – $200k | [Wellfound](https://wellfound.com/jobs/4634547-founding-engineer-payments) |
+| 309 | Sidekick | Founding Engineer | San Francisco | $145k – $195k • 0.25% – 1.0% | [Wellfound](https://wellfound.com/jobs/3313198-founding-engineer) |
+| 310 | Anagram | Founding Engineer | Portland, San Francisco, Remote | $110k – $190k • 0.5% – 1.5% | [Wellfound](https://wellfound.com/jobs/3625680-founding-engineer) |
+| 311 | Snout | Founding Data Engineer | Austin, Boston, Chicago, Dallas, Los Angeles, New York City, Seattle, Washington DC, San Francisco, Irvine | $165k – $185k • 0.0% – 0.1% | [Wellfound](https://wellfound.com/jobs/4766936-analytics-engineer-clone) |
+| 312 | Influxion | Founding Infrastructure Engineer | San Francisco | $120k – $180k • 0.5% – 2.0% | [Wellfound](https://wellfound.com/jobs/4475799-founding-infrastructure-engineer) |
+| 313 | Nero | Founding Software Engineer | San Francisco | $140k – $180k • 0.25% – 1.0% | [Wellfound](https://wellfound.com/jobs/3756534-founding-software-engineer) |
+| 314 | Litmos.com | Software Engineering Manager - Technical Owner | San Francisco | $160k – $180k | [Wellfound](https://wellfound.com/jobs/3454557-software-engineering-manager-technical-owner) |
+| 315 | Blend | Security Engineering Manager | New York City, San Francisco | $152k – $179k | [Wellfound](https://wellfound.com/jobs/4536852-security-engineering-manager) |
+| 316 | Code for America | Engineering Manager  | San Francisco | $129k – $158k • No equity | [Wellfound](https://wellfound.com/jobs/4704066-engineering-manager) |
+| 317 | Earthinia Company Services | Founding Software Engineer | Miami, New York City, Washington DC, San Francisco, San Jose, Toronto, Fort Lauderdale | $80k – $120k • 2.0% – 5.0% | [Wellfound](https://wellfound.com/jobs/4733655-founding-agentic-ai-engineer-clone) |
+| 318 | Ponce AI | Founding Engineer — Path to CTO | San Francisco | $80k – $110k • 0.5% – 1.5% | [Wellfound](https://wellfound.com/jobs/4492782-founding-engineer-path-to-cto) |
+| 319 | Earthinia Company Services | Founding Frontend Engineer | Miami, New York City, Washington DC, San Francisco, San Jose, Toronto, Fort Lauderdale | $80k – $100k • 2.0% – 5.0% | [Wellfound](https://wellfound.com/jobs/4733656-founding-agentic-ai-engineer-clone-clone) |
+| 320 | Inkah | Lead Engineer / VP of Engineering | San Francisco | $40k – $70k • 5.0% – 20.0% | [Wellfound](https://wellfound.com/jobs/1839334-lead-engineer-vp-of-engineering) |
+| 321 | kos.ai | Managing Director, Defense + Space | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4497049-managing-director-defense-space) |
+| 322 | kos.ai | Managing Director, Digital Infrastructure | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4497050-managing-director-digital-infrastructure) |
+| 323 | Agent IQ | Director, Software Engineering | San Francisco |  | [Wellfound](https://wellfound.com/jobs/545767-director-software-engineering) |
+| 324 | Utilyze | Founding Engineer | Austin, Boston, New York City, San Antonio, San Francisco | 1.0% – 10.0% | [Wellfound](https://wellfound.com/jobs/4716639-bioinformatics-intern-clone) |
+| 325 | braind | Founding Engineer | New York City, San Francisco, London, Cambridge, Oxford, Athens | $1k – $1k • 0.1% – 10.0% | [Wellfound](https://wellfound.com/jobs/3410828-founding-engineer) |
+| 326 | Cruitical | Founding Engineer | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4579171-applied-ai-engineer-clone-clone-clone-clone) |
+| 327 | Proteus Bio | Founding Engineer | San Francisco, London |  | [Wellfound](https://wellfound.com/jobs/4657046-founding-engineer) |
+| 328 | TrashLab | Engineering Manager | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4756790-engineering-manager) |
+| 329 | Introd | Founding Head of Product (Early Employee #1–3) | Austin, New York City, San Francisco | $20k – $30k • 0.5% – 1.5% | [Wellfound](https://wellfound.com/jobs/3683446-founding-head-of-product-early-employee-1-3) |
+| 330 | Shin AI Labs | Founding Engineer - Electron + Node.js | San Francisco, Bengaluru | 0.3% – 3.0% | [Wellfound](https://wellfound.com/jobs/4248509-founding-engineer-electron-node-js) |
+| 331 | Shin AI Labs | Chief Technology Officer (CTO) | San Francisco, Bengaluru | 1.5% – 4.0% | [Wellfound](https://wellfound.com/jobs/4248513-chief-technology-officer-cto) |
+| 332 | Flocker | Founding Backend Engineer - Remote (USA) | New York City, San Francisco, Remote | 1.0% – 5.0% | [Wellfound](https://wellfound.com/jobs/3532881-founding-backend-engineer-remote-usa) |
+| 333 | FairwAI | Project Management Fellow | Austin, Baltimore, Dallas, Houston, New York City, North Carolina, Philadelphia, Seattle, Virginia, Washington DC, San Francisco, London, Maine, Ann Arbor, Amsterdam, Manchester, Michigan, Berlin, Raleigh, Syracuse, Charlotte, Oslo, South Carolina, Dublin, Lisbon, Birmingham, Hartford, Ithaca, Springfield, Bergen, Amstelveen, Newark, Albany, Manchester |  | [Wellfound](https://wellfound.com/jobs/3251810-project-management-fellow) |
+| 334 | Drinova | Founding Engineer – Supply Chain Intelligence & Carbon Infrastructure | Boston, San Francisco Bay Area | 0.25% – 1.0% | [Wellfound](https://wellfound.com/jobs/4322308-founding-engineer-supply-chain-intelligence-carbon-infrastructure) |
+| 335 | MEDvidi | Engineering Manager | San Francisco | No equity | [Wellfound](https://wellfound.com/jobs/4408975-engineering-manager) |
+| 336 | Upbound | Sr. Engineering Manager | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4698002-sr-engineering-manager) |
+| 337 | Faire | Senior Staff Machine Learning Platform Engineer | San Francisco | $295k – $406k | [Wellfound](https://wellfound.com/jobs/4610056-senior-staff-machine-learning-platform-engineer) |
+| 338 | Faire | Staff Machine Learning Platform Engineer | San Francisco | $247k – $339k | [Wellfound](https://wellfound.com/jobs/3876374-staff-machine-learning-platform-engineer) |
+| 339 | Zero RFI | Principal AI Engineer  | San Francisco | $280k – $320k | [Wellfound](https://wellfound.com/jobs/4191889-2-principal-ai-engineer) |
+| 340 | Braze | Staff Machine Learning Engineer, ML Platform | San Francisco | $184k – $314k | [Wellfound](https://wellfound.com/jobs/4724417-staff-machine-learning-engineer-ml-platform) |
+| 341 | Lightfield | Machine Learning Engineer (Staff) | San Francisco | $220k – $300k | [Wellfound](https://wellfound.com/jobs/3495812-machine-learning-engineer-staff) |
+| 342 | Lightfield | Software Engineer, Staff (Applied AI) | San Francisco | $220k – $300k | [Wellfound](https://wellfound.com/jobs/3495808-software-engineer-staff-applied-ai) |
+| 343 | Traba | Staff Software Engineer (Applied AI) | New York City, San Francisco | $240k – $300k • 0.13% – 0.24% | [Wellfound](https://wellfound.com/jobs/4692296-staff-software-engineer-applied-ai) |
+| 344 | Rocket Money | Staff Applied AI Engineer | New York City, Washington DC, San Francisco, Washington | $200k – $270k | [Wellfound](https://wellfound.com/jobs/4762898-staff-applied-ai-engineer) |
+| 345 | Sigma Computing | Staff AI/ML Engineer | San Francisco | $240k – $270k | [Wellfound](https://wellfound.com/jobs/4325621-staff-ai-ml-engineer) |
+| 346 | Rocket Money | Staff ML Engineer, Product | Denver, New York City, Washington DC, San Francisco, Washington | $210k – $260k | [Wellfound](https://wellfound.com/jobs/3347544-staff-ml-engineer-product) |
+| 347 | Doss | Staff Applied AI Engineer | San Francisco | $230k – $260k | [Wellfound](https://wellfound.com/jobs/4463656-staff-applied-ai-engineer) |
+| 348 | Deeply | Staff AI Product Engineer | San Francisco | $150k – $220k • 0.5% – 1.5% | [Wellfound](https://wellfound.com/jobs/4766763-founding-product-engineer) |
+| 349 | Actively | Senior / Staff Software Engineer (AI Agents) | San Francisco | $180k – $220k | [Wellfound](https://wellfound.com/jobs/3612759-senior-staff-software-engineer-ai-agents) |
+| 350 | Watney Robotics | Staff Machine Learning Engineer | San Francisco |  | [Wellfound](https://wellfound.com/jobs/4722692-staff-machine-learning-engineer) |
+| 351 | Valthos | Member of Technical Staff - Applied AI Engineer | San Francisco, New York |  | [Wellfound](https://wellfound.com/jobs/3989349-member-of-technical-staff-applied-ai-engineer) |
+| 352 | Netskope |  Staff Engineer, AI Gateway | San Francisco, London, Melbourne, Santa Clara, Tokyo, Taipei, Clayton, Melbourne, Bangalore Urban, Madrid, St. Louis |  | [Wellfound](https://wellfound.com/jobs/4751350-staff-engineer-ai-gateway) |
+| 353 | Netskope | Staff / Sr. Staff Engineer, AI Gateway | San Francisco, London, Melbourne, Santa Clara, Tokyo, Taipei, Clayton, Melbourne, Bangalore Urban, Madrid, St. Louis |  | [Wellfound](https://wellfound.com/jobs/4658823-staff-sr-staff-engineer-ai-gateway) |
+| 354 | Unity Technologies | Staff Backend Engineer, Vector AI | Mountain View, CA, US | $192,600–$317,800 | [Workday](https://unitytech.wd1.myworkdayjobs.com/Unity/job/Mountain-View-CA-USA/Staff-Backend-Engineer--ML-Inference-Systems_JOBREQ-2615964) |
+| 355 | Unity Technologies | Principal Machine Learning Engineer, Ads Modeling | Mountain View, CA, US | $197,400–$325,400 | [Workday](https://unitytech.wd1.myworkdayjobs.com/Unity/job/Mountain-View-CA-USA/Principal-Machine-Learning-Engineer--Ads-Modeling_JOBREQ-2616596) |
+| 356 | Unity Technologies | Staff Machine Learning Engineer, Ads Modeling | Mountain View, CA, US | $172,200–$283,900 | [Workday](https://unitytech.wd1.myworkdayjobs.com/Unity/job/Mountain-View-CA-USA/Staff-Machine-Learning-Engineer--Ads-Modeling_JOBREQ-2616598) |
+| 357 | Unity Technologies | Staff Machine Learning Engineer | Mountain View, CA, US | $172,200–$283,900 | [Workday](https://unitytech.wd1.myworkdayjobs.com/Unity/job/Mountain-View-CA-USA/Senior-Machine-Learning-Engineer_JOBREQ-2616280) |
+| 358 | Visa | Staff Software Engineer, Sr. Consultant (Agentic AI, Cloud, LLM, API) | Foster City, CA, US | $169,100–$270,800 | [Workday](https://visa.wd5.myworkdayjobs.com/Visa/job/US---Foster-City-CA/Software-Engineer---Sr-Consultant-level-1_REF080662W) |
+| 359 | DigitalOcean | Principal Engineer, AI/ML Security | In-Office or Remote San Francisco Bay Area, CA 230K-288K Annually Expert/Leader 230K-288K |  | [Company site](https://www.builtinsf.com/job/director-security-products-key-management/11171207) |
+| 360 | SPREEAI | Principal Engineer, AI Platform & Infrastructure | In-Office San Francisco Bay Area, CA Expert/Leader Expert/Leader Artificial Intelligence |  | [Company site](https://www.builtinsf.com/job/principal-engineer-ai-platform-infrastructure/11295870) |
+| 361 | Ridgeline | Principal Engineer, AI Platform | In-Office or Remote San Francisco Bay Area, CA 253K-348K Annually Expert/Leader 253K-348K |  | [Company site](https://www.builtinsf.com/job/principal-engineer-ai-platform/11191783) |
+| 362 | CrowdStrike | Principal Staff Engineer, AI Platform Research, Data Science (Remote) | Remote) Reposted 11 Days Ago Saved Remote or Hybrid San Francisco Bay Area, CA 195K-29 |  | [Company site](https://www.builtinsf.com/job/principal-staff-engineer-ai-platform-research-data-science-remote/10589194) |
+| 363 | Coupa | Principal Engineer, AI/ML Architecture - 11310 | Hybrid San Francisco Bay Area, CA 241K-337K Annually Expert/Leader 241K-337K Annually |  | [Company site](https://www.builtinsf.com/job/principal-engineer-ai-ml-architecture-11310/9244488) |
+| 364 | BMO | Principal Cloud Engineer AI | In-Office San Francisco Bay Area, CA 120K-250K Annually Senior level 120K-250K Annually S |  | [Company site](https://www.builtinsf.com/job/principal-cloud-engineer-ai/11342053) |
+| 365 | General Motors | Principal Software Engineer - Vehicle AI | Remote or Hybrid Mountain View, CA, USA 239K-366K Annually Expert/Leader 239K-366K Ann |  | [Company site](https://builtin.com/job/principal-software-engineer-vehicle-ai/11094951) |
+| 366 | ZoomInfo | Principal Software Engineer - AI Platform | In-Office or Remote San Francisco, CA, USA 164K-257K Annually Senior level 164K-257K Annu |  | [Company site](https://www.builtinsf.com/job/principal-software-engineer-pa172/10832389) |
+| 367 | Council Capital | Principal Architect, AI & Platform | Remote San Francisco Bay Area, CA Expert/Leader Expert/Leader Healthtech Lead platform |  | [Company site](https://www.builtinsf.com/job/principal-architect-ai-platform/11420091) |
+| 368 | IREN | Principal Solution Architect – AI Infrastructure and Cloud | Hybrid San Francisco Bay Area, CA Expert/Leader Expert/Leader Artificial Intelligence |  | [Company site](https://www.builtinsf.com/job/principal-solution-architect-ai-infrastructure-and-cloud/11205593) |
+| 369 | DIRECTV | Principal AI Architect | In-Office or Remote San Francisco Bay Area, CA 134K-244K Annually Senior level 134K-244K |  | [Company site](https://www.builtinsf.com/job/principal-ai-architect/11312574) |
+| 370 | BMO | Principal Architect AI Platform | In-Office or Remote San Francisco Bay Area, CA 112K-209K Annually Expert/Leader 112K-209K |  | [Company site](https://www.builtinsf.com/job/principal-architect-ai-platform/10895078) |
+| 371 | Together AI | Staff Software Engineer - AI Compute, Together Cloud | In-Office San Francisco, CA, USA 260K-300K Annually Senior level 260K-300K Annually Senio |  | [Company site](https://www.builtinsf.com/job/staff-software-engineer-ai-compute-together-cloud/11344916) |
+| 372 | Klarity | Senior/Staff AI Frontend Engineer | In-Office San Francisco, CA, USA 185K-315K Annually Senior level 185K-315K Annually Senio |  | [Company site](https://www.builtinsf.com/job/senior-staff-ai-frontend-engineer/11338253) |
+| 373 | Dynamo AI | Lead/Staff Software Engineer - AI Platform | In-Office San Francisco, CA, USA Senior level Senior level Artificial Intelligence • Soft |  | [Company site](https://www.builtinsf.com/job/lead-staff-software-engineer-ai-platform/11202477) |
+| 374 | Airwallex | Staff Backend Engineer, Agentic AI | Hybrid San Francisco, CA, USA 182K-310K Annually Senior level 182K-310K Annually Senio |  | [Company site](https://www.builtinsf.com/job/staff-senior-backend-engineer-agentic-ai/9741339) |
+| 375 | Sprinter Health | AI Automation Team - Software Engineer (Staff) | Hybrid San Francisco, CA, USA 220K-255K Annually Senior level 220K-255K Annually Senio |  | [Company site](https://www.builtinsf.com/job/ai-automation-team-software-engineer-staff/10075308) |
+| 376 | Hivemapper | Staff Software Engineer - Map AI Platform | In-Office San Francisco, CA, USA Senior level Senior level Blockchain • Software Drive th |  | [Company site](https://www.builtinsf.com/job/staff-software-engineer-map-ai-platform/4281131) |
+| 377 | Actively AI | Senior / Staff Software Engineer (AI Agents) | In-Office San Francisco, CA, USA 180K-220K Annually Senior level 180K-220K Annually Senio |  | [Company site](https://www.builtinsf.com/job/senior-staff-software-engineer-ai-agents/9201336) |
+| 378 | HomeVision | Staff Front End Engineer - AI Product UX - US - San Francisco (Hybrid) | Hybrid) Reposted One Month Ago Saved Hybrid San Francisco, CA, USA Senior level Senior |  | [Company site](https://www.builtinsf.com/job/staff-front-end-engineer-ai-product-ux-us-san-francisco-hybrid/9730338) |
+
+## AI healthcare companies from your list (110 engineering roles at 19 of the 35 companies with a public board)
+
+No public Ashby/Greenhouse/Lever board found for: Qualified Health, Alaffia Health, Heuron, Optura.AI, Navina, Heidi Health, Alife, AITRICS, Pi Health, Predoc, Aidoc, EnsoData, Converge Bio, IDx, Aimbient, Outcomes4Me.
+
+| # | Company | Title | Location | Pay | Apply |
+|---|---|---|---|---|---|
+| 1 | Telepatia | Forward Deployed Engineer | São Paulo |  | [ashby](https://jobs.ashbyhq.com/telepatia/6864ca66-fc56-4885-ba30-cb6deabf8831) |
+| 2 | Tandem Health | AI Engineer  | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/583fef4f-4417-40d9-a87e-e405180f71ce) |
+| 3 | Tandem Health | Senior AI Engineer  | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/f96ed2d8-02b0-416b-b6bc-a0c5b1265530) |
+| 4 | Tandem Health | Platform Engineer | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/5ae7f77b-934a-4c0b-add5-be6da91d5a10) |
+| 5 | Tandem Health | Forward Deployed Engineer | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/e6a2abc1-0a8c-4b4f-97b0-a3774f6c2e58) |
+| 6 | Tandem Health | Senior Engineer | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/2c9d8ecf-c2c6-4f8a-bcd9-034d22ac2911) |
+| 7 | Tandem Health | Clinical Research Lead - Stockholm | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/f4dd4f6e-9f32-40fc-92fa-99cbea4cfe96) |
+| 8 | Tandem Health | Project Delivery Lead  | Leiden |  | [ashby](https://jobs.ashbyhq.com/tandem-health/8a02aed8-2416-4694-a3c2-446c70b6c235) |
+| 9 | Tandem Health | Project Delivery Lead | Leiden |  | [ashby](https://jobs.ashbyhq.com/tandem-health/a14f3f8a-2b03-44af-989e-ca2ddc0f158f) |
+| 10 | Tandem Health | Product Engineering Lead | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/e2aef7f9-07d5-484d-93a5-dd2180489163) |
+| 11 | Tandem Health | Senior GRC Engineer | Stockholm |  | [ashby](https://jobs.ashbyhq.com/tandem-health/abda453c-bab5-46c4-ae7d-7b07e47a882e) |
+| 12 | Tandem Health | Commercial Lead - Poland | Poland |  | [ashby](https://jobs.ashbyhq.com/tandem-health/5bd6b0d1-55e2-4141-a41d-862de461b2f8) |
+| 13 | Triomics | Forward Deployed ML Engineer | New York Office  | $170K – $190K | [ashby](https://jobs.ashbyhq.com/triomics/df6ea402-6286-4461-b628-5821cfcb92b4) |
+| 14 | Triomics | Platform Engineer | New York Office  | $150K – $200K | [ashby](https://jobs.ashbyhq.com/triomics/c95b0e2f-798e-44fd-a45f-25ecd90ce242) |
+| 15 | Triomics | MLOps & Data Engineer | India Office |  | [ashby](https://jobs.ashbyhq.com/triomics/1f3e01da-3f06-44db-b736-df3ce40aec86) |
+| 16 | Bunkerhill Health | Forward Deployed Product Lead | SF Office | $185K – $245K • Offers Equity | [ashby](https://jobs.ashbyhq.com/bunkerhillhealth/c884092b-e3f5-469d-b21a-7705567e9f12) |
+| 17 | Bunkerhill Health | Forward Deployed Engineer | SF Office | $180K – $285K • Offers Equity | [ashby](https://jobs.ashbyhq.com/bunkerhillhealth/548ba6a6-b90f-462b-9f89-0f50de4557fe) |
+| 18 | Collate | AI Engineer | San Francisco |  | [lever](https://jobs.lever.co/collate/377f2cf3-6285-42c1-8130-dd3dd2c866cb) |
+| 19 | Collate | Frontend Software Engineer | San Francisco |  | [lever](https://jobs.lever.co/collate/ddb57f92-0391-43a6-bd90-10fc2abd23fb) |
+| 20 | Collate | Full-Stack Software Engineer (Backend-Leaning) | San Francisco |  | [lever](https://jobs.lever.co/collate/bc4a840c-71f1-4190-8826-6b42d236e375) |
+| 21 | Collate | Software Engineer (Backend) | San Francisco |  | [lever](https://jobs.lever.co/collate/6e60404a-4cd5-486d-ad73-eeb6d52d7a6a) |
+| 22 | PhaseV | Senior Backend Developer | Dereck Ha'SHalom St 4 |  | [greenhouse](https://boards.greenhouse.io/phasev/jobs/4000221009) |
+| 23 | PhaseV | Senior Director of Alliance Management, Strategic Accounts | One Broadway, 11th floor, Cambridge, MA 02142, USA |  | [greenhouse](https://boards.greenhouse.io/phasev/jobs/4092238009) |
+| 24 | PhaseV | Senior Software Engineer | One Broadway, 11th floor, Cambridge, MA 02142, USA |  | [greenhouse](https://boards.greenhouse.io/phasev/jobs/4003205009) |
+| 25 | Iambic | Director, Alliance Management - Drug Discovery Collaborations | San Diego HQ | $175K – $240K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/7d806fa5-430d-49f2-b980-7c1e66e21fd6) |
+| 26 | Iambic | Associate Director/Director, Alliance Management - AI Discovery | Remote - US | $155K – $240K • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/3d06348d-a8a7-4190-883e-07f67965154f) |
+| 27 | Iambic | Director/Senior Director, Immunology  | San Diego HQ |  | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/12a04101-8844-4843-90bd-1943c1931768) |
+| 28 | Iambic | Software Engineer — Agentic data pipelines | Remote - US | $110K – $162K • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/ed5c9548-a170-4a73-ade7-2f710d009fac) |
+| 29 | Iambic | Associate Director, Drug Safety | Remote - US | $164K – $205K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/fe3cabb2-f946-4279-aa9a-ff953e88330a) |
+| 30 | Iambic | Associate Director, Procurement | San Diego HQ | $156K – $195K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/fa8d8422-5e0b-4f37-8900-4f385912c315) |
+| 31 | Iambic | Associate Director, SEC Reporting and Technical Accounting | San Diego HQ | $156K – $195K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/e6804a00-aba2-4e65-bb13-9b3775b2ae44) |
+| 32 | Iambic | Lead Clinical Data Manager | Remote - US | $152K – $190K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/6d74d516-3cc4-42c3-b842-47a02d51de94) |
+| 33 | Iambic | Software Engineer I/II - Scientific Computing | Boston Office | $129K – $190K • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/26e58057-83e9-46af-85eb-90142cf3b8ba) |
+| 34 | Iambic | Senior Principal Statistical Programmer | Remote - US | $152K – $190K | [ashby](https://jobs.ashbyhq.com/iambic-therapeutics/11f49bdf-8dcf-4399-9cd6-03b1182fc063) |
+| 35 | Covera Health | VP, Population Health | Covera Health |  | [ashby](https://jobs.ashbyhq.com/covera-health/91c1e4ff-4c6e-4203-833c-203ea53d8ea6) |
+| 36 | Covera Health | Manager/Director, Proposal Management | Covera Health |  | [ashby](https://jobs.ashbyhq.com/covera-health/92e07045-db39-4f51-966d-dec2c45b7ecf) |
+| 37 | Anterior | Clinical Solutions Architect | Remote |  | [ashby](https://jobs.ashbyhq.com/anterior/ec919309-7888-4ed7-b851-4df7cc579555) |
+| 38 | Anterior | Technical Solutions Architect | New York | $180K – $250K • Offers Equity | [ashby](https://jobs.ashbyhq.com/anterior/e15f4d0f-4edd-4194-9376-c7e91a22898e) |
+| 39 | Anterior | Senior Member of Technical Staff | New York | $230K – $300K • Offers Equity | [ashby](https://jobs.ashbyhq.com/anterior/1163af7a-d1d6-41db-a8ea-fc49fd97c6b0) |
+| 40 | Cleerly | Director, Corporate Accounts | Virtual US |  | [greenhouse](https://boards.greenhouse.io/cleerlyhealth/jobs/6112485004) |
+| 41 | Cleerly | Software Engineer III | Virtual US |  | [greenhouse](https://boards.greenhouse.io/cleerlyhealth/jobs/6118783004) |
+| 42 | Cleerly | Sr. DevOps Engineering Manager | Denver, Colorado, United States |  | [greenhouse](https://boards.greenhouse.io/cleerlyhealth/jobs/6151686004) |
+| 43 | Cleerly | Sr. Engineering Manager (Clinical Labs - Clinical Insights) | Denver, Colorado, United States; New York, New York, United States |  | [greenhouse](https://boards.greenhouse.io/cleerlyhealth/jobs/5973651004) |
+| 44 | Cleerly | Staff Full-Stack Software Engineer | Denver, Colorado, United States; New York, New York, United States |  | [greenhouse](https://boards.greenhouse.io/cleerlyhealth/jobs/5819258004) |
+| 45 | Prompt Health | Senior Full Stack Software Engineer (B2B SaaS) | Remote | $170K – $220K | [ashby](https://jobs.ashbyhq.com/prompt/e2c99b8e-11cb-45a2-baca-9afe0d204399) |
+| 46 | Prompt Health | Senior Full Stack AI Engineer (Natural Language Systems) | Remote | $160K – $220K | [ashby](https://jobs.ashbyhq.com/prompt/dec47398-48ef-4788-a601-21b3218f0b25) |
+| 47 | Prompt Health | Senior Full Stack AI Engineer (Rapid Prototyping & Analytics ) | Remote | $160K – $220K | [ashby](https://jobs.ashbyhq.com/prompt/3a30fa71-a269-481b-a8ef-f35ae95e4fba) |
+| 48 | Prompt Health | Senior Data Engineer | Remote | $170K – $190K | [ashby](https://jobs.ashbyhq.com/prompt/aec1e1c9-bb89-4019-bea6-f56e363f1d13) |
+| 49 | Prompt Health | Senior Full Stack Engineer - Data & Analytics | Remote | $170K – $190K | [ashby](https://jobs.ashbyhq.com/prompt/1ed8373f-f0e1-4c90-a168-98f91bc41f8f) |
+| 50 | Prompt Health | Staff Accountant  | Remote | $80K – $90K | [ashby](https://jobs.ashbyhq.com/prompt/0c8f563d-5433-43a7-9cee-006e39d12162) |
+| 51 | Prompt Health | Senior Healthcare Integrations Software Engineer (B2B SaaS) | Remote | $170K – $200K | [ashby](https://jobs.ashbyhq.com/prompt/b425fa15-51e5-4527-8996-aa2748e2542a) |
+| 52 | Prompt Health | Senior Database Reliability Engineer | Remote | $220K – $240K | [ashby](https://jobs.ashbyhq.com/prompt/b413d37e-1b83-439d-8228-179eb6b53662) |
+| 53 | Prompt Health | Senior Director, Information Security | Remote | $200K – $240K | [ashby](https://jobs.ashbyhq.com/prompt/8af8d02d-3fef-49b3-856e-2e11b0f3f510) |
+| 54 | Prompt Health | Staff Software Engineer  | Remote | $225K – $300K | [ashby](https://jobs.ashbyhq.com/prompt/f04a4c5e-e26d-464f-872f-255c97457ef9) |
+| 55 | Prompt Health | Senior Manager, Demand Generation  | Remote | $130K – $160K | [ashby](https://jobs.ashbyhq.com/prompt/ce1313ca-17ec-4fac-88eb-f1dbc95aae15) |
+| 56 | Ambience Healthcare | Senior Data Engineer  | San Francisco | $174K – $217K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/75820fb1-fd8e-4128-bb2b-880c9e5873e5) |
+| 57 | Ambience Healthcare | Staff Software Engineer, Product | San Francisco | $226K – $283K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/2a5dcd26-fe35-4d06-b6d4-6f76d330134e) |
+| 58 | Ambience Healthcare | Senior Software Engineer, Product | San Francisco | $188K – $235K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/167c30e8-25ee-475a-88ef-d1cb15fc4d76) |
+| 59 | Ambience Healthcare | Engineering Manager, Product | San Francisco | $226K – $283K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/ff693839-faff-4921-ae76-b4c7ef45ecc9) |
+| 60 | Ambience Healthcare | Senior Machine Learning Engineer  | San Francisco | $204K – $255K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/6f44370e-1979-4237-a3db-94c46ec7ec9c) |
+| 61 | Ambience Healthcare | Staff ML Engineer, Frontier AI  | San Francisco | $244K – $305K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/a8b59898-34b0-4272-83a0-d530af467004) |
+| 62 | Ambience Healthcare | Staff Security Engineer | San Francisco | $226K – $283K • Offers Equity | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/ef7ec50a-e69b-4e20-bb95-f4786ca81656) |
+| 63 | Ambience Healthcare | Staff Software Engineer, Distributed Systems  | San Francisco | $226K – $283K | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/5cb55a29-7fb1-49b7-a361-fb540d000a6a) |
+| 64 | Ambience Healthcare | FP&A Lead | Remote - US | $136.8K – $190K • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/77428e13-eb22-4548-8bf9-16b503062973) |
+| 65 | Ambience Healthcare | Head of National Strategic Accounts | Remote - US | $250K – $300K • Offers 50% commission | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/1561f702-3eb2-4776-9bb5-15d75abd3ce1) |
+| 66 | Ambience Healthcare | Product Lead, Inpatient | San Francisco | $203K – $283K • Offers Equity • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/ambiencehealthcare/557575a5-6c50-412a-b687-0238d2638536) |
+| 67 | Layer Health | Engineering Manager, Machine Learning | Boston or NYC |  | [greenhouse](https://boards.greenhouse.io/layerhealth/jobs/4990056008) |
+| 68 | Layer Health | Head of Corporate and Information Security | Boston, Massachusetts, United States, New York, New York, United States |  | [greenhouse](https://boards.greenhouse.io/layerhealth/jobs/5423731008) |
+| 69 | Layer Health | Machine Learning Engineer | Boston or NYC |  | [greenhouse](https://boards.greenhouse.io/layerhealth/jobs/4915887008) |
+| 70 | Layer Health | Senior Fullstack Engineer | Boston or NYC |  | [greenhouse](https://boards.greenhouse.io/layerhealth/jobs/5436362008) |
+| 71 | Abridge | Member of Technical Staff, Machine Learning | SF Office | $205K – $300K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/097490e8-48c6-46e3-a0ce-882151fb4fa2) |
+| 72 | Abridge | Member of Technical Staff, VistA Integrations | United States - Remote | $210.8K – $248K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/7a28a84b-6756-4fe6-8af9-501fc8772a62) |
+| 73 | Abridge | Senior Application Security Engineer | SF Office | $214.2K – $252K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/57967034-08cb-4cfe-8243-4e9564acc32e) |
+| 74 | Abridge | Member of Data Science Staff | SF Office | $195K – $225K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/c3837e7e-2d59-49b6-95dc-0f670494fb31) |
+| 75 | Abridge | Member of Technical Staff, Machine Learning Infrastructure | SF Office | $221K – $260K | [ashby](https://jobs.ashbyhq.com/abridge/c7f09dee-07ca-444f-803d-961e7f88056b) |
+| 76 | Abridge | Member of Product Staff, Core Product Experiences | SF Office | $200K – $270K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/c45524b6-96b2-49f0-9cd5-176b998d6ba7) |
+| 77 | Abridge | Senior Enterprise Security Engineer | SF Office | $214.2K – $252K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/fe4bb4c9-9834-48a6-8f02-8f0ce03db78c) |
+| 78 | Abridge | Art Director, Part Time (Temporary) | United States - Remote | $70 – $105 per hour | [ashby](https://jobs.ashbyhq.com/abridge/ebb03b3f-e870-4cb0-ba23-43197118d492) |
+| 79 | Abridge | Member of Technical Staff, Data | SF Office | $210.8K – $248K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/480c4c99-2ca8-4dc7-ba6b-29a9ee28ed95) |
+| 80 | Abridge | Member of Product Staff, Forward Deployed | SF Office | $260K – $290K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/aef83f6a-0bc8-4d6a-b310-24415918ee3c) |
+| 81 | Abridge | Member of Technical Staff, Research Science | NYC Office | $188K – $277K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/03a3231f-8361-405e-87a6-192d710ca912) |
+| 82 | Abridge | Member of Technical Staff, Cerner Integrations | United States - Remote | $210.8K – $248K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/3897d978-77c0-4132-ae33-1bf9356be630) |
+| 83 | Abridge | Member of Technical Staff, Epic Integrations | California | $210.8K – $248K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/44814e98-7791-45c6-a474-f841d969fa08) |
+| 84 | Abridge | Member of Clinical Staff | SF Office | $240K – $280K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/89db9a1b-a590-4f17-be65-ac21507945c0) |
+| 85 | Abridge | Senior Nursing Executive | Remote - Tier 1 | $143,650 – $194,040 • Offers Equity • $28,730 – $38,808 Bonus • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/abridge/921ab403-86d3-4b44-8042-376a3b13efc3) |
+| 86 | Abridge | Senior Event Marketer | SF Office | $156K – $180K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/f180b849-6ccd-48e7-921e-eaec5556b196) |
+| 87 | Abridge | Staff Application Security Engineer | SF Office | $228K – $290K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/b8206fdb-4d85-472c-bd8f-7c7a2dcbfa69) |
+| 88 | Abridge | Compensation Lead | SF Office | $200K – $265K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/b9caefcc-8482-4059-b959-d3d6694f8721) |
+| 89 | Abridge | Member of Product Staff, AI/ML (Evals) | SF Office | $250K – $290K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/9c7ba6c3-7744-48b8-a5b3-dab55c22e4b3) |
+| 90 | Abridge | Member of Technical Staff, Early Career | SF Office | $167K – $184K | [ashby](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) |
+| 91 | Abridge | Member of Technical Staff, Mobile | California | $218K – $250K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/9e4579cb-90a6-475d-9293-598791debca3) |
+| 92 | Abridge | Member of Technical Staff, Front End | California | $218K – $250K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/983ea248-e6c9-43bc-a27d-914091173337) |
+| 93 | Abridge | Member of Product Staff, Foundation Models & Post-Training | SF Office | $250K – $290K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/5b66aac3-cb7a-4bbc-a28c-9fb38cf16656) |
+| 94 | Abridge | Staff IT Engineer | SF Office | $200K – $240K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/228d2bfe-cada-406a-a4c0-99c4ec13a242) |
+| 95 | Abridge | Member of Product Staff, Nursing | NYC Office | $230.4K – $268.8K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/99db1c40-ace4-4f39-a9a6-7da985fa91b5) |
+| 96 | Abridge | Director, Value Attainment & Analysis | CHI Office | $159.8K – $230.3K • Offers Equity • Multiple Ranges | [ashby](https://jobs.ashbyhq.com/abridge/237d7464-e331-4a2c-8465-9df3d339c3ee) |
+| 97 | Abridge | Engineering Leadership, NY Site Lead | NYC Office | $290K – $350K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/6cc498cb-7235-4300-a3a9-4b2f178678cb) |
+| 98 | Abridge | Program Director, Federal | Remote - Tier 1 | $207K – $258K | [ashby](https://jobs.ashbyhq.com/abridge/aa9b28ba-0cda-4f48-8fd4-dedf53e776db) |
+| 99 | Abridge | Head of Workplaces | SF Office | $197K – $240K • Offers Equity | [ashby](https://jobs.ashbyhq.com/abridge/1a61daf7-45cf-46a0-b030-cf9617741e23) |
+| 100 | QuantHealth | Director of Algorithms Development | Israel  |  | [greenhouse](https://boards.greenhouse.io/quanthealth/jobs/4943005101) |
+| 101 | QuantHealth | Senior AI Research Engineer | Israel  |  | [greenhouse](https://boards.greenhouse.io/quanthealth/jobs/4906873101) |
+| 102 | Nabla | Partnership Director | Anywhere in the United States | $120K – $160K • Offers Equity • $120K – $160K Commission | [ashby](https://jobs.ashbyhq.com/nabla/342a982b-4fa5-458b-8aa5-0f16e2dc38f2) |
+| 103 | Nabla | Senior Full-Stack Engineer | Paris office |  | [ashby](https://jobs.ashbyhq.com/nabla/5bd46598-d5a0-4042-8890-48049d8ee04a) |
+| 104 | Nabla | Senior Front-End (React) Engineer | Paris office |  | [ashby](https://jobs.ashbyhq.com/nabla/833aaffc-2100-4648-9e45-2cb4e0318faa) |
+| 105 | Nabla | Staff Front-End (React) Engineer | Paris office |  | [ashby](https://jobs.ashbyhq.com/nabla/35d47a72-5419-41f5-b6e5-b1b8ee3e365a) |
+| 106 | Nabla | SRE / Backend Engineer | New York office | $160K – $220K • Offers Equity | [ashby](https://jobs.ashbyhq.com/nabla/67f41562-cabb-4c75-8841-7ea113065ed8) |
+| 107 | Nabla | Full-Stack Engineer | Paris office |  | [ashby](https://jobs.ashbyhq.com/nabla/84fc612a-5781-40a3-a682-51736935479e) |
+| 108 | Nabla | Senior AI/ML Software Engineer | Paris office |  | [ashby](https://jobs.ashbyhq.com/nabla/70b408e9-ce07-44b0-9de5-fb1f6e41d5e3) |
+| 109 | Waymark | Junior Software Engineer | US - Remote |  | [greenhouse](https://boards.greenhouse.io/waymark/jobs/4711827005) |
+| 110 | Waymark | Senior/Principal Data Engineer | US - Remote |  | [greenhouse](https://boards.greenhouse.io/waymark/jobs/4030307005) |
