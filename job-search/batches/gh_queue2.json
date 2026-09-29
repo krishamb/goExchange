@@ -1,20 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/wehrtyou/jobs/8234195",
-  "tag": "wehrtyou_applied_ai_engineer",
-  "company": "wehrtyou",
-  "title": "Applied AI Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "If you heard about us from a friend or family member at HRT, please enter their "
-  ],
-  "posted_ts": 1790294400.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/launchdarkly/jobs/8004607003",
   "tag": "launchdarkly_engineering_manager_cloud_engineeri",
   "company": "launchdarkly",
