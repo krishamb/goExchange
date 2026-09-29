@@ -66,6 +66,8 @@ TEXT_RULES=[
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
+ (r"know anyone (who works|at|employed)|anyone you know (works|at)|friends or family (at|who work)", "No"),
+ (r"(average |typical |largest )?size of (the )?teams? (you've|you have|you) (managed|led)|how many (people|engineers|direct reports|reports) (have you|do you|did you) (managed|manage|lead|led)|team size|number of direct reports", "It varies by role: as Chief Architect at Yahoo Finance I directed 75+ engineers and partners across the platform modernization program; as CTO and Technical Co-Founder at Hyperion AI I led a small founding engineering team hands-on."),
  (r"start date|available to start|availability|notice period", "Immediately"),
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
  (r"when (can|could|would|are you able to) you (realistically |potentially |ideally )?start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Immediately (available now, no notice period)"),
@@ -111,7 +113,8 @@ CHOICE_RULES=[
  (r"how (do )?you use ai|use ai tools today|describes (how )?you use ai|your (use|usage) of ai tools|ai (proficiency|fluency)", ["I design or automate workflows with AI","I regularly use AI tools","I have experimented with AI tools","Advanced","Expert"]),
  (r"ai policy|(did|have) you use(d)? (any )?ai|without (the use of )?(any )?ai|no ai (assistance|tools)|ai.{0,20}(was|were) not used|(did not|didn't|have not) use.{0,20}ai|used? ai (to|in|for) (this|the|your|my) application|ai assistance", ["__ASK__"]),
  (r"authori[sz]ed to (lawfully |legally )?work|lawfully work|authori[sz]ation to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility",["Yes","yes","Can work for any employer","Any employer","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
- (r"currently an? .{0,60}(employee|contractor|intern)\b|current(ly)? (employee|contractor) of|employed by .{0,40}(currently|now|today)", ["No","no"]),   # not a current employee of the hiring company
+ (r"currently an? .{0,60}(employee|contractor|intern)\b|current(ly)? (employee|contractor) of|employed by .{0,40}(currently|now|today)|(ever|previously|formerly) been (an? )?(employee|contractor|intern|employed)", ["No","no"]),   # not a current or former employee of the hiring company
+ (r"experience with (aws|gcp|azure|the cloud|cloud (platforms|infrastructure)|kubernetes|terraform)|describe your (level of )?experience (with|in)", ["Both hands-on","Both","Hands-on experience operating","Hands-on","Expert","Advanced","Extensive","Very experienced","10+ years","5+ years"]),   # hands-on and led teams
  (r"\bFINRA\b|series (7|24|27|63|65|66|99)\b|securities licen[sc]e", ["No","no"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
