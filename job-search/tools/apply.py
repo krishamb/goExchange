@@ -538,6 +538,19 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if not await page.locator('button:has-text("Send application")').count():
                     ext=page.locator('a:has-text("Apply on website"), a:has-text("Apply on company website")').first
                     href=(await ext.get_attribute("href")) if await ext.count() else None
+                    if not href:   # Wellfound renders it as a button that opens the company's ATS in a new tab (or redirects this one)
+                        btn=page.locator('button:has-text("Apply on website"), button:has-text("Apply on company website")').first
+                        if await btn.count():
+                            try:
+                                async with page.context.expect_page(timeout=8000) as pinfo: await btn.click(timeout=5000)
+                                newp=await pinfo.value
+                                try: await newp.wait_for_load_state("domcontentloaded",timeout=20000)
+                                except Exception: pass
+                                href=newp.url; await newp.close()
+                            except Exception:
+                                await page.wait_for_timeout(4000)
+                                if "wellfound.com" not in page.url: href=page.url
+                            if href and "wellfound.com" in href: href=None
                     if href and re.search(r"greenhouse\.io|gh_jid=",href):
                         # Wellfound hands off to the company's Greenhouse form: apply there (same code flow as any Greenhouse job)
                         report["external"]=href; ats="greenhouse"; url=href; report["ats"]="greenhouse (via Wellfound)"
