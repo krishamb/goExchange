@@ -131,6 +131,7 @@ CHOICE_RULES=[
  (r"currently an? .{0,60}(employee|contractor|intern)\b|current(ly)? (employee|contractor) of|employed by .{0,40}(currently|now|today)|(ever|previously|formerly) been (an? )?(employee|contractor|intern|employed)", ["No","no"]),   # not a current or former employee of the hiring company
  (r"experience with (aws|gcp|azure|the cloud|cloud (platforms|infrastructure)|kubernetes|terraform)|describe your (level of )?experience (with|in)", ["Both hands-on","Both","Hands-on experience operating","Hands-on","Expert","Advanced","Extensive","Very experienced","10+ years","5+ years"]),   # hands-on and led teams
  (r"\bFINRA\b|series (7|24|27|63|65|66|99)\b|securities licen[sc]e", ["No","no"]),
+ (r"(taiwan|chin(a|ese)|india|indian|canad(a|ian)|mexic|korea|japan|uk|british|german|french|israel|singapore|brazil|european|eu|foreign|other) (citizen|national|passport)|citizen of (?!(the )?(u\.?s|united states|america))", ["No","no"]),   # US citizen only
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
  (r"(?=.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near)", ["Yes","yes","I currently live","I live in"]),   # the applicant lives in Santa Clara, CA
