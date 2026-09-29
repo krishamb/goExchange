@@ -1162,15 +1162,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/reddit/jobs/8127002",
-  "tag": "reddit_staff_android_engineer_brand_ad_for",
-  "company": "reddit",
-  "title": "Staff Android Engineer, Brand Ad Formats",
-  "comp": 303900.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/reddit/jobs/7868511",
   "tag": "reddit_staff_product_security_engineer",
   "company": "reddit",
@@ -4357,24 +4348,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/samsara/jobs/8205153",
-  "tag": "samsara_associate_creative_director_digital",
-  "company": "samsara",
-  "title": "Associate Creative Director, Digital Design",
-  "comp": 205000.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/alphasense/jobs/8593705002",
-  "tag": "alphasense_design_director_brand",
-  "company": "alphasense",
-  "title": "Design Director, Brand",
-  "comp": 200000.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/endorlabs/jobs/4730246005",
   "tag": "endorlabs_director_of_product_design",
   "company": "endorlabs",
@@ -4389,24 +4362,6 @@
   "company": "gitlab",
   "title": "Solutions Architect, Public Sector - West ",
   "comp": 197550.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/okta/jobs/7821640",
-  "tag": "okta_brand_art_director",
-  "company": "okta",
-  "title": "Brand Art Director",
-  "comp": 196900.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/okta/jobs/8109371",
-  "tag": "okta_senior_experiences_art_director",
-  "company": "okta",
-  "title": "Senior Experiences Art Director",
-  "comp": 196900.0,
   "source": "ATS board"
  },
  {
@@ -4609,24 +4564,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/stripe/jobs/8001341",
-  "tag": "stripe_creative_director_copy_campaigns",
-  "company": "stripe",
-  "title": "Creative Director, Copy & Campaigns",
-  "comp": null,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/stripe/jobs/8001909",
-  "tag": "stripe_creative_director_event_design",
-  "company": "stripe",
-  "title": "Creative Director, Event Design",
-  "comp": null,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/stripe/jobs/8172489",
   "tag": "stripe_engineering_manager_abuse_control_e",
   "company": "stripe",
@@ -4694,15 +4631,6 @@
   "tag": "chime_sr_director_product_management",
   "company": "chime",
   "title": "Sr Director, Product Management",
-  "comp": null,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/onboardmeetings/jobs/6109443004",
-  "tag": "onboardmeetings_director_brand",
-  "company": "onboardmeetings",
-  "title": "Director, Brand",
   "comp": null,
   "source": "ATS board"
  },
@@ -4865,15 +4793,6 @@
   "tag": "twilio_senior_engineering_manager_l5",
   "company": "twilio",
   "title": "Senior Engineering Manager (L5)",
-  "comp": null,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/twilio/jobs/8073683",
-  "tag": "twilio_senior_engineering_manager_voice_an",
-  "company": "twilio",
-  "title": "Senior Engineering Manager, Voice and Video",
   "comp": null,
   "source": "ATS board"
  },
@@ -6549,15 +6468,6 @@
   "company": "3cloud",
   "title": "Senior Architect - Data Platforms & Architecture",
   "comp": 204500.0,
-  "source": "ATS board"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/datadog/jobs/8196977",
-  "tag": "datadog_principal_brand_editorial",
-  "company": "datadog",
-  "title": "Principal, Brand Editorial",
-  "comp": 204000.0,
   "source": "ATS board"
  },
  {

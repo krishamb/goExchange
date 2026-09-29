@@ -55,15 +55,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4470231-manager-data-analytics-performance-creative",
-  "tag": "peloton_interactive_manager_data_analytics_performance_",
-  "company": "Peloton Interactive",
-  "title": "Manager, Data Analytics, Performance Creative",
-  "comp": 190000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4766936-analytics-engineer-clone",
   "tag": "snout_founding_data_engineer",
   "company": "Snout",
@@ -212,15 +203,6 @@
   "tag": "logicbroker_engineering_manager",
   "company": "Logicbroker",
   "title": "Engineering Manager",
-  "comp": 160000.0,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4287757-associate-design-director-luggage",
-  "tag": "away_associate_design_director_luggage",
-  "company": "Away",
-  "title": "Associate Design Director, Luggage",
   "comp": 160000.0,
   "source": "Wellfound"
  },
@@ -419,15 +401,6 @@
   "tag": "astoria_ai_founding_ai_research_engineer_agent",
   "company": "Astoria AI",
   "title": "Founding AI Research Engineer: Agent Harness & Model Systems",
-  "comp": null,
-  "source": "Wellfound"
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4545965-founding-data-ai-engineer-python-django-llms-creative-engine",
-  "tag": "sierra_studio_founding_data_ai_engineer_python_dj",
-  "company": "Sierra Studio",
-  "title": "Founding Data & AI Engineer (Python / Django / LLMs), Creative Engine",
   "comp": null,
   "source": "Wellfound"
  },
