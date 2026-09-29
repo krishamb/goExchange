@@ -1,45 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779329-software-engineering-manager",
-  "tag": "lawnstarter_software_engineering_manager",
-  "company": "LawnStarter",
-  "title": "Software Engineering Manager",
-  "comp": 140000.0,
-  "loc": "Bogota, Mexico City",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790634237
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779271-staff-software-engineer-machine-learning",
-  "tag": "current_staff_software_engineer_machine_lea",
-  "company": "Current",
-  "title": "Staff Software Engineer, Machine Learning",
-  "comp": 325000.0,
-  "loc": "New York",
-  "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790626263
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4779327-staff-software-engineer-product",
-  "tag": "lawnstarter_staff_software_engineer_product",
-  "company": "LawnStarter",
-  "title": "Staff Software Engineer, Product",
-  "comp": 125000.0,
-  "loc": "Bogota, Mexico City",
-  "tier": 1,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790634231
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4779138-senior-full-stack-software-engineer",
   "tag": "naijaluxemart_senior_full_stack_software_engineer",
   "company": "Naijaluxemart",
