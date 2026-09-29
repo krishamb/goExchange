@@ -1,25 +1,18 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4681079-engineering-manager",
-  "tag": "project_playlist_engineering_manager",
-  "company": "Project Playlist",
-  "title": "Engineering Manager",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4551918-senior-engineering-manager-containers-at-edge",
   "tag": "fastly_senior_engineering_manager_containe",
   "company": "Fastly",
   "title": "Senior Engineering Manager - Containers at Edge",
   "loc": "Bay Area | In office",
   "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please briefly describe how your experience aligns to the role requirements. (1-",
+   "How much job related technical experience do you have with distributed systems, ",
+   "How much experience do you have managing teams of SREs and/or Software engineers"
+  ]
  },
  {
   "ats": "wellfound",
