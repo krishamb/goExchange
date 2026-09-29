@@ -505,7 +505,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     report["submitted"]=True; report["result"]="ALREADY APPLIED (Wellfound shows this job as Applied)"; report["note"]="already applied earlier"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 pre=await body_text(page)
-                if re.search(r"job listing is no longer available|no longer available|this job is closed|position has been filled|no longer accepting applications",pre,re.I):
+                if re.search(r"job listing is no longer available|no longer available|this job is closed|position has been filled|no longer accepting applications|Page not found \(404\)|Oops! Page not found",pre,re.I):
                     report["result"]="NOT SUBMITTED: job closed (listing no longer available)"
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 report["recruiter_active"]=bool(re.search(r"RECRUITER RECENTLY ACTIVE",pre))
