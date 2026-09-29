@@ -1007,19 +1007,6 @@
  },
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3994821-2-data-engineer-staff-principal-lead",
-  "tag": "green_data_engineer_staff_principal_lead",
-  "company": "Green",
-  "title": "Data Engineer (Staff, Principal, Lead)",
-  "comp": 380000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790110190
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4751176-ai-engineer",
   "tag": "unize_ai_engineer",
   "company": "Unize",
@@ -1462,19 +1449,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789722699
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4728552-staff-software-engineer",
-  "tag": "flowgen_labs_staff_software_engineer",
-  "company": "FlowGen Labs",
-  "title": "Staff Software Engineer",
-  "comp": 450000.0,
-  "loc": "San Francisco",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789689908
  },
  {
   "ats": "wellfound",
