@@ -8,7 +8,7 @@
   "comp": 120000.0,
   "loc": "United Kingdom",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
   "last_unanswered": []
  },
  {
@@ -20,8 +20,10 @@
   "comp": 200000.0,
   "loc": "United States",
   "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you able to show proof of employment authorization?*"
+  ]
  },
  {
   "ats": "wellfound",
@@ -32,7 +34,7 @@
   "comp": null,
   "loc": "Munich",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
   "last_unanswered": []
  },
  {
@@ -44,7 +46,7 @@
   "comp": 328000.0,
   "loc": "",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": "archers and research engineers through other technical leaders \u2014 developing tech lead managers or eq",
   "last_unanswered": []
  },
  {
@@ -55,7 +57,7 @@
   "title": "Sr. Engineering Manager - Pendo for Agents",
   "loc": "NYC | In office",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": " information which will enable us to better understand the diversity of our applicants. Please note,",
   "last_unanswered": []
  },
  {
