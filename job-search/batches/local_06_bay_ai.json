@@ -31,5 +31,38 @@
   "loc": "New York, New York",
   "posted_ts": 1789595748.254,
   "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/true-talent-solutions-partners/ef60d418-9959-4213-83c9-1b1b4dd41394",
+  "tag": "true_talent_solutions_partners_member_of_technical_staff_ml_system",
+  "company": "true-talent-solutions-partners",
+  "title": "Member of Technical Staff, ML Systems",
+  "comp": 230000.0,
+  "loc": "Menlo Park",
+  "posted_ts": 1790640000.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/fal-ai/ae1ab033-5e45-46da-9f20-55ac350eb0e9",
+  "tag": "fal_ai_machine_learning_engineer_safety",
+  "company": "fal-ai",
+  "title": "Machine Learning Engineer, Safety",
+  "comp": 250000.0,
+  "loc": "San Francisco",
+  "posted_ts": 1790553600.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/pivotal-health/d212af79-8c6b-4754-8f44-d6a600830386",
+  "tag": "pivotal_health_engineering_manager_case_strategy",
+  "company": "pivotal-health",
+  "title": "Engineering Manager, Case Strategy",
+  "comp": 230000.0,
+  "loc": "Remote - US",
+  "posted_ts": 1789948800.0,
+  "email": "amba_rish@hotmail.com"
  }
 ]
