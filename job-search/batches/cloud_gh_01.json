@@ -1,33 +1,11 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8104808",
-  "tag": "roblox_distinguished_engineer_machine_learning_discovery",
-  "company": "roblox",
-  "title": "Distinguished Engineer, Machine Learning - Discovery",
-  "comp": 457970.0,
-  "geo": "Bay Area",
-  "age": 3,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/snorkelai/jobs/6208931004",
   "tag": "snorkelai_senior_staff_software_engineer_ai_ml",
   "company": "snorkelai",
   "title": "Senior | Staff Software Engineer - AI / ML",
   "comp": 315000.0,
-  "geo": "Bay Area",
-  "age": 3,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8224135",
-  "tag": "roblox_principal_software_engineer_object_store",
-  "company": "roblox",
-  "title": "Principal Software Engineer - Object Store",
-  "comp": 345040.0,
   "geo": "Bay Area",
   "age": 3,
   "answers": {}
@@ -83,28 +61,6 @@
   "company": "pinterest",
   "title": "Principal Engineer, AI Platform",
   "comp": 499541.0,
-  "geo": "Bay Area",
-  "age": 6,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8212529",
-  "tag": "roblox_principal_client_platform_engineer",
-  "company": "roblox",
-  "title": "Principal Client Platform Engineer",
-  "comp": 267390.0,
-  "geo": "Bay Area",
-  "age": 6,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8154393",
-  "tag": "roblox_principal_software_engineer_creator_collaboration",
-  "company": "roblox",
-  "title": "Principal Software Engineer, Creator Collaboration",
-  "comp": 345040.0,
   "geo": "Bay Area",
   "age": 6,
   "answers": {}
@@ -221,33 +177,11 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8047833",
-  "tag": "roblox_senior_principal_platform_engineer_ml_platform",
-  "company": "roblox",
-  "title": "Senior/Principal Platform Engineer, ML Platform",
-  "comp": 345040.0,
-  "geo": "Bay Area",
-  "age": 14,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/coreweave/jobs/4712126006",
   "tag": "coreweave_principal_engineer_distributed_systems",
   "company": "coreweave",
   "title": "Principal Engineer, Distributed Systems",
   "comp": 303000.0,
-  "geo": "Bay Area",
-  "age": 14,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8129410",
-  "tag": "roblox_principal_software_engineer_roblox_database",
-  "company": "roblox",
-  "title": "Principal Software Engineer - Roblox Database",
-  "comp": 399420.0,
   "geo": "Bay Area",
   "age": 14,
   "answers": {}
@@ -261,17 +195,6 @@
   "comp": 260000.0,
   "geo": "Bay Area",
   "age": 18,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8187377",
-  "tag": "roblox_principal_machine_learning_engineer_alt_defense",
-  "company": "roblox",
-  "title": "Principal Machine Learning Engineer, Alt Defense",
-  "comp": 399420.0,
-  "geo": "Bay Area",
-  "age": 19,
   "answers": {}
  },
  {
@@ -402,17 +325,6 @@
   "company": "asana",
   "title": "Staff Software Engineer, AI Teammates",
   "comp": 282000.0,
-  "geo": "Bay Area",
-  "age": 0,
-  "answers": {}
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/roblox/jobs/8227778",
-  "tag": "roblox_principal_software_engineer_core_services",
-  "company": "roblox",
-  "title": "Principal Software Engineer, Core Services",
-  "comp": 399420.0,
   "geo": "Bay Area",
   "age": 0,
   "answers": {}

@@ -15,6 +15,20 @@ for _k in ("resume","cover_letter"):
     if P.get(_k): P[_k]=os.path.expanduser(P[_k])
 ANS=json.load(open(os.path.join(JOBS_DIR,"answers.json"))) if os.path.exists(os.path.join(JOBS_DIR,"answers.json")) else {}
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+CODE_WAIT=int(os.environ.get("CODE_WAIT","420"))   # seconds to wait for an emailed verification code handed over via out/<tag>_code.txt
+LAST_OPTIONS={}                                     # label -> option texts seen in the last dropdown scan (for reports)
+def applicant_cover_text():
+    """Body text of the applicant's own cover letter PDF (profile.json "cover_letter"), cached beside it; '' if unavailable."""
+    pdf=P.get("cover_letter")
+    if not pdf or not os.path.exists(pdf): return ""
+    cache=os.path.join(JOBS_DIR,"cover_letter.txt")
+    if os.path.exists(cache) and os.path.getmtime(cache)>=os.path.getmtime(pdf): return open(cache).read()
+    try:
+        from pdfminer.high_level import extract_text
+        t=re.sub(r"\n{3,}","\n\n",extract_text(pdf)).strip()
+    except Exception: t=""
+    open(cache,"w").write(t); return t
+CL_OWN=applicant_cover_text()
 HEADED="--headed" in sys.argv
 import shutil, platform
 if HEADED and platform.system()=="Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
@@ -33,15 +47,19 @@ first,last=P["name"].split(" ",1)
 TEXT_RULES=[
  (r"first and last name|legal name|full legal name|^(full )?name\b|^your name|_systemfield_name", P["name"]),
  (r"first ?name", first),(r"last ?name|surname|family name", last),
- (r"address", P["location"]),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile", P["phone"]),
+ (r"zip|postal", "95050"),
+ (r"^(street |home |mailing )?address", P["location"]),
  (r"linkedin", P["linkedin"]),(r"github", P["github"]),(r"portfolio|website|personal site", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
  (r"current (title|role)|job title|^title$", "CTO & Technical Co-Founder / Principal Architect"),
- (r"location|city|where (are you|do you) (based|live|located)", P["location"]),
+ (r"\blocation\b|\bcity\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
  (r"start date|available to start|availability|notice period", "Immediately"),
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
+ (r"willing to (work|come|be)|days? (a|per) week|in.office|on.?site|hybrid", "Yes"),
+ (r"(ever|currently|previously) (work|employ|been employed)|worked (at|for) .* before|former (employee|contractor)|current or former", "No"),
+ (r"state/region|state or province|\bstate\b.*(reside|live|located|residence)|\bregion\b|province", "California"),
  (r"how did you hear|referral source|source", "Company careers page"),
  (r"^why\b|why (do you want|are you interested|.*join|.*this role|.*us)|interest(ed)? in (this|the) (role|position|company)|tell us (a little )?about yourself|cover letter|anything else|additional information|why .*good fit|what excites you", ANS.get("why_us","")),
  (r"greatest (impact|achievement)|proudest|accomplishment", ANS.get("impact","")),
@@ -56,22 +74,25 @@ CHOICE_RULES=[
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
  (r"in[- ]person|open to working in|come into the office|days? (a|per) week", ["Yes","yes"]),
  (r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|generative ai", ["__ASK__"]),
- (r"authori[sz]ed to work|legally (able|eligible|authorized)|work authorization|eligible to work|right to work", ["Yes","yes"]),
+ (r"authori[sz]ed to work|legally (able|eligible|authorized)|work authori[sz]ation|eligible to work|right to work|employment eligibility", ["Yes","yes","I am authorized","Authorized","U.S. Citizen","US Citizen","Citizen"]),
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
+ (r"transgender", ["No","no","I don't wish to answer","Decline"]),
+ (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
+ (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
  (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
  (r"veteran", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No","Decline To Self Identify"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
- (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree", ["Yes","I agree","I acknowledge","I consent","yes"]),
+ (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice", ["Yes","I agree","I acknowledge","I consent","I have read","Acknowledge","Agree","yes"]),
  (r"how did you hear|source", ["Company Website","Company website","Careers page","Career Page","Other","Job Board","Other/Not Listed"]),
  (r"school|university|college", ["University of Madras","Other","University"]),
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor"]),
- (r"previously (applied|worked|employed)|currently employed by|worked for .* before|former employee|current employee", ["No","no"]),
+ (r"previously (applied|worked|employed)|currently employed by|worked (for|at) .* before|former employee|current employee|current or former|former or current|ever (worked|been employed)|currently (work|employed)", ["No","no"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
@@ -99,6 +120,9 @@ LABEL_JS=r"""
     if(lab){t=lab.innerText; break;} p=p.parentElement;}}
  return (t||'').trim().replace(/\s+/g,' ').replace(/[✱*]/g,'').trim();}
 """
+STILL_VISIBLE_JS=r"""(lab)=>{lab=lab.toLowerCase().replace(/\s+/g,' ').slice(0,45); if(lab.length<4) return true;
+ for(const e of document.querySelectorAll('label,legend,div,span,p,h3,h4')){ const t=(e.innerText||'').toLowerCase().replace(/\s+/g,' '); if(t.length>400||!t.startsWith(lab)) continue; const r=e.getBoundingClientRect(); if(r.width>0&&r.height>0) return true; }
+ return false;}"""
 async def label_of(h): return await h.evaluate(LABEL_JS)
 async def is_required(h):
     return await h.evaluate("(el)=>el.required||el.getAttribute('aria-required')==='true'||/\\*|✱|required/i.test((el.closest('label,fieldset,div')||{}).innerText||'')")
@@ -152,8 +176,11 @@ async def visible_options(page):
         except Exception: t.append("")
     return o,t
 def _match(t,pref):
-    tl,pl=t.lower(),pref.lower()
-    return tl==pl or tl.startswith(pl) or (pl in tl and len(pl)>=4)
+    """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female')."""
+    tl,pl=t.lower().strip(),pref.lower().strip()
+    if not tl or not pl: return False
+    if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
+    return len(pl)>=4 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
@@ -181,6 +208,18 @@ async def choose_react_select(page,control,options_pref,label):
             if cur and cur.lower()!="select..." and (pref.lower()[:6] in cur.lower() or (hit is not None)): return cur[:80]
             # not selected: clear and try next preference
             await inp.press("Control+A"); await inp.press("Backspace"); await page.keyboard.press("Escape")
+        # fallback: open the whole menu and scan every option against every preference (handles long option texts)
+        await inp.click(timeout=3000); await page.wait_for_timeout(700)
+        opts,texts=await visible_options(page)
+        if not texts:
+            await inp.press("ArrowDown"); await page.wait_for_timeout(700); opts,texts=await visible_options(page)
+        LAST_OPTIONS[label[:160]]=[t for t in texts if t][:25]
+        for pref in options_pref:
+            for i,t in enumerate(texts):
+                if t and _match(t,pref):
+                    await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
+                    cur=await current()
+                    if cur and cur.lower()!="select...": return cur[:80]
         await page.keyboard.press("Escape")
     except Exception:
         try: await page.keyboard.press("Escape")
@@ -279,11 +318,25 @@ async def outlook_codes(page,query="verification code"):
             except Exception: pass
     except Exception as e: print("outlook search:",str(e)[:100])
     return found
+async def code_from_file(report,max_wait=None):
+    """Hand-off for whoever can read the mailbox (the applicant, or Claude with the Gmail connector): write
+    out/<tag>_code_request.json, then poll out/<tag>_code.txt for the 8-character code."""
+    tag=report["tag"]; req=f"{OUT}/{tag}_code_request.json"; ans=f"{OUT}/{tag}_code.txt"
+    if os.path.exists(ans): os.remove(ans)
+    json.dump({"tag":tag,"email":P["email"],"url":report.get("url"),"ts":time.time()},open(req,"w"))
+    print(f"CODE REQUEST {tag}",flush=True)
+    deadline=time.time()+(max_wait or CODE_WAIT)
+    while time.time()<deadline:
+        if os.path.exists(ans):
+            c=re.sub(r"[^A-Za-z0-9]","",open(ans).read()).upper()
+            if len(c)>=6: report["code_source"]="file"; return c
+        await asyncio.sleep(3)
+    return None
 async def enter_email_code(page,report,baseline=()):
     boxes=page.locator('input[autocomplete="one-time-code"], input[name*="security_code"], input[id*="security_code"], input[name*="verification"], [class*="security-code"] input, [class*="securityCode"] input, [class*="otp"] input')
     n=await boxes.count()
     if not n: return False
-    code=None
+    code=None; report["code_required"]=True
     op=await outlook_page()
     if op:
         deadline=time.time()+180
@@ -293,7 +346,8 @@ async def enter_email_code(page,report,baseline=()):
             if not code: await asyncio.sleep(12)
         report["code_source"]="outlook"
     if not code: code=await asyncio.get_event_loop().run_in_executor(None,fetch_email_code)
-    if not code: report.setdefault("errors",[]).append("email verification code required (configure imap in wf_creds.json or run interactively)"); return False
+    if not code: code=await code_from_file(report)
+    if not code: report.setdefault("errors",[]).append("email verification code required (configure imap in wf_creds.json, run interactively, or write it to out/<tag>_code.txt)"); return False
     try:
         if n>=8:
             for i,ch in enumerate(code[:n]): await boxes.nth(i).fill(ch)
@@ -319,8 +373,8 @@ async def run():
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
-            summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors")})
-            print(json.dumps(summary[-1])); sys.stdout.flush()
+            summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors","code_required","code_source")})
+            print(json.dumps(summary[-1]),flush=True)
             await ctx.close()
         json.dump(summary,open(f"{OUT}/batch_summary_{int(time.time())}.json","w"),indent=1)
         await b.close()
@@ -365,28 +419,51 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         el=page.locator(sel).first
                         if await el.count() and not await page.locator('input[type="file"]').count(): await el.click(timeout=4000); await page.wait_for_timeout(2500); break
                     except Exception: pass
-            # per-posting cover letter
-            try:
-                ptitle=jtitle or re.sub(r"\s*[|@\-–].*$","",await page.title())
-                pdesc=await page.evaluate("()=>document.body.innerText.slice(0,6000)")
-                comp=company or re.sub(r"[-_]"," ",url.split("/")[3]).title()
-                cl_text=cover.text(comp,ptitle,pdesc,P); cl_pdf=cover.pdf(f"{OUT}/{tag}_cover.pdf",cl_text); report["cover_category"]=cover.category(ptitle,pdesc)
-            except Exception as e: report["cover_err"]=str(e)[:100]; cl_pdf=P.get("cover_letter")
-            # resume upload first (autofill may follow)
-            files=page.locator('input[type="file"]'); nf=await files.count()
-            for i in range(nf):
-                f=files.nth(i)
-                try: lab=(await label_of(f)).lower()
-                except Exception: lab="cover" if i==1 else ("resume" if i==0 else "")
-                if not lab: lab="cover" if i==1 else ("resume" if i==0 else "")
+            # cover letter: the applicant's own PDF (profile.json "cover_letter") when present, else a per-posting one
+            if CL_OWN and P.get("cover_letter") and os.path.exists(P["cover_letter"]):
+                cl_text=CL_OWN; cl_pdf=P["cover_letter"]; report["cover_source"]="applicant"
+            else:
                 try:
-                    if re.search(r"cover",lab): await f.set_input_files(cl_pdf or P.get("cover_letter",P["resume"])); report["filled"]["cover_letter"]="uploaded"
-                    elif i==0 or re.search(r"resume|cv",lab): await f.set_input_files(P["resume"]); report["filled"]["resume"]="uploaded"
-                except Exception as e: report["filled"][f"file{i}"]=f"ERR {e.__class__.__name__}"
+                    ptitle=jtitle or re.sub(r"\s*[|@\-–].*$","",await page.title())
+                    pdesc=await page.evaluate("()=>document.body.innerText.slice(0,6000)")
+                    comp=company or re.sub(r"[-_]"," ",url.split("/")[3]).title()
+                    cl_text=cover.text(comp,ptitle,pdesc,P); cl_pdf=cover.pdf(f"{OUT}/{tag}_cover.pdf",cl_text); report["cover_category"]=cover.category(ptitle,pdesc)
+                except Exception as e: report["cover_err"]=str(e)[:100]; cl_pdf=P.get("cover_letter")
+            # resume upload first (autofill may follow), then the cover letter
+            async def file_labels():
+                fl=page.locator('input[type="file"]'); out=[]
+                for i in range(await fl.count()):
+                    try: out.append((await label_of(fl.nth(i))).lower())
+                    except Exception: out.append("")
+                return fl,out
+            files,labs=await file_labels()
+            ri=next((i for i,l in enumerate(labs) if re.search(r"resume|cv",l)),0 if labs else None)
+            if ri is not None:
+                try: await files.nth(ri).set_input_files(P["resume"],timeout=15000); report["filled"]["resume"]="uploaded"
+                except Exception as e: report["filled"]["resume"]=f"ERR {e.__class__.__name__}"
             await page.wait_for_timeout(5000)
             for _ in range(25):
                 if not await page.locator('text=/Analyzing resume|Uploading|Parsing/i').count(): break
                 await page.wait_for_timeout(1000)
+            cl_file=cl_pdf or P.get("cover_letter")
+            if cl_file and os.path.exists(cl_file):
+                files,labs=await file_labels()   # re-query: the form re-renders after the resume is parsed
+                ci=next((i for i,l in enumerate(labs) if re.search(r"cover",l)),None)
+                if ci is None and len(labs)>=2: ci=1 if ri!=1 else 0
+                got=False
+                if ci is not None:
+                    try: await files.nth(ci).set_input_files(cl_file,timeout=15000); got=True
+                    except Exception as e: report["filled"]["cover_letter"]=f"ERR {e.__class__.__name__}"
+                if not got:
+                    # Greenhouse job-boards: the "Attach" button under the "Cover Letter" heading opens a file chooser
+                    try:
+                        btn=page.locator('xpath=//*[normalize-space(text())="Cover Letter" or normalize-space(text())="Cover letter"]/following::button[contains(.,"Attach")][1]').first
+                        if await btn.count():
+                            async with page.expect_file_chooser(timeout=6000) as fc:
+                                await btn.click(timeout=4000)
+                            await (await fc.value).set_files(cl_file); got=True
+                    except Exception as e: report["filled"]["cover_letter"]=f"ERR chooser {e.__class__.__name__}"
+                if got: report["filled"]["cover_letter"]="uploaded"; await page.wait_for_timeout(2500)
             # text inputs / textareas
             ctrls=page.locator('input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input:not([type]), textarea')
             n=await ctrls.count()
@@ -453,10 +530,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for k,v in extra.items():
                         if k.lower() in lab.lower(): pref=[v]; break
                     pref=pref or pick(lab,CHOICE_RULES)
-                    if pref:
-                        got=await choose_react_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
-                        if not got: report["unanswered"].append({"type":"combo","label":lab[:160]})
-                    else: report["unanswered"].append({"type":"combo","label":lab[:160]})
+                    if pref==["__ASK__"]:
+                        report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
+                    if not pref:
+                        # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
+                        pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
+                    got=await choose_react_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
+                    if not got: report["unanswered"].append({"type":"combo","label":lab[:160],"options":LAST_OPTIONS.get(lab[:160],[])[:12]})
                 except Exception: pass
             # radios & checkboxes grouped by name
             radios=page.locator('input[type="radio"]'); n=await radios.count(); groups={}
@@ -488,7 +568,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for pref in cands:
                         for pv in pref:
                             for x,(v,l) in zip(hs,opts):
-                                if l.lower()==pv.lower() or v.lower()==pv.lower() or pv.lower() in l.lower():
+                                if _match(l,pv) or v.lower()==pv.lower():
                                     await x.check(timeout=3000); done=l or v; break
                             if done: break
                         if done: break
@@ -524,26 +604,56 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     done=None
                     for pv in pref:
                         for o in g["opts"]:
-                            if o.lower()==pv.lower() or pv.lower() in o.lower():
+                            if _match(o,pv):
                                 await page.locator(f'[data-applyq="{gi}"] > *:has-text("{o}")').first.click(timeout=3000); done=o; break
                         if done: break
                     report["chosen"][g["q"][:60]]=done
                     if not done: report["unanswered"].append({"type":"buttons","label":g["q"][:160],"options":g["opts"][:8]})
             except Exception as e: report["chosen"]["_buttons_err"]=str(e)[:120]
             cbs=page.locator('input[type="checkbox"]'); n=await cbs.count()
+            boxes=[]   # (handle, label, group key, question) for every visible, unchecked box
             for i in range(n):
                 h=cbs.nth(i)
                 try:
                     if not await h.is_visible() or await h.is_checked(): continue
                     lab=await label_of(h)
                     if re.search(r"pronoun|newsletter|marketing|updates|subscribe|text message|sms",lab,re.I): continue
-                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true",lab,re.I) or await is_required(h): await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"
+                    grp=await h.evaluate(r"""(el)=>{const fs=el.closest('fieldset,[role=group]'); const n=(el.getAttribute('name')||'').replace(/\[\d+\]$/,'');
+                        let q=''; if(fs){const l=fs.querySelector('legend,.application-label,[class*=label]'); q=l?l.innerText:'';}
+                        return [fs?('fs:'+(fs.id||q||n)):n, q.replace(/\s+/g,' ').replace(/[✱*]/g,'').trim()];}""")
+                    boxes.append((h,lab,grp[0] or f"cb{i}",grp[1]))
+                except Exception: pass
+            done_groups=set()
+            for h,lab,gk,q in boxes:
+                try:
+                    members=[b for b in boxes if b[2]==gk]
+                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true",lab,re.I):
+                        await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"; continue
+                    if len(members)>1:
+                        # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
+                        if gk in done_groups: continue
+                        done_groups.add(gk)
+                        want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
+                        if want==["__ASK__"]: continue
+                        choice=None
+                        for pv in want:
+                            for b in members:
+                                if _match(b[1],pv): choice=b; break
+                            if choice: break
+                        if not choice and (await is_required(members[0][0]) or re.search(r"hear about|source",q+" "+lab,re.I)):
+                            choice=next((b for b in members if re.search(r"other",b[1],re.I)),members[0])
+                        if choice: await choice[0].check(timeout=3000); report["chosen"][(q or lab)[:60]]=choice[1][:60]
+                    elif await is_required(h): await h.check(timeout=3000); report["chosen"][lab[:60]]="checked"
                 except Exception: pass
             answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
             for u in report["unanswered"]:
                 if u["label"] in seen or u["label"].lower()[:40] in answered: continue
-                seen.add(u["label"]); uu.append(u)
+                seen.add(u["label"])
+                try:   # a conditional question may have disappeared after another answer (e.g. race after "decline" on Hispanic)
+                    if not await page.evaluate(STILL_VISIBLE_JS,u["label"]): continue
+                except Exception: pass
+                uu.append(u)
             report["unanswered"]=uu
             await page.wait_for_timeout(800)
             await page.screenshot(path=f"{OUT}/{tag}_filled.png",full_page=True)
@@ -572,6 +682,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
                         await page.wait_for_timeout(9000)
                         body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
+                        if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
                 ok=bool(re.search(r"thank you|thanks for applying|application (has been |was )?(submitted|received|sent)|we('ve| have) received|successfully|you're all set|applied",body,re.I)) and not re.search(r"needs corrections|missing entry|is required|please (fill|complete)",body,re.I)
                 errs=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], .invalid-feedback, [aria-invalid=true], [class*=correction]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)
