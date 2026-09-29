@@ -41,16 +41,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/covera-health/92e07045-db39-4f51-966d-dec2c45b7ecf",
-  "tag": "covera_health_manager_director_proposal_managemen",
-  "company": "Covera Health",
-  "title": "Manager/Director, Proposal Management",
-  "comp": null,
-  "source": "healthcare list",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/triomics/df6ea402-6286-4461-b628-5821cfcb92b4",
   "tag": "triomics_forward_deployed_ml_engineer",
   "company": "Triomics",
@@ -81,10 +71,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/bunkerhillhealth/548ba6a6-b90f-462b-9f89-0f50de4557fe",
-  "tag": "bunkerhill_health_forward_deployed_engineer",
-  "company": "Bunkerhill Health",
-  "title": "Forward Deployed Engineer",
+  "url": "https://jobs.ashbyhq.com/covera-health/92e07045-db39-4f51-966d-dec2c45b7ecf",
+  "tag": "covera_health_manager_director_proposal_managemen",
+  "company": "Covera Health",
+  "title": "Manager/Director, Proposal Management",
   "comp": null,
   "source": "healthcare list",
   "email": "amba_rish@hotmail.com"
@@ -111,16 +101,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/anterior/e15f4d0f-4edd-4194-9376-c7e91a22898e",
-  "tag": "anterior_technical_solutions_architect",
-  "company": "Anterior",
-  "title": "Technical Solutions Architect",
-  "comp": null,
-  "source": "healthcare list",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/ambiencehealthcare/6f44370e-1979-4237-a3db-94c46ec7ec9c",
   "tag": "ambience_healthcare_senior_machine_learning_engineer",
   "company": "Ambience Healthcare",
@@ -131,10 +111,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/anterior/1163af7a-d1d6-41db-a8ea-fc49fd97c6b0",
-  "tag": "anterior_senior_member_of_technical_staff",
-  "company": "Anterior",
-  "title": "Senior Member of Technical Staff",
+  "url": "https://jobs.ashbyhq.com/bunkerhillhealth/548ba6a6-b90f-462b-9f89-0f50de4557fe",
+  "tag": "bunkerhill_health_forward_deployed_engineer",
+  "company": "Bunkerhill Health",
+  "title": "Forward Deployed Engineer",
   "comp": null,
   "source": "healthcare list",
   "email": "amba_rish@hotmail.com"
@@ -157,6 +137,16 @@
   "title": "Senior Director, Solutions Architecture \u2014 Americas",
   "comp": 539750.0,
   "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/anterior/e15f4d0f-4edd-4194-9376-c7e91a22898e",
+  "tag": "anterior_technical_solutions_architect",
+  "company": "Anterior",
+  "title": "Technical Solutions Architect",
+  "comp": null,
+  "source": "healthcare list",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -201,6 +191,26 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/agentio/44c76e2d-2d86-4f13-8598-3365dd3129d1?utm_source=AByw6jqo6d",
+  "tag": "agentio_founding_research_engineer_applied_",
+  "company": "Agentio",
+  "title": "Founding Research Engineer, Applied AI",
+  "comp": 400000.0,
+  "source": "Indeed",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cohere/28239d75-5dd9-41fb-ba43-cb08b491be2b",
+  "tag": "cohere_engineering_manager_gpu_infrastruct",
+  "company": "cohere",
+  "title": "Engineering Manager, GPU Infrastructure",
+  "comp": 400000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/openai/6fbb72e6-1d69-4863-aaf3-3c5830e49e8a",
   "tag": "openai_engineering_manager_distillation_de",
   "company": "openai",
@@ -221,12 +231,12 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/agentio/44c76e2d-2d86-4f13-8598-3365dd3129d1?utm_source=AByw6jqo6d",
-  "tag": "agentio_founding_research_engineer_applied_",
-  "company": "Agentio",
-  "title": "Founding Research Engineer, Applied AI",
-  "comp": 400000.0,
-  "source": "Indeed",
+  "url": "https://jobs.ashbyhq.com/cartesia/6f65b698-4c1d-4439-9990-2a31c847dd21",
+  "tag": "cartesia_engineering_manager_data",
+  "company": "cartesia",
+  "title": "Engineering Manager, Data",
+  "comp": 375000.0,
+  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -236,56 +246,6 @@
   "company": "perplexity",
   "title": "Member of Technical Staff (Software Engineer, Connector Platform)",
   "comp": 405000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/openai/cb050c48-2e42-4dc0-8860-e6b3e5e6baff",
-  "tag": "openai_engineering_manager_online_data_sys",
-  "company": "openai",
-  "title": "Engineering Manager, Online Data Systems",
-  "comp": 445000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/decagon/c7cd7c5b-0ec9-44cd-9e74-c973acdfa4ba",
-  "tag": "decagon_engineering_manager_research",
-  "company": "decagon",
-  "title": "Engineering Manager, Research",
-  "comp": 430000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cohere/28239d75-5dd9-41fb-ba43-cb08b491be2b",
-  "tag": "cohere_engineering_manager_gpu_infrastruct",
-  "company": "cohere",
-  "title": "Engineering Manager, GPU Infrastructure",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/29625b7a-5470-463b-8446-21fac84e80b9",
-  "tag": "perplexity_engineering_manager_api_platform",
-  "company": "perplexity",
-  "title": "Engineering Manager (API Platform)",
-  "comp": 405000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cartesia/6f65b698-4c1d-4439-9990-2a31c847dd21",
-  "tag": "cartesia_engineering_manager_data",
-  "company": "cartesia",
-  "title": "Engineering Manager, Data",
-  "comp": 375000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -301,32 +261,12 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cohere/52a2b83b-7537-4e88-af7b-e4e9630a96e0",
-  "tag": "cohere_forward_deployed_engineer_infrastru",
-  "company": "cohere",
-  "title": "Forward Deployed Engineer, Infrastructure Specialist (Public Sector)",
-  "comp": 385000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/taktile/0b4b10a5-eca9-4cde-bc53-3050b60d371f?utm_source=D1jp8XBJ6e",
   "tag": "taktile_director_of_forward_deployed_engine",
   "company": "Taktile",
   "title": "Director of Forward Deployed Engineering, NORAM",
   "comp": 360000.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cartesia/eb5ca11e-86c6-4a8b-9c94-95d90a1b0cf0",
-  "tag": "cartesia_engineering_manager_infrastructure",
-  "company": "cartesia",
-  "title": "Engineering Manager, Infrastructure",
-  "comp": 375000.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -346,6 +286,16 @@
   "company": "writer",
   "title": "Director, solutions architecture ",
   "comp": 353000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cartesia/eb5ca11e-86c6-4a8b-9c94-95d90a1b0cf0",
+  "tag": "cartesia_engineering_manager_infrastructure",
+  "company": "cartesia",
+  "title": "Engineering Manager, Infrastructure",
+  "comp": 375000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -391,16 +341,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/b656400a-bc30-4fc3-a117-b803ef42634f",
-  "tag": "temporal_senior_engineering_manager_test_sys",
-  "company": "temporal",
-  "title": "Senior Engineering Manager, Test Systems & Tooling",
-  "comp": 351750.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/modal/aa4c345a-66e1-45b7-8c75-b7b4a0662eaa",
   "tag": "modal_systems_engineering_manager",
   "company": "modal",
@@ -416,16 +356,6 @@
   "company": "notion",
   "title": "Engineering Manager, Search & Context Platform",
   "comp": 330000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/b829a1d0-3a4d-4a77-bda0-5ba8703486aa",
-  "tag": "crusoe_director_infrastructure_security",
-  "company": "crusoe",
-  "title": "Director, Infrastructure Security",
-  "comp": 335000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -461,6 +391,16 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/crusoe/b829a1d0-3a4d-4a77-bda0-5ba8703486aa",
+  "tag": "crusoe_director_infrastructure_security",
+  "company": "crusoe",
+  "title": "Director, Infrastructure Security",
+  "comp": 335000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/replit/1015fa18-69d0-49e5-a785-afe5cbcc4760",
   "tag": "replit_engineering_manager_cloud_infrastru",
   "company": "replit",
@@ -481,16 +421,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Deepgram/a0678103-1b9c-44a4-92c0-f705850a8fa1",
-  "tag": "deepgram_director_text_to_speech_synthesis_r",
-  "company": "Deepgram",
-  "title": "Director, Text-to-Speech Synthesis Research",
-  "comp": 328300.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/anyscale/c7b78c30-5df7-4351-a136-f9e9f1486b19",
   "tag": "anyscale_engineering_manager_platform_infras",
   "company": "anyscale",
@@ -501,11 +431,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/replit/226d0562-2420-4991-ac18-23c827ed119c",
-  "tag": "replit_engineering_manager_site_reliabilit",
-  "company": "replit",
-  "title": "Engineering Manager, Site Reliability Engineering",
-  "comp": 325000.0,
+  "url": "https://jobs.ashbyhq.com/Deepgram/a0678103-1b9c-44a4-92c0-f705850a8fa1",
+  "tag": "deepgram_director_text_to_speech_synthesis_r",
+  "company": "Deepgram",
+  "title": "Director, Text-to-Speech Synthesis Research",
+  "comp": 328300.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -531,21 +461,21 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/harvey/6cb88307-4fa1-42d8-8c9e-e331e4364e4f",
-  "tag": "harvey_staff_solutions_architect_public_se",
-  "company": "harvey",
-  "title": "Staff Solutions Architect, Public Sector",
-  "comp": 300900.0,
+  "url": "https://jobs.ashbyhq.com/replit/226d0562-2420-4991-ac18-23c827ed119c",
+  "tag": "replit_engineering_manager_site_reliabilit",
+  "company": "replit",
+  "title": "Engineering Manager, Site Reliability Engineering",
+  "comp": 325000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/crusoe/15c35458-7da0-4d69-9269-344244093f89",
-  "tag": "crusoe_senior_manager_engineering_ai_infer",
-  "company": "crusoe",
-  "title": "Senior Manager, Engineering - AI Inference",
-  "comp": 300000.0,
+  "url": "https://jobs.ashbyhq.com/harvey/6cb88307-4fa1-42d8-8c9e-e331e4364e4f",
+  "tag": "harvey_staff_solutions_architect_public_se",
+  "company": "harvey",
+  "title": "Staff Solutions Architect, Public Sector",
+  "comp": 300900.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -761,26 +691,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/commure/04fc9c4e-7ff1-49ac-8f5d-b1b70a0567c8",
-  "tag": "commure_senior_engineering_manager_payments",
-  "company": "commure",
-  "title": "Senior Engineering Manager, Payments & Reconciliation",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/concurrence/694da08e-1a7e-4ffb-9187-f73ee8e31734?utm_source=7wKL8dPvOm",
-  "tag": "nan_head_of_engineering_nyc_or_sf",
-  "company": "nan",
-  "title": "Head of Engineering [NYC or SF]",
-  "comp": 500000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/modal/0d4c15af-afa7-4430-b3db-dd8258950aec",
   "tag": "modal_regional_director",
   "company": "modal",
@@ -796,6 +706,16 @@
   "company": "gigaml",
   "title": "Founding Engineering Manager",
   "comp": 400000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/commure/04fc9c4e-7ff1-49ac-8f5d-b1b70a0567c8",
+  "tag": "commure_senior_engineering_manager_payments",
+  "company": "commure",
+  "title": "Senior Engineering Manager, Payments & Reconciliation",
+  "comp": 250000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -831,31 +751,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cartesia/af90c0c2-cabc-4c31-a214-77c3014ac91d",
-  "tag": "cartesia_engineering_manager_product",
-  "company": "cartesia",
-  "title": "Engineering Manager, Product",
-  "comp": 375000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/suno/690b3c89-1dc3-4b91-a889-db25af5a2b8d",
   "tag": "suno_senior_engineering_manager",
   "company": "suno",
   "title": "Senior Engineering Manager",
   "comp": 363000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/pear-vc/0d0603f0-7299-440e-96c2-c5e9d11b4d30",
-  "tag": "pear_vc_founding_enterprise_ae_spur",
-  "company": "pear-vc",
-  "title": "Founding Enterprise AE - Spur ",
-  "comp": 350000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -876,26 +776,6 @@
   "company": "Edison Scientific",
   "title": "Product Engineering Manager",
   "comp": 350000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/suno/9809d788-32ca-4502-9c8f-af0fd24c169e",
-  "tag": "suno_engineering_manager_social",
-  "company": "suno",
-  "title": "Engineering Manager - Social",
-  "comp": 346000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/harvey/8e420b36-6711-49dd-8a64-f246270af7d3",
-  "tag": "harvey_engineering_manager_production_engi",
-  "company": "harvey",
-  "title": "Engineering Manager, Production Engineering",
-  "comp": 340000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -931,6 +811,16 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/suno/9809d788-32ca-4502-9c8f-af0fd24c169e",
+  "tag": "suno_engineering_manager_social",
+  "company": "suno",
+  "title": "Engineering Manager - Social",
+  "comp": 346000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/render/eec2ab67-ea1c-4f1c-9119-51e1235f2593",
   "tag": "render_senior_engineering_manager_product",
   "company": "render",
@@ -941,31 +831,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Deepgram/623dcf1a-becc-4cab-85a3-eb7ebe37e3c0",
-  "tag": "deepgram_strategic_partner_director",
-  "company": "Deepgram",
-  "title": "Strategic Partner Director",
-  "comp": 320000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/aleph/abdd59be-974f-4b0b-bf32-d6206d925fe9",
   "tag": "aleph_engineering_manager",
   "company": "aleph",
   "title": "Engineering Manager",
   "comp": 315000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/replit/7e48291b-6188-46d7-bc21-1d66a512ffcb",
-  "tag": "replit_engineering_manager_ux",
-  "company": "replit",
-  "title": "Engineering Manager, UX ",
-  "comp": 300000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -1091,26 +961,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/plaid/c9e63b56-5382-4438-ad2d-1b1ccd29c57a",
-  "tag": "plaid_engineering_manager_supplier_produc",
-  "company": "plaid",
-  "title": "Engineering Manager - Supplier Products",
-  "comp": 291000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/render/f1ed029b-9119-4c3d-bd3c-2ce0b9717ee8",
-  "tag": "render_engineering_manager_product",
-  "company": "render",
-  "title": "Engineering Manager, Product",
-  "comp": 289000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/semgrep/0ad27864-ce95-4797-ab5d-b24de8f78d94",
   "tag": "semgrep_senior_engineering_manager_guardian",
   "company": "semgrep",
@@ -1221,16 +1071,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/clickup/c05accb5-2a6f-457b-b2f6-a0bd3879e90c",
-  "tag": "clickup_manager_software_engineering_develo",
-  "company": "clickup",
-  "title": "Manager, Software Engineering - Developer Experince",
-  "comp": 270000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/horizon3ai/b70b0a2b-ed56-4f01-b867-d528f7ba0f3a",
   "tag": "horizon3ai_engineering_manager_tripwires",
   "company": "horizon3ai",
@@ -1271,26 +1111,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/horizon3ai/65f5ec2e-9ee9-40c1-96ce-435bb1d1aa3e",
-  "tag": "horizon3ai_engineering_manager_web_application",
-  "company": "horizon3ai",
-  "title": "Engineering Manager, Web Application Discovery",
-  "comp": 265000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/vanta/529a6e77-c965-4b32-be80-1837fbb3d1ce",
-  "tag": "vanta_engineering_manager_app_primitives",
-  "company": "vanta",
-  "title": "Engineering Manager, App Primitives",
-  "comp": 263000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Clera/a0aaad7e-8282-49fd-b580-2ea0abda78df",
   "tag": "clera_founding_engineer",
   "company": "Clera",
@@ -1321,20 +1141,20 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/graphite/95538ed3-fbfb-4b08-8b57-abc6745119f5",
-  "tag": "graphite_engineering_manager",
-  "company": "graphite",
-  "title": "Engineering Manager",
-  "comp": 250000.0,
+  "url": "https://jobs.ashbyhq.com/vanta/529a6e77-c965-4b32-be80-1837fbb3d1ce",
+  "tag": "vanta_engineering_manager_app_primitives",
+  "company": "vanta",
+  "title": "Engineering Manager, App Primitives",
+  "comp": 263000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Clera/cea943d6-817f-441c-baa1-d295916ace46",
-  "tag": "clera_founding_engineer_full_stack",
-  "company": "Clera",
-  "title": "Founding Engineer - Full Stack",
+  "url": "https://jobs.ashbyhq.com/graphite/95538ed3-fbfb-4b08-8b57-abc6745119f5",
+  "tag": "graphite_engineering_manager",
+  "company": "graphite",
+  "title": "Engineering Manager",
   "comp": 250000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -1401,16 +1221,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/baseten/11ab2593-6648-4943-ab4a-284fe7e89720",
-  "tag": "baseten_forward_deployed_engineer_training",
-  "company": "baseten",
-  "title": "Forward Deployed Engineer (Training)",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/gigaml/0bd3cb15-811f-4a6b-ac12-781f24735a86",
   "tag": "gigaml_senior_staff_forward_deployed_engin",
   "company": "gigaml",
@@ -1451,101 +1261,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/gigaml/16876587-6ea6-4312-bf38-f62de6941626",
-  "tag": "gigaml_staff_backend_engineer",
-  "company": "gigaml",
-  "title": "Staff Backend Engineer",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/inferact/43c0ca54-fcf5-41fa-83a1-38800c75ccc0",
-  "tag": "inferact_member_of_technical_staff_inference",
-  "company": "inferact",
-  "title": "Member of Technical Staff, Inference ",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/rula/f9a905bb-e477-4679-923f-ba8aada1b9de",
-  "tag": "rula_principal_ai_engineer_personalizati",
-  "company": "rula",
-  "title": "Principal AI Engineer - Personalization and Recommendation (Remote)",
-  "comp": 370650.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/suno/16c7d5bf-e43c-4319-bdfc-6a7dbdf58e43",
-  "tag": "suno_senior_staff_software_engineer_comm",
-  "company": "suno",
-  "title": "Senior/Staff Software Engineer - Commerce Platform",
-  "comp": 363510.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/ramp/d204e136-2749-42de-82b4-88a0dd352090",
   "tag": "ramp_applied_ai_engineer",
   "company": "ramp",
   "title": "Applied AI Engineer",
   "comp": 352000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/inferact/1d87c80a-0e58-4745-a51f-8bd48bc73ca8",
-  "tag": "inferact_member_of_technical_staff_amd_gpu_p",
-  "company": "inferact",
-  "title": "Member of Technical Staff, AMD GPU Performance Engineering",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/docker/3e5ac6d6-40f0-4299-a353-bb84bd906f14",
-  "tag": "docker_senior_principal_engineer_central_o",
-  "company": "docker",
-  "title": "Senior Principal Engineer, Central Ops & Systems",
-  "comp": 352000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/modal/af17da5e-23ca-4802-854d-5f0546e1ed32",
-  "tag": "modal_member_of_technical_staff_ml_perfor",
-  "company": "modal",
-  "title": "Member of Technical Staff - ML Performance",
-  "comp": 350000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/ramp/6a7e382f-240a-4952-b9e5-7fe2b3856bc9",
-  "tag": "ramp_applied_ai_engineer_fullstack",
-  "company": "ramp",
-  "title": "Applied AI Engineer, Fullstack",
-  "comp": 352000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Edison%20Scientific/0d208029-1d9d-4919-a5bf-5bbcdc678868",
-  "tag": "edison_scientific_member_of_technical_staff_machine_l",
-  "company": "Edison Scientific",
-  "title": "Member of Technical Staff, Machine Learning Engineer",
-  "comp": 350000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -1571,6 +1291,16 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/inferact/43c0ca54-fcf5-41fa-83a1-38800c75ccc0",
+  "tag": "inferact_member_of_technical_staff_inference",
+  "company": "inferact",
+  "title": "Member of Technical Staff, Inference ",
+  "comp": 400000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/handshake/08651bf1-c977-49d4-9a82-e8a770bb9970",
   "tag": "handshake_member_of_technical_staff_data_ai",
   "company": "handshake",
@@ -1591,21 +1321,21 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/confluent/85107937-8f12-4336-abb8-e88f344c6bcc",
-  "tag": "confluent_principal_engineer_engineering_ai_p",
-  "company": "confluent",
-  "title": "Principal Engineer, Engineering AI Productivity",
-  "comp": 342000.0,
+  "url": "https://jobs.ashbyhq.com/ramp/6a7e382f-240a-4952-b9e5-7fe2b3856bc9",
+  "tag": "ramp_applied_ai_engineer_fullstack",
+  "company": "ramp",
+  "title": "Applied AI Engineer, Fullstack",
+  "comp": 352000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/ramp/2888b101-b1da-4e53-a02e-1bb9b1b5a951",
-  "tag": "ramp_machine_learning_engineer",
-  "company": "ramp",
-  "title": "Machine Learning Engineer",
-  "comp": 330000.0,
+  "url": "https://jobs.ashbyhq.com/confluent/85107937-8f12-4336-abb8-e88f344c6bcc",
+  "tag": "confluent_principal_engineer_engineering_ai_p",
+  "company": "confluent",
+  "title": "Principal Engineer, Engineering AI Productivity",
+  "comp": 342000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -1681,26 +1411,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/fireworks/cca38fd5-9cbd-4cee-8fdb-d6e6d230b036",
-  "tag": "fireworks_member_of_technical_staff_evals_pla",
-  "company": "fireworks",
-  "title": "Member of Technical Staff, Evals Platform",
-  "comp": 320000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/livekit/0463a198-fcf4-42c6-ac03-5d764cbde0f3",
-  "tag": "livekit_forward_deployed_engineer_spanish_e",
-  "company": "livekit",
-  "title": "Forward Deployed Engineer, Spanish/English",
-  "comp": 320000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/drata/4b5cd1ca-7d7d-4985-ba77-a9870fbd3d1a",
   "tag": "drata_solutions_architect_apac",
   "company": "drata",
@@ -1721,10 +1431,20 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/fireworks/ee35bd97-43f9-4574-8ab7-81debd5d3d1a",
-  "tag": "fireworks_member_of_technical_staff_research",
+  "url": "https://jobs.ashbyhq.com/fireworks/cca38fd5-9cbd-4cee-8fdb-d6e6d230b036",
+  "tag": "fireworks_member_of_technical_staff_evals_pla",
   "company": "fireworks",
-  "title": "Member of Technical Staff, Research",
+  "title": "Member of Technical Staff, Evals Platform",
+  "comp": 320000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/livekit/0463a198-fcf4-42c6-ac03-5d764cbde0f3",
+  "tag": "livekit_forward_deployed_engineer_spanish_e",
+  "company": "livekit",
+  "title": "Forward Deployed Engineer, Spanish/English",
   "comp": 320000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -1761,16 +1481,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/097490e8-48c6-46e3-a0ce-882151fb4fa2",
-  "tag": "abridge_member_of_technical_staff_machine_l",
-  "company": "abridge",
-  "title": "Member of Technical Staff, Machine Learning",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/handshake/b777e140-6ccd-44e6-9709-5a43c4b1ca7a",
   "tag": "handshake_senior_applied_ai_engineer_enterpri",
   "company": "handshake",
@@ -1791,50 +1501,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/PrimeIntellect/8597d151-46db-4c67-a809-5d40daae7185",
-  "tag": "primeintellect_member_of_technical_staff_prime_age",
-  "company": "PrimeIntellect",
-  "title": "Member of Technical Staff - Prime Agent",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/coderabbit/8f17b66f-ea44-4e83-85f6-ef9427d61a01",
   "tag": "coderabbit_senior_applied_ai_engineer",
   "company": "coderabbit",
   "title": "Senior Applied AI Engineer",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/handshake/e2625047-5b76-4d3b-bf44-82278625782e",
-  "tag": "handshake_senior_forward_deployed_engineer_en",
-  "company": "handshake",
-  "title": "Senior Forward Deployed Engineer, Enterprise AI",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/campfire/d7f80e1c-e92a-49df-8ac8-4be6179e5387",
-  "tag": "campfire_ai_engineer_agents",
-  "company": "campfire",
-  "title": "AI Engineer - Agents",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/elicit/d27d51d7-b318-4cb0-9b88-c37de18905f3",
-  "tag": "elicit_ai_engineer",
-  "company": "elicit",
-  "title": "AI Engineer",
   "comp": 300000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -1871,26 +1541,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/livekit/efc06ff8-37c4-473e-8de8-bbba56cf0479",
-  "tag": "livekit_staff_security_engineer",
-  "company": "livekit",
-  "title": "Staff Security Engineer",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/clickhouse/59713076-d2cb-4fce-95aa-eda32b611849",
-  "tag": "clickhouse_security_specialist_solutions_archi",
-  "company": "clickhouse",
-  "title": "Security Specialist Solutions Architect",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/sfcompute/4b20fd99-8536-4a62-ad74-b7ba98f126be",
   "tag": "sfcompute_hpc_gpu_cluster_architect",
   "company": "sfcompute",
@@ -1907,26 +1557,6 @@
   "title": "Staff Solutions Engineer - Payments",
   "comp": 300000.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/hive/4df537a1-1c31-4c05-9390-9ce635f03f1d",
-  "tag": "hive_staff_software_engineer_backend",
-  "company": "hive",
-  "title": "Staff Software Engineer - Backend",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/maintainx/be04c0d6-651a-44b6-8c00-6e81841c248d",
-  "tag": "maintainx_staff_data_engineer",
-  "company": "maintainx",
-  "title": "Staff Data Engineer",
-  "comp": 296450.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -1966,16 +1596,6 @@
   "company": "coder",
   "title": "Staff Software Engineer (AI Governance)",
   "comp": 294000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/aef83f6a-0bc8-4d6a-b310-24415918ee3c",
-  "tag": "abridge_member_of_product_staff_forward_dep",
-  "company": "abridge",
-  "title": "Member of Product Staff, Forward Deployed",
-  "comp": 290000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2021,16 +1641,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/vapi/854a9bf5-e330-4afa-9c0f-38c3d6084808",
-  "tag": "vapi_member_of_technical_staff_forward_d",
-  "company": "vapi",
-  "title": "Member of Technical Staff, Forward Deployed",
-  "comp": 280000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/openrouter/407f71b5-4b1f-4666-91bd-394f3c26f19d",
   "tag": "openrouter_applied_ai_engineer",
   "company": "openrouter",
@@ -2071,31 +1681,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/4ee99986-77ad-4113-8058-891d5cc7284a",
-  "tag": "temporal_staff_software_engineer_ai_foundati",
-  "company": "temporal",
-  "title": "Staff Software Engineer, AI Foundations (AI Agent Optimization)",
-  "comp": 278250.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/1password/3e2e42d1-c205-42d6-a7b4-e624d535b6f5",
   "tag": "1password_staff_security_engineer_security_in",
   "company": "1password",
   "title": "Staff Security Engineer, Security Incident Response",
   "comp": 278000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/prefect/85e3149e-950b-4813-ad66-023093621399",
-  "tag": "prefect_staff_data_engineer",
-  "company": "prefect",
-  "title": "Staff Data Engineer",
-  "comp": 276000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2141,26 +1731,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/trm-labs/eb560943-3adb-4839-bf64-4cbdeee9ae57",
-  "tag": "trm_labs_staff_software_engineer_agent_engin",
-  "company": "trm-labs",
-  "title": "Staff Software Engineer, Agent Engineering - US Remote",
-  "comp": 275000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/commure/260bc248-ed7d-4d10-bcc5-158139231a38",
-  "tag": "commure_staff_software_engineer_billing_age",
-  "company": "commure",
-  "title": "Staff Software Engineer, Billing Agents",
-  "comp": 275000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/StandardBots/ac00a37d-d8ce-41f7-b062-debe8dff496d?utm_source=DJepy58VXv",
   "tag": "standard_bots_staff_forward_deployed_engineer",
   "company": "Standard Bots",
@@ -2187,26 +1757,6 @@
   "title": "Data Principal Technical Consultant",
   "comp": 275000.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/1c01bf84-38e3-42db-990c-29c9195443ba",
-  "tag": "waabi_senior_staff_ml_ops_engineer",
-  "company": "waabi",
-  "title": "Senior / Staff ML Ops Engineer",
-  "comp": 272000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/drata/d374d673-9903-4189-9190-fbb9c419db47",
-  "tag": "drata_staff_platform_engineer_interoperab",
-  "company": "drata",
-  "title": "Staff Platform Engineer, Interoperability",
-  "comp": 271500.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2280,26 +1830,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/anyscale/02ed9406-2b43-4009-a80f-2dd94e2f6e96",
-  "tag": "anyscale_staff_software_engineer_platform_in",
-  "company": "anyscale",
-  "title": " Staff Software Engineer, Platform Infrastructure (Foundations)",
-  "comp": 265000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/openrouter/1b26f0a2-4aab-4bef-8c21-0f8de9a059e3",
-  "tag": "openrouter_forward_deployed_engineer",
-  "company": "openrouter",
-  "title": "Forward Deployed Engineer",
-  "comp": 260000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "lever",
   "url": "https://jobs.lever.co/thinkahead/e100c3af-eb7e-4ef4-9001-33233f14f6f1?lever-source=Indeed",
   "tag": "ahead_principal_data_consultant_ai_readin",
@@ -2307,16 +1837,6 @@
   "title": "Principal Data Consultant - AI Readiness",
   "comp": 260000.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/writer/40f9e2b4-3284-4a20-b45d-0f5e5dd9108d",
-  "tag": "writer_ai_engineer",
-  "company": "writer",
-  "title": "AI engineer ",
-  "comp": 259000.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2401,16 +1921,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/litellm/f4b86291-3410-4e27-9c3e-8306609e3c59",
-  "tag": "litellm_forward_deployed_engineer",
-  "company": "litellm",
-  "title": "Forward Deployed Engineer",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Doppel/1422dadf-11d8-4274-ba89-5e3f4807791c?utm_source=Z7VkN2wB3M",
   "tag": "doppel_farmaceutici_forward_deployed_engineering_lead_s",
   "company": "Doppel Farmaceutici",
@@ -2425,6 +1935,16 @@
   "tag": "moonpay_staff_engineer_agents",
   "company": "moonpay",
   "title": "Staff Engineer, Agents",
+  "comp": 250000.0,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/litellm/f4b86291-3410-4e27-9c3e-8306609e3c59",
+  "tag": "litellm_forward_deployed_engineer",
+  "company": "litellm",
+  "title": "Forward Deployed Engineer",
   "comp": 250000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -2491,26 +2011,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/llamaindex/5ef32675-090d-4eb2-bca0-ddb6fbde0215",
-  "tag": "llamaindex_member_of_technical_staff_applied_r",
-  "company": "llamaindex",
-  "title": "Member of Technical Staff, Applied Research",
-  "comp": 250000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/eliseai/efc949ef-22ce-401c-8161-091e387e776d",
-  "tag": "eliseai_staff_software_engineer",
-  "company": "eliseai",
-  "title": "Staff Software Engineer ",
-  "comp": 400000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/astronomer/b04f591d-7752-4691-8d8e-28cf9ac276fd",
   "tag": "astronomer_principal_software_engineer",
   "company": "astronomer",
@@ -2531,16 +2031,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/1password/42e39877-8c7c-4f18-9d42-336777df1de9",
-  "tag": "1password_principal_engineer_product_engineer",
-  "company": "1password",
-  "title": "Principal Engineer, Product Engineering",
-  "comp": 369000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/confluent/70c593c1-96db-4f99-8e72-39d454ffec6c",
   "tag": "confluent_principal_engineer_i_governance",
   "company": "confluent",
@@ -2551,30 +2041,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/astronomer/e8db86c9-b216-48ee-b0ec-71cc742a0309",
-  "tag": "astronomer_staff_software_engineer_observabili",
-  "company": "astronomer",
-  "title": "Staff Software Engineer, Observability",
-  "comp": 377000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/sesame/64dcc7c6-59c8-418c-b76d-3c07a7c2d705",
   "tag": "sesame_product_engineering_lead",
   "company": "sesame",
   "title": "Product Engineering Lead",
-  "comp": 320000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/aleph/a61b0752-2c82-4f3d-ba78-d47c330f4323",
-  "tag": "aleph_staff_software_engineer_product",
-  "company": "aleph",
-  "title": "Staff+ Software Engineer, Product",
   "comp": 320000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -2596,26 +2066,6 @@
   "company": "liquid",
   "title": "Member of Technical Staff",
   "comp": 320000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/confluent/bef7f6a5-2481-4eb6-a760-86e3746600bb",
-  "tag": "confluent_staff_software_engineer_i",
-  "company": "confluent",
-  "title": "Staff Software Engineer I",
-  "comp": 307000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Valon/9d1af085-b312-4f75-9b50-5d8fa4413fa8",
-  "tag": "valon_staff_software_engineer",
-  "company": "Valon",
-  "title": "Staff Software Engineer",
-  "comp": 300000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2670,26 +2120,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/roboflow/a28500ec-eb3b-4c5e-a052-a220428bebea",
-  "tag": "roboflow_member_of_operations_staff",
-  "company": "roboflow",
-  "title": "Member of Operations Staff",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/shieldai/1ade04ff-f436-487d-9376-7e230be3234f",
-  "tag": "shield_ai_staff_deep_learning_engineer_state_",
-  "company": "Shield AI",
-  "title": "Staff Deep Learning Engineer, State Estimation (R5785)",
-  "comp": 300000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "lever",
   "url": "https://jobs.lever.co/AIFund/b4498e9d-bc69-4da2-b88f-26968879adc2?lever-source%5B%5D=careers.aifund.ai",
   "tag": "ai_fund_principal_builder",
@@ -2720,6 +2150,16 @@
   "email": "amba_rish@hotmail.com"
  },
  {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/shieldai/1ade04ff-f436-487d-9376-7e230be3234f",
+  "tag": "shield_ai_staff_deep_learning_engineer_state_",
+  "company": "Shield AI",
+  "title": "Staff Deep Learning Engineer, State Estimation (R5785)",
+  "comp": 300000.0,
+  "source": "Indeed",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/notable/6fe46609-bea1-4a25-be32-3a52ce232767",
   "tag": "notable_staff_fullstack_software_engineer",
@@ -2736,16 +2176,6 @@
   "company": "extremenetworks",
   "title": "Principal Software Engineer (10382, 10385)",
   "comp": 250000,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/vanta/0efec8d2-094a-421d-bca6-1fa0da5ca5a0",
-  "tag": "vanta_senior_manager_ai_corporate_enginee",
-  "company": "vanta",
-  "title": "Senior Manager, AI Corporate Engineering",
-  "comp": 247000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2781,31 +2211,11 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/extremenetworks/1f328ea6-d64a-4d1e-aa42-8e9e6ab614a0",
-  "tag": "extremenetworks_distinguished_sw_systems_engineer_1",
-  "company": "extremenetworks",
-  "title": "Distinguished SW Systems Engineer (10343)",
-  "comp": 200000,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
   "url": "https://jobs.lever.co/pointclickcare/c705af74-d0ed-4cbc-bdfb-3ac8f99fcea6",
   "tag": "pointclickcare_director_software_engineering",
   "company": "pointclickcare",
   "title": "Director, Software Engineering",
   "comp": 242000,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/glass-health-inc/bf5e10db-5222-44df-a16f-f410f2b1e260",
-  "tag": "glass_health_inc_founding_software_engineer_backend_",
-  "company": "glass-health-inc",
-  "title": "Founding Software Engineer (Backend, Remote)",
-  "comp": 210000,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2817,16 +2227,6 @@
   "title": "Founding Developer Relations",
   "comp": 225000.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/litellm/791652d5-1b40-4a54-bc22-a75c16131ddc",
-  "tag": "litellm_founding_developer_relations",
-  "company": "litellm",
-  "title": "Founding Developer Relations",
-  "comp": 220000.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -2851,6 +2251,16 @@
  },
  {
   "ats": "lever",
+  "url": "https://jobs.lever.co/glass-health-inc/bf5e10db-5222-44df-a16f-f410f2b1e260",
+  "tag": "glass_health_inc_founding_software_engineer_backend_",
+  "company": "glass-health-inc",
+  "title": "Founding Software Engineer (Backend, Remote)",
+  "comp": 210000,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
   "url": "https://jobs.lever.co/redwoodcu/a72f861a-2fc5-4911-abb1-991188c791e9?lever-source=Indeed",
   "tag": "redwood_credit_union_vice_president_consumer_lending",
   "company": "Redwood Credit Union",
@@ -2866,16 +2276,6 @@
   "company": "netboxlabs",
   "title": "Engineering Manager",
   "comp": 210000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/glass-health-inc/174fd80a-4df6-444c-9d49-859659d1c0d0",
-  "tag": "glass_health_inc_founding_product_engineer_remote",
-  "company": "glass-health-inc",
-  "title": "Founding Product Engineer (Remote)",
-  "comp": 210000,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2921,31 +2321,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/coder/afb0b507-24ba-4f39-ac51-739e23ce8938",
-  "tag": "coder_senior_forward_deployed_engineer",
-  "company": "coder",
-  "title": "Senior Forward Deployed Engineer",
-  "comp": 246000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2",
   "tag": "camunda_ai_process_forward_deployed_enginee",
   "company": "camunda",
   "title": "AI Process Forward Deployed Engineer",
   "comp": 244200.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/egen/04ed6a6b-541c-4b92-a15f-83d00fe494ee",
-  "tag": "egen_principal_cloud_architect_google_cl",
-  "company": "egen",
-  "title": "Principal Cloud Architect, Google Cloud",
-  "comp": 243691,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -2971,51 +2351,11 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/writer/36aef3b1-ded0-4aed-9943-01bbf6568fe4",
-  "tag": "writer_staff_security_engineer_application",
-  "company": "writer",
-  "title": "Staff security engineer, application security",
-  "comp": 240000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/notion/4967b1cf-a1f7-417b-b650-feebbff767a3",
-  "tag": "notion_enterprise_outcomes_architect",
-  "company": "notion",
-  "title": "Enterprise Outcomes Architect",
-  "comp": 240000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/netboxlabs/f8093bde-80b6-47b7-b01e-eaa2cd42e272",
   "tag": "netboxlabs_staff_software_backend_engineer_tec",
   "company": "netboxlabs",
   "title": "Staff Software Backend Engineer, Tech Lead - Foundations",
   "comp": 240000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/thinkahead/62a18ee3-fb30-43b5-987d-8d602960f84c?lever-source=Indeed",
-  "tag": "ahead_principal_observability_reliability",
-  "company": "Ahead",
-  "title": "Principal Observability & Reliability Architect",
-  "comp": 240000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/notable/24cf721f-ed19-4f60-aef3-927e86512657",
-  "tag": "notable_staff_software_engineer_cloud_infra",
-  "company": "notable",
-  "title": "Staff Software Engineer - Cloud Infrastructure and Applications",
-  "comp": 229000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -3110,32 +2450,12 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/pointclickcare/27ea212e-092c-4567-bb56-fc17a71fcc4c",
-  "tag": "pointclickcare_principal_software_engineer_big_dat",
-  "company": "pointclickcare",
-  "title": "Principal Software Engineer - Big Data & Java",
-  "comp": 203000,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/dualentry/7acbe603-8fbc-4249-942a-ee45eb273ea6",
   "tag": "dualentry_senior_ai_engineer",
   "company": "dualentry",
   "title": "Senior AI Engineer",
   "comp": 200000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/langchain/f71210f9-12e1-4726-88b9-ebafa194d5b2",
-  "tag": "langchain_deployed_architect_professional_ser",
-  "company": "langchain",
-  "title": "Deployed Architect, Professional Services (NYC)",
-  "comp": 215000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
@@ -3175,16 +2495,6 @@
   "tag": "f2_ai_forward_deployed_engineer",
   "company": "f2-ai",
   "title": "Forward Deployed Engineer",
-  "comp": 200000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/rogo/bae7053e-80de-4cd7-966f-06abe55426c1",
-  "tag": "rogo_forward_deployed_wealth_management",
-  "company": "rogo",
-  "title": "Forward Deployed, Wealth Management",
   "comp": 200000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3260,16 +2570,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/palantir/b57f08e9-546c-4b9b-8d21-db0ebbc11363",
-  "tag": "palantir_forward_deployed_infrastructure_eng",
-  "company": "palantir",
-  "title": "Forward Deployed Infrastructure Engineer - US Government",
-  "comp": 200000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/infinity-constellation/cef6c5a9-acbe-45da-a907-fd13712fbadc?utm_source=k3zlN2eVnK",
   "tag": "infinity_senior_forward_deployed_engineer_la",
@@ -3291,20 +2591,10 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/asapp-2/3ad3aa9f-07d7-4af3-9997-fe3d1ae2f5c8",
-  "tag": "asapp_2_lead_machine_learning_engineer_eval",
-  "company": "asapp-2",
-  "title": "Lead Machine Learning Engineer, Evaluations",
-  "comp": 190000,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/palantir/dab396d4-2f14-4796-aac0-0d82883dccf0",
-  "tag": "palantir_forward_deployed_software_engineer",
+  "url": "https://jobs.lever.co/palantir/b57f08e9-546c-4b9b-8d21-db0ebbc11363",
+  "tag": "palantir_forward_deployed_infrastructure_eng",
   "company": "palantir",
-  "title": "Forward Deployed Software Engineer",
+  "title": "Forward Deployed Infrastructure Engineer - US Government",
   "comp": 200000.0,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3317,16 +2607,6 @@
   "title": "AI Engineer \u2013 Trust & Explainability (AI Platform)",
   "comp": 177600.0,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/hatch/b6d3600b-acd6-478f-9c2d-833c61f48772",
-  "tag": "hatch_solutions_architect",
-  "company": "hatch",
-  "title": "Solutions Architect",
-  "comp": 170000.0,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -3381,26 +2661,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/insitro/ff6605ae-4961-4a06-b656-6d7dc665d990",
-  "tag": "insitro_staff_software_engineer_imaging",
-  "company": "insitro",
-  "title": "Staff Software Engineer, Imaging",
-  "comp": 233000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cerebras/e616412a-6412-4f0d-93b9-47644d3e99fa",
-  "tag": "cerebras_pcb_layout_engineering_lead",
-  "company": "cerebras",
-  "title": "PCB Layout Engineering Lead",
-  "comp": 230000.0,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/namespace/2e5b7657-ca27-4478-94b1-295df34ee932",
   "tag": "namespace_engineering_lead_us",
   "company": "namespace",
@@ -3450,16 +2710,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/thea.energy/4d47734f-5cb9-4488-9f25-12e808956863?lever-source=Indeed",
-  "tag": "thea_energy_principal_magnet_cryogenics_enginee",
-  "company": "Thea Energy",
-  "title": "Principal Magnet Cryogenics Engineer",
-  "comp": 215000.0,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/backbone/6900ff42-1dde-4fa5-9695-a7ecad7402eb",
   "tag": "backbone_founding_engineer_forward_deployed",
@@ -3477,6 +2727,16 @@
   "title": "Founding AI/ML Engineer",
   "comp": null,
   "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/thea.energy/4d47734f-5cb9-4488-9f25-12e808956863?lever-source=Indeed",
+  "tag": "thea_energy_principal_magnet_cryogenics_enginee",
+  "company": "Thea Energy",
+  "title": "Principal Magnet Cryogenics Engineer",
+  "comp": 215000.0,
+  "source": "Indeed",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -3531,30 +2791,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cursor/3752886b-a6e2-402c-ba2a-47d0659ff335",
-  "tag": "cursor_engineering_manager_ml",
-  "company": "cursor",
-  "title": "Engineering Manager, ML",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/braintrust/d1756ad8-be7c-4acd-961e-7e81e4f69024",
   "tag": "braintrust_founding_data_engineer",
   "company": "braintrust",
   "title": "Founding Data Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/jobgether/dbeebf55-b651-48bd-9899-466219db9e3c",
-  "tag": "jobgether_director_ai_assisted_software_engin",
-  "company": "jobgether",
-  "title": "Director, AI Assisted Software Engineering",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3571,10 +2811,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cursor/f7ec7811-a573-42fa-8ade-01e2d07681ef",
-  "tag": "cursor_regional_director_forward_deployed_",
+  "url": "https://jobs.ashbyhq.com/cursor/3752886b-a6e2-402c-ba2a-47d0659ff335",
+  "tag": "cursor_engineering_manager_ml",
   "company": "cursor",
-  "title": "Regional Director, Forward Deployed Engineering",
+  "title": "Engineering Manager, ML",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3591,20 +2831,10 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/jobgether/63b92bf7-7832-4591-8b15-43d4594e790f",
-  "tag": "jobgether_director_enterprise_ai_machine_lear",
+  "url": "https://jobs.lever.co/jobgether/dbeebf55-b651-48bd-9899-466219db9e3c",
+  "tag": "jobgether_director_ai_assisted_software_engin",
   "company": "jobgether",
-  "title": "Director, Enterprise AI & Machine Learning Engineering",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/backbone/cbfce5dc-e2c7-452e-bb23-2dac1198df7d",
-  "tag": "backbone_founding_engineer_applied_research",
-  "company": "backbone",
-  "title": "Founding Engineer, Applied Research",
+  "title": "Director, AI Assisted Software Engineering",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3731,16 +2961,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/supabase/b4a2f5e5-5c51-4c1a-abde-a89de27451c7",
-  "tag": "supabase_engineering_manager_billing",
-  "company": "supabase",
-  "title": "Engineering Manager, Billing",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/nudgesecurity/b63eae1d-d783-4090-a3fc-f6a8e0267f19",
   "tag": "nudgesecurity_msp_director",
   "company": "nudgesecurity",
@@ -3755,6 +2975,16 @@
   "tag": "factory_regional_director_mid_market_sf",
   "company": "factory",
   "title": "Regional Director, Mid-Market, SF",
+  "comp": null,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/supabase/b4a2f5e5-5c51-4c1a-abde-a89de27451c7",
+  "tag": "supabase_engineering_manager_billing",
+  "company": "supabase",
+  "title": "Engineering Manager, Billing",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3791,16 +3021,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/factory/db900e58-9738-4d17-86a3-e9ab754de8ca",
-  "tag": "factory_regional_director_mid_market_nyc",
-  "company": "factory",
-  "title": "Regional Director, Mid-Market, NYC",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/emergence/3daa8d91-dc6c-44eb-b682-26f5caa1775f",
   "tag": "emergence_director",
   "company": "emergence",
@@ -3811,20 +3031,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/withremy/ffbb6d57-c6f1-43ef-82a2-734d2ab46e6e",
-  "tag": "withremy_founding_product_engineer",
-  "company": "withremy",
-  "title": "Founding Product Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Hippocratic%20AI/fc993da9-fd9c-4c76-9ac2-7a3e056fb9fc",
-  "tag": "hippocratic_ai_director_of_quality",
-  "company": "Hippocratic AI",
-  "title": "Director of Quality",
+  "url": "https://jobs.ashbyhq.com/factory/db900e58-9738-4d17-86a3-e9ab754de8ca",
+  "tag": "factory_regional_director_mid_market_nyc",
+  "company": "factory",
+  "title": "Regional Director, Mid-Market, NYC",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3855,6 +3065,16 @@
   "tag": "synthesia_solutions_engineering_manager",
   "company": "synthesia",
   "title": "Solutions Engineering Manager ",
+  "comp": null,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/Hippocratic%20AI/fc993da9-fd9c-4c76-9ac2-7a3e056fb9fc",
+  "tag": "hippocratic_ai_director_of_quality",
+  "company": "Hippocratic AI",
+  "title": "Director of Quality",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3910,41 +3130,11 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/socket/1e5693c0-24d3-4a8d-8c99-04ac4b289e78",
-  "tag": "socket_engineering_manager",
-  "company": "socket",
-  "title": "Engineering Manager",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "lever",
   "url": "https://jobs.lever.co/zencore/9437c5b6-7be1-410e-b563-f0a8cd4c8b2b",
   "tag": "zencore_director_of_alliances",
   "company": "zencore",
   "title": "Director of Alliances",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/orpex/a975199d-69ff-4793-8053-513cf01c5261?utm_source=PmRX50RvAb",
-  "tag": "orpex_ex_founder_ex_cto_europe",
-  "company": "ORPEX",
-  "title": "Ex-Founder/Ex-CTO (Europe)",
-  "comp": null,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/fullscript/6d3f9a71-3c4b-4bae-aab7-29955df9d497",
-  "tag": "fullscript_engineering_manager_patient_experie",
-  "company": "fullscript",
-  "title": "Engineering Manager, Patient Experience",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -3961,42 +3151,12 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/zencore/eefb9e76-d5bd-451f-b3b1-11cbe4945011",
-  "tag": "zencore_program_director",
-  "company": "zencore",
-  "title": "Program Director",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/spotify/9f477315-94fa-47b8-9b92-f6d8fc48785a",
-  "tag": "spotify_engineering_manager_music",
-  "company": "spotify",
-  "title": "Engineering Manager - Music",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
   "url": "https://jobs.lever.co/scanifly/6d57ae86-72f0-4c59-8bf1-e82cc53db593?lever-source=Indeed",
   "tag": "scanifly_head_of_engineering",
   "company": "Scanifly",
   "title": "Head of Engineering",
   "comp": null,
   "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/binance/64713963-f206-4e04-a43a-1e4624eec88d",
-  "tag": "binance_payment_director_kazakhstan",
-  "company": "binance",
-  "title": "Payment Director, Kazakhstan",
-  "comp": null,
-  "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -4011,12 +3171,12 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/runpod/25e7d414-e338-42dc-a206-ca4727f3f98f",
-  "tag": "runpod_forward_deployed_engineer_apac",
-  "company": "runpod",
-  "title": "Forward Deployed Engineer APAC",
+  "url": "https://jobs.ashbyhq.com/orpex/a975199d-69ff-4793-8053-513cf01c5261?utm_source=PmRX50RvAb",
+  "tag": "orpex_ex_founder_ex_cto_europe",
+  "company": "ORPEX",
+  "title": "Ex-Founder/Ex-CTO (Europe)",
   "comp": null,
-  "source": "ATS board",
+  "source": "Indeed",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -4025,6 +3185,26 @@
   "tag": "ema_forward_deployed_builder",
   "company": "ema",
   "title": "Forward Deployed Builder",
+  "comp": null,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/zencore/eefb9e76-d5bd-451f-b3b1-11cbe4945011",
+  "tag": "zencore_program_director",
+  "company": "zencore",
+  "title": "Program Director",
+  "comp": null,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/binance/64713963-f206-4e04-a43a-1e4624eec88d",
+  "tag": "binance_payment_director_kazakhstan",
+  "company": "binance",
+  "title": "Payment Director, Kazakhstan",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4111,26 +3291,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Hippocratic%20AI/eef8a721-23de-4c20-bff0-56088b39afa0",
-  "tag": "hippocratic_ai_llm_inference_engineer_mid_sr_staff",
-  "company": "Hippocratic AI",
-  "title": "LLM  Inference Engineer (Mid, Sr, Staff)",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/cassihome/de46d318-c22b-4a4d-8cd1-7074bda64877",
-  "tag": "cassihome_forward_deployed_engineer",
-  "company": "cassihome",
-  "title": "Forward Deployed Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/featherlessai/1de39e56-c182-4e22-a09c-887852609b0f",
   "tag": "featherlessai_machine_learning_engineer_ai_archit",
   "company": "featherlessai",
@@ -4161,20 +3321,20 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/midjourney/9d54d241-0824-405a-bc8a-a64483e67cee",
-  "tag": "midjourney_principal_machine_learning_engineer",
-  "company": "midjourney",
-  "title": "Principal Machine Learning Engineer (Reconstruction / Quantitative Imaging)",
+  "url": "https://jobs.ashbyhq.com/cassihome/de46d318-c22b-4a4d-8cd1-7074bda64877",
+  "tag": "cassihome_forward_deployed_engineer",
+  "company": "cassihome",
+  "title": "Forward Deployed Engineer",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/featherlessai/d73fa2f3-f586-4ffe-a831-04dc1ec9ad77",
-  "tag": "featherlessai_machine_learning_engineer_multiling",
-  "company": "featherlessai",
-  "title": "Machine Learning Engineer \u2014 Multilingual Data",
+  "url": "https://jobs.ashbyhq.com/midjourney/9d54d241-0824-405a-bc8a-a64483e67cee",
+  "tag": "midjourney_principal_machine_learning_engineer",
+  "company": "midjourney",
+  "title": "Principal Machine Learning Engineer (Reconstruction / Quantitative Imaging)",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4191,10 +3351,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/truelogic/17d70bed-21bb-4f74-baea-f8e762773dc2",
-  "tag": "truelogic_principal_full_stack_engineer_net_a",
-  "company": "truelogic",
-  "title": "Principal Full-Stack Engineer (.NET/Angular) (AI-First Development) - Software",
+  "url": "https://jobs.ashbyhq.com/featherlessai/d73fa2f3-f586-4ffe-a831-04dc1ec9ad77",
+  "tag": "featherlessai_machine_learning_engineer_multiling",
+  "company": "featherlessai",
+  "title": "Machine Learning Engineer \u2014 Multilingual Data",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4205,26 +3365,6 @@
   "tag": "liquid_ai_member_of_technical_staff_applied_m",
   "company": "liquid-ai",
   "title": "Member of Technical Staff - Applied ML, RecSys",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/featherlessai/dcbb7273-4d0e-4fd0-bb33-1e0ad99eca69",
-  "tag": "featherlessai_machine_learning_engineer_training_",
-  "company": "featherlessai",
-  "title": "Machine Learning Engineer \u2014 Training Optimization",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/reka/e059e019-b7f1-4ccb-a53b-1db4f821621c",
-  "tag": "reka_member_of_technical_staff_applied_a",
-  "company": "reka",
-  "title": "Member of Technical Staff (Applied AI)",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4261,10 +3401,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/reka/87ec3e1d-3083-4dc8-9167-89167dc683e1",
-  "tag": "reka_member_of_technical_staff_machine_l",
+  "url": "https://jobs.ashbyhq.com/reka/e059e019-b7f1-4ccb-a53b-1db4f821621c",
+  "tag": "reka_member_of_technical_staff_applied_a",
   "company": "reka",
-  "title": "Member of Technical Staff (Machine Learning Engineer)",
+  "title": "Member of Technical Staff (Applied AI)",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4291,26 +3431,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/krea/e8128a39-1e10-40fa-8c3c-9bbb4d97a061",
-  "tag": "krea_ml_engineer_personalization_recomme",
-  "company": "krea",
-  "title": "ML Engineer - Personalization & Recommendation Systems",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/synthesia/637a0f3b-fd23-409a-b66b-917d1411d56e",
-  "tag": "synthesia_machine_learning_engineer_ml_engine",
-  "company": "synthesia",
-  "title": "Machine Learning Engineer / ML Engineer - Roleplay Sessions",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/tavily/1999e01d-f9e3-4f43-a097-812c0800fb0f",
   "tag": "tavily_forward_deployed_engineer",
   "company": "tavily",
@@ -4325,6 +3445,16 @@
   "tag": "endgame_forward_deployed_engineer",
   "company": "endgame",
   "title": "Forward Deployed Engineer",
+  "comp": null,
+  "source": "ATS board",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/krea/e8128a39-1e10-40fa-8c3c-9bbb4d97a061",
+  "tag": "krea_ml_engineer_personalization_recomme",
+  "company": "krea",
+  "title": "ML Engineer - Personalization & Recommendation Systems",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4361,40 +3491,10 @@
  },
  {
   "ats": "lever",
-  "url": "https://jobs.lever.co/zencore/1c99f2b8-670e-4204-bc2a-ae2faefec554",
-  "tag": "zencore_principal_architect_ai_ml",
-  "company": "zencore",
-  "title": "Principal Architect, AI/ML",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/binance/015c877d-238a-491c-ad5b-a65b32671997",
-  "tag": "binance_ai_agent_engineer",
-  "company": "binance",
-  "title": "AI Agent Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
   "url": "https://jobs.lever.co/turgon-ai/961c4a18-b3e4-4550-b6bf-8b79308a17ef",
   "tag": "turgon_ai_forward_deployed_engineer",
   "company": "turgon-ai",
   "title": "Forward Deployed Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/aledade/428933a9-1cab-4fb0-9c03-e5494d7aed0c",
-  "tag": "aledade_principal_engineer_ai_products_plat",
-  "company": "aledade",
-  "title": "Principal Engineer - AI Products & Platform, Remote",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4421,30 +3521,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/hyperbolic/0cd2cbf3-bc38-4e02-84c1-ac7a7c285105",
-  "tag": "hyperbolic_member_of_technical_staff_gpu_infra",
-  "company": "hyperbolic",
-  "title": "Member of Technical Staff - GPU Infrastructure",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/andromeda/34b0a2ac-2537-4634-baee-c829aacd7a62",
   "tag": "andromeda_member_of_the_technical_staff_syste",
   "company": "andromeda",
   "title": "Member of the Technical Staff - Systems ",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/ema/4e8f0981-0e24-497f-bdc6-16d2902834aa",
-  "tag": "ema_solutions_architect_uk",
-  "company": "ema",
-  "title": "Solutions Architect - UK",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4465,16 +3545,6 @@
   "tag": "lovable_solutions_architect_san_francisco",
   "company": "lovable",
   "title": "Solutions Architect, San Francisco",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/andromeda/2fd13dac-5d18-4b92-8d83-ce783f0be7ac",
-  "tag": "andromeda_member_of_the_technical_staff_platf",
-  "company": "andromeda",
-  "title": "Member of the Technical Staff - Platform",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4531,16 +3601,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/liquid-ai/a25b97f4-02ee-4453-a2e1-f8d5cfe2c4b4",
-  "tag": "liquid_ai_member_of_technical_staff_distribut",
-  "company": "liquid-ai",
-  "title": "Member of Technical Staff - Distributed Training Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/surge-ai/9c80ec29-43fd-4b11-9755-54ce037a0ed8",
   "tag": "surge_ai_human_data_architect",
   "company": "surge-ai",
@@ -4581,40 +3641,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/surge-ai/9ccb7739-04bb-4c12-8c1e-006c2c69d743",
-  "tag": "surge_ai_rl_environments_architect",
-  "company": "surge-ai",
-  "title": "RL Environments Architect",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/supabase/cb04ae3a-3a47-4e21-928f-c2456b7b214e",
-  "tag": "supabase_member_of_technical_staff_partners",
-  "company": "supabase",
-  "title": "Member of Technical Staff/ Partners",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/linear/cd5ae036-0223-427a-b038-ba16ef9dcb32",
   "tag": "linear_senior_staff_fullstack_engineer",
   "company": "linear",
   "title": "Senior / Staff Fullstack Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/factory/31a1a071-6256-4f62-aea0-9616a822d531",
-  "tag": "factory_member_of_deployed_staff",
-  "company": "factory",
-  "title": "Member of Deployed Staff",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4631,30 +3661,10 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/midjourney/67153405-c5da-459d-9e83-80504095d6d1",
-  "tag": "midjourney_principal_software_engineer",
-  "company": "midjourney",
-  "title": "Principal Software Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/linear/12f8f208-0b9c-4569-bb3d-41c8a197029e",
-  "tag": "linear_senior_staff_product_engineer",
-  "company": "linear",
-  "title": "Senior / Staff Product Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/pika/772cd189-caa1-41bc-a0a0-0bb67ef7b3a6",
-  "tag": "pika_principal_software_engineer_product",
-  "company": "pika",
-  "title": "Principal Software Engineer, Product",
+  "url": "https://jobs.ashbyhq.com/surge-ai/9ccb7739-04bb-4c12-8c1e-006c2c69d743",
+  "tag": "surge_ai_rl_environments_architect",
+  "company": "surge-ai",
+  "title": "RL Environments Architect",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"
@@ -4665,26 +3675,6 @@
   "tag": "unstructured_principal_staff_software_engineers",
   "company": "unstructured",
   "title": "Principal + Staff Software Engineers",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/surge-ai/e5d74eb9-9487-427b-9df7-a9b6c453485d",
-  "tag": "surge_ai_staff_fullstack_engineer",
-  "company": "surge-ai",
-  "title": "Staff Fullstack Engineer",
-  "comp": null,
-  "source": "ATS board",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/endgame/a4395505-64e4-4b92-ba60-66dd44115499",
-  "tag": "endgame_principal_software_engineer",
-  "company": "endgame",
-  "title": "Principal Software Engineer",
   "comp": null,
   "source": "ATS board",
   "email": "amba_rish@hotmail.com"

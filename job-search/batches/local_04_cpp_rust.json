@@ -34,39 +34,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315",
-  "tag": "perplexity_member_of_technical_staff_ai_infras",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (AI Infrastructure Engineer)",
-  "comp": 405000.0,
-  "loc": "San Francisco",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/32a36cae-ad73-4198-9354-a72b141ff055",
-  "tag": "perplexity_member_of_technical_staff_secure_in",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (Secure Intelligence Institute)",
-  "comp": 405000.0,
-  "loc": "San Francisco",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/perplexity/5c561bd0-c180-4ee1-b079-647f3c20bdc0",
-  "tag": "perplexity_member_of_technical_staff_applied_a",
-  "company": "perplexity",
-  "title": "Member of Technical Staff (Applied AI Engineer, Agent Capabilities)",
-  "comp": 405000.0,
-  "loc": "San Francisco",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/PrimeIntellect/6d77793a-ee30-41ea-9e28-1f3f3eb9ceb9",
   "tag": "primeintellect_member_of_technical_staff_compute_p",
   "company": "PrimeIntellect",
@@ -85,17 +52,6 @@
   "comp": 400000.0,
   "loc": "San Francisco",
   "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/inferact/384d9db8-c712-4caa-8091-444b4189e161",
-  "tag": "inferact_member_of_technical_staff_kernel_en",
-  "company": "inferact",
-  "title": "Member of Technical Staff, Kernel Engineering",
-  "comp": 400000.0,
-  "loc": "San Francisco",
-  "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -133,12 +89,12 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/reka/9cdfc4f4-9594-49eb-9eaa-08aff01aa22f",
-  "tag": "reka_member_of_technical_staff_robotics",
-  "company": "reka",
-  "title": "Member of Technical Staff (Robotics)",
-  "comp": null,
-  "loc": "UK, Remote",
+  "url": "https://jobs.ashbyhq.com/perplexity/598e1f7d-b802-4de2-99ac-90eb2bc33315",
+  "tag": "perplexity_member_of_technical_staff_ai_infras",
+  "company": "perplexity",
+  "title": "Member of Technical Staff (AI Infrastructure Engineer)",
+  "comp": 405000.0,
+  "loc": "San Francisco",
   "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
@@ -150,6 +106,17 @@
   "title": "Member of Technical Staff -  Inference Systems",
   "comp": null,
   "loc": "Boston",
+  "lang": "C++",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/inferact/384d9db8-c712-4caa-8091-444b4189e161",
+  "tag": "inferact_member_of_technical_staff_kernel_en",
+  "company": "inferact",
+  "title": "Member of Technical Staff, Kernel Engineering",
+  "comp": 400000.0,
+  "loc": "San Francisco",
   "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
@@ -177,35 +144,13 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/0b03268c-92ba-4092-9eec-05eb16e41b95",
-  "tag": "temporal_staff_solutions_architect_majors_we",
-  "company": "temporal",
-  "title": "Staff Solutions Architect, Majors (West)",
-  "comp": 220500.0,
-  "loc": "San Francisco, California",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/e8dc6efc-67da-4a5d-859c-85865d6ed21d",
-  "tag": "temporal_staff_solutions_architect_majors_ce",
-  "company": "temporal",
-  "title": "Staff Solutions Architect, Majors (Central)",
-  "comp": 220500.0,
-  "loc": "Dallas, Texas",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/temporal/c07bba44-5506-4b5b-a0e0-5367a18afe29",
-  "tag": "temporal_staff_solutions_architect_banking_c",
-  "company": "temporal",
-  "title": "Staff Solutions Architect, Banking (Central)",
-  "comp": 210000.0,
-  "loc": "Dallas, Texas",
-  "lang": "Rust",
+  "url": "https://jobs.ashbyhq.com/reka/9cdfc4f4-9594-49eb-9eaa-08aff01aa22f",
+  "tag": "reka_member_of_technical_staff_robotics",
+  "company": "reka",
+  "title": "Member of Technical Staff (Robotics)",
+  "comp": null,
+  "loc": "UK, Remote",
+  "lang": "C++",
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -216,50 +161,6 @@
   "title": "Senior / Staff ML Onboard Optimization Engineer",
   "comp": 249000.0,
   "loc": "Remote US & Canada",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/eedaf111-0efd-4f8f-9c2d-ce829b5cb0eb",
-  "tag": "waabi_senior_staff_ml_training_optimizati",
-  "company": "waabi",
-  "title": "Senior / Staff ML Training Optimization Engineer",
-  "comp": 249000.0,
-  "loc": "Remote US & Canada",
-  "lang": "C++/Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/ca67aa9c-d647-41d5-a45b-38d94304344a",
-  "tag": "waabi_senior_staff_software_engineer_loca",
-  "company": "waabi",
-  "title": "Senior / Staff Software Engineer, Localization",
-  "comp": 242000.0,
-  "loc": "San Francisco, CA",
-  "lang": "Rust",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/39f0345f-177c-4feb-8c27-7de26645eb14",
-  "tag": "waabi_senior_staff_software_engineer_moti",
-  "company": "waabi",
-  "title": "Senior / Staff Software Engineer, Motion Planning",
-  "comp": 269000.0,
-  "loc": "Remote US & Canada",
-  "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/waabi/8ba014bf-a0f8-422f-8686-5cde55f12bf6",
-  "tag": "waabi_senior_staff_software_engineer_sens",
-  "company": "waabi",
-  "title": "Senior / Staff Software Engineer, Sensors Integration",
-  "comp": 249000.0,
-  "loc": "San Francisco, CA",
   "lang": "C++/Rust",
   "email": "amba_rish@hotmail.com"
  },
@@ -315,6 +216,17 @@
   "title": "Senior Performance Engineer",
   "comp": 205000.0,
   "loc": "San Francisco, CA - US",
+  "lang": "C++/Rust",
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/waabi/eedaf111-0efd-4f8f-9c2d-ce829b5cb0eb",
+  "tag": "waabi_senior_staff_ml_training_optimizati",
+  "company": "waabi",
+  "title": "Senior / Staff ML Training Optimization Engineer",
+  "comp": 249000.0,
+  "loc": "Remote US & Canada",
   "lang": "C++/Rust",
   "email": "amba_rish@hotmail.com"
  },
@@ -382,17 +294,6 @@
   "comp": null,
   "loc": "AMER",
   "lang": "C++",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/clickhouse/a11e0267-85fb-4eaa-920b-849edbb5b625",
-  "tag": "clickhouse_principal_software_engineer_postgre",
-  "company": "clickhouse",
-  "title": "Principal Software Engineer - Postgres",
-  "comp": null,
-  "loc": "AMER",
-  "lang": "C++/Rust",
   "email": "amba_rish@hotmail.com"
  }
 ]

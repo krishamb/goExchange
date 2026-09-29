@@ -15,42 +15,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://www.coinbase.com/careers/positions/8204243?gh_jid=8204243",
-  "tag": "coinbase_staff_software_engineer_platform_fi",
-  "company": "coinbase",
-  "title": "Staff Software Engineer (Platform - Financial Engineering)",
-  "comp": 256500.0,
-  "loc": "Remote - USA",
-  "posted_ts": 1790294400.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/gusto/jobs/8230894",
-  "tag": "gusto_senior_staff_software_engineer_enti",
-  "company": "gusto",
-  "title": "Senior Staff Software Engineer, Entity Management",
-  "comp": 275000.0,
-  "loc": "San Francisco, CA - Hybrid",
-  "posted_ts": 1790294400.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/snorkelai/jobs/6208931004",
-  "tag": "snorkelai_senior_staff_software_engineer_ai_m",
-  "company": "snorkelai",
-  "title": "Senior | Staff Software Engineer - AI / ML",
-  "comp": 315000.0,
-  "loc": "San Francisco, CA (Hybrid)",
-  "posted_ts": 1790294400.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/launchdarkly/jobs/8004607003",
   "tag": "launchdarkly_engineering_manager_cloud_engineeri",
   "company": "launchdarkly",
@@ -87,18 +51,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/realchemistry/jobs/5431230008",
-  "tag": "real_chemistry_lead_front_end_architect_engineer",
-  "company": "Real Chemistry",
-  "title": "Lead Front End Architect/Engineer",
-  "comp": 200000.0,
-  "source": "Indeed",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790208000.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://generatebiomedicines.com/open-positions?gh_jid=4715785006",
   "tag": "generatebiomedicines_director_wet_lab_engineering",
   "company": "generatebiomedicines",
@@ -108,18 +60,6 @@
   "posted_ts": 1790208000.0,
   "last_result": "(no report)",
   "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/gitlab/jobs/8623592002",
-  "tag": "gitlab_principal_site_reliability_engineer",
-  "company": "gitlab",
-  "title": "Principal Site Reliability Engineer, Platform Engineering: Dedicated",
-  "comp": 380400.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1790121600.0
  },
  {
   "ats": "greenhouse",
@@ -147,18 +87,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://coreweave.com/careers/job?4715608006&board=coreweave&gh_jid=4715608006",
-  "tag": "coreweave_senior_software_engineer_sandboxes_",
-  "company": "coreweave",
-  "title": "Senior Software Engineer, Sandboxes & Virtualization",
-  "comp": 242000.0,
-  "loc": "Livingston, NJ / New York, NY / Sunnyvale, CA / Bellevue, WA",
-  "posted_ts": 1790121600.0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://careers.aqr.com/jobs?gh_jid=8221812&gh_jid=8221812",
   "tag": "aqr_discretionary_macro_vice_president",
   "company": "aqr",
@@ -168,6 +96,18 @@
   "posted_ts": 1790121600.0,
   "last_result": "(no report)",
   "last_unanswered": []
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/realchemistry/jobs/5431230008",
+  "tag": "real_chemistry_lead_front_end_architect_engineer",
+  "company": "Real Chemistry",
+  "title": "Lead Front End Architect/Engineer",
+  "comp": 200000.0,
+  "source": "Indeed",
+  "last_result": "(no report)",
+  "last_unanswered": [],
+  "posted_ts": 1790208000.0
  },
  {
   "ats": "greenhouse",
@@ -231,18 +171,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/chainguard/jobs/4715303006",
-  "tag": "chainguard_senior_manager_engineering_containe",
-  "company": "chainguard",
-  "title": "Senior Manager, Engineering (Container Product Engineering)",
-  "comp": 258000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789948800.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/carta/jobs/7992629003",
   "tag": "carta_senior_ai_engineer_post_training",
   "company": "carta",
@@ -291,15 +219,15 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/mercury/jobs/6196335004",
-  "tag": "mercury_senior_engineering_manager_custody",
-  "company": "mercury",
-  "title": "Senior Engineering Manager - Custody",
-  "comp": 298800.0,
+  "url": "https://boards.greenhouse.io/chainguard/jobs/4715303006",
+  "tag": "chainguard_senior_manager_engineering_containe",
+  "company": "chainguard",
+  "title": "Senior Manager, Engineering (Container Product Engineering)",
+  "comp": 258000.0,
   "source": "ATS board",
   "last_result": "(no report)",
   "last_unanswered": [],
-  "posted_ts": 1789603200.0
+  "posted_ts": 1789948800.0
  },
  {
   "ats": "greenhouse",
@@ -327,18 +255,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/appian/jobs/8204996",
-  "tag": "appian_lead_applied_ai_engineer",
-  "company": "appian",
-  "title": "Lead Applied AI Engineer",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789430400.0
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/pallet/jobs/5225765007",
   "tag": "pallet_senior_member_of_technical_staff_in",
   "company": "pallet",
@@ -351,6 +267,18 @@
  },
  {
   "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/mercury/jobs/6196335004",
+  "tag": "mercury_senior_engineering_manager_custody",
+  "company": "mercury",
+  "title": "Senior Engineering Manager - Custody",
+  "comp": 298800.0,
+  "source": "ATS board",
+  "last_result": "(no report)",
+  "last_unanswered": [],
+  "posted_ts": 1789603200.0
+ },
+ {
+  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/huntress/jobs/7977223003",
   "tag": "huntress_staff_platform_engineer",
   "company": "huntress",
@@ -360,18 +288,6 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789344000.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/databricks/jobs/8779014002",
-  "tag": "databricks_sr_manager_ai_forward_deployed_engi",
-  "company": "databricks",
-  "title": "Sr. Manager, AI Forward Deployed Engineering (AI FDE)",
-  "comp": 320200.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1789084800.0
  },
  {
   "ats": "greenhouse",
@@ -396,30 +312,5 @@
   "last_result": "(no report)",
   "last_unanswered": [],
   "posted_ts": 1789084800.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/mongodb/jobs/8163000",
-  "tag": "mongodb_senior_engineering_manager_storage_",
-  "company": "mongodb",
-  "title": "Senior Engineering Manager, Storage Execution",
-  "comp": 297000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788998400.0
- },
- {
-  "ats": "greenhouse",
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8798198002",
-  "tag": "databricks_staff_software_engineer_lakeflow_pi",
-  "company": "databricks",
-  "title": "Staff Software Engineer, Lakeflow Pipelines DR",
-  "comp": 260000.0,
-  "loc": "Mountain View, California; San Francisco, California",
-  "lang": "C++",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "posted_ts": 1788998400.0
  }
 ]

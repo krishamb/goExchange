@@ -22,17 +22,6 @@
   "email": "amba_rish@hotmail.com"
  },
  {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/jobgether/60394e51-0657-4206-8c8d-0ea493f9462e",
-  "tag": "jobgether_director_financial_integrations",
-  "company": "jobgether",
-  "title": "Director, Financial Integrations",
-  "comp": null,
-  "loc": "US",
-  "posted_ts": 1790677643.957,
-  "email": "amba_rish@hotmail.com"
- },
- {
   "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/perplexity/5a4cec8b-5688-497c-a5ec-884f75d09511",
   "tag": "perplexity_member_of_technical_staff_new_grad",
@@ -67,17 +56,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/Clera/265e1517-44e5-4f36-8b01-f7175a28222e",
-  "tag": "clera_founding_cloud_infrastructure_engin",
-  "company": "Clera",
-  "title": "Founding Cloud Infrastructure Engineer",
-  "comp": null,
-  "loc": "San Mateo",
-  "posted_ts": 1790640000.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/suno/f83463c2-2e7a-441e-85e9-9e509c9bac7e",
   "tag": "suno_senior_staff_behavioral_engineer",
   "company": "suno",
@@ -85,6 +63,17 @@
   "comp": 363510.0,
   "loc": "NYC",
   "posted_ts": 1790640000.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/jobgether/60394e51-0657-4206-8c8d-0ea493f9462e",
+  "tag": "jobgether_director_financial_integrations",
+  "company": "jobgether",
+  "title": "Director, Financial Integrations",
+  "comp": null,
+  "loc": "US",
+  "posted_ts": 1790677643.957,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -107,6 +96,17 @@
   "comp": null,
   "loc": "Arlington, VA",
   "posted_ts": 1790612262.767,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/Clera/265e1517-44e5-4f36-8b01-f7175a28222e",
+  "tag": "clera_founding_cloud_infrastructure_engin",
+  "company": "Clera",
+  "title": "Founding Cloud Infrastructure Engineer",
+  "comp": null,
+  "loc": "San Mateo",
+  "posted_ts": 1790640000.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -232,17 +232,6 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/replit/4df82fb0-0bcb-4034-89ce-09e679b00fe7",
-  "tag": "replit_staff_software_engineer_agentic_ads",
-  "company": "replit",
-  "title": " Staff Software Engineer, Agentic Ads ",
-  "comp": 360000.0,
-  "loc": "Foster City, CA",
-  "posted_ts": 1790294400.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/Serval/4b02e4b1-8d45-4c14-84b9-960f015ad26b",
   "tag": "serval_head_of_associate_ae",
   "company": "Serval",
@@ -283,6 +272,17 @@
   "comp": null,
   "loc": "United States",
   "posted_ts": 1790208000.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/replit/4df82fb0-0bcb-4034-89ce-09e679b00fe7",
+  "tag": "replit_staff_software_engineer_agentic_ads",
+  "company": "replit",
+  "title": " Staff Software Engineer, Agentic Ads ",
+  "comp": 360000.0,
+  "loc": "Foster City, CA",
+  "posted_ts": 1790294400.0,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -375,23 +375,23 @@
  },
  {
   "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/abridge/1a61daf7-45cf-46a0-b030-cf9617741e23",
-  "tag": "abridge_head_of_workplaces",
-  "company": "abridge",
-  "title": "Head of Workplaces",
-  "comp": 240000.0,
-  "loc": "SF Office",
-  "posted_ts": 1790121600.0,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/handshake/bd6c7320-2bfc-4015-8ee1-5b0997b6a9d1",
   "tag": "handshake_member_of_technical_staff_post_trai",
   "company": "handshake",
   "title": "Member of Technical Staff, Post-Training",
   "comp": 350000.0,
   "loc": "Remote (USA)",
+  "posted_ts": 1790121600.0,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/abridge/1a61daf7-45cf-46a0-b030-cf9617741e23",
+  "tag": "abridge_head_of_workplaces",
+  "company": "abridge",
+  "title": "Head of Workplaces",
+  "comp": 240000.0,
+  "loc": "SF Office",
   "posted_ts": 1790121600.0,
   "email": "amba_rish@hotmail.com"
  }
