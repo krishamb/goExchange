@@ -11,6 +11,7 @@ Source: the **Applied** page of the Wellfound account (wellfound.com/jobs/applic
 | 2 | Writer | Director, Solutions Architecture | Applied (Status Updates Offsite) |
 | 3 | Unlearn.AI | VP of Engineering | Applied (Status Updates Offsite) |
 | 4 | Checkr | Senior Engineering Manager, Mortgage | Applied (Status Updates Offsite) |
+| 5 | Braze | Engineering Manager, Landing Pages | Applied (Status Updates Offsite) |
 
 ## Ongoing (earlier applications still open on Wellfound)
 
@@ -55,7 +56,7 @@ Source: the **Applied** page of the Wellfound account (wellfound.com/jobs/applic
 | Feb 23 | Grove | Head of Engineering | Expired |
 | Feb 23 | Five9 | Senior Manager, Engineering | Status Updates Offsite |
 
-Totals: 4 today, 15 earlier ongoing, 18 archived = 37 applications on the account.
+Totals: 5 today, 15 earlier ongoing, 18 archived = 38 applications on the account (the stream keeps adding; see the batch reports for the live count).
 
 ## Today's Wellfound attempts that did not submit
 
@@ -63,4 +64,3 @@ Totals: 4 today, 15 earlier ongoing, 18 archived = 37 applications on the accoun
 |---------|------|-----|
 | 6sense | VP Software Engineering | Listing is a year old and managed outside Wellfound; apply form did not open |
 | Garner Health | Manager, Engineering - Data Platform | Employer does not accept applications from the account's location |
-| Braze | Engineering Manager, Landing Pages | Filler bug (Escape closed the modal) — fixed, queued for retry |

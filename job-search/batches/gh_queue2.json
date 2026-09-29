@@ -1,78 +1,16 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/layerhealth/jobs/4990056008",
-  "tag": "layer_health_engineering_manager_machine_learnin",
-  "company": "Layer Health",
-  "title": "Engineering Manager, Machine Learning",
-  "comp": null,
-  "source": "healthcare list",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "We utilize work space in NYC and Boston MA, are you able to commit to being in o"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/waymark/jobs/4030307005",
-  "tag": "waymark_senior_principal_data_engineer",
-  "company": "Waymark",
-  "title": "Senior/Principal Data Engineer",
-  "comp": null,
-  "source": "healthcare list",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Will you now or in the future require employer sponsorship to work in the U.S.?",
-   "Have you worked directly with any of the following data formats in production: F",
-   "Have you built or owned data pipelines in a production environment - not just pr",
-   "Have you operated as a senior, staff, or principal-level individual contributor?",
-   "Have you led or owned a technical integration with an external healthcare partne",
-   "Have you designed or operated data systems that handle protected health informat"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/layerhealth/jobs/4915887008",
-  "tag": "layer_health_machine_learning_engineer",
-  "company": "Layer Health",
-  "title": "Machine Learning Engineer",
-  "comp": null,
-  "source": "healthcare list",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/veeamsoftware/jobs/4888374101",
-  "tag": "veeamsoftware_director_graph_databases",
-  "company": "veeamsoftware",
-  "title": " Director, Graph Databases",
-  "comp": 680200.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/pinterest/jobs/8035163",
-  "tag": "pinterest_director_of_engineering_core_ads_se",
-  "company": "pinterest",
-  "title": "Director of Engineering, Core & Ads Serving Platform",
-  "comp": 449541.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/reddit/jobs/8226397",
   "tag": "reddit_senior_director_data_science",
   "company": "reddit",
   "title": "Senior Director, Data Science",
   "comp": 443800.0,
   "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you a veteran/have you served in the military?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -82,7 +20,7 @@
   "title": "Director, Data Governance (REMOTE, US)",
   "comp": 506300.0,
   "source": "ATS board",
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
