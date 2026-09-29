@@ -151,7 +151,8 @@ async def autocomplete_fill(page,h,text,prefer):
             try:
                 if await o.is_visible(): await o.click(timeout=3000); await page.wait_for_timeout(500); return "picked-first"
             except Exception: pass
-        await h.press("ArrowDown"); await h.press("Enter"); await page.wait_for_timeout(500); return "enter"
+        if n: await h.press("ArrowDown"); await h.press("Enter"); await page.wait_for_timeout(500); return "enter"
+        await page.keyboard.press("Escape"); return None   # no suggestions: Enter here would submit the form
     except Exception: return None
 async def choose_select(page,h,options_pref):
     opts=await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())")
@@ -201,8 +202,9 @@ async def choose_react_select(page,control,options_pref,label):
             if hit is None and texts:
                 # no textual match: maybe options are unfiltered (async search); pick none
                 pass
-            if hit is not None: await opts.nth(hit).click(timeout=3000)
-            else: await inp.press("Enter")
+            if hit is None:   # never press Enter here: with no menu match it submits the whole form
+                await inp.press("Control+A"); await inp.press("Backspace"); await page.keyboard.press("Escape"); continue
+            await opts.nth(hit).click(timeout=3000)
             await page.wait_for_timeout(500)
             cur=await current()
             if cur and cur.lower()!="select..." and (pref.lower()[:6] in cur.lower() or (hit is not None)): return cur[:80]
@@ -672,7 +674,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 if ats=="greenhouse" and outlook_cfg():
                     op=await outlook_page()
                     if op: baseline=tuple(await outlook_codes(op))   # codes already in the inbox before this submission
-                await btn.scroll_into_view_if_needed(); await btn.click(timeout=10000); await page.wait_for_timeout(9000)
+                await btn.scroll_into_view_if_needed()
+                try: await btn.click(timeout=10000)
+                except Exception:
+                    # a disabled submit button usually means the form was already sent and the code prompt is up
+                    body0=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
+                    if not re.search(r"verification code|security code",body0,re.I): await btn.click(timeout=10000,force=True)
+                await page.wait_for_timeout(9000)
                 body=await page.evaluate("()=>document.body.innerText.slice(0,2500)")
                 if re.search(r"verification code|security code|confirm you.re a human",body,re.I):
                     if await enter_email_code(page,report,baseline):
