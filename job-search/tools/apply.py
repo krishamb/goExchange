@@ -69,6 +69,7 @@ TEXT_RULES=[
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
  (r"when (can|could|are you able to) you start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Immediately (available now, no notice period)"),
  (r"heard about us from a (friend|family|current|former)|referr(ed|al).*(name|who)|name of (the |your )?(employee|referrer|person who)|who referred you|referred by", "N/A"),
+ (r"(iac|infrastructure as code).*(tools|used|experience)|(which|what) (iac |infrastructure |devops |cloud )?(tools|technologies|platforms|frameworks) (have you|do you)", "Terraform and Kubernetes on AWS and GCP (plus Azure), with Jenkins and Puppet deployment pipelines earlier at JPMorgan Chase and Morgan Stanley; CI/CD with correctness gates and observability via OpenTelemetry and Prometheus/Grafana."),
  (r"from where do you (intend|plan|expect) to work|where (will|would|do) you (be )?work(ing)? from|intended (work )?location|where would you (be )?(based|located)", "Santa Clara, CA (San Francisco Bay Area); open to hybrid in the SF Bay Area or New York City"),
  (r"willing to (work|come|be)|open to working|days? (a|per) week|days (from|in|at) (one of )?our office|office hub|in.office|on.?site|hybrid", "Yes"),
  (r"(ever|currently|previously) (work|employ|been employed)|worked (at|for) .* before|former .{0,30}(employee|contractor)|current or former", "No"),
