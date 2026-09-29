@@ -1,20 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4733810-senior-manager-infrastructure",
-  "tag": "netdocuments_senior_manager_infrastructure",
-  "company": "NetDocuments",
-  "title": "Senior Manager, Infrastructure",
-  "loc": "Remote | Remote only",
-  "tier": 1,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Have you previously been an employee of NetDocuments?",
-   "How would you describe your experience with AWS in production environments?"
-  ]
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4627365-founding-engineer",
   "tag": "guile_founding_engineer",
   "company": "Guile",
