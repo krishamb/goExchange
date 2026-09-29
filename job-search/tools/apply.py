@@ -71,6 +71,7 @@ TEXT_RULES=[
  (r"(what is |what's )?your current location|current location|where (are|do) you (currently )?(located|based|live|living|reside)|city,? state", "Santa Clara, California"),   # applicant's answer
  (r"sponsor", "No sponsorship required. I am a US citizen."),   # applicant's answer
  (r"citizenship|citizen", "US Citizen"),
+ (r"dog or a ghost|ghost or a dog", "Dog. Loyal to the team, curious about everything, and always shows up with energy."),   # applicant's choice (Miter)
  (r"^middle (name|initial)|middle name", "N/A"),
  (r"(served|serve|service|served in|been in) (in )?(the )?(military|armed forces|u\.?s\.? military)|military (service|experience|background)", "No, I have not served in the military."),
  (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
