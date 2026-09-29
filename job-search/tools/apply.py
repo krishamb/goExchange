@@ -658,6 +658,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     json.dump(report,open(f"{OUT}/{tag}_report.json","w"),indent=1); await page.close(); return report
                 ta=page.locator('textarea:not([disabled])').first   # a disabled conditional-question box can come first
                 if await ta.count():
+                    try: ta_label=re.sub(r"\s+"," ",(await label_of(ta)) or (await ta.get_attribute("placeholder")) or "")
+                    except Exception: ta_label=""
+                    if ta_label and not re.search(r"about you|note|message|cover|introduc|anything else|additional|why (are you|do you|you)|interest",ta_label,re.I) and re.search(r"\?|describe|explain|tell us|walk (me|us) through|what |how |which ",ta_label,re.I):
+                        ta=page.locator('textarea.__no_note_box__')   # the first box is an employer question, not the note: leave it to the question rules
+                if await ta.count():
                     note=extra.get("note") or ANS.get("why_us","")
                     first=None
                     try:   # the note is the message the hiring contact (often the founder) receives with the application: address them by name
