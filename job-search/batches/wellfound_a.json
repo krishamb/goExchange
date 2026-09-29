@@ -1,31 +1,6 @@
 [
  {
   "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/4697825-founding-engineer-builder",
-  "tag": "slipway_ai_solutions_founding_engineer_builder",
-  "company": "Slipway AI Solutions",
-  "title": "Founding Engineer / Builder",
-  "loc": "Bay Area | In office",
-  "tier": 0,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
-  "url": "https://wellfound.com/jobs/3484389-ai-forward-deployed-engineer",
-  "tag": "magical_ai_forward_deployed_engineer",
-  "company": "Magical",
-  "title": "AI Forward Deployed Engineer",
-  "comp": null,
-  "loc": "San Francisco, Toronto",
-  "tier": 0,
-  "size": "SIZE_11_50",
-  "lang": "",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "wellfound",
   "url": "https://wellfound.com/jobs/4670361-founding-engineer",
   "tag": "kort_systems_founding_engineer",
   "company": "Kort Systems",
