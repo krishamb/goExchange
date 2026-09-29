@@ -7,11 +7,8 @@
   "title": "Senior Engineering Manager, Member Experience",
   "loc": "Remote | Remote only",
   "tier": 1,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Have you personally helped another engineer or engineering manager grow into gre",
-   "In your recent roles, how have you partnered with product teams to push applicat"
-  ]
+  "last_result": "r | Which of the following best represents your racial or ethnic background: (Check more than one if",
+  "last_unanswered": []
  },
  {
   "ats": "wellfound",
@@ -35,8 +32,10 @@
   "comp": 220000.0,
   "loc": "New York City",
   "tier": 2,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you able to work in EST/ EDT business hours?*"
+  ]
  },
  {
   "ats": "wellfound",
@@ -47,7 +46,7 @@
   "comp": null,
   "loc": "Stockholm",
   "tier": 2,
-  "last_result": "(no report)",
+  "last_result": "ERROR TimeoutError: Locator.fill: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"texta",
   "last_unanswered": []
  },
  {
