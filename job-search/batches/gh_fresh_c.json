@@ -1,22 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/fourkites/jobs/8212401",
-  "tag": "fourkites_senior_ai_engineer",
-  "company": "fourkites",
-  "title": "Senior AI Engineer",
-  "comp": "$140,000 - $180,000. ",
-  "loc": "Chicago, IL or Remote, USA",
-  "posted_ts": 1790003911.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Please share some detail on your experience with Python:",
-   "Do you have experience with Java or GoLang? Can you share some detail?"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/typeform/jobs/8220046",
   "tag": "typeform_senior_ai_engineer_us",
   "company": "typeform",
@@ -25,33 +9,7 @@
   "loc": "United States (Remote) ",
   "posted_ts": 1789984794.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/customerio/jobs/8191498",
-  "tag": "customerio_staff_software_engineer_backend",
-  "company": "customerio",
-  "title": "Staff Software Engineer, Backend",
-  "comp": "$200,000 - $240,000 ",
-  "loc": "Americas Remote",
-  "posted_ts": 1789666206.0,
-  "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "http://www.circleci.com/careers/jobs/8814842002/?gh_jid=8814842002",
-  "tag": "circleci_staff_software_engineer",
-  "company": "circleci",
-  "title": "Staff Software Engineer ",
-  "comp": null,
-  "loc": "Canada (Remote), United States (Remote), United Kingdom (Remote)",
-  "posted_ts": 1789577580.0,
-  "score": 16,
-  "last_result": "(no report)",
+  "last_result": "access, rectify, or delete your data, or ask for the portability of said data or opposing to or requ",
   "last_unanswered": []
  },
  {
