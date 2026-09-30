@@ -52,8 +52,10 @@
   "loc": "Sunnyvale",
   "posted_ts": 1789722540.0,
   "score": 23,
-  "last_result": "orientation? | Prefer not to say | Are you a veteran or active member of the United States Armed For",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Country"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -67,7 +69,8 @@
   "score": 24,
   "last_result": "NOT SUBMITTED: unanswered required questions",
   "last_unanswered": [
-   "Start date month"
+   "Start date month",
+   "School"
   ]
  }
 ]
