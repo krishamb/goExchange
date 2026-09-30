@@ -243,6 +243,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(healthcare|health insurance|senior care).{0,120}another highly regulated industry", ["Yes \u2014 another highly regulated industry","Yes - another highly regulated industry","Yes, another highly regulated industry"]),   # banking, trading and payments are highly regulated
  (r"(how many )?years (have you|of|in) (directly |people |engineering )?(managed|managing|management|led|leading|supervis\\w+)|how many years .{0,40}(managed|managing|led|leading|supervis\\w+) (software |engineering |technical )?(engineer|team|people|staff|report)|years of (people|engineering|team) management", ["10+ years","10+","More than 10 years","10 or more years","10-15 years","10\u201315 years","8-10 years","8\u201310 years","7+ years","5+ years","Yes","yes"]),   # applicant: 10+ years leading engineers
  (r"highest (level of )?(school|education|degree)|highest degree|most advanced degree", ["Bachelor of Engineering","Bachelor's Degree","Bachelor\u2019s Degree","Bachelor degree","Bachelors degree","Bachelor\u2019s degree","Bachelor's degree","Bachelors","Bachelor","Undergraduate/Bachelor's degree","4-year degree","Four-year degree"]),   # B.E., University of Madras
  (r"staff[- ]level|(principal|staff)[- ](or equivalent|equivalent)|cross-team (scope|technical leadership)|span(s|ning)? multiple teams", ["Yes","yes"]),   # CTO, Chief Architect, VP / Lead Architect roles
@@ -502,7 +503,10 @@ NOT_MINE=re.compile(r"salesforce|\bsap\b|servicenow|camunda|snowflake|angular|\b
 def tech_answer(label):
     l=(label or "").lower()
     if PERSONAL_Q.search(l) or not TECH_Q.search(l): return None
-    if re.match(r"\s*if (yes|so|applicable|other)\b",l): return None
+    if re.match(r"\s*if (yes|so|applicable|other)\b",l):
+        # a follow-up to a Yes/No question: N/A when the question was about something the applicant answers No to
+        if NOT_MINE.search(label or "") or re.search(r"camunda|\bbpm\b|healthcare|clinical|hipaa|government|clearance|relative|referr|sponsor|visa|previous(ly)? (employ|work)|worked (for|at)|non-?compete|convict",l): return "N/A"
+        l=re.sub(r"^\s*if (yes|so|applicable)[,:]?\s*","",l)
     ranked=sorted(TECH_BANK,key=lambda b: -len(re.findall(b[0],l)))
     hits=[b for b in ranked if re.search(b[0],l)][:2]
     ans=" ".join(b[1] for b in hits) if hits else TECH_DEFAULT
