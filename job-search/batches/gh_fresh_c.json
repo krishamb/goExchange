@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://movableink.com/job-listing?gh_jid=8194496",
-  "tag": "movableink_solutions_architect",
-  "company": "movableink",
-  "title": "Solutions Architect",
-  "comp": "$81K - $106K",
-  "loc": "Movable Ink - Remote - United States",
-  "posted_ts": 1789521158.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Tell us why you're interested in working for Movable Ink."
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://fingerprint.com/careers/jobs/apply/?gh_jid=6188157004",
   "tag": "fingerprint_software_architect",
   "company": "fingerprint",
@@ -125,19 +110,6 @@
   "comp": "$200,000 - $220,000 ",
   "loc": "Remote",
   "posted_ts": 1789163653.0,
-  "score": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8178793",
-  "tag": "smartsheet_solutions_architect",
-  "company": "smartsheet",
-  "title": "Solutions Architect",
-  "comp": null,
-  "loc": "-REMOTE, USA-",
-  "posted_ts": 1788478678.0,
   "score": 13,
   "last_result": "(no report)",
   "last_unanswered": []
