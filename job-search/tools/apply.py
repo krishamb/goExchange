@@ -836,9 +836,10 @@ NEVER_APPLY=re.compile(r"epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 def applied_elsewhere(tag,company=None,days=45):
     """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
-    (MAX_PER_COMPANY, default 2: the applicant allows two roles per company when both match the resume), else None."""
+    (MAX_PER_COMPANY, default 3: the applicant allows 2-3 different roles per company when they match the resume; the
+    same position is never submitted twice, which the per-tag report check in the batch runner enforces), else None."""
     import glob as _glob
-    cap=int(os.environ.get("MAX_PER_COMPANY","2"))
+    cap=int(os.environ.get("MAX_PER_COMPANY","3"))
     ks=company_keys(tag,company)
     if not ks: return None
     cutoff=time.time()-days*86400
