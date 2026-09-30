@@ -215,7 +215,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
- (r"(currently or were you previously|were you previously|have you previously been) an? (alphabet|google|meta|microsoft|amazon|apple|x|\w+) (employee|contractor|intern)(?!.{0,40}(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|bank of america|merrill|barclays))", ["No","no"]),   # none of his past employers
+ (r"(currently or were you previously|were you previously|have you previously been) an? (?!(yahoo|jp|jpmorgan|chase|morgan|bloomberg|cadence|bank|merrill|barclays|hyperion|motocho|ankr|mantara|hold|compunnel)\b)\w+ (employee|contractor|intern)", ["No","no"]),   # none of his past employers
  (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools", ["I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
  (r"node\.?js", ["Expert (designed/architected large-scale systems)","Expert","Advanced","Yes"]),   # applicant: Node.js expert
  (r"fluent in sql and a (modern )?cloud data platform|databricks", ["Yes","yes"]),   # applicant: SQL and Databricks
