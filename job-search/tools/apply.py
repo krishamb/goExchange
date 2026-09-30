@@ -255,7 +255,7 @@ TEXT_RULES=[
 ]
 CHOICE_RULES=[
  (r"personally worked hands-on with in the last|worked hands-on with in the last \d+ years", ["AWS multi-account","Terraform or equivalent IaC","Kubernetes","Self-managed CI/CD","Ruby or Python backend","Relational databases at scale (RDS or similar)"]),   # his stack (AWS, Terraform, Kubernetes, CI/CD, Python, Postgres)
- (r"^which do you have experience with\?\s*select all that apply", ["Internal or external audit controls (SOC 2, HITRUST, SOX, FedRAMP. Sarbanes Oxley)","Vendor negotiation and budget ownership","Healthcare or benefits' domain experience","Backend systems powering mobile or consumer apps."]),   # regulated-bank audits, CTO budget, healthcare (applicant), Yahoo Finance consumer backends
+ (r"^which do you have experience with\?\s*select all that apply", ["Internal or external audit controls","Vendor negotiation and budget ownership","Healthcare or benefits","Backend systems powering mobile or consumer apps"]),   # regulated-bank audits, CTO budget, healthcare (applicant), Yahoo Finance consumer backends
  (r"willing to work (in|from|at) (our|the) (new york|nyc|ny) office|work (in|from) (our|the) (new york|nyc) office", ["Yes","yes","Hybrid","Remote"]),   # NYC roles are queued only when hybrid or remote; applicant accepts NYC hybrid and travel
  (r"with or without (a )?reasonable accommodation|able to (perform|meet|participate|complete|fulfill).{0,120}(requirements|functions|duties)", ["Yes","yes"]),   # can do the job / attend onsite; never the "do you need an accommodation" No
  (r"hands-on (management|manager|leadership|engineering manager|people manager)( role)?|player[- ]coach", ["Yes","yes"]),   # applicant is a hands-on leader
@@ -561,8 +561,11 @@ def tech_answer(label):
     if m:   # never imply hands-on experience with a stack the applicant has not used
         ans=f"My production work has been in Python, Go, Rust, C++, Java and C#/.NET on AWS, GCP and Azure rather than {m.group(0).strip()}, so here is the closest comparable experience. "+ans
     return ans
+JOB_CHOICE_RULES=[]; JOB_TEXT_RULES=[]   # set per application in run_one (e.g. "have you applied here before", from our own records)
 def pick(label,rules):
     l=label.lower()
+    if rules is CHOICE_RULES: rules=JOB_CHOICE_RULES+rules
+    elif rules is TEXT_RULES: rules=JOB_TEXT_RULES+rules
     for pat,val in rules:
         # lowercase alternatives match the lowercased label; CAPITALISED acronyms (EAR, ITAR, EST, FINRA) match only where the
         # original label has them in capitals, so 'EAR' never matches 'hear' / 'year' / 'learn'
@@ -981,7 +984,29 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
     for k,n in APPLIED_BY_APPLICANT.items():
         if k in ks: hits += [f"{k} (applied by the applicant)"]*n
     return hits[0] if len(hits)>=cap else None
-APPLIED_BY_APPLICANT={"welbehealth":2}   # applicant (2026-09-30): applied to the WelbeHealth Director role himself; with our Engineering Manager application, stop at WelbeHealth
+APPLIED_BY_APPLICANT={"welbehealth":2}
+def prior_company_apps(tag,company=None,days=183):
+    """Titles of earlier submitted applications at the same company (other tags) within `days`: answers "have you applied to us before?" truthfully."""
+    import glob as _glob
+    ks=company_keys(tag,company)
+    if not ks: return []
+    cutoff=time.time()-days*86400; out=[]
+    SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
+    base=re.sub(r"_r\d$","",tag or "")
+    for f in _glob.glob(f"{OUT}/*_report.json"):
+        if os.path.getmtime(f)<cutoff: continue
+        try: r=json.load(open(f))
+        except Exception: continue
+        t=r.get("tag") or ""
+        if t==tag or not r.get("submitted") or "ALREADY APPLIED" in (r.get("result") or ""): continue
+        ks2=company_keys(t,r.get("company"))
+        if (ks & ks2) or any((a.startswith(b) and a[len(b):] in SUF) or (b.startswith(a) and b[len(a):] in SUF) for a in ks for b in ks2 if min(len(a),len(b))>=5):
+            tt=r.get("title") or _title_of(t) or ""
+            if not tt or "_" in tt: tt=re.sub(r"_r\d$","",t).replace("_"," ").strip().title()
+            out.append(tt)
+    for k,n in APPLIED_BY_APPLICANT.items():
+        if k in ks: out.append("another role (applied directly)")
+    return sorted(set(x for x in out if x))   # applicant (2026-09-30): applied to the WelbeHealth Director role himself; with our Engineering Manager application, stop at WelbeHealth
 async def run():
     async with async_playwright() as p:
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
@@ -1144,6 +1169,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         el=page.locator(sel).first
                         if await el.count() and not await page.locator('input[type="file"]').count(): await el.click(timeout=4000); await page.wait_for_timeout(2500); break
                     except Exception: pass
+            # "have you applied to us before / for another role?": answered from our own submitted applications to this company
+            global JOB_CHOICE_RULES, JOB_TEXT_RULES
+            try: _prior=prior_company_apps(tag,company)
+            except Exception: _prior=[]
+            _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+"
+            JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
+            JOB_TEXT_RULES=[(r"^if (yes|so).{0,80}\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", ("Yes: "+"; ".join(_prior[:3])+" (2026)") if _prior else "N/A")]
+            if _prior: report["prior_company_apps"]=_prior[:5]
             # an "application password" printed in the posting (a did-you-read-it check): answer it from the posting itself
             try:
                 _pt=await page.evaluate("()=>document.body.innerText")
