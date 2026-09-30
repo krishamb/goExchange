@@ -211,7 +211,7 @@ CHOICE_RULES=[
  (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"do you have a linkedin( profile)?", ["Yes","yes"]),   # profile link is on the resume (never used as the source)
  (r"high school diploma|ged\b|secondary (school|education)", ["Yes","yes"]),   # B.Tech; completed secondary school
- (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|information i submit .{0,60}(true|accurate)|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
+ (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|information i submit .{0,60}(true|accurate)|information provided .{0,40}(must be )?(accurate|truthful)|misrepresentation may result|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
  (r"staying hands-on|personally (written|shipped|built|wrote) (production )?code|shipping code and building prototypes", ["Yes","yes"]),
  (r"train/serve your own models|own models versus (using )?hosted|hosted ones|self-host(ed)? (models|llms?) (vs|versus|or)", ["Yes","yes"]),   # open-weight serving vs OpenAI APIs (Hyperion, Yahoo)
  (r"do you have a bachelor'?s|bachelor'?s degree\??$|do you hold a (bachelor|4-year|four-year)", ["Yes","yes"]),   # B.E./B.Tech
