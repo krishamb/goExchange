@@ -215,6 +215,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"resident of the european union|reside in the (eu|european union|uk|united kingdom|eea)", ["No","no"]),
  (r"(currently or were you previously|were you previously|have you previously been) an? (?!(yahoo|jp|jpmorgan|chase|morgan|bloomberg|cadence|bank|merrill|barclays|hyperion|motocho|ankr|mantara|hold|compunnel)\b)\w+ (employee|contractor|intern)", ["No","no"]),   # none of his past employers
  (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools", ["I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
  (r"node\.?js", ["Expert (designed/architected large-scale systems)","Expert","Advanced","Yes"]),   # applicant: Node.js expert
@@ -1057,6 +1058,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     val=None
                     for k,v in extra.items():
                         if k.lower() in (name+" "+lab).lower(): val=v; break
+                    if val is None:
+                        mw=re.search(r"why (are )?you (are )?(interested|excited)( in| about)? (working at|working for|joining|to join|to work at) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$|why (do )?you want to (work at|join) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$",re.sub(r"^in \d-\d sentences,? (describe |explain )?","",lab.strip(),flags=re.I),re.I)
+                        if mw:
+                            co=(mw.group(6) or mw.group(10) or "").strip()
+                            val=(f"{co}'s mission and the scope of this role sit where my experience is strongest: building and leading platforms where performance, correctness and trust matter. "
+                                 f"As CTO and co-founder of Hyperion AI I built an agentic AI platform end to end, and as Chief Architect at Yahoo Finance I led 75+ engineers on a platform serving about 40M daily users. "
+                                 f"I want to bring that mix of hands-on architecture and engineering leadership to {co}'s products and team.")
                     if val is None: val=pick(key,TEXT_RULES)
                     if val=="Company careers page" and "wellfound" in (ats or "").lower(): val="Wellfound"   # applying through Wellfound: say so
                     if re.search(r"cover letter",lab,re.I) and cl_text: val=cl_text
