@@ -40,6 +40,7 @@ now; the submitted answers cannot be edited, so the suggested action is to corre
 | Datavant | Staff ML Platform Engineer | "Will you require Datavant to participate in a government program (OPT / STEM OPT)?" answered **Yes**. | Email the recruiter: no, you are a US citizen. |
 | Ceribell | Senior Manager, Applied AI Engineering | "I acknowledge that I can perform the essential duties with or without reasonable accommodation" answered **No**. | Email the recruiter to correct it to Yes. |
 | DigiCert | Principal Software Engineer | Acknowledgment of the standard employment, education and background verification answered **No**. | Email the recruiter to correct it to Yes. |
+| Elite Technology | Tech Lead Engineer | "Do you have expert-level, hands-on experience with C#/.NET?" answered **Yes** (C# and .NET are not on the resume; a word-boundary bug skipped the "not on the resume" rule). | If they reply, tell them your backend languages are Python, Go, Rust, C++ and Java, not C#/.NET; or withdraw if the role is C#-centric. |
 | About 16 Greenhouse forms with an education section | various | Where the form had education start/end dates, they were filled with the current job's dates (2023 to 2026). The resume gives no graduation years, so they are now left for you. | Correct the dates if a recruiter asks; tell me your graduation years so forms that require them can be completed. |
 
 ### Minor: "How did you hear about us?" picked a company-specific option
