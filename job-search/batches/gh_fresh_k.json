@@ -1,27 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "sothebys",
-  "title": "Engineering Manager",
-  "loc": "New York, United States",
-  "desc": " ABOUT SOTHEBY'S Established in 1744, Sotheby\u2019s promotes access and ownership of exceptional art and luxury objects through auctions, private sales and retail. Our deep expertise across 70 selling categories is supported by a leading technology platform and a global network of specialists spanning 40 countries. Selling categories include Contemporary Art, Modern and Impressionist Art, Old Masters, Chinese Works of Art, Jewelry, Watches, Wine and Spirits and Design, as well as collectible cars and real estate through RM Sotheby\u2019s and Concierge. Sotheby\u2019s Financial Services is a leading art lender and provides capital solutions for collectors around the world, having originated more than $12 billion in loans since its inception. Sotheby\u2019s new global headquarters is now open at the iconic Breuer building at 945 Madison Avenue in New York City. THE ROLE Established in 1744, Sotheby\u2019s is the world\u2019s premier destination for art and luxury. The engineering that powers it today reflects that same ambition, built on modern technologies and modern practices. Auctions are the most visible part of what we do, but every sale that runs through Sotheby\u2019s is backed by the entire engineering organisation. The work starts months before a lot crosses the block, from the systems that support how we acquire and value inventory, through to the platforms our clients and specialists interact with daily, the identity and compliance infrastructure that keeps it all trustworthy, and the services that make the live event itself possible. That breadth is what makes the engineering here different. Whether you\u2019re working on internal tooling, client-facing products, platform infrastructure, or the real-time systems behind a sale moving hundreds of millions of dollars, your work connects to something tangible. We\u2019re looking for engineering managers who can build and lead the teams that own these systems. People who care as much about the engineers they work with as the software those engineers produce, and who are curious enough to learn a domain that will surprise them. Our engineering teams are remote-first and globally distributed. It\u2019s how we\u2019re built, and it\u2019s how we intend to stay. We\u2019re not async-only. There are regular calls, cross-team meetings, and plenty of direct collaboration alongside the written communication you\u2019d expect from a distributed organisation. The balance works because the people here are good at both. IDEAL EXPERIENCE &amp; COMPETENCIES You\u2019ve done this before. 3+ years managing teams of five or more engineers. You\u2019ve hired, developed and retained good people. You know what a healthy team looks like and you know how to get there when it isn\u2019t. You have real technical depth.&nbsp; You don\u2019t need to write code every day, but you can engage credibly with architectural decisions, review trade-offs, and spot when something is going sideways before it becomes an incident. Your engineers trust your judgment because you\u2019ve earned it. You deliver through others. You\u2019re measured by what your team ships, not what you build yourself. You care about outcomes, not activity. You communicate clearly and adapt to your audience. Whether that\u2019s giving context to your team, presenting a plan to leadership, writing up a post-mortem, or navigating a difficult conversation with a direct report. You\u2019re comfortable in all of those. You create clarity in ambiguity. Priorities shift, dependencies tangle, and plans change. You\u2019re the kind of leader who absorbs that complexity and gives your team something they can actually act on. Required: Proven engineering management experience with distributed or remote-first teams across multiple time zones A strong technical background in software engineering, with enough depth to guide architectural and infrastructure decisions Experience partnering with product management to define priorities and deliver meaningful outcomes Track record of hiring well, onboarding effectively, and building teams that retain good people ",
-  "url": "https://job-boards.greenhouse.io/sothebys/jobs/6209890004",
-  "posted_ts": 1790618965.0,
-  "comp": null,
-  "where": "nyc",
-  "score": 0.44,
-  "tag": "sothebys_engineering_manager",
-  "found_on": "greenhouse_api",
-  "tier": 1,
-  "dom": 2,
-  "skill_hits": 12,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you LGBTQIA?"
-  ]
- },
- {
-  "ats": "greenhouse",
   "company": "twitch",
   "title": "Senior Engineering Manager, Security Platform",
   "loc": "San Francisco, CA",
