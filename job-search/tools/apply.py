@@ -454,8 +454,16 @@ async def fill_text(page,h,val):
     except Exception:
         try: await h.click(timeout=3000); await h.type(val,delay=10); await h.press("Tab"); return True
         except Exception: return False
-async def autocomplete_fill(page,h,text,prefer):
-    """Type into an autocomplete box and pick the first matching suggestion."""
+async def autocomplete_fill(page,h,text,prefer,strict=False,retry_texts=()):
+    """Type into an autocomplete box and pick the first matching suggestion. strict: only a suggestion matching prefer
+    (never the first one or Enter), trying retry_texts in turn; a wrong city is worse than an empty field."""
+    if strict:
+        for t in (text,)+tuple(retry_texts):
+            got=await autocomplete_fill(page,h,t,prefer,strict=False,retry_texts=("__strict__",))
+            if got=="picked": return got
+        try: await h.fill(""); await dismiss_menu(page,h)
+        except Exception: pass
+        return None
     try:
         await h.scroll_into_view_if_needed(timeout=3000); await h.click(timeout=3000); await h.fill("")
         await h.type(text,delay=40); await page.wait_for_timeout(1800)
@@ -466,6 +474,7 @@ async def autocomplete_fill(page,h,text,prefer):
             try:
                 if await o.is_visible() and re.search(prefer,await o.inner_text(),re.I): await o.click(timeout=3000); await page.wait_for_timeout(500); return "picked"
             except Exception: pass
+        if retry_texts==("__strict__",): return None
         for i in range(min(n,30)):
             o=opts.nth(i)
             try:
@@ -997,7 +1006,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select|requiredInput/i.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')||!!(el.parentElement&&el.parentElement.querySelector('[class*=select__control],[class*=Select__control]'))"): continue   # dropdowns are handled below
                     if re.search(r"^(current |your )?location( \(city\))?$|^city$|^where are you (based|located)",lab,re.I) or (ats=="lever" and name=="location") or (re.search(r"start typing",ph,re.I) and re.search(r"location|city",lab,re.I)):
                         if not (await h.input_value()).strip():
-                            got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara")
+                            got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara.{0,40}(california|\bca\b|united states|usa)",strict=True,retry_texts=("Santa Clara, CA","Santa Clara"))
                             report["filled"][lab[:60] or name]=f"autocomplete:{got}"
                         continue
                     if re.search(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai",lab,re.I): report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
