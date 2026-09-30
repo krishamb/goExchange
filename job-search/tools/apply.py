@@ -234,6 +234,8 @@ CHOICE_RULES=[
  (r"what country do you (currently )?(reside|live)|country (of|you) (residence|reside)|which country (do|are) you", ["United States","United States of America","USA","US","U.S."]),
  (r"most influenced your decision to apply|influenced you to apply", ["*Other","Other","Company Website","Company website","Careers page"]),   # found on the company's own job board
  (r"personally built with or operated in production", ["Kafka","Spark","Kubernetes","AWS","Terraform or IaC","vector databases (Qdrant/Pinecone/Weaviate)","Postgres/MySQL at scale"]),   # all on the resume
+ (r"identify as (currently )?living with the following disabilit|living with (a|the following) disabilit", ["None of the above","I do not have a disability","No disability","None","I don't wish to answer","Prefer not to answer"]),   # no disability
+ (r"(communications|marketing|advertising|creative|pr) agency", ["No","no"]),
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
@@ -368,7 +370,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()
