@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^if (yes|so),?.{0,80}(while (working|employed)|when you (worked|were employed)|employee (id|number)|dates of (employment|service)|former (manager|supervisor)|your role (there|at))", "N/A"),
  (r"(describe|tell us about) a time you used ai to improve your (work|productivity|team)|used ai to improve your work", "At Hyperion AI I used Claude Code for parallel reviews of our benchmark platform's subsystems and to generate its test and replay harnesses. What worked: a very small team built, and kept correct, a 121-measure scorecard with 13 comparability checks, because every AI-generated change went through the same evaluation and review gates as hand-written code. What I would change: start each subsystem with a short written spec and a handful of hand-written, spec-level test cases, then let AI generate the rest, so generated tests check intended behaviour rather than mirroring the code as written; and track the time saved more formally so the gains are measured, not anecdotal."),
  (r"where did you (complete|earn|get|receive|obtain|do) your (undergraduate |bachelor'?s? |university |college )?(degree|studies|education)|where did you (go to|attend|study at) (college|school|university)|which (university|college|school) did you attend", "University of Madras (Bachelor of Engineering, Computer Science and Engineering)"),
  (r"if you (will )?require relocation|relocation.{0,60}(timeline|self-funded|without employer assistance)", "No relocation is needed for a Bay Area role: I live in Santa Clara, California. For a New York role I am willing to relocate to New York City within about three months of an offer."),
@@ -1169,6 +1170,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 try:
                     members=[b for b in boxes if b[2]==gk]
                     if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
+                    if re.search(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export",lab,re.I):   # a disclosure statement ("I am subject to a non-compete", "I hold a financial interest"): never tick it
+                        report["chosen"][lab[:60]]="left unticked (disclosure)"; continue
                     if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present",lab,re.I):
                         await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
@@ -1196,7 +1199,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not choice and is_src:
                             choice=next((b for b in members if re.search(r"other",b[1],re.I)),members[0])
                         if choice: await tick(choice[0]); report["chosen"][(q or lab)[:60]]=choice[1][:60]
-                    elif await is_required(h): await tick(h); report["chosen"][lab[:60]]="checked"
+                    elif await is_required(h): report["unanswered"].append({"type":"checkbox","label":lab[:160]})   # a required box that is not an acknowledgment: never tick it blind
                 except Exception: pass
             answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
