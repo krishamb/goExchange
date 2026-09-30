@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"if you answered (extensively|yes) or (moderately|no)? ?.{0,40}(ai|above question)|if you answered extensively", "Daily: Claude Code for code analysis, debugging, test generation and parallel subsystem reviews; open-weight models (Qwen, gpt-oss, Llama) through llama.cpp and vLLM for agent work; and RAG for research. At Hyperion AI I also build production agentic systems (MCP servers, multi-agent orchestration, evaluation harnesses)."),
  (r"finra licen[sc]e|securities licen[sc]es? (do you|you) (currently )?hold", "None"),
  (r"(what|which) (other )?languages (do you|can you) (speak|communicate|read|write)|languages? (spoken|you speak)|spoken languages|languages of fluency|list all languages", "English (full professional proficiency), Tamil and Hindi."),
  (r"graduation (year|date)|year (of|you) graduat|when did you graduate", "1995"),
