@@ -11,24 +11,7 @@
   "where": "nyc",
   "score": 18,
   "tag": "butterflynetwork_senior_director_software_en",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "company": "butterflynetwork",
-  "title": "Director, Full Stack Engineering",
-  "loc": "New York, NY Office",
-  "desc": "Director, Full Stack Engineering Company Description Butterfly Network, Inc. (NYSE: BFLY) is driving a digital revolution in ultrasound imaging and sensing with its proprietary Ultrasound-on-Chip\u2122 semiconductor technology and software solutions. Butterfly first proved its technology in the point-of-care ultrasound market \u2013 commercializing the world\u2019s first single-probe, whole-body portable ultrasound device, which is now on its best-selling, third-generation: Butterfly iQ3\u2122. The Company combines its advanced hardware with cloud software and AI, an enterprise workflow solution (Compass AI\u2122) and other offerings to drive adoption of affordable, accessible ultrasound. Butterfly also enables third-party development of imaging AI apps through Butterfly Garden\u2122, its software development kit and AI partnership initiative. In addition to its medical imaging products, Butterfly Embedded\u2122 is the Company\u2019s Ultrasound-on-Chip\u2122 licensing and co-development program designed to enable a new wave of ultrasound-enabled technologies across non-competitive healthcare markets and beyond. Through Butterfly Embedded\u2122, partners can build and scale novel ultrasound applications powered by Butterfly\u2019s proprietary semiconductor chip and software platform. Butterfly\u2019s innovations have been recognized by Prix Galien USA, Fierce 50, TIME\u2019s Best Inventions and Fast Company\u2019s World Changing Ideas, among other achievements. We\u2019re a team of bold thinkers, problem-solvers, and innovators ready to shape the future of medical imaging. Let\u2019s build something extraordinary together! Job Description We are seeking a seasoned engineering leader to lead our Full Stack Engineering team, responsible for building and scaling our critical Enterprise Clinical workflows platform. The Butterfly Cloud provides a secure and robust connection to user's health information \u2014 powering tools and services that help doctors and clinicians make informed, intelligent diagnostic decisions with the help of their peers. As Director, you will lead a distributed team of engineers across both onshore and offshore locations, setting the technical direction for our enterprise platform \u2014 including user and organization administration, feature and entitlement management, global search, audit logging, and scalable platform features. You'll partner closely with Product, Design, and other engineering leaders to shape roadmap priorities and drive execution across the full stack. As part of our team, your core responsibilities will be to: Lead, grow, and inspire a high-performing full stack engineering team spanning onshore and offshore engineers \u2014 fostering a culture of excellence, ownership, and continuous improvement. Define and drive the technical strategy and architecture for the Enterprise Clinical workflows platform, balancing innovation with reliability, security, and scalability. Own engineering roadmap execution \u2014 partnering with Product and Design to translate business goals into clear, well-scoped plans, and holding the team accountable to delivery. Recruit, retain, and develop top engineering talent; build a healthy team culture where people grow and do their best work. Establish and evolve engineering processes \u2014 code review standards, on-call practices, incident response, and cross-team ways of working \u2014 to maximize team effectiveness across time zones. Serve as a senior technical voice across the organization, contributing to architectural decisions, evaluating new technologies, and raising the bar on engineering quality. Build strong cross-functional relationships with Product, Design, Data, Security, and Compliance stakeholders to ensure alignment and unblock the team. Drive a culture of observability, operational excellence, and HIPAA/PHI compliance across the platform. Qualifications Baseline skills/experiences/attributes: 6+ years of software engineering experience, with at least 3\u20135 years in engineering management or a senior technical leadership role. Proven track record of lead",
-  "url": "https://www.butterflynetwork.com/careers?gh_jid=7998620003",
-  "posted_ts": 1789737812.0,
-  "comp": null,
-  "where": "nyc",
-  "score": 18,
-  "tag": "butterflynetwork_director_full_stack_enginee",
-  "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
