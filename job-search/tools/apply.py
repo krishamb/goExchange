@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"graduation (year|date)|year (of|you) graduat|when did you graduate", "1995"),
  (r"(share|provide|give) (some )?detail(s)? on your experience with python|describe your (experience|background) (with|in) python|your python experience", "Python is one of my core languages. At Hyperion AI I built a Python/llama.cpp model-and-agent evaluation platform (endpoint management, interactive chat, benchmark jobs, saved-run comparison) and Go and FastAPI backend services for exchange connectivity and market data. Earlier, in electronic trading, I built FPGA-facing test, replay and regression infrastructure in C++ and Python, and automated trading-lifecycle operations with Python, Perl and Shell."),
  (r"experience with java or go(lang)?|experience with go(lang)? or java|java or golang", "Yes, both. Go: at Hyperion AI I built Rust, C++ and Go/gRPC services for chain and RPC ingestion, WebSocket streams and wallet analytics, plus Go and FastAPI backend services on Kubernetes for exchange connectivity and market data; earlier I designed a cryptocurrency-exchange architecture on Go/gRPC microservices with Intel SGX enclaves, Kubernetes, Redis and AWS Lambda. Java: in electronic trading I architected execution paths in C++ and Java at sub-250-microsecond latency, and built C++/Java replay and backtesting engines for journal parsing and OMS integration."),
  (r"building products (vs\.?|versus|or|and) systems|products (vs\.?|versus) (platforms|systems|infrastructure)", "Mostly systems, with end-to-end product ownership on top. On the systems side: as Chief Architect at Yahoo Finance I moved the Finance platform (quotes, charts, portfolios, screeners, research; about 40M daily and 150M monthly users) from bare metal to AWS; in trading I architected execution paths in C++ and Java at sub-250-microsecond latency; and at JPMorgan Chase I built journal and replay streams that other engineers built on. On the product side: as CTO and co-founder of Hyperion AI I owned the product from the agentic platform and benchmark scorecard through to what we shipped to institutional partners. I am strongest where the two meet: platforms whose users are other engineers or demanding customers, where reliability and performance are the product."),
@@ -211,6 +212,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"if you selected .{0,10}two or more races|check all racial categories", ["Asian","Asian (Not Hispanic or Latino)"]),   # required follow-up (SoFi): the applicant's answer
+ (r"graduation (year|date)|year (of|you) graduat|when did you graduate", ["1995","May 1995"]),
  (r"(hold|have) any (salesforce|servicenow|sap|workday)(\.com)? certifications?|(salesforce|servicenow|sap|workday) certifi", ["No","no","None"]),
  (r"(professional |production |hands-on )?experience (using|with|in|writing) (java|python|c\+\+|golang|rust|typescript|javascript|sql|bash)\b(?! ?(ee|fx|swing))", ["Yes","yes"]),   # all on the resume (languages line; C++/Java execution paths and replay engines)
  (r"how important is the title|title/level .{0,40}(relative to|vs\.?|versus) scope|title (or|vs\.?|versus) scope", ["Scope Is Important","Scope is important","Scope","N/A"]),
@@ -340,7 +343,7 @@ CHOICE_RULES=[
  (r"credentialed|been a (client|patient|provider|therapist|customer) of|used our (product|service|platform) as a", ["No","no"]),   # never a provider/client of the hiring company
  (r"immediate family|relatives? (who )?(work|employed)|family members? (who )?(work|employed)|debarred|excluded by the OIG|convicted|felony|criminal|non-?compete|conflict of interest|restrictive covenant", ["No","no"]),   # compliance questions: none apply
  (r"are you ready|ready to (take|do|complete|go through|participate)|actively involved in product development|technical (portion|assessment|interview|screen|take-?home|challenge)|hands[- ]on (coding|technical)|comfortable (writing|with) code|still (write|writing) code|willing to (code|write code)", ["Yes","yes"]),   # hands-on leader: yes to technical interviews
- (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California","Santa Clara, CA","Santa Clara"]),
+ (r"^location( \(city\))?$|^(current |your |home )?location$|^city$", ["Santa Clara, California, United States","Santa Clara, California","Santa Clara, CA"]),
  (r"select your (current )?location|your current location|which (hub|location|city|metro) (are you|is closest|do you)|where (are|do) you (currently )?(based|live|located|reside)", ["San Francisco Bay Area","SF Bay Area","Bay Area","San Francisco","San Jose","Santa Clara","Bay Area, CA","California","Remote, United States","Remote - United States","Remote (US)","US Remote","United States","Remote","Outside of","Outside the","Other location","Elsewhere","Other","None of the above"]),
  (r"sponsor", ["No","no"]),
  (r"interviewed .*before|applied .*before|previously (applied|interviewed)", ["No","no"]),
@@ -382,7 +385,7 @@ CHOICE_RULES=[
  (r"(which|what) (departments?|teams?|functions?|areas?) (are|would) you (be )?interested in|departments? of interest", ["Engineering","Software Engineering","Technology","Engineering & Technology","Product & Engineering","Data Science","Data","Research & Development","IT"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
- (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
+ (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish","Asian","Asian (Not Hispanic or Latino)","Asian or Asian American"]),   # applicant: Asian where no decline option exists
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
  (r"support of .{0,40} to maintain (that |your )?(work )?authori[sz]ation|maintain (that |your )?(work )?authori[sz]ation|visa support|immigration support", ["No","no"]),
  (r"how much notice|notice period|notice do you (require|need)", ["No notice needed","No notice","None","Immediately","Available immediately","0 weeks","Less than 2 weeks","2 weeks"]),
@@ -443,6 +446,13 @@ EDU_DATE_JS=r"""(el)=>{const i=(el.tagName==='INPUT'||el.tagName==='SELECT')?el:
   const id=i.id||''; if(/^(start|end)-(month|year)--\d/.test(id)) return true;
   const box=i.closest('[class*=education],[id*=education],[data-section*=education]'); if(!box) return false;
   return /date|month|year|graduat/i.test((document.querySelector('label[for="'+CSS.escape(id)+'"]')||{}).innerText||i.getAttribute('aria-label')||id);}"""
+EDU_START=(1991,"August"); EDU_END=(1995,"May")   # University of Madras, B.E. Computer Science and Engineering (applicant: 1991-1995)
+def edu_value(lab,h=None):
+    l=(lab or "").lower(); end=bool(re.search(r"\bend|to\b|graduat|finish|complet",l))
+    y,m=EDU_END if end else EDU_START
+    if "month" in l: return m
+    if "year" in l: return str(y)
+    return None
 async def is_edu_date(h):
     """An education start/end date field. The resume gives no graduation years, so these are never guessed."""
     try: return await h.evaluate(EDU_DATE_JS)
@@ -464,6 +474,7 @@ async def autocomplete_fill(page,h,text,prefer,strict=False,retry_texts=()):
         for t in (text,)+tuple(retry_texts):
             got=await autocomplete_fill(page,h,t,prefer,strict=False,retry_texts=("__strict__",))
             if got=="picked": return got
+            if got=="nosugg": return "typed"   # a plain text box (no suggestion list): the typed city stays
         try: await h.fill(""); await dismiss_menu(page,h)
         except Exception: pass
         return None
@@ -472,6 +483,7 @@ async def autocomplete_fill(page,h,text,prefer,strict=False,retry_texts=()):
         await h.type(text,delay=40); await page.wait_for_timeout(1800)
         opts=page.locator('[role="option"]:visible:not(.iti__country), [role="listbox"] li:visible, [class*="dropdown"] li:visible, [class*="option"]:visible, [class*="Option"]:visible, [class*="suggestion"]:visible')
         n=await opts.count()
+        if retry_texts==("__strict__",) and n==0: return "nosugg"
         for i in range(min(n,30)):
             o=opts.nth(i)
             try:
@@ -565,9 +577,16 @@ async def open_menu(control,inp):
         except Exception: await inp.focus()
 HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |initially )?(hear|learn|find)|\bsource\b|referred",re.I)
 HEAR_BAD=re.compile(r"recruit|employee|referr|refer(ral|red)|event|fair|conference|meetup|friend|colleague|agency|linkedin|university|campus|blog|podcast|hosted",re.I)
+LOC_Q=re.compile(r"location|city|where .{0,20}(based|live|located|reside)|residence",re.I)
 def mask_hear(texts,label):
-    """'How did you hear about us?': never pick an option that claims a referral, an event, a recruiter or LinkedIn."""
-    return [("" if (t and HEAR_Q.search(label or "") and HEAR_BAD.search(t)) else t) for t in texts]
+    """'How did you hear about us?': never pick an option that claims a referral, an event, a recruiter or LinkedIn.
+    Location questions: never a 'Santa Clara' outside the US (Santa Clara, Villa Clara, Cuba)."""
+    out=[]
+    for t in texts:
+        if t and HEAR_Q.search(label or "") and HEAR_BAD.search(t): t=""
+        elif t and LOC_Q.search(label or "") and re.search(r"santa clara",t,re.I) and not re.search(r"california|\bca\b|united states|\busa?\b",t,re.I): t=""
+        out.append(t)
+    return out
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
@@ -1002,7 +1021,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     name=await h.get_attribute("name") or ""; lab=await label_of(h)
                     if re.search(r"captcha|search",name+lab,re.I): continue
                     if await is_edu_date(h):
-                        if await is_required(h) and not (await h.input_value()).strip(): report["unanswered"].append({"type":"text","label":"Education "+lab[:140],"name":name,"note":"graduation dates are not on the resume","keep":True})
+                        if not (await h.input_value()).strip():
+                            ev=edu_value(lab,h)
+                            if ev: await fill_text(page,h,ev); report["filled"]["Education "+lab[:50]]=ev
                         continue
                     ph=(await h.get_attribute("placeholder") or "")
                     if lab.strip().lower() in ("select...","select") or re.search(r"select2",(await h.get_attribute("class")) or ""): continue
@@ -1059,7 +1080,12 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     lab=await label_of(h)
                     if not lab: continue
                     if await is_edu_date(h):
-                        if await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"note":"graduation dates are not on the resume","keep":True})
+                        cur=(await h.inner_text()).strip()
+                        if not cur or re.search(r"^select",cur,re.I):
+                            ev=edu_value(lab,h)
+                            got=await choose_react_select(page,h,[ev,ev[:3]],lab) if ev else None
+                            report["chosen"]["Education "+lab[:50]]=got
+                            if not got and await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"keep":True})
                         continue
                     cur=(await h.inner_text()).strip()
                     if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
