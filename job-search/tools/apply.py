@@ -58,6 +58,9 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"where (are )?you (are )?currently employed|(name of )?your current employer|which company (are you|do you) (currently )?work", "Hyperion AI"),
+ (r"title of your current (position|role|job)|your current (job )?title", "CTO & Technical Co-Founder / Principal Architect"),
+ (r"tangible factors .{0,40}(important|matter)|what (factors|things) (are|matter) most (important )?(to you )?in (your|a) (next|new) (role|job|position)", "Scope and ownership: leading the architecture and engineering of a core platform with real users; a strong, high-trust team with high standards for correctness and reliability; clear business impact I can measure; flexibility to work hybrid or remote from the SF Bay Area; and competitive compensation (base around $250,000+ plus equity)."),
  (r"(built|made|created|shipped) (with|using) (ai|llms?|gen ?ai)|(proud|proudest) .{0,60}(with|using) (ai|llms?)|ai (project|system|product) you.{0,20}(proud|built)", 'At Hyperion AI I built our agentic benchmarking platform end to end: a multi-agent plan-validate-dispatch-replan loop, MCP tooling (three servers, nine tools with role-based allowlists, schema validation and execution budgets), open-weight model serving through llama.cpp and vLLM, and a 121-measure scorecard that compares models and agents on accuracy, latency and cost. What I am proudest of is that a very small team kept it correct: every change, including AI-written code, has to pass replay and golden-output checks before release, so results stayed reproducible as the system grew.'),
  (r"what about .{1,50} makes (it|them|us|this)? ?(an? )?(appealing|attractive|compelling|exciting|great|interesting|good)|makes .{0,40}(an appealing|a compelling|an attractive|a great|an exciting) (place|company|next step|opportunity)", ANS.get("why_us","")),   # tailored per company at run time (JOB_WHY)
  (r"^if (yes|so),? (what|which) (technologies|tools|stack|tech stack) did you use|(what|which) (technologies|tools|tech stack) did you use", 'Event streaming with Kafka and Redpanda (schema-versioned Protobuf/Avro events, with an append-only journal and deterministic replay at JPMorgan Chase); services in Go, Rust (Tokio), Java, Python and C++ over gRPC and REST; Postgres and Redis for state; Kubernetes and Terraform on AWS, GCP and Azure; OpenTelemetry, Prometheus and Grafana for observability; and for AI work, vLLM and llama.cpp model serving, MCP tools and RAG pipelines.'),
@@ -257,6 +260,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"willing to provide (the )?information .{0,120}export|provide information necessary to comply with .{0,40}export", ["Yes","yes"]),   # US citizen: willing to provide export-control information
  (r"when would you be available to relocate|available to relocate to the (san francisco )?bay area|relocate to the (san francisco )?bay area,? when", ["I already live in the Bay Area","Already in the Bay Area","Already local","N/A","Immediately","Now","October 2026","November 2026"]),   # he already lives in Santa Clara (Bay Area)
  (r"security principle .{0,60}(ai agent|agents?|external tools)|most important when giving an ai agent access", ["Least privilege","Principle of least privilege"]),   # technical quiz: least privilege
  (r"which .{0,40}office (location/?s?|locations?) (are you|would you be) (open|willing|able)|office locations? .{0,20}(open to|willing to) work(ing)? (out of|from|in)", ["San Francisco","San Francisco, CA","SF Bay Area","Bay Area","Palo Alto","Mountain View","Sunnyvale","San Jose","Santa Clara","Menlo Park","Oakland","New York","New York, NY","NYC","Remote","Neither","None of the above","None"]),   # Bay Area or NYC offices only; otherwise remote / neither
@@ -1197,6 +1201,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             except Exception: _prior=[]
             _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+"
             JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
+            try:
+                _top=(await page.evaluate("()=>document.body.innerText.slice(0,1500)"))
+                _bay=bool(re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward|Newark, CA",_top))
+            except Exception: _bay=False
+            JOB_CHOICE_RULES.append((r"if you are not (a )?local( candidate)?,? (do|would) you (require|need) relocation|not (a )?local candidate.{0,40}relocation", ["No","no","N/A"] if _bay else ["Yes","yes"]))
             JOB_TEXT_RULES=[(r"^if (yes|so).{0,80}\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", ("Yes: "+"; ".join(_prior[:3])+" (2026)") if _prior else "N/A")]
             if _prior: report["prior_company_apps"]=_prior[:5]
             global JOB_WHY
