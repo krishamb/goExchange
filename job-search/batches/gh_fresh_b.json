@@ -1,37 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/air/jobs/4398322009",
-  "tag": "air_senior_machine_learning_engineer",
-  "company": "air",
-  "title": "Senior Machine Learning Engineer ",
-  "comp": null,
-  "loc": "Arlington, Virginia, United States; Pittsburgh, Pennsylvania, United States; Remote",
-  "posted_ts": 1788896590.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What is your desired pay for this role?",
-   "Have you applied for another role with Air within the last 6 months?",
-   "Which Air office location/s are you open to working out of?",
-   "Which technology primarily addresses sharding model state during distributed tra"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/air/jobs/4397696009",
-  "tag": "air_senior_ai_engineer",
-  "company": "air",
-  "title": "Senior AI Engineer",
-  "comp": null,
-  "loc": "Arlington, Virginia, United States; Pittsburgh, Pennsylvania, United States; Remote",
-  "posted_ts": 1788892182.0,
-  "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/lilasciences/jobs/4377936009",
   "tag": "lilasciences_ml_engineer_applied_ai",
   "company": "lilasciences",
