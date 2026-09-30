@@ -216,6 +216,7 @@ CHOICE_RULES=[
  (r"do you have a bachelor'?s|bachelor'?s degree\??$|do you hold a (bachelor|4-year|four-year)", ["Yes","yes"]),   # B.E./B.Tech
  (r"architected an ai agent or llm-powered system|llm-powered system that ran in production", ["Yes","yes"]),   # Yahoo Finance RAG research assistants (2022-2023); Hyperion AI agents
  (r"personally author(ed)? the technical design", ["Yes","yes"]),
+ (r"how familiar were you with|familiar with (our company|us) before", ["I had heard of","I was already familiar","Somewhat familiar","Familiar"]),   # fintech/AI companies the applicant knows of
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
