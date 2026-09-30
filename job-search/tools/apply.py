@@ -569,8 +569,24 @@ def pick(label,rules):
     for pat,val in rules:
         # lowercase alternatives match the lowercased label; CAPITALISED acronyms (EAR, ITAR, EST, FINRA) match only where the
         # original label has them in capitals, so 'EAR' never matches 'hear' / 'year' / 'learn'
-        if re.search(pat,l) or (re.search(r"[A-Z]",pat) and re.search(pat,label)): return val
+        if re.search(pat,l) or (re.search(r"[A-Z]",pat) and re.search(pat,label)):
+            if JOB_WHY and isinstance(val,str) and val==ANS.get("why_us",""): return JOB_WHY   # company- and role-specific "why us"
+            return val
     return None
+JOB_WHY=""
+WHY_BY_CAT={
+ "fintech":"it sits where I have spent most of my career: financial systems where correctness, latency and trust matter. I have built trading and market-infrastructure systems at JPMorgan Chase, Morgan Stanley and Bloomberg, and digital-asset systems at Hyperion AI, and this role lets me apply that directly while building modern, AI-enabled platforms",
+ "agentic":"you are putting AI agents into production, which is exactly where I have been doing my hands-on work: at Hyperion AI I built an agentic platform (MCP tools with allowlists and budgets, a plan-validate-dispatch-replan loop, evaluation and replay gates), and this role is a chance to bring that, plus 25 years of large-scale systems experience, to a team shipping it to real users",
+ "inference":"model serving and inference performance is where I have been spending my hands-on time: at Hyperion AI I built and profiled open-weight model serving (llama.cpp and vLLM, prefill/decode throughput, TTFT and TPOT), and I want to do that at your scale",
+ "leadership":"the role combines what I do best: building and leading engineering teams while staying close to the architecture and the critical-path code. I led 75+ engineers at Yahoo Finance and a 50+ person organization at JPMorgan Chase, and co-founded Hyperion AI as CTO",
+ "platform":"the work is the kind of platform I have spent my career building and operating: large-scale, reliable, cost-aware systems such as Yahoo Finance's move to the cloud for about 40M daily users and low-latency services at JPMorgan Chase. I like owning the architecture and the critical-path code together, and this role combines both",
+}
+def why_for(company,title,desc):
+    """A short, specific 'why us' for this company and role (the fit paragraph follows the posting's category)."""
+    cat=cover.category(title or "",desc or "")
+    co=(company or "your team").strip()
+    return (f"I want to join {co} as {title} because {WHY_BY_CAT.get(cat,WHY_BY_CAT['platform'])}. "
+            "I still write critical-path code in Python, Go, Rust and C++, I measure what I build, and I am based in Santa Clara, CA with no sponsorship needed.")
 LABEL_JS=r"""
 (el)=>{let t='';
  const byId=(id)=>{const l=document.querySelector('label[for="'+CSS.escape(id)+'"]'); return l? l.innerText:'';};
@@ -672,7 +688,7 @@ def set_email(em):
         if pat==r"e-?mail": TEXT_RULES[i]=(pat,em)
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
 # work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)
-ENV_TRUE=r"start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
+ENV_TRUE=r"internal or external audit controls|audit controls|\bsoc ?2\b|\bsox\b|sarbanes|vendor negotiation|budget ownership|healthcare or benefits|healthcare|health ?tech|backend systems powering|consumer apps|start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
 # option statements that are true for the applicant (Santa Clara, CA; hybrid in SF Bay Area fine; open to relocation elsewhere)
 STACK_TRUE=r"c\+\+|\brust\b|tokio|\bgo\b|golang|c#|\.net|dotnet|asp\.net|python|scripting|\bbash\b|shell|powershell|solidity|smart contract|typescript|javascript|\bjs\b|node|react|\bjava\b|\bsql\b|postgres|mysql|redis|kafka|kubernetes|\bk8s\b|\baks\b|docker|terraform|\baws\b|amazon web services|\bgcp\b|google cloud|azure (functions|app services?|storage|devops|key vault|kubernetes|sql|cosmos|api management|service bus|event hubs?|blob|monitor)|lambda|\bs3\b|\bec2\b|microservices|\brest\b|grpc|graphql|ci/cd|github actions|jenkins|\bgit\b|linux|\bllms?\b|machine learning|pytorch|tensorflow|vector|\brag\b|openai|langchain|vllm|spark|databricks|airflow|unit test|integration test|end-to-end|\be2e\b|regression|performance test|load test|contract test|api test|automated test|hiring|recruit|mentor|coach|performance (review|management)|career (growth|development)|team building|managing managers|budget|roadmap|stakeholder|cross-functional|one-on-one|1:1|feedback|org(anizational)? design|onboarding|distributed systems|event-driven|observability|monitoring|security|devsecops"   # the applicant's stack and leadership practice
 OPTION_TRUE=r"(currently )?(live|based|located|reside) in (the )?(sf |san francisco |greater )?bay area|santa clara|(live|based|located|reside) in (the )?(san francisco|silicon valley|california)|comfortable with a hybrid position commuting to the (san francisco|sf) office"
@@ -1177,6 +1193,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
             JOB_TEXT_RULES=[(r"^if (yes|so).{0,80}\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", ("Yes: "+"; ".join(_prior[:3])+" (2026)") if _prior else "N/A")]
             if _prior: report["prior_company_apps"]=_prior[:5]
+            global JOB_WHY
+            try:
+                _ptitle=await page.title(); _m2=re.search(r"\bat ([^|\-–]+?)\s*$",_ptitle or "")
+                _co=(_m2.group(1).strip() if _m2 else None) or (re.sub(r"[-_]+"," ",company).title() if company else None)
+                _body=await page.evaluate("()=>document.body.innerText.slice(0,6000)")
+                JOB_WHY=why_for(_co, jtitle or re.sub(r"\s*[|@\-–].*$","",_ptitle or ""), _body)
+            except Exception: JOB_WHY=""
             # an "application password" printed in the posting (a did-you-read-it check): answer it from the posting itself
             try:
                 _pt=await page.evaluate("()=>document.body.innerText")
