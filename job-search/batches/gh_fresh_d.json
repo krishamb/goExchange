@@ -33,25 +33,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/samsungsemiconductor/jobs/7990741003",
-  "tag": "samsungsemiconductor_technical_director_larg",
-  "company": "samsungsemiconductor",
-  "title": "Technical Director, Large-Scale AI Model Inferencing",
-  "comp": null,
-  "loc": "San Jose, California, United States",
-  "posted_ts": 1788999215.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Education Start date month",
-   "Education Start date year",
-   "Education End date month",
-   "Education End date year",
-   "School"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/attain/jobs/6199651004",
   "tag": "attain_head_of_data_apps_engineering",
   "company": "attain",
