@@ -214,6 +214,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools", ["I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
  (r"node\.?js", ["Expert (designed/architected large-scale systems)","Expert","Advanced","Yes"]),   # applicant: Node.js expert
  (r"fluent in sql and a (modern )?cloud data platform|databricks", ["Yes","yes"]),   # applicant: SQL and Databricks
  (r"\breact(\.?js)?\b(?!\s+(to|quickly|when)\b)", ["Yes","yes","Expert","Advanced"]),   # applicant: professional React experience
