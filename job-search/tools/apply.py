@@ -222,6 +222,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(currently|presently) (based|located|living|residing) in (nyc|new york|manhattan|brooklyn)|are you (based|located) in (nyc|new york)", ["I'm not in NYC yet, but I'm able and willing to relocate","Not yet, but willing to relocate","Willing to relocate","No, but I am willing to relocate","No"]),   # applicant lives in Santa Clara; will move to New York
  (r"(mountain view|sunnyvale|palo alto|menlo park|redwood city|san mateo|foster city|cupertino|san jose|santa clara|fremont|oakland|berkeley|south san francisco|san francisco|emeryville|burlingame|san carlos|los altos|milpitas|bay area).{0,120}(commute|relocat|able to work|on-?site|in[- ]office|in person|report to)|(commute|relocat).{0,60}(mountain view|sunnyvale|palo alto|menlo park|redwood city|san mateo|cupertino|san jose|santa clara|san francisco|bay area)", ["Yes","yes","I currently live","I live in","Bay Area","San Francisco Bay Area","San Francisco based","San Francisco"]),   # applicant lives in Santa Clara; any work mode in the Bay Area
  (r"what did you get when you cracked the code", ["42"]),   # Lithic's posting: base64 Python snippet, XOR of two bytes = "42" (applicant: solve posting puzzles)
  (r"camera on|on video|video interview", ["Yes","yes"]),   # applicant
