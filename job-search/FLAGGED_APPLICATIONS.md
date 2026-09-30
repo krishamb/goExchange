@@ -13,7 +13,6 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Figma | Manager, Software Engineering, AI Observability | Greenhouse | "Have you ever worked for Figma before?" answered **Yes**. | Email the recruiter to correct it. |
 | Metriport | Senior AI/ML Engineer | Wellfound | "Will you now or in the future require U.S. Work Authorization?" answered **Yes**. | Tell them you are a US citizen if they reply. |
 | FlowGen Labs | Staff Software Engineer | Wellfound | Answered Yes to 5 days/week on-site in SF. | Withdraw if you do not want fully on-site. |
-| Bubble | Engineering Manager | Wellfound | "Are you located in, or willing to relocate to NYC?" answered Yes. | Withdraw if you would not relocate to NYC. |
 | Adeia | Co-Packaged Optics Director | Wellfound | Photonics hardware role, not a fit. | Consider withdrawing. |
 | Oklo | Director of Development Engineering | Wellfound | Reactor engineering role, not a fit. | Consider withdrawing. |
 | TechSpace | Marketo Solution Architect | Wellfound | Marketing-automation role, not a fit. | Consider withdrawing. |
