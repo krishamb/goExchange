@@ -1,37 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/synerg/jobs/5819480004",
-  "tag": "synerg_sr_director_ai",
-  "company": "synerg",
-  "title": "Sr. Director, AI",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1774357542.0,
-  "score": 21,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "How did you hear about Syner-G?"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/ceribell/jobs/6113860004",
-  "tag": "ceribell_senior_manager_applied_ai_engineeri",
-  "company": "ceribell",
-  "title": "Senior Manager, Applied AI Engineering - Remote",
-  "comp": null,
-  "loc": "Sunnyvale, California",
-  "posted_ts": 1784055964.0,
-  "score": 19,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What is your location? (City & State)",
-   "Does the listed salary meet your compensation requirements?"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/ss8/jobs/4285625009",
   "tag": "ss8_full_stack_ai_engineer",
   "company": "ss8",
@@ -46,19 +15,6 @@
    "What is your preferred technology stack for building a highly scalable cloud bac",
    "Have you integrated Large Language Models (LLMs) or agentic workflows into a ful"
   ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/drivewealth/jobs/7594424003?gh_jid=7594424003",
-  "tag": "drivewealth_principal_software_development_e",
-  "company": "drivewealth",
-  "title": "Principal Software Development Engineer, Post Trade",
-  "comp": null,
-  "loc": "AMER-US-Remote; Austin, Texas, United States; Dallas, Texas, United States; Denver, Colorado, United States; Miami, Florida, United States; Office - Chicago; San Francisco, California, United States; Seattle, Washington, United States",
-  "posted_ts": 1768561937.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
