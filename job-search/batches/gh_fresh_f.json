@@ -9,8 +9,14 @@
   "loc": "San Francisco",
   "posted_ts": 1788192764.0,
   "score": 19,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What are your career plans?",
+   "Have you completed an application for any other opportunities at Gallup within t",
+   "Please indicate which languages you speak in addition to English:",
+   "How many years of professional software engineering experience do you have?",
+   "Do you have strong system design and architecture fundamentals, along with comfo"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -26,19 +32,6 @@
   "last_unanswered": [
    "Please share how you have used AI tools."
   ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/fanaticscommerce/jobs/4374419009",
-  "tag": "fanaticscommerce_distinguished_architect_ent",
-  "company": "fanaticscommerce",
-  "title": " Distinguished Architect - Enterprise Data & Integration",
-  "comp": null,
-  "loc": "Redwood City, CA, United States",
-  "posted_ts": 1788198837.0,
-  "score": 18,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -58,19 +51,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/focused/jobs/7983492003",
-  "tag": "focused_senior_agent_engineer_flynn_engageme",
-  "company": "focused",
-  "title": "Senior Agent Engineer - Flynn engagement",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1788275624.0,
-  "score": 17,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/welbehealth/jobs/8815515002",
   "tag": "welbehealth_engineering_manager",
   "company": "welbehealth",
@@ -79,8 +59,16 @@
   "loc": "Remote, CA, USA",
   "posted_ts": 1790090032.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Briefly describe a significant Azure solution you designed or delivered. Include",
+   "Describe a large-scale microservices architecture you designed or delivered. Wha",
+   "Describe how you have integrated security into application code, CI/CD pipelines",
+   "Briefly describe how you have used AI-assisted engineering tools to improve deve",
+   "What is your desired pay?",
+   "How many years of hands-on experience do you have developing applications using ",
+   "Do you have professional experience developing or supporting technology solution"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -92,8 +80,11 @@
   "loc": "Remote",
   "posted_ts": 1789734509.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "English language skills",
+   "German language skills"
+  ]
  },
  {
   "ats": "greenhouse",

@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://fingerprint.com/careers/jobs/apply/?gh_jid=6188157004",
-  "tag": "fingerprint_software_architect",
-  "company": "fingerprint",
-  "title": "Software Architect",
-  "comp": "$177,000 \u2013 $240,000. ",
-  "loc": "Remote",
-  "posted_ts": 1789400570.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What time zone are you primarily working from? (Please select the UTC offset tha"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/censys/jobs/8731018002",
   "tag": "censys_senior_ai_llm_engineer",
   "company": "censys",
@@ -57,34 +42,6 @@
   "loc": "Remote",
   "posted_ts": 1789136971.0,
   "score": 15,
-  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://step.com/careers/6173649004?gh_jid=6173649004",
-  "tag": "step_director_of_engineering",
-  "company": "step",
-  "title": "Director of Engineering",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1788208245.0,
-  "score": 15,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.zoominfo.com/careers?gh_jid=8769474002",
-  "tag": "zoominfo_senior_machine_learning_engineer",
-  "company": "zoominfo",
-  "title": "Senior Machine Learning Engineer",
-  "comp": null,
-  "loc": "Bethesda, Maryland, United States; Remote-US-MA; Remote-US-MD; Remote-US-WA; Vancouver, Washington, United States; Waltham, Massachusetts, United States",
-  "posted_ts": 1790015921.0,
-  "score": 13,
   "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
   "last_unanswered": []
  },
