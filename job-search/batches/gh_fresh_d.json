@@ -9,8 +9,10 @@
   "loc": "Princeton, New Jersey, United States; San Diego, California, United States; South San Francisco, California, United States",
   "posted_ts": 1788277752.0,
   "score": 25,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please select the location of your primary residence."
+  ]
  },
  {
   "ats": "greenhouse",
@@ -22,7 +24,7 @@
   "loc": "Sunnyvale",
   "posted_ts": 1789722540.0,
   "score": 23,
-  "last_result": "(no report)",
+  "last_result": "orientation? | Prefer not to say | Are you a veteran or active member of the United States Armed For",
   "last_unanswered": []
  },
  {
