@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"where did you (complete|earn|get|receive|obtain|do) your (undergraduate |bachelor'?s? |university |college )?(degree|studies|education)|where did you (go to|attend|study at) (college|school|university)|which (university|college|school) did you attend", "University of Madras (Bachelor of Engineering, Computer Science and Engineering)"),
  (r"if you (will )?require relocation|relocation.{0,60}(timeline|self-funded|without employer assistance)", "No relocation is needed for a Bay Area role: I live in Santa Clara, California. For a New York role I am willing to relocate to New York City within about three months of an offer."),
  (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", None),
  (r"first and last name|legal name|full legal name|^(full )?name\b|^your name|_systemfield_name", P["name"]),
