@@ -249,6 +249,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"difference between a pod and a container", ["A Pod is a logical grouping of one or more Containers with some shared resources."]),   # technical quiz: correct answer
+ (r"load balance .{0,60}(url|path)|(url|path)[- ]based routing", ["Application Load Balancer (ALB)","Application Load Balancer","ALB"]),   # technical quiz: ALB routes on URL path (layer 7)
+ (r"(three|3) (core )?pillars of observability", ["Metrics, Logs, and Traces","Metrics, Logs and Traces","Logs, Metrics, and Traces","Logs, Metrics and Traces"]),   # technical quiz
  (r"\bcamunda\b|business process management|\bbpmn?\b", ["No","no"]),   # not in his experience (the follow-up "if yes, describe" gets N/A)
  (r"did (a|an|any) (current|former)? ?[a-z'-]{0,30} refer you|has (a|an|any) [a-z' -]{0,30} referred you", ["No","no"]),   # not referred
  (r"^(?!.*(united st|\bu\.?s\.?a?\b|\bamerica)).*(authori[sz]ed|eligible|permitted|entitled|(legal )?right) to (live and )?work in (the )?(germany|deutschland|u\.?k\.?\b|united kingdom|england|britain|scotland|ireland|canada|india|israel|netherlands|france|spain|poland|portugal|singapore|australia|new zealand|japan|korea|china|hong kong|taiwan|brazil|mexico|argentina|colombia|switzerland|sweden|norway|denmark|finland|austria|belgium|italy|czechia|czech republic|romania|ukraine|eu\b|european union|europe|emea|uae|united arab emirates|dubai|saudi arabia|south africa|philippines|vietnam|indonesia|malaysia|thailand)", ["No","no","No, I am not authorized","No, I would need a work permit","No, I would require sponsorship"]),   # US citizen only: never claim non-US work rights
