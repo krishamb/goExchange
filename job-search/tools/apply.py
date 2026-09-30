@@ -683,7 +683,8 @@ async def code_from_file(report,max_wait=None):
     out/<tag>_code_request.json, then poll out/<tag>_code.txt for the 8-character code."""
     tag=report["tag"]; req=f"{OUT}/{tag}_code_request.json"; ans=f"{OUT}/{tag}_code.txt"
     if os.path.exists(ans): os.remove(ans)
-    json.dump({"tag":tag,"email":P["email"],"url":report.get("url"),"ts":time.time()},open(req,"w"))
+    # the answers on the form go with the request, so they can be reviewed before the code is handed over
+    json.dump({"tag":tag,"email":P["email"],"url":report.get("url"),"ts":time.time(),"filled":report.get("filled"),"chosen":report.get("chosen")},open(req,"w"),indent=1)
     print(f"CODE REQUEST {tag}",flush=True)
     deadline=time.time()+(max_wait or CODE_WAIT)
     while time.time()<deadline:
