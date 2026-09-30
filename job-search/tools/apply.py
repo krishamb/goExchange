@@ -232,6 +232,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(willing|able) to provide .{0,20}(professional )?references|provide (2|3|two|three|2-3).{0,10}references", ["Yes","yes"]),
  (r"do you live in one of the following states|which (of the following )?states? do you (currently )?(live|reside) in", ["California: SF Bay Area","California - SF Bay Area","California (SF Bay Area)","California","CA"]),   # applicant lives in Santa Clara, CA (no Yes: the list may not include California)
  (r"are you (currently )?still (employed|working) (with|at|for)", ["Yes","yes"]),   # applicant: currently CTO at Hyperion AI
  (r"(require|need) .{0,60}\b(file|sign|certify|support|participate in|sponsor)\b.{0,120}\b(immigration|work authori[sz]ation|visa|petition|green card|h-?1b)", ["No","no","No, I do not require sponsorship","I do not require sponsorship"]),   # applicant: US citizen, needs nothing now or later
@@ -998,10 +999,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     board=re.sub(r"[^a-z0-9]","",company.lower()); token=re.search(r"gh_jid=(\d+)",url).group(1)
                     url=f"https://job-boards.greenhouse.io/embed/job_app?for={board}&token={token}"
             if ats!="wellfound":
-                for attempt in range(3):   # transient proxy/network errors ("upstream request failed", 502/503): reload after a pause
+                for attempt in range(6):   # transient proxy/network errors ("upstream request failed", 502/503): reload with a growing pause
                     await page.goto(url,wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(3500)
                     if not re.search(r"^\s*upstream request failed|Error\s+50[234]\b|50[234]\s+(Bad Gateway|Service|Gateway)|lost in the weeds|ERR_|This site can.t be reached",await body_text(page),re.I): break
-                    await page.wait_for_timeout(8000)
+                    await page.wait_for_timeout([8000,15000,25000,40000,60000,60000][attempt])
             for sel in ['button:has-text("Accept All")','button:has-text("Accept all")','button:has-text("Accept")','button:has-text("I agree")','button:has-text("Got it")','button:has-text("Decline All")']:
                 try:
                     el=page.locator(sel).first
