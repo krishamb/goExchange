@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(describe|tell us about) your agentic ai experience|agentic ai experience|experience (with|building) (ai )?agents|where have you used agentic", "At Hyperion AI, as CTO and Technical Co-Founder, I built our agentic platform end to end: MCP clients and servers (3 servers, 9 tools), a multi-agent plan-validate-dispatch-replan loop, open-weight model serving (Qwen, Llama 3.3-70B, gpt-oss) through llama.cpp and vLLM, and a reproducible 121-measure benchmarking scorecard informed by MLPerf Inference and BFCL, running in production with correctness gates, replay harnesses and OpenTelemetry/Prometheus observability. Before that, at Yahoo Finance, I architected RAG-based research assistants on top of the Finance platform."),
  (r"^if (yes|so),?.{0,80}(while (working|employed)|when you (worked|were employed)|employee (id|number)|dates of (employment|service)|former (manager|supervisor)|your role (there|at))", "N/A"),
  (r"(describe|tell us about) a time you used ai to improve your (work|productivity|team)|used ai to improve your work", "At Hyperion AI I used Claude Code for parallel reviews of our benchmark platform's subsystems and to generate its test and replay harnesses. What worked: a very small team built, and kept correct, a 121-measure scorecard with 13 comparability checks, because every AI-generated change went through the same evaluation and review gates as hand-written code. What I would change: start each subsystem with a short written spec and a handful of hand-written, spec-level test cases, then let AI generate the rest, so generated tests check intended behaviour rather than mirroring the code as written; and track the time saved more formally so the gains are measured, not anecdotal."),
  (r"where did you (complete|earn|get|receive|obtain|do) your (undergraduate |bachelor'?s? |university |college )?(degree|studies|education)|where did you (go to|attend|study at) (college|school|university)|which (university|college|school) did you attend", "University of Madras (Bachelor of Engineering, Computer Science and Engineering)"),
@@ -207,6 +208,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"how important is the title|title/level .{0,40}(relative to|vs\.?|versus) scope|title (or|vs\.?|versus) scope", ["Scope Is Important","Scope is important","Scope","N/A"]),
+ (r"more product-focused or systems-focused|product[- ]focused or systems[- ]focused", ["Systems-Focused","Systems focused","Systems"]),
  (r"do any of the following apply to you|which of the following (conflicts|disclosures|situations) apply", ["None of the above apply to me.","None of the above apply to me","None of the above","None of these apply to me","None of these","None"]),
  (r"(select|what is|which is|choose) your (current |primary )?time ?zone|^(current )?time ?zone\??:?\*?$", ["US/Pacific","Pacific Time","Pacific","PT","PST","Pacific Time (PT)","America/Los_Angeles"]),
  (r"^state\b|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
