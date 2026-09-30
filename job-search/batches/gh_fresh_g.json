@@ -10,7 +10,9 @@
   "comp": "$190,000 \u2013 $250,000 ",
   "where": "remote",
   "score": 24,
-  "tag": "zonecompanysoftwareconsultingllc_director_en"
+  "tag": "zonecompanysoftwareconsultingllc_director_en",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -23,7 +25,9 @@
   "comp": "$260,000 - $290,000 ",
   "where": "remote",
   "score": 19,
-  "tag": "attentive_senior_engineering_manager_platfor"
+  "tag": "attentive_senior_engineering_manager_platfor",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -36,7 +40,9 @@
   "comp": null,
   "where": "nyc",
   "score": 18,
-  "tag": "butterflynetwork_senior_director_software_en"
+  "tag": "butterflynetwork_senior_director_software_en",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -49,7 +55,9 @@
   "comp": null,
   "where": "nyc",
   "score": 18,
-  "tag": "butterflynetwork_director_full_stack_enginee"
+  "tag": "butterflynetwork_director_full_stack_enginee",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -62,7 +70,9 @@
   "comp": "$200K\u2013$250K",
   "where": "remote",
   "score": 16,
-  "tag": "yipitdata_head_of_cloud_infrastructure"
+  "tag": "yipitdata_head_of_cloud_infrastructure",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -75,7 +85,9 @@
   "comp": "$173,000 - $231,000. ",
   "where": "remote",
   "score": 26,
-  "tag": "strivehealth_vp_data_platform"
+  "tag": "strivehealth_vp_data_platform",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -88,7 +100,9 @@
   "comp": "$310,000 - $385,000. ",
   "where": "nyc",
   "score": 17,
-  "tag": "garnerhealth_manager_engineering_data_platfo"
+  "tag": "garnerhealth_manager_engineering_data_platfo",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -101,6 +115,8 @@
   "comp": "$375,000 - $450,000 ",
   "where": "nyc",
   "score": 16,
-  "tag": "squarespace_vp_of_engineering_product_platfo"
+  "tag": "squarespace_vp_of_engineering_product_platfo",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
