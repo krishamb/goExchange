@@ -1,24 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://www.hubspot.com/careers/jobs/8175193?gh_jid=8175193",
-  "tag": "hubspotjobs_principal_machine_learning_engin",
-  "company": "hubspotjobs",
-  "title": "Principal Machine Learning Engineer",
-  "comp": null,
-  "loc": "Remote - USA",
-  "posted_ts": 1790599113.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "In 2-3 sentences, please share how you are incorporating AI into your day-to-day",
-   "In exactly 3 bullet points, no more, no less, explain the difference between how",
-   "Which time zone would you be working from in this role?",
-   "Are you currently hands-on with designing and developing distributed backend sys"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.pindrop.com/careers/job-title/?gh_jid=8236603",
   "tag": "pindropsecurity_staff_software_engineer_auth",
   "company": "pindropsecurity",
@@ -42,8 +24,10 @@
   "loc": "San Francisco, CA, Washington, D.C., New York City, NY, Remote (USA)",
   "posted_ts": 1790278456.0,
   "score": 29,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe the platforms and techniques (if any) where generative AI tools were in"
+  ]
  },
  {
   "ats": "greenhouse",
