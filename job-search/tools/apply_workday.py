@@ -241,7 +241,7 @@ VET_BAD = re.compile(r"identify as (a|an|one)\b|\bi am a (protected |disabled |r
 VET_PREFS = ["I am not a veteran", "Not a veteran", "No, I am not a veteran", "I am not a protected veteran", "Not a protected veteran", "No military service", "I have not served", "No"]   # applicant: not a veteran
 DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
-HEAR_NOT = re.compile(r"residen(cy|t)|program\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
+HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
 AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|(did|have) you use(d)? (any )?ai", re.I)
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
 # are not in the profile, and the generic e-mail / name rules must never answer them with his personal details
@@ -254,13 +254,17 @@ def usable(texts, label):
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
-def rank(texts, prefs, label, strict=None):
+def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
-    'Not a protected veteran' can never match inside 'I identify as a veteran, just not a protected veteran')."""
+    'Not a protected veteran' can never match inside 'I identify as a veteran, just not a protected veteran').
+    exact: the option must equal the preference (search prompts, where the rules' 'Engineering' must never pick
+    'Aerospace Engineering')."""
     u = usable(texts, label)
     strict = bool(VET_Q.search(label or "")) if strict is None else strict
     for p in prefs or []:
-        k = next((i for i, t in enumerate(u) if t and _match(t, p, True)), None) if strict else best_index(u, p)
+        if exact: k = next((i for i, t in enumerate(u) if t and norm(t) == norm(p)), None)
+        elif strict: k = next((i for i, t in enumerate(u) if t and _match(t, p, True)), None)
+        else: k = best_index(u, p)
         if k is not None: return k
     return None
 def prefs_for(label):
@@ -280,6 +284,7 @@ def company_tokens(company, url=""):
     t = norm(tenant_of(url)) if url else ""
     if len(t) >= 4: toks.add(t)
     return {x for x in toks if len(x) >= 3}
+SITE = re.compile(r"\.com\b|\.co\b|web ?site|\bcareers?\b( (site|page|portal|web ?site|home ?page))?\s*$|\bcareers? (site|page|portal|web ?site)\b|\bjobs? (site|page|portal)\b|\bsite\b|\bportal\b|\bweb\b|\bhome ?page\b", re.I)
 def hear_score(t, toks, cat=""):
     """How well a 'How did you hear about us?' item describes the applicant's real source, the company's own careers site:
     100 names the company's website / careers site (NVIDIA.COM), 90 a generic careers site or company website, 60 a plain
@@ -287,19 +292,23 @@ def hear_score(t, toks, cat=""):
     university, LinkedIn, a named job board or social network, a programme, ...)."""
     tl = (t or "").strip().lower()
     if not tl or HEAR_BAD.search(tl) or HEAR_NOT.search(tl): return 0
-    web = re.search(r"\.com\b|\.co\b|web ?site|career|jobs? ?(site|page|portal)|\bsite\b|portal|\bpage\b|\bweb\b", tl) or re.search(r"web|site|career|internet|online", cat or "", re.I)
-    if toks and any(k in norm(tl) for k in toks) and web: return 100
+    webcat = bool(re.search(r"web|site|career|internet|online", cat or "", re.I))
+    web = SITE.search(tl) or webcat   # a site, not just 'career': 'Adobe Career Academy' is a programme
+    if toks and any(k in norm(tl) for k in toks) and web: return 100 if (not cat or webcat) else 85   # 85: e.g. 'Talent Community > Cohesity Careers'
     if re.search(r"(company|corporate|employer|organi[sz]ation)('?s)? ?(career|careers|jobs?|web ?site|site|page|portal)|careers? ?(web ?site|site|page|portal|section)|^careers?$", tl): return 90
+    if re.search(r"\b(jobs?|careers?) (page|section|site|board)\b.{0,30}\b(your|our|the company.?s|company) (web ?site|site)|\b(your|our|the company.?s) (careers? |jobs? )?(web ?site|site|page)\b", tl): return 90   # 'Jobs page on your website'
     if re.search(r"^(the )?(web ?site|internet|online|web|internet search|online search|search engine|google( search)?|web search)$", tl): return 60
     if re.search(r"^(online )?(job board|job boards|job posting|job postings|job post site|job site|job search site)$", tl): return 40
     if re.search(r"^other\b|not listed", tl) and (not cat or re.search(r"other|web|site|internet|online", cat, re.I)): return 20
     return 0
-def cat_rank(c):
-    """Which categories of a source tree may hold the company's careers site: website-like first, then 'Other', then job boards."""
+def cat_rank(c, toks=()):
+    """Which categories of a source tree may hold the company's careers site: website-like first, then company-named
+    ('Company Marketing', 'Cohesity Talent Community'), then 'Other', then job boards (only generic items count there)."""
     if HEAR_BAD.search(c) or HEAR_NOT.search(c): return 9
-    if re.search(r"web|site|career|company|corporate|internet|online|search", c, re.I): return 0
-    if re.search(r"other", c, re.I): return 1
-    if re.search(r"job|posting|advert", c, re.I): return 2
+    if re.search(r"web|site|career|internet|online|search", c, re.I): return 0
+    if re.search(r"company|corporate", c, re.I) or any(k in norm(c) for k in toks): return 1
+    if re.search(r"other", c, re.I): return 2
+    if re.search(r"job|posting|advert", c, re.I): return 3
     return 9
 
 # ---- Workday widgets
@@ -382,12 +391,30 @@ async def menu_scan(page):
         if not moved: break
         await page.wait_for_timeout(400)
     return seen, [subs[t] for t in seen]
+async def menu_wait(page, title_rx=None, before=None, secs=12):
+    """Wait until the open prompt shows items: at the level whose title matches title_rx (a category name, 'Search
+    Results'), or a list different from `before`. Right after sign-in Workday can take seconds to load a level."""
+    end = time.time() + secs
+    while time.time() < end:
+        _, texts, _ = await menu_items(page)
+        tl = page.locator(f'{A("promptTitle")}:visible')
+        try: title = (await tl.first.inner_text(timeout=500)).strip() if await tl.count() else ""
+        except Exception: title = ""
+        if title_rx and re.search(r"no match", title, re.I): return True
+        if texts and (not title_rx or re.search(title_rx, title, re.I)) and (before is None or texts != before): return True
+        await page.wait_for_timeout(300)
+    return False
 async def menu_click(page, item):
-    """Click the item with this exact text at the open prompt level (scrolling a virtualised list to reach it)."""
+    """Click the item with this exact text at the open prompt level (scrolling a virtualised list to reach it); for a
+    category, wait until its sub-list has loaded."""
     for _ in range(25):
-        loc, texts, _ = await menu_items(page)
+        loc, texts, subs = await menu_items(page)
         if item in texts:
-            await loc.nth(texts.index(item)).click(timeout=4000); await page.wait_for_timeout(1200); return True
+            k = texts.index(item)
+            await loc.nth(k).click(timeout=4000)
+            if subs[k]: await menu_wait(page, title_rx="^" + re.escape(item) + "$")
+            else: await page.wait_for_timeout(1200)
+            return True
         if not texts: return False
         moved = await loc.nth(len(texts) - 1).evaluate("e=>{let p=e.parentElement; while(p && !(p.scrollHeight>p.clientHeight+4 && /(auto|scroll)/.test(getComputedStyle(p).overflowY))) p=p.parentElement; if(!p) return false; const t=p.scrollTop; p.scrollTop=t+p.clientHeight*0.8; return p.scrollTop!==t;}")
         if not moved: return False
@@ -404,31 +431,51 @@ async def prompt_clear(page, box):
         except Exception: return
         await page.wait_for_timeout(600)
 async def prompt_open(page, box, query=""):
-    """Open a prompt at its top level (or at the search results for query)."""
+    """Open a prompt at its top level (or at the search results for query). Returns the items Workday selected by
+    itself: a search with a single result is selected on Enter, and callers must accept or remove that selection."""
     inp = box.locator("input").first
+    before = await prompt_selected(box)
     try: await page.keyboard.press("Escape")
     except Exception: pass
     await page.wait_for_timeout(300)
-    await inp.scroll_into_view_if_needed(timeout=3000); await inp.click(timeout=3000)
+    await inp.scroll_into_view_if_needed(timeout=3000)
+    try: await inp.click(timeout=3000)
+    except Exception:   # a selected item's pill can cover the input
+        try: await box.locator(A("promptIcon")).first.click(timeout=3000)
+        except Exception: await inp.focus()
     await inp.fill("")
-    if query: await inp.type(query[:40], delay=25); await inp.press("Enter")
-    await page.wait_for_timeout(1500)
+    if query:
+        await inp.type(query[:40], delay=25); await inp.press("Enter")
+        end = time.time() + 12
+        while time.time() < end:
+            now = await prompt_selected(box)
+            if now != before: await page.wait_for_timeout(500); return [x for x in await prompt_selected(box) if x not in before]
+            if await menu_wait(page, title_rx=r"search results|no match", secs=0.6): return []
+        return []
+    await menu_wait(page)
     for _ in range(3):
         back = page.locator(f'{A("backButton")}:visible')
-        if query or not await back.count(): break
-        await back.first.click(timeout=2000); await page.wait_for_timeout(800)
+        if not await back.count(): break
+        _, prev, _ = await menu_items(page)
+        await back.first.click(timeout=2000); await menu_wait(page, before=prev)
+    return []
 async def prompt_choose(page, box, prefs, label, searches=None):
     """A flat Workday prompt (search box + items): search, click the leaf the rules prefer, verify it is selected."""
     for q in (searches or prefs[:3]):
         try:
-            await prompt_open(page, box, q)
+            auto = await prompt_open(page, box, q)
+            if auto:   # Workday selected the lone search result itself: kept only when the rules name it exactly
+                if rank(auto, prefs, label, exact=True) is not None: await page.keyboard.press("Escape"); return auto[0]
+                await prompt_clear(page, box); continue
             loc, texts, subs = await menu_items(page)
-            k = rank([t if not c else "" for t, c in zip(texts, subs)], prefs, label)
+            k = rank([t if not c else "" for t, c in zip(texts, subs)], prefs, label, exact=True)
             if k is None: continue
             want = texts[k]
             await loc.nth(k).click(timeout=4000); await page.wait_for_timeout(1200)
             await page.keyboard.press("Escape"); await page.wait_for_timeout(300)
-            if norm(want) in [norm(x) for x in await prompt_selected(box)]: return want
+            sel = [norm(x) for x in await prompt_selected(box)]
+            if norm(want) in sel: return want
+            if sel: await prompt_clear(page, box)
         except Exception:
             continue
     try: await page.keyboard.press("Escape")
@@ -447,7 +494,7 @@ async def hear_choose(page, box, job):
     cands = [(hear_score(t, toks), [t]) for t, c in zip(top, subs) if not c]
     best = max(cands, default=(0, None), key=lambda x: x[0])
     if best[0] < 90:
-        for cat in sorted([t for t, c in zip(top, subs) if c and cat_rank(t) <= 2], key=cat_rank):
+        for cat in sorted([t for t, c in zip(top, subs) if c and cat_rank(t, toks) <= 3], key=lambda c: cat_rank(c, toks)):
             await prompt_open(page, box)
             if not await menu_click(page, cat): continue
             items, isub = await menu_scan(page)
@@ -456,8 +503,10 @@ async def hear_choose(page, box, job):
             if best[0] >= 90: break
     if best[0] < 90:   # a long or oddly grouped tree: search for the company's own site
         for q in sorted(toks, key=len, reverse=True)[:2]:
-            await prompt_open(page, box, q)
+            auto = await prompt_open(page, box, q)
+            if auto: await prompt_clear(page, box)   # a lone result Workday selected by itself: scored like the others
             _, res, rsub = await menu_items(page)
+            res, rsub = (auto, [False] * len(auto)) if auto else (res, rsub)
             cands += [(hear_score(t, toks), ["", q, t]) for t, c in zip(res, rsub) if not c and hear_score(t, toks) >= 90]
             best = max(cands, default=(0, None), key=lambda x: x[0])
             if best[0] >= 90: break
@@ -465,23 +514,31 @@ async def hear_choose(page, box, job):
     if best[0] <= 0:
         await page.keyboard.press("Escape"); return None
     path = best[1]
-    if len(path) == 3: await prompt_open(page, box, path[1]); ok = await menu_click(page, path[2])
+    if len(path) == 3:
+        auto = await prompt_open(page, box, path[1])
+        ok = bool(auto) or await menu_click(page, path[2])
     elif len(path) == 2: await prompt_open(page, box); ok = await menu_click(page, path[0]) and await menu_click(page, path[1])
     else: await prompt_open(page, box); ok = await menu_click(page, path[0])
     try: await page.keyboard.press("Escape")
     except Exception: pass
     await page.wait_for_timeout(300)
     sel = await prompt_selected(box)
-    if not (ok and len(sel) == 1 and norm(sel[0]) == norm(path[-1])): return None
+    if not (ok and len(sel) == 1 and norm(sel[0]) == norm(path[-1])):
+        if sel: await prompt_clear(page, box)   # never leave an item selected that was not the one chosen
+        return None
     job.report["source_options"]["picked"] = (f"search '{path[1]}' > " if len(path) == 3 else "") + " > ".join(path if len(path) < 3 else path[2:])
     return path[-1]
 async def set_date(page, box, month=None, day=None, year=None):
-    """Workday date widget (MM / DD / YYYY spin buttons); fills the sections the widget has and reads them back."""
+    """Workday date widget (MM / DD / YYYY spin buttons); fills the sections the widget has and reads them back. The
+    spin-button inputs sit hidden under their display text, so each is focused and typed into from the keyboard."""
     for aid, v in (("dateSectionMonth-input", month and f"{month:02d}"), ("dateSectionDay-input", day and f"{day:02d}"), ("dateSectionYear-input", year and str(year))):
         loc = box.locator(A(aid))
-        if v and await loc.count():
-            try: await loc.first.click(timeout=2000); await loc.first.type(v, delay=60)
+        if not (v and await loc.count()): continue
+        try:
+            try: await box.locator(A(aid.replace("-input", "-display"))).first.click(timeout=2000)
             except Exception: pass
+            await loc.first.focus(); await page.keyboard.type(v, delay=80); await page.wait_for_timeout(200)
+        except Exception: pass
     await page.wait_for_timeout(300)
     try: shown = [t.strip() for t in await box.locator('[data-automation-id$="-display"]').all_inner_texts()]
     except Exception: shown = []
@@ -516,7 +573,7 @@ async def fill_field(page, job, f):
         if cur and norm(cur) == norm(v): return keep(cur)
         return keep(v) if await fill(page, box.locator("textarea, input").first, v) else None
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
-        if cur and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict) is not None: return keep(cur)
+        if cur and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict, exact=(kind == "prompt")) is not None: return keep(cur)
         r = lambda texts: rank(texts, prefs, mlabel or key, strict)
         if kind == "listbox": v, _ = await listbox_choose(page, btn, r, typeahead)
         elif kind == "radio": v = await pick_radio(page, box, r)
@@ -550,7 +607,9 @@ async def fill_field(page, job, f):
     if re.search(r"(^|-)source$|sourceprompt", fid, re.I) or re.search(r"how did you (first )?(hear|learn|find)", low):
         toks = company_tokens(job.item.get("company"), job.url)
         if cur and hear_score(cur.split(";")[0], toks) >= 60: return keep(cur)
-        if kind == "prompt": v = await hear_choose(page, box, job)
+        if kind == "prompt":
+            v = await hear_choose(page, box, job)
+            if not v: await page.wait_for_timeout(2000); v = await hear_choose(page, box, job)   # a slow first load of the tree
         elif kind == "listbox":
             v, _ = await listbox_choose(page, btn, lambda t: max((i for i in range(len(t)) if hear_score(t[i], toks) > 0), key=lambda i: hear_score(t[i], toks), default=None))
         else: v = await choose(prefs_for(key) or [])
@@ -641,25 +700,29 @@ async def fill_entry(page, job, kind, panel):
     done = {}
     if kind == "work":
         if val("companyName") and norm(val("companyName")) != norm(WORK_ENTRY["companyName"]): return None
-        for k in ("jobTitle", "companyName"):
-            if k in by and not val(k) and await fill(page, fb(k).locator("input").first, WORK_ENTRY[k]): done[k] = WORK_ENTRY[k]
+        for k in ("jobTitle", "companyName"):   # this is the applicant's entry: any other value is corrected
+            if k in by and norm(val(k)) != norm(WORK_ENTRY[k]) and await fill(page, fb(k).locator("input").first, WORK_ENTRY[k]): done[k] = WORK_ENTRY[k]
         if "currentlyWorkHere" in by and await set_check(fb("currentlyWorkHere").locator('input[type="checkbox"]').first, True): done["current"] = "yes"
-        if "startDate" in by and not val("startDate"): done["from"] = await set_date(page, fb("startDate"), month=WORK_ENTRY["start"][0], year=WORK_ENTRY["start"][1])
-        label = f"{WORK_ENTRY['jobTitle']}, {WORK_ENTRY['companyName']}, {WORK_ENTRY['start'][0]:02d}/{WORK_ENTRY['start'][1]}-present"
+        want = f"{WORK_ENTRY['start'][0]:02d}/{WORK_ENTRY['start'][1]}"
+        if "startDate" in by and val("startDate") != want: done["from"] = await set_date(page, fb("startDate"), month=WORK_ENTRY["start"][0], year=WORK_ENTRY["start"][1])
+        label = f"{WORK_ENTRY['jobTitle']}, {WORK_ENTRY['companyName']}, {want}-present"
     else:
-        if val("schoolName") and "madras" not in val("schoolName").lower(): return None
-        s = by.get("schoolName")
-        if s and not val("schoolName"):
-            if s["kind"] == "prompt": done["school"] = await prompt_choose(page, fb("schoolName"), choice_for("School or University") or ["University of Madras"], "School or University", searches=["Madras", "University of Madras", "Other"])
-            elif await fill(page, fb("schoolName").locator("input").first, "University of Madras"): done["school"] = "University of Madras"
-        if "degree" in by and not val("degree"):
-            v, _ = await listbox_choose(page, fb("degree").locator('button[aria-haspopup="listbox"]').first, lambda t: rank(t, choice_for("Degree"), "Degree"))
+        sk = next((k for k in by if re.search(r"school", k, re.I)), None)   # schoolName (text) or school (prompt)
+        if sk and val(sk) and "madras" not in val(sk).lower(): return None
+        if sk and not val(sk):
+            if by[sk]["kind"] == "prompt": done["school"] = await prompt_choose(page, fb(sk), choice_for("School or University") or ["University of Madras"], "School or University", searches=["University of Madras", "Madras", "Other"])
+            elif await fill(page, fb(sk).locator("input").first, "University of Madras"): done["school"] = "University of Madras"
+        dp = choice_for("Degree") or []
+        if "degree" in by and (not val("degree") or rank([val("degree")], dp, "Degree") is None):
+            v, _ = await listbox_choose(page, fb("degree").locator('button[aria-haspopup="listbox"]').first, lambda t: rank(t, dp, "Degree"))
             done["degree"] = v
-        if "fieldOfStudy" in by and not val("fieldOfStudy"):
-            done["field"] = await prompt_choose(page, fb("fieldOfStudy"), FIELD_OF_STUDY + (choice_for("Field of Study") or []), "Field of Study", searches=["Computer Science"])
+        fp = FIELD_OF_STUDY + (choice_for("Field of Study") or [])
+        if "fieldOfStudy" in by and (not val("fieldOfStudy") or rank([val("fieldOfStudy")], fp, "Field of Study", exact=True) is None):
+            await prompt_clear(page, fb("fieldOfStudy"))   # e.g. 'Aerospace Engineering' from an earlier loose match
+            done["field"] = await prompt_choose(page, fb("fieldOfStudy"), fp, "Field of Study", searches=["Computer Science and Engineering", "Computer Science", "Computer Engineering"])
         mon = lambda m: datetime.datetime.strptime(m, "%B").month
         for k, (y, m) in (("firstYearAttended", EDU_START), ("lastYearAttended", EDU_END)):
-            if k in by and not val(k): done[k] = await set_date(page, fb(k), month=mon(m), year=y)
+            if k in by and not re.search(str(y) + "$", val(k)): done[k] = await set_date(page, fb(k), month=mon(m), year=y)
         label = "B.E. Computer Science and Engineering, University of Madras, 1991-1995"
     job.ans(f"{'Work Experience' if kind == 'work' else 'Education'}: {label}", done)
     return done
@@ -777,6 +840,9 @@ async def auth(page, job, s):
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
             remember(e, "new"); return "verify"
         if APPLIED.search(body) or await signed_in_now(page): remember(e, "new"); return "ok"
+        errs = await form_errors(page)
+        if errs:   # e.g. Visa: 'Password must include: A minimum of 12 characters' (wf_creds new_account_password)
+            job.report["errors"] += [f"create account: {x}" for x in errs[:3]]; return "fail"
     return "fail"
 
 async def wait_file(path, secs):
@@ -858,7 +924,8 @@ async def run_one(ctx, item, s):
             if await auth(page, job, s) != "ok": job.report["result"] = "NOT SUBMITTED: sign-in failed after verification"; return job.report   # auth() signs in with the remembered new-account login
         elif a == "fail":
             await page.screenshot(path=f"{OUT}/{job.tag}_wd_auth.png", full_page=True)
-            job.report["result"] = "NOT SUBMITTED: could not create an account or sign in"; return job.report
+            pw = any(re.search(r"password", x, re.I) for x in job.report["errors"])
+            job.report["result"] = "NOT SUBMITTED: " + ("the tenant rejected the new-account password (see errors)" if pw else "could not create an account or sign in"); return job.report
         await settle(page)
         if APPLIED.search(await text(page)):
             job.report["result"] = "ALREADY APPLIED on this company's Workday site"; return job.report
