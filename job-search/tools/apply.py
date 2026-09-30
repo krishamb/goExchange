@@ -266,10 +266,14 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"personally participate in (each|every|all|any) interview|will not use another person to interview|interview on my behalf|not use ai tools .{0,120}(during|in) (any|the|my|each) interview", ["Yes, I agree","I agree","Yes","yes","Agree"]),   # interview-integrity pledge about his own future interviews (not the application); "criminal" in the fine print must not trip the No rule
  (r"engage with .{0,40}employees to negotiate|negotiate, influence and/or sign .{0,40}contracts", ["No","no"]),
  (r"employee of a government (office|agency|entity)|government (office|agency) .{0,40}oversight", ["No","no"]),
  (r"registered .{0,60}securities industry|securities industry .{0,40}registered|attempted to become .{0,30}registered|finra (registration|licen[cs]e)|series (7|24|63|65|66|79|99) (licen|registr|exam)", ["No","no"]),   # applicant: never registered (FINRA)
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
+ (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
+ (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"how (should|would you like|do you prefer|can) (we|us to) (communicate|contact|reach) (with )?you|preferred (method|mode|channel) of (communication|contact)", ["Email","E-mail","Phone Call","Phone"]),
  (r"are you (currently )?in the (reserves|national guard)", ["No","no"]),
  (r"if this role or future roles require relocation", ["I am willing to relocate and will self relocate","I am willing to relocate","Yes"]),
  (r"work authori[sz]ation (is )?based on .{0,80}(spouse|h-?1b|h-?4|l-?2|dependent)", ["No","no"]),   # US citizen

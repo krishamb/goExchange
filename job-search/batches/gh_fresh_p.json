@@ -1,0 +1,82 @@
+[
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/patronusaiinc/jobs/4412230009",
+  "tag": "patronusaiinc_member_of_technical_staff_engi_r2",
+  "company": "patronusaiinc",
+  "title": "Member of Technical Staff - Engineering",
+  "comp": "$160,000 - $300,000 ",
+  "loc": "San Francisco",
+  "posted_ts": 1789838236.0,
+  "resubmit": true,
+  "correction_of": "patronusaiinc_member_of_technical_staff_engi",
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you would need to relocate to the San Francisco Bay Area, when would you be a"
+  ]
+ },
+ {
+  "ats": "indeed",
+  "url": "https://grnh.se/nbz24aiu1us",
+  "indeed_url": "https://www.indeed.com/viewjob?jk=8d6dd69353d654ab",
+  "tag": "singlestore_staff_software_engineer_r2",
+  "company": "SingleStore",
+  "title": "Staff Software Engineer",
+  "comp": 210000.0,
+  "loc": "Remote, US",
+  "remote": true,
+  "source": "Indeed",
+  "email": "amba_rish@hotmail.com",
+  "resubmit": true,
+  "correction_of": "singlestore_staff_software_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
+ },
+ {
+  "ats": "greenhouse",
+  "company": "synerg",
+  "title": "Sr. Director, AI",
+  "loc": "Remote",
+  "desc": "    COMPANY DESCRIPTION:  \u00a0 \n A career here is life-enhancing. \n At Syner-G, we enable our people to build careers that impact positively on their quality of life. Through our expertise, insight, consulting and management skills, we accelerate breakthrough science and delivery of life-enhancing therapies to more patients. We work across a diverse range of clients and projects, supporting many organizations from the most critical phases of the drug discovery and approval process through to commercialization. It is meaningful, varied and thought-provoking work with a strategic emphasis, a solutions-driven approach and significant, real-world outcomes, from science to delivery/success. To learn more about who we are and what drives us, watch our company video   here  .\u00a0 \n Underpinning this mission is a culture that aligns perfectly with what we want to achieve. We enable our people to grow, we support them in their learning and we reward them in so many different ways. In return, they play an instrumental role in maintaining our reputation across the globe as a strategic biopharma product development and delivery partner. \n Syner-G was recently honored with BioSpace's prestigious \"Best Places to Work\" 2026 award, for the third consecutive year, along with many other award-winning programs to make a career here truly life-enhancing. These recognitions are a testament to our commitment to fostering a positive and engaging work environment for our employees, with a particular emphasis on culture, career growth and development opportunities, financial rewards, leadership and innovation.\u00a0 \n At Syner-G, we recognize that our team members are our most valuable asset. Join us in shaping the future, where your talents are valued, and your contributions make a meaningful impact.\u00a0 \n For more information, visit  www.Synergbiopharma.com      POSITION OVERVIEW:    As the Sr. Director/Vice President, Artificial Intelligence, you will lead the strategic development and enterprise-wide adoption of AI capabilities that support organizational transformation. Your role involves defining the AI vision, building a scalable roadmap, and driving execution across multiple business units. You will partner with Technology, Operations, Product, and executive leadership to identify high-value use cases, develop AI solutions, and integrate them into core business processes to deliver measurable results. This position requires a high level of autonomy, technical expertise, and strategic leadership, including assessing business needs, ensuring data readiness, designing and deploying models, overseeing MLOps practices, and implementing responsible AI principles. Your experience in AI, machine learning, data strategy, communication, stakeholder alignment, and solution delivery will be essential in enabling the organization\u2019s transformation goals.   \n   JOB FUNCTIONS:   \n (This list is not exhaustive and may be supplemented or changed as necessary.) \n \n Lead the strategic planning, development, and execution of the company\u2019s AI roadmap and long-term innovation strategy. \n Identify, evaluate, and prioritize AI and machine learning opportunities that improve operations, automation, and business value. \n Apply structured methodologies to assess use case feasibility, technical readiness, adoption requirements, and expected ROI. \n Partner with Data Engineering and Technology teams to build and deploy scalable AI models, generative AI capabilities, and decision intelligence tools. \n Oversee all stages of the AI development lifecycle, including model design, testing, deployment, monitoring, retraining, and performance optimization. \n Develop and manage responsible AI frameworks that address transparency, risk, ethics, compliance, and governance. \n Conduct impact analyses and assess organizational readiness to adopt AI-driven processes and technologies. \n Create and deliver communication strategies to support AI adoption for leaders, teams, and stakeholders. \n Collaborate",
+  "url": "https://job-boards.greenhouse.io/synerg/jobs/5819480004",
+  "posted_ts": 1774357542.0,
+  "comp": null,
+  "mode": null,
+  "where": "remote",
+  "score": 21,
+  "found_on": "linkedin",
+  "tag": "synerg_sr_director_ai_r2",
+  "resubmit": true,
+  "correction_of": "synerg_sr_director_ai",
+  "last_result": "(no report)",
+  "last_unanswered": []
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://step.com/careers/6173666004?gh_jid=6173666004",
+  "tag": "step_senior_machine_learning_engineer_r2",
+  "company": "step",
+  "title": "Senior Machine Learning Engineer",
+  "comp": null,
+  "loc": "Remote",
+  "posted_ts": 1788208576.0,
+  "score": 19,
+  "resubmit": true,
+  "correction_of": "step_senior_machine_learning_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/elastic/jobs/8207941",
+  "tag": "elastic_sr_director_enterprise_data_r2",
+  "company": "elastic",
+  "title": "Sr. Director, Enterprise Data",
+  "comp": 403200.0,
+  "source": "ATS board",
+  "resubmit": true,
+  "correction_of": "elastic_sr_director_enterprise_data",
+  "last_result": "(no report)",
+  "last_unanswered": []
+ }
+]
