@@ -14,19 +14,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/phizenix/jobs/5422041008",
-  "tag": "phizenix_principal_ai_engineer",
-  "company": "phizenix",
-  "title": "Principal AI Engineer",
-  "comp": null,
-  "loc": "Midtown Manhattan, New York City",
-  "posted_ts": 1789144231.0,
-  "score": 22,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/accordion/jobs/8193635",
   "tag": "accordion_staff_software_engineer",
   "company": "accordion",
@@ -73,19 +60,6 @@
   "comp": "$185,000 - $220,000 ",
   "loc": "Remote US",
   "posted_ts": 1788883147.0,
-  "score": 20,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://careers.duolingo.com/jobs/8756745002?gh_jid=8756745002",
-  "tag": "duolingo_senior_engineering_manager_ai_platf",
-  "company": "duolingo",
-  "title": "Senior Engineering Manager, AI Platform",
-  "comp": null,
-  "loc": "New York, NY",
-  "posted_ts": 1788448790.0,
   "score": 20,
   "last_result": "(no report)",
   "last_unanswered": []
@@ -386,19 +360,6 @@
   "loc": "Mountain View, CA",
   "posted_ts": 1789141359.0,
   "score": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.eu.greenhouse.io/stubhubinc/jobs/4978935101",
-  "tag": "stubhubinc_engineering_manager_consumer_prod",
-  "company": "stubhubinc",
-  "title": "Engineering Manager - Consumer Product (Event)",
-  "comp": null,
-  "loc": "New York, New York, United States",
-  "posted_ts": 1789577668.0,
-  "score": 12,
   "last_result": "(no report)",
   "last_unanswered": []
  }
