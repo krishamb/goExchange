@@ -671,7 +671,7 @@ async def fill_page(page, job):
     return missing
 
 # ---- My Experience
-WORK_ENTRY = {"jobTitle": "CTO & Technical Co-Founder", "companyName": P["org"], "start": (1, 2023)}   # current role since 2023 (rules: start month January)
+WORK_ENTRY = {"jobTitle": "CTO & Technical Co-Founder", "companyName": P["org"], "location": "Santa Clara, CA", "start": (1, 2023)}   # resume: HYPERION AI 2023-, Santa Clara, CA (rules: start month January)
 FIELD_OF_STUDY = ["Computer Science and Engineering", "Computer Science & Engineering", "Computer Science & Engin.", "Computer Science & Engin", "Computer Science and Engin"]
 async def upload_resume(page, job):
     path = resume_for(job.title); base = os.path.basename(path)
@@ -702,6 +702,7 @@ async def fill_entry(page, job, kind, panel):
         if val("companyName") and norm(val("companyName")) != norm(WORK_ENTRY["companyName"]): return None
         for k in ("jobTitle", "companyName"):   # this is the applicant's entry: any other value is corrected
             if k in by and norm(val(k)) != norm(WORK_ENTRY[k]) and await fill(page, fb(k).locator("input").first, WORK_ENTRY[k]): done[k] = WORK_ENTRY[k]
+        if "location" in by and not val("location") and by["location"]["kind"] == "text" and await fill(page, fb("location").locator("input").first, WORK_ENTRY["location"]): done["location"] = WORK_ENTRY["location"]
         if "currentlyWorkHere" in by and await set_check(fb("currentlyWorkHere").locator('input[type="checkbox"]').first, True): done["current"] = "yes"
         want = f"{WORK_ENTRY['start'][0]:02d}/{WORK_ENTRY['start'][1]}"
         if "startDate" in by and val("startDate") != want: done["from"] = await set_date(page, fb("startDate"), month=WORK_ENTRY["start"][0], year=WORK_ENTRY["start"][1])
