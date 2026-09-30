@@ -1173,8 +1173,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             try: await btn.click(timeout=10000)
                             except Exception:
                                 b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
-                            await page.wait_for_timeout(9000)
-                            body=await body_text(page)
+                            for _w in range(15):   # the submit spinner can run for a while after the code: wait for a confirmation, an error or a rejected code
+                                await page.wait_for_timeout(3000)
+                                body=await body_text(page)
+                                if re.search(r"thank you for|thanks for|application (has been |was |is )?(submitted|received|sent|in\b)|success|/confirmation",body+" "+page.url,re.I): break
+                                if re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I) and re.search(r"security code|verification code",body,re.I): break
                             if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
                     # Greenhouse's uploader occasionally drops the file ("Cannot read properties of undefined (reading 'uploadFile')"): re-attach and submit once more
                     errs0=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
