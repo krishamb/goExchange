@@ -249,6 +249,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed (by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) )", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
  (r"difference between a pod and a container", ["A Pod is a logical grouping of one or more Containers with some shared resources."]),   # technical quiz: correct answer
  (r"load balance .{0,60}(url|path)|(url|path)[- ]based routing", ["Application Load Balancer (ALB)","Application Load Balancer","ALB"]),   # technical quiz: ALB routes on URL path (layer 7)
  (r"(three|3) (core )?pillars of observability", ["Metrics, Logs, and Traces","Metrics, Logs and Traces","Logs, Metrics, and Traces","Logs, Metrics and Traces"]),   # technical quiz
@@ -311,7 +312,7 @@ CHOICE_RULES=[
  (r"(currently or were you previously|were you previously|have you previously been) an? (?!(yahoo|jp|jpmorgan|chase|morgan|bloomberg|cadence|bank|merrill|barclays|hyperion|motocho|ankr|mantara|hold|compunnel)\b)\w+ (employee|contractor|intern)", ["No","no"]),   # none of his past employers
  (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools|best describes how you (currently )?use ai tools", ["I am an advanced AI user","I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
  (r"node\.?js", ["Expert (designed/architected large-scale systems)","Expert","Advanced","Yes"]),   # applicant: Node.js expert
- (r"fluent in sql and a (modern )?cloud data platform|databricks", ["Yes","yes"]),   # applicant: SQL and Databricks
+ (r"fluent in sql and a (modern )?cloud data platform|^(?!.*(work(ed|ing)? (for|at|with)|employ|intern\b|contractor|affiliat|relative|family|applied)).*databricks", ["Yes","yes"]),   # applicant: SQL and Databricks
  (r"\breact(\.?js)?\b(?!\s+(to|quickly|when)\b)", ["Yes","yes","Expert","Advanced"]),   # applicant: professional React experience
  (r"tn visa|canadian or mexican citizens", ["No","no"]),
  (r"extent of your (use of )?ai|how (often|much) do you use ai (tools )?(in|for) your work|empowering every employee with ai", ["Extensively","Daily","Very often","Frequently"]),   # applicant uses AI tools daily in engineering work (resume)
