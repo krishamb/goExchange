@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://avathon.com/company/careers-job-listing/?gh_jid=4737085005",
-  "tag": "avathon_engagement_director_forward_deployed",
-  "company": "avathon",
-  "title": "Engagement Director - Forward Deployed Engineering",
-  "comp": "$170,000 - $220,000 ",
-  "loc": "Austin, Texas, United States; Pleasanton, California, United States",
-  "posted_ts": 1790179247.0,
-  "score": 21,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.datavant.com/about/careers/open-roles/job?gh_jid=5425428008",
   "tag": "datavant2_staff_ml_platform_engineer",
   "company": "datavant2",
@@ -22,8 +9,11 @@
   "loc": "Remote - United States ",
   "posted_ts": 1790349024.0,
   "score": 20,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have a High School Diploma or Equivalent (GED)?",
+   "By submitting your application you confirm that the information you provide is a"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,8 +25,11 @@
   "loc": "London - Hybrid; New York - Hybrid; San Francisco Bay Area - Hybrid",
   "posted_ts": 1790343574.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you are based in the USA, please confirm in which state you will reside and w",
+   "I confirm that all information I submit in my application and during the hiring "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -48,47 +41,10 @@
   "loc": "Pittsburgh, PA, Palo Alto, CA, Detroit, MI",
   "posted_ts": 1790260140.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/impiricus/jobs/5432801008",
-  "tag": "impiricus_ai_solutions_architect",
-  "company": "impiricus",
-  "title": "AI Solutions Architect",
-  "comp": "$165,000 - $210,000. ",
-  "loc": "Atlanta, GA, New York, NY, or Remote, USA",
-  "posted_ts": 1790187623.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://avathon.com/company/careers-job-listing/?gh_jid=4737087005",
-  "tag": "avathon_technical_architect_forward_deployed",
-  "company": "avathon",
-  "title": "Technical Architect - Forward Deployed Engineering",
-  "comp": "$170,000 - $220,000 ",
-  "loc": "Austin, Texas, United States; Pleasanton, California, United States",
-  "posted_ts": 1790179504.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.itradenetwork.com/jobs/5362655008?gh_jid=5362655008",
-  "tag": "itradenetworkinc_head_of_engineering",
-  "company": "itradenetworkinc",
-  "title": "Head of Engineering",
-  "comp": "$235,000.00 - $261,666.00",
-  "loc": "Charlotte, NC; Bay Area, CA",
-  "posted_ts": 1790172252.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you presently authorized under U.S. immigration laws to work in the United S"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -100,8 +56,10 @@
   "loc": "US Remote",
   "posted_ts": 1790371943.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What state do you currently live in?"
+  ]
  },
  {
   "ats": "greenhouse",
