@@ -15,8 +15,10 @@
   "tier": 1,
   "dom": 2,
   "skill_hits": 9,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you identify as LGBTQIA (Lesbian, Gay, Bisexual, Transgender, Queer/Questioni"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -34,27 +36,11 @@
   "tier": 1,
   "dom": 2,
   "skill_hits": 10,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "company": "tensordyne",
-  "title": "Director, AI Systems Solutions Engineering",
-  "loc": "Sunnyvale, CA",
-  "desc": " About Tensordyne Tensordyne is building a new class of AI inference system designed for high-performance, power-efficient deployment of the world\u2019s most demanding generative AI workloads. Our platform combines purpose-built silicon, new AI math, optimized scale-up networking, and memory architecture into a tightly integrated system purpose built for large-scale AI inference. We work with hyperscalers, neoclouds, frontier model developers, enterprises, and infrastructure partners operating at the leading edge of AI. As Tensordyne moves from system development into silicon bring-up, customer validation, beta deployments, and production rollout, we are building the technical customer organization that will sit directly between our engineering teams and the companies deploying the platform. We are looking for an exceptional technical leader to help build and lead that function. The Role Tensordyne is hiring a Director of AI Systems Solutions Engineering to own and grow our most important technical customer engagements. This is a senior, highly technical role for someone who understands modern AI infrastructure from model architecture through accelerator hardware, distributed inference, serving software, and datacenter deployment \u2014 and who can credibly engage with the engineers and architects building the next generation of AI platforms. You will work directly with frontier model builders, hyperscalers, neoclouds, developers, infrastructure partners, and strategic customers as they evaluate and deploy Tensordyne systems. You will also build and lead a small team of exceptional Sales and Solutions Engineers responsible for customer benchmarking, technical evaluation, NPI, model enablement, AI DC architecture, and production deployment. This is not a traditional pre-sales engineering role. The team will operate at the frontier of a rapidly changing technology landscape, working with constantly evolving new models and requirements. The right person will be equally comfortable in a customer architecture review, helping prioritize product capabilities and roadmaps, and leading a technical evaluation with hyperscalers and frontier AI companies. What You Will Own Strategic technical customer engagements: Own the technical relationship with key customers and partners from initial architecture discussions through benchmarking, evaluation, integration, deployment, and expansion. Technical evaluation strategy: Define how Tensordyne demonstrates system performance across KPI's like throughput, tokens/sec/user, ttft, memory utilization, power efficiency, system density, model accuracy/quality, and other relevant inference metrics. AI workload and model architecture engagement: Work with customers and model developers to understand current and emerging HW and model architectures, serving requirements, context lengths, parallelism strategies, model topology, quantization approaches, and inference optimization requirements. Benchmarking and competitive analysis: Maintain a technically rigorous understanding of Tensordyne performance relative to leading GPU and AI accelerator platforms. Ensure customer-facing comparisons are credible, reproducible, current, and aligned with real deployment requirements. Model enablement and optimization: Partner with compiler, runtime, kernel, systems, and SDK teams to bring important customer models and workloads onto the Tensordyne platform and identify opportunities for performance improvement. Forward deployment: Lead technical PoCs, remote evaluations, on-premises beta deployments, integration programs, and production readiness efforts with strategic customers. Customer-to-product feedback loop: Translate recurring customer requirements into clear priorities for the SDK, compiler, runtime, inference server, model support, orchestration, networking, observability, and system architecture teams. Technical market intelligence: Stay deeply current on model architectures, inference techniques, accelerator roadmaps",
-  "url": "https://job-boards.greenhouse.io/tensordyne/jobs/8857433002",
-  "posted_ts": 1790723689.0,
-  "comp": null,
-  "where": "bay",
-  "score": 0.37,
-  "tag": "tensordyne_director_ai_systems_solutions_eng",
-  "found_on": "greenhouse_api",
-  "tier": 1,
-  "dom": 1,
-  "skill_hits": 10,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please disclose any outside business activities in which you participate that ma",
+   "Are you willing to work in our New York office?"
+  ]
  },
  {
   "ats": "greenhouse",
