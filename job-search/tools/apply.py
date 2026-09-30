@@ -213,6 +213,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(new york|nyc|manhattan|brooklyn).{0,100}(5|five) days|(5|five) days.{0,100}(new york|nyc|manhattan|brooklyn)", ["No","no"]),   # applicant: New York only remote or hybrid
+ (r"travel .{0,30}\b(3[0-9]|[4-9][0-9]|100) ?%|\b(3[0-9]|[4-9][0-9]|100) ?% (of the time )?travel|travel (more than|over) 25", ["No","no"]),   # applicant: travel up to 25%
  (r"country ?/ ?(us[- ])?state|state ?/ ?country|country (and|&) state|country or (us )?state", ["United States - California","United States - CA","US - California","USA - California","California, United States","California"]),
  (r"^are you currently (employed|working)( full[- ]time)?\??\*?$|current(ly)? employment status|what is your employment status|^employment status", ["Yes","Employed","Employed full-time","Currently employed","Full-time employed","Employed, full-time"]),   # applicant: CTO at Hyperion AI (current)
  (r"when (can|could|would) you (be able to )?(start|join|begin)|earliest (possible )?start|available to start|start date", ["2 weeks","Within 2 weeks","Two weeks","Less than 2 weeks","2-4 weeks","Within 1 month","Less than 1 month","1 month","Within 30 days"]),
@@ -312,7 +314,7 @@ CHOICE_RULES=[
  (r"(located|based|reside|residing|live|living) in (north america|the americas|the us or canada|us or canada|canada or the (us|united states))", ["Yes","yes"]),
  (r"authori[sz]ed? .{0,40}without (company |employer |visa |any )?sponsorship|without (company |employer |visa )?sponsorship|legal(ly)? authori[sz]ation to work in the (us|u\.s\.|united states)", ["Yes","yes"]),   # US citizen: authorized without sponsorship
  (r"(require|need|will you .{0,30}require) .{0,30}(work authori[sz]ation|visa|sponsorship|immigration)", ["No","no"]),   # US citizen: will never require work authorization / sponsorship (Wellfound's standard question)
- (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["No","no"]),   # applicant: no fully on-site 5-day roles
+ (r"(5|five) days? (per|a|each) week|five days a week|5 days/week|(5|five)[- ]days? (on-?site|in[- ]office|in[- ]person)", ["Yes","yes"]),   # applicant: any work mode in the Bay Area (NYC on-site roles are filtered out before applying)   # applicant: no fully on-site 5-day roles
  (r"engineering blog|influence your decision|how much did .{0,60}influence", ["3 = Neutral","Neutral","3","Moderate","4 = Moderate"]),   # marketing-attribution scale questions
  (r"level of experience with (ai|llm|genai|generative ai|ai tools|coding assistants)|experience with ai (tools|coding)|proficien(cy|t) with ai|how (often|much) do you use ai", ["4 - Cross-functional","Cross-functional","Expert","Advanced","Extensive","Daily","Every day","Power user","5","4"]),   # AI-tooling experience scale (not an AI-disclosure question)
  (r"personally built|built and (operated|shipped|deployed)|(built|shipped|deployed|operated) .{0,30}(ai agent|agentic|llm|ml model|machine learning).{0,30}(production|in prod)|production (ai|ml|llm|agent)", ["Yes","yes"]),   # hands-on AI/agent production experience
