@@ -241,6 +241,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"staff[- ]level|(principal|staff)[- ](or equivalent|equivalent)|cross-team (scope|technical leadership)|span(s|ning)? multiple teams", ["Yes","yes"]),   # CTO, Chief Architect, VP / Lead Architect roles
+ (r"(currently )?(have|hold|on) (a )?temporary (work )?(authori[sz]ation|visa|permit|status)|temporary work authori[sz]ation", ["No","no"]),   # applicant: US citizen
  (r"(?<![a-z0-9])(solidity|smart contracts?|tokio|golang|rust|c\+\+)(?![a-z0-9])", ["Yes","yes","Expert","Advanced","Extensive","Hands-on","Both hands-on","Both"]),   # applicant: his stack (C++, Rust/Tokio, Go, C#/.NET, Python, scripting, Solidity, TypeScript/JS, React.js)
  (r"(?<![a-z0-9])(c#|\.net|dotnet|asp\.net|azure)(?![a-z0-9])", ["Yes","yes","Expert","Advanced","Extensive","Hands-on","Both hands-on","Both","10\u201314 years","10-14 years","10+ years","More than 10 years","15+ years"]),   # applicant: C#, .NET and Azure are his stack (React.js itself is ~13 years old, so no 15+ claim first)
  (r"describe your experience with twitch", ["Viewer - I primarily watch content with minimal chat participation","Viewer"]),   # applicant: uses Twitch
@@ -249,7 +251,7 @@ CHOICE_RULES=[
  (r"since obtaining your most recent citizenship.{0,80}permanent resident", ["No","no"]),
  (r"considered for future (opportunities|roles|positions)|keep (me|my (application|information)) (on file|for future)", ["Yes","yes"]),
  (r"^are you open to relocation\??\s*$", ["San Francisco, CA","San Francisco","Bay Area","No, but I'm open to a remote position","Yes","yes"]),   # applicant lives in Santa Clara: the Bay Area office needs no move
- (r"languages? (do )?you speak|which languages you speak|spoken languages?|languages? (in addition to|other than|besides) english", ["Tamil","Hindi","English"]),   # applicant: English, Tamil, Hindi
+ (r"languages? (do )?you speak|which languages you speak|spoken languages?|languages? (in addition to|other than|besides) english", ["Tamil (India)","Tamil","Hindi","Indian (Hindi)","English"]),   # applicant: English, Tamil, Hindi
  (r"system design and architecture fundamentals|comfort(able)? moving across (different parts of )?the stack|full[- ]stack (comfort|range)", ["Yes","yes"]),
  (r"completed an application for any other opportunities at gallup", ["No","no"]),   # no earlier Gallup application
  (r"(willing|able) to provide .{0,20}(professional )?references|provide (2|3|two|three|2-3).{0,10}references", ["Yes","yes"]),
