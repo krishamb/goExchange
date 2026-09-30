@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/lilasciences/jobs/4377936009",
-  "tag": "lilasciences_ml_engineer_applied_ai",
-  "company": "lilasciences",
-  "title": "ML Engineer, Applied AI",
-  "comp": null,
-  "loc": "Cambridge, MA USA; San Francisco, CA USA",
-  "posted_ts": 1788890586.0,
-  "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/openteams/jobs/4729704005",
   "tag": "openteams_engineering_architect",
   "company": "openteams",
@@ -22,8 +9,10 @@
   "loc": "United States - Remote",
   "posted_ts": 1788284203.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which option best describes your current U.S. security-clearance status?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,8 +24,10 @@
   "loc": "Boston, MA / Remote",
   "posted_ts": 1790002396.0,
   "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe one data/analytics pipeline or automation you built that you'd design d"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -48,8 +39,12 @@
   "loc": "New York, N.Y., Washington, D.C., or San Francisco, C.A.",
   "posted_ts": 1788547721.0,
   "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How many years of relevant, full-time experience do you have?",
+   "Do you have prior experience working in a communications or marketing agency?",
+   "I identify as currently living with the following disabilities:"
+  ]
  },
  {
   "ats": "greenhouse",
