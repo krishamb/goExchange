@@ -57,10 +57,8 @@
   "loc": " -REMOTE, USA-",
   "posted_ts": 1788453396.0,
   "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
+  "last_result": "sh to answer | By checking this box, I consent to Smartsheet collecting, storing, and processing my ",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -74,8 +72,7 @@
   "score": 16,
   "last_result": "NOT SUBMITTED: unanswered required questions",
   "last_unanswered": [
-   "Do you require any special accommodations during the interview process (for exam",
-   "Location (City)"
+   "Do you require any special accommodations during the interview process (for exam"
   ]
  },
  {
