@@ -9,21 +9,13 @@
   "loc": "Chicago, Illinois; San Francisco, California",
   "posted_ts": 1789395725.0,
   "score": 15,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/pathward/jobs/6183359004",
-  "tag": "pathward_software_engineer_principal_aws_gro",
-  "company": "pathward",
-  "title": "Software Engineer Principal (AWS Group)",
-  "comp": "$104,000\u2013 $174,000 ",
-  "loc": "Remote",
-  "posted_ts": 1789136971.0,
-  "score": 15,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you authorised to work in the country in which this role is located? (Fin sp",
+   "Current Location",
+   "Please email me about future job openings",
+   "US Export Control laws 2026: In which country did you obtain citizenship, nation"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,10 +27,7 @@
   "loc": "United States (Remote);",
   "posted_ts": 1788454014.0,
   "score": 13,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School",
-   "What is your highest level of school you have completed or the highest degree yo"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  }
 ]
