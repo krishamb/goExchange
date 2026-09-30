@@ -117,23 +117,34 @@ async def listbox_choose(page, button, prefs, label):
     except Exception:
         return None, []
 async def prompt_choose(page, box, typed, prefs, label):
-    """Workday prompt / multiselect search box: type, wait, pick a matching [data-automation-id=promptOption]."""
+    """Workday multiselect prompt (e.g. How Did You Hear About Us?): open it, click the matching menu item (drilling
+    into a category when it opens a sub-list), and verify the field now shows '1 item selected'."""
+    field = box.locator("xpath=ancestor-or-self::*[starts-with(@data-automation-id,'formField-')][1]")
+    async def items():
+        loc = page.locator('[data-automation-id="menuItem"][role="option"]:visible')
+        n = await loc.count(); t = []
+        for i in range(min(n, 120)):
+            try: t.append((await loc.nth(i).inner_text()).strip())
+            except Exception: t.append("")
+        return loc, t
+    async def selected():
+        try: return re.search(r"[1-9]\d* items? selected", await field.inner_text(timeout=2000)) is not None and not re.search(r"^\s*0 items selected", await field.inner_text(timeout=2000))
+        except Exception: return False
     try:
-        await box.scroll_into_view_if_needed(timeout=3000); await box.click(timeout=3000)
-        await box.fill(""); await box.type(typed, delay=30); await box.press("Enter"); await page.wait_for_timeout(1500)
-        opts = page.locator(f'{A("promptOption")}:visible, {A("promptLeafNode")}:visible, [role="option"]:visible')
-        n = await opts.count(); texts = []
-        for i in range(min(n, 80)):
-            try: texts.append((await opts.nth(i).inner_text()).strip())
-            except Exception: texts.append("")
-        usable = mask_hear(texts, label)
-        for pref in prefs:
-            k = best_index(usable, pref)
-            if k is not None:
-                await opts.nth(k).click(timeout=4000); await page.wait_for_timeout(600)
-                await page.keyboard.press("Escape"); return texts[k], texts
-        await page.keyboard.press("Escape")
-        return None, texts
+        await box.scroll_into_view_if_needed(timeout=3000); await box.click(timeout=3000); await page.wait_for_timeout(1500)
+        picked = None
+        for depth in range(3):
+            loc, texts = await items()
+            usable = mask_hear(texts, label)
+            k = next((best_index(usable, p) for p in prefs if best_index(usable, p) is not None), None)
+            if k is None and depth > 0:   # inside a category: take its first real option
+                k = next((i for i, t in enumerate(usable) if t), None)
+            if k is None: break
+            picked = texts[k]
+            await loc.nth(k).click(timeout=4000); await page.wait_for_timeout(1500)
+            if await selected(): break
+        await page.keyboard.press("Escape"); await page.wait_for_timeout(300)
+        return (picked if await selected() else None), []
     except Exception:
         return None, []
 
@@ -204,6 +215,8 @@ async def fill_page(page, job):
         elif fid in ("addressSection_addressLine1", "addressLine1"):
             if f["req"]: missing.append(lab or fid)   # applicant: city only, no street address
             continue
+        elif fid in ("phone-extension", "phoneExtension") or re.search(r"extension", low):
+            continue
         elif fid in ("phone-number", "phoneNumber"): done = await fill(page, box.locator("input").first, re.sub(r"\D", "", P["phone"])[-10:]) and P["phone"]
         elif fid in ("phone-device-type", "phoneType"):
             done, _ = await listbox_choose(page, box.locator('button[aria-haspopup="listbox"]').first, ["Mobile", "Cell", "Personal Cell", "Home"], lab)
@@ -212,9 +225,8 @@ async def fill_page(page, job):
         elif fid in ("country", "countryDropdown"):
             done, _ = await listbox_choose(page, box.locator('button[aria-haspopup="listbox"]').first, ["United States of America", "United States"], lab)
         elif fid in ("source", "sourcePrompt") or re.search(r"how did you hear", low):
-            b = box.locator(f'{A("searchBox")}, input').first
-            done, _ = await prompt_choose(page, b, "Website", HEAR_PREFS, lab)
-            if not done: done, _ = await prompt_choose(page, b, "Career", HEAR_PREFS, lab)
+            b = box.locator('input').first
+            done, _ = await prompt_choose(page, b, "", HEAR_PREFS, lab)
         elif fid in ("previousWorker", "candidateIsPreviousWorker") or re.search(r"previously (been )?(employed|worked)|former employee|worked for .{0,40} before", low):
             done = await pick_radio(page, box, ["No"], lab)
         elif fid in ("linkedinQuestion",) or "linkedin" in low: done = await fill(page, box.locator("input").first, P["linkedin"]) and P["linkedin"]
@@ -249,8 +261,14 @@ async def pick_radio(page, box, prefs, lab):
     for pref in prefs:
         k = best_index(mask_hear(texts, lab), pref)
         if k is not None:
-            try: await radios.nth(k).check(timeout=3000)
-            except Exception: await radios.nth(k).evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]');(l||el).click()}")
+            rid = await radios.nth(k).get_attribute("id")
+            try:
+                if rid: await page.locator(f'label[for="{rid}"]').first.click(timeout=3000)
+                else: await radios.nth(k).click(force=True, timeout=3000)
+            except Exception:
+                await radios.nth(k).evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]');(l||el).click()}")
+            await page.wait_for_timeout(300)
+            if not await radios.nth(k).is_checked(): return None
             return texts[k]
     return None
 
