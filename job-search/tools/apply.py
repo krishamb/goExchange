@@ -204,6 +204,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"how (frequently|often) (have|do|did) you (personally )?(participate|participated|lead|led|conduct|conducted|review|reviewed|write|written|wrote|code|coded|contribute|contributed|design|designed|run|ran)", ["Weekly","Frequently","Very frequently","Regularly","Often","Multiple times a week","Daily","Monthly"]),
  (r"which .{0,30}hub (are )?you (are )?(currently )?based|hub you are currently based out of|which (of our )?(offices?|hubs?) (are you|do you) (currently )?(based|located|live)", ["Greater San Francisco Bay Area","San Francisco Bay Area","Bay Area","San Francisco","SF Bay Area"]),
  (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", ["__ASK__"]),   # a certification that the applicant filled the form personally: theirs to make
  (r"king'?s cross|london office|(office|days a week) in (our )?(london|toronto|vancouver|dublin|berlin|paris|amsterdam|singapore|bangalore|bengaluru|tel aviv)", ["__ASK__"]),   # a non-US office question on a US role: the applicant decides
@@ -385,7 +386,7 @@ CHOICE_RULES=[
  (r"degree|education|highest level", ["Bachelor of Engineering","Bachelor's Degree","Undergraduate/Bachelor's degree","B.E.","BE","Bachelor of Technology","B.Tech","Bachelor of Science","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science","College Degree","4-year degree","Four-year degree","University degree"]),
  (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
- (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
+ (r"been employed by|employed by .* in the past|(worked|employed|interviewed|applied|contracted|consulted) .{0,60}in the past|in the past .{0,40}(worked|employed|interviewed|applied)", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
