@@ -58,6 +58,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(work|company|business|corporate|former|previous|prior) e-?mail|e-?mail .{0,30}(while|when) (you )?(work|were employed)|what was your .{0,20}e-?mail", "N/A"),   # never his personal email as a former-employer work address
+ (r"if applying to (a )?remote (us )?location,? what state", "California"),
  (r"student or temporary visa|temporary visa|(visa|opt|cpt) (type|expir|end date)|f-?1 opt", "N/A (I am a US citizen)"),
  (r"where (are )?you (are )?currently employed|(name of )?your current employer|which company (are you|do you) (currently )?work", "Hyperion AI"),
  (r"title of your current (position|role|job)|your current (job )?title", "CTO & Technical Co-Founder / Principal Architect"),
@@ -261,6 +263,15 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
+ (r"are you (currently )?in the (reserves|national guard)", ["No","no"]),
+ (r"if this role or future roles require relocation", ["I am willing to relocate and will self relocate","I am willing to relocate","Yes"]),
+ (r"work authori[sz]ation (is )?based on .{0,80}(spouse|h-?1b|h-?4|l-?2|dependent)", ["No","no"]),   # US citizen
+ (r"did you answer .no. to question 1 and/or .yes. to question", ["No","no"]),
+ (r"live in or (are )?able to relocate to the location (this|the) job", ["Yes","yes"]),
+ (r"interviewed (at|with) .{0,40}within the (last|past) \d+ months", ["No","no"]),
+ (r"select if you were a previous .{0,30}employee", ["I have never been employed","Never employed","No","I was never employed"]),
+ (r"i confirm that my answers .{0,80}(complete|accurate|true)", ["Yes","yes","I confirm","I agree"]),
  (r"tangible factors .{0,60}(important|matter)|(factors|things) (are|matter) most (important )?to you when considering", ["Compensation","Leadership","Career Growth","Culture","Company Outlook","Remote Work"]),   # multi-select (Motive)
  (r"willing to provide (the )?information .{0,120}export|provide information necessary to comply with .{0,40}export", ["Yes","yes"]),   # US citizen: willing to provide export-control information
  (r"when would you be available to relocate|available to relocate to the (san francisco )?bay area|relocate to the (san francisco )?bay area,? when", ["I already live in the Bay Area","Already in the Bay Area","Already local","N/A","Immediately","Now","October 2026","November 2026"]),   # he already lives in Santa Clara (Bay Area)
@@ -524,7 +535,7 @@ CHOICE_RULES=[
  (r"(which|what) (departments?|teams?|functions?|areas?) (are|would) you (be )?interested in|departments? of interest", ["Engineering","Software Engineering","Technology","Engineering & Technology","Product & Engineering","Data Science","Data","Research & Development","IT"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
- (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish","Asian","Asian (Not Hispanic or Latino)","Asian or Asian American"]),   # applicant: Asian where no decline option exists
+ (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Do not wish to identify","I do not wish to identify","I do not wish to answer","Decline to State","Decline to state","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish","Asian","Asian (Not Hispanic or Latino)","Asian or Asian American"]),   # applicant: Asian where no decline option exists
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
  (r"support of .{0,40} to maintain (that |your )?(work )?authori[sz]ation|maintain (that |your )?(work )?authori[sz]ation|visa support|immigration support", ["No","no"]),
  (r"how much notice|notice period|notice do you (require|need)", ["2 weeks","Two weeks","2 weeks or less","Less than 2 weeks","1-2 weeks","Less than 1 month","Within 1 month","Less than 30 days"]),   # applicant: two weeks' notice
@@ -532,7 +543,7 @@ CHOICE_RULES=[
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|ITAR|EAR", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
- (r"veteran|military", ["I am not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
+ (r"veteran|military", ["I am not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","I do not wish to self-identify","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
