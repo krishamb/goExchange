@@ -254,6 +254,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"security principle .{0,60}(ai agent|agents?|external tools)|most important when giving an ai agent access", ["Least privilege","Principle of least privilege"]),   # technical quiz: least privilege
+ (r"which .{0,40}office (location/?s?|locations?) (are you|would you be) (open|willing|able)|office locations? .{0,20}(open to|willing to) work(ing)? (out of|from|in)", ["San Francisco","San Francisco, CA","SF Bay Area","Bay Area","Palo Alto","Mountain View","Sunnyvale","San Jose","Santa Clara","Menlo Park","Oakland","New York","New York, NY","NYC","Remote","Neither","None of the above","None"]),   # Bay Area or NYC offices only; otherwise remote / neither
  (r"personally worked hands-on with in the last|worked hands-on with in the last \d+ years", ["AWS multi-account","Terraform or equivalent IaC","Kubernetes","Self-managed CI/CD","Ruby or Python backend","Relational databases at scale (RDS or similar)"]),   # his stack (AWS, Terraform, Kubernetes, CI/CD, Python, Postgres)
  (r"^which do you have experience with\?\s*select all that apply", ["Internal or external audit controls","Vendor negotiation and budget ownership","Healthcare or benefits","Backend systems powering mobile or consumer apps"]),   # regulated-bank audits, CTO budget, healthcare (applicant), Yahoo Finance consumer backends
  (r"willing to work (in|from|at) (our|the) (new york|nyc|ny) office|work (in|from) (our|the) (new york|nyc) office", ["Yes","yes","Hybrid","Remote"]),   # NYC roles are queued only when hybrid or remote; applicant accepts NYC hybrid and travel
