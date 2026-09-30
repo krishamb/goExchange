@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "http://prizepicks.com/position?gh_jid=7992819003",
-  "tag": "prizepicks_staff_data_platform_engineer",
-  "company": "prizepicks",
-  "title": "Staff Data Platform Engineer",
-  "comp": "$200,000 to $220,000. ",
-  "loc": "Atlanta, GA preferred, Remote",
-  "posted_ts": 1789395975.0,
-  "score": 16,
-  "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/gametimeunited/jobs/5276110008",
   "tag": "gametimeunited_sr_ai_engineer_cx",
   "company": "gametimeunited",
@@ -22,8 +9,10 @@
   "loc": "United States - Remote",
   "posted_ts": 1789788643.0,
   "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you currently reside in or will you be relocating to any of the following sta"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,34 +24,11 @@
   "loc": "Hybrid (NYC / Austin)",
   "posted_ts": 1789137129.0,
   "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.eu.greenhouse.io/datavations/jobs/4968290101",
-  "tag": "datavations_forward_deployed_engineer",
-  "company": "datavations",
-  "title": "Forward Deployed Engineer",
-  "comp": "$130,000 - $170,000\u00a0",
-  "loc": "Remote",
-  "posted_ts": 1788455370.0,
-  "score": 14,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://pluribusdigital.com/join/openings?gh_jid=7981569003",
-  "tag": "pluribusdigital_director_software_engineerin",
-  "company": "pluribusdigital",
-  "title": "Director, Software Engineering",
-  "comp": "$190,000 - 205,000 ",
-  "loc": "Remote",
-  "posted_ts": 1788175091.0,
-  "score": 14,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you strong in Python, with solid Java experience?",
+   "Have you spent most of your recent career in enterprise architecture or governan"
+  ]
  },
  {
   "ats": "greenhouse",
