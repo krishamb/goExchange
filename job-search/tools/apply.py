@@ -213,6 +213,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"country ?/ ?(us[- ])?state|state ?/ ?country|country (and|&) state|country or (us )?state", ["United States - California","United States - CA","US - California","USA - California","California, United States","California"]),
  (r"^are you currently (employed|working)( full[- ]time)?\??\*?$|current(ly)? employment status|what is your employment status|^employment status", ["Yes","Employed","Employed full-time","Currently employed","Full-time employed","Employed, full-time"]),   # applicant: CTO at Hyperion AI (current)
  (r"when (can|could|would) you (be able to )?(start|join|begin)|earliest (possible )?start|available to start|start date", ["2 weeks","Within 2 weeks","Two weeks","Less than 2 weeks","2-4 weeks","Within 1 month","Less than 1 month","1 month","Within 30 days"]),
  (r"if you selected .{0,10}two or more races|check all racial categories", ["Asian","Asian (Not Hispanic or Latino)"]),   # required follow-up (SoFi): the applicant's answer
