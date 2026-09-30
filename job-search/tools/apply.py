@@ -243,6 +243,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(meet|satisfy|have) (each of |all of |all )?the (basic|minimum|required) qualifications", ["Yes","yes"]),   # applicant: apply when he meets ~70%+ of the role
+ (r"affiliate/subsidiary with which you were employed|which (affiliate|subsidiary) (were you|you were) employed", ["N/A","Not applicable","None"]),   # never employed there
  (r"(healthcare|health insurance|senior care).{0,120}another highly regulated industry", ["Yes \u2014 another highly regulated industry","Yes - another highly regulated industry","Yes, another highly regulated industry"]),   # banking, trading and payments are highly regulated
  (r"(how many )?years (have you|of|in) (directly |people |engineering )?(managed|managing|management|led|leading|supervis\\w+)|how many years .{0,40}(managed|managing|led|leading|supervis\\w+) (software |engineering |technical )?(engineer|team|people|staff|report)|years of (people|engineering|team) management", ["10+ years","10+","More than 10 years","10 or more years","10-15 years","10\u201315 years","8-10 years","8\u201310 years","7+ years","5+ years","Yes","yes"]),   # applicant: 10+ years leading engineers
  (r"highest (level of )?(school|education|degree)|highest degree|most advanced degree", ["Bachelor of Engineering","Bachelor's Degree","Bachelor\u2019s Degree","Bachelor degree","Bachelors degree","Bachelor\u2019s degree","Bachelor's degree","Bachelors","Bachelor","Undergraduate/Bachelor's degree","4-year degree","Four-year degree"]),   # B.E., University of Madras

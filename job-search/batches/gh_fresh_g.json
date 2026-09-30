@@ -1,23 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "yipitdata",
-  "title": "Head of Cloud Infrastructure",
-  "loc": "US Remote",
-  "desc": "About Us: YipitData is the leading market research and analytics firm for the disruptive economy and recently raised up to $475M from The Carlyle Group at a valuation over $1B. We analyze billions of alternative data points every day to provide accurate, detailed insights on ridesharing, e-commerce marketplaces, payments and more. Our on-demand insights team uses proprietary technology to identify, license, clean and analyze the data many of the world\u2019s largest investment funds and corporations depend on. For three years and counting, we have been recognized as one of Inc\u2019s Best Workplaces . We are a fast-growing technology company backed by The Carlyle Group and Norwest Venture Partners. Our offices are located in NYC, Austin, Miami, Denver, Mountain View, Seattle , Hong Kong, Shanghai, Beijing, Guangzhou, and Singapore. We cultivate a people-centric culture focused on mastery, ownership, and transparency. About The Role: We are hiring a Head of Cloud Infrastructure (Director Level) to lead the modernization and scaling of the shared infrastructure that powers YipitData\u2019s data-intensive products and engineering organization. Reporting to the Chief Architect, you will own cloud platform, Site Reliability Engineering, DevOps, and developer experience across an AWS environment built with Kubernetes and Terraform. This is a player-coach leadership role for someone who can set strategy, make sound architectural decisions, remain technically credible, and lead a high-leverage global team. You will unify existing modernization initiatives into a coherent roadmap, establish formal reliability and disaster-recovery practices, and make it faster and easier for engineers to build, deploy, and operate dependable software. As the platform matures, you will also improve cloud efficiency and deliver measurable savings without compromising reliability or developer velocity. You will own shared infrastructure, while our Data Platform, Data Engineering, and application teams will continue to own their applications and data products. Security and Enterprise IT are outside this role\u2019s ownership, and you will partner closely with those functions as well as the Chief Architect and engineering leaders. This is a remote-friendly opportunity that can sit in NYC (where our headquarters is located), one of our office hubs, or anywhere else in the US. However, depending upon where the remote work is performed, income could be subject to New York State tax withholding. We expect US working hours with sufficient overlap to lead and collaborate with a globally distributed team. This role does not require travel. As Our Head of Cloud Infrastructure You Will: Set and execute a prioritized cloud-infrastructure modernization roadmap, bringing existing initiatives together into a clear strategy for AWS, Kubernetes, Terraform, and the broader platform ecosystem. Lead a small, high-leverage global team spanning cloud platform, SRE, and DevOps, combining clear direction and coaching with hands-on technical judgment. Improve developer velocity and platform experience by delivering reliable paved roads, reusable infrastructure capabilities, self-service workflows, and faster feedback loops. Establish and mature formal reliability practices, including service ownership, SLIs and SLOs, incident management, error-budget practices, observability, and accountable post-incident follow-through. Own disaster-recovery strategy and readiness, including recovery objectives, testing, automation, and the closure of identified resilience gaps. Design a sustainable 24/7 operational model, including on-call responsibilities, escalation paths, incident leadership, and healthy collaboration across a global team. Partner with the Chief Architect and engineering leaders to define platform priorities, clarify ownership boundaries, and help application and data teams operate their workloads effectively on shared infrastructure. Define baselines and measure progress across delivery perfor",
-  "url": "https://job-boards.greenhouse.io/yipitdata/jobs/8039925",
-  "posted_ts": 1789771157.0,
-  "comp": "$200K\u2013$250K",
-  "where": "remote",
-  "score": 16,
-  "tag": "yipitdata_head_of_cloud_infrastructure",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Please rank the top 3 skill sets that you'd like to further develop at YipitData"
-  ]
- },
- {
-  "ats": "greenhouse",
   "company": "squarespace",
   "title": "VP of Engineering, Product Platform",
   "loc": "New York City",
