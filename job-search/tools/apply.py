@@ -694,6 +694,13 @@ async def run():
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
+            if not r.get("submitted") and any("uploadFile" in (e or "") for e in (r.get("errors") or [])):
+                # Greenhouse's uploader sometimes fails to initialise: load the whole form again once
+                print(f"RETRY {job['tag']}: resume uploader error, reloading the form",flush=True)
+                await ctx.close(); await asyncio.sleep(20)
+                ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
+                ctx.set_default_timeout(8000)
+                r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors","code_required","code_source")})
             print(json.dumps(summary[-1]),flush=True)
             await ctx.close()
