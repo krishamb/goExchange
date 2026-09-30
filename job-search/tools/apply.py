@@ -277,7 +277,7 @@ CHOICE_RULES=[
  (r"experience in the creator economy", ["Meta / Instagram / Facebook","YouTube","Other"]),   # applicant: uses Facebook, YouTube, Twitch
  (r"^english language skills|english (language )?(proficiency|level)", ["Fluent (C1)","Fluent","Native (C2)","Native"]),
  (r"^(german|french|spanish|italian|dutch|japanese|korean|mandarin|chinese|portuguese|polish) language skills|(german|french|spanish|italian|dutch|japanese|korean|mandarin|chinese|portuguese|polish) (language )?(proficiency|level)", ["None (A1 / No proficiency)","None","No proficiency"]),
- (r"are you lgbtq", ["Prefer not to indicate","Prefer not to say","I don't wish to answer","Decline to self-identify"]),
+ (r"are you lgbtq|identify as (part of )?(the )?lgbt|lgbtq\w*\+? (community|identity)", ["Prefer not to indicate","Prefer not to say","I don't wish to answer","Decline to self-identify","Decline To Self Identify","I prefer not to answer","Prefer not to answer","I prefer not to say","Decline","Prefer not to disclose"]),
  (r"local to (nyc|new york|the tri-?state|manhattan|brooklyn)|(live|based|located) (in|near) (the )?(nyc|new york|tri-?state) (area|region)", ["No, but willing to relocate to NYC","No, but willing to relocate","No, but I am willing to relocate","Willing to relocate","No, but open to relocating"]),   # applicant: Santa Clara, CA; willing to move to New York
  (r"(meet|satisfy|have) (each of |all of |all )?the (basic|minimum|required) qualifications", ["Yes","yes"]),   # applicant: apply when he meets ~70%+ of the role
  (r"affiliate/subsidiary with which you were employed|which (affiliate|subsidiary) (were you|you were) employed", ["N/A","Not applicable","None"]),   # never employed there
