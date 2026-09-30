@@ -260,6 +260,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"tangible factors .{0,60}(important|matter)|(factors|things) (are|matter) most (important )?to you when considering", ["Compensation","Leadership","Career Growth","Culture","Company Outlook","Remote Work"]),   # multi-select (Motive)
  (r"willing to provide (the )?information .{0,120}export|provide information necessary to comply with .{0,40}export", ["Yes","yes"]),   # US citizen: willing to provide export-control information
  (r"when would you be available to relocate|available to relocate to the (san francisco )?bay area|relocate to the (san francisco )?bay area,? when", ["I already live in the Bay Area","Already in the Bay Area","Already local","N/A","Immediately","Now","October 2026","November 2026"]),   # he already lives in Santa Clara (Bay Area)
  (r"security principle .{0,60}(ai agent|agents?|external tools)|most important when giving an ai agent access", ["Least privilege","Principle of least privilege"]),   # technical quiz: least privilege
