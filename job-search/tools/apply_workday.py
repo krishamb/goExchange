@@ -112,14 +112,29 @@ async def active_step(page):
     return re.sub(r"^(current )?step \d+ of \d+\s*", "", await step_raw(page), flags=re.I).strip()
 LOADING = f'{A("applyFlowLoadingPage")}:visible, {A("loadingIndicator")}:visible'
 BUSY_JS = r"""()=>{const m=document.querySelector('[data-automation-id="applyFlowPage"]')||document.body; return /(^|\n)\s*Loading\s*(\n|$)/.test(m.innerText||'')}"""
-async def settle(page, secs=30):
-    """Wait until the current step has rendered: Workday first shows a loading page, then 'Loading' placeholders."""
-    end = time.time() + secs
+SNAP_JS = r"""()=>{
+  const t=document.body.innerText||'';
+  if (/something went wrong|please refresh the page|already applied for this job|you.ve already applied/i.test(t)) return 'page:'+t.length;
+  const r=document.querySelector('[data-automation-id="applyFlowReviewPage"]'); if (r) return 'review:'+r.innerText.length;
+  const f=[...document.querySelectorAll('[data-automation-id^="formField-"]')].filter(e=>e.offsetParent);
+  if (!f.length) return document.querySelector('[data-automation-id="signInContent"], [data-automation-id="jobPostingPage"]')? 'other':'';
+  return f.map(e=>e.getAttribute('data-automation-id')+'='+[...e.querySelectorAll('input,textarea,button')].map(i=>i.value||i.innerText||'').join('|')+(e.querySelectorAll('[data-automation-id="selectedItem"]').length)).join(';');}"""
+async def settle(page, secs=45):
+    """Wait until the current step has rendered AND its saved values have arrived. After a sign-in or a reload Workday
+    shows the progress bar first (no fields, no loading sign), then a loading page / 'Loading' placeholders, then the
+    fields, and the draft's values a moment later (NVIDIA: Phone Device Type ~1 s after the rest). Filling earlier
+    fills a blank form over the draft ('A phone number already exists for this application'). So: no loading sign,
+    and the step's fields (or the review) unchanged over two polls."""
+    end, last, stable = time.time() + secs, None, 0
     while time.time() < end:
         await page.wait_for_timeout(700)
         try:
-            if await page.locator(LOADING).count() or await page.evaluate(BUSY_JS): continue
-            return True
+            if await page.locator(LOADING).count() or await page.evaluate(BUSY_JS): last, stable = None, 0; continue
+            snap = await page.evaluate(SNAP_JS)
+            if not snap: last, stable = None, 0; continue
+            stable = stable + 1 if snap == last else 0
+            last = snap
+            if stable >= 2: return True
         except Exception: pass
     return False
 async def recover(page):
@@ -1042,6 +1057,11 @@ async def run_one(ctx, item, s):
             adv = await wait_advance(page, raw)
             if adv == "errors":
                 errs = await form_errors(page)
+                if any(re.search(r"already exists for this application", e, re.I) for e in errs) and ("stale", raw) not in repaired:
+                    # the form was filled before the draft had loaded into it: reload the step and fill it again (once)
+                    repaired.add(("stale", raw)); log(job, f"stale form on '{step}' ({errs[0][:80]}): reloading the step")
+                    await page.reload(wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(3000)
+                    continue
                 if raw in repaired:
                     job.report["errors"] = errs; await page.screenshot(path=f"{OUT}/{job.tag}_wd_error.png", full_page=True)
                     job.report["result"] = "NOT SUBMITTED: form errors"; return job.report
