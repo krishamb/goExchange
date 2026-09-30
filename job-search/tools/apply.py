@@ -273,6 +273,7 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"(engaged|involved|participat\w*) in any (outside|additional|other) (employment|activit|business)|outside (employment|activit\w*|business\w*) .{0,60}(continue|maintain|keep) .{0,30}(if|once|after) (you are )?hired", ["No","no"]),   # consistent with the outside-activities text answer ("None")
  (r"provide verification of (your )?identity|verify your identity (upon|at) hire", ["Yes","yes"]),
  (r"(member of|serving in|in) the (u\.?s\.? )?(national guard|reserves?)\b|national guard or reserves?", ["No","no"]),
  (r"automated tools such as ai .{0,240}opt-?out|prefer not to have your application processed by (these|automated|ai)", ["Opt-in","Opt in","I do not wish to opt out","I do not want to opt out","Do not opt out","No, I do not want to opt out","I consent","I agree","Accept"]),   # the employer's AI screening of applications: not opting out (never Yes/No, which would be ambiguous)
@@ -301,7 +302,7 @@ CHOICE_RULES=[
  (r"hands-on (management|manager|leadership|engineering manager|people manager)( role)?|player[- ]coach", ["Yes","yes"]),   # applicant is a hands-on leader
  (r"export[- ]controlled information|for export[- ]control purposes", ["I am a US Person and can provide a valid, unexpired US Passport or US birth certificate or certificate of naturalization upon request.","I am a US Person and can provide a valid, unexpired US Passport","I am a U.S. citizen","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"(eligible|able) (to|for) (receive|obtain|hold|get)?\s*(a |an )?public trust|public trust (clearance|eligib|position)", ["Yes","yes"]),   # US citizen; Public Trust is a background investigation
- (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*(do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed (by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) ))", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*(do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed,? (or otherwise engaged,? )?(by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) ))", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
  (r"difference between a pod and a container", ["A Pod is a logical grouping of one or more Containers with some shared resources."]),   # technical quiz: correct answer
  (r"load balance .{0,60}(url|path)|(url|path)[- ]based routing", ["Application Load Balancer (ALB)","Application Load Balancer","ALB"]),   # technical quiz: ALB routes on URL path (layer 7)
  (r"(three|3) (core )?pillars of observability", ["Metrics, Logs, and Traces","Metrics, Logs and Traces","Logs, Metrics, and Traces","Logs, Metrics and Traces"]),   # technical quiz
@@ -420,7 +421,7 @@ CHOICE_RULES=[
  (r"agentic|ai-native", ["Yes","yes"]),
  (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"do you have a linkedin( profile)?", ["Yes","yes"]),   # profile link is on the resume (never used as the source)
- (r"high school diploma|ged\b|secondary (school|education)", ["Yes","yes"]),   # B.Tech; completed secondary school
+ (r"high school diploma|\bged\b|secondary (school|education)", ["Yes","yes"]),   # B.Tech; completed secondary school
  (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|information i submit .{0,60}(true|accurate)|information provided .{0,40}(must be )?(accurate|truthful)|misrepresentation may result|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
  (r"staying hands-on|personally (written|shipped|built|wrote) (production )?code|shipping code and building prototypes", ["Yes","yes"]),
  (r"train/serve your own models|own models versus (using )?hosted|hosted ones|self-host(ed)? (models|llms?) (vs|versus|or)", ["Yes","yes"]),   # open-weight serving vs OpenAI APIs (Hyperion, Yahoo)
