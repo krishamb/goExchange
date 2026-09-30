@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"title (you )?(held|hold)|title (held )?at (your )?(most recent|current|last|previous) (employer|company|job)|(most recent|current|last) employer.{0,20}title|position (held|title) at", "CTO & Technical Co-Founder / Principal Architect"),   # a title field, never the company name
  (r"(significant|an?|your) azure (solution|project|architecture|system|platform)|azure solution you|describe .{0,60}\bazure\b", 'A representative example is a C#/.NET data and API platform on Azure. Architecture: ASP.NET Core APIs on Azure App Services, event-driven processing in Azure Functions, Cosmos DB for operational data and Azure Storage for documents and archives, secrets in Key Vault with managed identities, CI/CD in Azure DevOps with staged slot deployments, and Azure Monitor for SLOs, alerting and cost tracking. My responsibilities were the architecture, the service and data contracts, the security model (managed identities, least-privilege RBAC, Key Vault), the CI/CD and rollout design, and hands-on code in the critical paths. For scale, the largest platform I have led was at Yahoo Finance, where as Chief Architect I moved the quotes, charts, portfolios and research platform (about 40M daily and 150M monthly users) from bare metal to the cloud with phased cutovers and rollback plans; I bring the same discipline to Azure.'),
  (r"microservices? architecture you (designed|delivered|built|led)|describe .{0,40}microservices", 'At Yahoo Finance, as Chief Architect, I led the re-architecture of the quotes, charts, portfolios, screeners and research platform (about 40M daily and 150M monthly users) into independently deployable services during its bare-metal-to-AWS migration, across a 75+ engineer organization. The main challenges: scalability under market-open spikes, handled with horizontal scaling, caching of hot quote data and back-pressure; reliability during the migration, handled with phased cutovers, dual-running and a rollback plan for every step; integration across many teams, handled with explicit, versioned service and API contracts and a shared reference architecture; and service communication, where we standardized timeouts, retry budgets, circuit breakers and end-to-end tracing so failures stayed contained. At JPMorgan Chase I applied the same principles to multi-asset execution services, adding journaling and deterministic replay for recovery and testing.'),
  (r"integrat\w* security into|security into (the |your )?(application|development|software)|devsecops|shift(ed|ing)?[- ]left .{0,20}security|security .{0,40}ci/?cd .{0,60}(infrastructure|lifecycle)", 'I build security in from the design stage rather than adding it later. In design reviews we threat-model each service and define its trust boundaries, data classification and auth model up front. In code: secure-coding standards, mandatory peer review, input validation at every API boundary, and no secrets in code. In CI/CD: dependency and container-image scanning, static analysis and secret scanning as gating checks, signed build artifacts, and protected branches with auditable, staged releases. In cloud infrastructure: everything defined as code (Terraform) with policy checks, least-privilege IAM and managed identities, secrets in a vault (Azure Key Vault or AWS Secrets Manager), encryption in transit and at rest, private networking, and centralized audit logging. At JPMorgan Chase, Morgan Stanley and Bank of America/Merrill this ran under strict regulatory change control; at Hyperion AI it covered custody-sensitive reconciliation and key handling for digital-asset systems.'),
@@ -121,11 +122,11 @@ TEXT_RULES=[
  (r"^(street |home |mailing )?address", P["location"]),
  (r"linkedin|linkedln", P["linkedin"]),(r"github", P["github"]),(r"portfolio|website|personal site", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
- (r"current (title|role)|job title|^title$", "CTO & Technical Co-Founder / Principal Architect"),
+ (r"^(?!.*\b(how|describe|explain|tell us|ways?)\b).*(current (title|role)|job title|^title$)", "CTO & Technical Co-Founder / Principal Architect"),
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
  (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$250,000+ base"),   # applicant: $250K+ base
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
- (r"current (occupation|job title|title|role|position)|^occupation|your occupation|what do you (currently )?do for work", "CTO"),   # applicant's answer
+ (r"^(?!.*\b(how|describe|explain|tell us|ways?)\b).*current (occupation|job title|title|role|position)|^occupation|your occupation|what do you (currently )?do for work", "CTO"),   # applicant's answer
  (r"earliest .{0,50}start|when .{0,40}(start|join|begin)|start date|available to start|availability", "Two weeks after an offer (I am currently CTO at Hyperion AI and would give two weeks' notice)"),   # applicant: current role at Hyperion AI, two weeks' notice
  (r"(what is |what's )?your current location|current location|where (are|do) you (currently )?(located|based|live|living|reside)|city,? state", "Santa Clara, California"),   # applicant's answer
  (r"sponsor", "No sponsorship required. I am a US citizen."),   # applicant's answer
@@ -249,7 +250,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
- (r"do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed (by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) )", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*(do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed (by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) ))", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
  (r"difference between a pod and a container", ["A Pod is a logical grouping of one or more Containers with some shared resources."]),   # technical quiz: correct answer
  (r"load balance .{0,60}(url|path)|(url|path)[- ]based routing", ["Application Load Balancer (ALB)","Application Load Balancer","ALB"]),   # technical quiz: ALB routes on URL path (layer 7)
  (r"(three|3) (core )?pillars of observability", ["Metrics, Logs, and Traces","Metrics, Logs and Traces","Logs, Metrics, and Traces","Logs, Metrics and Traces"]),   # technical quiz
@@ -734,7 +735,11 @@ async def choose_react_select(page,control,options_pref,label):
             await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp)
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
-            opts,texts=await visible_options(page); texts=mask_hear(texts,label)
+            opts,texts=await visible_options(page)
+            for _ in range(5):   # async search menus (e.g. the school list) can take a few seconds to load their results
+                if texts and not all(re.search(r"^(loading|searching)",t or "",re.I) for t in texts): break
+                await page.wait_for_timeout(500); opts,texts=await visible_options(page)
+            texts=mask_hear(texts,label)
             hit=best_index(texts,pref)
             if hit is None and texts:
                 # no textual match: maybe options are unfiltered (async search); pick none
