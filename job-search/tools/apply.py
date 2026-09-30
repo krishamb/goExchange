@@ -200,7 +200,7 @@ CHOICE_RULES=[
  (r"prior (healthcare|health care|medical|clinical|pharma\w*|biotech) (industry )?experience|experience in (the )?(healthcare|health care) (industry|space)", ["No","no"]),   # not on the resume
  (r"prior start-?up experience|worked (at|in) (a|an early[- ]stage) start-?up|start-?up experience", ["Yes","yes"]),   # co-founder of Hyperion AI and Motocho; Ankr
  (r"agentic|ai-native", ["Yes","yes"]),
- (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen"]),   # US citizen
+ (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"do you have a linkedin( profile)?", ["Yes","yes"]),   # profile link is on the resume (never used as the source)
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
