@@ -361,7 +361,8 @@ async def listbox_choose(page, button, ranker, typeahead=""):
         except Exception: pass
         return None, []
 async def input_label(inp):
-    try: return (await inp.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]');return (l?l.innerText:((el.closest('label')||el.parentElement||{}).innerText||'')).replace(/\\s+/g,' ').trim()}"))
+    # the label for= the input, else the enclosing label, else the nearest ancestor (up to 4 levels) with a short text
+    try: return (await inp.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l&&l.innerText.trim()) return l.innerText.replace(/\\s+/g,' ').trim(); const c=el.closest('label'); if(c&&c.innerText.trim()) return c.innerText.replace(/\\s+/g,' ').trim(); let p=el.parentElement; for(let i=0;i<4&&p;i++){const t=(p.innerText||'').replace(/\\s+/g,' ').trim(); if(t&&t.length<260) return t; p=p.parentElement;} return '';}"))
     except Exception: return ""
 async def set_check(inp, on):
     try:
@@ -602,7 +603,11 @@ async def fill_field(page, job, f):
             v, texts = await listbox_choose(page, btn, r, typeahead)
             if not v and texts: job.report.setdefault("options", {})[key[:120]] = texts[:20]   # what the list offered, for a rule fix
         elif kind == "radio": v = await pick_radio(page, box, r)
-        elif kind == "checkbox": v = await checkbox_choose(page, box, r)
+        elif kind == "checkbox":
+            v = await checkbox_choose(page, box, r)
+            if not v:   # record what the boxes say, for a rule fix
+                cbs = box.locator('input[type="checkbox"]')
+                job.report.setdefault("options", {})[key[:120]] = [f"{'[x] ' if await cbs.nth(i).is_checked() else ''}{await input_label(cbs.nth(i))}" for i in range(min(await cbs.count(), 12))]
         elif kind == "prompt":
             await prompt_clear(page, box)
             v = await prompt_choose(page, box, prefs, key)
