@@ -36,3 +36,4 @@ account; tell them you are a US citizen if they reply).
 ## Do not apply (applicant instruction)
 
 - Global Settlement Systems (Miami, FL) - Senior Blockchain Engineer: never apply. Blocked in the filler for every queue.
+- Tata Consultancy Services (TCS): never apply to any position. Blocked in the filler for every queue.
