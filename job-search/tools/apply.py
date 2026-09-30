@@ -194,6 +194,9 @@ CHOICE_RULES=[
  (r"when would you be available to relocate|available to relocate", ["October 2026","September 2026","Immediately","Now"]),   # already lives in the Bay Area; available immediately
  (r"interview process .{0,80}(align|work) with your (availability|timeline)|timeline align with your availability", ["Yes","yes"]),
  (r"(professional|production|hands-on) (python|rust|c\+\+|go|golang|java|sql)|(python|rust|c\+\+|golang|sql|kubernetes|aws|gcp|terraform|kafka|pytorch|llm|rag) (development )?experience", ["Yes","yes"]),   # all on the resume
+ (r"prior (healthcare|health care|medical|clinical|pharma\w*|biotech) (industry )?experience|experience in (the )?(healthcare|health care) (industry|space)", ["No","no"]),   # not on the resume
+ (r"prior start-?up experience|worked (at|in) (a|an early[- ]stage) start-?up|start-?up experience", ["Yes","yes"]),   # co-founder of Hyperion AI and Motocho; Ankr
+ (r"agentic|ai-native", ["Yes","yes"]),
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
