@@ -207,6 +207,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"do any of the following apply to you|which of the following (conflicts|disclosures|situations) apply", ["None of the above apply to me.","None of the above apply to me","None of the above","None of these apply to me","None of these","None"]),
  (r"(select|what is|which is|choose) your (current |primary )?time ?zone|^(current )?time ?zone\??:?\*?$", ["US/Pacific","Pacific Time","Pacific","PT","PST","Pacific Time (PT)","America/Los_Angeles"]),
  (r"^state\b|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"require .{0,60}(file|submit) a petition|petition or application for employment|employment[- ]based (status|visa|immigration)", ["No","no"]),
