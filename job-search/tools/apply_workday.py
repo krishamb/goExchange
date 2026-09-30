@@ -249,6 +249,9 @@ FORMER_JOB_Q = re.compile(r"\b(work|company|business|corporate|employee|office|f
 # 'Is your work authorization based on your status as a spouse of an H-1B ...?': the applicant is a US citizen, so a
 # generic 'work authorization -> Yes' rule must never claim a visa-based status (Snap); such a Yes is left for him
 VISA_STATUS_Q = re.compile(r"\b(based on|because of|by virtue of|derived from|depend\w* on|through|status as)\b.{0,60}\b(spouse|dependent|h-?1b|h-?4|l-?1|l-?2|e-?[1-3]|f-?1|j-?1|opt|cpt|ead|tn|visa|asylum|refugee|daca|tps)\b", re.I)
+# 'Do you currently live within commutable distance to the office ...?' names no place, so the rules' 'lives somewhere
+# else -> No' answer does not apply (PayPal San Jose, Snap Palo Alto: he lives in Santa Clara): left for the applicant
+COMMUTE_Q = re.compile(r"\b(live|living|reside|residing|located|based)\b.{0,30}\b(within|in|near|to)\b.{0,50}\b(commut\w*|the office|office location|the location|this location|job location|advertised|listed)", re.I)
 def usable(texts, label):
     """Option texts with the ones the applicant must never pick blanked out: referral / recruiter / event / university /
     LinkedIn sources, 'I identify as a veteran ...' (he is not a veteran), and 'Yes, I have a disability'."""
@@ -552,7 +555,7 @@ async def date_field(page, box, lab):
     d = datetime.date.today()
     return await set_date(page, box, d.month, d.day, d.year)
 
-DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i have|^\s*i have a disability", re.I)
+DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i (have|had) (a |an )?(disabilit|relative|family|conflict|financial|non-?compete|criminal|conviction)|^\s*i have a disability", re.I)   # 'Yes, I have read the Terms' is an acknowledgement, not a disclosure
 ACK = re.compile(r"i (have read|acknowledge|agree|understand|consent|certify|confirm)|terms and conditions|privacy (notice|policy|statement)|^accept\*?$|i accept|by (selecting|checking|clicking) (the|this) (check)?box", re.I)
 class Job:
     def __init__(self, item):
@@ -634,8 +637,10 @@ async def fill_field(page, job, f):
         prefs = prefs_for(key)
         if prefs == ["__ASK__"]: return None
         if not prefs: return kept_unverified()
-        if VISA_STATUS_Q.search(key) and re.match(r"\s*yes", prefs[0], re.I):   # a rule meant for 'are you authorized to work'
+        if (VISA_STATUS_Q.search(key) and re.match(r"\s*yes", prefs[0], re.I)) or (COMMUTE_Q.search(key) and re.match(r"\s*no\b", prefs[0], re.I)):
+            # a generic rule that would make a false statement here (see VISA_STATUS_Q / COMMUTE_Q): the applicant answers
             job.report.setdefault("rule_conflicts", []).append(f"{key[:150]} -> rule says {prefs[0]!r}; left unanswered")
+            if cur: job.report.setdefault("kept_unverified", {})[key[:120]] = cur   # an answer saved by an earlier run stays visible in the report
             return None
         return await choose(prefs)
     if kind == "checkbox":   # one box: an acknowledgement / consent is ticked, a disclosure never is
