@@ -771,8 +771,8 @@ async def choose_react_select(page,control,options_pref,label):
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
             opts,texts=await visible_options(page)
-            for _ in range(5):   # async search menus (e.g. the school list) can take a few seconds to load their results
-                if texts and not all(re.search(r"^(loading|searching)",t or "",re.I) for t in texts): break
+            for _ in range(8):   # async search menus (e.g. the school list) can take a few seconds; "No options" may be stale from the previous search
+                if texts and not all(re.search(r"^(loading|searching|no options|no results)",t or "",re.I) for t in texts): break
                 await page.wait_for_timeout(500); opts,texts=await visible_options(page)
             texts=mask_hear(texts,label)
             hit=best_index(texts,pref)
