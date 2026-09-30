@@ -468,11 +468,13 @@ async def autocomplete_fill(page,h,text,prefer):
         if n: await h.press("ArrowDown"); await h.press("Enter"); await page.wait_for_timeout(500); return "enter"
         await dismiss_menu(page,h); return None   # no suggestions: Enter here would submit the form
     except Exception: return None
-async def choose_select(page,h,options_pref):
+async def choose_select(page,h,options_pref,label=""):
     opts=await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())")
+    usable=mask_hear(opts,label)
     for pref in options_pref:
-        for o in opts:
-            if o and (o.lower()==pref.lower() or pref.lower() in o.lower()):
+        # exact option first, then a leading / whole-word match, then a plain substring for longer preferences
+        cand=[o for o in usable if o and o.lower()==pref.lower()] or [o for o in usable if o and _match(o,pref)] or [o for o in usable if o and len(pref)>=4 and pref.lower() in o.lower()]
+        for o in cand[:1]:
                 try:
                     if await h.is_visible(): await h.select_option(label=o)
                     else: raise RuntimeError("hidden")
@@ -543,6 +545,11 @@ async def open_menu(control,inp):
     except Exception:
         try: await control.click(timeout=3000)
         except Exception: await inp.focus()
+HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |initially )?(hear|learn|find)|\bsource\b|referred",re.I)
+HEAR_BAD=re.compile(r"recruit|employee|referr|refer(ral|red)|event|fair|conference|meetup|friend|colleague|agency|linkedin|university|campus|blog|podcast|hosted",re.I)
+def mask_hear(texts,label):
+    """'How did you hear about us?': never pick an option that claims a referral, an event, a recruiter or LinkedIn."""
+    return [("" if (t and HEAR_Q.search(label or "") and HEAR_BAD.search(t)) else t) for t in texts]
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
@@ -556,7 +563,7 @@ async def choose_react_select(page,control,options_pref,label):
             await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp)
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
-            opts,texts=await visible_options(page)
+            opts,texts=await visible_options(page); texts=mask_hear(texts,label)
             hit=best_index(texts,pref)
             if hit is None and texts:
                 # no textual match: maybe options are unfiltered (async search); pick none
@@ -574,7 +581,7 @@ async def choose_react_select(page,control,options_pref,label):
         opts,texts=await visible_options(page)
         if not texts:
             await inp.press("ArrowDown"); await page.wait_for_timeout(700); opts,texts=await visible_options(page)
-        LAST_OPTIONS[label[:160]]=[t for t in texts if t][:25]
+        LAST_OPTIONS[label[:160]]=[t for t in texts if t][:25]; texts=mask_hear(texts,label)
         for pref in options_pref:
             i=best_index(texts,pref)
             if i is not None:
@@ -1019,7 +1026,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     pref=pref or pick(lab,CHOICE_RULES)
                     if pref==["__ASK__"]: pref=None
                     if pref:
-                        got=await choose_select(page,h,pref); report["chosen"][lab[:60]]=got
+                        got=await choose_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
                         if not got and await is_required(h): report["unanswered"].append({"type":"select","label":lab[:160],"options":(await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())"))[:12]})
                     elif await is_required(h): report["unanswered"].append({"type":"select","label":lab[:160],"options":(await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())"))[:12]})
                 except Exception: pass
@@ -1046,7 +1053,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
                     if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
                         cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
-                        pref=[f"{cn} careers",f"{cn} website",f"{cn}.com",f"{cn} job",cn]+pref
+                        pref=[f"{cn} careers",f"{cn} career site",f"{cn} careers site",f"{cn} website",f"{cn}.com",f"{cn} careers page",f"{cn} job board"]+pref   # never the bare name: it matches "<Company> Recruiter" / "<Company> Employee"
                         if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
                     if not pref:
                         # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
@@ -1183,7 +1190,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         want=pick(q or lab,CHOICE_RULES) or (["Company Website","Careers page","Job Board","Other","Greenhouse"] if is_src else None)
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
-                        if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not re.search(r"linkedin",b[1],re.I)] or members   # never claim LinkedIn as the source
+                        if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not HEAR_BAD.search(b[1])] or members   # never claim LinkedIn, a referral, an event or a recruiter as the source
                         if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
                             # "which environments describe your experience (select all that apply)": tick every option true for the applicant's history
                             ticked=[]
