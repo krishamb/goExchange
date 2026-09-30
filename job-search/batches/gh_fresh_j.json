@@ -13,30 +13,7 @@
   "tag": "block_staff_software_engineer_financial_plat",
   "found_on": "greenhouse_board",
   "domain": "lowlatency",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Have you ever provided any contract work for Block, Inc. or any of its subsidiar",
-   "Accept"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "company": "yugabyte",
-  "title": "Staff Engineer SQL Engine",
-  "loc": "Sunnyvale, CA",
-  "desc": "Yugabyte is the company behind YugabyteDB , the AI-ready, multi-modal, distributed PostgreSQL database for cloud-native apps. Trusted by industry leaders including Shopify, Paramount+, GM, Kroger, Fiserv, and NPCI, YugabyteDB has been deployed in over 100 countries and powers more than 5 million clusters worldwide.\n Together, our hard-working team of experts and our industry-leading technology are uniquely positioned to meet the demands of modern workloads: geo-distributed, ultra-resilient, and built to scale without limits.\n Our Yugabeings (distributed, like our database) span 12+ countries and multiple time zones, sharing expertise from diverse backgrounds and industries.\n Staff Engineer \u2013 Languages & Relational Technologies (LRT) \n Role Overview \n As a Staff Engineer on the Languages & Relational Technologies (LRT) team , you will help design, build, and scale core database features that power YugabyteDB\u2019s SQL layer. You will collaborate with cross-functional engineering teams to solve complex problems affecting distributed query planning, execution, and performance, ensuring YugabyteDB remains robust, reliable, and performance at scale.\n Key Responsibilities \n Lead the design, development, testing, and release of new database features and enhancements in YugabyteDB.\n Write high-quality C/C++ code (and contribute in other languages as needed) with comprehensive automated tests; participate actively in code reviews.\n Identify and implement performance improvements \u2014 including plan optimization, batching/parallelism, and advanced push-downs to data nodes.\n Improve database scalability and throughput as cluster sizes and transaction volumes grow.\n Contribute to the open source YugabyteDB project and help strengthen our distributed SQL capabilities across releases.\n Troubleshoot and resolve correctness, stability, and performance issues in complex distributed query planning and execution paths.\n Mentor and influence other engineers in best practices for database internals, distributed systems, and performance-oriented software development.\n Required Qualifications \n 8+ years of professional experience in software engineering, with a strong foundation in compiled languages such as C/C++ .\n Bachelor\u2019s, Master\u2019s, or PhD in Computer Science (or related field), or equivalent practical experience.\n Deep understanding of systems engineering fundamentals , including operating systems, distributed systems, and databases.\n Experience with database internals, compilers, or query planning/optimization is a strong plus.\n Strong problem-solving skills and the ability to operate effectively in a collaborative, distributed team environment\n Preferred Skills \n Experience building large-scale distributed systems and transactional engines.\n Familiarity with PostgreSQL internals or other relational database engines.\n Contributions to open source database or systems projects.\n Prior leadership in technical architecture, performance tuning, and mentoring engineers.\n We work in a hybrid model, with the team together in our Sunnyvale office 2\u20133 days per week.\n We feel strongly about equal pay for equal work, and transparency in compensation is one way to help achieve that. The cash compensation for this role is market competitive, with a range of USD 150,000 - USD 250,000, inclusive of variable/incentive for some roles. As well as equity (when applicable), and benefits including health plans, retirement plans, and unlimited paid time off (PTO). The pay range for this position is a general guideline only and not a guarantee of compensation or salary. The actual pay will vary based on factors including experience, qualifications, and skill level.\n Equal Employment Opportunity Statement :\n As an equal opportunity employer, Yugabyte is committed to a diverse workforce. Employment decisions regarding recruitment and selection will be made without discrimination based on race, color, religion, national origin, gender, age, sexual orientation, physical or me",
-  "url": "https://job-boards.greenhouse.io/yugabyte/jobs/4651508006",
-  "posted_ts": 1770249993.0,
-  "comp": "",
-  "where": "bay",
-  "score": 25,
-  "tag": "yugabyte_staff_engineer_sql_engine",
-  "found_on": "linkedin",
-  "domain": "cpp",
-  "why": "YugabyteDB SQL engine is C/C++ (Postgres-based distributed SQL); Staff level; Sunnyvale",
-  "relisted_on_job_sites": "within 7 days (LinkedIn, date not shown)",
-  "also_in_other_family_queue": false,
-  "last_result": " on active duty in the U.S. military, ground, naval or air service, participated in a United States ",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
@@ -53,7 +30,7 @@
   "tag": "convera_senior_manager_software_engineering_",
   "found_on": "greenhouse_board",
   "domain": "crossborder",
-  "last_result": "(no report)",
+  "last_result": "elected.Select is focused ,type to refine list, press Down to open the menu, | Select... |  | This f",
   "last_unanswered": []
  }
 ]
