@@ -31,37 +31,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/kalepa/jobs/6181094004",
-  "tag": "kalepa_staff_platform_engineer_infrastructur",
-  "company": "kalepa",
-  "title": "Staff Platform Engineer - Infrastructure",
-  "comp": "$240k \u2013 $300k",
-  "loc": "NYC (Hybrid)",
-  "posted_ts": 1788453525.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What languages are you most comfortable coding in?",
-   "How quickly are you looking to start a new role?",
-   "Do you have experience with AWS?",
-   "Kalepa is a growth stage startup with ambitious goals. We are willing to do what"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8167496",
-  "tag": "smartsheet_sr_software_engineer_ii_ai_engine",
-  "company": "smartsheet",
-  "title": "Sr. Software Engineer II - AI Engineering (Remote Eligible) ",
-  "comp": null,
-  "loc": " -REMOTE, USA-",
-  "posted_ts": 1788453396.0,
-  "score": 16,
-  "last_result": "sh to answer | By checking this box, I consent to Smartsheet collecting, storing, and processing my ",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/censys/jobs/8731018002",
   "tag": "censys_senior_ai_llm_engineer",
   "company": "censys",
