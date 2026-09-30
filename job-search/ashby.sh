@@ -10,6 +10,7 @@
 #   bash ~/ashby.sh indeed    open the Indeed jobs to apply by hand (newest first, answers ready to paste)
 #   bash ~/ashby.sh sites     open the company-website jobs (Workday, iCIMS...) to apply by hand, grouped by domain
 #   bash ~/ashby.sh top       open the top Ashby/Lever roles (leadership, fintech, crypto, AI) to apply by hand in your own browser
+#   bash ~/ashby.sh dice      open the Dice jobs to apply by hand while signed in to Dice (Dice's terms do not allow an agent to apply)
 #   bash ~/ashby.sh ranked    open every Ashby/Lever role posted in the last 7 days, ranked: executive first, fintech/AI first, newest first
 #   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
 #   bash ~/ashby.sh stop      stop all workers
@@ -46,12 +47,13 @@ case "${1:-start}" in
   report) in_repo; bash job-search/run_ashby.sh report ;;
   indeed) update; open "$REPO/job-search/INDEED_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/INDEED_APPLY_BY_HAND.html in your browser" ;;
   top)    update; open "$REPO/job-search/ASHBY_TOP_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/ASHBY_TOP_BY_HAND.html in your browser" ;;
+  dice)   update; open "$REPO/job-search/DICE_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/DICE_APPLY_BY_HAND.html in your browser" ;;
   ranked) update; open "$REPO/job-search/ASHBY_RANKED_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/ASHBY_RANKED_BY_HAND.html in your browser" ;;
   sites)  update; open "$REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html in your browser" ;;
   stop)   in_repo; bash job-search/run_ashby.sh stop ;;
   log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
-  help|-h|--help) sed -n '2,18p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,18p' "$0" ;;
+  help|-h|--help) sed -n '2,19p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,19p' "$0" ;;
 esac
 }
 # the whole file is read before anything runs, so an update that replaces this file mid-run is harmless
