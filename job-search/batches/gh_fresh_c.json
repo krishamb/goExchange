@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/truebill/jobs/8004786003",
-  "tag": "truebill_staff_applied_ai_engineer",
-  "company": "truebill",
-  "title": "Staff Applied AI Engineer",
-  "comp": null,
-  "loc": "San Francisco, CA, Washington, D.C., New York City, NY, Remote (USA)",
-  "posted_ts": 1790278456.0,
-  "score": 29,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Describe the platforms and techniques (if any) where generative AI tools were in"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://buildops.com/careers/job-application?gh_jid=6208094004",
   "tag": "buildops_staff_software_engineer_integration",
   "company": "buildops",
