@@ -433,7 +433,7 @@ async def main():
     q = json.load(open(sys.argv[1])); s = secret()
     async with async_playwright() as p:
         br = await p.chromium.launch(headless=not HEADED)
-        ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
+        ctx = await br.new_context(ignore_https_errors=True, user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
         for n, item in enumerate(q):
             rp = f"{OUT}/{item['tag']}_wd_report.json"
             if os.path.exists(rp) and json.load(open(rp)).get("submitted"): continue
