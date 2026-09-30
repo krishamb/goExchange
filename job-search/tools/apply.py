@@ -684,7 +684,7 @@ def company_keys(tag,company=None):
     ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=4}
 # companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
-NEVER_APPLY=re.compile(r"global[ _-]?settlement[ _-]?systems?|globalsettlement|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+NEVER_APPLY=re.compile(r"global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
 # one company behind two Greenhouse board names (found from the security-code e-mail's company name)
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 def applied_elsewhere(tag,company=None,days=45):
