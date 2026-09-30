@@ -202,6 +202,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"king'?s cross|london office|(office|days a week) in (our )?(london|toronto|vancouver|dublin|berlin|paris|amsterdam|singapore|bangalore|bengaluru|tel aviv)", ["__ASK__"]),   # a non-US office question on a US role: the applicant decides
+ (r"(authori[sz]ed|eligible|able|permitted|allowed) to (lawfully |legally )?work .{0,80}without (the )?(need (for|of) |requiring |requirement (for|of) )?(any |a |visa |employer |company )*sponsor", ["Yes","yes"]),
+ (r"(require|need)\b.{0,100}\bsponsor", ["No","no","No, I do not require sponsorship","I do not require sponsorship"]),
  (r"government official|public official|politically exposed|holder of public office|civil service position", ["No, I am not a current or former Government Official","No, I am not a relative of a government official.","No, I am not","No","None of the above"]),
  (r"sanctions and export controls|please confirm whether any of the below applies to you", ["None of the above","None of these apply to me","No"]),
  (r"if you selected a response to the prior question other than", ["U.S. citizen","US citizen","U.S. Citizen","None of these apply to me"]),
@@ -375,7 +378,7 @@ CHOICE_RULES=[
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
  (r"school|university|college", ["University of Madras","Other"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
- (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science","College Degree","4-year degree","Four-year degree","University degree"]),
+ (r"degree|education|highest level", ["Bachelor of Engineering","Bachelor's Degree","Undergraduate/Bachelor's degree","B.E.","BE","Bachelor of Technology","B.Tech","Bachelor of Science","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science","College Degree","4-year degree","Four-year degree","University degree"]),
  (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
@@ -414,6 +417,14 @@ STILL_VISIBLE_JS=r"""(lab)=>{lab=lab.toLowerCase().replace(/\s+/g,' ').slice(0,4
  for(const e of document.querySelectorAll('label,legend,div,span,p,h3,h4')){ const t=(e.innerText||'').toLowerCase().replace(/\s+/g,' '); if(t.length>400||!t.startsWith(lab)) continue; const r=e.getBoundingClientRect(); if(r.width>0&&r.height>0) return true; }
  return false;}"""
 async def label_of(h): return await h.evaluate(LABEL_JS)
+EDU_DATE_JS=r"""(el)=>{const i=(el.tagName==='INPUT'||el.tagName==='SELECT')?el:(el.querySelector('input,select')||el);
+  const id=i.id||''; if(/^(start|end)-(month|year)--\d/.test(id)) return true;
+  const box=i.closest('[class*=education],[id*=education],[data-section*=education]'); if(!box) return false;
+  return /date|month|year|graduat/i.test((document.querySelector('label[for="'+CSS.escape(id)+'"]')||{}).innerText||i.getAttribute('aria-label')||id);}"""
+async def is_edu_date(h):
+    """An education start/end date field. The resume gives no graduation years, so these are never guessed."""
+    try: return await h.evaluate(EDU_DATE_JS)
+    except Exception: return False
 async def is_required(h):
     return await h.evaluate("(el)=>el.required||el.getAttribute('aria-required')==='true'||/\\*|✱|required/i.test((el.closest('label,fieldset,div')||{}).innerText||'')")
 async def fill_text(page,h,val):
@@ -951,6 +962,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if not await h.is_visible(): continue
                     name=await h.get_attribute("name") or ""; lab=await label_of(h)
                     if re.search(r"captcha|search",name+lab,re.I): continue
+                    if await is_edu_date(h):
+                        if await is_required(h) and not (await h.input_value()).strip(): report["unanswered"].append({"type":"text","label":"Education "+lab[:140],"name":name,"note":"graduation dates are not on the resume","keep":True})
+                        continue
                     ph=(await h.get_attribute("placeholder") or "")
                     if lab.strip().lower() in ("select...","select") or re.search(r"select2",(await h.get_attribute("class")) or ""): continue
                     if await h.evaluate("(el)=>el.getAttribute('aria-autocomplete')==='list'||el.getAttribute('role')==='combobox'||/select__input|react-select|requiredInput/i.test(el.className+' '+el.id)||!!el.closest('[class*=select__control],[class*=Select__control]')||!!(el.parentElement&&el.parentElement.querySelector('[class*=select__control],[class*=Select__control]'))"): continue   # dropdowns are handled below
@@ -1005,6 +1019,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if await h.evaluate("(el)=>el.tagName==='INPUT'"): h=h.locator('xpath=ancestor::div[3]')   # unstyled react-select (Wellfound): use the control container
                     lab=await label_of(h)
                     if not lab: continue
+                    if await is_edu_date(h):
+                        if await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"note":"graduation dates are not on the resume","keep":True})
+                        continue
                     cur=(await h.inner_text()).strip()
                     if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
                     pref=None
@@ -1170,7 +1187,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
             for u in report["unanswered"]:
-                if u["label"] in seen or u["label"].lower()[:40] in answered: continue
+                if u["label"] in seen: continue
+                if u.get("keep"): seen.add(u["label"]); uu.append(u); continue   # e.g. education dates: same label as the filled employment dates
+                if u["label"].lower()[:40] in answered: continue
                 seen.add(u["label"])
                 try:   # a conditional question may have disappeared after another answer (e.g. race after "decline" on Hispanic)
                     if not await page.evaluate(STILL_VISIBLE_JS,u["label"]): continue
