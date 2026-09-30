@@ -1,52 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/zscaler/jobs/5246776007",
-  "tag": "zscaler_senior_machine_learning_engineer",
-  "company": "zscaler",
-  "title": " Senior Machine Learning Engineer",
-  "comp": null,
-  "loc": "Remote - USA; Santa Clara, California, USA",
-  "posted_ts": 1790728247.0,
-  "score": 25,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you have professional Python development experience, including designing and "
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/okx/jobs/7650506003",
-  "tag": "okx_principal_ai_engineer_chatbot_developmen",
-  "company": "okx",
-  "title": "Principal AI Engineer, Chatbot Development",
-  "comp": null,
-  "loc": "San Jose, California, United States",
-  "posted_ts": 1772564750.0,
-  "score": 31,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you have direct reports? If so, how many?",
-   "Are you willing to relocate to Singapore or Hongkong by chance? If so, which one"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.five9.com/about/careers/job-detail?gh_jid=5744018004",
-  "tag": "five9_vice_president_engineering_and_ai_inno",
-  "company": "five9",
-  "title": "Vice President, Engineering and AI Innovations ",
-  "comp": null,
-  "loc": "United States (Remote)",
-  "posted_ts": 1766525621.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Select which best describes your right to work in the US?"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/synerg/jobs/5819480004",
   "tag": "synerg_sr_director_ai",
   "company": "synerg",
@@ -70,8 +24,11 @@
   "loc": "Sunnyvale, California",
   "posted_ts": 1784055964.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is your location? (City & State)",
+   "Does the listed salary meet your compensation requirements?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -83,8 +40,12 @@
   "loc": "United States - Milpitas, CA (Hybrid)",
   "posted_ts": 1781309369.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is the most complex full-stack architectural bottleneck you\u2019ve resolved in ",
+   "What is your preferred technology stack for building a highly scalable cloud bac",
+   "Have you integrated Large Language Models (LLMs) or agentic workflows into a ful"
+  ]
  },
  {
   "ats": "greenhouse",
