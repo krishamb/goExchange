@@ -598,7 +598,9 @@ async def fill_field(page, job, f):
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
         if cur and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict, exact=(kind == "prompt")) is not None: return keep(cur)
         r = lambda texts: rank(texts, prefs, mlabel or key, strict)
-        if kind == "listbox": v, _ = await listbox_choose(page, btn, r, typeahead)
+        if kind == "listbox":
+            v, texts = await listbox_choose(page, btn, r, typeahead)
+            if not v and texts: job.report.setdefault("options", {})[key[:120]] = texts[:20]   # what the list offered, for a rule fix
         elif kind == "radio": v = await pick_radio(page, box, r)
         elif kind == "checkbox": v = await checkbox_choose(page, box, r)
         elif kind == "prompt":
@@ -653,7 +655,11 @@ async def fill_field(page, job, f):
     if kind in ("listbox", "radio", "prompt") or (kind == "checkbox" and f["nbox"] > 1):
         prefs = prefs_for(key)
         if prefs == ["__ASK__"]: return None
-        if not prefs: return kept_unverified()
+        if not prefs:
+            if kind == "listbox" and f["req"] and not cur:   # no rule: read the options (nothing is chosen) so a rule can be written
+                _, texts = await listbox_choose(page, btn, lambda t: None)
+                if texts: job.report.setdefault("options", {})[key[:120]] = texts[:20]
+            return kept_unverified()
         if (VISA_STATUS_Q.search(key) and re.match(r"\s*yes", prefs[0], re.I)) or (COMMUTE_Q.search(key) and re.match(r"\s*no\b", prefs[0], re.I)):
             # a generic rule that would make a false statement here (see VISA_STATUS_Q / COMMUTE_Q): the applicant answers
             job.report.setdefault("rule_conflicts", []).append(f"{key[:150]} -> rule says {prefs[0]!r}; left unanswered")
@@ -1097,7 +1103,7 @@ async def run_one(ctx, item, s):
         return job.report
     finally:
         json.dump(job.report, open(rp, "w"), indent=1)
-        print(json.dumps({k: job.report[k] for k in ("tag", "ats", "url", "submitted", "result", "unanswered", "errors")})[:1500], flush=True)
+        print(json.dumps({k: job.report.get(k) for k in ("tag", "ats", "url", "submitted", "result", "unanswered", "errors", "options")})[:2500], flush=True)
         try: await page.close()
         except Exception: pass
 
