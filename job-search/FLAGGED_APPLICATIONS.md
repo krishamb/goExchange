@@ -23,6 +23,25 @@ applications cannot be edited after submission. Suggested action for each is in 
 | Pallet | Two roles (Greenhouse + Wellfound) | both | Two applications to one company before the one-per-company check existed. | Withdraw one if you prefer. |
 | Thalmaar | Full Stack AI Engineer - India | Wellfound | The listing said "Remote", but the title shows the role is based in India, and it is an individual-contributor role below your level. | Withdraw on Wellfound. |
 
+## Found in the 2026-09-30 audit (wrong answers on submitted applications)
+
+An audit of every submitted form after the checkbox and compliance-rule fixes found these. Each rule is fixed
+now; the submitted answers cannot be edited, so the suggested action is to correct them with the recruiter.
+
+| Company | Role | Wrong answer | Suggested action |
+|---------|------|--------------|------------------|
+| Coinbase | Staff Software Engineer (Platform - Financial Engineering), submitted twice | "Are you a current government official or were you one in the last five years?" answered **Yes, I am a current Government Official** (the words "five years" hit the years-of-experience rule). | Email Coinbase recruiting: you are not and have never been a government official. |
+| Coinbase | Senior Staff Software Engineer, Institutional Exchange | Same government-official **Yes**. | Same. |
+| Coinbase | Senior Staff Software Engineer, Platform - IAM | Same government-official **Yes**. | Same. |
+| Coinbase | Staff Software Engineer, Enterprise Apps | Same government-official **Yes**. Coinbase also has 5 applications, above the two-per-company limit added later. | Same; withdraw the extra applications if you prefer. |
+| Robinhood | Engineering Manager, Agentic Apps | "Do you currently hold, or have you held within the last 5 years, a position as a government official?" answered **Yes**. | Email the recruiter to correct it. |
+| Databricks | Sr. Solutions Architect - Travel and Hospitality | Sanctions question answered **"Citizen or permanent resident of Cuba, Iran, North Korea, or Syria"**. | Email Databricks recruiting (you are a US citizen), or withdraw. |
+| Latitude AI | Staff Software Engineer - High Level OS | "Will you now, or in the future, require sponsorship ... under U.S. immigration law?" answered **Yes**; degree shown as Bachelor of Arts. | Email the recruiter: US citizen, no sponsorship; B.E. in Computer Science and Engineering. |
+| Datavant | Staff ML Platform Engineer | "Will you require Datavant to participate in a government program (OPT / STEM OPT)?" answered **Yes**. | Email the recruiter: no, you are a US citizen. |
+| Ceribell | Senior Manager, Applied AI Engineering | "I acknowledge that I can perform the essential duties with or without reasonable accommodation" answered **No**. | Email the recruiter to correct it to Yes. |
+| DigiCert | Principal Software Engineer | Acknowledgment of the standard employment, education and background verification answered **No**. | Email the recruiter to correct it to Yes. |
+| About 16 Greenhouse forms with an education section | various | Where the form had education start/end dates, they were filled with the current job's dates (2023 to 2026). The resume gives no graduation years, so they are now left for you. | Correct the dates if a recruiter asks; tell me your graduation years so forms that require them can be completed. |
+
 ## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
 
 Elastic (Director of Software Engineering; Principal Software Engineer I, Serverless Platform), Airbnb (Senior Staff
