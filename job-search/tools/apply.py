@@ -363,7 +363,7 @@ CHOICE_RULES=[
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
  (r"school|university|college", ["University of Madras","Other"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
- (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science"]),
+ (r"degree|education|highest level", ["Bachelor's Degree","Undergraduate/Bachelor's degree","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science","College Degree","4-year degree","Four-year degree","University degree"]),
  (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|in the past", ["No","no","Never"]),
