@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"name of the entity for which you will be performing the outside activity|outside (business )?activity.{0,80}(name of the entity|description)", "N/A (no outside business activities)"),
  (r"^(?!.*e-?mail)(.*\b(street|residential|home|permanent|mailing|physical|current) (residence )?(street )?address\b|^address$|^what is your (home |current )?address)", P.get("street","")+", Santa Clara, CA "+P.get("zip","95054") if P.get("street") else P["location"]),
  (r"^(street )?address( line)? ?1$|^street( address)?$|^address line one$", P.get("street") or "Santa Clara, California, United States"),
  (r"(work|company|business|corporate|former|previous|prior) e-?mail|e-?mail .{0,30}(while|when) (you )?(work|were employed)|what was your .{0,20}e-?mail", "N/A"),   # never his personal email as a former-employer work address
@@ -265,6 +266,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"engage with .{0,40}employees to negotiate|negotiate, influence and/or sign .{0,40}contracts", ["No","no"]),
+ (r"employee of a government (office|agency|entity)|government (office|agency) .{0,40}oversight", ["No","no"]),
  (r"registered .{0,60}securities industry|securities industry .{0,40}registered|attempted to become .{0,30}registered|finra (registration|licen[cs]e)|series (7|24|63|65|66|79|99) (licen|registr|exam)", ["No","no"]),   # applicant: never registered (FINRA)
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"are you (currently )?in the (reserves|national guard)", ["No","no"]),
