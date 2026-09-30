@@ -250,6 +250,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"with or without (a )?reasonable accommodation|able to (perform|meet|participate|complete|fulfill).{0,120}(requirements|functions|duties)", ["Yes","yes"]),   # can do the job / attend onsite; never the "do you need an accommodation" No
+ (r"hands-on (management|manager|leadership|engineering manager|people manager)( role)?|player[- ]coach", ["Yes","yes"]),   # applicant is a hands-on leader
  (r"export[- ]controlled information|for export[- ]control purposes", ["I am a US Person and can provide a valid, unexpired US Passport or US birth certificate or certificate of naturalization upon request.","I am a US Person and can provide a valid, unexpired US Passport","I am a U.S. citizen","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"(eligible|able) (to|for) (receive|obtain|hold|get)?\s*(a |an )?public trust|public trust (clearance|eligib|position)", ["Yes","yes"]),   # US citizen; Public Trust is a background investigation
  (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*(do you currently,? or have you (ever )?previously (worked|been employed)|have you (ever )?(previously )?been employed (by|at|with) (?!(a|an|any) )|(currently|previously) (work|worked|employed) (for|at|by) (?!(a|an|any) ))", ["No","no","I have not previously been employed","I have not been employed","I have never worked","I have not worked","have not worked","have not been","Never worked","Never","None of the above","Not applicable","N/A"]),   # never worked for any company he applies to
