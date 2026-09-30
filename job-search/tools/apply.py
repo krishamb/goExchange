@@ -316,7 +316,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","20+ years","15+ years","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","10+ years","10+","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()
