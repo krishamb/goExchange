@@ -1,43 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://www.zoominfo.com/careers?gh_jid=8800796002",
-  "tag": "zoominfo_director_applied_ai",
-  "company": "zoominfo",
-  "title": "Director, Applied AI",
-  "comp": null,
-  "loc": "Bethesda, Maryland, United States; Remote-US-MA; Remote-US-MD; Remote-US-WA; Vancouver, Washington, United States; Waltham, Massachusetts, United States",
-  "posted_ts": 1789673726.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Have you founded a company, or joined one as a founding/early engineer at an ear",
-   "This role requires staying hands-on\u2014shipping code and building prototypes yourse",
-   "This role requires judgment on when to train/serve your own models versus using "
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/securityscorecard/jobs/8191929",
-  "tag": "securityscorecard_principal_ai_architect",
-  "company": "securityscorecard",
-  "title": "Principal AI Architect",
-  "comp": "$270,000 - $330,000 ",
-  "loc": "Hybrid (NYC / Austin)",
-  "posted_ts": 1789064781.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "AI/LLM Usage: Which AI/LLM/agent tools have you used in the last 6 months? For e",
-   "AI/LLM Impact: Describe two specific examples where AI improved your work output",
-   "Do you have a Bachelor's degree?",
-   "Have you personally architected an AI agent or LLM-powered system that ran in pr",
-   "For that system, did you personally author the technical design, rather than imp",
-   "Have you personally written code or built a technical prototype within the last "
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://careers.upstart.com/jobs?gh_jid=8191188",
   "tag": "upstart_sr_manager_software_engineering_mach",
   "company": "upstart",
