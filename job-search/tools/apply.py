@@ -184,6 +184,7 @@ CHOICE_RULES=[
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
  (r"(authori[sz]ed|eligible|able|permitted|legally allowed) to (lawfully )?work .{0,80}without (the )?(need (for|of) |requiring |any )?(visa |employer |company |employment )?sponsorship", ["Yes","yes"]),   # "authorized ... without sponsorship" is a Yes, not a sponsorship request
  (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
+ (r"minimum (legal )?age|legal working age|(18|eighteen) (years of age|years old) or older|at least (18|eighteen)", ["Yes","yes"]),   # applicant: age 50
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
  (r"experience with llm-as-judge|llm-as-a-judge|llm as (a )?judge", ["I've experimented with it in my own projects"]),
