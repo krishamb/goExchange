@@ -24,8 +24,12 @@
   "loc": "San Francisco, California, United States",
   "posted_ts": 1789166815.0,
   "score": 22,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe your Agentic AI experience and where you have used?",
+   "In considering this role, how important is the title/level to you in your next l",
+   "Are you more product-focused or systems-focused?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -37,8 +41,14 @@
   "loc": "San Jose, California, United States",
   "posted_ts": 1788999215.0,
   "score": 22,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Education Start date month",
+   "Education Start date year",
+   "Education End date month",
+   "Education End date year",
+   "School"
+  ]
  },
  {
   "ats": "greenhouse",
