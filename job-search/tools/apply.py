@@ -204,6 +204,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(telephone calls?|phone calls?|text messages?|sms).{0,120}(consent|agree)|(consent|agree).{0,160}(text messages?|sms|telephone calls?)", ["Do not agree to receive recruitment notifications by call or text messages","Do not agree","I do not agree","I do not consent","No","Opt out"]),
+ (r"(confirm|certify) that i (do not|don't) have (any )?relatives", ["True","Yes","I confirm","Confirmed","Confirm"]),
  (r"how (frequently|often) (have|do|did) you (personally )?(participate|participated|lead|led|conduct|conducted|review|reviewed|write|written|wrote|code|coded|contribute|contributed|design|designed|run|ran)", ["Weekly","Frequently","Very frequently","Regularly","Often","Multiple times a week","Daily","Monthly"]),
  (r"which .{0,30}hub (are )?you (are )?(currently )?based|hub you are currently based out of|which (of our )?(offices?|hubs?) (are you|do you) (currently )?(based|located|live)", ["Greater San Francisco Bay Area","San Francisco Bay Area","Bay Area","San Francisco","SF Bay Area"]),
  (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", ["__ASK__"]),   # a certification that the applicant filled the form personally: theirs to make
