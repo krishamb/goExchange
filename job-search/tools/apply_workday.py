@@ -743,7 +743,17 @@ async def experience_page(page, job, need=()):
             await fill_entry(page, job, kind, panels.nth(i))
 
 # ---- sign-in
-SIGNIN_UI = f'{A("signInContent")}:visible, {A("SignInWithEmailButton")}:visible, input{A("email")}:visible, {A("createAccountLink")}:visible, {A("signInLink")}:visible'
+SIGNIN_UI = f'{A("signInContent")}:visible, {A("SignInWithEmailButton")}:visible, {A("signInSubmitButton")}:visible, {A("createAccountLink")}:visible, {A("createAccountSubmitButton")}:visible, {A("signInLink")}:visible, input{A("password")}:visible'
+APPLY_FORM = f'{A("applyFlowMyInfoPage")}, {A("applyFlowMyExpPage")}, {A("applyFlowPage")} [data-automation-id^="formField-"]'
+async def form_open(page):
+    """The application form itself is showing without a sign-in step: signed in, a resumed draft, or a tenant that lets
+    candidates apply without an account (Adobe: My Information with its own Email field, 'Sign In' still in the header)."""
+    try:
+        st = await step_raw(page)
+        if not st or re.search(r"sign in|create account", st, re.I) or await page.locator(SIGNIN_UI).count(): return False
+        return await page.locator(APPLY_FORM).count() > 0
+    except Exception:
+        return False
 async def signed_in_now(page):
     """Signed in to this tenant: the header's Sign In button gave way to the account menu / Candidate Home, or the apply
     flow is already past its sign-in step (a resumed draft goes straight to My Information)."""
@@ -760,7 +770,7 @@ async def auth_state(page, secs=30):
     while time.time() < end:
         try:
             if await page.locator(CAPTCHA).count(): return "captcha"
-            if APPLIED.search(await text(page)) or await signed_in_now(page): return "in"
+            if APPLIED.search(await text(page)) or await signed_in_now(page) or await form_open(page): return "in"
             if await page.locator(SIGNIN_UI).count():
                 await page.wait_for_timeout(1000); return "form"
         except Exception: pass
@@ -778,14 +788,15 @@ async def auth(page, job, s):
     if st == "in": return "ok"
     known = s["tenants"].get(ten) or {}
     async def sign_in(email, pw):
-        """One attempt: True / False, or None when a captcha appears (never solved)."""
+        """One attempt: True / False, None when a captcha appears (never solved), or 'noform' when there was no sign-in
+        form to fill (nothing was submitted, so it is not an attempt)."""
         if await page.locator(f'{A("signInLink")}:visible').count() and not await page.locator(f'{A("signInSubmitButton")}:visible').count():
             await click_button(page, "signInLink"); await page.wait_for_timeout(1500)
         if not await page.locator(f'input{A("password")}:visible').count():   # social chooser first: pick "Sign in with email"
             await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000)
             await page.wait_for_timeout(1500)
         if not await page.locator(f'input{A("email")}:visible').count() or not await page.locator(f'input{A("password")}:visible').count():
-            return False   # no sign-in form: nothing was submitted
+            return "noform"   # no sign-in form: nothing was submitted
         await fill(page, page.locator(f'input{A("email")}:visible').first, email)
         await fill(page, page.locator(f'input{A("password")}:visible').first, pw)
         if await page.locator(CAPTCHA).count(): return None
@@ -805,16 +816,19 @@ async def auth(page, job, s):
     if known.get("pw_key") in creds:
         e, pw = creds[known["pw_key"]]
         r = await sign_in(e, pw)
+        if r == "noform": return "ok" if await auth_state(page, 10) == "in" else "fail"
         return "ok" if r else ("blocked" if r is None else "fail")
     # 1) one attempt with the applicant's Workday login
     r = await sign_in(*creds["login"])
     if r is None: return "blocked"
-    if r: remember(creds["login"][0], "login"); return "ok"
+    if r is True: remember(creds["login"][0], "login"); return "ok"
     # 2) create the account with the new-account email (Gmail)
     await page.goto(page.url, wait_until="domcontentloaded", timeout=60000)
     st = await auth_state(page)
     if st == "captcha": return "blocked"
-    if st == "in": remember(creds["login"][0], "login"); return "ok"   # the one sign-in did go through (slow tenant)
+    if st == "in":   # the one sign-in went through after all (slow tenant), or the form needs no account
+        if r is not True and r != "noform": remember(creds["login"][0], "login")
+        return "ok"
     if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
     if not await page.locator(f'input{A("verifyPassword")}').count():
         return "fail"
@@ -835,7 +849,7 @@ async def auth(page, job, s):
         body = await text(page)
         if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
             r = await sign_in(e, pw)
-            if r: remember(e, "new"); return "ok"
+            if r is True: remember(e, "new"); return "ok"
             return "blocked" if r is None else "fail"
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
             remember(e, "new"); return "verify"
