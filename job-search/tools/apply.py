@@ -208,6 +208,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(professional |production |hands-on )?experience (using|with|in|writing) (java|python|c\+\+|golang|rust|typescript|javascript|sql|bash)\b(?! ?(ee|fx|swing))", ["Yes","yes"]),   # all on the resume (languages line; C++/Java execution paths and replay engines)
  (r"how important is the title|title/level .{0,40}(relative to|vs\.?|versus) scope|title (or|vs\.?|versus) scope", ["Scope Is Important","Scope is important","Scope","N/A"]),
  (r"more product-focused or systems-focused|product[- ]focused or systems[- ]focused", ["Systems-Focused","Systems focused","Systems"]),
  (r"do any of the following apply to you|which of the following (conflicts|disclosures|situations) apply", ["None of the above apply to me.","None of the above apply to me","None of the above","None of these apply to me","None of these","None"]),
