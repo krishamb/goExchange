@@ -4,6 +4,7 @@
 #   bash ~/ashby.sh           get the newest job list, then start 2 parallel workers (background, no browser windows)
 #   bash ~/ashby.sh start 3   same, with 3 workers (default 2)
 #   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
+#   bash ~/ashby.sh assist    finish blocked jobs: a window opens with the form filled, you click Submit
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
 #   bash ~/ashby.sh report    open a report of every application confirmed as submitted from this Mac
 #   bash ~/ashby.sh indeed    open the Indeed jobs to apply by hand (newest first, answers ready to paste)
@@ -35,10 +36,11 @@ case "${1:-start}" in
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
   status) in_repo; bash job-search/run_ashby.sh status ;;
   manual) in_repo; bash job-search/run_ashby.sh manual ;;
+  assist) update; bash job-search/run_ashby.sh assist ;;
   report) in_repo; bash job-search/run_ashby.sh report ;;
   indeed) update; open "$REPO/job-search/INDEED_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/INDEED_APPLY_BY_HAND.html in your browser" ;;
   stop)   in_repo; bash job-search/run_ashby.sh stop ;;
   log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
-  help|-h|--help) sed -n '2,14p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,14p' "$0" ;;
+  help|-h|--help) sed -n '2,15p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,15p' "$0" ;;
 esac
