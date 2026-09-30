@@ -1,46 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "baselayer",
-  "company_name": "Baselayer",
-  "title": "Data Engineer",
-  "loc": "San Francisco, California",
-  "where": "bay",
-  "url": "https://job-boards.greenhouse.io/baselayer/jobs/5415971008",
-  "posted_ts": 1788470063.0,
-  "desc": " ABOUT BASELAYER Every business in America needs a bank account to exist. The system that decides whether they're real, who's behind them, and whether they're a risk, runs on infrastructure from the 1980s. We're rebuilding that layer from scratch. Baselayer is the identity layer for institutions across the United States \u2014 the most complete business graph in America and every human tied to it. We fuse public records, IRS data, sanctions lists, web signals, and fraud telemetry from 2,200+ financial institutions into a single graph that resolves any business and the humans behind it in milliseconds. The legacy credit bureaus took 50 years to build something that gets 60% match rates. We've built something that gets 98% in under two years. Today we're trusted by over 20% of financial institutions in America \u2014 including FIS, Rho, Socure and leading loan infrastructure providers. But the graph is becoming infrastructure for anyone who needs to know if a business is real and worth trusting: gig platforms, marketplaces, AI companies, and commerce infrastructure at scale. Trust is the substrate of every financial transaction. We're rebuilding it. ABOUT THE TEAM We're solving real-time entity resolution at a scale no one else has cracked \u2014 fusing dozens of data sources into a single business identity graph and resolving any entity in milliseconds. It's a graph AI problem, a retrieval problem, and a fraud-modeling problem stacked on top of each other. The technical depth is real. You'd be joining a small team where the data moat is defensible, the research problems are open, and the infrastructure you build becomes load-bearing for businesses. Ownership is real. Velocity is real. There's no layer of process between an idea and shipping it. We're at an inflection point \u2014 the graph is built, the match rates speak for themselves, and the hardest problems are still ahead: graph embeddings, fraud propagation models across the business network, real-time traversal at sub-100ms latency, and expanding the identity layer beyond finance into every platform that needs to trust a business. If you want to work on something foundational \u2014 the kind of infrastructure that gets built once and everything else runs on top of \u2014 this is it. ABOUT THE ROLE Baselayer is building the most comprehensive, accurate, and continuously-current identity graph of US businesses \u2014 fusing public records, IRS data, sanctions lists, web signals, and fraud telemetry from thousands of financial institutions into a single graph that resolves any business in milliseconds. None of that works without world-class data infrastructure. We\u2019re hiring a Data Engineer to help build and run the pipelines and models that turn messy, heterogeneous data into trustworthy, production-grade signal. You\u2019ll write real production code in your first weeks, own pipelines end to end, and learn alongside senior data and ML engineers who will invest in your growth. This is a role for an early-career engineer who wants to be close to the action: feeding the models, not just cleaning up after them. WHAT YOU'LL DO Build and maintain ETL/ELT pipelines that ingest and normalize public records, web signals, and fraud telemetry from dozens of sources Develop data models and transformation layers (Dataflow, Spark, Airflow) that power fraud detection, KYB, and customer-facing APIs Implement data quality checks, observability tooling, and alerting so problems surface before customers see them Tune pipelines and queries for performance, freshness, and cost in our cloud data warehouse Work with data scientists, ML engineers, and product to make clean, well-modeled data available for entity resolution and scoring Help ensure pipelines meet security and regulatory standards for sensitive data (SOC 2, GDPR, KYC/KYB) Document what you build and translate between technical and non-technical stakeholders so the rest of the team moves faster MINIMUM REQUIREMENTS 1+&nbsp; years of experience in data engineering, working ",
-  "comp": null,
-  "tier": 3,
-  "stack_hits": 13,
-  "funding": "Series A $35M 2026-09-22",
-  "domain": "fintech",
-  "tag": "baselayer_data_engineer",
-  "found_on": "funded_startups",
-  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "company": "baselayer",
-  "company_name": "Baselayer",
-  "title": "Senior Engineer, Agentic Identity",
-  "loc": "San Francisco, California",
-  "where": "bay",
-  "url": "https://job-boards.greenhouse.io/baselayer/jobs/5412423008",
-  "posted_ts": 1788273066.0,
-  "desc": " ABOUT BASELAYER Every business in America needs a bank account to exist. The system that decides whether they're real, who's behind them, and whether they're a risk, runs on infrastructure from the 1980s. We're rebuilding that layer from scratch. Baselayer is the identity layer for institutions across the United States \u2014 the most complete business graph in America and every human tied to it. We fuse public records, IRS data, sanctions lists, web signals, and fraud telemetry from 2,200+ financial institutions into a single graph that resolves any business and the humans behind it in milliseconds. The legacy credit bureaus took 50 years to build something that gets 60% match rates. We've built something that gets 98% in under two years. Today we're trusted by over 20% of financial institutions in America \u2014 including FIS, Rho, Socure and leading loan infrastructure providers. But the graph is becoming infrastructure for anyone who needs to know if a business is real and worth trusting: gig platforms, marketplaces, AI companies, and commerce infrastructure at scale. Trust is the substrate of every financial transaction. We're rebuilding it. ABOUT THE TEAM We're solving real-time entity resolution at a scale no one else has cracked \u2014 fusing dozens of data sources into a single business identity graph and resolving any entity in milliseconds. It's a graph AI problem, a retrieval problem, and a fraud-modeling problem stacked on top of each other. The technical depth is real. You'd be joining a small team where the data moat is defensible, the research problems are open, and the infrastructure you build becomes load-bearing for businesses. Ownership is real. Velocity is real. There's no layer of process between an idea and shipping it. We're at an inflection point \u2014 the graph is built, the match rates speak for themselves, and the hardest problems are still ahead: graph embeddings, fraud propagation models across the business network, real-time traversal at sub-100ms latency, and expanding the identity layer beyond finance into every platform that needs to trust a business. If you want to work on something foundational \u2014 the kind of infrastructure that gets built once and everything else runs on top of \u2014 this is it. ABOUT THE ROLE AI agents are beginning to act on behalf of people and businesses against publishers, banks, payment networks, and APIs. Every counterparty today answers identity questions on its own - self-asserted API keys, third-party cookies, pixel trackers. That model breaks the moment the actor is an agent. We're building KYA (Know Your Agent) - a cryptographic identity substrate that replaces self-assertion with third-party-issued credentials, verifiable by any counterparty. We're hiring an engineer to own a meaningful surface of the substrate - issuer mint, edge verification, Passport, or Merkle audit log - and ship it to production. WHAT YOU'LL DO Build and maintain the runtime issuer/mint: OAuth Token Exchange (RFC 8693), JWS credentials (RFC 7515/7519, SD-JWT-VC), and Merkle audit log with real-time revocation. Own and evolve the wire format and claim registry: JWT profile, verification_level/verification_method enums, and eIDAS/NIST IAL/FATF CDD crosswalk. Implement sub-millisecond JWS verification and Web Bot Auth signature checks (RFC 9421) at the HTTP edge for counterparty CDNs, merchants, and publisher paywalls. Build and maintain Passport - the user's cloud-resident principal account with canonical handle, KYC/KYB record, authorized-operators list, audit feed, and authenticator binding. Develop operator integration: embedded KYB onboarding inside first OAuth 2.0 consent, per-operator opt-in, and webhook delivery via Svix. Work across a Python 3.13 monorepo (FastAPI, Cloud Tasks, Cloud Run, SQLModel/SQLAlchemy) and Go for performance-critical substrate components. MINIMUM REQUIREMENTS Shipped systems where cryptographic correctness was load-bearing: OAuth/OIDC IdP, token issuer, signing service, HSM-backed ",
-  "comp": null,
-  "tier": 3,
-  "stack_hits": 12,
-  "funding": "Series A $35M 2026-09-22",
-  "domain": "fintech",
-  "tag": "baselayer_senior_engineer_agentic_identity",
-  "found_on": "funded_startups",
-  "last_result": " | Ambarish_Krishnamurthy_Resume.pdf |  | LinkedIn Profile* | Why do you want to work at Baselayer? ",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "company": "gomotive",
   "company_name": "Motive",
   "title": "Senior GTM AI Engineer -Deal Desk ",
@@ -56,9 +16,7 @@
   "domain": "ai",
   "tag": "gomotive_senior_gtm_ai_engineer_deal_desk",
   "found_on": "funded_startups",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What about Motive makes it an appealing place to work?"
-  ]
+  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
+  "last_unanswered": []
  }
 ]
