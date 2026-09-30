@@ -229,6 +229,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(require|need) .{0,60}\b(file|sign|certify|support|participate in|sponsor)\b.{0,120}\b(immigration|work authori[sz]ation|visa|petition|green card|h-?1b)", ["No","no","No, I do not require sponsorship","I do not require sponsorship"]),   # applicant: US citizen, needs nothing now or later
  (r"(?=.*(\bca\b|california))((live|reside|located) in|move to|relocate to).{0,250}(following|these|listed|eligible) (states|locations)|(?=.*(\bca\b|california))(following|these|listed|eligible) (states|locations).{0,250}((live|reside) in|move to|relocate)", ["Yes","yes"]),   # a state list that includes California: the applicant lives in Santa Clara, CA
  (r"^location preference|(preferred|desired) (work )?location|work location preference|which location would you prefer", ["Santa Clara","San Jose","Sunnyvale","Mountain View","Palo Alto","Menlo Park","Redwood City","San Mateo","Burlingame","Foster City","South San Francisco","San Francisco","Bay Area","California","Remote"]),   # applicant: Santa Clara; any Bay Area office, else remote
  (r"requires? (a )?background checks?.{0,400}(disclos|conviction)|background checks? of all (new )?(employees|candidates|hires)", ["I Acknowledge","I acknowledge","Acknowledge","Yes","I consent","I understand"]),   # acknowledgment of the employer's background-check policy, not a conviction disclosure
