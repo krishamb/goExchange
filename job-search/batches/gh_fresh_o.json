@@ -1,26 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "ridgeline",
-  "company_name": "Ridgeline",
-  "title": "Staff Engineer - Portfolio Management (Order Generation)",
-  "loc": "Reno, NV; New York, NY",
-  "where": "nyc",
-  "url": "https://boards.greenhouse.io/ridgeline/jobs/7995005003?gh_jid=7995005003",
-  "posted_ts": 1789427818.0,
-  "desc": " Are you passionate about revolutionizing the financial industry? Do you bring an engineering-first mindset while also possessing the quantitative skills to understand financial instruments and their valuations? Are you a problem-solver who thrives in delivering high-quality products with industry-leading performance? If so, we invite you to join our innovative team. As a Ridgeline Staff Software Engineer on our Trading - Portfolio Management Team, you\u2019ll play a pivotal role in building complex, high-quality applications for our Trade Order Management solution. Leveraging cutting-edge technologies\u2014and harnessing the power of AI tools such as Claude Code, GitHub Copilot, ChatGPT\u2014you\u2019ll help shape an industry-defining platform from the ground up, all while collaborating in a creative, fast-paced environment. Here, your passion for both engineering and the financial domain will make a meaningful impact on the future of investment management technology. Joining the Ridgeline Trading team means contributing to a culture of innovation, leveraging modern AI-driven solutions to enhance development processes, shaping our product and processes, and leaving a lasting legacy in an industry primed for transformation. At Ridgeline, how we work matters as much as what we build. Ridgeliners act like owners, choose growth over comfort, and communicate with transparency. We assume positive intent, bias toward action, and bring solutions\u2014not just problems. We celebrate wins, learn from setbacks, and thrive in a resilient, collaborative, high-performing culture. If the Ridgeline Way excites you, we\u2019d love to meet you. You must be work authorized in the United States without the need for employer sponsorship. The impact you will make: Apply trading domain knowledge, financial quantitative expertise, and technical skills to create solutions where design, strategy, and engineering closely intersect. Be involved in the entire software development process, from requirements and design reviews as we undergo asset class expansion throughout the whole platform Shape and optimize a tech stack leveraging AWS back-end services to power robust, scalable applications. Participate in the creation and construction of developer-based automation that leads to scalable, high-quality applications customers will depend on to run their businesses Advocate design and development best practices in pragmatic manner Coach, mentor, and inspire teams of product engineers that are responsible for delivering high performing, secure enterprise applications Think creatively, own problems, seek solutions, and communicate clearly along the way Contribute to a collaborative environment rooted in learning, teaching, and transparency What we look for: 8+ years in a software engineering with a history of architecting and designing new products and technologies Expert level knowledge in Java or Kotlin (preferred) or equivalent Bachelor degree in Computer Science or equivalent discipline Demonstrated experience of applying Design Patterns, OOAD/SOLID principles and writing automated unit tests Strong motivation to explore and adopt new technologies while independently navigating complex codebases. Finds joy and satisfaction in working with motivated/supportive engineers to build impactful solutions Strong problem-solving skills and an aptitude for tackling technical challenges. Ability to communicate effectively A positive attitude with a serious interest in having fun at work. Bonus : Experience engineering in buy-side order management systems Working knowledge of complex financial instruments and their valuations Background in mathematics About Ridgeline Ridgeline is the industry cloud platform for investment management. It was founded in 2017 by visionary entrepreneur Dave Duffield (co-founder of both PeopleSoft and Workday) to address the unique technology challenges of an industry in need of new thinking. We are building a modern platform in the public cloud, purpose-built for th",
-  "comp": null,
-  "tier": 2,
-  "stack_hits": 7,
-  "funding": "Series E $250M 2026-09-16",
-  "domain": "fintech (investment management platform)",
-  "tag": "ridgeline_staff_engineer_portfolio_managemen",
-  "found_on": "funded_startups",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "company": "air",
   "company_name": "AIR Security",
   "title": "Senior AI Engineer, Security Infrastructure ",
@@ -36,8 +16,12 @@
   "domain": "security",
   "tag": "air_senior_ai_engineer_security_infrastructu",
   "found_on": "funded_startups",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Have you applied for another role with Air within the last 6 months?",
+   "Which Air office location/s are you open to working out of?",
+   "Which security principle is MOST important when giving an AI agent access to ext"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -56,7 +40,7 @@
   "domain": "fintech",
   "tag": "baselayer_data_engineer",
   "found_on": "funded_startups",
-  "last_result": "(no report)",
+  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
   "last_unanswered": []
  },
  {
