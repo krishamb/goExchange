@@ -270,7 +270,7 @@ CHOICE_RULES=[
  (r"government official|public official|politically exposed|holder of public office|civil service position", ["No, I am not a current or former Government Official","No, I am not a relative of a government official.","No, I am not","No","None of the above"]),
  (r"sanctions and export controls|please confirm whether any of the below applies to you", ["None of the above","None of these apply to me","No"]),
  (r"if you selected a response to the prior question other than", ["U.S. citizen","US citizen","U.S. Citizen","None of these apply to me"]),
- (r"perform the essential (duties|functions)|reviewed the job description", ["Yes","I confirm","I acknowledge","I agree"]),
+ (r"perform (the |all )?(essential )?(job )?(duties|functions)|reviewed the job description|reviewing the (posted )?job description", ["Yes","I confirm","I acknowledge","I agree"]),
  (r"subject to .{0,80}background (check|screening|investigation)|comprehensive background check|(willing|able|agree) to (submit to|undergo|complete|consent to) .{0,30}background", ["Yes","I agree","I acknowledge","I understand","I consent","Consent","Confirmed"]),
  (r"require .{0,60}(participate in a government program|government program to maintain|\bopt\b|stem opt)", ["No","no"]),
  (r"which languages,? if any,? can you communicate|languages? .{0,40}professional (working )?proficiency|languages? (can|do) you (speak|communicate)|languages of fluency", ["English","Tamil","Hindi"]),   # applicant: English, Tamil, Hindi
