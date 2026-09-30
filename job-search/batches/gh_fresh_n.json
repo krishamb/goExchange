@@ -1,27 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "inizioevoke",
-  "title": "Director, AWS Infrastructure and DevOps",
-  "loc": "Boston, Massachusetts; Chicago, Illinois; New York, New York; Philadelphia, Pennsylvania; San Francisco, California; Tempe, Arizona",
-  "desc": " About Inizio Evoke In the journey of life, your career should make a difference. At Inizio Evoke, we come together\u2014to do the best work, in the best possible place. We're all in. Because it's everyone's role to make health more human\u2122 &nbsp; About the role The Director, AWS Infrastructure and DevOps is responsible for the strategy, architecture, security, and operational execution of our technology infrastructure and DevOps capabilities. This role will own and execute the day-to-day management of AWS cloud infrastructure. Additionally, it will oversee continuous improvement of CI/CD pipelines, release and deployment processes, SaaS administration and provisioning, security and compliance, and infrastructure cost optimization. The ideal candidate is a hands-on technology professional who can establish scalable operational practices while partnering closely with Engineering, Security, and IT teams to ensure the reliable, secure, and efficient delivery of technology services. &nbsp; Here's what you'll be doing: \u00b7 Lead the strategy, architecture, implementation, administration, and day-to-day operation of our AWS infrastructure and cloud services. \u00b7 Design, build, and maintain secure, scalable, reliable, and cost-effective cloud infrastructure and environments. \u00b7 Implement and maintain infrastructure-as-code, configuration management, logging, alerting, backup, and disaster recovery capabilities. \u00b7 Define and implement cloud architecture standards across networking, compute, storage, databases, identity, and access management. \u00b7 Facilitate infrastructure modernization, automation, and optimization programs to improve reliability, scalability, security, and operational efficiency. \u00b7 Design, build, and improve CI/CD pipelines supporting application development, testing, security scanning, and production deployment. \u00b7 Define and implement DevOps standards, tooling, processes, and engineering practices across development teams. \u00b7 Own and execute release and deployment processes across development, staging, and production environments, including deployment automation, release coordination, validation, and rollback procedures. \u00b7 Own the administration, governance, and lifecycle management of our SaaS technology ecosystem. \u00b7 Implement and manage SaaS tool provisioning, user onboarding/offboarding, role and permission management, access reviews, and license management. \u00b7 Manage cloud infrastructure cost management and optimization, including monitoring, forecasting, resource utilization, and identification and execution of cost-saving opportunities. \u00b7 Partner with Security and Compliance teams to define and implement infrastructure and DevOps security controls and practices. \u00b7 Implement and maintain appropriate controls for identity and access management, secrets management, encryption, vulnerability management, logging, and infrastructure security. \u00b7 Support security audits, compliance assessments, customer security reviews, and regulatory requirements, including implementation and maintenance of required controls and evidence. \u00b7 Monitor infrastructure and application environments, troubleshoot production and deployment issues, and lead root-cause analysis and remediation efforts. \u00b7 Evaluate infrastructure, DevOps tooling, and operational practices and identify opportunities to improve reliability, security, developer experience, and efficiency. &nbsp; About you Qualifications: \u00b7 8+ years of hands-on experience in infrastructure, cloud engineering, DevOps, or related technology disciplines, with demonstrated ownership of production environments. \u00b7 Hands-on experience designing, implementing, and operating AWS cloud infrastructure and services. \u00b7 Scripting and automation experience using Python or TypeScript \u00b7 Experience with infrastructure-as-code and automation tools such as Terraform, CloudFormation, or AWS CDK. \u00b7 Experience with containerization and orchestration technologies such as Docker and Kubernetes. \u00b7 Experience designing and m",
-  "url": "https://www.inizioevoke.com/vacancy/inizioevoke/8227375?gh_jid=8227375",
-  "posted_ts": 1790780322.0,
-  "comp": null,
-  "where": "bay",
-  "score": 0.33,
-  "tag": "inizioevoke_director_aws_infrastructure_and_",
-  "found_on": "greenhouse_api",
-  "tier": 1,
-  "dom": 2,
-  "skill_hits": 9,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you identify as LGBTQIA (Lesbian, Gay, Bisexual, Transgender, Queer/Questioni"
-  ]
- },
- {
-  "ats": "greenhouse",
   "company": "krollbondratingagency",
   "title": "Head of Data Management - Managing Director (NY)",
   "loc": "New York, New York",
