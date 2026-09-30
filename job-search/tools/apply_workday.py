@@ -836,6 +836,9 @@ async def auth(page, job, s):
     if st == "in":   # the one sign-in went through after all (slow tenant), or the form needs no account
         if r is not True and r != "noform": remember(creds["login"][0], "login")
         return "ok"
+    if not await page.locator(f'{A("createAccountLink")}:visible, input{A("verifyPassword")}:visible').count():   # social chooser first (PTC)
+        await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000)
+        await page.wait_for_timeout(1500)
     if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
     if not await page.locator(f'input{A("verifyPassword")}').count():
         return "fail"
