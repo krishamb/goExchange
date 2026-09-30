@@ -20,27 +20,7 @@
    "How comfortable are you working in a fast-changing product environment?",
    "Have you ever been a Thunderbird user?",
    "Which of the following best describes your experience with open-source or commun",
-   "Which country will you be working from?",
-   "Which timezone do you reside in?"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/afresh/jobs/6200751004",
-  "tag": "afresh_founding_senior_manager_forward_deplo",
-  "company": "afresh",
-  "title": "Founding Senior Manager, Forward Deployed Engineering",
-  "comp": "$203,745 - $275,655 ",
-  "loc": "San Francisco, CA",
-  "posted_ts": 1789752505.0,
-  "score": 19,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Describe a production AI or LLM-based system you personally designed, built, or ",
-   "This role requires 3 days/week onsite in San Francisco. Are you aligned?",
-   "Do you have 10+ years in software engineering, solutions architecture, consultin",
-   "Are you fluent in SQL and a modern cloud data platform such as Databricks, BigQu",
-   "This role involves traveling to customer sites roughly 25-40% of the time. Are y"
+   "Which country will you be working from?"
   ]
  },
  {
