@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/oasishealthpartners/jobs/5426455008",
-  "tag": "oasishealthpartners_director_software_engine",
-  "company": "oasishealthpartners",
-  "title": "Director, Software Engineering",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1789671322.0,
-  "score": 18,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/focused/jobs/8001022003",
   "tag": "focused_lead_agent_engineer_langchain",
   "company": "focused",
