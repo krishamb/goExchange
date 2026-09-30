@@ -7,6 +7,8 @@
 #   bash job-search/run_ashby.sh manual      build and open a page listing every job to finish by hand, with the links
 #                                            and the answers already prepared
 #   bash job-search/run_ashby.sh report      build and open a report of every application confirmed as submitted
+#   bash job-search/run_ashby.sh assist      visible browser: fills each job the spam check blocked (or that needed an
+#                                            answer), you review and click Submit yourself; confirmed ones are recorded
 #
 # Queue: job-search/batches/ashby_all.json (freshest first, at most two roles per company).
 # Re-running is safe: submitted jobs are skipped, and jobs the site's spam check blocked are not retried
@@ -43,7 +45,7 @@ for f in sorted(glob.glob(os.path.join(d,"out","*_report.json")), key=os.path.ge
 print(f"Ashby/Lever  submitted: {len(ok)}   blocked by Ashby's spam check: {len(spam)}   need an answer from you: {len(need)}   other: {len(other)}")
 for r in need[-8:]: print("  NEEDS ANSWER", r["tag"][:40], "|", "; ".join(u["label"][:60] for u in r["unanswered"][:2]))
 for r in other[-5:]: print("  OTHER       ", r["tag"][:40], "|", (r.get("result") or "")[:80])
-if spam or need: print("To finish those by hand:  bash ~/ashby.sh manual")
+if spam or need: print("To finish those (you click Submit on a filled form):  bash ~/ashby.sh assist")
 EOF
 }
 
@@ -113,8 +115,29 @@ print(f"{len(rows)} submitted applications -> {out} (and applied_report.csv)")
 if sys.platform=="darwin": subprocess.run(["open",out])
 PYREPORT
     exit 0;;
+  assist)
+    "$PY" - <<'PYASSIST'
+import json, glob, os
+d=os.path.expanduser(os.environ.get("JOBS_DIR","~/jobs-private"))
+q={j["tag"]:j for j in json.load(open("job-search/batches/ashby_all.json"))}
+todo=[]
+for f in sorted(glob.glob(os.path.join(d,"out","*_report.json")),key=os.path.getmtime):
+    try: r=json.load(open(f))
+    except Exception: continue
+    res=r.get("result") or ""
+    if r.get("ats") not in ("ashby","lever") or r.get("submitted") or r["tag"] not in q: continue
+    if "ALREADY APPLIED" in res or "job closed" in res or "location restricted" in res: continue
+    if r.get("spam_blocked") or "spam check" in res or "connection instead" in res or r.get("unanswered"): todo.append(q[r["tag"]])
+json.dump(todo,open(os.path.join(d,"ashby_run","assist.json"),"w"),indent=1)
+print(f"{len(todo)} jobs to finish in assist mode")
+PYASSIST
+    [ -s "$RUN/assist.json" ] || exit 0
+    echo "A browser window opens for each job with everything filled in. Check it, answer anything highlighted, click Submit."
+    echo "Confirmed submissions are recorded; close a tab to skip that job. Ctrl+C here stops."
+    "$PY" job-search/tools/apply.py batch "$RUN/assist.json" --submit --assist
+    exit 0;;
   start) ;;
-  *) echo "usage: bash job-search/run_ashby.sh [start [N]|status|stop|manual|report]"; exit 2;;
+  *) echo "usage: bash job-search/run_ashby.sh [start [N]|status|stop|manual|report|assist]"; exit 2;;
 esac
 
 N="${2:-2}"

@@ -36,7 +36,10 @@ def applicant_cover_text():
     except Exception: t=""
     open(cache,"w").write(t); return t
 CL_OWN=applicant_cover_text()
-HEADED="--headed" in sys.argv
+# --assist: visible browser; the filler fills the form and the applicant reviews it and clicks Submit themselves
+ASSIST="--assist" in sys.argv
+ASSIST_WAIT=int(os.environ.get("ASSIST_WAIT","600"))
+HEADED=("--headed" in sys.argv) or ASSIST
 import shutil, platform
 if HEADED and platform.system()=="Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
     os.execvp("xvfb-run",["xvfb-run","-a","-s","-screen 0 1280x2000x24",sys.executable]+sys.argv)
@@ -117,6 +120,7 @@ TEXT_RULES=[
  (r"caught your attention|made you want to join|drew you to (us|apply)", ANS.get("why_us","")),
  (r"system from your resume you know best|give us the real numbers", "Yahoo Finance's quotes, charts and research platform, where I was Chief Architect for the bare-metal-to-AWS modernization: about 40M daily and 150M monthly active users, and tick-to-quote streaming latency as low as about 5 ms. I cannot quote Yahoo's internal cost figures; the design leaned on aggregation and caching in the market-data path to keep peak-hour load efficient. For the AI research assistants built on it (OpenAI/LangChain RAG over news, filings and fundamentals) I tracked answer quality with LLM observability and drift detection (OpenTelemetry, Prometheus, Grafana), with PII masking and bias audits as release gates. At Hyperion AI I tracked model quality with a 121-measure scorecard and 13 comparability checks alongside time to first token and time per output token."),
  (r"used agentcore|agentcore", "Not in production. My agent work at Hyperion AI used my own MCP client and servers (3 servers, 9 tools) with a coordinator-controlled plan-validate-dispatch-replan loop, and I evaluated LangGraph, CrewAI and AutoGen integration paths. I have not shipped a project on Bedrock AgentCore, but its runtime, memory, gateway and identity pieces map directly onto what I built, and I would be productive on it quickly."),
+ (r"^years of (industry |professional |relevant |total |work |software |engineering )?experience\??$|how many years of (industry |professional |relevant |total |work )?experience", "25"),   # applicant: 25 years
  (r"(visa|immigration|citizenship|work authori[sz]ation|employment authori[sz]ation) status", "US citizen. I do not need a visa or any sponsorship, now or in the future."),   # applicant: no sponsorship needed
  (r"what is your (current )?age|^your age$|^age$|current age|how old are you", "50"),   # applicant: age 50
  (r"(other|different) teams (started|began) using|teams .{0,20}(adopted|picked up|started using) .{0,20}on their own|something you built that (other|different) (teams|people|groups)", "At Yahoo Finance I built natural-language research workflows (RAG over financial news, company fundamentals and historical data). They were built for editorial work, and product teams took them up for their own research as well. I think they did because the tools answered questions people already asked every day, in seconds, from data they already trusted, showed their sources, and needed nothing to install or learn."),
@@ -673,7 +677,7 @@ async def run():
             except Exception: _prev={}
             if _prev.get("submitted") and "ALREADY" not in (_prev.get("result") or ""):
                 print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":True,"result":"ALREADY SUBMITTED earlier (skipped)"}),flush=True); continue
-            if _prev.get("spam_blocked") or re.search(r"spam check|pause browser extensions|different (network )?connection instead",_prev.get("result") or ""):
+            if not ASSIST and (_prev.get("spam_blocked") or re.search(r"spam check|pause browser extensions|different (network )?connection instead",_prev.get("result") or "")):
                 if not _prev.get("spam_blocked"):
                     _prev["spam_blocked"]=True; _prev["result"]="NOT SUBMITTED: blocked by the site's spam check - apply by hand"; json.dump(_prev,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
                 print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":False,"result":"SKIPPED: the site's spam check blocked this earlier - apply by hand"}),flush=True); continue
@@ -682,13 +686,13 @@ async def run():
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
                 json.dump(r,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
                 summary.append(r); print(json.dumps(r),flush=True); continue
-            ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":2000},locale="en-US",timezone_id="America/Los_Angeles")
+            ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors","code_required","code_source")})
             print(json.dumps(summary[-1]),flush=True)
             await ctx.close()
-            if PACE and job is not jobs[-1]:
+            if PACE and not ASSIST and job is not jobs[-1]:
                 import random; gap=random.uniform(*PACE)
                 if not r.get("submitted") and re.search(r"location restricted|in-office NYC|job closed|managed outside|ALREADY APPLIED",r.get("result") or ""): gap=min(gap,20)   # nothing was submitted: no need for the full human-paced gap
                 print(f"PACE waiting {int(gap)}s before the next application",flush=True); await asyncio.sleep(gap)
@@ -1087,7 +1091,30 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             await page.screenshot(path=f"{OUT}/{tag}_filled.png",full_page=True)
             cap=await page.evaluate("()=>!!document.querySelector('iframe[src*=hcaptcha], iframe[src*=recaptcha], [data-sitekey]')")
             report["captcha_present"]=cap
-            if submit and not report["unanswered"]:
+            if ASSIST:
+                # the applicant submits: fill everything, bring the window forward, wait for the site's confirmation
+                who=f"{company or ''} - {jtitle or tag}".strip(" -")
+                todo="; ".join((u.get("label") or "")[:70] for u in report["unanswered"])
+                print(f"ASSIST {tag}: form filled for {who}. Review it in the browser window"+(f" and answer: {todo}" if todo else "")+f", then click Submit yourself. Waiting up to {ASSIST_WAIT//60} min (close the tab to skip).",flush=True)
+                if platform.system()=="Darwin":
+                    try:
+                        import subprocess
+                        subprocess.run(["osascript","-e",'display notification "Review the form and click Submit" with title "Ready: '+re.sub(r'[\"\\\\]','',who)[:60]+'" sound name "Glass"'],timeout=5)
+                    except Exception: pass
+                try: await page.bring_to_front()
+                except Exception: pass
+                sm=None; t0=time.time(); body=""
+                while time.time()-t0<ASSIST_WAIT:
+                    await asyncio.sleep(3)
+                    try: body=await body_text(page); url_now=page.url
+                    except Exception: break   # the applicant closed the tab: skip this job
+                    sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set",body,re.I)
+                    if not sm and re.search(r"/confirmation\b",url_now): sm=re.search(r"\S.{0,60}",body)
+                    if sm: break
+                report["assist"]=True; report["submitted"]=bool(sm)
+                report["result"]=("Submitted by the applicant in assist mode: "+sm.group(0)) if sm else "NOT SUBMITTED: assist mode - not submitted (skipped or timed out)"
+                if not sm and re.search(r"possible spam|flagged as (possible )?spam|pause browser extensions|different (network )?connection instead",body,re.I): report["spam_blocked"]=True
+            elif submit and not report["unanswered"]:
                 cands=page.locator('button:has-text("Send application"), button#btn-submit, button[type="submit"], input[type="submit"], button:has-text("Submit application"), button:has-text("Submit Application"), button:has-text("Submit")')
                 btn=None
                 for i in range(await cands.count()):
