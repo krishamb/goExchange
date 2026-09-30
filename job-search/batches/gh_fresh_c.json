@@ -9,7 +9,7 @@
   "loc": "Utah | Remote",
   "posted_ts": 1789753640.0,
   "score": 17,
-  "last_result": "tates military operation for which an Armed Forces service medal was awarded pursuant to Executive O",
+  "last_result": "ed forces service medal veteran\" means a veteran who, while serving on active duty in the U.S. milit",
   "last_unanswered": []
  },
  {
@@ -22,8 +22,10 @@
   "loc": "United States - Remote",
   "posted_ts": 1790011395.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have professional experience using Java as a backend programming language"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -294,6 +296,8 @@
   "comp": "$207,000 - $330,000 ",
   "loc": "Mountain View, CA (HQ), San Francisco, CA",
   "posted_ts": 1789782293.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
