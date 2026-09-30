@@ -105,19 +105,6 @@
  },
  {
   "ats": "workday",
-  "tag": "wd_fiserv_staff_applied_ai_engineer",
-  "url": "https://fiserv.wd5.myworkdayjobs.com/EXT/job/Sunnyvale-California/Senior-Full-Stack-Software-Engineer_R-10392939",
-  "company": "Fiserv",
-  "title": "Staff Applied AI Engineer",
-  "where": "bay",
-  "posted": 1790726400,
-  "note": "fresh24",
-  "fin": true,
-  "prior": 0,
-  "src": "resolved"
- },
- {
-  "ats": "workday",
   "tag": "wd_citi_head_of_group_wide_ai_first_engineering",
   "url": "https://citi.wd5.myworkdayjobs.com/2/job/New-York-New-York-United-States/Head-of-AI-First-Development--Firmwide-AI----Managing-Director_26964022-1",
   "company": "Citi",

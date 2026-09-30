@@ -73,3 +73,17 @@ account; tell them you are a US citizen if they reply).
 - Global Settlement Systems (Miami, FL) - Senior Blockchain Engineer: never apply. Blocked in the filler for every queue.
 - Tata Consultancy Services (TCS): never apply to any position. Blocked in the filler for every queue.
 - EpicSemi (Santa Clara, CA): never apply to any position. Blocked in the filler for every queue.
+
+## Needs you: steps the filler cannot do (2026-09-30)
+
+- Fiserv - Senior Full-Stack Software Engineer (Sunnyvale, R-10392939), Workday: the application is saved as a draft
+  under ambarishkrishnamurthy@gmail.com but Fiserv requires an online assessment test before it can be submitted.
+  Sign in at fiserv.wd5.myworkdayjobs.com, take the assessment, then submit. Removed from the automated queue.
+
+## Answered on your behalf: please be aware (2026-09-30)
+
+- Interview-integrity pledges (Synchrony and similar Workday forms): "If selected for interviews I will personally
+  participate and will not use AI tools or another person to answer interview questions" is answered **I agree**.
+  It is a promise about your own conduct in interviews, and declining it disqualifies the application.
+- Employer AI screening (Visa): "Visa may use automated tools such as AI to review your application; you can opt out"
+  is answered without opting out (Visa says opting out does not affect eligibility either way).
