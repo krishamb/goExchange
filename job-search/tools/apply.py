@@ -211,6 +211,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(hold|have) any (salesforce|servicenow|sap|workday)(\.com)? certifications?|(salesforce|servicenow|sap|workday) certifi", ["No","no","None"]),
  (r"(professional |production |hands-on )?experience (using|with|in|writing) (java|python|c\+\+|golang|rust|typescript|javascript|sql|bash)\b(?! ?(ee|fx|swing))", ["Yes","yes"]),   # all on the resume (languages line; C++/Java execution paths and replay engines)
  (r"how important is the title|title/level .{0,40}(relative to|vs\.?|versus) scope|title (or|vs\.?|versus) scope", ["Scope Is Important","Scope is important","Scope","N/A"]),
  (r"more product-focused or systems-focused|product[- ]focused or systems[- ]focused", ["Systems-Focused","Systems focused","Systems"]),
