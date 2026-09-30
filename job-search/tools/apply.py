@@ -112,7 +112,7 @@ TEXT_RULES=[
  (r"infrastructure that supported ai agents|autonomous workflows|dynamically generated and executed tasks", "Yes. At Hyperion AI I built the infrastructure our agents ran on: an MCP client and 3 MCP servers exposing 9 tools; plan-validate-dispatch-observe-replan loops with reasoner and verifier roles and per-role model endpoints; and a coordinator-controlled action boundary with role-based allowlists, JSON-schema validation, execution budgets and approval-gated actions, so tasks the agents generated were validated before they ran and every tool outcome was traceable. I also built the evaluation platform with live agent timelines and replayable traces."),
  (r"earliest month|month you('d| would) be able to (join|start)", "Immediately (October 2026)"),
  (r"what type of visa|visa are you currently on", "Not applicable. I am a US citizen and need no visa or sponsorship."),
- (r"current or most recent (role|job|position) title|most recent (job )?title", "CTO & Technical Co-Founder, Hyperion AI"),
+ (r"current or most recent (role|job|position) title|most recent (job )?title|current \(?or most recent\)? ?(job |role |position )?title|^current (job )?title", "CTO & Technical Co-Founder, Hyperion AI"),
  (r"where are you physically (based|located)|where are you based\??$", "Santa Clara, California"),
  (r"employee is selected .{0,40}employee name|provide the employee('s)? name", "N/A"),
  (r"open to relocat(e|ion)( for this role)?\??$|willing to relocate( for this role)?\??$", "Yes. I live in Santa Clara, California (SF Bay Area) and I am willing to relocate to New York City; in the Bay Area I can work on-site or hybrid in San Francisco and the South Bay."),   # applicant: will move to NYC
@@ -189,6 +189,7 @@ CHOICE_RULES=[
  (r"what state (will|do|would) you (be )?(based|live|reside|work)|state (of|you) (residence|reside)|which state (will|do|are) you", ["California","CA"]),   # Santa Clara, California
  (r"when would you be available to relocate|available to relocate", ["October 2026","September 2026","Immediately","Now"]),   # already lives in the Bay Area; available immediately
  (r"interview process .{0,80}(align|work) with your (availability|timeline)|timeline align with your availability", ["Yes","yes"]),
+ (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
  (r"experience with llm-as-judge|llm-as-a-judge|llm as (a )?judge", ["I've experimented with it in my own projects"]),
