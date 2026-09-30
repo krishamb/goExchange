@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/didi/jobs/8234302",
-  "tag": "didi_staff_principal_ai_transformation_engin_r2",
-  "company": "didi",
-  "title": "Staff/Principal AI Transformation Engineer",
-  "comp": "$255,000 -$351,000 ",
-  "loc": "San Jose, CA",
-  "posted_ts": 1790370860.0,
-  "score": 25,
-  "resubmit": true,
-  "correction_of": "didi_staff_principal_ai_transformation_engin",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/securityscorecard/jobs/8191929",
   "tag": "securityscorecard_principal_ai_architect_r2",
   "company": "securityscorecard",
@@ -26,23 +11,10 @@
   "score": 22,
   "resubmit": true,
   "correction_of": "securityscorecard_principal_ai_architect",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/rxsense/jobs/4737056005",
-  "tag": "rxsense_director_data_and_platform_r2",
-  "company": "rxsense",
-  "title": "Director, Data and Platform",
-  "comp": null,
-  "loc": "Remote-US",
-  "posted_ts": 1790176238.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "resubmit": true,
-  "correction_of": "rxsense_director_data_and_platform"
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "School"
+  ]
  },
  {
   "ats": "greenhouse",
