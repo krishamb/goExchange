@@ -245,6 +245,10 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"people-leadership responsibilities|people leadership (responsibilities|experience)", ["Managing engineering teams","Hiring engineers","Performance management","Mentoring engineers","Conducting performance reviews","Developing career plans","Managing team workload/priorities","Coaching technical skills"]),
+ (r"types of automated testing|automated testing have you", ["Unit testing","Integration testing","API testing","Regression testing","System testing","Performance/load testing","Automated UI testing"]),
+ (r"which azure services", ["Azure Functions","Azure App Services","Azure Storage","Azure DevOps","Azure Key Vault","Azure Monitor","Azure Cosmos DB"]),
+ (r"which of the following technologies have you used", ["C#",".NET Core / .NET","React.js","JavaScript / TypeScript","REST APIs","Microservices","ASP.NET","Python","Go","Rust","C++","Java","TypeScript","Kubernetes","AWS","Azure","Kafka"]),
  (r"non-?compet(e|ition)|agreements? (that|which) (would|could|may|might) (preclude|restrict|limit|prevent|prohibit)|preclude or restrict", ["No","no","None","No, I am not","I am not bound"]),   # applicant: no non-compete or other restricting agreement
  (r"held h-?1b|h-?1b (status|petition|visa|cap)|(held|hold|have) (an? )?(f-?1|j-?1|l-?1|o-?1|tn|e-?3|h-?4) (status|visa)", ["No","no"]),   # applicant: US citizen
  (r"procurement|contract award", ["No","no","None","Not applicable"]),   # applicant: never a government employee or official
@@ -487,7 +491,7 @@ CHOICE_RULES=[
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|ITAR|EAR", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
- (r"veteran|military", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
+ (r"veteran|military", ["I am not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
