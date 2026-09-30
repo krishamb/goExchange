@@ -9,6 +9,7 @@
 #   bash ~/ashby.sh report    open a report of every application confirmed as submitted from this Mac
 #   bash ~/ashby.sh indeed    open the Indeed jobs to apply by hand (newest first, answers ready to paste)
 #   bash ~/ashby.sh sites     open the company-website jobs (Workday, iCIMS...) to apply by hand, grouped by domain
+#   bash ~/ashby.sh top       open the top Ashby/Lever roles (leadership, fintech, crypto, AI) to apply by hand in your own browser
 #   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
 #   bash ~/ashby.sh stop      stop all workers
 #   bash ~/ashby.sh update    only download the newest job list and scripts
@@ -43,11 +44,12 @@ case "${1:-start}" in
   assist) update; bash job-search/run_ashby.sh assist ;;
   report) in_repo; bash job-search/run_ashby.sh report ;;
   indeed) update; open "$REPO/job-search/INDEED_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/INDEED_APPLY_BY_HAND.html in your browser" ;;
+  top)    update; open "$REPO/job-search/ASHBY_TOP_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/ASHBY_TOP_BY_HAND.html in your browser" ;;
   sites)  update; open "$REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html in your browser" ;;
   stop)   in_repo; bash job-search/run_ashby.sh stop ;;
   log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
-  help|-h|--help) sed -n '2,16p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,16p' "$0" ;;
+  help|-h|--help) sed -n '2,17p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,17p' "$0" ;;
 esac
 }
 # the whole file is read before anything runs, so an update that replaces this file mid-run is harmless
