@@ -9,11 +9,8 @@
   "loc": "Lehi, Utah, United States; Remote - US",
   "posted_ts": 1790024562.0,
   "score": 20,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Tell us about a recent project where you served as a technical leader or drove a",
-   "Briefly describe the most complex distributed or cloud-based backend system you\u2019"
-  ]
+  "last_result": ", for example, tuberculosis, asthma, emphysema | Short stature (dwarfism) | Traumatic brain injury |",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -25,21 +22,20 @@
   "loc": "Remote US",
   "posted_ts": 1788883147.0,
   "score": 20,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://x.company/careers/8832076002?gh_jid=8832076002",
-  "tag": "x9_engineering_manager_grid_model_management",
-  "company": "x9",
-  "title": "Engineering Manager,  Grid Model Management (Tapestry)",
-  "comp": "$207,000 - $304,000 ",
-  "loc": "Mountain View, CA (HQ)",
-  "posted_ts": 1790116380.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe one or two examples of your experience with AI in engineering. Please i",
+   "We actively encourage using AI dev tools to move fast. What is the most genuinel",
+   "What level of engineering ownership have you had for complex features, from init",
+   "How have you been professionally involved with AI products?",
+   "Which best describes your full-stack engineering experience?",
+   "What level and type of experience do you have designing or delivering custom tec",
+   "How comfortable are you working in a fast-changing product environment?",
+   "Have you ever been a Thunderbird user?",
+   "Which of the following best describes your experience with open-source or commun",
+   "Which country will you be working from?",
+   "Which timezone do you reside in?"
+  ]
  },
  {
   "ats": "greenhouse",
