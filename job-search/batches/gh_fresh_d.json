@@ -1,34 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/securityscorecard/jobs/8193353",
-  "tag": "securityscorecard_principal_software_archite",
-  "company": "securityscorecard",
-  "title": "Principal Software Architect - Data Platform",
-  "comp": "$270,000 - $330,000 ",
-  "loc": "Hybrid (NYC / Austin)",
-  "posted_ts": 1789137129.0,
-  "score": 15,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.bridgewaybentech.com/job-posting?gh_jid=8811807002",
-  "tag": "bridgeway_ai_engineer",
-  "company": "bridgeway",
-  "title": "AI Engineer",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1790104348.0,
-  "score": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/rebuildmanufacturing/jobs/4735168005",
   "tag": "rebuildmanufacturing_director_forward_deploy",
   "company": "rebuildmanufacturing",
@@ -37,8 +9,10 @@
   "loc": "United States -Remote",
   "posted_ts": 1789671403.0,
   "score": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "This position requires access to export-controlled information. For export-contr"
+  ]
  },
  {
   "ats": "greenhouse",
