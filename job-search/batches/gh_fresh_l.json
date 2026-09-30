@@ -1,51 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/coinbase/jobs/8155366",
-  "tag": "coinbase_senior_staff_software_engineer_platform_iam_r2",
-  "company": "coinbase",
-  "title": "Senior Staff Software Engineer, Platform - IAM",
-  "comp": 298700.0,
-  "geo": "Remote US",
-  "age": 19,
-  "answers": {},
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Which of the following best describes how you use AI tools today?"
-  ],
-  "resubmit": true,
-  "correction_of": "coinbase_senior_staff_software_engineer_platform_iam"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/coinbase/jobs/8166218",
-  "tag": "coinbase_staff_software_engineer_enterprise_apps_r2",
-  "company": "coinbase",
-  "title": "Staff Software Engineer, Enterprise Apps",
-  "comp": 256500.0,
-  "geo": "Remote US",
-  "age": 29,
-  "answers": {},
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "resubmit": true,
-  "correction_of": "coinbase_staff_software_engineer_enterprise_apps"
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/robinhood/jobs/8205579",
-  "tag": "robinhood_engineering_manager_agentic_apps_r2",
-  "company": "robinhood",
-  "title": "Engineering Manager, Agentic Apps",
-  "comp": 300000.0,
-  "source": "ATS board",
-  "last_result": "(no report)",
-  "last_unanswered": [],
-  "resubmit": true,
-  "correction_of": "robinhood_engineering_manager_agentic_apps"
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/databricks/jobs/8569637002",
   "tag": "databricks_sr_solutions_architect_travel_and_hospitality_r2",
   "company": "databricks",
