@@ -228,14 +228,15 @@ CHOICE_RULES=[
  (r"(shipping|shipped) software for a commercial product in the data|data, database, data infrastructure, streaming", ["Yes","yes"]),   # Yahoo Finance market-data streaming; Kafka/Redpanda, KDB
  (r"best represents your strongest technical expertise|strongest (technical )?(area|expertise)", ["Distributed Systems","Stream Processing","Systems","Backend"]),
  (r"work onsite at our office in (palo alto|san francisco|mountain view|sunnyvale|san jose|santa clara|menlo park|redwood city|san mateo|oakland|berkeley|south san francisco|foster city|bay area)", ["Yes","yes"]),   # Bay Area on-site/hybrid is fine
- (r"(current|most recent) ?(/|or)? ?(most recent )?employer", ["Hyperion AI","Hyperion","Other","Not listed","None of the above","N/A"]),   # picked from a company list: Hyperion AI is not on AV-industry lists, so Other
+ (r"^(current|most recent) ?(/|or)? ?(most recent )?employer\??\*?$|(who|what) is your (current|most recent) employer|^(current|present) (company|employer)\??$", ["Hyperion AI","Hyperion","Other","Not listed","None of the above","N/A"]),   # picked from a company list: Hyperion AI is not on AV-industry lists, so Other
  (r"security[- ]clearance status|best describes your .{0,30}clearance", ["I have never held a clearance but am willing","never held a clearance but am willing to undergo","None, but willing","No, but I am willing","None"]),   # US citizen, never held a clearance
  (r"years of (people|team|engineering|direct) management|years (have you )?(managed|managing|leading) (people|teams|engineers)|years of (people )?leadership", ["10+","10+ years","8+","7+","5+","5+ years","More than 5 years","5 or more"]),   # managing teams since the JPMorgan / Morgan Stanley lead roles
- (r"what country do you (currently )?(reside|live)|country (of|you) (residence|reside)|which country (do|are) you", ["United States","United States of America","USA","US","U.S."]),
+ (r"what country do you (currently )?(reside|live)|which country (do|are) you (currently )?(reside|live|based)|^(current )?country of residence\??\*?$|what is your (current )?country of residence", ["United States","United States of America","USA","US","U.S."]),
  (r"most influenced your decision to apply|influenced you to apply", ["*Other","Other","Company Website","Company website","Careers page"]),   # found on the company's own job board
  (r"personally built with or operated in production", ["Kafka","Spark","Kubernetes","AWS","Terraform or IaC","vector databases (Qdrant/Pinecone/Weaviate)","Postgres/MySQL at scale"]),   # all on the resume
  (r"identify as (currently )?living with the following disabilit|living with (a|the following) disabilit", ["None of the above","I do not have a disability","No disability","None","I don't wish to answer","Prefer not to answer"]),   # no disability
  (r"(communications|marketing|advertising|creative|pr) agency", ["No","no"]),
+ (r"current employer have any restrictions|restrictions on your ability to (work|join)|restrict(s|ed)? (you|your ability) from (working|joining)", ["No","no"]),   # no non-compete or restriction
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
