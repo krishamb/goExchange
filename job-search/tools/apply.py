@@ -663,7 +663,10 @@ def company_keys(tag,company=None):
     if company: ks.add(re.sub(r"[^a-z0-9]","",str(company).lower()))
     if toks and len(toks[0])>=5 and toks[0] not in GENERIC_TOKENS: ks.add(toks[0])
     if len(toks)>1: ks.add(toks[0]+toks[1])
+    ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=4}
+# one company behind two Greenhouse board names (found from the security-code e-mail's company name)
+BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 def applied_elsewhere(tag,company=None,days=45):
     """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
     (MAX_PER_COMPANY, default 2: the applicant allows two roles per company when both match the resume), else None."""
