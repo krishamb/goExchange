@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/welbehealth/jobs/8815515002",
-  "tag": "welbehealth_engineering_manager",
-  "company": "welbehealth",
-  "title": "Engineering Manager",
-  "comp": null,
-  "loc": "Remote, CA, USA",
-  "posted_ts": 1790090032.0,
-  "score": 16,
-  "last_result": "dition for which a campaign badge has been authorized under the laws administered by the Department ",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/omadahealth/jobs/8197746",
   "tag": "omadahealth_engineering_manager_infrastructu",
   "company": "omadahealth",
@@ -29,45 +16,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/known/jobs/8797403002",
-  "tag": "known_director_data_science",
-  "company": "known",
-  "title": "Director, Data Science ",
-  "comp": "$140K - $170K",
-  "loc": "New York, NY; Remote",
-  "posted_ts": 1789081155.0,
-  "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/cancernavigator/jobs/4415033009",
-  "tag": "cancernavigator_vp_of_engineering",
-  "company": "cancernavigator",
-  "title": "VP of Engineering",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1790092904.0,
-  "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/venncity/jobs/4733828005",
-  "tag": "venncity_forward_deployed_engineer",
-  "company": "venncity",
-  "title": "Forward Deployed Engineer",
-  "comp": "$200,000 - $400,000, ",
-  "loc": "Remote U.S.",
-  "posted_ts": 1789423120.0,
-  "score": 14,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/5393451008",
   "tag": "9thwayinsignia_ai_engineer",
   "company": "9thwayinsignia",
@@ -76,8 +24,11 @@
   "loc": "United States - Remote",
   "posted_ts": 1788445860.0,
   "score": 14,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you eligible to receive a Public Trust? Please click the following link to v",
+   "What is the application password?"
+  ]
  },
  {
   "ats": "greenhouse",
