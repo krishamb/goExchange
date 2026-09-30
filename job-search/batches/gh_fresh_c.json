@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/censys/jobs/8731018002",
-  "tag": "censys_senior_ai_llm_engineer",
-  "company": "censys",
-  "title": "Senior AI/LLM Engineer",
-  "comp": null,
-  "loc": "Remote (US/Canada)",
-  "posted_ts": 1788367865.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you require any special accommodations during the interview process (for exam"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/intercom/jobs/8201208",
   "tag": "intercom_forward_deployed_engineer",
   "company": "intercom",
@@ -24,13 +9,8 @@
   "loc": "Chicago, Illinois; San Francisco, California",
   "posted_ts": 1789395725.0,
   "score": 15,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you authorised to work in the country in which this role is located? (Fin sp",
-   "Current Location",
-   "Please email me about future job openings",
-   "US Export Control laws 2026: In which country did you obtain citizenship, nation"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -42,33 +22,7 @@
   "loc": "Remote",
   "posted_ts": 1789136971.0,
   "score": 15,
-  "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.payoneer.com/careers/position/8190850/?gh_jid=8190850",
-  "tag": "payoneer_senior_staff_engineer",
-  "company": "payoneer",
-  "title": "Senior Staff Engineer",
-  "comp": null,
-  "loc": "Remote, US",
-  "posted_ts": 1789546354.0,
-  "score": 13,
-  "last_result": "zed to work lawfully in the United States for Payoneer?* | Yes | What is your compensation expectati",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/privacy/jobs/6190699004",
-  "tag": "privacy_staff_software_engineer",
-  "company": "privacy",
-  "title": "Staff Software Engineer",
-  "comp": "$200,000 - $220,000 ",
-  "loc": "Remote",
-  "posted_ts": 1789163653.0,
-  "score": 13,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
@@ -81,21 +35,11 @@
   "loc": "United States (Remote);",
   "posted_ts": 1788454014.0,
   "score": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/apolloio/jobs/6199327004",
-  "tag": "apolloio_senior_director_of_engineering_nati",
-  "company": "apolloio",
-  "title": "Senior Director of Engineering, Native Data ",
-  "comp": null,
-  "loc": "Hybrid, San Francisco",
-  "posted_ts": 1790009200.0,
-  "score": 12,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "School",
+   "What is your highest level of school you have completed or the highest degree yo"
+  ]
  },
  {
   "ats": "greenhouse",
