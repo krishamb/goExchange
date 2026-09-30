@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(rank|list|name|what are) (the |your )?(top \d+ )?skills?( sets?)? (that )?you('d| would) like to (further )?(develop|grow|build|learn)|skills? (do )?you (want|hope|would like) to (further )?(develop|grow|learn)", "1) Production AI agents over large data platforms: evaluation, reliability and cost control at scale. 2) Cloud and data-infrastructure cost engineering (FinOps) for data-heavy systems. 3) Growing engineering leaders and teams as the organization scales."),   # consistent with the applicant's CTO / architect direction
  (r"^i (hereby )?certify that (the |all |my )?(answers|information|statements)|^i (hereby )?certify that .{0,120}(true|correct|complete|accurate)", "Yes, I certify that my answers are true, correct and complete."),   # applicant: certification Yes (a free-text box, not a country)
  (r"\breferred by\b|\bwho referred\b|\breferr(ed|al)\b.{0,80}\bname\b|\bname of (the |your )?(referring )?(employee|referrer)\b", "N/A"),   # not referred: never the applicant's own name
  (r"(require|need) any (special )?accommodations?|accommodations? (during|for) (the )?interview", "No."),
