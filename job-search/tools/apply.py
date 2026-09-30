@@ -57,6 +57,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"if you (will )?require relocation|relocation.{0,60}(timeline|self-funded|without employer assistance)", "No relocation is needed for a Bay Area role: I live in Santa Clara, California. For a New York role I am willing to relocate to New York City within about three months of an offer."),
+ (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", None),
  (r"first and last name|legal name|full legal name|^(full )?name\b|^your name|_systemfield_name", P["name"]),
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile|contact number|^tel\b|^telephone", P["phone"]),
@@ -202,6 +204,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"which .{0,30}hub (are )?you (are )?(currently )?based|hub you are currently based out of|which (of our )?(offices?|hubs?) (are you|do you) (currently )?(based|located|live)", ["Greater San Francisco Bay Area","San Francisco Bay Area","Bay Area","San Francisco","SF Bay Area"]),
+ (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", ["__ASK__"]),   # a certification that the applicant filled the form personally: theirs to make
  (r"king'?s cross|london office|(office|days a week) in (our )?(london|toronto|vancouver|dublin|berlin|paris|amsterdam|singapore|bangalore|bengaluru|tel aviv)", ["__ASK__"]),   # a non-US office question on a US role: the applicant decides
  (r"(authori[sz]ed|eligible|able|permitted|allowed) to (lawfully |legally )?work .{0,80}without (the )?(need (for|of) |requiring |requirement (for|of) )?(any |a |visa |employer |company )*sponsor", ["Yes","yes"]),
  (r"(require|need)\b.{0,100}\bsponsor", ["No","no","No, I do not require sponsorship","I do not require sponsorship"]),
@@ -1155,6 +1159,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             for h,lab,gk,q in boxes:
                 try:
                     members=[b for b in boxes if b[2]==gk]
+                    if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
                     if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present",lab,re.I):
                         await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
