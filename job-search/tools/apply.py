@@ -1573,7 +1573,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         except Exception: pass
                     break
                 sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set|task complete|good news",body,re.I)
-                if not sm and re.search(r"/confirmation\b",page.url): sm=re.search(r"\S.{0,60}",body)   # Greenhouse confirmation page URL
+                if re.search(r"/confirmation\b",page.url) and re.search(r"upstream (request failed|connect error)|bad gateway|service unavailable|gateway time-?out|\b50[234]\b",body[:400],re.I):
+                    # the confirmation page itself failed to render (proxy/CDN hiccup): reload it once to read the real confirmation
+                    try:
+                        await page.reload(wait_until="domcontentloaded",timeout=45000); await page.wait_for_timeout(4000); body=await body_text(page)
+                        sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application",body,re.I)
+                    except Exception: pass
+                    if not sm: report["confirmation_page_error"]=True
+                if not sm and re.search(r"/confirmation\b",page.url) and not report.get("confirmation_page_error"): sm=re.search(r"\S.{0,60}",body)   # Greenhouse confirmation page URL
                 if ats=="wellfound":   # success = the apply modal is gone (or says sent) and no question is still flagged required
                     modal_gone=(await page.locator('button:has-text("Send application")').count())==0
                     sm=(re.search(r"application (has been )?sent|Applied",body,re.I) or re.search(r"\S.{0,60}",body)) if (modal_gone or re.search(r"application (has been )?sent",body,re.I)) and not re.search(r"This question is required",body) else None
@@ -1584,6 +1591,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 ok=bool(sm) and not still_code and not any(re.search(r"required|invalid|correct|missing",e,re.I) for e in errs)
                 if still_code and not ok: errs.append("still on the security-code step")
                 report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
+                if report.get("confirmation_page_error") and not ok:   # redirected to /confirmation but the page never rendered: never retried (it may have gone through), never counted
+                    report["submitted"]=True; report["result"]="UNCERTAIN: redirected to the Greenhouse confirmation URL but the confirmation page failed to load; counted only after a confirmation email"
                 if not ok and re.search(r"possible spam|flagged as (possible )?spam|pause browser extensions|pause ad ?blockers|different (network )?connection instead|could not verify|verify you are (a )?human",body,re.I):
                     report["result"]="NOT SUBMITTED: blocked by the site's spam check - apply by hand"; report["spam_blocked"]=True
                 await page.screenshot(path=f"{OUT}/{tag}_after.png",full_page=True)
