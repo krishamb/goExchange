@@ -196,6 +196,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"confirm that you are legally authori[sz]ed to work in the us|verify that (you|i) (am|are) authori[sz]ed", ["I verify that I am authorized to work in the US","authorized to work in the US","Yes"]),
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
  (r"(presently|currently|legally|lawfully) authori[sz]ed (under .{0,40})?to work|authori[sz]ed under (u\.?s\.?|united states) immigration", ["Yes","yes"]),   # US citizen
  (r"best describes your (right|eligibility|authori[sz]ation) to work|right to work in the (us|u\.s\.|united states)", ["I have permanent work rights","U.S. Citizen","US Citizen","I am a U.S. citizen","Citizen","Yes"]),   # US citizen
@@ -228,7 +229,6 @@ CHOICE_RULES=[
  (r"security[- ]clearance status|best describes your .{0,30}clearance", ["I have never held a clearance but am willing","never held a clearance but am willing to undergo","None, but willing","No, but I am willing","None"]),   # US citizen, never held a clearance
  (r"years of (people|team|engineering|direct) management|years (have you )?(managed|managing|leading) (people|teams|engineers)|years of (people )?leadership", ["10+","10+ years","8+","7+","5+","5+ years","More than 5 years","5 or more"]),   # managing teams since the JPMorgan / Morgan Stanley lead roles
  (r"what country do you (currently )?(reside|live)|country (of|you) (residence|reside)|which country (do|are) you", ["United States","United States of America","USA","US","U.S."]),
- (r"confirm that you are legally authori[sz]ed to work in the us|verify that (you|i) (am|are) authori[sz]ed", ["I verify that I am authorized to work in the US","authorized to work in the US","Yes"]),
  (r"most influenced your decision to apply|influenced you to apply", ["*Other","Other","Company Website","Company website","Careers page"]),   # found on the company's own job board
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
