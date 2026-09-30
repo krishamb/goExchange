@@ -32,21 +32,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/litify/jobs/8193564",
-  "tag": "litify_solution_architect_ai",
-  "company": "litify",
-  "title": "Solution Architect, AI",
-  "comp": null,
-  "loc": "Anywhere, USA",
-  "posted_ts": 1789080328.0,
-  "score": 20,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you hold any Salesforce.com certifications or have equivalent experience?"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/mozilla/jobs/8185984",
   "tag": "mozilla_staff_product_engineer_enterprise_ai",
   "company": "mozilla",
