@@ -14,7 +14,12 @@
   "found_on": "greenhouse_api",
   "tier": 1,
   "dom": 3,
-  "skill_hits": 9
+  "skill_hits": 9,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "After your review of the job description, do you meet each of the basic qualific",
+   "If you've selected \"Yes\", please select the affiliate/subsidiary with which you "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -31,7 +36,11 @@
   "found_on": "greenhouse_api",
   "tier": 1,
   "dom": 3,
-  "skill_hits": 10
+  "skill_hits": 10,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "AI-native building: In the past 12 months, have you personally used AI coding ag"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -48,7 +57,9 @@
   "found_on": "greenhouse_api",
   "tier": 1,
   "dom": 2,
-  "skill_hits": 12
+  "skill_hits": 12,
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -65,24 +76,15 @@
   "found_on": "greenhouse_api",
   "tier": 1,
   "dom": 2,
-  "skill_hits": 8
- },
- {
-  "ats": "greenhouse",
-  "company": "toast",
-  "title": "Senior Manager, Software Engineering - Toast IQ",
-  "loc": "Remote, US",
-  "desc": " Toast creates technology to help restaurants and local businesses succeed in a digital world, helping business owners operate, increase sales, engage customers, and keep employees happy. At Toast, we\u2019re transforming how restaurants operate and grow. Our platform combines intuitive technology with a deep focus on customer success. From streamlining operations to delivering standout guest experiences, we empower restaurants to thrive through smart design and data-driven innovation. As a Senior Engineering Manager for Toast IQ, you will fundamentally redefine the value and partnership Toast can offer to businesses. You and your team will build at the frontier of LLMs and agentic workflows, with a heavy focus on automating and improving the unglamorous work so that our customers\u2019 daily focus can be more of what they actually love about the hospitality industry. You will work closely with Design and Product to chart a course for thoughtfully designed and carefully crafted AI experiences that unify and expand the Toast ecosystem.&nbsp; A day in the life (Responsibilities) Shape and steer the technical vision and execution for Toast IQ, a high-growth and high-potential AI offering for every Toast customer. Thoughtfully garden-tend the platform for internal teams to build and expand on top of. Better documentation, better feature lifecycle management, and better evaluation. Break down large platform and product initiatives into clear, incremental milestones, then deliver measurable outcomes with consistency and quality. Establish and uphold AI toolchain standards, architecture patterns, and best practices across the organization. Coach and mentor engineers and managers, helping them grow technically and as leaders. Operate effectively in a fast moving environment where experimentation, iteration, and platform stability must coexist. Champion the use of AI tools and practices to accelerate development, improve team velocity, and pioneer new ways of building - setting the bar for what it means to be an AI-first engineering organization. What you'll need to thrive (Requirements) 5+ years of experience leading high performing engineering teams in production environments. Strength in modern backend architecture: thoughtfully designed API surfaces, microservices that scale safely, and performance that improves consistently. Fluency in modern mobile and web architecture, including component libraries, build systems, CI/CD, and microfrontend patterns. Experience owning or contributing to internal developer platforms that support multiple product teams. Interest and investment in where LLMs and agents can be the right tool for a customer need and rigor/principles around where they may not be. Demonstrated success partnering with product and design stakeholders to deliver highly crafted experiences that map novel interaction patterns directly to a customer need. Ability to translate broad strategic goals into clear technical roadmaps and execution plans. Strong communication and leadership skills with experience influencing senior technical, product, and design leaders. Track record of mentoring engineers and building inclusive, high ownership teams. Bonus Ingredients (Nice to Have) Strength and familiarity with the toolchain that drives modern LLM and agent experiences: system prompts, harnesses, skills, tools, and evals. AI at Toast At Toast, one of our company values is that we're hungry to build and learn. We believe learning new AI tools empowers us to build for our customers faster, more independently, and with higher quality. We provide these tools across all disciplines, from Engineering and Product to Sales and Support, and are inspired by how our Toasters are already driving real value with them. The people who thrive here are those who embrace changes that let us build more for our customers; it\u2019s a core part of our culture. Our Total Rewards Philosophy&nbsp; We strive to provide competitive compensation and benefits programs that h",
-  "url": "https://careers.toasttab.com/jobs?gh_jid=8232879",
-  "posted_ts": 1790718476.0,
-  "comp": null,
-  "where": "remote",
-  "score": 0.3,
-  "tag": "toast_senior_manager_software_engineering_to",
-  "found_on": "greenhouse_api",
-  "tier": 1,
-  "dom": 1,
-  "skill_hits": 8
+  "skill_hits": 8,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How would you describe your experience with Twitch? (Select one)",
+   "Are you open to relocation?",
+   "In which country/region do you have citizenship?",
+   "For the sole purpose of determining export licensing requirements, please provid",
+   "Would you like to be considered for future opportunities at Twitch when you appl"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -99,7 +101,9 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 3,
-  "skill_hits": 11
+  "skill_hits": 11,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -116,7 +120,9 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 3,
-  "skill_hits": 10
+  "skill_hits": 10,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -133,7 +139,9 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 2,
-  "skill_hits": 9
+  "skill_hits": 9,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -150,7 +158,9 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 2,
-  "skill_hits": 13
+  "skill_hits": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -167,6 +177,8 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 1,
-  "skill_hits": 11
+  "skill_hits": 11,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
