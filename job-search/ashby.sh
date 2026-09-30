@@ -8,6 +8,7 @@
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
 #   bash ~/ashby.sh report    open a report of every application confirmed as submitted from this Mac
 #   bash ~/ashby.sh indeed    open the Indeed jobs to apply by hand (newest first, answers ready to paste)
+#   bash ~/ashby.sh sites     open the company-website jobs (Workday, iCIMS...) to apply by hand, grouped by domain
 #   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
 #   bash ~/ashby.sh stop      stop all workers
 #   bash ~/ashby.sh update    only download the newest job list and scripts
@@ -26,11 +27,14 @@ update() {
   echo "== getting the newest job list"
   git fetch -q origin "$BRANCH" && git checkout -q "$BRANCH" && git pull -q --ff-only origin "$BRANCH" \
     || echo "   (could not update, using the copy already on this Mac)"
-  cp -f "$REPO/job-search/ashby.sh" "$HOME/ashby.sh" 2>/dev/null   # keep this script current
+  # keep this script current: write a new file and rename it over the old one, so the copy bash is
+  # reading right now is never rewritten in place (that caused "unexpected EOF" / "near ;;" errors)
+  cp -f "$REPO/job-search/ashby.sh" "$HOME/.ashby.sh.new" 2>/dev/null && mv -f "$HOME/.ashby.sh.new" "$HOME/ashby.sh"
 }
 
 in_repo() { cd "$REPO" 2>/dev/null || { echo "Not set up yet. Run: bash ~/ashby.sh"; exit 1; }; }
 
+main() {
 case "${1:-start}" in
   start)  update; bash job-search/run_ashby.sh start "${2:-2}" ;;
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
@@ -39,8 +43,12 @@ case "${1:-start}" in
   assist) update; bash job-search/run_ashby.sh assist ;;
   report) in_repo; bash job-search/run_ashby.sh report ;;
   indeed) update; open "$REPO/job-search/INDEED_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/INDEED_APPLY_BY_HAND.html in your browser" ;;
+  sites)  update; open "$REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html" 2>/dev/null || echo "Open $REPO/job-search/COMPANY_SITES_APPLY_BY_HAND.html in your browser" ;;
   stop)   in_repo; bash job-search/run_ashby.sh stop ;;
   log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
-  help|-h|--help) sed -n '2,15p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,15p' "$0" ;;
+  help|-h|--help) sed -n '2,16p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,16p' "$0" ;;
 esac
+}
+# the whole file is read before anything runs, so an update that replaces this file mid-run is harmless
+main "$@"; exit $?
