@@ -1,36 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://point.com/hiring?gh_jid=8802837002",
-  "tag": "pointdigitalfinance_technical_lead_manager",
-  "company": "pointdigitalfinance",
-  "title": "Technical Lead Manager",
-  "comp": "$234,650 - $259,350 ",
-  "loc": "San Francisco, California, United States",
-  "posted_ts": 1789166815.0,
-  "score": 22,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Describe your Agentic AI experience and where you have used?",
-   "In considering this role, how important is the title/level to you in your next l",
-   "Are you more product-focused or systems-focused?"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/attain/jobs/6199651004",
-  "tag": "attain_head_of_data_apps_engineering",
-  "company": "attain",
-  "title": "Head of Data Apps Engineering",
-  "comp": null,
-  "loc": "Chicago, IL; Redwood City, CA",
-  "posted_ts": 1789686934.0,
-  "score": 21,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.qventus.com/company/working-qventus/job?gh_jid=4408106009",
   "tag": "qventus_forward_deployed_ai_solutions_archit",
   "company": "qventus",
