@@ -218,6 +218,7 @@ CHOICE_RULES=[
  (r"architected an ai agent or llm-powered system|llm-powered system that ran in production", ["Yes","yes"]),   # Yahoo Finance RAG research assistants (2022-2023); Hyperion AI agents
  (r"personally author(ed)? the technical design", ["Yes","yes"]),
  (r"how familiar were you with|familiar with (our company|us) before", ["I had heard of","I was already familiar","Somewhat familiar","Familiar"]),   # fintech/AI companies the applicant knows of
+ (r"(previous|former|past|worked (for|at)|employed (by|at)|employee of).{0,60}\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b|\b(yahoo|jp ?morgan|morgan stanley|bloomberg|cadence|ankr|bank of america|barclays)\b.{0,40}(employee|contractor|before|previously)", ["Yes","yes"]),   # the applicant's real past employers
  (r"(been|are you) a (previous|former|past) .{0,30}(employee|contractor|intern)|previously (been )?employed (by|at)|worked (for|at) .{0,30} (before|previously)", ["No","no"]),   # none of these companies
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
