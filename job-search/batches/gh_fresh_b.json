@@ -1,34 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/alpaca/jobs/6203656004",
-  "tag": "alpaca_staff_software_engineer_margin_risk",
-  "company": "alpaca",
-  "title": "Staff Software Engineer - Margin & Risk",
-  "comp": null,
-  "loc": "Remote - Americas or EU",
-  "posted_ts": 1790050918.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Which location and timezone will you be working from?"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6186559004",
-  "tag": "garnerhealth_staff_software_engineer_develop",
-  "company": "garnerhealth",
-  "title": "Staff Software Engineer (Developer Experience)",
-  "comp": "$275,000 - $300,000. ",
-  "loc": "Remote",
-  "posted_ts": 1788969018.0,
-  "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/air/jobs/4398322009",
   "tag": "air_senior_machine_learning_engineer",
   "company": "air",
@@ -37,8 +9,13 @@
   "loc": "Arlington, Virginia, United States; Pittsburgh, Pennsylvania, United States; Remote",
   "posted_ts": 1788896590.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is your desired pay for this role?",
+   "Have you applied for another role with Air within the last 6 months?",
+   "Which Air office location/s are you open to working out of?",
+   "Which technology primarily addresses sharding model state during distributed tra"
+  ]
  },
  {
   "ats": "greenhouse",
