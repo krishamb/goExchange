@@ -1,23 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "zipcolimited",
-  "title": "Staff Engineer",
-  "loc": "United States",
-  "desc": "Own the architecture and evolution of Zip\u2019s real-time money movement and payments platform, powering millions of transactions. Lead cross-team technical direction across distributed systems while embedding AI into engineering workflows and product capabilities. Remote-first role for US-based engineers, with optional collaboration from our NYC office. Start your adventure with Zip At Zip, engineers own systems that move real money. Join Zip\u2019s Engineering function and put your name to solving fascinating challenges at scale in an agile, test-driven development environment. If you value good domain-driven design and enjoy delivering quality work at pace, you\u2019ll be a great fit with the squads responsible for building cloud-native software applications that serve millions of customers and process billions of dollars in payments. We are seeking a highly experienced and technically strong Staff Engineer to lead complex, cross-domain initiatives across our platform. In this role, you will set technical direction, drive execution on ambiguous, high-impact problems, and shape the architecture of systems that are critical to our business. This is a hands-on leadership role where you will partner with engineering and product leaders, influence strategic decisions, and mentor senior engineers while raising the bar for scalability, reliability, and engineering excellence across the organization. You will also play a key role in defining and scaling how AI is used across engineering, driving measurable improvements in developer productivity, system quality, and delivery speed. Interesting problems you\u2019ll get to solve Design systems that ensure safe, reliable money movement at scale across distributed services. Define and evolve platform patterns for event-driven architectures and cross-team system design. Lead ambiguous, high-impact initiatives from concept to production across multiple teams. Balance speed and long-term platform health in critical financial systems. Define and standardize AI-assisted engineering patterns (e.g., code generation, testing, debugging, incident analysis) that can be adopted across teams. Raise the bar for system reliability, performance, and developer experience across the organization. Build systems that ensure financial correctness under failure conditions, including retries, duplication, and reconciliation scenarios. Drive adoption of AI across teams by coaching engineers, establishing best practices, and ensuring responsible and effective usage. Identify and deliver AI-driven efficiencies, reducing development cycle time, improving code quality, and accelerating incident resolution. Partner with platform and tooling teams to integrate AI capabilities into the developer ecosystem (CI/CD, observability, IDEs, internal tools). What you\u2019ll bring to the team 12+ years of experience building and operating distributed backend systems in modern engineering environments. Strong experience in payments, fintech, or other correctness-critical systems such as settlement, reconciliation, or transaction processing. Proven track record of leveraging AI to improve engineering outcomes, including personal productivity and enabling team-wide adoption at scale. Experience leading complex, cross-team initiatives and driving technical direction across multiple systems. Deep expertise in system design, including event-driven architectures, microservices, and high-availability systems. Hands-on engineering mindset. You stay close to implementation and can dive into code, services, and infrastructure when needed. Strong decision-making ability. You can evaluate tradeoffs and make clear technical calls in ambiguous situations. Experience mentoring senior engineers and raising engineering standards across teams. Experience working with cloud platforms such as Azure or AWS, and backend technologies like C#/.NET or similar. Experience evaluating and selecting AI tools, models, and workflows with an understanding of tradeoffs (cost, late",
-  "url": "https://job-boards.greenhouse.io/zipcolimited/jobs/4711161006",
-  "posted_ts": 1789501198.0,
-  "comp": "$190,000 - $220,000. ",
-  "where": "remote",
-  "score": 37,
-  "tag": "zipcolimited_staff_engineer",
-  "found_on": "cache_greenhouse",
-  "domain": "fintech",
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "company": "lithic",
   "title": "Senior Software Engineer, Processing",
   "loc": "Remote ",
