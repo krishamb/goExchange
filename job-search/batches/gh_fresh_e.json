@@ -8,7 +8,11 @@
   "comp": null,
   "loc": "Remote - USA; Santa Clara, California, USA",
   "posted_ts": 1790728247.0,
-  "score": 25
+  "score": 25,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have professional Python development experience, including designing and "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -19,7 +23,12 @@
   "comp": null,
   "loc": "San Jose, California, United States",
   "posted_ts": 1772564750.0,
-  "score": 31
+  "score": 31,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have direct reports? If so, how many?",
+   "Are you willing to relocate to Singapore or Hongkong by chance? If so, which one"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -30,7 +39,11 @@
   "comp": null,
   "loc": "United States (Remote)",
   "posted_ts": 1766525621.0,
-  "score": 22
+  "score": 22,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Select which best describes your right to work in the US?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -41,7 +54,11 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1774357542.0,
-  "score": 21
+  "score": 21,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How did you hear about Syner-G?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -52,7 +69,9 @@
   "comp": null,
   "loc": "Sunnyvale, California",
   "posted_ts": 1784055964.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -63,7 +82,9 @@
   "comp": null,
   "loc": "United States - Milpitas, CA (Hybrid)",
   "posted_ts": 1781309369.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -74,18 +95,9 @@
   "comp": null,
   "loc": "AMER-US-Remote; Austin, Texas, United States; Dallas, Texas, United States; Denver, Colorado, United States; Miami, Florida, United States; Office - Chicago; San Francisco, California, United States; Seattle, Washington, United States",
   "posted_ts": 1768561937.0,
-  "score": 18
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/drivewealth/jobs/6024935003?gh_jid=6024935003",
-  "tag": "drivewealth_principal_software_development_e",
-  "company": "drivewealth",
-  "title": "Principal Software Development Engineer, Execution Services",
-  "comp": null,
-  "loc": "AMER-US-Remote; Austin, Texas, United States; Dallas, Texas, United States; Denver, Colorado, United States; Miami, Florida, United States; Office - Chicago; San Francisco, California, United States; Seattle, Washington, United States",
-  "posted_ts": 1718314730.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -96,7 +108,9 @@
   "comp": null,
   "loc": "San Francisco, Bay Area OR Pittsburgh, PA",
   "posted_ts": 1784667810.0,
-  "score": 17
+  "score": 17,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -107,6 +121,8 @@
   "comp": null,
   "loc": "Oakland, CA",
   "posted_ts": 1784908127.0,
-  "score": 11
+  "score": 11,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
