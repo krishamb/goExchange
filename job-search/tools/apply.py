@@ -57,6 +57,13 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(what|which) (programming )?languages are you (most )?(comfortable|proficient|experienced|strongest)|languages are you most comfortable coding in", "Python, Go, Rust, C++ and Java; also TypeScript/JavaScript (including Node.js and React) and SQL."),
+ (r"how (quickly|soon) are you looking to (start|begin|make a move)|how quickly (can|could|would) you (start|join)", "About two weeks after an offer: I am currently CTO at Hyperion AI and would give two weeks' notice."),
+ (r"address line 2|apartment|\bapt\b|suite|\bunit\b|\(brazil only\)|\bcep\b", None),
+ (r"(home |mailing |current )?address[ ,-]*city|^city\*?$", "Santa Clara"),
+ (r"(home |mailing |current )?address[ ,-]*(state|province)|^state( ?/ ?province)?\*?$", "California"),
+ (r"(home |mailing |current )?address[ ,-]*country", "United States"),
+ (r"today'?s date( of application)?", __import__("datetime").date.today().strftime("%m/%d/%y")),
  (r"if you answered (extensively|yes) or (moderately|no)? ?.{0,40}(ai|above question)|if you answered extensively", "Daily: Claude Code for code analysis, debugging, test generation and parallel subsystem reviews; open-weight models (Qwen, gpt-oss, Llama) through llama.cpp and vLLM for agent work; and RAG for research. At Hyperion AI I also build production agentic systems (MCP servers, multi-agent orchestration, evaluation harnesses)."),
  (r"finra licen[sc]e|securities licen[sc]es? (do you|you) (currently )?hold", "None"),
  (r"(what|which) (other )?languages (do you|can you) (speak|communicate|read|write)|languages? (spoken|you speak)|spoken languages|languages of fluency|list all languages", "English (full professional proficiency), Tamil and Hindi."),
@@ -215,6 +222,10 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"what did you get when you cracked the code", ["42"]),   # Lithic's posting: base64 Python snippet, XOR of two bytes = "42" (applicant: solve posting puzzles)
+ (r"camera on|on video|video interview", ["Yes","yes"]),   # applicant
+ (r"are you aligned|whatever it takes|don'?t take .?no.? as an answer|high[- ]intensity|work (very )?hard|hustle|fast[- ]paced .{0,40}(comfortable|thrive|aligned)|in[- ]office culture|grind", ["Yes","yes"]),   # applicant: culture-fit questions Yes
+ (r"^do you have (professional |hands-on )?experience (with|using|on) (aws|amazon web services|gcp|google cloud|azure|kubernetes|terraform|kafka|spark|postgres(ql)?|docker)\b", ["Yes","yes"]),
  (r"resident of the european union|reside in the (eu|european union|uk|united kingdom|eea)", ["No","no"]),
  (r"(currently or were you previously|were you previously|have you previously been) an? (?!(yahoo|jp|jpmorgan|chase|morgan|bloomberg|cadence|bank|merrill|barclays|hyperion|motocho|ankr|mantara|hold|compunnel)\b)\w+ (employee|contractor|intern)", ["No","no"]),   # none of his past employers
  (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools", ["I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
