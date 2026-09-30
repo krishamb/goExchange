@@ -42,6 +42,17 @@ now; the submitted answers cannot be edited, so the suggested action is to corre
 | DigiCert | Principal Software Engineer | Acknowledgment of the standard employment, education and background verification answered **No**. | Email the recruiter to correct it to Yes. |
 | About 16 Greenhouse forms with an education section | various | Where the form had education start/end dates, they were filled with the current job's dates (2023 to 2026). The resume gives no graduation years, so they are now left for you. | Correct the dates if a recruiter asks; tell me your graduation years so forms that require them can be completed. |
 
+### Minor: "How did you hear about us?" picked a company-specific option
+
+The company's own name matched options that imply a referral or an event. The rule now never picks a recruiter,
+employee, referral, event, blog or LinkedIn option. No action is needed unless a recruiter asks; if one does, the
+honest answer is the company's careers page / job board.
+
+- Datadog (Distinguished Architect, AI; Manager II, Engineering, Database Monitoring): "Datadog Employee"
+- Coinbase (all 5 applications): "Coinbase Event"
+- Pinterest (Director of Engineering, Core Ads): "Pinterest-hosted Recruiting Event"
+- Brex (Engineering Manager, Bill Pay; Staff Software Engineer, Acquisition): "Brex Blog / Employee Stories"
+
 ## Resubmitted with corrected answers (2026-09-29, from ambarishkrishnamurthy@gmail.com)
 
 Elastic (Director of Software Engineering; Principal Software Engineer I, Serverless Platform), Airbnb (Senior Staff
