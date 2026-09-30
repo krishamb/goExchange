@@ -1388,6 +1388,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             if not got and await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"keep":True})
                         continue
                     cur=(await h.inner_text()).strip()
+                    cur=re.sub(r"\s+"," ",re.sub(r"option\s*[^.]{0,120}?,\s*selected\.?|[^.|]{0,40}is focused\s*,?\s*type to refine list,?\s*press down to open the menu,?|press down to open the menu,?","",cur,flags=re.I)).strip(" ,|")   # react-select's screen-reader text is not an answer
                     if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
                     pref=None
                     for k,v in extra.items():
