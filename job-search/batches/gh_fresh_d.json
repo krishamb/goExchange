@@ -24,21 +24,10 @@
   "loc": "Boston, Massachusetts, United States; Las Vegas, Nevada, United States; Pittsburgh, Pennsylvania, United States; Remote U.S.",
   "posted_ts": 1790357627.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/myriad360/jobs/8842831002?gh_jid=8842831002",
-  "tag": "myriad360_principal_architect_remote",
-  "company": "myriad360",
-  "title": "Principal Architect (Remote)",
-  "comp": null,
-  "loc": "Remote - United States",
-  "posted_ts": 1790357445.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Current / Most Recent Employer"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -50,8 +39,10 @@
   "loc": "Remote",
   "posted_ts": 1790356588.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "How many years of people management experience do you have?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -63,8 +54,13 @@
   "loc": "Remote-US",
   "posted_ts": 1790176238.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe a data platform you owned end to end \u2014 from ingestion through ETL to th",
+   "Tell us about a time you had to explain an architecture tradeoff to non-technica",
+   "Have you managed direct reports? If so, how many and for how long? If not, what ",
+   "Which of the following have you personally built with or operated in production?"
+  ]
  },
  {
   "ats": "greenhouse",
