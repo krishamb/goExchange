@@ -205,6 +205,8 @@ CHOICE_RULES=[
  (r"agentic|ai-native", ["Yes","yes"]),
  (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"do you have a linkedin( profile)?", ["Yes","yes"]),   # profile link is on the resume (never used as the source)
+ (r"high school diploma|ged\b|secondary (school|education)", ["Yes","yes"]),   # B.Tech; completed secondary school
+ (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
