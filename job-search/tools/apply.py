@@ -970,7 +970,11 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
             hits.append(r.get("tag"))
             t2=r.get("title") or _title_of(r.get("tag"))
             if title and t2 and _norm_role(t2)==_norm_role(title): return f"{r.get('tag')} (same role)"   # never the same role twice, reposts included
+    # applications the applicant sent himself (not in these reports) count toward the cap too
+    for k,n in APPLIED_BY_APPLICANT.items():
+        if k in ks: hits += [f"{k} (applied by the applicant)"]*n
     return hits[0] if len(hits)>=cap else None
+APPLIED_BY_APPLICANT={"welbehealth":2}   # applicant (2026-09-30): applied to the WelbeHealth Director role himself; with our Engineering Manager application, stop at WelbeHealth
 async def run():
     async with async_playwright() as p:
         launch_kw=dict(headless=not HEADED,args=["--no-sandbox","--ignore-certificate-errors"])
