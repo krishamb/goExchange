@@ -196,7 +196,7 @@ CHOICE_RULES=[
  (r"(authori[sz]ed|eligible|able|permitted|legally allowed) to (lawfully )?work .{0,80}without (the )?(need (for|of) |requiring |any )?(visa |employer |company |employment )?sponsorship", ["Yes","yes"]),   # "authorized ... without sponsorship" is a Yes, not a sponsorship request
  (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
  (r"minimum (legal )?age|legal working age|(18|eighteen) (years of age|years old) or older|at least (18|eighteen)", ["Yes","yes"]),   # applicant: age 50
- (r"what state (will|do|would) you (be )?(based|live|reside|work)|state (of|you) (residence|reside)|which state (will|do|are) you", ["California","CA"]),   # Santa Clara, California
+ (r"what state (will|do|would) you (be )?(based|live|reside|work)|state (of|you) (residence|reside)|which state (will|do|are) you|in which state you (will )?(reside|live|work)", ["California","CA"]),   # Santa Clara, California
  (r"when would you be available to relocate|available to relocate", ["October 2026","September 2026","Immediately","Now"]),   # already lives in the Bay Area; available immediately
  (r"interview process .{0,80}(align|work) with your (availability|timeline)|timeline align with your availability", ["Yes","yes"]),
  (r"(professional|production|hands-on) (python|rust|c\+\+|go|golang|java|sql)|(python|rust|c\+\+|golang|sql|kubernetes|aws|gcp|terraform|kafka|pytorch|llm|rag) (development )?experience", ["Yes","yes"]),   # all on the resume
@@ -206,7 +206,7 @@ CHOICE_RULES=[
  (r"protected individual|1324b", ["A United States citizen or national","U.S. Citizen","US Citizen","Yes"]),   # US citizen
  (r"do you have a linkedin( profile)?", ["Yes","yes"]),   # profile link is on the resume (never used as the source)
  (r"high school diploma|ged\b|secondary (school|education)", ["Yes","yes"]),   # B.Tech; completed secondary school
- (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
+ (r"information you provide is accurate|information (provided|submitted) is (true|accurate|complete)|information i submit .{0,60}(true|accurate)|certify that .{0,60}(true|accurate|complete)|by submitting your application you confirm", ["I confirm","Yes","I agree","I certify","Confirm"]),
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
