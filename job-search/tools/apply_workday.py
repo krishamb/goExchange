@@ -268,7 +268,7 @@ FORMER_JOB_Q = re.compile(r"\b(work|company|business|corporate|employee|office|f
 VISA_STATUS_Q = re.compile(r"\b(based on|because of|by virtue of|derived from|depend\w* on|through|status as)\b.{0,60}\b(spouse|dependent|h-?1b|h-?4|l-?1|l-?2|e-?[1-3]|f-?1|j-?1|opt|cpt|ead|tn|visa|asylum|refugee|daca|tps)\b", re.I)
 # 'Do you currently live within commutable distance to the office ...?' names no place, so the rules' 'lives somewhere
 # else -> No' answer does not apply (PayPal San Jose, Snap Palo Alto: he lives in Santa Clara): left for the applicant
-COMMUTE_Q = re.compile(r"\b(live|living|reside|residing|located|based)\b.{0,30}\b(within|in|near|to)\b.{0,50}\b(commut\w*|the office|office location|the location|this location|job location|advertised|listed)", re.I)
+COMMUTE_Q = re.compile(r"^(?!.*\b(can meet|able to meet|meet these requirements|willing to relocate|intend to relocate|or relocate|able to relocate)\b).*\b(live|living|reside|residing|located|based)\b.{0,30}\b(within|in|near|to)\b.{0,50}\b(commut\w*|the office|office location|the location|this location|job location|advertised|listed|(the|our|designated|nearest|assigned|aligned)\b.{0,40}\b(office|hub|site|location))", re.I)
 def usable(texts, label):
     """Option texts with the ones the applicant must never pick blanked out: referral / recruiter / event / university /
     LinkedIn sources, 'I identify as a veteran ...' (he is not a veteran), and 'Yes, I have a disability'."""
