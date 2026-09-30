@@ -6,6 +6,7 @@
 #   bash job-search/run_ashby.sh stop        stop all workers
 #   bash job-search/run_ashby.sh manual      build and open a page listing every job to finish by hand, with the links
 #                                            and the answers already prepared
+#   bash job-search/run_ashby.sh report      build and open a report of every application confirmed as submitted
 #
 # Queue: job-search/batches/ashby_all.json (freshest first, at most two roles per company).
 # Re-running is safe: submitted jobs are skipped, and jobs the site's spam check blocked are not retried
@@ -33,13 +34,13 @@ ok=[];spam=[];need=[];other=[]
 for f in sorted(glob.glob(os.path.join(d,"out","*_report.json")), key=os.path.getmtime):
     try: r=json.load(open(f))
     except Exception: continue
-    if r.get("ats")!="ashby": continue
+    if r.get("ats") not in ("ashby","lever"): continue
     res=r.get("result") or ""
     if r.get("submitted"): ok.append(r)
     elif r.get("spam_blocked") or "spam check" in res or "pause browser extensions" in res.lower() or "connection instead" in res: spam.append(r)
     elif r.get("unanswered"): need.append(r)
     else: other.append(r)
-print(f"Ashby  submitted: {len(ok)}   blocked by Ashby's spam check: {len(spam)}   need an answer from you: {len(need)}   other: {len(other)}")
+print(f"Ashby/Lever  submitted: {len(ok)}   blocked by Ashby's spam check: {len(spam)}   need an answer from you: {len(need)}   other: {len(other)}")
 for r in need[-8:]: print("  NEEDS ANSWER", r["tag"][:40], "|", "; ".join(u["label"][:60] for u in r["unanswered"][:2]))
 for r in other[-5:]: print("  OTHER       ", r["tag"][:40], "|", (r.get("result") or "")[:80])
 if spam or need: print("To finish those by hand:  bash ~/ashby.sh manual")
@@ -62,7 +63,7 @@ rows=[]
 for f in sorted(glob.glob(os.path.join(d,"out","*_report.json")), key=os.path.getmtime):
     try: r=json.load(open(f))
     except Exception: continue
-    if r.get("ats")!="ashby" or r.get("submitted"): continue
+    if r.get("ats") not in ("ashby","lever") or r.get("submitted"): continue
     res=r.get("result") or ""
     if "ALREADY APPLIED at this company" in res: continue
     why="Ashby's spam check blocked the automated submission" if (r.get("spam_blocked") or "spam check" in res or "connection instead" in res) else ("needs your answer: "+"; ".join(u["label"] for u in r.get("unanswered",[])) if r.get("unanswered") else res[:160])
@@ -86,8 +87,34 @@ print(f"{len(rows)} jobs listed in {out}")
 if sys.platform=="darwin": subprocess.run(["open",out])
 EOF
     exit 0;;
+  report)
+    "$PY" - <<'PYREPORT'
+import json, glob, os, html, subprocess, sys, datetime, csv
+d=os.path.expanduser(os.environ.get("JOBS_DIR","~/jobs-private"))
+rows=[]
+for f in glob.glob(os.path.join(d,"out","*_report.json")):
+    try: r=json.load(open(f))
+    except Exception: continue
+    res=r.get("result") or ""
+    if not r.get("submitted") or "ALREADY" in res: continue      # only applications the site confirmed as submitted
+    t=datetime.datetime.fromtimestamp(os.path.getmtime(f))
+    rows.append((t,r.get("ats",""),r["tag"],r.get("url",""),r.get("resume_file",""),res[:140]))
+rows.sort(reverse=True)
+with open(os.path.join(d,"applied_report.csv"),"w",newline="") as fh:
+    w=csv.writer(fh); w.writerow(["submitted_at","site","job","url","resume","confirmation"])
+    for a,b,c,e,g,h in rows: w.writerow([a.strftime("%Y-%m-%d %H:%M"),b,c,e,g,h])
+out=os.path.join(d,"applied_report.html")
+h=["<!doctype html><meta charset=utf-8><title>Applications submitted</title><style>body{font:14px -apple-system,sans-serif;margin:24px}td,th{border-bottom:1px solid #eee;padding:6px;text-align:left}</style>",
+   f"<h1>Applications submitted from this Mac ({len(rows)})</h1><table><tr><th>When</th><th>Site</th><th>Job</th><th>Resume</th><th>Confirmation</th></tr>"]
+for a,b,c,e,g,res in rows:
+    h.append(f"<tr><td>{a:%b %d %H:%M}</td><td>{b}</td><td><a href='{html.escape(e)}'>{html.escape(c.replace('_',' '))}</a></td><td>{html.escape(g)}</td><td>{html.escape(res)}</td></tr>")
+open(out,"w").write("\n".join(h)+"</table>")
+print(f"{len(rows)} submitted applications -> {out} (and applied_report.csv)")
+if sys.platform=="darwin": subprocess.run(["open",out])
+PYREPORT
+    exit 0;;
   start) ;;
-  *) echo "usage: bash job-search/run_ashby.sh [start [N]|status|stop|manual]"; exit 2;;
+  *) echo "usage: bash job-search/run_ashby.sh [start [N]|status|stop|manual|report]"; exit 2;;
 esac
 
 N="${2:-2}"
@@ -104,6 +131,12 @@ for f in profile.json answers.json Ambarish_Krishnamurthy_Resume.pdf Ambarish_Kr
   fi
 done
 [ "$missing" = 1 ] && { echo "Put the missing file(s) in $JOBS_DIR and run again."; exit 1; }
+# optional: the executive resume (CTO / VP / Head / Director / Manager roles); without it every role gets the architect resume
+if [ ! -f "$JOBS_DIR/Ambarish_Krishnamurthy_Executive_Resume.pdf" ]; then
+  src=$(ls -t "$HOME"/Downloads/*Executive_AI_Leader*.pdf "$HOME"/Downloads/*Executive*Resume*.pdf 2>/dev/null | head -1 || true)
+  if [ -n "${src:-}" ] && [ -f "$src" ]; then cp "$src" "$JOBS_DIR/Ambarish_Krishnamurthy_Executive_Resume.pdf"; echo "   copied executive resume $src"
+  else echo "   note: no executive resume found; put Ambarish_Krishnamurthy_Executive_AI_Leader.pdf in ~/Downloads to use it for leadership roles"; fi
+fi
 
 echo "== installing Playwright + Chromium (quick after the first time)"
 "$PY" -m pip install -q playwright reportlab 2>/dev/null || "$PY" -m pip install -q --user playwright reportlab 2>/dev/null || "$PY" -m pip install -q --break-system-packages playwright reportlab
@@ -126,7 +159,7 @@ todo=[j for j in q if j["tag"] not in done and j["tag"] not in blocked]
 # keep every role of one company on the same worker (the two-per-company check stays exact), spread companies evenly
 by=collections.OrderedDict()
 for j in todo:
-    m=re.search(r"ashbyhq\.com/([^/]+)",j["url"]); by.setdefault((m.group(1) if m else j["tag"]).lower(),[]).append(j)
+    m=re.search(r"(?:ashbyhq\.com|lever\.co)/([^/]+)",j["url"]); by.setdefault((m.group(1) if m else j["tag"]).lower(),[]).append(j)
 parts=[[] for _ in range(n)]
 for i,(k,js) in enumerate(by.items()): parts[i%n].extend(js)
 for i,p in enumerate(parts): json.dump(p,open(os.path.join(run,f"part_{i+1}.json"),"w"),indent=1)

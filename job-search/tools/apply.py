@@ -13,6 +13,13 @@ JOBS_DIR=os.path.expanduser(JOBS_DIR)
 P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
 for _k in ("resume","cover_letter"):
     if P.get(_k): P[_k]=os.path.expanduser(P[_k])
+EXEC_RESUME=os.path.join(JOBS_DIR,"Ambarish_Krishnamurthy_Executive_Resume.pdf")
+def resume_for(title):
+    """Executive resume (CTO / VP / Head / Director / Engineering Manager) for leadership roles; the Distinguished Architect
+    resume for principal, staff, architect and engineer roles. Falls back to the architect resume if the executive file is absent."""
+    if title and os.path.exists(EXEC_RESUME) and re.search(r"\b(CTO|Chief (Technology|AI|Executive|Product|Information)|VP|SVP|EVP|Vice President|Head of|Director|Manager|TLM)\b",title,re.I) and not re.search(r"\bArchitect",title,re.I):
+        return EXEC_RESUME
+    return P["resume"]
 ANS=json.load(open(os.path.join(JOBS_DIR,"answers.json"))) if os.path.exists(os.path.join(JOBS_DIR,"answers.json")) else {}
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 CODE_WAIT=int(os.environ.get("CODE_WAIT","420"))   # seconds to wait for an emailed verification code handed over via out/<tag>_code.txt
@@ -108,6 +115,8 @@ TEXT_RULES=[
  (r"open to relocat(e|ion)( for this role)?\??$|willing to relocate( for this role)?\??$", "Yes. I live in Santa Clara, California (SF Bay Area) and I am willing to relocate to New York City; in the Bay Area I can work on-site or hybrid in San Francisco and the South Bay."),   # applicant: will move to NYC
  (r"complex customer or operational problem .{0,40}(production|technical) solution|turned into a production (technical )?solution", "At Cadence Design Systems, high-value software was being accessed without reliable entitlement checks, an operational and revenue problem for the business and its enterprise customers. I architected and delivered an asymmetric-encryption license-validation platform in C++17: cryptographic identity, REST authentication, secure token flows, MariaDB/Cassandra storage and Kubernetes automation. It went into production supporting more than 2 million daily enterprise license checkouts, with auditability and operational recovery built in, so customers kept working through failures while access stayed protected."),
  (r"caught your attention|made you want to join|drew you to (us|apply)", ANS.get("why_us","")),
+ (r"system from your resume you know best|give us the real numbers", "Yahoo Finance's quotes, charts and research platform, where I was Chief Architect for the bare-metal-to-AWS modernization: about 40M daily and 150M monthly active users, and tick-to-quote streaming latency as low as about 5 ms. I cannot quote Yahoo's internal cost figures; the design leaned on aggregation and caching in the market-data path to keep peak-hour load efficient. For the AI research assistants built on it (OpenAI/LangChain RAG over news, filings and fundamentals) I tracked answer quality with LLM observability and drift detection (OpenTelemetry, Prometheus, Grafana), with PII masking and bias audits as release gates. At Hyperion AI I tracked model quality with a 121-measure scorecard and 13 comparability checks alongside time to first token and time per output token."),
+ (r"used agentcore|agentcore", "Not in production. My agent work at Hyperion AI used my own MCP client and servers (3 servers, 9 tools) with a coordinator-controlled plan-validate-dispatch-replan loop, and I evaluated LangGraph, CrewAI and AutoGen integration paths. I have not shipped a project on Bedrock AgentCore, but its runtime, memory, gateway and identity pieces map directly onto what I built, and I would be productive on it quickly."),
  (r"(visa|immigration|citizenship|work authori[sz]ation|employment authori[sz]ation) status", "US citizen. I do not need a visa or any sponsorship, now or in the future."),   # applicant: no sponsorship needed
  (r"what is your (current )?age|^your age$|^age$|current age|how old are you", "50"),   # applicant: age 50
  (r"(other|different) teams (started|began) using|teams .{0,20}(adopted|picked up|started using) .{0,20}on their own|something you built that (other|different) (teams|people|groups)", "At Yahoo Finance I built natural-language research workflows (RAG over financial news, company fundamentals and historical data). They were built for editorial work, and product teams took them up for their own research as well. I think they did because the tools answered questions people already asked every day, in seconds, from data they already trusted, showed their sources, and needed nothing to install or learn."),
@@ -169,6 +178,7 @@ CHOICE_RULES=[
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
  (r"(authori[sz]ed|eligible|able|permitted|legally allowed) to (lawfully )?work .{0,80}without (the )?(need (for|of) |requiring |any )?(visa |employer |company |employment )?sponsorship", ["Yes","yes"]),   # "authorized ... without sponsorship" is a Yes, not a sponsorship request
  (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
+ (r"experience with llm-as-judge|llm-as-a-judge|llm as (a )?judge", ["I've experimented with it in my own projects"]),
  (r"requir\w* (spon?orship|sponsership)", ["No","no"]),   # misspelt "sponsorship" on some forms; US citizen needs none
  (r"from 0.?(→|->|to).?1|0 ?to ?1 .{0,40}(model|ml)|new ml model or ml-powered system", ["Yes","yes"]),   # Yahoo TFX recommendation/clustering models, Hyperion fraud-detection ML
  (r"metaview|ai notetaking tool|record(ing)? and summariz", ["Yes","yes"]),   # consent to an AI notetaker in interviews
@@ -813,7 +823,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             files,labs=await file_labels()
             ri=next((i for i,l in enumerate(labs) if re.search(r"resume|cv",l)),0 if labs else None)
             if ri is not None:
-                try: await files.nth(ri).set_input_files(P["resume"],timeout=15000); report["filled"]["resume"]="uploaded"
+                try: await files.nth(ri).set_input_files(resume_for(jtitle),timeout=15000); report["filled"]["resume"]="uploaded"; report["resume_file"]=os.path.basename(resume_for(jtitle))
                 except Exception as e: report["filled"]["resume"]=f"ERR {e.__class__.__name__}"
             await page.wait_for_timeout(5000)
             for _ in range(25):
@@ -1120,7 +1130,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     errs0=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                     if attempt==0 and any(re.search(r"uploadFile|Resume/CV is required",e) for e in errs0):
                         try:
-                            await page.locator('input[type="file"]').first.set_input_files(P["resume"],timeout=15000); await page.wait_for_timeout(6000)
+                            await page.locator('input[type="file"]').first.set_input_files(resume_for(jtitle),timeout=15000); await page.wait_for_timeout(6000)
                             report.setdefault("notes",[]).append("resume re-attached after uploader error"); continue
                         except Exception: pass
                     break
