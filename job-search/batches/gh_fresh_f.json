@@ -9,7 +9,7 @@
   "loc": "Lehi, Utah, United States; Remote - US",
   "posted_ts": 1790024562.0,
   "score": 20,
-  "last_result": ", for example, tuberculosis, asthma, emphysema | Short stature (dwarfism) | Traumatic brain injury |",
+  "last_result": "one in the past |  | PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no pe",
   "last_unanswered": []
  },
  {
@@ -47,8 +47,14 @@
   "loc": "San Francisco, CA",
   "posted_ts": 1789752505.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe a production AI or LLM-based system you personally designed, built, or ",
+   "This role requires 3 days/week onsite in San Francisco. Are you aligned?",
+   "Do you have 10+ years in software engineering, solutions architecture, consultin",
+   "Are you fluent in SQL and a modern cloud data platform such as Databricks, BigQu",
+   "This role involves traveling to customer sites roughly 25-40% of the time. Are y"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -60,8 +66,10 @@
   "loc": "Remote - USA",
   "posted_ts": 1789415137.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe a specific example of how you've used AI tools in a pre-sales or techni"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -73,7 +81,7 @@
   "loc": "San Francisco, California, United States",
   "posted_ts": 1789389814.0,
   "score": 19,
-  "last_result": "(no report)",
+  "last_result": "edIn Profile* | Website links |  | We'd love to see examples of your work. Feel free to share your g",
   "last_unanswered": []
  },
  {
@@ -86,7 +94,7 @@
   "loc": "San Francisco",
   "posted_ts": 1788192764.0,
   "score": 19,
-  "last_result": "(no report)",
+  "last_result": "ERROR Error: Page.goto: net::ERR_PROXY_CONNECTION_FAILED at https://job-boards.greenhouse.io/embed/j",
   "last_unanswered": []
  },
  {
