@@ -5,6 +5,7 @@
 #   bash ~/ashby.sh start 3   same, with 3 workers (default 2)
 #   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
+#   bash ~/ashby.sh report    open a report of every application confirmed as submitted from this Mac
 #   bash ~/ashby.sh log       watch the workers live (Ctrl+C stops watching; the run keeps going)
 #   bash ~/ashby.sh stop      stop all workers
 #   bash ~/ashby.sh update    only download the newest job list and scripts
@@ -33,8 +34,9 @@ case "${1:-start}" in
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
   status) in_repo; bash job-search/run_ashby.sh status ;;
   manual) in_repo; bash job-search/run_ashby.sh manual ;;
+  report) in_repo; bash job-search/run_ashby.sh report ;;
   stop)   in_repo; bash job-search/run_ashby.sh stop ;;
   log)    tail -n 5 -f "$HOME"/jobs-private/ashby_run/worker_*.log ;;
-  help|-h|--help) sed -n '2,12p' "$0" ;;
-  *)      echo "Unknown command '$1'."; sed -n '2,12p' "$0" ;;
+  help|-h|--help) sed -n '2,13p' "$0" ;;
+  *)      echo "Unknown command '$1'."; sed -n '2,13p' "$0" ;;
 esac
