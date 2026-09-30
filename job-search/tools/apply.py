@@ -226,6 +226,7 @@ CHOICE_RULES=[
  (r"work onsite at our office in (palo alto|san francisco|mountain view|sunnyvale|san jose|santa clara|menlo park|redwood city|san mateo|oakland|berkeley|south san francisco|foster city|bay area)", ["Yes","yes"]),   # Bay Area on-site/hybrid is fine
  (r"(current|most recent) ?(/|or)? ?(most recent )?employer", ["Hyperion AI","Hyperion","Other","Not listed","None of the above","N/A"]),   # picked from a company list: Hyperion AI is not on AV-industry lists, so Other
  (r"security[- ]clearance status|best describes your .{0,30}clearance", ["I have never held a clearance but am willing","never held a clearance but am willing to undergo","None, but willing","No, but I am willing","None"]),   # US citizen, never held a clearance
+ (r"years of (people|team|engineering|direct) management|years (have you )?(managed|managing|leading) (people|teams|engineers)|years of (people )?leadership", ["10+","10+ years","8+","7+","5+","5+ years","More than 5 years","5 or more"]),   # managing teams since the JPMorgan / Morgan Stanley lead roles
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
