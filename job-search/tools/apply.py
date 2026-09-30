@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(what|which) (other )?languages (do you|can you) (speak|communicate|read|write)|languages? (spoken|you speak)|spoken languages|languages of fluency|list all languages", "English (full professional proficiency), Tamil and Hindi."),
  (r"graduation (year|date)|year (of|you) graduat|when did you graduate", "1995"),
  (r"(share|provide|give) (some )?detail(s)? on your experience with python|describe your (experience|background) (with|in) python|your python experience", "Python is one of my core languages. At Hyperion AI I built a Python/llama.cpp model-and-agent evaluation platform (endpoint management, interactive chat, benchmark jobs, saved-run comparison) and Go and FastAPI backend services for exchange connectivity and market data. Earlier, in electronic trading, I built FPGA-facing test, replay and regression infrastructure in C++ and Python, and automated trading-lifecycle operations with Python, Perl and Shell."),
  (r"experience with java or go(lang)?|experience with go(lang)? or java|java or golang", "Yes, both. Go: at Hyperion AI I built Rust, C++ and Go/gRPC services for chain and RPC ingestion, WebSocket streams and wallet analytics, plus Go and FastAPI backend services on Kubernetes for exchange connectivity and market data; earlier I designed a cryptocurrency-exchange architecture on Go/gRPC microservices with Intel SGX enclaves, Kubernetes, Redis and AWS Lambda. Java: in electronic trading I architected execution paths in C++ and Java at sub-250-microsecond latency, and built C++/Java replay and backtesting engines for journal parsing and OMS integration."),
@@ -86,10 +87,10 @@ TEXT_RULES=[
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
  (r"current (title|role)|job title|^title$", "CTO & Technical Co-Founder / Principal Architect"),
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
- (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$300,000 - $350,000 base"),
+ (r"salary|compensation|pay expectation|desired (base|comp)|expected (base|salary|comp)", "$250,000+ base"),   # applicant: $250K+ base
  (r"today'?s date|date of application|application date|date \(mm/dd/yy", time.strftime("%m/%d/%y")),
  (r"current (occupation|job title|title|role|position)|^occupation|your occupation|what do you (currently )?do for work", "CTO"),   # applicant's answer
- (r"earliest .{0,50}start|when .{0,40}(start|join|begin)|start date|available to start|availability", "Immediately"),   # applicant's answer
+ (r"earliest .{0,50}start|when .{0,40}(start|join|begin)|start date|available to start|availability", "Two weeks after an offer (I am currently CTO at Hyperion AI and would give two weeks' notice)"),   # applicant: current role at Hyperion AI, two weeks' notice
  (r"(what is |what's )?your current location|current location|where (are|do) you (currently )?(located|based|live|living|reside)|city,? state", "Santa Clara, California"),   # applicant's answer
  (r"sponsor", "No sponsorship required. I am a US citizen."),   # applicant's answer
  (r"citizenship|citizen", "US Citizen"),
@@ -122,7 +123,7 @@ TEXT_RULES=[
  (r"built inside a customer'?s environment|inside (a|the) (customer|client)'?s? (environment|infrastructure)", "At Hyperion AI I built white-label KYC/AML onboarding for institutional partners: Canton/Daml issuer, holder and verifier contracts, DID credentials, Plaid verification and isolated ledger-backed audit trails. It was harder than building in our own stack because the partner's rules came first: their identity, network and key-management requirements; security review before every change; and debugging through their logs and their people rather than ours. I designed for that from the start: configuration instead of forks, a separate audit trail per partner, and replayable evidence so we could reproduce issues outside their environment."),
  (r"(worked on|built) that you were proud of|something you('re| are) proud of|favou?rite projects?", ANS.get("impact","")),
  (r"infrastructure that supported ai agents|autonomous workflows|dynamically generated and executed tasks", "Yes. At Hyperion AI I built the infrastructure our agents ran on: an MCP client and 3 MCP servers exposing 9 tools; plan-validate-dispatch-observe-replan loops with reasoner and verifier roles and per-role model endpoints; and a coordinator-controlled action boundary with role-based allowlists, JSON-schema validation, execution budgets and approval-gated actions, so tasks the agents generated were validated before they ran and every tool outcome was traceable. I also built the evaluation platform with live agent timelines and replayable traces."),
- (r"earliest month|month you('d| would) be able to (join|start)", "Immediately (October 2026)"),
+ (r"earliest month|month you('d| would) be able to (join|start)", "October 2026 (two weeks' notice)"),
  (r"what type of visa|visa are you currently on", "Not applicable. I am a US citizen and need no visa or sponsorship."),
  (r"current or most recent (role|job|position) title|most recent (job )?title|current \(?or most recent\)? ?(job |role |position )?title|^current (job )?title", "CTO & Technical Co-Founder, Hyperion AI"),
  (r"where are you physically (based|located)|where are you based\??$", "Santa Clara, California"),
@@ -177,13 +178,13 @@ TEXT_RULES=[
  (r"(served|serve|service|served in|been in) (in )?(the )?(military|armed forces|u\.?s\.? military)|military (service|experience|background)", "No, I have not served in the military."),
  (r"snack|favou?rite (food|coffee|drink|song|movie|book|meal)|fun fact|hobby|hobbies|for fun|outside of work|guilty pleasure|spirit animal|superpower", "Whatever is on the table: the ideas come from the problem, not the snack. Outside of work I read widely and tinker with open-weight models on my own hardware."),
  (r"able to travel|willing to travel|travel (for|requirements?|expectations?)|percentage of travel|% travel|days of travel|involve .{0,40}travel|travel (each|per|a) (month|week|quarter)|comfortable with .{0,20}travel", "Yes, I am comfortable with that and can travel as needed for the role."),
- (r"timeline for (starting|a new)|when (can|could|would) you (be able to )?(start|join)|how soon (can|could) you", "Immediately. I am available now with no notice period."),
+ (r"timeline for (starting|a new)|when (can|could|would) you (be able to )?(start|join)|how soon (can|could) you", "About two weeks after an offer: I am currently CTO at Hyperion AI and would give two weeks' notice."),
  (r"located near our offices?|(relocate|willing to relocate) or commute|able to commute|commut(e|ing) to (our|the) office", "Yes. I am based in Santa Clara, CA (SF Bay Area) and can commute to the office; open to relocating for the right role."),
  (r"know anyone (who works|at|employed)|anyone you know (works|at)|friends or family (at|who work)", "No"),
  (r"(average |typical |largest )?size of (the )?teams? (you've|you have|you) (managed|led)|how many (people|engineers|direct reports|reports) (have you|do you|did you) (managed|manage|lead|led)|team size|number of direct reports", "It varies by role: as Chief Architect at Yahoo Finance I directed 75+ engineers and partners across the platform modernization program; as CTO and Technical Co-Founder at Hyperion AI I led a small founding engineering team hands-on."),
- (r"start date|available to start|availability|notice period", "Immediately"),
+ (r"start date|available to start|availability|notice period", "Two weeks after an offer (I am currently CTO at Hyperion AI and would give two weeks' notice)"),
  (r"years? of (relevant |professional |total )?experience|how many years", "25"),
- (r"when (can|could|would|are you able to) you (realistically |potentially |ideally )?start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Immediately (available now, no notice period)"),
+ (r"when (can|could|would|are you able to) you (realistically |potentially |ideally )?start|start date|earliest (start|availability)|available to start|notice period|availability to start|how soon", "Two weeks after an offer (I am currently CTO at Hyperion AI and would give two weeks' notice)"),
  (r"compensation expectation|salary expectation|desired (salary|compensation|base)|expected (salary|compensation|base)|(salary|compensation|pay) (requirements|expectations|target)|target (salary|compensation)", "Flexible: my recent base compensation has been in the $300-350K range, and I am open to the right mix of base and equity for the right role."),
  (r"heard about us from a (friend|family|current|former)|referr(ed|al).*(name|who)|name of (the |your )?(employee|referrer|person who)|who referred you|referred by", "N/A"),
  (r"how your (experience|background) aligns|aligns? (to|with) (the )?(role|position|requirements|job)|why (are you|would you be|you are) a (good |great |strong )?fit|what makes you a (good |great |strong )?fit|relevant experience for this role", "25+ years building and leading distributed, low-latency systems at JPMorgan Chase, Morgan Stanley, Bloomberg and Yahoo Finance (Chief Architect for the AWS modernization serving ~40M daily users), and most recently CTO & Technical Co-Founder of Hyperion AI, where I built agentic AI platforms end to end. I combine hands-on architecture and code (Python, Rust, C++, Go) with leading engineering teams through delivery and 24x7 operation."),
@@ -212,6 +213,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^are you currently (employed|working)( full[- ]time)?\??\*?$|current(ly)? employment status|what is your employment status|^employment status", ["Yes","Employed","Employed full-time","Currently employed","Full-time employed","Employed, full-time"]),   # applicant: CTO at Hyperion AI (current)
+ (r"when (can|could|would) you (be able to )?(start|join|begin)|earliest (possible )?start|available to start|start date", ["2 weeks","Within 2 weeks","Two weeks","Less than 2 weeks","2-4 weeks","Within 1 month","Less than 1 month","1 month","Within 30 days"]),
  (r"if you selected .{0,10}two or more races|check all racial categories", ["Asian","Asian (Not Hispanic or Latino)"]),   # required follow-up (SoFi): the applicant's answer
  (r"graduation (year|date)|year (of|you) graduat|when did you graduate", ["1995","May 1995"]),
  (r"(hold|have) any (salesforce|servicenow|sap|workday)(\.com)? certifications?|(salesforce|servicenow|sap|workday) certifi", ["No","no","None"]),
@@ -236,7 +239,7 @@ CHOICE_RULES=[
  (r"perform the essential (duties|functions)|reviewed the job description", ["Yes","I confirm","I acknowledge","I agree"]),
  (r"subject to .{0,80}background (check|screening|investigation)|comprehensive background check|(willing|able|agree) to (submit to|undergo|complete|consent to) .{0,30}background", ["Yes","I agree","I acknowledge","I understand","I consent","Consent","Confirmed"]),
  (r"require .{0,60}(participate in a government program|government program to maintain|\bopt\b|stem opt)", ["No","no"]),
- (r"which languages,? if any,? can you communicate|languages? .{0,40}professional (working )?proficiency|languages? (can|do) you (speak|communicate)", ["English"]),
+ (r"which languages,? if any,? can you communicate|languages? .{0,40}professional (working )?proficiency|languages? (can|do) you (speak|communicate)|languages of fluency", ["English","Tamil","Hindi"]),   # applicant: English, Tamil, Hindi
  (r"location of your primary residence|state of (your )?(primary )?residence|primary residence.{0,20}(state|location)", ["California","CA","United States"]),
  (r"confirm that you are legally authori[sz]ed to work in the us|verify that (you|i) (am|are) authori[sz]ed", ["I verify that I am authorized to work in the US","authorized to work in the US","Yes"]),
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
@@ -246,7 +249,7 @@ CHOICE_RULES=[
  (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
  (r"minimum (legal )?age|legal working age|(18|eighteen) (years of age|years old) or older|at least (18|eighteen)", ["Yes","yes"]),   # applicant: age 50
  (r"what state (will|do|would) you (currently )?(be )?(based|live|reside|work)|(which|what) state do you (currently )?(live|reside)|state (of|you) (residence|reside)|which state (will|do|are) you|in which state you (will )?(reside|live|work)", ["California","CA"]),   # Santa Clara, California
- (r"when would you be available to relocate|available to relocate", ["October 2026","September 2026","Immediately","Now"]),   # already lives in the Bay Area; available immediately
+ (r"when would you be available to relocate|available to relocate", ["October 2026","November 2026","Within 1 month","Within 3 months"]),   # already lives in the Bay Area; available immediately
  (r"interview process .{0,80}(align|work) with your (availability|timeline)|timeline align with your availability", ["Yes","yes"]),
  (r"(professional|production|hands-on) (python|rust|c\+\+|go|golang|java|sql)|(python|rust|c\+\+|golang|sql|kubernetes|aws|gcp|terraform|kafka|pytorch|llm|rag) (development )?experience", ["Yes","yes"]),   # all on the resume
  (r"prior (healthcare|health care|medical|clinical|pharma\w*|biotech) (industry )?experience|experience in (the )?(healthcare|health care) (industry|space)", ["No","no"]),   # not on the resume
@@ -388,7 +391,7 @@ CHOICE_RULES=[
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish","Asian","Asian (Not Hispanic or Latino)","Asian or Asian American"]),   # applicant: Asian where no decline option exists
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
  (r"support of .{0,40} to maintain (that |your )?(work )?authori[sz]ation|maintain (that |your )?(work )?authori[sz]ation|visa support|immigration support", ["No","no"]),
- (r"how much notice|notice period|notice do you (require|need)", ["No notice needed","No notice","None","Immediately","Available immediately","0 weeks","Less than 2 weeks","2 weeks"]),
+ (r"how much notice|notice period|notice do you (require|need)", ["2 weeks","Two weeks","2 weeks or less","Less than 2 weeks","1-2 weeks","Less than 1 month","Within 1 month","Less than 30 days"]),   # applicant: two weeks' notice
  (r"compensation is standardi[sz]ed|comfortable with the (salary|compensation|pay)|salary (range |band )?(is )?non-negotiable|salary being offered|within (the|this) (salary|compensation|pay) range|acceptable to you|expectations? (align|aligned|fit|fall) with(in)? the (salary|compensation|pay)|(listed|posted|stated) (salary|compensation|pay)( range)? (meet|meets|match|fit)|(salary|compensation|pay|expectations?) (fall|falls|fit|fits) with(in)? (our|the|this) (estimated |posted |listed )?(salary |pay |compensation )?range|(salary|compensation|pay) range (listed|posted|in the job)", ["Yes","yes","I understand","Yes, I understand"]),   # applicant: salary is not a filter
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
