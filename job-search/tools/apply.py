@@ -61,6 +61,8 @@ TEXT_RULES=[
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile|contact number|^tel\b|^telephone", P["phone"]),
  (r"zip|postal|post ?code", "95050"),
+ (r"(what|which) (types?|kinds?) of (roles?|positions?|jobs?) (are|would) you (be )?interested in|roles? (are you|you are) (most )?interested in", "Engineering leadership and senior technical roles in AI/ML: CTO, VP / Head / Director of Engineering or AI, Engineering Manager for AI teams, and Principal / Staff / Distinguished Engineer or AI Architect roles building LLM, data-platform and distributed systems."),
+ (r"(list|describe|what are) your (relevant )?(technical )?skills( and competencies)?|relevant technical skills|technical competencies", "AI/ML and LLM systems (RAG, agentic workflows, evaluation, inference optimization); Python, Go, Rust and C++; distributed and low-latency streaming systems (Kafka); cloud and infrastructure (AWS, Kubernetes, Terraform); data platforms (Spark, Postgres/MySQL, vector databases); and leading engineering organizations as CTO and co-founder of Hyperion AI and at Yahoo (75+ engineers) and JPMorgan (50+ engineers)."),
  (r"country( of residence| you (live|reside) in)?$|^country\b|which country|country of residence", "United States"),
  (r"sponsorship needs?|require (employer |visa |company )?sponsorship|sponsorship to work|need sponsorship", "None. I am a US citizen and need no sponsorship or visa transfer."),
  (r"where do you (currently )?(reside|live)|city,? state|current city|city and state|city of residence", "Santa Clara, CA"),
@@ -127,6 +129,7 @@ TEXT_RULES=[
  (r"^(twitter|x)( ?/ ?(x|twitter))?( account| handle| profile| url)?\??$", "N/A"),
  (r"(know|related to) anyone .{0,40}(works|working) (at|for)|relatives? (who )?work(s)? (at|for)", "No."),
  (r"signed a non-?compete|non-?compete agreement", "No. I have no non-compete agreement that would restrict me from working for your company."),
+ (r"size of the (engineering )?(organi[sz]ation|org|team) (for which|that|you)|(largest|biggest) (engineering )?(organi[sz]ation|org|team) you('ve| have) (led|managed)|how (large|big) (an? |of an? )?(engineering )?(organi[sz]ation|org|team) have you (led|managed)", "75+ engineers, managers and partners at Yahoo Finance, which I directed as Chief Architect; before that a 50+ organization at JPMorgan Chase across the U.S., U.K. and India, and today a founding team of 15+ as CTO of Hyperion AI."),
  (r"do you have direct reports|how many direct reports|number of direct reports", "Yes. As CTO of Hyperion AI I lead a founding team of 15+; at Yahoo Finance I directed 75+ engineers, managers and partners, and at JPMorgan Chase a 50+ organization across the U.S., U.K. and India."),
  (r"relocate to (singapore|hong ?kong|london|europe|india|asia|canada|toronto|dubai)", "No. I am based in the San Francisco Bay Area and am looking for roles in the US: the Bay Area, New York, or remote."),
  (r"devops problem you solved using an ai|(devops|infrastructure|ci/?cd|operations) problem .{0,40}(ai|ml|machine learning) (tool|technique)", "At Hyperion AI our benchmark and agent services needed reliable CI and fast triage when runs regressed. Tools: Claude Code, plus open-weight models served through llama.cpp. What I built myself: Claude Code prompts and parallel subsystem reviews wired into our debugging and test workflow, the test and replay harnesses it helped generate, and a comparability gate (13 checks over a 121-measure scorecard, with run manifests and JSONL traces) that fails a run when model, workload or measurement settings drift. Outcome: regressions were caught at the gate, with the trace that explained them, instead of surfacing in engineering reviews, and a very small team kept the platform correct as it grew."),
@@ -199,6 +202,14 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"government official|public official|politically exposed|holder of public office|civil service position", ["No, I am not a current or former Government Official","No, I am not a relative of a government official.","No, I am not","No","None of the above"]),
+ (r"sanctions and export controls|please confirm whether any of the below applies to you", ["None of the above","None of these apply to me","No"]),
+ (r"if you selected a response to the prior question other than", ["U.S. citizen","US citizen","U.S. Citizen","None of these apply to me"]),
+ (r"perform the essential (duties|functions)|reviewed the job description", ["Yes","I confirm","I acknowledge","I agree"]),
+ (r"subject to .{0,80}background (check|screening|investigation)|comprehensive background check|(willing|able|agree) to (submit to|undergo|complete|consent to) .{0,30}background", ["Yes","I agree","I acknowledge","I understand","I consent","Consent","Confirmed"]),
+ (r"require .{0,60}(participate in a government program|government program to maintain|\bopt\b|stem opt)", ["No","no"]),
+ (r"which languages,? if any,? can you communicate|languages? .{0,40}professional (working )?proficiency|languages? (can|do) you (speak|communicate)", ["English"]),
+ (r"location of your primary residence|state of (your )?(primary )?residence|primary residence.{0,20}(state|location)", ["California","CA","United States"]),
  (r"confirm that you are legally authori[sz]ed to work in the us|verify that (you|i) (am|are) authori[sz]ed", ["I verify that I am authorized to work in the US","authorized to work in the US","Yes"]),
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
  (r"(presently|currently|legally|lawfully) authori[sz]ed (under .{0,40})?to work|authori[sz]ed under (u\.?s\.?|united states) immigration", ["Yes","yes"]),   # US citizen
@@ -343,6 +354,7 @@ CHOICE_RULES=[
  (r"metropolitan area|metro area|closest to your (city|residence|home)|nearest (city|metro)|city of residence", ["San Jose, California","San Jose, CA","San Jose","Santa Clara","San Francisco, California","San Francisco, CA","San Francisco","Sunnyvale","Oakland"]),
  (r"cities .{0,30}available|available to work in|which (cities|locations)|what cities|preferred cit", ["San Francisco","New York","Remote","Any","Open to any"]),
  (r"languages? (you|do you) (speak|are proficient)|select all the languages|languages? .{0,20}proficient|spoken languages?|fluent in", ["English","Python","Go"]),
+ (r"(which|what) (departments?|teams?|functions?|areas?) (are|would) you (be )?interested in|departments? of interest", ["Engineering","Software Engineering","Technology","Engineering & Technology","Product & Engineering","Data Science","Data","Research & Development","IT"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
  (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Decline To Self Identify","Decline to self identify","Decline to self-identify","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish"]),
@@ -356,7 +368,7 @@ CHOICE_RULES=[
  (r"veteran|military", ["I am not a protected veteran","Not a protected veteran","I am not a veteran","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
- (r"subject to (any )?(employment|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
+ (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
  (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
  (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Website","Careers","Job Post Site","Job Board","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
@@ -372,7 +384,7 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|years|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|(how many|number of|total|minimum of|at least) (\w+ )?years|years (of|in|with|working|leading|managing|building|hands)|years'? experience|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
     l=label.lower()
@@ -495,6 +507,8 @@ def _match(t,pref,strict=False):
     return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
 def best_index(texts,pref):
     """Index of the option best matching pref: an exact/leading match beats a whole-word one ('San Francisco Bay Area' over 'Other - willing to relocate to the San Francisco Bay Area')."""
+    for i,t in enumerate(texts):   # an exact option first ('English' over 'English only / No additional languages')
+        if t and t.lower().strip()==pref.lower().strip(): return i
     for strict in (True,False):
         for i,t in enumerate(texts):
             if t and _match(t,pref,strict): return i
@@ -1131,8 +1145,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if gk in done_groups: continue
                         done_groups.add(gk)
                         if not q and any(re.search(r"he/him|she/her|they/them",b[1],re.I) for b in members): q="Preferred pronouns"   # pronoun pick-list without a captured heading
-                        want=pick(q or lab,CHOICE_RULES) or ["Company Website","Careers page","Job Board","Other","Greenhouse"]
-                        if want==["__ASK__"]: continue
+                        is_src=bool(re.search(r"hear about|learn about|find out about|source|referred|how did you find",q+" "+lab,re.I))
+                        want=pick(q or lab,CHOICE_RULES) or (["Company Website","Careers page","Job Board","Other","Greenhouse"] if is_src else None)
+                        if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
                         if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not re.search(r"linkedin",b[1],re.I)] or members   # never claim LinkedIn as the source
                         if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
@@ -1145,10 +1160,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             if ticked: report["chosen"][(q or lab)[:60]]=", ".join(ticked); continue
                         choice=None
                         for pv in want:
-                            for b in members:
-                                if _match(b[1],pv): choice=b; break
-                            if choice: break
-                        if not choice and (await is_required(members[0][0]) or re.search(r"hear about|source",q+" "+lab,re.I)):
+                            bi=best_index([b[1] for b in members],pv)
+                            if bi is not None: choice=members[bi]; break
+                        if not choice and is_src:
                             choice=next((b for b in members if re.search(r"other",b[1],re.I)),members[0])
                         if choice: await tick(choice[0]); report["chosen"][(q or lab)[:60]]=choice[1][:60]
                     elif await is_required(h): await tick(h); report["chosen"][lab[:60]]="checked"
