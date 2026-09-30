@@ -63,7 +63,7 @@ TEXT_RULES=[
  (r"^(street )?address( line)? ?1$|^street( address)?$|^address line one$", P.get("street") or "Santa Clara, California, United States"),
  (r"(work|company|business|corporate|former|previous|prior) e-?mail|e-?mail .{0,30}(while|when) (you )?(work|were employed)|what was your .{0,20}e-?mail", "N/A"),   # never his personal email as a former-employer work address
  (r"if applying to (a )?remote (us )?location,? what state", "California"),
- (r"student or temporary visa|temporary visa|(visa|opt|cpt) (type|expir|end date)|f-?1 opt", "N/A (I am a US citizen)"),
+ (r"student or temporary visa|temporary visa|(visa|opt|cpt) (type|expir|end date)|f-?1 opt|(if|are) you (are )?(currently )?on a non-?immigrant visa", "N/A (I am a US citizen)"),
  (r"where (are )?you (are )?currently employed|(name of )?your current employer|which company (are you|do you) (currently )?work", "Hyperion AI"),
  (r"title of your current (position|role|job)|your current (job )?title", "CTO & Technical Co-Founder / Principal Architect"),
  (r"tangible factors .{0,40}(important|matter)|what (factors|things) (are|matter) most (important )?(to you )?in (your|a) (next|new) (role|job|position)", "Scope and ownership: leading the architecture and engineering of a core platform with real users; a strong, high-trust team with high standards for correctness and reliability; clear business impact I can measure; flexibility to work hybrid or remote from the SF Bay Area; and competitive compensation (base around $250,000+ plus equity)."),
@@ -276,7 +276,7 @@ CHOICE_RULES=[
  (r"provide verification of (your )?identity|verify your identity (upon|at) hire", ["Yes","yes"]),
  (r"(member of|serving in|in) the (u\.?s\.? )?(national guard|reserves?)\b|national guard or reserves?", ["No","no"]),
  (r"automated tools such as ai .{0,240}opt-?out|prefer not to have your application processed by (these|automated|ai)", ["Opt-in","Opt in","I do not wish to opt out","I do not want to opt out","Do not opt out","No, I do not want to opt out","I consent","I agree","Accept"]),   # the employer's AI screening of applications: not opting out (never Yes/No, which would be ambiguous)
- (r"^work eligibility:?\s*\*?$|^citizenship status:?\s*\*?$", ["U.S. Citizen","US Citizen","United States Citizen","Citizen of the United States","U.S. Citizen or National","U.S. citizen or national","Citizen"]),
+ (r"^work eligibility:?\s*\*?$|^citizenship status:?\s*\*?$", ["I am 18 years or older","U.S. Citizen","US Citizen","United States Citizen","Citizen of the United States","U.S. Citizen or National","U.S. citizen or national","Citizen"]),
  (r"\bi-?140\b", ["No","no"]),
  (r"what state\(?s?\)? (are you|can you|do you|would you) (be )?(able to |legally )?(work|live|reside)", ["California","CA"]),
  (r"^(?!.*\b(aligned?|within|in line|comfortable|okay|ok|acceptable|fits?)\b).*((realistic|expected|desired|target) (base )?(gross )?(annual )?(salary|compensation|base pay) (expectation|range|requirement)?|salary expectations?\b)", ["$250,000+","$250,000 +","$250,000 and above","$250,000 or more","$250,000 or higher","250,000+","$250K+","More than $250,000","Over $250,000","Above $250,000","$250,000 - $299,999","$250,000-$299,999","$250,000 - $300,000","$250,001","$250k - $300k","$250k-$300k","$225,000+","$200,000+","$200,000 or more","Over $200,000","More than $200,000","Above $200,000"]),
