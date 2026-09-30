@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://www.sentinelone.com/jobs/?gh_jid=7733953003",
-  "tag": "sentinellabs_senior_forward_deploy_engineer_",
-  "company": "sentinellabs",
-  "title": "Senior Forward Deploy Engineer (Fullstack - Java/React)",
-  "comp": null,
-  "loc": "United States - Remote",
-  "posted_ts": 1790011395.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you have professional experience using Java as a backend programming language"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/fourkites/jobs/8212401",
   "tag": "fourkites_senior_ai_engineer",
   "company": "fourkites",
@@ -24,8 +9,11 @@
   "loc": "Chicago, IL or Remote, USA",
   "posted_ts": 1790003911.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please share some detail on your experience with Python:",
+   "Do you have experience with Java or GoLang? Can you share some detail?"
+  ]
  },
  {
   "ats": "greenhouse",
