@@ -1,30 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://boards.greenhouse.io/chainguard/jobs/4713044006",
-  "tag": "chainguard_staff_platform_database_engineer_r2",
-  "company": "chainguard",
-  "title": "Staff Platform Database Engineer",
-  "comp": 231000.0,
-  "source": "ATS board",
-  "resubmit": true,
-  "correction_of": "chainguard_staff_platform_database_engineer",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://wellfound.com/jobs/4749250-engineering-manager-autoreview",
-  "tag": "colab_software_engineering_manager_autoreview_r2",
-  "company": "colab",
-  "title": "colab_software_engineering_manager_autoreview",
-  "resubmit": true,
-  "correction_of": "colab_software_engineering_manager_autoreview",
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/didi/jobs/8234302",
   "tag": "didi_staff_principal_ai_transformation_engin_r2",
   "company": "didi",
