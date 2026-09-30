@@ -628,6 +628,7 @@ CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
 # work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)
 ENV_TRUE=r"start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
 # option statements that are true for the applicant (Santa Clara, CA; hybrid in SF Bay Area fine; open to relocation elsewhere)
+STACK_TRUE=r"c\+\+|\brust\b|tokio|\bgo\b|golang|c#|\.net|dotnet|asp\.net|python|scripting|\bbash\b|shell|powershell|solidity|smart contract|typescript|javascript|\bjs\b|node|react|\bjava\b|\bsql\b|postgres|mysql|redis|kafka|kubernetes|\bk8s\b|\baks\b|docker|terraform|\baws\b|amazon web services|\bgcp\b|google cloud|azure (functions|app services?|storage|devops|key vault|kubernetes|sql|cosmos|api management|service bus|event hubs?|blob|monitor)|lambda|\bs3\b|\bec2\b|microservices|\brest\b|grpc|graphql|ci/cd|github actions|jenkins|\bgit\b|linux|\bllms?\b|machine learning|pytorch|tensorflow|vector|\brag\b|openai|langchain|vllm|spark|databricks|airflow|unit test|integration test|end-to-end|\be2e\b|regression|performance test|load test|contract test|api test|automated test|hiring|recruit|mentor|coach|performance (review|management)|career (growth|development)|team building|managing managers|budget|roadmap|stakeholder|cross-functional|one-on-one|1:1|feedback|org(anizational)? design|onboarding|distributed systems|event-driven|observability|monitoring|security|devsecops"   # the applicant's stack and leadership practice
 OPTION_TRUE=r"(currently )?(live|based|located|reside) in (the )?(sf |san francisco |greater )?bay area|santa clara|(live|based|located|reside) in (the )?(san francisco|silicon valley|california)|comfortable with a hybrid position commuting to the (san francisco|sf) office"
 async def dismiss_menu(page,inp=None):
     """Close an open dropdown/autocomplete menu. Blur first: on Wellfound the Escape key closes the whole apply modal."""
@@ -1371,11 +1372,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
                         if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not HEAR_BAD.search(b[1])] or members   # never claim LinkedIn, a referral, an event or a recruiter as the source
-                        if re.search(r"select all that apply|environments|best describes?",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun",q,re.I):
-                            # "which environments describe your experience (select all that apply)": tick every option true for the applicant's history
+                        if re.search(r"select all that apply|check all that apply|environments|best describes?|which (of the following )?(technolog|tools|languages|frameworks|services|platforms|types of|kinds of|practices|people-leadership|leadership)",q,re.I) and not re.search(r"hear|learn|source|ethnic|race|gender|disab|veteran|pronoun|sanction|citizenship|countr",q,re.I):
+                            # "which environments / technologies / practices (select all that apply)": tick every option true for the applicant
                             ticked=[]
                             for b in members:
-                                if re.search(ENV_TRUE,b[1],re.I) and not re.search(r"none of the above|not applicable|n/a|prefer not|other",b[1],re.I):
+                                if (re.search(ENV_TRUE,b[1],re.I) or re.search(STACK_TRUE,b[1],re.I)) and not re.search(r"none of the above|not applicable|n/a|prefer not|^other\b",b[1],re.I):
                                     try: await tick(b[0]); ticked.append(b[1][:40])
                                     except Exception: pass
                             if ticked: report["chosen"][(q or lab)[:60]]=", ".join(ticked); continue
