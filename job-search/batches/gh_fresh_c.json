@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/customerio/jobs/8224814",
-  "tag": "customerio_staff_software_engineer_product",
-  "company": "customerio",
-  "title": "Staff Software Engineer, Product",
-  "comp": "$200,000 - $280,000 ",
-  "loc": "Americas Remote",
-  "posted_ts": 1790275518.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Years of Experience"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.harness.io/company/jobs/apply?gh_jid=5249738007&gh_jid=5249738007",
   "tag": "harnessinc_forward_deployed_engineer_impleme",
   "company": "harnessinc",
@@ -24,60 +9,10 @@
   "loc": "Chicago, Illinois, United States; New York, New York, United States; San Francisco, California, United States",
   "posted_ts": 1790368116.0,
   "score": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/kikoff/jobs/4396892009",
-  "tag": "kikoff_staff_machine_learning_engineer",
-  "company": "kikoff",
-  "title": "Staff Machine Learning Engineer",
-  "comp": null,
-  "loc": "San Francisco",
-  "posted_ts": 1788571323.0,
-  "score": 29,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/zscaler/jobs/5238481007",
-  "tag": "zscaler_principal_software_development_engin",
-  "company": "zscaler",
-  "title": "Principal Software Development Engineer (Control-Plane)",
-  "comp": null,
-  "loc": "San Jose, California, USA; Santa Clara, California, USA",
-  "posted_ts": 1790054516.0,
-  "score": 27,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://altruist.com/join-altruist/6203773004?gh_jid=6203773004",
-  "tag": "altruist_staff_software_engineer_cloud_infra",
-  "company": "altruist",
-  "title": "Staff Software Engineer, Cloud Infrastructure",
-  "comp": null,
-  "loc": "San Francisco, CA",
-  "posted_ts": 1790017940.0,
-  "score": 25,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://buildops.com/careers/job-application?gh_jid=6186148004",
-  "tag": "buildops_senior_engineering_manager_financia",
-  "company": "buildops",
-  "title": "Senior Engineering Manager, Financial Platform",
-  "comp": "$197,000 - $262,000 ",
-  "loc": "San Francisco, CA",
-  "posted_ts": 1788909749.0,
-  "score": 25,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe a specific DevOps problem you solved using an AI/ML tool or technique \u2014"
+  ]
  },
  {
   "ats": "greenhouse",
