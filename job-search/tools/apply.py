@@ -224,6 +224,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"provided any contract work for|ever (been )?(a )?contractor (for|with|at)", ["No","no"]),
  (r"geometric processing|3d/cad|\bcad\b applications|computational geometry|mesh processing", ["No","no"]),   # not on the resume
  (r"^(have|do) you (ever )?(used|run|operated|deployed|worked with|have (hands-on |professional )?experience (with|using)) (?!.*(python|golang|\bgo\b|rust|c\+\+|java\b|typescript|javascript|node|react|sql|kafka|kubernetes|k8s|aws|gcp|google cloud|azure|terraform|postgres|spark|docker|redis|grpc|fastapi|llm|vllm|llama|databricks|mcp|rag\b|pytorch|openai|claude|langchain|vector|linux|git|ci/cd|microservices|kinesis|s3|lambda|ec2|bigtable|cassandra|mysql|elasticsearch|prometheus|opentelemetry|grafana|airflow|flink|tensorflow|hugging ?face|agents?\b|model serving|inference))[\w .+#/-]{2,40}? in (a )?production", ["No","no","No, I have not"]),   # a tool that is not on the resume
  (r"(currently|presently) (based|located|living|residing) in (nyc|new york|manhattan|brooklyn)|are you (based|located) in (nyc|new york)", ["I'm not in NYC yet, but I'm able and willing to relocate","Not yet, but willing to relocate","Willing to relocate","No, but I am willing to relocate","No"]),   # applicant lives in Santa Clara; will move to New York
@@ -234,7 +235,7 @@ CHOICE_RULES=[
  (r"^do you have (professional |hands-on )?experience (with|using|on) (aws|amazon web services|gcp|google cloud|azure|kubernetes|terraform|kafka|spark|postgres(ql)?|docker)\b", ["Yes","yes"]),
  (r"resident of the european union|reside in the (eu|european union|uk|united kingdom|eea)", ["No","no"]),
  (r"(currently or were you previously|were you previously|have you previously been) an? (?!(yahoo|jp|jpmorgan|chase|morgan|bloomberg|cadence|bank|merrill|barclays|hyperion|motocho|ankr|mantara|hold|compunnel)\b)\w+ (employee|contractor|intern)", ["No","no"]),   # none of his past employers
- (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools", ["I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
+ (r"(current )?level of experience (using or building|with|using) (with )?ai tools|best describes your .{0,30}experience .{0,20}ai tools|best describes how you (currently )?use ai tools", ["I am an advanced AI user","I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # Hyperion AI agentic platform
  (r"node\.?js", ["Expert (designed/architected large-scale systems)","Expert","Advanced","Yes"]),   # applicant: Node.js expert
  (r"fluent in sql and a (modern )?cloud data platform|databricks", ["Yes","yes"]),   # applicant: SQL and Databricks
  (r"\breact(\.?js)?\b(?!\s+(to|quickly|when)\b)", ["Yes","yes","Expert","Advanced"]),   # applicant: professional React experience
@@ -248,7 +249,7 @@ CHOICE_RULES=[
  (r"travel\w* .{0,70}\b(3[0-9]|[4-9][0-9]|100) ?%|\b(3[0-9]|[4-9][0-9]|100) ?% (of the time )?travel|travel (more than|over) 25", ["No","no"]),   # applicant: travel up to 25%
  (r"country ?/ ?(us[- ])?state|state ?/ ?country|country (and|&) state|country or (us )?state", ["United States - California","United States - CA","US - California","USA - California","California, United States","California"]),
  (r"^are you currently (employed|working)( full[- ]time)?\??\*?$|current(ly)? employment status|what is your employment status|^employment status", ["Yes","Employed","Employed full-time","Currently employed","Full-time employed","Employed, full-time"]),   # applicant: CTO at Hyperion AI (current)
- (r"when (can|could|would) you (be able to )?(start|join|begin)|earliest (possible )?start|available to start|start date", ["2 weeks","Within 2 weeks","Two weeks","Less than 2 weeks","2-4 weeks","Within 1 month","Less than 1 month","1 month","Within 30 days"]),
+ (r"when (can|could|would) you (be able to )?(start|join|begin)|earliest (possible )?start|available to start|(preferred|desired|target|earliest|expected|possible) start date|^start date\??\*?$", ["2 weeks","Within 2 weeks","Two weeks","Less than 2 weeks","2-4 weeks","Within 1 month","Less than 1 month","1 month","Within 30 days"]),
  (r"if you selected .{0,10}two or more races|check all racial categories", ["Asian","Asian (Not Hispanic or Latino)"]),   # required follow-up (SoFi): the applicant's answer
  (r"graduation (year|date)|year (of|you) graduat|when did you graduate", ["1995","May 1995"]),
  (r"(hold|have) any (salesforce|servicenow|sap|workday)(\.com)? certifications?|(salesforce|servicenow|sap|workday) certifi", ["No","no","None"]),
@@ -1076,9 +1077,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for k,v in extra.items():
                         if k.lower() in (name+" "+lab).lower(): val=v; break
                     if val is None:
-                        mw=re.search(r"why (are )?you (are )?(interested|excited)( in| about)? (working at|working for|joining|to join|to work at) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$|why (do )?you want to (work at|join) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$",re.sub(r"^in \d-\d sentences,? (describe |explain )?","",lab.strip(),flags=re.I),re.I)
+                        mw=re.search(r"why (are )?you(\'re| are)? ?(are )?(interested|excited)( in| about)? (working at|working for|joining|to join|to work at|to work for) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$|why (do )?you want to (work at|join) ([A-Z][\w&.'\- ]{1,40}?)[\s.?,]*$",re.sub(r"^in \d-\d sentences,? (describe |explain )?","",lab.strip(),flags=re.I),re.I)
                         if mw:
-                            co=(mw.group(6) or mw.group(10) or "").strip()
+                            co=(mw.group(7) or mw.group(11) or "").strip()
                             val=(f"{co}'s mission and the scope of this role sit where my experience is strongest: building and leading platforms where performance, correctness and trust matter. "
                                  f"As CTO and co-founder of Hyperion AI I built an agentic AI platform end to end, and as Chief Architect at Yahoo Finance I led 75+ engineers on a platform serving about 40M daily users. "
                                  f"I want to bring that mix of hands-on architecture and engineering leadership to {co}'s products and team.")
@@ -1267,7 +1268,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
                     if re.search(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export",lab,re.I):   # a disclosure statement ("I am subject to a non-compete", "I hold a financial interest"): never tick it
                         report["chosen"][lab[:60]]="left unticked (disclosure)"; continue
-                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present",lab,re.I):
+                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present|^accept\*?$|i accept",lab,re.I):
                         await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
