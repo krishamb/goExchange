@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/peregrinetechnologies/jobs/4733803005",
-  "tag": "peregrinetechnologies_staff_software_enginee",
-  "company": "peregrinetechnologies",
-  "title": "Staff Software Engineer, Product Experiences",
-  "comp": "$200,000 - $275,000 ",
-  "loc": "San Francisco, California, Unites States",
-  "posted_ts": 1789423963.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/chaosindustries/jobs/5237013007",
   "tag": "chaosindustries_applied_ai_engineer",
   "company": "chaosindustries",
@@ -22,21 +9,10 @@
   "loc": "San Francisco, California, United States",
   "posted_ts": 1789404467.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/mesh/jobs/5420686008",
-  "tag": "mesh_solutions_architect",
-  "company": "mesh",
-  "title": "Solutions Architect ",
-  "comp": null,
-  "loc": "United States- Remote",
-  "posted_ts": 1789116410.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you any of the following \u201cprotected individual(s)\u201d as defined in the Immigra"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -48,21 +24,10 @@
   "loc": "New York, NY; Boston, MA; San Francisco, CA",
   "posted_ts": 1788210136.0,
   "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/globalityinc/jobs/8766439002",
-  "tag": "globalityinc_sr_ai_engineer",
-  "company": "globalityinc",
-  "title": "Sr. AI Engineer",
-  "comp": "$150,000 - $250,000. ",
-  "loc": "Palo Alto, CA",
-  "posted_ts": 1788204360.0,
-  "score": 19,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is your highest level of education?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -74,8 +39,10 @@
   "loc": "Remote, US",
   "posted_ts": 1790092614.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you have a LinkedIn profile?"
+  ]
  },
  {
   "ats": "greenhouse",
