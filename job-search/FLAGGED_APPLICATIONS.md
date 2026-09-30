@@ -40,7 +40,6 @@ now; the submitted answers cannot be edited, so the suggested action is to corre
 | Datavant | Staff ML Platform Engineer | "Will you require Datavant to participate in a government program (OPT / STEM OPT)?" answered **Yes**. | Email the recruiter: no, you are a US citizen. |
 | Ceribell | Senior Manager, Applied AI Engineering | "I acknowledge that I can perform the essential duties with or without reasonable accommodation" answered **No**. | Email the recruiter to correct it to Yes. |
 | DigiCert | Principal Software Engineer | Acknowledgment of the standard employment, education and background verification answered **No**. | Email the recruiter to correct it to Yes. |
-| Elite Technology | Tech Lead Engineer | "Do you have expert-level, hands-on experience with C#/.NET?" answered **Yes** (C# and .NET are not on the resume; a word-boundary bug skipped the "not on the resume" rule). | If they reply, tell them your backend languages are Python, Go, Rust, C++ and Java, not C#/.NET; or withdraw if the role is C#-centric. |
 | Motional | Director of Data Science (Remote US) | Location (City) autocomplete picked **"Santa Clara, Villa Clara, Cuba"** instead of Santa Clara, California. | If they reply, confirm you are in Santa Clara, California; the resume and the rest of the form say so. |
 | Garner Health | Staff Software Engineer (Developer Experience), Remote | Same Cuba location. | Same. |
 | Chainguard | Staff Platform Database Engineer, Remote US | Same Cuba location. | Same. |
