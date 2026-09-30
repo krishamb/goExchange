@@ -1,23 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/securityscorecard/jobs/8191929",
-  "tag": "securityscorecard_principal_ai_architect_r2",
-  "company": "securityscorecard",
-  "title": "Principal AI Architect",
-  "comp": "$270,000 - $330,000 ",
-  "loc": "Hybrid (NYC / Austin)",
-  "posted_ts": 1789064781.0,
-  "score": 22,
-  "resubmit": true,
-  "correction_of": "securityscorecard_principal_ai_architect",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/patronusaiinc/jobs/4412230009",
   "tag": "patronusaiinc_member_of_technical_staff_engi_r2",
   "company": "patronusaiinc",
@@ -27,8 +10,10 @@
   "posted_ts": 1789838236.0,
   "resubmit": true,
   "correction_of": "patronusaiinc_member_of_technical_staff_engi",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you would need to relocate to the San Francisco Bay Area, when would you be a"
+  ]
  },
  {
   "ats": "greenhouse",
