@@ -1,32 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/afresh/jobs/6190684004",
-  "tag": "afresh_staff_data_engineer_analytics",
-  "company": "afresh",
-  "title": "Staff Data Engineer, Analytics",
-  "comp": "$168k - $250k",
-  "loc": "Remote, San Francisco, California, United States",
-  "posted_ts": 1789162839.0,
-  "score": 19,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://careers.upstart.com/jobs?gh_jid=8186411",
-  "tag": "upstart_senior_engineering_manager_servicing",
-  "company": "upstart",
-  "title": "Senior Engineering Manager, Servicing",
-  "comp": null,
-  "loc": "United States | Remote",
-  "posted_ts": 1789570551.0,
-  "score": 19,
-  "last_result": "ition for which a campaign badge has been authorized under the laws administered by the Department o",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/oasishealthpartners/jobs/5426455008",
   "tag": "oasishealthpartners_director_software_engine",
   "company": "oasishealthpartners",
@@ -42,32 +16,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/doma/jobs/8167584",
-  "tag": "doma_director_platform_engineering",
-  "company": "doma",
-  "title": "Director, Platform Engineering",
-  "comp": null,
-  "loc": "Remote USA",
-  "posted_ts": 1788211029.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.hubspot.com/careers/jobs/8175197?gh_jid=8175197",
-  "tag": "hubspotjobs_principal_software_engineer_bree",
-  "company": "hubspotjobs",
-  "title": "Principal Software Engineer, Breeze",
-  "comp": null,
-  "loc": "Remote - USA",
-  "posted_ts": 1788453315.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/focused/jobs/8001022003",
   "tag": "focused_lead_agent_engineer_langchain",
   "company": "focused",
@@ -76,7 +24,7 @@
   "loc": "Remote",
   "posted_ts": 1790120024.0,
   "score": 17,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
@@ -89,8 +37,10 @@
   "loc": "United States (Remote)",
   "posted_ts": 1789762516.0,
   "score": 17,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "We do not hire in all States within the US. Do you live in one of the following "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -102,8 +52,10 @@
   "loc": "Remote",
   "posted_ts": 1790027789.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you live in Alaska, California, DC, Delaware, Hawaii, Iowa, Maine, Maryland, "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -115,8 +67,10 @@
   "loc": "Atlanta, GA preferred, Remote",
   "posted_ts": 1789395975.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you enter sports or esports contests or tournaments that draw interest from o"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -128,7 +82,7 @@
   "loc": "Remote",
   "posted_ts": 1789327247.0,
   "score": 16,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
