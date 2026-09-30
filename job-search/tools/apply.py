@@ -245,6 +245,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"non-?compet(e|ition)|agreements? (that|which) (would|could|may|might) (preclude|restrict|limit|prevent|prohibit)|preclude or restrict", ["No","no","None","No, I am not","I am not bound"]),   # applicant: no non-compete or other restricting agreement
+ (r"held h-?1b|h-?1b (status|petition|visa|cap)|(held|hold|have) (an? )?(f-?1|j-?1|l-?1|o-?1|tn|e-?3|h-?4) (status|visa)", ["No","no"]),   # applicant: US citizen
  (r"procurement|contract award", ["No","no","None","Not applicable"]),   # applicant: never a government employee or official
  (r"contract(ual)? (obligation|agreement|commitment)s?|obligations? (to|with) (your|a) (current|former|previous) employer|restrictive covenant|bound by (any )?(agreement|contract|covenant)|agreements? (that|which) (would|could|may|might) (restrict|limit|prevent|prohibit)|(prohibited|limited|restricted) in (your )?(performance|ability)|garden leave|notice.{0,20}contractual", ["No","no","None","No, I am not","I am not bound"]),   # applicant: no contract obligation with his current employer
  (r"best describes how you use ai tools|how (do|would) you (currently )?use ai tools", ["I design or automate workflows with AI tools (e.g., building agents, integrating AI into team processes).","I design or automate workflows with AI tools","I regularly use AI tools","I am an advanced AI user","I develop AI powered systems or agentic applications","I develop AI-powered systems","I build or automate workflows using AI","Expert","Advanced"]),   # applicant builds agents (Hyperion AI); not an AI-in-this-application question
