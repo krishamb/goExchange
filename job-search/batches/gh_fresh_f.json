@@ -1,35 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/taskrabbit/jobs/8205160",
-  "tag": "taskrabbit_staff_machine_learning_engineer_r",
-  "company": "taskrabbit",
-  "title": "Staff Machine Learning Engineer - Retention",
-  "comp": "$170,000 - $225,000. ",
-  "loc": "New York, New York, United States; San Francisco, California, United States",
-  "posted_ts": 1789508411.0,
-  "score": 23,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "If you will require relocation, what is your expected timeline and would you be ",
-   "Please select which Taskrabbit hub you are currently based out of:"
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/impiricus/jobs/5431683008",
-  "tag": "impiricus_director_ai_automation_engineering",
-  "company": "impiricus",
-  "title": "Director, AI Automation Engineering",
-  "comp": "$185,000 - $210,000 ",
-  "loc": "New York, NY, Atlanta, GA, or Remote, USA",
-  "posted_ts": 1790102229.0,
-  "score": 22,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://boards.greenhouse.io/octave/jobs/8787388002?gh_jid=8787388002",
   "tag": "octave_head_of_data_platform_ai",
   "company": "octave",
