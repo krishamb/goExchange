@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^i (hereby )?certify that (the |all |my )?(answers|information|statements)|^i (hereby )?certify that .{0,120}(true|correct|complete|accurate)", "Yes, I certify that my answers are true, correct and complete."),   # applicant: certification Yes (a free-text box, not a country)
  (r"\breferred by\b|\bwho referred\b|\breferr(ed|al)\b.{0,80}\bname\b|\bname of (the |your )?(referring )?(employee|referrer)\b", "N/A"),   # not referred: never the applicant's own name
  (r"(require|need) any (special )?accommodations?|accommodations? (during|for) (the )?interview", "No."),
  (r"(currently|presently) (based|located|living|residing) (in|near|around) (nyc|new york|manhattan|brooklyn)|are you (based|located|living) (in|near) (nyc|new york)|(live|living) (near|within commut\w+ distance of) (nyc|new york|the (nyc|new york) office)", "Not yet: I live in Santa Clara, California, and I am willing to relocate to New York City and commute to the office as the role requires."),
@@ -227,6 +228,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^location preference|(preferred|desired) (work )?location|work location preference|which location would you prefer", ["Santa Clara","San Jose","Sunnyvale","Mountain View","Palo Alto","Menlo Park","Redwood City","San Mateo","Burlingame","Foster City","South San Francisco","San Francisco","Bay Area","California","Remote"]),   # applicant: Santa Clara; any Bay Area office, else remote
  (r"requires? (a )?background checks?.{0,400}(disclos|conviction)|background checks? of all (new )?(employees|candidates|hires)", ["I Acknowledge","I acknowledge","Acknowledge","Yes","I consent","I understand"]),   # acknowledgment of the employer's background-check policy, not a conviction disclosure
  (r"provided any contract work for|ever (been )?(a )?contractor (for|with|at)", ["No","no"]),
  (r"geometric processing|3d/cad|\bcad\b applications|computational geometry|mesh processing", ["No","no"]),   # not on the resume
