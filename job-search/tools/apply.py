@@ -236,6 +236,11 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^(?!.*(cuba|iran|north korea|syria|crimea|donetsk|luhansk|one of the follow|sanction)).*(in which country/?(region)? do you (have|hold) citizenship|country of citizenship|provide your country of citizenship)", ["United States","United States of America","USA","US"]),   # applicant: US citizen
+ (r"since obtaining your most recent citizenship.{0,80}permanent resident", ["No","no"]),
+ (r"considered for future (opportunities|roles|positions)|keep (me|my (application|information)) (on file|for future)", ["Yes","yes"]),
+ (r"^are you open to relocation\??\s*$", ["San Francisco, CA","San Francisco","Bay Area","No, but I'm open to a remote position","Yes","yes"]),   # applicant lives in Santa Clara: the Bay Area office needs no move
+ (r"describe your experience with twitch", ["Non-User - I do not have any personal Twitch experience","Non-User"]),
  (r"languages? (do )?you speak|which languages you speak|spoken languages?|languages? (in addition to|other than|besides) english", ["Tamil","Hindi","English"]),   # applicant: English, Tamil, Hindi
  (r"system design and architecture fundamentals|comfort(able)? moving across (different parts of )?the stack|full[- ]stack (comfort|range)", ["Yes","yes"]),
  (r"completed an application for any other opportunities at gallup", ["No","no"]),   # no earlier Gallup application
