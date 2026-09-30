@@ -246,6 +246,9 @@ AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|with
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
 # are not in the profile, and the generic e-mail / name rules must never answer them with his personal details
 FORMER_JOB_Q = re.compile(r"\b(work|company|business|corporate|employee|office|former|previous|prior)\b.{0,20}\be-?mail|\be-?mail\b.{0,40}\b(while|when)\b|\bwas your\b.{0,30}\b(e-?mail|employee|id|manager|supervisor)|(former|previous|prior) (employee|worker) (id|number)|employee (id|number)", re.I)
+# 'Is your work authorization based on your status as a spouse of an H-1B ...?': the applicant is a US citizen, so a
+# generic 'work authorization -> Yes' rule must never claim a visa-based status (Snap); such a Yes is left for him
+VISA_STATUS_Q = re.compile(r"\b(based on|because of|by virtue of|derived from|depend\w* on|through|status as)\b.{0,60}\b(spouse|dependent|h-?1b|h-?4|l-?1|l-?2|e-?[1-3]|f-?1|j-?1|opt|cpt|ead|tn|visa|asylum|refugee|daca|tps)\b", re.I)
 def usable(texts, label):
     """Option texts with the ones the applicant must never pick blanked out: referral / recruiter / event / university /
     LinkedIn sources, 'I identify as a veteran ...' (he is not a veteran), and 'Yes, I have a disability'."""
@@ -631,6 +634,9 @@ async def fill_field(page, job, f):
         prefs = prefs_for(key)
         if prefs == ["__ASK__"]: return None
         if not prefs: return kept_unverified()
+        if VISA_STATUS_Q.search(key) and re.match(r"\s*yes", prefs[0], re.I):   # a rule meant for 'are you authorized to work'
+            job.report.setdefault("rule_conflicts", []).append(f"{key[:150]} -> rule says {prefs[0]!r}; left unanswered")
+            return None
         return await choose(prefs)
     if kind == "checkbox":   # one box: an acknowledgement / consent is ticked, a disclosure never is
         cb = box.locator('input[type="checkbox"]').first
