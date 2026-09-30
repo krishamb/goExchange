@@ -50,20 +50,21 @@ def resume_for(title):
 # ---- accounts
 SECRET = os.path.join(JOBS_DIR, "wd_secret.json")
 def secret():
-    """The applicant's Workday login (JOBS_DIR/wf_creds.json {"workday": {"email", "passwords": [...]}}): new tenant accounts
-    use the first password; signing in to an account that already exists tries each password in turn. Per-tenant state
-    (created / which password worked) is kept in JOBS_DIR/wd_secret.json, outside the repository."""
+    """The applicant's Workday logins (JOBS_DIR/wf_creds.json {"workday": {"email", "passwords": [...], "new_account_email",
+    "new_account_password"}}): sign in with email + passwords[0]; new tenant accounts use new_account_email / password.
+    Per-tenant state (which login worked) is kept in JOBS_DIR/wd_secret.json, outside the repository, without passwords."""
     s = json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
     c = json.load(open(os.path.join(JOBS_DIR, "wf_creds.json"))).get("workday") if os.path.exists(os.path.join(JOBS_DIR, "wf_creds.json")) else None
     if c and c.get("email") and c.get("passwords"):
         s["email"], s["passwords"] = c["email"], list(c["passwords"])
+        s["new_account_email"], s["new_account_password"] = c.get("new_account_email") or P["email"], c.get("new_account_password") or c["passwords"][0]
     else:
         s.setdefault("email", P["email"])
         s.setdefault("passwords", ["".join(secrets.choice(string.ascii_letters + string.digits) for _ in range(14)) + "!7aZ"])
     s["password"] = s["passwords"][0]
-    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords")}, open(SECRET, "w"), indent=1); os.chmod(SECRET, 0o600)
+    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password")}, open(SECRET, "w"), indent=1); os.chmod(SECRET, 0o600)
     return s
-def save_secret(s): json.dump({k: v for k, v in s.items() if k not in ("password", "passwords")}, open(SECRET, "w"), indent=1)
+def save_secret(s): json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password")}, open(SECRET, "w"), indent=1)
 def tenant_of(url):
     m = re.match(r"https?://([^/]+)/(?:recruiting/)?([^/]+)/(?:en-US/)?([^/]+)", url)
     host = m.group(1) if m else url
@@ -291,50 +292,78 @@ async def experience_page(page, job):
         except Exception as e: job.report["errors"].append(f"resume upload: {str(e)[:80]}")
 
 async def auth(page, job, s):
-    """Create the tenant account (first time) or sign in. Returns 'ok', 'verify', 'blocked' or 'fail'."""
+    """Sign in or create the tenant account (applicant's plan): one sign-in attempt with his Workday login
+    (wf_creds workday.email + first password); if that fails, create the account with workday.new_account_email /
+    new_account_password (Gmail, so a verification link can be read); an existing Gmail account is signed in instead.
+    Returns 'ok', 'verify', 'blocked' or 'fail'. Never more than one attempt per credential (no lockouts)."""
     ten = tenant_of(job.url)
-    await page.wait_for_timeout(1500)
+    try: await page.locator(A("signInContent")).first.wait_for(state="visible", timeout=25000)
+    except Exception: pass
+    await page.wait_for_timeout(1000)
     if await page.locator(CAPTCHA).count(): return "blocked"
-    known = s["tenants"].get(ten)
-    async def sign_in():
-        order = ([known["pw"]] if known and known.get("pw") is not None else []) + [i for i in range(len(s["passwords"])) if not (known and known.get("pw") == i)]
-        for i in order[:3]:   # never more than three attempts: Workday locks accounts after repeated failures
-            if await page.locator(A("signInLink")).count(): await click_button(page, "signInLink")
-            await page.wait_for_timeout(1000)
-            await fill(page, page.locator(f'input{A("email")}').first, s["email"])
-            await fill(page, page.locator(f'input{A("password")}').first, s["passwords"][i])
-            await click_button(page, "signInSubmitButton") or await click_button(page, name=r"^sign in$")
-            await page.wait_for_timeout(4500)
-            if not re.search(r"invalid|incorrect|wrong (email|password)|try again", await text(page), re.I) and not await page.locator(f'input{A("password")}:visible').count():
-                s["tenants"].setdefault(ten, {})["pw"] = i; save_secret(s); return True
-        return False
-    if known:
-        if not await sign_in(): return "fail"
-    else:
-        if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1000)
-        if not await page.locator(f'input{A("verifyPassword")}').count():
-            return "fail"
-        await fill(page, page.locator(f'input{A("email")}').first, s["email"])
-        await fill(page, page.locator(f'input{A("password")}').first, s["password"])
-        await fill(page, page.locator(f'input{A("verifyPassword")}').first, s["password"])
-        cb = page.locator(f'input{A("createAccountCheckbox")}')
-        if await cb.count():
-            try: await cb.first.check(timeout=3000)
-            except Exception: await cb.first.evaluate("(el)=>el.click()")
-        if await page.locator(CAPTCHA).count(): return "blocked"
-        await click_button(page, "createAccountSubmitButton") or await click_button(page, name=r"^create account$")
+    known = s["tenants"].get(ten) or {}
+    async def signed_in():
         await page.wait_for_timeout(5000)
         body = await text(page)
-        if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
-            s["tenants"][ten] = {"created": None, "note": "existed before"}; save_secret(s)
-            if not await sign_in(): return "fail"
-        else:
-            s["tenants"][ten] = {"created": int(time.time()), "pw": 0}; save_secret(s)
+        if re.search(r"already applied for this job|you.ve already applied", body, re.I): return True
+        if re.search(r"invalid|incorrect|wrong (email|password)|try again|could not sign|account (is )?locked", body, re.I): return False
+        if await page.locator(f'input{A("password")}:visible').count(): return False
+        try:
+            st = (await page.locator(A("progressBarActiveStep")).first.inner_text(timeout=4000)).lower()
+            return "sign in" not in st and "create account" not in st
+        except Exception: return False
+    async def sign_in(email, pw):
+        if await page.locator(A("signInLink")).count() and not await page.locator(A("signInSubmitButton")).count():
+            await click_button(page, "signInLink"); await page.wait_for_timeout(1500)
+        if not await page.locator(f'input{A("password")}').count():   # social chooser first: pick "Sign in with email"
+            await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000)
+            await page.wait_for_timeout(1500)
+        await fill(page, page.locator(f'input{A("email")}').first, email)
+        await fill(page, page.locator(f'input{A("password")}').first, pw)
+        if await page.locator(CAPTCHA).count(): return None
+        await click_button(page, "signInSubmitButton") or await click_button(page, name=r"^sign in$")
+        return await signed_in()
+    def remember(email, pw_key):
+        s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}; save_secret(s)
+    creds = {"login": (s["email"], s["passwords"][0]), "new": (s.get("new_account_email") or P["email"], s.get("new_account_password") or s["passwords"][0])}
+    if known.get("pw_key") in creds:
+        e, pw = creds[known["pw_key"]]
+        r = await sign_in(e, pw)
+        return "ok" if r else ("blocked" if r is None else "fail")
+    # 1) one attempt with the applicant's Workday login
+    r = await sign_in(*creds["login"])
+    if r is None: return "blocked"
+    if r: remember(creds["login"][0], "login"); return "ok"
+    # 2) create the account with the new-account email (Gmail)
+    await page.goto(page.url, wait_until="domcontentloaded", timeout=60000)
+    try: await page.locator(A("signInContent")).first.wait_for(state="visible", timeout=25000)
+    except Exception: pass
+    if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
+    if not await page.locator(f'input{A("verifyPassword")}').count():
+        return "fail"
+    e, pw = creds["new"]
+    await fill(page, page.locator(f'input{A("email")}').first, e)
+    await fill(page, page.locator(f'input{A("password")}').first, pw)
+    await fill(page, page.locator(f'input{A("verifyPassword")}').first, pw)
+    cb = page.locator(f'input{A("createAccountCheckbox")}')
+    if await cb.count():
+        try: await cb.first.check(timeout=3000)
+        except Exception: await cb.first.evaluate("(el)=>el.click()")
+    if await page.locator(CAPTCHA).count(): return "blocked"
+    await click_button(page, "createAccountSubmitButton") or await click_button(page, name=r"^create account$")
+    await page.wait_for_timeout(6000)
     body = await text(page)
-    if re.search(r"verify (your )?(email|account)|verification (email|link)|check your email", body, re.I):
-        return "verify"
-    if re.search(r"invalid (email|password|credentials)|wrong password|incorrect", body, re.I): return "fail"
-    return "ok"
+    if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
+        r = await sign_in(e, pw)
+        if r: remember(e, "new"); return "ok"
+        return "fail"
+    if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
+        remember(e, "new"); return "verify"
+    try:
+        st = (await page.locator(A("progressBarActiveStep")).first.inner_text(timeout=4000)).lower()
+        if "sign in" not in st and "create account" not in st: remember(e, "new"); return "ok"
+    except Exception: pass
+    return "fail"
 
 async def wait_file(path, secs):
     end = time.time() + secs
@@ -372,9 +401,12 @@ async def run_one(ctx, item, s):
             await page.goto(job.url, wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(3000)
             await click_button(page, "adventureButton"); await page.wait_for_timeout(2000)
             if await page.locator(A("applyManually")).count(): await click_button(page, "applyManually"); await page.wait_for_timeout(2000)
-            if await auth(page, job, s) != "ok": job.report["result"] = "NOT SUBMITTED: sign-in failed after verification"; return job.report
+            if await auth(page, job, s) != "ok": job.report["result"] = "NOT SUBMITTED: sign-in failed after verification"; return job.report   # auth() signs in with the remembered new-account login
         elif a == "fail":
+            await page.screenshot(path=f"{OUT}/{job.tag}_wd_auth.png", full_page=True)
             job.report["result"] = "NOT SUBMITTED: could not create an account or sign in"; return job.report
+        if re.search(r"already applied for this job|you.ve already applied", await text(page), re.I):
+            job.report["result"] = "ALREADY APPLIED on this company's Workday site"; return job.report
         # ---- the wizard
         for _ in range(12):
             await page.wait_for_timeout(2500)
@@ -436,7 +468,11 @@ async def main():
         ctx = await br.new_context(ignore_https_errors=True, user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
         for n, item in enumerate(q):
             rp = f"{OUT}/{item['tag']}_wd_report.json"
-            if os.path.exists(rp) and json.load(open(rp)).get("submitted"): continue
+            if os.path.exists(rp):
+                try:
+                    rr = json.load(open(rp))
+                    if rr.get("submitted") or "ALREADY APPLIED" in (rr.get("result") or ""): continue
+                except Exception: pass
             await run_one(ctx, item, s)
             if n < len(q) - 1:
                 g = random.uniform(*PACE); print(f"PACE waiting {int(g)}s before the next application", flush=True); await asyncio.sleep(g)
