@@ -205,6 +205,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^state\b|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
+ (r"require .{0,60}(file|submit) a petition|petition or application for employment|employment[- ]based (status|visa|immigration)", ["No","no"]),
  (r"(telephone calls?|phone calls?|text messages?|sms).{0,120}(consent|agree)|(consent|agree).{0,160}(text messages?|sms|telephone calls?)", ["Do not agree to receive recruitment notifications by call or text messages","Do not agree","I do not agree","I do not consent","No","Opt out"]),
  (r"(confirm|certify) that i (do not|don't) have (any )?relatives", ["True","Yes","I confirm","Confirmed","Confirm"]),
  (r"how (frequently|often) (have|do|did) you (personally )?(participate|participated|lead|led|conduct|conducted|review|reviewed|write|written|wrote|code|coded|contribute|contributed|design|designed|run|ran)", ["Weekly","Frequently","Very frequently","Regularly","Often","Multiple times a week","Daily","Monthly"]),
@@ -394,7 +396,7 @@ CHOICE_RULES=[
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
- (r"state|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
+ (r"\bstates?\b(?! of (the )?(art|mind))|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"experience with|familiar|proficien|(how many|number of|total|minimum of|at least) (\w+ )?years|years (of|in|with|working|leading|managing|building|hands)|years'? experience|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
 ]
 def pick(label,rules):
