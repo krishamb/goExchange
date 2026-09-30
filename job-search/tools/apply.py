@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"password", "N/A"),   # never put a link or anything else in a password box
  (r"(how many )?years (have you|of|in) (directly |people |engineering )?(managed|managing|management|led|leading|supervis\\w+)|how many years .{0,40}(managed|managing|led|leading|supervis\\w+) (software |engineering |technical )?(engineer|team|people|staff|report)|years of (people|engineering|team) management", "10"),   # applicant: 10+ years leading engineers (25+ years engineering overall)
  (r"name one (production )?(agent|agentic workflow)|production agent or agentic workflow you.ve built|first symptom that told you something was wrong", "Hyperion AI's agent orchestration platform (2024): a multi-agent plan-validate-dispatch-replan workflow over MCP tools (3 servers, 9 tools), with open-weight models served through vLLM and llama.cpp. The first symptom was a rise in step-budget exhaustion on a subset of benchmark tasks: runs that should have finished in a few steps kept re-planning until they hit the limit. Replaying a failing run step by step showed the root cause was an interaction, not a bug in any one component: an MCP tool silently truncated its JSON payload past a size limit, the validator scored the truncated result as a failed step, and the planner re-issued the identical call. We fixed it with pagination in the tool and a validator check that tells truncation apart from failure, and added the run to the replay regression suite."),
  (r"earliest (you can|you could|possible|date).{0,25}start|when (can|could|would) you (be able to )?start|earliest start|notice (would|do) you need to give", "Two weeks after an offer (I am currently CTO at Hyperion AI and would give two weeks' notice)"),
@@ -243,6 +244,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"local to (nyc|new york|the tri-?state|manhattan|brooklyn)|(live|based|located) (in|near) (the )?(nyc|new york|tri-?state) (area|region)", ["No, but willing to relocate to NYC","No, but willing to relocate","No, but I am willing to relocate","Willing to relocate","No, but open to relocating"]),   # applicant: Santa Clara, CA; willing to move to New York
  (r"(meet|satisfy|have) (each of |all of |all )?the (basic|minimum|required) qualifications", ["Yes","yes"]),   # applicant: apply when he meets ~70%+ of the role
  (r"affiliate/subsidiary with which you were employed|which (affiliate|subsidiary) (were you|you were) employed", ["N/A","Not applicable","None"]),   # never employed there
  (r"(healthcare|health insurance|senior care).{0,120}another highly regulated industry", ["Yes \u2014 another highly regulated industry","Yes - another highly regulated industry","Yes, another highly regulated industry"]),   # banking, trading and payments are highly regulated
