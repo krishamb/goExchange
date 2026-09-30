@@ -1,24 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/intercom/jobs/8201208",
-  "tag": "intercom_forward_deployed_engineer",
-  "company": "intercom",
-  "title": "Forward Deployed Engineer",
-  "comp": "$180,000 - $200,000 ",
-  "loc": "Chicago, Illinois; San Francisco, California",
-  "posted_ts": 1789395725.0,
-  "score": 15,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you authorised to work in the country in which this role is located? (Fin sp",
-   "Current Location",
-   "Please email me about future job openings",
-   "US Export Control laws 2026: In which country did you obtain citizenship, nation"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/signifyd95/jobs/8172149",
   "tag": "signifyd95_engineering_manager",
   "company": "signifyd95",

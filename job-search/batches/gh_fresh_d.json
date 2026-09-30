@@ -9,10 +9,8 @@
   "loc": "Remote",
   "posted_ts": 1789671322.0,
   "score": 18,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "If you move forward to the final stages of our interview process, are you willin"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -24,8 +22,10 @@
   "loc": "Remote",
   "posted_ts": 1790120024.0,
   "score": 17,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe one specific LangSmith trace (or equivalent tracing/debugging session) "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -37,25 +37,8 @@
   "loc": "United States (Remote)",
   "posted_ts": 1789762516.0,
   "score": 17,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "We do not hire in all States within the US. Do you live in one of the following "
-  ]
- },
- {
-  "ats": "greenhouse",
-  "url": "http://www.ifit.com/careers?gh_jid=4413948009",
-  "tag": "ifit_staff_platform_engineer",
-  "company": "ifit",
-  "title": "Staff Platform Engineer ",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1790027789.0,
-  "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Do you live in Alaska, California, DC, Delaware, Hawaii, Iowa, Maine, Maryland, "
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
