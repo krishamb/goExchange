@@ -9,8 +9,10 @@
   "loc": "Boston; Charlotte; Chicago; Dallas; New York; San Francisco",
   "posted_ts": 1789080970.0,
   "score": 21,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Describe a specific AI-assisted workflow you've built or refined in the last 6 m"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -22,8 +24,11 @@
   "loc": "Lehi, Utah, United States; Remote - US",
   "posted_ts": 1790024562.0,
   "score": 20,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Tell us about a recent project where you served as a technical leader or drove a",
+   "Briefly describe the most complex distributed or cloud-based backend system you\u2019"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,8 +40,10 @@
   "loc": "Anywhere, USA",
   "posted_ts": 1789080328.0,
   "score": 20,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do you hold any Salesforce.com certifications or have equivalent experience?"
+  ]
  },
  {
   "ats": "greenhouse",
