@@ -13,8 +13,10 @@
   "tag": "zipcolimited_staff_engineer",
   "found_on": "cache_greenhouse",
   "domain": "fintech",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which of the following best describes your current level of experience using or "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -30,8 +32,11 @@
   "tag": "lithic_senior_software_engineer_processing",
   "found_on": "greenhouse_board",
   "domain": "lowlatency",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Our interviews require you to be on video. Can you confirm that you can keep you",
+   "What did you get when you cracked the code?"
+  ]
  },
  {
   "ats": "greenhouse",
