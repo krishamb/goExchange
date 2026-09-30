@@ -44,6 +44,7 @@ now; the submitted answers cannot be edited, so the suggested action is to corre
 | Motional | Director of Data Science (Remote US) | Location (City) autocomplete picked **"Santa Clara, Villa Clara, Cuba"** instead of Santa Clara, California. | If they reply, confirm you are in Santa Clara, California; the resume and the rest of the form say so. |
 | Garner Health | Staff Software Engineer (Developer Experience), Remote | Same Cuba location. | Same. |
 | Chainguard | Staff Platform Database Engineer, Remote US | Same Cuba location. | Same. |
+| CoLab | Software Engineering Manager, AutoReview | "Do you have experience with geometric processing, 3D/CAD applications?" answered **Yes** (not on the resume). | If they reply, clarify that your background is distributed systems, AI platforms and fintech, not 3D/CAD. |
 | About 16 Greenhouse forms with an education section | various | Where the form had education start/end dates, they were filled with the current job's dates (2023 to 2026). The resume gives no graduation years, so they are now left for you. | Correct the dates if a recruiter asks; tell me your graduation years so forms that require them can be completed. |
 
 ### Minor: "How did you hear about us?" picked a company-specific option
