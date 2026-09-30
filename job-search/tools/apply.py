@@ -257,6 +257,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"when would you be available to relocate|available to relocate to the (san francisco )?bay area|relocate to the (san francisco )?bay area,? when", ["I already live in the Bay Area","Already in the Bay Area","Already local","N/A","Immediately","Now","October 2026","November 2026"]),   # he already lives in Santa Clara (Bay Area)
  (r"security principle .{0,60}(ai agent|agents?|external tools)|most important when giving an ai agent access", ["Least privilege","Principle of least privilege"]),   # technical quiz: least privilege
  (r"which .{0,40}office (location/?s?|locations?) (are you|would you be) (open|willing|able)|office locations? .{0,20}(open to|willing to) work(ing)? (out of|from|in)", ["San Francisco","San Francisco, CA","SF Bay Area","Bay Area","Palo Alto","Mountain View","Sunnyvale","San Jose","Santa Clara","Menlo Park","Oakland","New York","New York, NY","NYC","Remote","Neither","None of the above","None"]),   # Bay Area or NYC offices only; otherwise remote / neither
  (r"personally worked hands-on with in the last|worked hands-on with in the last \d+ years", ["AWS multi-account","Terraform or equivalent IaC","Kubernetes","Self-managed CI/CD","Ruby or Python backend","Relational databases at scale (RDS or similar)"]),   # his stack (AWS, Terraform, Kubernetes, CI/CD, Python, Postgres)
