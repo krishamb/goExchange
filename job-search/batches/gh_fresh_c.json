@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://www.pindrop.com/careers/job-title/?gh_jid=8236603",
-  "tag": "pindropsecurity_staff_software_engineer_auth",
-  "company": "pindropsecurity",
-  "title": "Staff Software Engineer (Authentication)",
-  "comp": null,
-  "loc": "US - Remote",
-  "posted_ts": 1790591506.0,
-  "score": 15,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Are you at least the minimum legal age required to perform this job in the locat"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/truebill/jobs/8004786003",
   "tag": "truebill_staff_applied_ai_engineer",
   "company": "truebill",
@@ -31,19 +16,6 @@
  },
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/onetrust/jobs/8234245",
-  "tag": "onetrust_senior_staff_software_engineer_ai_g",
-  "company": "onetrust",
-  "title": "Senior Staff Software Engineer - AI Governance",
-  "comp": null,
-  "loc": "San Francisco, California",
-  "posted_ts": 1790369391.0,
-  "score": 23,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://buildops.com/careers/job-application?gh_jid=6208094004",
   "tag": "buildops_staff_software_engineer_integration",
   "company": "buildops",
@@ -52,8 +24,10 @@
   "loc": "San Francisco, CA",
   "posted_ts": 1790292190.0,
   "score": 23,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Do your compensation expectations align with the salary range listed in the job "
+  ]
  },
  {
   "ats": "greenhouse",
@@ -65,21 +39,10 @@
   "loc": "Remote",
   "posted_ts": 1790186519.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/zenbusiness/jobs/5247064007",
-  "tag": "zenbusiness_director_of_engineering_platform",
-  "company": "zenbusiness",
-  "title": "Director of Engineering - Platform & Integrations",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1790174090.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What state will you be based in at the start of your employment?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -91,8 +54,10 @@
   "loc": "Americas Remote",
   "posted_ts": 1790275518.0,
   "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Years of Experience"
+  ]
  },
  {
   "ats": "greenhouse",
