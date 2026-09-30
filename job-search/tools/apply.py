@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cover
 JOBS_DIR=os.environ.get("JOBS_DIR","/tmp/claude-0/-home-user-goExchange/8d20ffb7-2488-5f8f-a666-35334b9e3ba6/scratchpad/f")
 OUT=os.path.join(JOBS_DIR,"out"); os.makedirs(OUT,exist_ok=True)
+HERE_REPO=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # repository root (job-search/tools/apply.py)
 JOBS_DIR=os.path.expanduser(JOBS_DIR)
 P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
 for _k in ("resume","cover_letter"):
@@ -57,6 +58,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"langsmith|(tracing|trace|debugging) session .{0,60}(bug|fix)|trace .{0,40}(used|helped) .{0,20}fix", 'At Hyperion AI our multi-agent loop (plan, validate, dispatch, replan) kept re-planning on a subset of benchmark tasks and burning its step budget, although every component looked correct in the code. I opened the full trace of one failing run in our tracing and replay harness (the equivalent of a LangSmith trace: every model call, tool call, input, output and latency as one tree). It showed that an MCP tool returned a truncated JSON payload once results passed a size limit, the validator scored the truncated result as a failed step, and the planner re-issued the identical call. Each part behaved correctly on its own; only the step-by-step trace exposed the interaction. The fix was pagination in the tool plus a validator check that tells truncation apart from failure, and that trace became a regression case in the replay suite.'),
+ (r"^what are your (career plans|career goals|long[- ]term (career )?goals)|where do you see (your career|yourself) in", "To keep leading AI and platform engineering where architecture and hands-on delivery meet: owning the technical direction of a product platform, building and growing strong engineering teams, and staying close to the code on the critical path, in AI, fintech and data-intensive products."),
  (r"^(?!.*(this application|this form|to apply|applying|cover letter)).*(used ai coding (agents|tools|assistants)|ai-native building|built something (meaningful )?(with|using) ai|coding agents?/tools)", "Yes. At Hyperion AI I built our benchmarking and agent-evaluation platform with Claude Code as a daily tool: parallel reviews of the platform's subsystems, generating its test and replay harnesses, debugging, and code analysis, with every AI-written change going through the same evaluation gates and code review as hand-written code. That let a very small team build and keep correct a 121-measure scorecard with 13 comparability checks. I also run open-weight models (Qwen, gpt-oss, Llama) through llama.cpp and vLLM for agent work, and use RAG for research."),   # the applicant's reviewed AI-usage answer, as a build example
  (r"^if other or (employee )?referral|^if (you selected )?(other|referral).{0,40}(describe|specify|name)", "N/A"),   # not referred; the source question is answered with the company's careers page
  (r"experience with (bitcoin|lightning|crypto|blockchain|web3|digital assets|defi|stablecoins?)|(bitcoin|crypto|blockchain|web3|digital asset|defi) experience", "At Hyperion AI (2023-present) I built digital-asset systems in Rust (Tokio), C++17 and Go/gRPC: chain and RPC ingestion, DEX routing, wallet analytics and custody-sensitive reconciliation, plus an Intel SGX-based exchange architecture. Earlier I built low-latency trading systems at JPMorgan Chase and Morgan Stanley. I have not built directly on the Lightning Network, but the ingestion, reconciliation and latency discipline carry over directly."),
@@ -233,6 +236,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"languages? (do )?you speak|which languages you speak|spoken languages?|languages? (in addition to|other than|besides) english", ["Tamil","Hindi","English"]),   # applicant: English, Tamil, Hindi
+ (r"system design and architecture fundamentals|comfort(able)? moving across (different parts of )?the stack|full[- ]stack (comfort|range)", ["Yes","yes"]),
+ (r"completed an application for any other opportunities at gallup", ["No","no"]),   # no earlier Gallup application
  (r"(willing|able) to provide .{0,20}(professional )?references|provide (2|3|two|three|2-3).{0,10}references", ["Yes","yes"]),
  (r"do you live in one of the following states|which (of the following )?states? do you (currently )?(live|reside) in", ["California: SF Bay Area","California - SF Bay Area","California (SF Bay Area)","California","CA"]),   # applicant lives in Santa Clara, CA (no Yes: the list may not include California)
  (r"are you (currently )?still (employed|working) (with|at|for)", ["Yes","yes"]),   # applicant: currently CTO at Hyperion AI
@@ -466,8 +472,19 @@ CHOICE_RULES=[
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
  (r"\bstates?\b(?! of (the )?(art|mind))|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
- (r"experience with|familiar|proficien|(how many|number of|total|minimum of|at least) (\w+ )?years|years (of|in|with|working|leading|managing|building|hands)|years'? experience|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes"]),
+ (r"experience with|familiar|proficien|(how many|number of|total|minimum of|at least) (\w+ )?years|years (of|in|with|working|leading|managing|building|hands)|years'? experience|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes","More than 13 years","More than 12 years","More than 10 years","10+ years","10+"]),
 ]
+# ---- technical questions with no specific rule (applicant: never leave a technical question blank; answer from his real work)
+PERSONAL_Q=re.compile(r"salary|compensation|\bpay (range|expectation)|visa (status|sponsor)|sponsor|work authori[sz]ation|authori[sz]ed to work|citizen|\bgender\b|\brace\b|ethnic|veteran|disabilit|pronoun|hear about|referr|start date|\bstart\b.{0,20}\b(role|position|job)|notice period|relocat|commut|\btravel\b|\bconvict|criminal|felony|background check|drug (test|screen)|non-?compete|non-?solicit|relatives? (who|employed|work)|family members?|government|sanction|export control|security clearance|\bclearance\b|e-?signature|your signature|\bi certify|certify that|attest that|acknowledge|consent|personally (completed|wrote|written|filled)|ai agent|this application|cover letter|\bresume\b|\bcv\b|your availability|\btime ?zone|sports|contest|how many years|years of|\bgpa\b|\bdegree\b|school|university|graduat|references\b|\bdate\b|your (name|address|city|state|zip|e-?mail|phone|linkedin|github|website|portfolio)|\b(zip|postal) code|where (are you|do you) (live|located|based)",re.I)
+TECH_Q=re.compile(r"describe|explain|tell us|walk us|share|example|how (would|do|did) you|what (is|was|would)|design|approach|experience|built|build|architect|debug|trace|scale|system|technical|engineer|code|project",re.I)
+TECH_BANK=[('trace|tracing|debug|bug|incident|outage|post-?mortem|root cause|production (issue|problem|failure)|on-?call|langsmith|observab', 'At Hyperion AI our multi-agent loop (plan, validate, dispatch, replan) kept re-planning on a subset of benchmark tasks and burning its step budget, although every component looked correct in the code. I opened the full trace of one failing run in our tracing and replay harness (the equivalent of a LangSmith trace: every model call, tool call, input, output and latency as one tree). It showed that an MCP tool returned a truncated JSON payload once results passed a size limit, the validator scored the truncated result as a failed step, and the planner re-issued the identical call. Each part behaved correctly on its own; only the step-by-step trace exposed the interaction. The fix was pagination in the tool plus a validator check that tells truncation apart from failure, and that trace became a regression case in the replay suite.'), ('\\bllms?\\b|agent|agentic|\\brag\\b|retrieval|prompt|fine-?tun|evaluat|evals?\\b|inference|model serving|embedding|vector|genai|generative|machine learning|\\bml\\b|\\bai\\b|\\bmodels?\\b', 'At Hyperion AI (2023-present) I built our agentic AI platform end to end: MCP clients and servers (3 servers, 9 tools), a multi-agent plan-validate-dispatch-replan loop, open-weight model serving (Qwen, Llama 3.3-70B, gpt-oss) through llama.cpp and vLLM, fine-tuning and evaluation workflows, and a reproducible benchmarking platform with a 121-measure scorecard informed by MLPerf Inference and BFCL. Every change, human- or AI-written, went through evaluation gates and replay tests before production. Earlier, at Yahoo Finance, I architected OpenAI/LangChain RAG research assistants and led the 2023 Vertex AI proofs of concept with Google.'), ('data (pipeline|platform|infrastructure|model|warehouse|lake)|etl|elt|stream|kafka|event|spark|databricks|snowflake|warehouse|lakehouse|schema|batch', 'At JPMorgan Chase I architected journal and replay event streams for multi-asset trading, so every order event could be replayed deterministically for recovery, audit and testing. At Yahoo Finance I led the data paths behind quotes, charts, portfolios and screeners for about 40M daily users through the bare-metal-to-AWS migration. At Hyperion AI I built chain and RPC ingestion pipelines in Rust and Go with custody-sensitive reconciliation. My default stack is Kafka or Redpanda for events, Postgres for state, Spark or Databricks for batch, and explicit schemas and contracts between producers and consumers.'), ('payment|visa|mastercard|card network|issuing|acquir|trading|fintech|ledger|reconcil|crypto|blockchain|web3|defi|exchange|wallet|bank|financ|order', 'I have spent most of my career in financial systems: sub-250-microsecond multi-asset execution paths at JPMorgan Chase designed for the 100K-500K TPS range, trading and application platforms at Morgan Stanley, and systems at Bloomberg, Bank of America/Merrill and Barclays. At Hyperion AI I built digital-asset systems in Rust (Tokio), C++17 and Go/gRPC: chain and RPC ingestion, DEX routing, wallet analytics, custody-sensitive reconciliation and an Intel SGX-based exchange architecture. The constant across all of them is correctness first: idempotent operations, journals and replay, reconciliation, and latency budgets measured end to end.'), ('lead|manag|team|hire|hiring|mentor|coach|conflict|stakeholder|culture|people|org(ani[sz]ation)?', "As Chief Architect at Yahoo Finance I led 75+ engineers and partners through the platform's bare-metal-to-AWS migration; at JPMorgan Chase I led a 50+ person organization across the US, UK and India; and as CTO and co-founder of Hyperion AI I built and led the engineering team from zero. My approach: set a clear technical direction and a small number of standards, hire strong tech leads and give them ownership, keep design reviews and incident reviews blameless and concrete, and stay hands-on on the critical path so I can make informed trade-offs quickly."), ('startup|0 ?(to|-) ?1|zero to one|founding|founder|ambigu|mvp|prototype|ship|fast|early[- ]stage|scrappy|wear many hats', 'I have built from zero twice: as CTO and technical co-founder of Hyperion AI (agentic AI platform, open-weight model serving, benchmarking, and digital-asset systems) and as co-founder of Motocho. At Hyperion I wrote much of the critical-path code myself in Python, Rust, Go and C++, set up the infrastructure and evaluation gates, and shipped to customers with a very small team. I work well with ambiguity: I pick the smallest version that proves the idea, instrument it, and harden what users actually use.'), ('security|secur|sgx|enclave|attestation|custody|\\bkeys?\\b|compliance|privacy|soc ?2|pci|encrypt|auth|identity|threat', 'I design for security and compliance from the start: at JPMorgan Chase, Morgan Stanley, Bank of America/Merrill and Barclays that meant regulated, audited systems with strict change control; at Hyperion AI it meant custody-sensitive reconciliation, key handling and an Intel SGX-based exchange architecture. In practice: least-privilege access, secrets in a managed vault, encryption in transit and at rest, audit trails via journals, and threat modeling in design reviews.'), ('\\btest|quality|ci/?cd|deploy|release|devops|reliab|sre|slo|uptime|monitor', 'My standard for reliability is measurable: SLOs per service, dashboards and alerts through OpenTelemetry, Prometheus and Grafana, CI/CD with automated tests and staged rollouts, and a rollback plan for every release. At Yahoo Finance I ran the bare-metal-to-AWS migration with phased cutovers, rollback planning and 24x7 operation for about 40M daily users; at JPMorgan Chase deterministic replay of journaled events let us test changes against real production traffic before release.'), ('cloud|aws|gcp|azure|kubernetes|k8s|docker|terraform|infra|migrat|cost|scal', 'As Chief Architect at Yahoo Finance I led the move of the quotes, charts, portfolios, screeners and research platform (about 40M daily and 150M monthly users) from bare metal to AWS: phased migration, cutover and rollback planning, and 24x7 operation. I work with Kubernetes, Terraform and managed services on AWS, GCP and Azure, and I treat cost as a design input: right-sizing, autoscaling, and measuring cost per request alongside latency.'), ('frontend|front-end|react|ui\\b|user interface|full[- ]?stack|typescript|javascript|node', 'I work across the stack: backend services in Python, Go, Rust, C++ and Java, and web front ends in TypeScript/JavaScript with React and Node.js. At Yahoo Finance the platform served quotes, charts and portfolios to about 40M daily users, so front-end performance and API design mattered as much as the backend; at Hyperion AI I built the product end to end, from the agent services to the web UI.'), ('performance|latency|throughput|optimi|rust|c\\+\\+|golang|\\bgo\\b|memory|concurren', 'Performance work has been a constant for me: at JPMorgan Chase I architected sub-250-microsecond multi-asset execution paths in C++ and Java designed for the 100K-500K TPS range, and at Hyperion AI I built latency-critical services in Rust (Tokio), C++17 and Go/gRPC. My method is to set a latency budget per hop, measure end to end with percentiles rather than averages, remove allocations and locks on the hot path, and keep a replayable workload so every optimization is verified against real traffic.')]
+TECH_DEFAULT='At JPMorgan Chase I architected multi-asset execution paths where being wrong costs money directly: sub-250-microsecond paths designed for the 100K-500K TPS range. As Chief Architect at Yahoo Finance I led the re-architecture of a platform serving about 40M daily users through its bare-metal-to-AWS migration, directing 75+ engineers. Most recently, as CTO and co-founder of Hyperion AI, I built an agentic AI platform end to end, with correctness gates, replay harnesses and observability in production. In each case I start from the requirements and failure modes, choose the simplest architecture that meets them, and make it measurable.'
+def tech_answer(label):
+    l=(label or "").lower()
+    if PERSONAL_Q.search(l) or not TECH_Q.search(l): return None
+    if re.match(r"\s*if (yes|so|applicable|other)\b",l): return None
+    best=max(TECH_BANK,key=lambda b: len(re.findall(b[0],l)))
+    return best[1] if re.search(best[0],l) else TECH_DEFAULT
 def pick(label,rules):
     l=label.lower()
     for pat,val in rules:
@@ -831,15 +848,34 @@ def company_keys(tag,company=None):
     toks=[t for t in (tag or "").split("_") if t]
     ks=set()
     if company: ks.add(re.sub(r"[^a-z0-9]","",str(company).lower()))
-    if toks and len(toks[0])>=5 and toks[0] not in GENERIC_TOKENS: ks.add(toks[0])
+    if toks and len(toks[0])>=2 and toks[0] not in GENERIC_TOKENS and not toks[0].isdigit() and toks[0]!="dice": ks.add(toks[0])   # short board slugs count too (x9, okta, step)
     if len(toks)>1: ks.add(toks[0]+toks[1])
     ks={BOARD_ALIAS.get(k,k) for k in ks}
-    return {k for k in ks if len(k)>=4}
+    return {k for k in ks if len(k)>=2 and k not in GENERIC_TOKENS}
 # companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
-NEVER_APPLY=re.compile(r"epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+NEVER_APPLY=re.compile(r"(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
 # one company behind two Greenhouse board names (found from the security-code e-mail's company name)
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
-def applied_elsewhere(tag,company=None,days=45):
+_META_TITLES={}
+def _norm_role(t):
+    t=re.sub(r"\(.*?\)|\[.*?\]","",(t or "").lower())
+    t=re.sub(r"\s[-\u2013\u2014|:]\s*(remote|hybrid|on-?site|us|usa|united states|new york|nyc|san francisco|sf|bay area)\b.*$","",t)
+    t=re.sub(r"^(coe|remote|urgent|hiring|immediate)\s*[-:|]\s*","",t)
+    return re.sub(r"[^a-z0-9]+"," ",t).strip()
+def _title_of(tag):
+    """Job title for a report tag, from the queue files (reports do not always store it)."""
+    if not _META_TITLES:
+        import glob as _g
+        for f in _g.glob(os.path.join(HERE_REPO,"job-search","batches","*.json"))+_g.glob(os.path.join(os.path.dirname(JOBS_DIR),"**","*.json"),recursive=True):
+            if "/out/" in f: continue
+            try: d=json.load(open(f))
+            except Exception: continue
+            if isinstance(d,list):
+                for j in d:
+                    if isinstance(j,dict) and j.get("tag") and j.get("title"): _META_TITLES.setdefault(j["tag"],j["title"])
+        _META_TITLES.setdefault("__loaded__","1")
+    return _META_TITLES.get(tag)
+def applied_elsewhere(tag,company=None,days=45,title=None):
     """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
     (MAX_PER_COMPANY, default 3: the applicant allows 2-3 different roles per company when they match the resume; the
     same position is never submitted twice, which the per-tag report check in the batch runner enforces), else None."""
@@ -858,6 +894,8 @@ def applied_elsewhere(tag,company=None,days=45):
         ks2=company_keys(r.get("tag"),r.get("company"))
         if (ks & ks2) or any((a.startswith(b) and a[len(b):] in SUF) or (b.startswith(a) and b[len(a):] in SUF) for a in ks for b in ks2 if min(len(a),len(b))>=5):
             hits.append(r.get("tag"))
+            t2=r.get("title") or _title_of(r.get("tag"))
+            if title and t2 and _norm_role(t2)==_norm_role(title): return f"{r.get('tag')} (same role)"   # never the same role twice, reposts included
     return hits[0] if len(hits)>=cap else None
 async def run():
     async with async_playwright() as p:
@@ -888,7 +926,7 @@ async def run():
             if NEVER_APPLY.search(" ".join(str(job.get(k) or "") for k in ("tag","company","title","url"))):
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: company on the applicant's do-not-apply list","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
-            prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site (a correction resubmit is exempt)
+            prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"),title=job.get("title"))   # one application per company across every stream and site (a correction resubmit is exempt)
             if prior:
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
                 json.dump(r,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
@@ -1105,6 +1143,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"cover letter",lab,re.I) and cl_text: val=cl_text
                     if ats=="lever" and re.search(r"^location$",name): val=P["location"]
                     if val is None and (await h.get_attribute("placeholder") or ""): val=pick(await h.get_attribute("placeholder"),TEXT_RULES)
+                    if val is None and not (await h.input_value()).strip() and await is_required(h):
+                        val=tech_answer(key)
+                        if val: report.setdefault("tech_fallback",[]).append(key[:120])
                     cur=await h.input_value()
                     if cur.strip() and await h.evaluate("(el)=>el.tagName==='TEXTAREA'") and not re.search(r"cover letter",lab,re.I): continue   # keep a note already written (e.g. Wellfound)
                     if val:
