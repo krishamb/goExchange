@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(describe|tell us about) a time you used ai to improve your (work|productivity|team)|used ai to improve your work", "At Hyperion AI I used Claude Code for parallel reviews of our benchmark platform's subsystems and to generate its test and replay harnesses. What worked: a very small team built, and kept correct, a 121-measure scorecard with 13 comparability checks, because every AI-generated change went through the same evaluation and review gates as hand-written code. What I would change: start each subsystem with a short written spec and a handful of hand-written, spec-level test cases, then let AI generate the rest, so generated tests check intended behaviour rather than mirroring the code as written; and track the time saved more formally so the gains are measured, not anecdotal."),
  (r"where did you (complete|earn|get|receive|obtain|do) your (undergraduate |bachelor'?s? |university |college )?(degree|studies|education)|where did you (go to|attend|study at) (college|school|university)|which (university|college|school) did you attend", "University of Madras (Bachelor of Engineering, Computer Science and Engineering)"),
  (r"if you (will )?require relocation|relocation.{0,60}(timeline|self-funded|without employer assistance)", "No relocation is needed for a Bay Area role: I live in Santa Clara, California. For a New York role I am willing to relocate to New York City within about three months of an offer."),
  (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", None),
@@ -205,6 +206,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(select|what is|which is|choose) your (current |primary )?time ?zone|^(current )?time ?zone\??:?\*?$", ["US/Pacific","Pacific Time","Pacific","PT","PST","Pacific Time (PT)","America/Los_Angeles"]),
  (r"^state\b|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"require .{0,60}(file|submit) a petition|petition or application for employment|employment[- ]based (status|visa|immigration)", ["No","no"]),
  (r"(telephone calls?|phone calls?|text messages?|sms).{0,120}(consent|agree)|(consent|agree).{0,160}(text messages?|sms|telephone calls?)", ["Do not agree to receive recruitment notifications by call or text messages","Do not agree","I do not agree","I do not consent","No","Opt out"]),
