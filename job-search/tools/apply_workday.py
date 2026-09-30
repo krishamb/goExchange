@@ -238,7 +238,8 @@ def text_for(label):
     return v if isinstance(v, str) and v.strip() else None
 VET_Q = re.compile(r"veteran|military (service|status)|served in the (u\.?s\.? )?(military|armed forces)|armed forces|uniformed service", re.I)
 VET_BAD = re.compile(r"identify as (a|an|one)\b|\bi am a (protected |disabled |recently separated |active duty )?veteran\b|classifications? of protected|just not a protected|^\s*yes\b", re.I)
-VET_PREFS = ["I am not a veteran", "Not a veteran", "No, I am not a veteran", "I am not a protected veteran", "Not a protected veteran", "No military service", "I have not served", "No"]   # applicant: not a veteran
+VET_PREFS = ["I am not a veteran", "Not a veteran", "No, I am not a veteran", "I am not a protected veteran", "Not a protected veteran", "No military service", "I have not served", "No",
+             "I do not wish to self-identify", "I don't wish to self-identify", "I do not wish to answer"]   # applicant: not a veteran; declining is the only other truthful answer
 DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
 HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
@@ -623,7 +624,7 @@ async def fill_field(page, job, f):
     # 'Have you previously worked for <company>?' is answered by the rules like any question: Yes for the applicant's
     # real past employers (Morgan Stanley, JPMorgan Chase, Bloomberg, ...), No for every other company
     if "linkedin" in low and kind in ("text", "textarea"): return await text_to(P["linkedin"])
-    if kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(fid) or DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or [])):
+    if kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid))):   # not the form's 'Language' listbox (id disabilityForm)
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
     # ---- everything else from the rules
@@ -961,6 +962,16 @@ async def at_review(page, job, item):
     job.report["errors"] = await form_errors(page)
     job.report["result"] = "NOT SUBMITTED: no confirmation after Submit"; return job.report
 
+async def open_apply(page):
+    """From the job page: 'Apply' (then 'Apply Manually'), or 'Continue Application' when a signed-in draft exists."""
+    try: await page.locator(f'{A("adventureButton")}:visible, {A("continueButton")}:visible').first.wait_for(state="visible", timeout=15000)
+    except Exception: pass
+    if not (await click_button(page, "adventureButton", timeout=1000) or await click_button(page, "continueButton", timeout=1000) or await click_button(page, name=r"^(apply|continue application)$", timeout=3000)):
+        return False
+    await page.wait_for_timeout(2500)
+    if await page.locator(A("applyManually")).count(): await click_button(page, "applyManually"); await page.wait_for_timeout(2500)
+    return True
+
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
     try:
@@ -976,13 +987,8 @@ async def run_one(ctx, item, s):
             await click_button(page, "legalNoticeDeclineButton", timeout=3000); await page.wait_for_timeout(800)
         if APPLIED.search(body):
             job.report["result"] = "ALREADY APPLIED on this company's Workday site"; return job.report
-        # 'Apply', or 'Continue Application' when this session is signed in and a draft exists
-        try: await page.locator(f'{A("adventureButton")}:visible, {A("continueButton")}:visible').first.wait_for(state="visible", timeout=15000)
-        except Exception: pass
-        if not (await click_button(page, "adventureButton", timeout=1000) or await click_button(page, "continueButton", timeout=1000) or await click_button(page, name=r"^(apply|continue application)$", timeout=3000)):
+        if not await open_apply(page):
             job.report["result"] = "NOT SUBMITTED: no Apply button"; return job.report
-        await page.wait_for_timeout(2500)
-        if await page.locator(A("applyManually")).count(): await click_button(page, "applyManually"); await page.wait_for_timeout(2500)
         a = await auth(page, job, s)
         log(job, f"auth: {a}")
         if a == "blocked": job.report["result"] = "NOT SUBMITTED: captcha/bot check at sign-in (not bypassed)"; return job.report
@@ -995,8 +1001,7 @@ async def run_one(ctx, item, s):
             if not link: job.report["result"] = "NOT SUBMITTED: email verification link not received"; return job.report
             await page.goto(link, wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(4000)
             await page.goto(job.url, wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(3000)
-            await click_button(page, "adventureButton"); await page.wait_for_timeout(2000)
-            if await page.locator(A("applyManually")).count(): await click_button(page, "applyManually"); await page.wait_for_timeout(2000)
+            await open_apply(page)
             if await auth(page, job, s) != "ok": job.report["result"] = "NOT SUBMITTED: sign-in failed after verification"; return job.report   # auth() signs in with the remembered new-account login
         elif a == "fail":
             await page.screenshot(path=f"{OUT}/{job.tag}_wd_auth.png", full_page=True)
@@ -1028,8 +1033,10 @@ async def run_one(ctx, item, s):
                 await page.screenshot(path=f"{OUT}/{job.tag}_wd_missing.png", full_page=True)
                 job.report["result"] = "NOT SUBMITTED: unanswered required questions"; return job.report
             r = await click_next(page)
-            if r == "submit":   # the footer button already reads Submit: the review step (never clicked here)
-                log(job, "footer button reads Submit: at Review"); return await at_review(page, job, item)
+            if r == "submit":   # the footer button reads Submit (or nothing): never clicked here
+                if await page.locator(A("applyFlowReviewPage")).count(): log(job, "footer button reads Submit: at Review"); return await at_review(page, job, item)
+                await page.screenshot(path=f"{OUT}/{job.tag}_wd_error.png", full_page=True)
+                job.report["result"] = f"NOT SUBMITTED: the Next button on step '{step}' reads Submit or is blank; stopped without clicking"; return job.report
             if r == "none":
                 job.report["result"] = f"NOT SUBMITTED: no Next button on step '{step}'"; return job.report
             adv = await wait_advance(page, raw)
