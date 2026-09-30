@@ -190,6 +190,22 @@ async def apply_one(ctx, item):
         try: await page.close()
         except Exception: pass
 
+def _norm_title(t):
+    t = re.sub(r"\(.*?\)", "", (t or "").lower()); t = re.sub(r"^(coe|remote|urgent|hiring|immediate)\s*[-:|]\s*", "", t)
+    return re.sub(r"[^a-z0-9]+", " ", t).strip()
+def _ckey(c): return re.sub(r"[^a-z0-9]", "", (c or "").lower())
+def same_position_done(item):
+    """The applicant never wants the same position submitted twice (reposts included); 3 different roles per company at most."""
+    import glob as _g
+    n = 0
+    for f in _g.glob(f"{OUT}/dice_*_report.json"):
+        try: r = json.load(open(f))
+        except Exception: continue
+        if not r.get("submitted") or r.get("tag") == item["tag"] or _ckey(r.get("company")) != _ckey(item.get("company")): continue
+        if _norm_title(r.get("title")) == _norm_title(item.get("title")): return "same position already applied"
+        n += 1
+    return "3 roles at this company already" if n >= 3 else None
+
 async def main():
     q = json.load(open(sys.argv[1]))
     async with async_playwright() as p:
@@ -206,6 +222,8 @@ async def main():
                     if json.load(open(rp)).get("submitted"): continue
                 except Exception: pass
             if n >= MAX: break
+            why = same_position_done(item)
+            if why: print(f"SKIP dice {item['tag']} | {why}", flush=True); continue
             r = await apply_one(ctx, item); n += 1
             if r["submitted"] or not r["result"].startswith(("NOT SUBMITTED: job closed", "ALREADY", "NOT SUBMITTED: no Easy")):
                 g = random.uniform(*PACE); print(f"PACE waiting {int(g)}s before the next application", flush=True); await asyncio.sleep(g)
