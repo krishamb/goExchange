@@ -62,13 +62,14 @@ def secret():
     if c and c.get("email") and c.get("passwords"):
         s["email"], s["passwords"] = c["email"], list(c["passwords"])
         s["new_account_email"], s["new_account_password"] = c.get("new_account_email") or P["email"], c.get("new_account_password") or c["passwords"][0]
+        s["new_account_password_strong"] = c.get("new_account_password_strong")   # tenants whose password policy needs 12+ chars (Visa)
     else:
         s.setdefault("email", P["email"])
         s.setdefault("passwords", ["".join(secrets.choice(string.ascii_letters + string.digits) for _ in range(14)) + "!7aZ"])
     s["password"] = s["passwords"][0]
-    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password")}, open(SECRET, "w"), indent=1); os.chmod(SECRET, 0o600)
+    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(SECRET, "w"), indent=1); os.chmod(SECRET, 0o600)
     return s
-def save_secret(s): json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password")}, open(SECRET, "w"), indent=1)
+def save_secret(s): json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(SECRET, "w"), indent=1)
 def tenant_of(url):
     m = re.match(r"https?://([^/]+)/(?:recruiting/)?([^/]+)/(?:en-US/)?([^/]+)", url)
     host = m.group(1) if m else url
@@ -609,9 +610,9 @@ async def fill_field(page, job, f):
     if re.search(r"firstname$", fid, re.I) or re.search(r"^(given|first) name", low): return await text_to(FIRST)
     if re.search(r"lastname$", fid, re.I) or re.search(r"^(family|last) name|^surname", low): return await text_to(LAST)
     if re.search(r"middlename$|preferredcheck$|addressline[2-9]$|extension$", fid, re.I) or re.search(r"extension|^middle name", low): return cur or None
-    if re.search(r"addressline1$", fid, re.I): return keep(cur) if cur else None   # applicant: city only, no street address
+    if re.search(r"addressline1$", fid, re.I): return await text_to(P.get("street") or "") if P.get("street") else (keep(cur) if cur else None)   # applicant (2026-09-30): 592 Mill Creek Lane
     if re.search(r"(^|-|_)city$", fid, re.I): return await text_to("Santa Clara")
-    if re.search(r"postalcode$", fid, re.I): return await text_to("95050")
+    if re.search(r"postalcode$", fid, re.I): return await text_to(P.get("zip") or "95054")
     if re.search(r"phonenumber$", fid, re.I): return await text_to(re.sub(r"\D", "", P["phone"])[-10:])
     if re.search(r"phone(device)?type$", fid, re.I) or re.search(r"phone device type", low):
         if re.search(r"mobile|cell", cur, re.I): return keep(cur)
@@ -882,6 +883,7 @@ async def auth(page, job, s):
     def remember(email, pw_key):
         s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}; save_secret(s)
     creds = {"login": (s["email"], s["passwords"][0]), "new": (s.get("new_account_email") or P["email"], s.get("new_account_password") or s["passwords"][0])}
+    if s.get("new_account_password_strong"): creds["strong"] = (s.get("new_account_email") or P["email"], s["new_account_password_strong"])
     if known.get("pw_key") in creds:
         if known.get("failed"):   # the remembered login failed on an earlier run: never retried (lockouts); fix wf_creds, then remove "failed"
             job.report["errors"].append(f"sign-in with the remembered {known['pw_key']} login failed on an earlier run; not retried"); return "fail"
@@ -908,7 +910,7 @@ async def auth(page, job, s):
     if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
     if not await page.locator(f'input{A("verifyPassword")}').count():
         return "fail"
-    e, pw = creds["new"]
+    e, pw = creds["new"]; _key = "new"
     await fill(page, page.locator(f'input{A("email")}').first, e)
     await fill(page, page.locator(f'input{A("password")}').first, pw)
     await fill(page, page.locator(f'input{A("verifyPassword")}').first, pw)
@@ -926,14 +928,21 @@ async def auth(page, job, s):
         if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
             if (s["tenants"].get(ten) or {}).get("new_failed"): return "fail"   # tried once already: never again (lockouts)
             r = await sign_in(e, pw)
-            if r is True: remember(e, "new"); return "ok"
+            if r is True: remember(e, _key); return "ok"
             if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
             return "blocked" if r is None else "fail"
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
-            remember(e, "new"); return "verify"
-        if APPLIED.search(body) or await signed_in_now(page): remember(e, "new"); return "ok"
+            remember(e, _key); return "verify"
+        if APPLIED.search(body) or await signed_in_now(page): remember(e, _key); return "ok"
         errs = await form_errors(page)
         if errs:   # e.g. Visa: 'Password must include: A minimum of 12 characters' (wf_creds new_account_password)
+            if "strong" in creds and pw != creds["strong"][1] and any(re.search(r"password", x, re.I) for x in errs):
+                # the tenant's password policy rejects the standard password: create the account once with the stronger one
+                pw = creds["strong"][1]
+                await fill(page, page.locator(f'input{A("password")}').first, pw)
+                await fill(page, page.locator(f'input{A("verifyPassword")}').first, pw)
+                await click_button(page, "createAccountSubmitButton") or await click_button(page, name=r"^create account$")
+                end = time.time() + 40; _key = "strong"; continue
             job.report["errors"] += [f"create account: {x}" for x in errs[:3]]; return "fail"
     return "fail"
 

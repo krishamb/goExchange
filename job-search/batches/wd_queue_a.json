@@ -118,19 +118,6 @@
  },
  {
   "ats": "workday",
-  "tag": "wd_morgan_stanley_principal_software_engineer_a",
-  "url": "https://ms.wd5.myworkdayjobs.com/External/job/New-York-New-York-United-States-of-America/Principal-Software-Engineer---AI-Platform----Parametric_PT-JR043021",
-  "company": "Morgan Stanley",
-  "title": "Principal Software Engineer (AI Platform) - Parametric",
-  "where": "New York, NY (hybrid, 3 days office) / Edina MN",
-  "posted": "2026-09-29",
-  "note": "Workday ms/External PT-JR043021; hybrid 3 days/wk stated; $115-225k",
-  "fin": true,
-  "prior": 0,
-  "src": "resolved"
- },
- {
-  "ats": "workday",
   "tag": "wd_citi_head_of_group_wide_ai_first_engineering",
   "url": "https://citi.wd5.myworkdayjobs.com/2/job/New-York-New-York-United-States/Head-of-AI-First-Development--Firmwide-AI----Managing-Director_26964022-1",
   "company": "Citi",

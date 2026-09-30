@@ -58,6 +58,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^(?!.*e-?mail)(.*\b(street|residential|home|permanent|mailing|physical|current) (residence )?(street )?address\b|^address$|^what is your (home |current )?address)", P.get("street","")+", Santa Clara, CA "+P.get("zip","95054") if P.get("street") else P["location"]),
+ (r"^(street )?address( line)? ?1$|^street( address)?$|^address line one$", P.get("street") or "Santa Clara, California, United States"),
  (r"(work|company|business|corporate|former|previous|prior) e-?mail|e-?mail .{0,30}(while|when) (you )?(work|were employed)|what was your .{0,20}e-?mail", "N/A"),   # never his personal email as a former-employer work address
  (r"if applying to (a )?remote (us )?location,? what state", "California"),
  (r"student or temporary visa|temporary visa|(visa|opt|cpt) (type|expir|end date)|f-?1 opt", "N/A (I am a US citizen)"),
@@ -121,7 +123,7 @@ TEXT_RULES=[
  (r"^(?!.*\b(agent|project|workflow|system|product|tool|company|school|reference|referr)).*(first and last name|legal name|full legal name|^(full )?name\b(?!\s+(one|a|an|the|two|three|some|any|your|of)\b)|^your name|_systemfield_name)", P["name"]),
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile|contact number|^tel\b|^telephone", P["phone"]),
- (r"zip|postal|post ?code", "95050"),
+ (r"zip|postal|post ?code", P.get("zip","95054")),
  (r"(what|which) (types?|kinds?) of (roles?|positions?|jobs?) (are|would) you (be )?interested in|roles? (are you|you are) (most )?interested in", "Engineering leadership and senior technical roles in AI/ML: CTO, VP / Head / Director of Engineering or AI, Engineering Manager for AI teams, and Principal / Staff / Distinguished Engineer or AI Architect roles building LLM, data-platform and distributed systems."),
  (r"(list|describe|what are) your (relevant )?(technical )?skills( and competencies)?|relevant technical skills|technical competencies", "AI/ML and LLM systems (RAG, agentic workflows, evaluation, inference optimization); Python, Go, Rust and C++; distributed and low-latency streaming systems (Kafka); cloud and infrastructure (AWS, Kubernetes, Terraform); data platforms (Spark, Postgres/MySQL, vector databases); and leading engineering organizations as CTO and co-founder of Hyperion AI and at Yahoo (75+ engineers) and JPMorgan (50+ engineers)."),
  (r"country( of residence| you (live|reside) in)?$|^country\b|which country|country of residence", "United States"),
@@ -263,6 +265,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"registered .{0,60}securities industry|securities industry .{0,40}registered|attempted to become .{0,30}registered|finra (registration|licen[cs]e)|series (7|24|63|65|66|79|99) (licen|registr|exam)", ["No","no"]),   # applicant: never registered (FINRA)
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"are you (currently )?in the (reserves|national guard)", ["No","no"]),
  (r"if this role or future roles require relocation", ["I am willing to relocate and will self relocate","I am willing to relocate","Yes"]),
@@ -976,7 +979,7 @@ def company_keys(tag,company=None):
     ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=2 and k not in GENERIC_TOKENS}
 # companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
-NEVER_APPLY=re.compile(r"(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+NEVER_APPLY=re.compile(r"morgan[ _-]?stanley|ms\.wd5\.myworkdayjobs|(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
 # one company behind two Greenhouse board names (found from the security-code e-mail's company name)
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 _META_TITLES={}
