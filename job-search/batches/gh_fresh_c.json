@@ -9,8 +9,10 @@
   "loc": "Remote",
   "posted_ts": 1789154888.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What types of roles are you interested in?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -22,8 +24,10 @@
   "loc": "Santa Clara, CA",
   "posted_ts": 1789080979.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is the size of the engineering organization for which you have had direct l"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -35,8 +39,11 @@
   "loc": "Utah | Remote",
   "posted_ts": 1789753640.0,
   "score": 17,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "State (If you do not live in any of the states listed, please select Other.)",
+   "Will you now or in the future require BambooHR to file a petition or application"
+  ]
  },
  {
   "ats": "greenhouse",
