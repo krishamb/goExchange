@@ -80,11 +80,8 @@
   "loc": "Remote",
   "posted_ts": 1789734509.0,
   "score": 16,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "English language skills",
-   "German language skills"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -96,7 +93,7 @@
   "loc": "US - Remote",
   "posted_ts": 1789656088.0,
   "score": 16,
-  "last_result": "(no report)",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
