@@ -220,6 +220,9 @@ CHOICE_RULES=[
  (r"how familiar were you with|familiar with (our company|us) before", ["I had heard of","I was already familiar","Somewhat familiar","Familiar"]),   # fintech/AI companies the applicant knows of
  (r"(previous|former|past|worked (for|at)|employed (by|at)|employee of).{0,60}\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b|\b(yahoo|jp ?morgan|morgan stanley|bloomberg|cadence|ankr|bank of america|barclays)\b.{0,40}(employee|contractor|before|previously)", ["Yes","yes"]),   # the applicant's real past employers
  (r"(been|are you) a (previous|former|past) .{0,30}(employee|contractor|intern)|previously (been )?employed (by|at)|worked (for|at) .{0,30} (before|previously)", ["No","no"]),   # none of these companies
+ (r"(shipping|shipped) software for a commercial product in the data|data, database, data infrastructure, streaming", ["Yes","yes"]),   # Yahoo Finance market-data streaming; Kafka/Redpanda, KDB
+ (r"best represents your strongest technical expertise|strongest (technical )?(area|expertise)", ["Distributed Systems","Stream Processing","Systems","Backend"]),
+ (r"work onsite at our office in (palo alto|san francisco|mountain view|sunnyvale|san jose|santa clara|menlo park|redwood city|san mateo|oakland|berkeley|south san francisco|foster city|bay area)", ["Yes","yes"]),   # Bay Area on-site/hybrid is fine
  (r"deemed export", ["No","no"]),   # US citizen: the deemed-export rule does not apply
  (r"which time zone would you be working|time ?zone (will|would) you (be )?work|time ?zone (are|will) you (be )?(based|located|working)", ["Pacific Time","Pacific","PT","PST","Pacific Time (PT)"]),   # Santa Clara, CA
  (r"currently hands-on with|contributing production-level code|hands-on .{0,60}production(-level| level)? code", ["Yes","yes"]),
