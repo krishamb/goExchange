@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/accordion/jobs/8193635",
-  "tag": "accordion_staff_software_engineer",
-  "company": "accordion",
-  "title": "Staff Software Engineer",
-  "comp": "$200,000 to $290,000 ",
-  "loc": "Boston; Charlotte; Chicago; Dallas; New York; San Francisco",
-  "posted_ts": 1789080970.0,
-  "score": 21,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Describe a specific AI-assisted workflow you've built or refined in the last 6 m"
-  ]
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/netdocuments/jobs/5430716008",
   "tag": "netdocuments_staff_software_engineer_ai",
   "company": "netdocuments",
