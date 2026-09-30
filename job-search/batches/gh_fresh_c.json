@@ -1,28 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/zscaler/jobs/5246774007",
-  "tag": "zscaler_senior_staff_machine_learning_engine",
-  "company": "zscaler",
-  "title": " Senior Staff Machine Learning Engineer ",
-  "comp": null,
-  "loc": "Remote - USA; Santa Clara, California, USA",
-  "posted_ts": 1790729893.0,
-  "score": 29
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/anaplan/jobs/8854384002",
-  "tag": "anaplan_principal_engineer_ai",
-  "company": "anaplan",
-  "title": "Principal Engineer, AI",
-  "comp": null,
-  "loc": "New York City, United States ",
-  "posted_ts": 1790641456.0,
-  "score": 22
- },
- {
-  "ats": "greenhouse",
   "url": "https://www.hubspot.com/careers/jobs/8175193?gh_jid=8175193",
   "tag": "hubspotjobs_principal_machine_learning_engin",
   "company": "hubspotjobs",
@@ -30,7 +8,14 @@
   "comp": null,
   "loc": "Remote - USA",
   "posted_ts": 1790599113.0,
-  "score": 22
+  "score": 22,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "In 2-3 sentences, please share how you are incorporating AI into your day-to-day",
+   "In exactly 3 bullet points, no more, no less, explain the difference between how",
+   "Which time zone would you be working from in this role?",
+   "Are you currently hands-on with designing and developing distributed backend sys"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -41,7 +26,11 @@
   "comp": null,
   "loc": "US - Remote",
   "posted_ts": 1790591506.0,
-  "score": 15
+  "score": 15,
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you at least the minimum legal age required to perform this job in the locat"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -52,7 +41,9 @@
   "comp": null,
   "loc": "San Francisco, CA, Washington, D.C., New York City, NY, Remote (USA)",
   "posted_ts": 1790278456.0,
-  "score": 29
+  "score": 29,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -63,7 +54,9 @@
   "comp": null,
   "loc": "San Francisco, California",
   "posted_ts": 1790369391.0,
-  "score": 23
+  "score": 23,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -74,7 +67,9 @@
   "comp": "$197,000 - $262,000 ",
   "loc": "San Francisco, CA",
   "posted_ts": 1790292190.0,
-  "score": 23
+  "score": 23,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -85,7 +80,9 @@
   "comp": "$225,000 - $250,000 ",
   "loc": "Remote",
   "posted_ts": 1790186519.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -96,7 +93,9 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1790174090.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -107,7 +106,9 @@
   "comp": "$200,000 - $280,000 ",
   "loc": "Americas Remote",
   "posted_ts": 1790275518.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -118,7 +119,9 @@
   "comp": null,
   "loc": "Chicago, Illinois, United States; New York, New York, United States; San Francisco, California, United States",
   "posted_ts": 1790368116.0,
-  "score": 15
+  "score": 15,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -129,7 +132,9 @@
   "comp": null,
   "loc": "San Francisco",
   "posted_ts": 1788571323.0,
-  "score": 29
+  "score": 29,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -140,7 +145,9 @@
   "comp": null,
   "loc": "San Jose, California, USA; Santa Clara, California, USA",
   "posted_ts": 1790054516.0,
-  "score": 27
+  "score": 27,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -151,7 +158,9 @@
   "comp": null,
   "loc": "San Francisco, CA",
   "posted_ts": 1790017940.0,
-  "score": 25
+  "score": 25,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -162,7 +171,9 @@
   "comp": "$350,000 - $430,000 ",
   "loc": "San Francisco, CA",
   "posted_ts": 1789682110.0,
-  "score": 25
+  "score": 25,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -173,7 +184,9 @@
   "comp": "$197,000 - $262,000 ",
   "loc": "San Francisco, CA",
   "posted_ts": 1788909749.0,
-  "score": 25
+  "score": 25,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -184,7 +197,9 @@
   "comp": null,
   "loc": "Santa Clara, California, United States",
   "posted_ts": 1788565802.0,
-  "score": 25
+  "score": 25,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -195,7 +210,9 @@
   "comp": null,
   "loc": "San Francisco",
   "posted_ts": 1789590191.0,
-  "score": 23
+  "score": 23,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -206,7 +223,9 @@
   "comp": null,
   "loc": "Houston; New York; San Francisco; Seattle",
   "posted_ts": 1789496809.0,
-  "score": 23
+  "score": 23,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -217,7 +236,9 @@
   "comp": "$215,000 - $250,000 ",
   "loc": "Remote",
   "posted_ts": 1790008037.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -228,7 +249,9 @@
   "comp": null,
   "loc": "Lehi, Utah, Open to Remote; Remote, US",
   "posted_ts": 1789744505.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -239,7 +262,9 @@
   "comp": null,
   "loc": "Bethesda, Maryland, United States; Remote-US-MA; Remote-US-MD; Remote-US-WA; Vancouver, Washington, United States; Waltham, Massachusetts, United States",
   "posted_ts": 1789673726.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -250,7 +275,9 @@
   "comp": "$270,000 - $330,000 ",
   "loc": "Hybrid (NYC / Austin)",
   "posted_ts": 1789064781.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -261,7 +288,9 @@
   "comp": null,
   "loc": "United States | Remote",
   "posted_ts": 1789051956.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -272,7 +301,9 @@
   "comp": null,
   "loc": "Remote-United-States",
   "posted_ts": 1788945589.0,
-  "score": 22
+  "score": 22,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -283,7 +314,9 @@
   "comp": null,
   "loc": "US CA Sunnyvale",
   "posted_ts": 1790020978.0,
-  "score": 21
+  "score": 21,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -294,7 +327,9 @@
   "comp": "$200,000 - 280,000 ",
   "loc": "Palo Alto, California, United States",
   "posted_ts": 1788532684.0,
-  "score": 21
+  "score": 21,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -305,7 +340,9 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1788477683.0,
-  "score": 20
+  "score": 20,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -316,7 +353,9 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1788477312.0,
-  "score": 20
+  "score": 20,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -327,7 +366,9 @@
   "comp": null,
   "loc": "Remote: United States",
   "posted_ts": 1790094638.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -338,7 +379,9 @@
   "comp": "$180,000 - $260,000. ",
   "loc": "Seattle / San Francisco",
   "posted_ts": 1789752593.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -349,7 +392,9 @@
   "comp": null,
   "loc": "Mountain View, California, United States",
   "posted_ts": 1789672612.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -360,18 +405,9 @@
   "comp": null,
   "loc": "San Francisco, CA",
   "posted_ts": 1789074065.0,
-  "score": 19
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/upbound/jobs/6188460004",
-  "tag": "upbound_sr_engineering_manager",
-  "company": "upbound",
-  "title": "Sr. Engineering Manager",
-  "comp": null,
-  "loc": "San Francisco, California, United States",
-  "posted_ts": 1789064743.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -382,7 +418,9 @@
   "comp": "$154,000 to $200,000. ",
   "loc": "Addison, TX (Hybrid); Bellevue, WA (Hybrid); Durham, NC (Hybrid); Emeryville, CA (Hybrid); Reston, VA (Hybrid)",
   "posted_ts": 1788565383.0,
-  "score": 19
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -393,18 +431,9 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1788208576.0,
-  "score": 19
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.hypr.com/open-positions?gh_jid=8825653002",
-  "tag": "hypr_director_of_engineering",
-  "company": "hypr",
-  "title": "Director of Engineering",
-  "comp": "$220,000 - $275,000 ",
-  "loc": "New York, New York",
-  "posted_ts": 1790001652.0,
-  "score": 18
+  "score": 19,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -415,7 +444,9 @@
   "comp": null,
   "loc": "Remote - USA",
   "posted_ts": 1789742287.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -426,7 +457,9 @@
   "comp": "$184,200k-$230,250k",
   "loc": "Remote",
   "posted_ts": 1789154888.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -437,7 +470,9 @@
   "comp": "$270,000 \u2013 $350,000 ",
   "loc": "Santa Clara, CA",
   "posted_ts": 1789080979.0,
-  "score": 18
+  "score": 18,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -448,7 +483,9 @@
   "comp": null,
   "loc": "Utah | Remote",
   "posted_ts": 1789753640.0,
-  "score": 17
+  "score": 17,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -459,7 +496,9 @@
   "comp": null,
   "loc": "WA - Seattle; NY - New York; CA - San Francisco",
   "posted_ts": 1790032169.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -470,18 +509,9 @@
   "comp": null,
   "loc": "United States - Remote",
   "posted_ts": 1790011395.0,
-  "score": 16
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/nametag/jobs/4413159009",
-  "tag": "nametag_engineering_manager",
-  "company": "nametag",
-  "title": "Engineering Manager",
-  "comp": null,
-  "loc": "Remote",
-  "posted_ts": 1790011380.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -492,7 +522,9 @@
   "comp": "$140,000 - $180,000. ",
   "loc": "Chicago, IL or Remote, USA",
   "posted_ts": 1790003911.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -503,7 +535,9 @@
   "comp": null,
   "loc": "United States (Remote) ",
   "posted_ts": 1789984794.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -514,7 +548,9 @@
   "comp": "$200,000 - $240,000 ",
   "loc": "Americas Remote",
   "posted_ts": 1789666206.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -525,7 +561,9 @@
   "comp": null,
   "loc": "Canada (Remote), United States (Remote), United Kingdom (Remote)",
   "posted_ts": 1789577580.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -536,7 +574,9 @@
   "comp": "$81K - $106K",
   "loc": "Movable Ink - Remote - United States",
   "posted_ts": 1789521158.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -547,7 +587,9 @@
   "comp": "$177,000 \u2013 $240,000. ",
   "loc": "Remote",
   "posted_ts": 1789400570.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -558,7 +600,9 @@
   "comp": "$278,000 to $426,000. ",
   "loc": "Addison, TX (Hybrid); Bellevue, WA (Hybrid); Durham, NC (Hybrid); Emeryville, CA (Hybrid)",
   "posted_ts": 1788879107.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -569,7 +613,9 @@
   "comp": "$240k \u2013 $300k",
   "loc": "NYC (Hybrid)",
   "posted_ts": 1788453525.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -580,18 +626,9 @@
   "comp": null,
   "loc": " -REMOTE, USA-",
   "posted_ts": 1788453396.0,
-  "score": 16
- },
- {
-  "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/kalepa/jobs/6181093004",
-  "tag": "kalepa_staff_platform_engineer_infrastructur",
-  "company": "kalepa",
-  "title": "Staff Platform Engineer - Infrastructure",
-  "comp": "$220k \u2013 $300k",
-  "loc": "USA (Remote)",
-  "posted_ts": 1788453380.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -602,7 +639,9 @@
   "comp": null,
   "loc": "Remote (US/Canada)",
   "posted_ts": 1788367865.0,
-  "score": 16
+  "score": 16,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -613,7 +652,9 @@
   "comp": "$180,000 - $200,000 ",
   "loc": "Chicago, Illinois; San Francisco, California",
   "posted_ts": 1789395725.0,
-  "score": 15
+  "score": 15,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -624,7 +665,9 @@
   "comp": "$104,000\u2013 $174,000 ",
   "loc": "Remote",
   "posted_ts": 1789136971.0,
-  "score": 15
+  "score": 15,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -635,7 +678,9 @@
   "comp": null,
   "loc": "Remote",
   "posted_ts": 1788208245.0,
-  "score": 15
+  "score": 15,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -646,7 +691,9 @@
   "comp": null,
   "loc": "Bethesda, Maryland, United States; Remote-US-MA; Remote-US-MD; Remote-US-WA; Vancouver, Washington, United States; Waltham, Massachusetts, United States",
   "posted_ts": 1790015921.0,
-  "score": 13
+  "score": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -657,7 +704,9 @@
   "comp": null,
   "loc": "Remote, US",
   "posted_ts": 1789546354.0,
-  "score": 13
+  "score": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -668,7 +717,9 @@
   "comp": "$200,000 - $220,000 ",
   "loc": "Remote",
   "posted_ts": 1789163653.0,
-  "score": 13
+  "score": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -679,7 +730,9 @@
   "comp": null,
   "loc": "-REMOTE, USA-",
   "posted_ts": 1788478678.0,
-  "score": 13
+  "score": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -690,7 +743,9 @@
   "comp": "$210,000 \u2013 $235,000 ",
   "loc": "United States (Remote);",
   "posted_ts": 1788454014.0,
-  "score": 13
+  "score": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -701,7 +756,9 @@
   "comp": null,
   "loc": "Hybrid, San Francisco",
   "posted_ts": 1790009200.0,
-  "score": 12
+  "score": 12,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -712,6 +769,8 @@
   "comp": "$375,000 - $450,000 ",
   "loc": "New York City",
   "posted_ts": 1788484723.0,
-  "score": 12
+  "score": 12,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
