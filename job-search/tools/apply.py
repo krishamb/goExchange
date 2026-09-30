@@ -57,6 +57,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"\breferred by\b|\bwho referred\b|\breferr(ed|al)\b.{0,80}\bname\b|\bname of (the |your )?(referring )?(employee|referrer)\b", "N/A"),   # not referred: never the applicant's own name
  (r"(require|need) any (special )?accommodations?|accommodations? (during|for) (the )?interview", "No."),
  (r"(currently|presently) (based|located|living|residing) (in|near|around) (nyc|new york|manhattan|brooklyn)|are you (based|located|living) (in|near) (nyc|new york)|(live|living) (near|within commut\w+ distance of) (nyc|new york|the (nyc|new york) office)", "Not yet: I live in Santa Clara, California, and I am willing to relocate to New York City and commute to the office as the role requires."),
  (r"(what|which) do you think (are|is) (our|the) (most complex|biggest|hardest) (technical )?challenges?", "From the outside, I would expect the hardest problems to be: keeping the core transaction path fast and available under load; guaranteeing correctness of money and state movement through retries, reversals and partial failures (idempotency, ledgers, reconciliation); and scaling the platform and the team without losing auditability. I have worked on each: sub-250-microsecond execution paths in electronic trading, journal and replay systems at JPMorgan Chase for deterministic recovery and reconciliation, and custody-sensitive reconciliation at Hyperion AI. I would want to learn where your current bottlenecks actually are before prioritizing."),
