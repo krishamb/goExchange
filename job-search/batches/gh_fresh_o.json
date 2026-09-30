@@ -1,29 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "air",
-  "company_name": "AIR Security",
-  "title": "Senior AI Engineer, Security Infrastructure ",
-  "loc": "Arlington, Virginia, United States; Pittsburgh, Pennsylvania, United States; Remote",
-  "where": "remote",
-  "url": "https://job-boards.greenhouse.io/air/jobs/4394418009",
-  "posted_ts": 1788448845.0,
-  "desc": " Company Description Air is the leader in Enterprise Readiness. Our mission is to establish readiness as a real-time condition that is continuously achieved. Today, a dangerous Readiness Gap exists between what the front line needs and what is delivered. Our AI-native platform, Air Enterprise Readiness, aligns development, production, delivery, and sustainment into one coordinated execution system for government agencies and industrial suppliers. By revealing true capacity, exposing real constraints, coordinating resources, and executing at the speed of operational demands, the front line gets what it needs to succeed. Job Description We are seeking an experienced Senior AI Engineer specializing in AI security to join our Agentic AI team as we scale our agentic capabilities across all levels of the U.S. government. Over the past year, we have seen rapid adoption of our AI agent, Ace. As agents gain access to increasingly powerful tools, data, and workflows, securing these systems presents a fundamentally different set of challenges from securing traditional software. AI security is not a solved problem. This role sits at the intersection of applied AI research, offensive security, and production systems engineering. You will identify how agentic systems can fail or be exploited, develop new approaches for detecting and mitigating those failures, and build the infrastructure necessary to deploy capable AI agents securely in adversarial environments. You will work directly with the engineers building our agent runtime, evaluation infrastructure, tools, and production AI systems. The goal is not simply to identify vulnerabilities - it is to turn what we learn into durable security architecture, automated evaluations, and engineering primitives that make our entire AI platform more secure. This role is a full-time position located out of our office in Pittsburgh, PA or Arlington, VA and Remote for those outside of those cities.&nbsp; This role may require up to 25% travel Scope of Responsibilities Research and develop new approaches to AI red teaming, adversarial testing, security evaluation, and robust inference. Threat model agentic AI architectures, identifying trust boundaries, attack surfaces, privileged capabilities, and potential failure modes. Design adversarial evaluations targeting threats such as prompt injection, indirect prompt injection, tool abuse, privilege escalation, data exfiltration, context or memory poisoning, and unintended agent behavior. Build automated security evaluation and regression frameworks that continuously test agents, models, tools, and infrastructure against known and emerging attacks. Translate successful attacks and research findings into production mitigations, architectural improvements, and reusable security controls. Design secure execution environments for AI agents interacting with tools, code, data, and external systems. Build and harden sandboxing and isolation mechanisms for executing agent-generated or otherwise untrusted workloads. Design capability boundaries, permission models, and least-privilege access controls for agent tools and services. Develop scalable AI infrastructure and services supporting secure model inference and agent execution. Own and improve production infrastructure across Kubernetes, AWS, networking, storage, and compute. Implement security controls around identity and access management, secrets, network isolation, containers, and service-to-service communication. Build scalable APIs, internal platform services, and infrastructure tooling that improve developer productivity, system reliability, and security. Improve observability across AI systems through structured logging, metrics, distributed tracing, dashboards, security telemetry, and automated alerting. Investigate complex production and security failures across models, agents, distributed systems, and infrastructure. Optimize performance, latency, and infrastructure cost while maintaining strong reliabi",
-  "comp": null,
-  "tier": 3,
-  "stack_hits": 16,
-  "funding": "Seed (two rounds) $50M 2026-09-01",
-  "domain": "security",
-  "tag": "air_senior_ai_engineer_security_infrastructu",
-  "found_on": "funded_startups",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Which Air office location/s are you open to working out of?",
-   "Which security principle is MOST important when giving an AI agent access to ext"
-  ]
- },
- {
-  "ats": "greenhouse",
   "company": "baselayer",
   "company_name": "Baselayer",
   "title": "Data Engineer",
