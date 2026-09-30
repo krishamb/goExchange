@@ -25,8 +25,11 @@
   "loc": "New York, New York, United States; San Francisco, California, United States",
   "posted_ts": 1789508411.0,
   "score": 23,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you will require relocation, what is your expected timeline and would you be ",
+   "Please select which Taskrabbit hub you are currently based out of:"
+  ]
  },
  {
   "ats": "greenhouse",
