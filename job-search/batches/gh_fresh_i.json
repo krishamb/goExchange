@@ -11,7 +11,9 @@
   "where": "remote",
   "score": 22,
   "tag": "preciselyusjobs_principal_software_engineer",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -25,7 +27,9 @@
   "where": "remote",
   "score": 23,
   "tag": "abacusinsights_principal_software_architect",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -39,7 +43,9 @@
   "where": "remote",
   "score": 22,
   "tag": "billcom_staff_software_engineer",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -53,7 +59,9 @@
   "where": "bay",
   "score": 30,
   "tag": "ridgeline_principal_engineer_ai_platform",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -67,7 +75,9 @@
   "where": "remote",
   "score": 15,
   "tag": "stackadapt_engineering_manager_ii_ivy",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -81,6 +91,8 @@
   "where": "remote",
   "score": 18,
   "tag": "quanata_senior_manager_back_end_engineering_",
-  "found_on": "gh_scan"
+  "found_on": "gh_scan",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]

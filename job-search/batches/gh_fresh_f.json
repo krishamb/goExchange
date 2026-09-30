@@ -1,19 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://job-boards.greenhouse.io/netdocuments/jobs/5430716008",
-  "tag": "netdocuments_staff_software_engineer_ai",
-  "company": "netdocuments",
-  "title": "Staff Software Engineer - AI",
-  "comp": "$170,000 \u2013 $190,000. ",
-  "loc": "Lehi, Utah, United States; Remote - US",
-  "posted_ts": 1790024562.0,
-  "score": 20,
-  "last_result": "one in the past |  | PUBLIC BURDEN STATEMENT: According to the Paperwork Reduction Act of 1995 no pe",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/mozilla/jobs/8185984",
   "tag": "mozilla_staff_product_engineer_enterprise_ai",
   "company": "mozilla",
@@ -94,8 +81,15 @@
   "loc": "San Francisco",
   "posted_ts": 1788192764.0,
   "score": 19,
-  "last_result": "ERROR Error: Page.goto: net::ERR_PROXY_CONNECTION_FAILED at https://job-boards.greenhouse.io/embed/j",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What are your career plans?",
+   "School",
+   "Have you completed an application for any other opportunities at Gallup within t",
+   "Please indicate which languages you speak in addition to English:",
+   "How many years of professional software engineering experience do you have?",
+   "Do you have strong system design and architecture fundamentals, along with comfo"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -107,21 +101,10 @@
   "loc": "Remote, USA",
   "posted_ts": 1788372700.0,
   "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.hubspot.com/careers/jobs/8175195?gh_jid=8175195",
-  "tag": "hubspotjobs_principal_software_engineer_crm",
-  "company": "hubspotjobs",
-  "title": "Principal Software Engineer- CRM",
-  "comp": null,
-  "loc": "Remote - USA",
-  "posted_ts": 1789568423.0,
-  "score": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please share how you have used AI tools."
+  ]
  },
  {
   "ats": "greenhouse",
@@ -133,7 +116,7 @@
   "loc": "Redwood City, CA, United States",
   "posted_ts": 1788198837.0,
   "score": 18,
-  "last_result": "(no report)",
+  "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
   "last_unanswered": []
  },
  {
