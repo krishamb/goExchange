@@ -229,7 +229,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
- (r"do you live in one of the following states|which (of the following )?states? do you (currently )?(live|reside) in", ["California: SF Bay Area","California - SF Bay Area","California (SF Bay Area)","California"]),   # applicant lives in Santa Clara, CA (no Yes: the list may not include California)
+ (r"do you live in one of the following states|which (of the following )?states? do you (currently )?(live|reside) in", ["California: SF Bay Area","California - SF Bay Area","California (SF Bay Area)","California","CA"]),   # applicant lives in Santa Clara, CA (no Yes: the list may not include California)
  (r"are you (currently )?still (employed|working) (with|at|for)", ["Yes","yes"]),   # applicant: currently CTO at Hyperion AI
  (r"(require|need) .{0,60}\b(file|sign|certify|support|participate in|sponsor)\b.{0,120}\b(immigration|work authori[sz]ation|visa|petition|green card|h-?1b)", ["No","no","No, I do not require sponsorship","I do not require sponsorship"]),   # applicant: US citizen, needs nothing now or later
  (r"(?=.*(\bca\b|california))((live|reside|located) in|move to|relocate to).{0,250}(following|these|listed|eligible) (states|locations)|(?=.*(\bca\b|california))(following|these|listed|eligible) (states|locations).{0,250}((live|reside) in|move to|relocate)|^do you (currently )?(live|reside) in (?=[^?]*\bcalifornia\b)", ["California: SF Bay Area","California - SF Bay Area","California (SF Bay Area)","California","CA","Yes","yes"]),   # a state list that includes California: the applicant lives in Santa Clara, CA
