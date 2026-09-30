@@ -318,7 +318,7 @@ CHOICE_RULES=[
  (r"subject to (any )?(employment|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
  (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
- (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
+ (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Careers Website","Website","Careers","Job Post Site","Job Board","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
  (r"school|university|college", ["University of Madras","Other"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
