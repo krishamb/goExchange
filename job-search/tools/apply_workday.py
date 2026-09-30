@@ -715,6 +715,10 @@ async def fill_entry(page, job, kind, panel):
             if k in by and norm(val(k)) != norm(WORK_ENTRY[k]) and await fill(page, fb(k).locator("input").first, WORK_ENTRY[k]): done[k] = WORK_ENTRY[k]
         if "location" in by and not val("location") and by["location"]["kind"] == "text" and await fill(page, fb("location").locator("input").first, WORK_ENTRY["location"]): done["location"] = WORK_ENTRY["location"]
         if "currentlyWorkHere" in by and await set_check(fb("currentlyWorkHere").locator('input[type="checkbox"]').first, True): done["current"] = "yes"
+        rd = by.get("roleDescription")
+        if rd and rd["req"] and not val("roleDescription"):   # required (Relativity): the rules' reviewed Hyperion AI summary
+            v = text_for("Tell us about your most recent project")
+            if v and await fill(page, fb("roleDescription").locator("textarea, input").first, v): done["description"] = v[:70] + "..."
         want = f"{WORK_ENTRY['start'][0]:02d}/{WORK_ENTRY['start'][1]}"
         if "startDate" in by and val("startDate") != want: done["from"] = await set_date(page, fb("startDate"), month=WORK_ENTRY["start"][0], year=WORK_ENTRY["start"][1])
         label = f"{WORK_ENTRY['jobTitle']}, {WORK_ENTRY['companyName']}, {want}-present"
@@ -738,10 +742,47 @@ async def fill_entry(page, job, kind, panel):
         label = "B.E. Computer Science and Engineering, University of Madras, 1991-1995"
     job.ans(f"{'Work Experience' if kind == 'work' else 'Education'}: {label}", done)
     return done
+def level_rank(texts, prefs):
+    """Language level: CEFR-aware ('Fluent (C1)' picks 'C1 (Advanced)'), otherwise exact or leading matches only."""
+    for p in prefs or []:
+        m = re.search(r"\b([abc][12])\b", p, re.I)
+        k = next((i for i, t in enumerate(texts) if m and re.search(r"\b" + m.group(1) + r"\b", t or "", re.I)), None) if m else None
+        if k is None: k = next((i for i, t in enumerate(texts) if t and _match(t, p, True)), None)
+        if k is not None: return k
+    return None
+async def fill_language(page, job, panel):
+    """One Languages entry (Relativity: Language, 'I am fluent in this language.', Level): English, at the level the
+    rules give for English (TEXT_RULES: English, full professional proficiency; CHOICE_RULES: Fluent (C1) first)."""
+    fields = await panel.evaluate(FIELD_JS)
+    lang = next((f for f in fields if re.search(r"^language$", f["label"], re.I)), None)
+    if lang and lang["val"] and norm(lang["val"]) != "english": return None   # another language the profile has: left as it is
+    done = {}
+    if lang and not lang["val"]:
+        v, _ = await listbox_choose(page, panel.locator(f'[data-fkit-id="{lang["fkit"]}"] button[aria-haspopup="listbox"]').first, lambda t: rank(t, ["English"], "Language", exact=True), "English")
+        done["language"] = v
+    prefs = choice_for("English language proficiency") or []
+    for f in fields:
+        loc = panel.locator(f'[data-fkit-id="{f["fkit"]}"]').first
+        if f["kind"] == "checkbox" and re.search(r"fluent|native", f["label"], re.I):
+            done["fluent"] = await set_check(loc.locator('input[type="checkbox"]').first, True)
+        elif f["kind"] == "listbox" and f is not lang and re.search(r"level|proficien|reading|writing|speaking|overall|comprehension", f["label"], re.I) and not f["val"]:
+            v, _ = await listbox_choose(page, loc.locator('button[aria-haspopup="listbox"]').first, lambda t: level_rank(t, prefs))
+            done[f["label"]] = v
+    job.ans("Language: English", done)
+    return done
 async def experience_page(page, job, need=()):
-    """My Experience: attach the resume once. Work Experience / Education entries are added only when Workday requires
-    them (the section heading is starred, or its errors name the section): uploading the resume is enough otherwise."""
+    """My Experience: attach the resume once. Work Experience / Education / Languages entries are added only when Workday
+    requires them (the section heading is starred, or its errors name the section): uploading the resume is enough otherwise."""
     await upload_resume(page, job)
+    g = page.locator('[role="group"][aria-labelledby="Languages-section"]')
+    if await g.count():
+        panels = g.locator('[role="group"][aria-labelledby$="-panel"]')
+        try: head = (await page.locator('[id="Languages-section"]').first.inner_text(timeout=2000)).strip()
+        except Exception: head = ""
+        if not await panels.count() and ("*" in head or "lang" in need):
+            await g.locator(A("add-button")).first.click(timeout=4000); await page.wait_for_timeout(1500)
+        for i in range(await panels.count()):
+            await fill_language(page, job, panels.nth(i))
     for sec, kind in (("Work-Experience", "work"), ("Education", "edu")):
         g = page.locator(f'[role="group"][aria-labelledby="{sec}-section"]')
         if not await g.count(): continue
@@ -826,14 +867,18 @@ async def auth(page, job, s):
         s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}; save_secret(s)
     creds = {"login": (s["email"], s["passwords"][0]), "new": (s.get("new_account_email") or P["email"], s.get("new_account_password") or s["passwords"][0])}
     if known.get("pw_key") in creds:
+        if known.get("failed"):   # the remembered login failed on an earlier run: never retried (lockouts); fix wf_creds, then remove "failed"
+            job.report["errors"].append(f"sign-in with the remembered {known['pw_key']} login failed on an earlier run; not retried"); return "fail"
         e, pw = creds[known["pw_key"]]
         r = await sign_in(e, pw)
         if r == "noform": return "ok" if await auth_state(page, 10) == "in" else "fail"
+        if r is False: known["failed"] = int(time.time()); s["tenants"][ten] = known; save_secret(s)
         return "ok" if r else ("blocked" if r is None else "fail")
-    # 1) one attempt with the applicant's Workday login
-    r = await sign_in(*creds["login"])
+    # 1) one attempt with the applicant's Workday login (never again on this tenant once it has failed)
+    r = "noform" if known.get("login_failed") else await sign_in(*creds["login"])
     if r is None: return "blocked"
     if r is True: remember(creds["login"][0], "login"); return "ok"
+    if r is False: s["tenants"][ten] = {"login_failed": int(time.time())}; save_secret(s)
     # 2) create the account with the new-account email (Gmail)
     await page.goto(page.url, wait_until="domcontentloaded", timeout=60000)
     st = await auth_state(page)
@@ -863,8 +908,10 @@ async def auth(page, job, s):
         if await page.locator(CAPTCHA).count(): return "blocked"
         body = await text(page)
         if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
+            if (s["tenants"].get(ten) or {}).get("new_failed"): return "fail"   # tried once already: never again (lockouts)
             r = await sign_in(e, pw)
             if r is True: remember(e, "new"); return "ok"
+            if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
             return "blocked" if r is None else "fail"
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
             remember(e, "new"); return "verify"
@@ -993,7 +1040,7 @@ async def run_one(ctx, item, s):
                     job.report["result"] = "NOT SUBMITTED: form errors"; return job.report
                 repaired.add(raw)
                 log(job, f"Workday errors on '{step}': {errs[:4]}; filling the step once more")
-                need = {k for k, rx in (("work", r"work experience"), ("edu", r"education")) if any(re.search(rx, e, re.I) for e in errs)}
+                need = {k for k, rx in (("work", r"work experience"), ("edu", r"education"), ("lang", r"\blanguage\b")) if any(re.search(rx, e, re.I) for e in errs)}
                 if need: await experience_page(page, job, need)
                 continue
             if adv == "stuck":
