@@ -1,25 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "buildops",
-  "title": "Staff Software Engineer, Quality & Reliability Platform",
-  "loc": "San Francisco, CA",
-  "desc": " BuildOps is looking for a Staff Software Engineer to set and drive our company-wide technical strategy for building, shipping, and operating reliable software. This is a high-impact, cross-functional role for an engineer who sees quality and reliability as properties of the entire system\u2014not as a final testing phase or the responsibility of a separate team. You will work across engineering, product, infrastructure, and customer-facing organizations to identify systemic risks, establish architectural standards, and create platform capabilities that make safe, dependable delivery the default. You will influence how teams design systems, validate changes, observe production behavior, manage risk, and learn from failures. Your work will span architecture, developer tooling, release safety, observability, resilience, testability, and engineering practices. The specific solutions will evolve as you identify the highest-leverage opportunities. Product engineering teams at BuildOps own the quality and testing of their features. Your role is not to test their work for them. You will establish the technical direction, paved roads, systems, and standards that enable every team to deliver reliable software with greater confidence and speed. What You Will Do Define and drive BuildOps' technical strategy for engineering quality, production reliability, and safe software delivery. Identify systemic sources of customer-impacting failures and lead cross-team initiatives that address root causes rather than individual symptoms. Establish architectural principles, engineering standards, and paved roads that make reliable system design and safe delivery easier by default. Partner with engineering teams during system and product design to improve resilience, operability, testability, and failure isolation before implementation begins. Build or guide the development of shared platform capabilities for release safety, automated validation, production feedback, test data, environment management, and developer self-service. Advance BuildOps' observability strategy so teams can understand system behavior, detect regressions quickly, diagnose failures, and make informed reliability investments. Improve how we validate interactions across services, data boundaries, financial workflows, and other business-critical systems. Define meaningful measures of quality and reliability, then use them to identify priorities and demonstrate improvements in customer and engineering outcomes. Lead technical programs that span multiple teams and organizations, aligning stakeholders and driving decisions without relying on direct authority. Mentor engineers and technical leaders, raising the organization's ability to reason about risk, reliability, and quality throughout the software lifecycle. Evaluate BuildOps' existing practices and technology objectively, evolving or replacing them when they no longer meet our needs. What Success Looks Like Success in this role is measured by durable improvements in outcomes, not by the number of alerts, dashboards, tests, or frameworks created. Examples include: Fewer customer-impacting defects and recurring classes of production failures. Greater release confidence and a lower change-failure rate. Faster detection, diagnosis, and recovery when failures occur. Shorter, more reliable feedback loops for engineers making changes. Clearer ownership and better visibility into the health of critical systems and workflows. Increased engineering velocity without sacrificing safety or reliability. Broad adoption of shared practices and platform capabilities without creating a centralized quality bottleneck. What We Look For Significant software engineering experience, including operating at Staff or equivalent scope on ambiguous, cross-cutting technical problems. A track record of leading multi-team initiatives that improved production reliability, software delivery, platform capabilities, or engineering effectiveness. Strong systems thinki",
-  "url": "https://buildops.com/careers/job-application?gh_jid=6208095004",
-  "posted_ts": 1790292283.0,
-  "comp": null,
-  "where": "bay",
-  "score": 0.48,
-  "tag": "buildops_staff_software_engineer_quality_rel",
-  "found_on": "greenhouse_api",
-  "tier": 2,
-  "dom": 2,
-  "skill_hits": 13,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "company": "legion",
   "title": "Principal Software Engineer, DevOps",
   "loc": "Remote, United States",
@@ -34,7 +15,11 @@
   "tier": 2,
   "dom": 1,
   "skill_hits": 11,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "In Kubernetes, what is the difference between a Pod and a Container?",
+   "In AWS, if you wish to load balance requests to different systems depending on U",
+   "What are the three core pillars of observability?"
+  ]
  }
 ]
