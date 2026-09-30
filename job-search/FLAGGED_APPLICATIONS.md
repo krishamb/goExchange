@@ -32,3 +32,7 @@ No, former Figma employee No. Each company now holds both the original and the c
 asks, the corrected one (submitted later the same day) is the accurate one.
 Not resubmitted: Netskope (the role is Taiwan-based; withdraw it) and Metriport (Wellfound allows one application per
 account; tell them you are a US citizen if they reply).
+
+## Do not apply (applicant instruction)
+
+- Global Settlement Systems (Miami, FL) - Senior Blockchain Engineer: never apply. Blocked in the filler for every queue.

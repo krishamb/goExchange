@@ -683,6 +683,8 @@ def company_keys(tag,company=None):
     if len(toks)>1: ks.add(toks[0]+toks[1])
     ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=4}
+# companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
+NEVER_APPLY=re.compile(r"global[ _-]?settlement[ _-]?systems?|globalsettlement|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
 # one company behind two Greenhouse board names (found from the security-code e-mail's company name)
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 def applied_elsewhere(tag,company=None,days=45):
@@ -730,6 +732,9 @@ async def run():
                 if not _prev.get("spam_blocked"):
                     _prev["spam_blocked"]=True; _prev["result"]="NOT SUBMITTED: blocked by the site's spam check - apply by hand"; json.dump(_prev,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
                 print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":False,"result":"SKIPPED: the site's spam check blocked this earlier - apply by hand"}),flush=True); continue
+            if NEVER_APPLY.search(" ".join(str(job.get(k) or "") for k in ("tag","company","title","url"))):
+                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: company on the applicant's do-not-apply list","unanswered":[],"errors":[]}
+                print(json.dumps(r),flush=True); continue
             prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"))   # one application per company across every stream and site (a correction resubmit is exempt)
             if prior:
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
