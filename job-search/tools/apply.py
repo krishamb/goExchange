@@ -228,6 +228,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(?=.*(\bca\b|california))((live|reside|located) in|move to|relocate to).{0,250}(following|these|listed|eligible) (states|locations)|(?=.*(\bca\b|california))(following|these|listed|eligible) (states|locations).{0,250}((live|reside) in|move to|relocate)", ["Yes","yes"]),   # a state list that includes California: the applicant lives in Santa Clara, CA
  (r"^location preference|(preferred|desired) (work )?location|work location preference|which location would you prefer", ["Santa Clara","San Jose","Sunnyvale","Mountain View","Palo Alto","Menlo Park","Redwood City","San Mateo","Burlingame","Foster City","South San Francisco","San Francisco","Bay Area","California","Remote"]),   # applicant: Santa Clara; any Bay Area office, else remote
  (r"requires? (a )?background checks?.{0,400}(disclos|conviction)|background checks? of all (new )?(employees|candidates|hires)", ["I Acknowledge","I acknowledge","Acknowledge","Yes","I consent","I understand"]),   # acknowledgment of the employer's background-check policy, not a conviction disclosure
  (r"provided any contract work for|ever (been )?(a )?contractor (for|with|at)", ["No","no"]),
