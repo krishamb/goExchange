@@ -48,7 +48,7 @@
   "loc": "San Francisco, California, United States",
   "posted_ts": 1789389814.0,
   "score": 19,
-  "last_result": "hone | Country | +1 | Phone | Resume/CV* | Attach | Attach | Dropbox | Enter manually | Enter manual",
+  "last_result": "edIn Profile* | Website links |  | We'd love to see examples of your work. Feel free to share your g",
   "last_unanswered": []
  },
  {
@@ -61,15 +61,8 @@
   "loc": "San Francisco",
   "posted_ts": 1788192764.0,
   "score": 19,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "What are your career plans?",
-   "School",
-   "Have you completed an application for any other opportunities at Gallup within t",
-   "Please indicate which languages you speak in addition to English:",
-   "How many years of professional software engineering experience do you have?",
-   "Do you have strong system design and architecture fundamentals, along with comfo"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -96,7 +89,7 @@
   "loc": "Redwood City, CA, United States",
   "posted_ts": 1788198837.0,
   "score": 18,
-  "last_result": "veteran who, while serving on active duty in the U.S. military, ground, naval or air service, partic",
+  "last_result": "ERROR RuntimeError: no visible submit button",
   "last_unanswered": []
  },
  {
@@ -109,8 +102,11 @@
   "loc": "Remote - CO, FL, GA, MA, MD, MN, NE, NC, NJ, NY, OR, PA, SC, TN, TX, WA",
   "posted_ts": 1790006339.0,
   "score": 17,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "If you didn't know, we're an Anthropic Partner! If you have your Claude certific",
+   "Did a current Praxenter refer you? If yes, please include their name below:"
+  ]
  },
  {
   "ats": "greenhouse",

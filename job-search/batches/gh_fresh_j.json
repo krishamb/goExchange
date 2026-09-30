@@ -13,10 +13,8 @@
   "tag": "zipcolimited_staff_engineer",
   "found_on": "cache_greenhouse",
   "domain": "fintech",
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "Which of the following best describes your current level of experience using or "
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -52,8 +50,11 @@
   "tag": "block_staff_software_engineer_financial_plat",
   "found_on": "greenhouse_board",
   "domain": "lowlatency",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Have you ever provided any contract work for Block, Inc. or any of its subsidiar",
+   "Accept"
+  ]
  },
  {
   "ats": "greenhouse",

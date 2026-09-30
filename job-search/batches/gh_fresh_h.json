@@ -37,10 +37,8 @@
   "loc": "San Jose, CA",
   "posted_ts": 1789173876.0,
   "score": 23,
-  "last_result": "NOT SUBMITTED: unanswered required questions",
-  "last_unanswered": [
-   "School"
-  ]
+  "last_result": "ERROR RuntimeError: no visible submit button",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
