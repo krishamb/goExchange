@@ -1,21 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "company": "zonecompanysoftwareconsultingllc",
-  "title": "Director, Engineering (The Americas) ",
-  "loc": "United States",
-  "desc": "Zone & Company Software Consulting LLC (\u201cZone\u201d) is the ERP-native AI platform for financial operations, purpose-built for organizations running on Oracle NetSuite. We are redefining how finance teams operate by delivering an AI-powered system that automates, connects, and scales financial workflows directly within the ERP. As the AI operating system for finance teams in NetSuite, Zone enables more than 4,500 customers worldwide to run smarter, faster, and with greater accuracy. Our platform spans the full financial lifecycle, including Quote-to-Cash, Procure-to-Pay, Treasury, Payroll Management, and Record-to-Report, eliminating manual processes and unlocking real-time financial intelligence. By embedding intelligence directly into NetSuite, Zone helps finance teams move beyond reactive work to proactive, strategic impact. Learn more at www.zoneandco.com or follow us on LinkedIn: linkedin.com/company/zoneandco . About the Role... Zone & Co is seeking an accomplished Director of Engineering to lead and scale our engineering teams across the Americas, overseeing our Platform Services and AI, Quote-to-Cash and ZoneProcure teams while collaborating with engineering and product counterparts in EMEA and APAC to deliver innovative solutions for our global clients. As a metrics-driven engineering leader with a mindset focused on removing friction and increasing efficiency across the engineering organization, this is a pivotal leadership role requiring a blend of strategic vision, hands-on technical expertise, and a passion for building high-performing teams. You will play a crucial role in shaping our engineering culture, driving AI strategy, technical excellence, and ensuring successful project delivery across regions. If you enjoy fast-paced, innovative environments and working with smart, humble people who want to get things done, please keep reading - Zone is the right place for you. What you'll do... Leadership & Team Development Attract, maintain, lead, mentor, and inspire a diverse team of software engineers across the Americas and EMEA, fostering a culture of innovation, collaboration, and continuous improvement. Lead transforming software delivery at Zone through the agentic SDLC, Spec-Driven Development (SDD), and the AI Software Factory model\u2014pioneering next-generation product and engineering practices. We use Claude, Cursor, and Copilot and are always looking to use the best tools for the work. Collaborate closely with engineering teams in EMEA and APAC to ensure alignment on technical vision, priorities, and delivery. Technical Excellence Oversee the design, development, and deployment of our Zone\u2019s Platform and AI services (Zoe) leveraged across Zone\u2019s product portfolio, our Quote-to-Cash and ZoneProcure products. Provide architectural oversight and hands-on technical leadership across Python, JavaScript/TypeScript, agentic workflows, LLM/agent frameworks (e.g., LangGraph, AgentCore), AI/ML pipelines, and managed AWS services such as AWS Bedrock, ECS, Lambda, Aurora, and DynamoDB. Conduct code reviews, architecture reviews, and offer technical mentorship to maintain high engineering standards. Project & Stakeholder Management Ensure timely, high-quality delivery of software through effective planning and resource management. Collaborate closely with Product, Professional Services, Customer Success, and other cross-functional partners to translate business needs into robust, scalable solutions. Work in close partnership with product teams in EMEA and APAC to ensure alignment of product strategy and execution across regions. Serve as a senior technical contact for strategic customer relationships in the region, ensuring satisfaction and partnership growth. Innovation & Continuous Improvement Champion the use of modern engineering practices, including AI-powered development tools, CI/CD, DevOps, automated testing. Prioritize and drive remediation of technical debt and foundational architecture improvements. Continuously eva",
-  "url": "https://job-boards.greenhouse.io/zonecompanysoftwareconsultingllc/jobs/5434185008",
-  "posted_ts": 1790651804.0,
-  "comp": "$190,000 \u2013 $250,000 ",
-  "where": "remote",
-  "score": 24,
-  "tag": "zonecompanysoftwareconsultingllc_director_en",
-  "last_result": "ultiple time zones? * | Yes | What Country/US-State do you currently reside?* | United States - Cali",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "company": "attentive",
   "title": "Senior Engineering Manager, Platform",
   "loc": "United States",
@@ -113,7 +98,7 @@
   "where": "nyc",
   "score": 17,
   "tag": "garnerhealth_manager_engineering_data_platfo",
-  "last_result": "(no report)",
+  "last_result": ", or other) that substantially limits one or more of your major life activities, including mobility,",
   "last_unanswered": []
  },
  {
@@ -128,7 +113,9 @@
   "where": "nyc",
   "score": 16,
   "tag": "squarespace_vp_of_engineering_product_platfo",
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Are you currently still employed with this company?"
+  ]
  }
 ]

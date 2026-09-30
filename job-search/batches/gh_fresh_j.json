@@ -12,7 +12,9 @@
   "score": 37,
   "tag": "zipcolimited_staff_engineer",
   "found_on": "cache_greenhouse",
-  "domain": "fintech"
+  "domain": "fintech",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -27,7 +29,9 @@
   "score": 17,
   "tag": "lithic_senior_software_engineer_processing",
   "found_on": "greenhouse_board",
-  "domain": "lowlatency"
+  "domain": "lowlatency",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -42,7 +46,9 @@
   "score": 26,
   "tag": "block_staff_software_engineer_financial_plat",
   "found_on": "greenhouse_board",
-  "domain": "lowlatency"
+  "domain": "lowlatency",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -60,7 +66,9 @@
   "domain": "cpp",
   "why": "YugabyteDB SQL engine is C/C++ (Postgres-based distributed SQL); Staff level; Sunnyvale",
   "relisted_on_job_sites": "within 7 days (LinkedIn, date not shown)",
-  "also_in_other_family_queue": false
+  "also_in_other_family_queue": false,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -75,6 +83,8 @@
   "score": 9,
   "tag": "convera_senior_manager_software_engineering_",
   "found_on": "greenhouse_board",
-  "domain": "crossborder"
+  "domain": "crossborder",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
