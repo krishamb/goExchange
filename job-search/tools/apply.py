@@ -241,7 +241,7 @@ CHOICE_RULES=[
  (r"\breact(\.?js)?\b(?!\s+(to|quickly|when)\b)", ["Yes","yes","Expert","Advanced"]),   # applicant: professional React experience
  (r"tn visa|canadian or mexican citizens", ["No","no"]),
  (r"extent of your (use of )?ai|how (often|much) do you use ai (tools )?(in|for) your work|empowering every employee with ai", ["Extensively","Daily","Very often","Frequently"]),   # applicant uses AI tools daily in engineering work (resume)
- (r"time ?zone (are|do) you (currently )?(based|located|reside|live|in)|which time ?zone .{0,30}(based|located|reside|live)", ["Pacific Time (PT)","Pacific Time","Pacific","PT","US/Pacific","PST"]),
+ (r"time ?zone (are|do|will) you (currently |primarily |normally |usually )?(based|located|reside|live|in|work)|which time ?zone .{0,30}(based|located|reside|live)", ["Pacific Time (PT)","Pacific Time","Pacific","PT","US/Pacific","PST"]),
  (r"finra licen[sc]e|series (7|63|65|66|24|57)|securities licen[sc]e", ["None","N/A","No","I do not hold any FINRA licenses"]),
  (r"requires? (\d|two|three|four) days?/? ?(a |per )?week (onsite|on-site|in[- ]office|in person) in (san francisco|sf|palo alto|mountain view|san jose|the bay area|menlo park|redwood city|sunnyvale|santa clara|oakland)", ["Yes","yes"]),   # applicant: any work mode in the Bay Area
  (r"10\+ years in software engineering|10\+ years (of )?(experience )?in software", ["Yes","yes"]),
