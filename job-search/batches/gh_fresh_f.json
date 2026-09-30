@@ -1,32 +1,6 @@
 [
  {
   "ats": "greenhouse",
-  "url": "https://app.careerpuck.com/job-board/prenuvo/job/4731962005?gh_jid=4731962005",
-  "tag": "prenuvo_senior_forward_deployed_ai_engineer",
-  "company": "prenuvo",
-  "title": "Senior Forward Deployed AI Engineer ",
-  "comp": "$145,000-$165,000 ",
-  "loc": "Remote, USA",
-  "posted_ts": 1790273141.0,
-  "score": 16,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
-  "url": "https://www.netskope.com/company/careers/open-positions/?gh_jid=8174989",
-  "tag": "netskope_principal_engineer_secure_ai_gatewa",
-  "company": "netskope",
-  "title": "Principal Engineer, Secure AI Gateway",
-  "comp": null,
-  "loc": "Santa Clara, California, United States",
-  "posted_ts": 1788382496.0,
-  "score": 25,
-  "last_result": "(no report)",
-  "last_unanswered": []
- },
- {
-  "ats": "greenhouse",
   "url": "https://job-boards.greenhouse.io/skhynixamerica/jobs/5413166008",
   "tag": "skhynixamerica_director_of_ai_workload_intel",
   "company": "skhynixamerica",
@@ -35,8 +9,11 @@
   "loc": "San Jose, CA",
   "posted_ts": 1788294854.0,
   "score": 24,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please list your relevant technical skills and competencies for this position.",
+   "In which languages, if any, can you communicate at a professional working profic"
+  ]
  },
  {
   "ats": "greenhouse",
