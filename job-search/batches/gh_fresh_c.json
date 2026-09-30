@@ -9,7 +9,9 @@
   "loc": "United States (Remote);",
   "posted_ts": 1788454014.0,
   "score": 13,
-  "last_result": "ERROR RuntimeError: no visible submit button",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "What is your highest level of school you have completed or the highest degree yo"
+  ]
  }
 ]
