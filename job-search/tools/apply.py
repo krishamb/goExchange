@@ -201,7 +201,7 @@ CHOICE_RULES=[
  (r"(authori[sz]ed|eligible|able|permitted|legally allowed) to (lawfully )?work .{0,80}without (the )?(need (for|of) |requiring |any )?(visa |employer |company |employment )?sponsorship", ["Yes","yes"]),   # "authorized ... without sponsorship" is a Yes, not a sponsorship request
  (r"(require|need)\b.{0,80}\bsponsor", ["No","no"]),   # any "will you require ... to sponsor" question, before rules that key on "employment authorization"
  (r"minimum (legal )?age|legal working age|(18|eighteen) (years of age|years old) or older|at least (18|eighteen)", ["Yes","yes"]),   # applicant: age 50
- (r"what state (will|do|would) you (be )?(based|live|reside|work)|state (of|you) (residence|reside)|which state (will|do|are) you|in which state you (will )?(reside|live|work)", ["California","CA"]),   # Santa Clara, California
+ (r"what state (will|do|would) you (currently )?(be )?(based|live|reside|work)|(which|what) state do you (currently )?(live|reside)|state (of|you) (residence|reside)|which state (will|do|are) you|in which state you (will )?(reside|live|work)", ["California","CA"]),   # Santa Clara, California
  (r"when would you be available to relocate|available to relocate", ["October 2026","September 2026","Immediately","Now"]),   # already lives in the Bay Area; available immediately
  (r"interview process .{0,80}(align|work) with your (availability|timeline)|timeline align with your availability", ["Yes","yes"]),
  (r"(professional|production|hands-on) (python|rust|c\+\+|go|golang|java|sql)|(python|rust|c\+\+|golang|sql|kubernetes|aws|gcp|terraform|kafka|pytorch|llm|rag) (development )?experience", ["Yes","yes"]),   # all on the resume
