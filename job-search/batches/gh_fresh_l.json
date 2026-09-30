@@ -9,8 +9,10 @@
   "geo": "Remote US",
   "age": 3,
   "answers": {},
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which of the following best describes how you use AI tools today?"
+  ],
   "resubmit": true,
   "correction_of": "coinbase_staff_software_engineer_platform_financial_engineer"
  },
@@ -24,8 +26,10 @@
   "geo": "Remote US",
   "age": 24,
   "answers": {},
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which of the following best describes how you use AI tools today?"
+  ],
   "resubmit": true,
   "correction_of": "coinbase_senior_staff_software_engineer_institutional_exchan"
  },
@@ -39,8 +43,10 @@
   "geo": "Remote US",
   "age": 19,
   "answers": {},
-  "last_result": "(no report)",
-  "last_unanswered": [],
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which of the following best describes how you use AI tools today?"
+  ],
   "resubmit": true,
   "correction_of": "coinbase_senior_staff_software_engineer_platform_iam"
  },
@@ -132,7 +138,9 @@
   "found_on": "linkedin",
   "tag": "ceribell_senior_manager_applied_ai_engineeri_r2",
   "resubmit": true,
-  "correction_of": "ceribell_senior_manager_applied_ai_engineeri"
+  "correction_of": "ceribell_senior_manager_applied_ai_engineeri",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -145,7 +153,9 @@
   "posted_ts": 1790020978.0,
   "score": 21,
   "resubmit": true,
-  "correction_of": "digicert_principal_software_engineer"
+  "correction_of": "digicert_principal_software_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -172,7 +182,9 @@
   "loc": "Remote",
   "posted_ts": 1788969018.0,
   "resubmit": true,
-  "correction_of": "garnerhealth_staff_software_engineer_develop"
+  "correction_of": "garnerhealth_staff_software_engineer_develop",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -183,7 +195,9 @@
   "comp": 231000.0,
   "source": "ATS board",
   "resubmit": true,
-  "correction_of": "chainguard_staff_platform_database_engineer"
+  "correction_of": "chainguard_staff_platform_database_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -192,7 +206,9 @@
   "company": "colab",
   "title": "colab_software_engineering_manager_autoreview",
   "resubmit": true,
-  "correction_of": "colab_software_engineering_manager_autoreview"
+  "correction_of": "colab_software_engineering_manager_autoreview",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -205,7 +221,9 @@
   "posted_ts": 1790370860.0,
   "score": 25,
   "resubmit": true,
-  "correction_of": "didi_staff_principal_ai_transformation_engin"
+  "correction_of": "didi_staff_principal_ai_transformation_engin",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -218,7 +236,9 @@
   "posted_ts": 1789064781.0,
   "score": 22,
   "resubmit": true,
-  "correction_of": "securityscorecard_principal_ai_architect"
+  "correction_of": "securityscorecard_principal_ai_architect",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -245,7 +265,9 @@
   "loc": "San Francisco",
   "posted_ts": 1789838236.0,
   "resubmit": true,
-  "correction_of": "patronusaiinc_member_of_technical_staff_engi"
+  "correction_of": "patronusaiinc_member_of_technical_staff_engi",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -271,7 +293,9 @@
   "comp": 263670.0,
   "source": "ATS board",
   "resubmit": true,
-  "correction_of": "launchdarkly_engineering_manager_cloud_engineeri"
+  "correction_of": "launchdarkly_engineering_manager_cloud_engineeri",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "indeed",
@@ -286,7 +310,9 @@
   "source": "Indeed",
   "email": "amba_rish@hotmail.com",
   "resubmit": true,
-  "correction_of": "singlestore_staff_software_engineer"
+  "correction_of": "singlestore_staff_software_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -303,7 +329,9 @@
   "found_on": "linkedin",
   "tag": "synerg_sr_director_ai_r2",
   "resubmit": true,
-  "correction_of": "synerg_sr_director_ai"
+  "correction_of": "synerg_sr_director_ai",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -316,7 +344,9 @@
   "posted_ts": 1788208576.0,
   "score": 19,
   "resubmit": true,
-  "correction_of": "step_senior_machine_learning_engineer"
+  "correction_of": "step_senior_machine_learning_engineer",
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -327,6 +357,8 @@
   "comp": 403200.0,
   "source": "ATS board",
   "resubmit": true,
-  "correction_of": "elastic_sr_director_enterprise_data"
+  "correction_of": "elastic_sr_director_enterprise_data",
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
