@@ -647,6 +647,11 @@ async def fill_field(page, job, f):
     # 'Have you previously worked for <company>?' is answered by the rules like any question: Yes for the applicant's
     # real past employers (Morgan Stanley, JPMorgan Chase, Bloomberg, ...), No for every other company
     if "linkedin" in low and kind in ("text", "textarea"): return await text_to(P["linkedin"])
+    if kind == "checkbox" and not f.get("opts"):   # some tenants' checkbox labels are not tied to the inputs: read them from the page
+        try:
+            cbs = box.locator('input[type="checkbox"]')
+            f["opts"] = [await input_label(cbs.nth(i)) for i in range(min(await cbs.count(), 12))]
+        except Exception: pass
     if kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid))):   # not the form's 'Language' listbox (id disabilityForm)
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
