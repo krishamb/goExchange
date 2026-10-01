@@ -8,6 +8,27 @@ import json, re, sys, os, time, glob, collections, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
 SC = "/tmp/claude-0/-home-user-goExchange/8d20ffb7-2488-5f8f-a666-35334b9e3ba6/scratchpad"
 sys.path.insert(0, f"{SC}/lead"); import lead_common as L
+ACTIVE_CHECK = True   # confirm each Ashby role is still open on the live board before listing it
+_board_cache = {}
+def _board_open_ids(slug):
+    if slug in _board_cache: return _board_cache[slug]
+    import urllib.request
+    ids = set()
+    try:
+        with urllib.request.urlopen(f"https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true", timeout=20) as r:
+            d = json.loads(r.read())
+        for j in d.get("jobs", []):
+            u = j.get("jobUrl") or ""
+            m = re.search(r"([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})", u)
+            if m: ids.add(m.group(1).lower())
+            if j.get("id"): ids.add(str(j["id"]).lower())
+    except Exception:
+        _board_cache[slug] = None; return None   # board fetch failed: do not drop on a network error
+    _board_cache[slug] = ids; return ids
+def _is_active(company, jid):
+    ids = _board_open_ids(company)
+    if ids is None: return True   # could not check: keep (don't drop good roles on a transient error)
+    return jid in ids
 BRANCH = "claude/ai-founding-engineer-jobs-l1urgc"
 try: SHA = subprocess.check_output(["git", "-C", REPO, "rev-parse", "HEAD"], text=True).strip()
 except Exception: SHA = BRANCH
@@ -52,6 +73,7 @@ for f in sys.argv[1:]:
         j = (jid(x.get("url")) or "").lower()
         if not j or j in seen: continue
         if NEVER.search((x.get("company") or "") + " " + (x.get("title") or "") + " " + (x.get("url") or "")): continue
+        if ACTIVE_CHECK and not _is_active(x.get("company"), j): continue
         if j in DROP or any(a.search(x.get("company", "")) and b.search(x.get("title", "")) for a, b, _ in DROP_RX): continue
         seen.add(j); items.append(x)
 # at most ONE per company, counting real submissions (applicant rule 2026-10-01)
