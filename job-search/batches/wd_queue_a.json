@@ -63,22 +63,6 @@
  },
  {
   "ats": "workday",
-  "company": "Snap",
-  "title": "Staff Software Engineer, Storage and Caching",
-  "loc": "Bellevue, Washington / Seattle, Washington / Santa Monica - 3100 Ocean Park Blvd / San Francisco - 1160 Battery St / Palo Alto - 395 Page Mill Rd",
-  "where": "bay",
-  "url": "https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Bellevue-Washington/Staff-Software-Engineer--Storage-and-Caching_R0046690-1",
-  "posted_days": 5,
-  "tier": 2,
-  "fin": false,
-  "skill_hits": 13,
-  "desc": " Snap Inc is a technology company. We believe the camera presents the greatest opportunity to improve the way people live and communicate. Snap contributes to human progress by empowering people to express themselves, live in the moment, learn about the world, and have fun together. The Company operates Snapchat , a visual messaging app that enhances your relationships with friends, family, and the world, and Specs Inc. , a wholly-owned subsidiary dedicated to making computing more human, in addition to Bitmoji , Saturn, and other digital services. We are looking for an L6 Staff Technical Lead to define the strategy and technical direction for Snap\u2019s Storage, Caching, and Identity infrastructure . In this hands-on leadership role, you will drive high-impact, multi-quarter initiatives; design and operate highly available distributed systems across AWS and GCP; and improve reliability, performance, cost efficiency, and developer experience at scale. You will influence architecture across critical Storage, Caching, User, Friends, and Relationship services , partner broadly across Infrastructure and Product Engineering, mentor engineers, and turn ambiguous technical challenges into durable platforms and executable roadmaps. This is an exciting opportunity to shape how Snap\u2019s Storage & Caching Infrastructure evolves to meet the demands of an AI-first world . If you are passionate about building large-scale distributed systems and foundational infrastructure, we would love to hear from you. What you\u2019ll do Lead the technical direction for Snap\u2019s Service Infrastructure platform, defining multi-quarter and multi-year roadmaps across areas such as service mesh, compute, observability, and adjacent platform capabilities. Design, build, and operate foundational backend infrastructure that powers critical services across Snap with a focus on reliability, scalability, performance, and operational excellence. Act as a hands-on Staff-level tech lead, driving ambiguous and high-impact technical initiatives from concept through architecture, implementation, rollout, and iteration. Partner closely with engineers and leaders across infrastructure and product teams to align on technical direction, priorities, trade-offs, and long-term platform investments. Improve the developer and operator experience for teams building on Snap\u2019s backend platform by creating durable systems, abstractions, and mechanisms that raise engineering velocity and quality at scale. Drive best practices in service reliability, observability, incident response, system performance, and cost efficiency across mission-critical infrastructure. Mentor and uplevel other engineers, provide technical leadership across team boundaries, and help resolve complex technical conflicts to move the organization forward. Help shape how Snap\u2019s infrastructure evolves for an AI-first future, including identifying opportunities where AI can improve platform quality, developer productivity, or operational workflows in a responsible and scalable way. Knowledge, Skills & Abilities Deep experience designing, building, and operating backend services or distributed systems at significant scale. Strong technical leadership skills, with the ability to set vision, ideate high-impact projects, and translate strategy into executable roadmaps. Proven ability to lead complex, cross-functional initiatives over multiple quarters while balancing architectural quality, reliability, and delivery velocity. Strong foundation in system design, including APIs, service architecture, compute platforms, storage concepts, observability, and workflow orchestration. Proven track record of owning highly available, mission-critical systems, including operational readiness, incident response, and systemic improvements. Strong judgment in making technical trade-offs and prioritizing the right long-term platform investments for a large engineering organization. Excellent collaboration and communication skills, with the ability ",
-  "tag": "wd_snap_staff_software_engineer_storage_and_cac",
-  "found_on": "workday_api",
-  "req_id": "R0046690"
- },
- {
-  "ats": "workday",
   "company": "Workday",
   "title": "Sr. Principal Architect - Observability",
   "loc": "USA, CA, Pleasanton",
@@ -912,22 +896,6 @@
   "tag": "wd_target_lead_ai_engineer_advanced_ai_applied_",
   "found_on": "workday_api",
   "req_id": "R0000441559",
-  "src": "sweep"
- },
- {
-  "ats": "workday",
-  "company": "Snap",
-  "title": "Staff Software Engineer, Core Infrastructure",
-  "loc": "Bellevue, Washington / Seattle, Washington / San Francisco, California / Palo Alto, California / Los Angeles, California",
-  "where": "bay",
-  "url": "https://wd1.myworkdaysite.com/recruiting/snapchat/snap/job/Bellevue-Washington/Staff-Software-Engineer--Core-Infrastructure_R0046092-1",
-  "posted_days": 5,
-  "tier": 2,
-  "fin": false,
-  "skill_hits": 14,
-  "tag": "wd_snap_staff_software_engineer_core_infrastruc",
-  "found_on": "workday_api",
-  "req_id": "R0046092",
   "src": "sweep"
  },
  {
