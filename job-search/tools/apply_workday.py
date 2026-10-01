@@ -262,6 +262,7 @@ DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
 HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
 AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|(did|have) you use(d)? (any )?ai", re.I)
+AI_CONSENT = re.compile(r"transcri|note-?tak|summar(y|ies) of (your|the) interview|record(ing)? (of )?(your|the) interview|interview (notes|recordings?)", re.I)   # the company's own AI note-taker: a consent the rules answer
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
 # are not in the profile, and the generic e-mail / name rules must never answer them with his personal details
 FORMER_JOB_Q = re.compile(r"\b(work|company|business|corporate|employee|office|former|previous|prior)\b.{0,20}\be-?mail|\be-?mail\b.{0,40}\b(while|when)\b|\bwas your\b.{0,30}\b(e-?mail|employee|id|manager|supervisor)|(former|previous|prior) (employee|worker) (id|number)|employee (id|number)", re.I)
@@ -702,7 +703,7 @@ async def fill_field(page, job, f):
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
     # ---- everything else from the rules
-    if AI_Q.search(key): return kept_unverified()   # AI-use / AI-agent questions are the applicant's to answer
+    if AI_Q.search(key) and not AI_CONSENT.search(key): return kept_unverified()   # AI-use / AI-agent questions are the applicant's to answer
     if FORMER_JOB_Q.search(key) and kind in ("text", "textarea"):
         if cur and norm(cur) in {norm(P["email"]), norm(P["name"]), norm(FIRST), norm(LAST)}:   # an earlier run's generic answer: remove it
             await fill(page, box.locator("textarea, input").first, ""); job.report.setdefault("cleared", []).append(key[:120])
