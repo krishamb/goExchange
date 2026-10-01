@@ -183,19 +183,6 @@
  },
  {
   "ats": "workday",
-  "tag": "wd_geico_senior_manager_staff_software_engineer",
-  "url": "https://geico.wd1.myworkdayjobs.com/External/job/Palo-Alto-CA/Senior-Manager--Staff-Software-Engineering---Applied-AI_R0066079",
-  "company": "GEICO",
-  "title": "Senior Manager, Staff Software Engineering - Applied AI",
-  "where": "Palo Alto, CA",
-  "posted": "2026-09-29 (Workday, 1 day)",
-  "note": "workday: geico.wd1 / External, R0066079. $150K-$300K. Leads the Applied AI foundational platform team. The contract regex hit is a false positive (the 'hourly rate/annual salary' boilerplate). GEICO DE AI Applications R0065258 is already queued (indeed_01), which is a different req.",
-  "fin": true,
-  "prior": 0,
-  "src": "resolved"
- },
- {
-  "ats": "workday",
   "tag": "wd_first_american_engineering_manager_ai_native",
   "url": "https://firstam.wd1.myworkdayjobs.com/firstamericancareers/job/USA-California-Santa-Ana/Engineering-Manager--AI-Native-Platform----Remote_R057898-1",
   "company": "First American",
