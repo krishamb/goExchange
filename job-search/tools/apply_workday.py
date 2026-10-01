@@ -280,6 +280,9 @@ def usable(texts, label):
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
 BAD_SAVED = re.compile(r"\bwith (company |employer |visa )?sponsorship|\b(will|would|do) (need|require) (visa |employer |company )?sponsorship|\brequire[sd]? sponsorship", re.I)
+MULTI_ALL = re.compile(r"select all (the )?(days|shifts)|(days|shifts) (you are|you're) (able|available) to work", re.I)
+WEEKDAYS = re.compile(r"monday|tuesday|wednesday|thursday|friday|weekdays?|mon-fri|monday ?- ?friday", re.I)
+DAY_SHIFTS = re.compile(r"\bday\b|first|1st|morning|business hours|standard|regular|daytime|8 ?(am|a\.m\.)|9 ?(am|a\.m\.)", re.I)
 NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
@@ -674,6 +677,14 @@ async def fill_field(page, job, f):
             await fill(page, box.locator("textarea, input").first, ""); job.report.setdefault("cleared", []).append(key[:120])
             return None
         return kept_unverified()
+    if kind == "checkbox" and f["nbox"] > 1 and MULTI_ALL.search(key):   # "select all days / shifts you are able to work": tick every weekday / day shift
+        want = WEEKDAYS if re.search(r"\bdays?\b", key, re.I) else DAY_SHIFTS
+        cbs = box.locator('input[type="checkbox"]'); ticked = []
+        for i in range(await cbs.count()):
+            t = await input_label(cbs.nth(i))
+            if want.search(t or "") and not re.search(r"night|overnight|weekend|saturday|sunday|graveyard|third|3rd|second|2nd|evening|swing", t or "", re.I):
+                if await set_check(cbs.nth(i), True): ticked.append(t)
+        return keep("; ".join(ticked)) if ticked else None
     if kind in ("listbox", "radio", "prompt") or (kind == "checkbox" and f["nbox"] > 1):
         prefs = prefs_for(key)
         if prefs == ["__ASK__"]: return None
