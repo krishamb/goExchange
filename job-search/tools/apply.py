@@ -273,6 +273,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"experience (in|within|with|working in) (the )?(staffing|recruit(ing|ment)|recruitment|staffing[ /]recruit\w*|agency) (industry|sector|space|field|business)|worked (in|within) (the )?(staffing|recruit\w*) (industry|sector|field)|(staffing|recruit\w*) (industry|sector) experience", ["No","no","No, I do not","I do not have"]),   # applicant has no staffing/recruitment-industry experience (fintech/AI background); honest No
  (r"how soon .{0,20}available to start|when (can|could|are) you (available|able) to start|availability to start|earliest (start|available) date|notice period", ["Immediately","Immediate","As soon as possible","ASAP","Right away","Within the next 30 days","Within 30 days","2 weeks","Two weeks"]),   # applicant gives ~2 weeks' notice (current CTO)
  (r"privacy notice|privacy (policy|statement) (to|for) (applicants|candidates)", ["Acknowledged","I acknowledge","Acknowledge","Yes","I agree","I have read","I consent","Consent","Confirmed","Confirm"]),
  (r"talent community|(receive|get) (information|communications|updates|emails) about (future |other )?(job )?(opportunities|positions|openings|roles)", ["Yes, I would like to receive communications","Yes","yes","I agree","I consent","Consent"]),   # same answer as the future-positions question elsewhere
