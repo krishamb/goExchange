@@ -274,6 +274,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"experience (using|with) ai[- ]assisted (development |dev |coding )?tools|github copilot|\bcursor\b|ai[- ]assisted (coding|development|dev)|ai (coding|development|dev|pair[- ]?programming) tools|use ai[- ]assisted (development|coding) tools", ["Yes","yes"]),   # applicant uses agentic engineering / AI dev tools daily (CTO building AI)
  (r"would you like to receive (mobile )?text|(text message|sms|mobile text).{0,40}(opt-?in|opt-?out|updates|consent|recruiting)|opt-?in below", ["Opt-Out from receiving text messages from Walmart","Opt-Out from receiving text messages","Opt-Out","Opt Out","Decline","No","Do not opt-in"]),   # applicant declines SMS/text recruiting messages
  (r"(select|what is) your age category|^age category|please select your age", ["18 years of age and Over","18 years or older","18 and over","18 or older","Over 18","18+","Yes"]),   # applicant is over 18 (age-eligibility, not a demographic band)
  (r"associate status\s*/?\s*affiliation|(walmart )?associate status|associate affiliation|employee status\s*/?\s*affiliation", ["Have never been an employee of Walmart Inc or any of its subsidiaries","Have never been an employee","Never been an employee","Have never been","I have never","None of the above","No"]),   # never worked at Walmart
