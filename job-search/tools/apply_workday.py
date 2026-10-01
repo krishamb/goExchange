@@ -602,7 +602,7 @@ async def date_field(page, box, lab):
     except Exception:
         today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-7))).date()
     if re.search(r"(desired|preferred|earliest|available|availability|possible) (start|starting) date|start date|date (you are|you\'re) available", (lab or "").lower()):
-        d = today + datetime.timedelta(days=14)   # two weeks after an offer
+        d = today + datetime.timedelta(days=3)   # applicant (2026-10-01): available immediately; a few days out keeps the date valid
         return await set_date(page, box, d.month, d.day, d.year)
     if not TODAY_Q.search((lab or "").strip().lower()): return None
     d = today
