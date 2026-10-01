@@ -277,6 +277,7 @@ def usable(texts, label):
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
+BAD_SAVED = re.compile(r"\bwith (company |employer |visa )?sponsorship|\b(will|would|do) (need|require) (visa |employer |company )?sponsorship|\brequire[sd]? sponsorship", re.I)
 NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
@@ -602,7 +603,8 @@ async def fill_field(page, job, f):
         if cur and norm(cur) == norm(v): return keep(cur)
         return keep(v) if await fill(page, box.locator("textarea, input").first, v) else None
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
-        if cur and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict, exact=(kind == "prompt")) is not None: return keep(cur)
+        # a draft's saved answer is kept only when it is not one the applicant would never give (needing sponsorship)
+        if cur and not BAD_SAVED.search(cur) and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict, exact=(kind == "prompt")) is not None: return keep(cur)
         r = lambda texts: rank(texts, prefs, mlabel or key, strict)
         if kind == "listbox":
             v, texts = await listbox_choose(page, btn, r, typeahead)
@@ -691,7 +693,7 @@ async def fill_field(page, job, f):
         if v is None and f["req"] and not cur:
             v = tech_answer(key)   # apply.py's fallback for technical questions (None for personal ones)
             if v: job.report.setdefault("tech_fallback", []).append(key[:120])
-        if kind == "textarea" and cur: return keep(cur)   # a note already written is kept
+        if kind == "textarea" and cur and not v: return keep(cur)   # a note already written is kept unless the rules give the answer
         if v: return await text_to(v)
         return kept_unverified()
     if kind == "date":
