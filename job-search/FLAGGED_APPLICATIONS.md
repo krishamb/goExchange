@@ -91,6 +91,9 @@ account; tell them you are a US citizen if they reply).
 - Fiserv - Senior Full-Stack Software Engineer (Sunnyvale, R-10392939), Workday: the application is saved as a draft
   under ambarishkrishnamurthy@gmail.com but Fiserv requires an online assessment test before it can be submitted.
   Sign in at fiserv.wd5.myworkdayjobs.com, take the assessment, then submit. Removed from the automated queue.
+- Fiserv - Manager, Engineering (AI/ML) (Sunnyvale, California), Workday: draft saved under ambarishkrishnamurthy@gmail.com; Fiserv requires its online assessment before submitting. https://fiserv.wd5.myworkdayjobs.com/EXT/job/Sunnyvale-California/Manager--Engineering--AI-ML-_R-10365115-1
+- Fiserv - Director, AI - Cyber Security I (Alpharetta, Georgia / Columbus, Ohio / Berkeley Heights, New Jersey), Workday: draft saved under ambarishkrishnamurthy@gmail.com; Fiserv requires its online assessment before submitting. https://fiserv.wd5.myworkdayjobs.com/EXT/job/Alpharetta-Georgia/AI---Process-Engineering---Sr-Advisor--I_R-10398810-1
+- Fiserv - DevOps Engineering Manager (Sunnyvale, California), Workday: draft saved under ambarishkrishnamurthy@gmail.com; Fiserv requires its online assessment before submitting. https://fiserv.wd5.myworkdayjobs.com/EXT/job/Sunnyvale-California/DevOps-Engineering-Manager_R-10392874
 
 ## Answered on your behalf: please be aware (2026-09-30)
 
