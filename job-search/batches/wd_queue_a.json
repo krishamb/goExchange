@@ -293,22 +293,6 @@
  },
  {
   "ats": "workday",
-  "company": "LPL Financial",
-  "title": "VP, Infrastructure Engineering Manager",
-  "loc": "Fort Mill/Charlotte / New York / San Diego / Austin TX",
-  "where": "nyc",
-  "url": "https://lplfinancial.wd1.myworkdayjobs.com/External/job/Fort-MillCharlotte/VP--Infrastructure-Engineering-Manager_R-052625",
-  "posted_days": 6,
-  "tier": 1,
-  "fin": true,
-  "skill_hits": 9,
-  "tag": "wd_lpl_financial_vp_infrastructure_engineering_",
-  "found_on": "workday_api",
-  "req_id": "R-052625",
-  "src": "sweep"
- },
- {
-  "ats": "workday",
   "company": "Guidewire",
   "title": "Staff Software Engineer",
   "loc": "United States - San Mateo, CA",

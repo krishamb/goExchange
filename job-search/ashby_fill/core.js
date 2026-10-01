@@ -11,13 +11,14 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-01.1';
+const VERSION = '2026-10-01.2';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const clean = s => (s || '').replace(/\s+/g, ' ').replace(/[✱*]/g, '').trim();
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // ---------------- storage (Tampermonkey storage when available, else this site's localStorage) ----------------
 const HAS_GM = typeof GM_getValue === 'function' && typeof GM_setValue === 'function';
+const W = (typeof unsafeWindow !== 'undefined' && unsafeWindow) || window;   // the page window (for window.opener)
 const S = {
   get(k, d) {
     try {
@@ -429,8 +430,8 @@ async function fillForm(opts = {}) {
 }
 
 // ---------------- submit (batch mode only, after the applicant confirmed the batch) ----------------
-const OK_RX = /thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was |is )?(submitted|received|sent|complete)|we('ve| have) received your application|successfully submitted|you're all set/i;
-const SPAM_RX = /possible spam|flagged as (possible )?spam|pause (your )?browser extensions|different (network )?connection|unusual activity|could not be submitted/i;
+const OK_RX = /thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was |is )?(successfully )?(submitted|received|sent|complete)|we('ve| have) received your application|successfully submitted|you're all set/i;
+const SPAM_RX = /possible spam|flagged as (possible )?spam|pause (your )?(browser extensions|ad ?blockers)|different (network )?connection|unusual activity|could not verify|verify (that )?you are (a )?human/i;
 function captchaChallenge() {
   return [...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"], iframe[src*="hcaptcha"], iframe[title*="challenge" i]')].some(f => { const r = f.getBoundingClientRect(); return r.width > 50 && r.height > 50 && getComputedStyle(f).visibility !== 'hidden'; });
 }
@@ -518,7 +519,7 @@ function report(q, item, res) {
   q.results = q.results || {};
   q.results[item.id] = Object.assign({ t: item.t, c: item.c, u: item.u, at: Date.now() }, res);
   S.set(Q_KEY, q);
-  try { if (window.opener) window.opener.postMessage({ akf: 'result', id: item.id, res: q.results[item.id] }, '*'); } catch (e) {}
+  try { if (W.opener) W.opener.postMessage({ akf: 'result', id: item.id, res: q.results[item.id] }, '*'); } catch (e) {}
 }
 async function batchStep(q) {
   const item = q.items[q.i];
@@ -532,11 +533,24 @@ async function batchStep(q) {
   else if (q.auto && rep.ready && !captchaChallenge()) { status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm(); }
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
   res.answered = rep.filled.length;
+  if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after Ashby confirms
+    status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + '\n\nWhen you click Submit Application and Ashby confirms, the next job opens by itself.');
+    let skipped = false;
+    buttons([['Skip this job', () => { skipped = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skipped = true; }]]);
+    const t0 = Date.now();
+    while (!skipped && Date.now() - t0 < 30 * 60000) {
+      await sleep(1000);
+      const body = document.body.innerText || '';
+      if (OK_RX.test(body)) { res = { status: 'submitted', why: (body.match(OK_RX) || [''])[0], by: 'you', answered: rep.filled.length }; break; }
+      if (SPAM_RX.test(body)) { res = { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0], by: 'you', answered: rep.filled.length }; break; }
+    }
+    if (skipped && res.status !== 'submitted') res = { status: 'skipped', why: 'skipped by you', answered: rep.filled.length };
+  }
   report(q, item, res);
   q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
-  if (q.blocks >= 2) { q.stopped = "Ashby's spam check rejected two submissions in a row"; S.set(Q_KEY, q); }
-  if (res.status === 'captcha' || res.status === 'needs' && !q.auto) { status(summary(rep) + `\n\n${res.why}`); buttons([['Next job', () => advance(q), true], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); }]]); return true; }
-  await sleep(2500);
+  if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
+  S.set(Q_KEY, q);
+  await sleep(2000);
   advance(q);
   return true;
 }
@@ -550,14 +564,15 @@ function advance(q) {
 function finish(q) {
   const r = Object.values(q.results || {});
   const by = s => r.filter(x => x.status === s);
-  const lines = [`Batch "${q.name}" ${q.stopped ? 'stopped: ' + q.stopped : 'finished'}.`, `Submitted: ${by('submitted').length}`, `Need you: ${by('needs').length + by('captcha').length + by('unknown').length}`, `Blocked by Ashby: ${by('blocked').length}`, `Closed: ${by('closed').length}`];
-  const todo = r.filter(x => /needs|captcha|unknown|blocked/.test(x.status));
+  const lines = [`Batch "${q.name}" ${q.stopped ? 'stopped: ' + q.stopped : 'finished'}.`, `Submitted: ${by('submitted').length}`, `Need you: ${by('needs').length + by('captcha').length + by('unknown').length}`, `Skipped: ${by('skipped').length}`, `Blocked by Ashby: ${by('blocked').length}`, `Closed: ${by('closed').length}`];
+  const left = q.items.slice(q.i + (q.stopped ? 1 : 0)).filter(x => !(q.results || {})[x.id]).map(x => ({ c: x.c, t: x.t, u: x.u, status: 'not started' }));
+  const todo = r.filter(x => /needs|captcha|unknown|blocked|skipped/.test(x.status)).concat(q.stopped ? left : []);
   status(lines.join('\n') + (todo.length ? '\n\nOpen these to finish (the form fills itself):\n' : ''));
   const st = ui().querySelector('#akf-status');
   for (const x of todo) { const a = document.createElement('a'); a.href = x.u.replace(/\/$/, '') + '/application'; a.target = '_blank'; a.textContent = `• ${x.c} - ${x.t} (${x.status}${x.why ? ': ' + x.why.slice(0, 50) : ''})`; a.style.cssText = 'display:block;color:#93c5fd'; st.appendChild(a); }
   buttons([['Copy results', () => navigator.clipboard.writeText(JSON.stringify(r, null, 1)), true], ['Clear batch', () => { S.set(Q_KEY, null); status('Cleared.'); buttons([]); }]]);
   q.done = true; S.set(Q_KEY, q);
-  try { if (window.opener) window.opener.postMessage({ akf: 'done', results: q.results }, '*'); } catch (e) {}
+  try { if (W.opener) W.opener.postMessage({ akf: 'done', results: q.results }, '*'); } catch (e) {}
 }
 function readHashQueue() {
   const m = location.hash.match(/akf=([A-Za-z0-9_\-]+)/);
