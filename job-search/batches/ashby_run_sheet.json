@@ -39,6 +39,19 @@
   "flag": ""
  },
  {
+  "id": "ef398821-8ee9-4f7c-824b-fac83d0a3023",
+  "u": "https://jobs.ashbyhq.com/Commure/ef398821-8ee9-4f7c-824b-fac83d0a3023",
+  "t": "Senior Engineering Manager, Financial Data, Reporting & Analytics",
+  "c": "Commure",
+  "loc": "Mountain View, CA; Los Angeles, CA; San Francisco, CA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "$240K \u2013 $275K \u2022 Offers Equity",
+  "ts": 1790381405,
+  "fit": 78,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "f13ca084-3463-433c-a72d-2d3616b6239c",
   "u": "https://jobs.ashbyhq.com/hims-and-hers/f13ca084-3463-433c-a72d-2d3616b6239c",
   "t": "Sr. Director of Machine Learning",
@@ -230,6 +243,19 @@
   "comp": "$200K - $270K",
   "ts": 1790264680,
   "fit": 71,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "8f7b0733-dda2-459b-bfc0-7cc428036701",
+  "u": "https://jobs.ashbyhq.com/paxoslabs/8f7b0733-dda2-459b-bfc0-7cc428036701",
+  "t": "Senior Backend Engineer",
+  "c": "Paxos Labs",
+  "loc": "In-Person or Remote | NYC Preferred ",
+  "mode": "Remote option",
+  "comp": "",
+  "ts": 1790367821,
+  "fit": 84,
   "p": [],
   "flag": ""
  },
@@ -684,6 +710,19 @@
   "mode": "Hybrid \u00b7 days not stated",
   "comp": "$221K \u2013 $275K \u2022 Offers Equity",
   "ts": 1790109533,
+  "fit": 72,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "e6ea501b-70dc-4d50-8e53-68ec87139b6d",
+  "u": "https://jobs.ashbyhq.com/clickhouse/e6ea501b-70dc-4d50-8e53-68ec87139b6d",
+  "t": "Senior Backend Engineer - ClickPipes Platform",
+  "c": "Clickhouse",
+  "loc": "United States",
+  "mode": "Remote (US)",
+  "comp": "$147K \u2013 $238K \u2022 Offers Equity \u2022 Multiple",
+  "ts": 1790161228,
   "fit": 72,
   "p": [],
   "flag": ""
