@@ -13,7 +13,9 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 2,
-  "skill_hits": 10
+  "skill_hits": 10,
+  "last_result": "(no report)",
+  "last_unanswered": []
  },
  {
   "ats": "greenhouse",
@@ -29,6 +31,8 @@
   "found_on": "greenhouse_api",
   "tier": 2,
   "dom": 1,
-  "skill_hits": 13
+  "skill_hits": 13,
+  "last_result": "(no report)",
+  "last_unanswered": []
  }
 ]
