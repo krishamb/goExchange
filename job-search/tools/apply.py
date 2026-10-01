@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"typ(e|ing) (in )?(my |your )?initials\b.{0,120}(signature|sign|agree|acknowledg|consent|nda|non-?disclosure)|by typing (my|your) initials|initials? (to|and) (sign|agree|acknowledg|indicate)|enter your initials", first[0].upper()+last[0].upper()),   # type-to-sign acknowledgement that asks for INITIALS (e.g. applicant NDA)
  (r"name of the entity for which you will be performing the outside activity|outside (business )?activity.{0,80}(name of the entity|description)", "N/A (no outside business activities)"),
  (r"^(?!.*e-?mail)(.*\b(street|residential|home|permanent|mailing|physical|current) (residence )?(street )?address\b|^address$|^what is your (home |current )?address)", P.get("street","")+", Santa Clara, CA "+P.get("zip","95054") if P.get("street") else P["location"]),
  (r"^(street )?address( line)? ?1$|^street( address)?$|^address line one$", P.get("street") or "Santa Clara, California, United States"),
