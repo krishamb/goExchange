@@ -277,14 +277,17 @@ def usable(texts, label):
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
+NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b|\bwithout\b", re.I)
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
     'Not a protected veteran' can never match inside 'I identify as a veteran, just not a protected veteran').
     exact: the option must equal the preference (search prompts, where the rules' 'Engineering' must never pick
     'Aerospace Engineering')."""
-    u = usable(texts, label)
+    u0 = usable(texts, label)
     strict = bool(VET_Q.search(label or "")) if strict is None else strict
     for p in prefs or []:
+        # a positive preference ('Agree', 'Yes') never picks a negated option ('No, I do not agree')
+        u = [t if not (t and NEG_OPT.search(t) and not NEG_OPT.search(p)) else "" for t in u0]
         if exact: k = next((i for i, t in enumerate(u) if t and norm(t) == norm(p)), None)
         elif strict: k = next((i for i, t in enumerate(u) if t and _match(t, p, True)), None)
         else: k = best_index(u, p)
