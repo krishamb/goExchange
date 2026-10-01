@@ -273,6 +273,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"how soon .{0,20}available to start|when (can|could|are) you (available|able) to start|availability to start|earliest (start|available) date|notice period", ["Within the next 30 days","Within 30 days","2 weeks","Two weeks","1-2 weeks","Within the next month","30 days","Immediately","As soon as possible"]),   # applicant gives ~2 weeks' notice (current CTO)
  (r"privacy notice|privacy (policy|statement) (to|for) (applicants|candidates)", ["Acknowledged","I acknowledge","Acknowledge","Yes","I agree","I have read","I consent","Consent","Confirmed","Confirm"]),
  (r"talent community|(receive|get) (information|communications|updates|emails) about (future |other )?(job )?(opportunities|positions|openings|roles)", ["Yes, I would like to receive communications","Yes","yes","I agree","I consent","Consent"]),   # same answer as the future-positions question elsewhere
  (r"citizen or (a )?permanent resident of (one of )?(these|the following|any of the following) (nations|countries|regions)|(citizen|national|resident) of (cuba|iran|north korea|syria).{0,80}\?", ["Does Not Apply","Does not apply","None of the above","None of these","None","No","Not applicable","N/A"]),   # US citizen; export-control country list
