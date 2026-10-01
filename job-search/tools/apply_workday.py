@@ -719,6 +719,10 @@ async def fill_field(page, job, f):
         return keep(t) if await set_check(cb, True) else None
     if kind in ("text", "textarea"):
         v = text_for(key)
+        if re.search(r"twitter|facebook|instagram|tiktok|\bx\.com\b|^x( profile| account| url)?\b", low) or re.search(r"twitter|facebook", fid, re.I):
+            # URL-only social fields: never 'N/A' (Workday rejects it as an invalid URL); leave empty, and clear a non-URL value
+            if cur and not re.match(r"https?://", cur): await fill(page, box.locator("textarea, input").first, ""); job.report.setdefault("cleared", []).append(key[:120])
+            return None if not (cur and re.match(r"https?://", cur)) else keep(cur)
         if v is None and f["req"] and not cur:
             v = tech_answer(key)   # apply.py's fallback for technical questions (None for personal ones)
             if v: job.report.setdefault("tech_fallback", []).append(key[:120])
