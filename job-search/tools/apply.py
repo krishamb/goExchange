@@ -280,6 +280,12 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"disciplined by an administrative agency|subject of an administrative order", ["No","no"]),
+ (r"fiduciary appointments?|executor, personal representative, administrator, guardian, trustee", ["No","no"]),
+ (r"(position|role) on a political campaign|political campaign", ["No","no"]),
+ (r"senior executive of a customer, potential customer or third[- ]party vendor .{0,20}refer you|did a senior executive .{0,80}refer you", ["No","no"]),
+ (r"family relationship .{0,200}(close personal contact|employees, contingent resources|senior executive)", ["No","no"]),
+ (r"(currently have,? or plan to have,? any employment or other work that you intend to continue|employment or other work .{0,40}continue if you accept)", ["No","no"]),
  (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*\b(worked|been employed) (previously|before|ever|in the past) (as|for|at|with) .{0,40}\b(associate|employee|team member|staff member)", ["No","no"]),   # never worked for the company he applies to (past employers exempt)
  (r"professional (state[- ]issued )?licen[cs]e in the (legal|banking|financial|insurance)|state[- ]issued licen[cs]e", ["No","no"]),   # no professional licenses (never FINRA-registered)
  (r"offer of employment .{0,120}contingent upon|contingent upon the outcome of a (consumer|background) (report|check)", ["I have read and acknowledged","I have read and acknowledge","I acknowledge","Acknowledged","Yes, I understand","Yes"]),
