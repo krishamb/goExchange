@@ -73,16 +73,17 @@ details.paste textarea { width: 100%; min-height: 90px; margin-top: 8px }
 <div class="wrap">
   <header>
     <h1>Ashby Run Sheet</h1>
-    <p class="lede">Every role here passed your rules: US remote, SF Bay Area hybrid or NYC hybrid with fewer than 3 required office days, no on-site, no investment banks, no companies you excluded, one role per company. <strong>Auto-apply</strong> fills <em>and submits</em> every form it can answer completely — you only step in for the few it can't (a captcha, or an "are you an AI agent?" question). Set up once below, then press one button.</p>
+    <p class="lede">Every role here is <strong>open right now</strong> (checked live) and passed your rules: US remote, SF Bay Area / NYC hybrid under 3 office days, no on-site, no excluded companies, one role per company. The filler types all your answers <em>and submits</em> each form; you only step in for a captcha or an "are you an AI agent?" question.</p>
+    <p class="note" style="margin-top:8px;padding:10px 12px;border:1px solid var(--go);border-radius:8px;background:var(--soft);color:var(--ink)"><strong>Using another computer?</strong> This web link works on <strong>any</strong> computer or browser — it isn't tied to Claude. Bookmark it. The only thing stored per-computer is your resume + phone (for privacy they can't travel in a public link), so you do the 2-minute setup below <strong>once on each computer</strong>. After that, applying is just: open a job → click your <em>Fill Ashby</em> bookmark.</p>
     <div class="stats" id="stats"></div>
     <div class="row" style="margin-top:14px"><button class="go" id="apply-all" style="font-size:15px;padding:12px 18px">Auto-apply all open roles</button><span class="note" id="apply-all-note"></span></div>
   </header>
 
   <section class="setup" aria-labelledby="setup-h">
-    <h2 id="setup-h">Simplest: the bookmark (no extension)</h2>
-    <p class="note">Works on any computer, nothing to install. It fills <em>and submits</em> one application per click.</p>
+    <h2 id="setup-h">Setup — do this once on each computer (2 minutes)</h2>
+    <p class="note">No install needed. After setup, each job is just 2 clicks: open it, click the bookmark (it fills <em>and</em> submits).</p>
     <ol class="steps">
-      <li><strong>Enter your details</strong><p>Type your Gmail and phone below. (Your resume is asked for once, the first time you use it on an Ashby page.)</p>
+      <li><strong>Enter your details</strong><p>Type your Gmail and phone below. (Your resume is asked for once — the first time you click the bookmark on an Ashby page.)</p>
         <div class="row" style="margin-top:6px">
           <input id="bm-email" type="email" placeholder="you@gmail.com" autocomplete="email">
           <input id="bm-phone" type="text" placeholder="650 555 0100" autocomplete="tel">
