@@ -567,10 +567,12 @@ async def set_date(page, box, month=None, day=None, year=None):
     try: shown = [t.strip() for t in await box.locator('[data-automation-id$="-display"]').all_inner_texts()]
     except Exception: shown = []
     return "/".join(shown) if shown and all(t.isdigit() for t in shown) else None
+TODAY_Q = re.compile(r"today|signature date|date signed|^date\*?$|^signed on|date of signature")
 async def date_field(page, box, lab):
-    """Today's date on signature / 'today's date' fields (Self Identify form); any other date is left for the applicant."""
-    if not re.search(r"today|signature date|date signed|^date$|^signed on|date of signature", (lab or "").strip().lower()): return None
-    d = datetime.date.today()
+    """Today's date on signature / 'today's date' fields (Self Identify form); any other date is left for the applicant.
+    Workday checks it against its own clock (UTC: 'Enter today's date' after midnight UTC), not the browser's."""
+    if not TODAY_Q.search((lab or "").strip().lower()): return None
+    d = datetime.datetime.now(datetime.timezone.utc).date()
     return await set_date(page, box, d.month, d.day, d.year)
 
 DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i (have|had) (a |an )?(disabilit|relative|family|conflict|financial|non-?compete|criminal|conviction)|^\s*i have a disability", re.I)   # 'Yes, I have read the Terms' is an acknowledgement, not a disclosure
@@ -690,9 +692,9 @@ async def fill_field(page, job, f):
         if v: return await text_to(v)
         return kept_unverified()
     if kind == "date":
-        if cur: return keep(cur)
+        if cur and not TODAY_Q.search(key.strip().lower()): return keep(cur)   # a signature date kept from a draft goes stale overnight: always today's
         v = await date_field(page, box, key)
-        return keep(v) if v else None
+        return keep(v) if v else (keep(cur) if cur else None)
     return cur or None
 
 async def fill_page(page, job):
