@@ -277,7 +277,7 @@ def usable(texts, label):
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
-NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b|\bwithout\b", re.I)
+NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
     'Not a protected veteran' can never match inside 'I identify as a veteran, just not a protected veteran').
