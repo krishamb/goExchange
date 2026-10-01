@@ -273,6 +273,7 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"are you a referral of (a |an )?(current |existing |potential )?(senior commercial person|scp\b|government official|senior government|merchant|third party|client|customer)", ["No","no"]),   # not referred by anyone
  (r"(engaged|involved|participat\w*) in any (outside|additional|other) (employment|activit|business)|outside (employment|activit\w*|business\w*) .{0,60}(continue|maintain|keep) .{0,30}(if|once|after) (you are )?hired", ["No","no"]),   # consistent with the outside-activities text answer ("None")
  (r"provide verification of (your )?identity|verify your identity (upon|at) hire", ["Yes","yes"]),
  (r"(member of|serving in|in) the (u\.?s\.? )?(national guard|reserves?)\b|national guard or reserves?", ["No","no"]),
