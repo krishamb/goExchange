@@ -1376,43 +1376,47 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not got and await is_required(h): report["unanswered"].append({"type":"select","label":lab[:160],"options":(await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())"))[:12]})
                     elif await is_required(h): report["unanswered"].append({"type":"select","label":lab[:160],"options":(await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())"))[:12]})
                 except Exception: pass
-            # react-select style comboboxes (Greenhouse/Ashby)
-            combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"], input[id^="react-select-"][id$="-input"]:not([class*="select__input"])')
-            n=await combos.count()
-            for i in range(n):
-                h=combos.nth(i)
-                try:
-                    if not await h.is_visible(): continue
-                    if await h.evaluate("(el)=>el.tagName==='INPUT'"): h=h.locator('xpath=ancestor::div[3]')   # unstyled react-select (Wellfound): use the control container
-                    lab=await label_of(h)
-                    if not lab: continue
-                    if await is_edu_date(h):
+            _ctried=set()
+            for _cpass in range(2):   # a second pass catches selects revealed by earlier answers (Upstart: Veteran Status after Hispanic/Latino)
+                # react-select style comboboxes (Greenhouse/Ashby)
+                combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"], input[id^="react-select-"][id$="-input"]:not([class*="select__input"])')
+                n=await combos.count()
+                for i in range(n):
+                    h=combos.nth(i)
+                    try:
+                        if not await h.is_visible(): continue
+                        if await h.evaluate("(el)=>el.tagName==='INPUT'"): h=h.locator('xpath=ancestor::div[3]')   # unstyled react-select (Wellfound): use the control container
+                        lab=await label_of(h)
+                        if not lab: continue
+                        if _cpass and lab in _ctried: continue   # second pass: only selects that appeared after the first
+                        _ctried.add(lab)
+                        if await is_edu_date(h):
+                            cur=(await h.inner_text()).strip()
+                            if not cur or re.search(r"^select",cur,re.I):
+                                ev=edu_value(lab,h)
+                                got=await choose_react_select(page,h,[ev,ev[:3]],lab) if ev else None
+                                report["chosen"]["Education "+lab[:50]]=got
+                                if not got and await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"keep":True})
+                            continue
                         cur=(await h.inner_text()).strip()
-                        if not cur or re.search(r"^select",cur,re.I):
-                            ev=edu_value(lab,h)
-                            got=await choose_react_select(page,h,[ev,ev[:3]],lab) if ev else None
-                            report["chosen"]["Education "+lab[:50]]=got
-                            if not got and await is_required(h): report["unanswered"].append({"type":"combo","label":"Education "+lab[:140],"keep":True})
-                        continue
-                    cur=(await h.inner_text()).strip()
-                    cur=re.sub(r"\s+"," ",re.sub(r"option\s*[^.]{0,120}?,\s*selected\.?|[^.|]{0,40}is focused\s*,?\s*type to refine list,?\s*press down to open the menu,?|press down to open the menu,?","",cur,flags=re.I)).strip(" ,|")   # react-select's screen-reader text is not an answer
-                    if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
-                    pref=None
-                    for k,v in extra.items():
-                        if k.lower() in lab.lower(): pref=[v]; break
-                    pref=pref or pick(lab,CHOICE_RULES)
-                    if pref==["__ASK__"]:
-                        report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
-                    if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
-                        cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
-                        pref=[f"{cn} careers",f"{cn} career site",f"{cn} careers site",f"{cn} website",f"{cn}.com",f"{cn} careers page",f"{cn} job board"]+pref   # never the bare name: it matches "<Company> Recruiter" / "<Company> Employee"
-                        if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
-                    if not pref:
-                        # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
-                        pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
-                    got=await choose_react_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
-                    if not got: report["unanswered"].append({"type":"combo","label":lab[:160],"options":LAST_OPTIONS.get(lab[:160],[])[:12]})
-                except Exception: pass
+                        cur=re.sub(r"\s+"," ",re.sub(r"option\s*[^.]{0,120}?,\s*selected\.?|[^.|]{0,40}is focused\s*,?\s*type to refine list,?\s*press down to open the menu,?|press down to open the menu,?","",cur,flags=re.I)).strip(" ,|")   # react-select's screen-reader text is not an answer
+                        if cur and cur not in ("-","–","—") and not re.search(r"^select|^choose|^please (select|choose)|--",cur,re.I): continue
+                        pref=None
+                        for k,v in extra.items():
+                            if k.lower() in lab.lower(): pref=[v]; break
+                        pref=pref or pick(lab,CHOICE_RULES)
+                        if pref==["__ASK__"]:
+                            report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
+                        if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
+                            cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
+                            pref=[f"{cn} careers",f"{cn} career site",f"{cn} careers site",f"{cn} website",f"{cn}.com",f"{cn} careers page",f"{cn} job board"]+pref   # never the bare name: it matches "<Company> Recruiter" / "<Company> Employee"
+                            if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
+                        if not pref:
+                            # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
+                            pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
+                        got=await choose_react_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
+                        if not got: report["unanswered"].append({"type":"combo","label":lab[:160],"options":LAST_OPTIONS.get(lab[:160],[])[:12]})
+                    except Exception: pass
             # radios & checkboxes grouped by name
             radios=page.locator('input[type="radio"]'); n=await radios.count(); groups={}
             for i in range(n):
