@@ -804,7 +804,14 @@ async def fill_page(page, job):
             if k not in again or f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or not f["id"]: continue
             again.discard(k)
             if f["kind"] != "listbox":
-                if f["req"]: missing.append(k)   # only an empty list is retried; everything else stays as the first pass left it
+                if f["req"]:
+                    missing.append(k)
+                    try:   # probe the stubborn field's DOM so a precise fix is possible (e.g. a role=checkbox, not an <input>)
+                        box = page.locator(f'[data-fkit-id="{f["fkit"]}"]' if f.get("fkit") else A(f'formField-{f["id"]}')).first
+                        probe = await box.evaluate("(el)=>({inputCbx: el.querySelectorAll('input[type=checkbox]').length, roleCbx: el.querySelectorAll('[role=checkbox]').length, radios: el.querySelectorAll('input[type=radio]').length, clickable: [...el.querySelectorAll('[data-automation-id]')].slice(0,4).map(x=>x.getAttribute('data-automation-id')), html: el.outerHTML.replace(/\\s+/g,' ').slice(0,400)})")
+                        job.report.setdefault("debug", {})[k[:80]] = {"kind": f["kind"], "id": f["id"], **probe}
+                    except Exception as e:
+                        job.report.setdefault("debug", {})[k[:80]] = {"kind": f["kind"], "probe_err": str(e)[:80]}
                 continue
             del LB_ERR[:]
             try: v = await fill_field(page, job, f)
