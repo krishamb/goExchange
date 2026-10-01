@@ -1590,9 +1590,10 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         return [fs?('fs:'+(fs.id||q||n)):n, q.replace(/\s+/g,' ').replace(/[✱*]/g,'').trim()];}""")
                     boxes.append((h,lab,grp[0] or f"cb{i}",grp[1]))
                 except Exception: pass
-            done_groups=set()
+            done_groups=set(); ov_groups=set()   # ov_groups: groups fully answered from a per-item "answers" override below
             for h,lab,gk,q in boxes:
                 try:
+                    if gk in ov_groups: continue   # a later member of an override-answered group: never re-touch it (e.g. via the agree/privacy regex)
                     members=[b for b in boxes if b[2]==gk]
                     if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
                     if re.search(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export",lab,re.I):   # a disclosure statement ("I am subject to a non-compete", "I hold a financial interest"): never tick it
@@ -1604,6 +1605,22 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if gk in done_groups: continue
                         done_groups.add(gk)
                         if not q and any(re.search(r"he/him|she/her|they/them",b[1],re.I) for b in members): q="Preferred pronouns"   # pronoun pick-list without a captured heading
+                        # a per-item "answers" override naming this group (by its question, or its option texts when no heading was captured): tick exactly the options it lists
+                        ov=None
+                        for k,v in extra.items():
+                            if isinstance(v,str): v=[v]   # a single answer is a one-option list
+                            if isinstance(v,list) and v and (k.lower() in (q+" "+lab).lower() or k.lower() in " ".join(b[1] for b in members)[:200].lower()): ov=v; break
+                        if ov:
+                            ov_groups.add(gk); mem=[b[1] for b in members]; ticked=[]
+                            for pv in ov:
+                                bi=best_index(mem,str(pv))
+                                if bi is None: bi=next((j for j,t in enumerate(mem) if t and (str(pv).lower() in t.lower() or t.strip().lower() in str(pv).lower())),None)
+                                if bi is not None and mem[bi][:40] not in ticked:
+                                    try: await tick(members[bi][0]); ticked.append(mem[bi][:40])
+                                    except Exception: pass
+                            report["chosen"][(q or lab)[:60]]=", ".join(ticked)
+                            if not ticked: report["unanswered"].append({"type":"checkbox","label":(q or lab)[:160],"note":"override matched no option","options":mem[:8]})
+                            continue
                         is_src=bool(re.search(r"hear about|learn about|find out about|source|referred|how did you find",q+" "+lab,re.I))
                         want=pick(q or lab,CHOICE_RULES) or (["Company Website","Careers page","Job Board","Other","Greenhouse"] if is_src else None)
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
