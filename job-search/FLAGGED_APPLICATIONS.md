@@ -90,10 +90,6 @@ account; tell them you are a US citizen if they reply).
 - Fiserv - Senior Full-Stack Software Engineer (Sunnyvale, R-10392939), Workday: the application is saved as a draft
   under ambarishkrishnamurthy@gmail.com but Fiserv requires an online assessment test before it can be submitted.
   Sign in at fiserv.wd5.myworkdayjobs.com, take the assessment, then submit. Removed from the automated queue.
-- Happen Bank (formerly LendingClub) - VP, Data Platforms (San Francisco, R0007409), Workday: the draft under
-  amba_rish@hotmail.com is complete up to the last page (Self Identify), but Workday answers "Bad Request" (error code
-  VPS) when that page is saved, three times in a row. Sign in at lendingclub.wd1.myworkdayjobs.com/External, open the
-  draft, tick "No, I do not have a disability", check today's date, and submit. Removed from the automated queue.
 
 ## Answered on your behalf: please be aware (2026-09-30)
 
