@@ -1,0 +1,196 @@
+<title>Ashby Run Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a dispatch sheet. Setup strip on top, then one row per category with its two launch buttons, jobs listed under it. */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --ink: #14202b; --muted: #5a6977; --line: #dbe2e8;
+  --go: #0b6b58; --go-ink: #ffffff; --soft: #e7f2ef; --warn: #a15c07; --warn-bg: #fdf1df; --bad: #b42318; --bad-bg: #fde8e6; --info: #1f4fbf;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1318; --surface: #131b22; --ink: #e6edf3; --muted: #93a3b2; --line: #24323d;
+  --go: #3cc3a1; --go-ink: #04201a; --soft: #12302a; --warn: #f0a43a; --warn-bg: #33240d; --bad: #f07167; --bad-bg: #3a1714; --info: #8fb2ff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0d1318; --surface: #131b22; --ink: #e6edf3; --muted: #93a3b2; --line: #24323d;
+  --go: #3cc3a1; --go-ink: #04201a; --soft: #12302a; --warn: #f0a43a; --warn-bg: #33240d; --bad: #f07167; --bad-bg: #3a1714; --info: #8fb2ff; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); margin: 0 }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 28px }
+h1 { font: 700 clamp(28px, 4vw, 40px)/1.05 var(--display); letter-spacing: -0.01em; margin: 0; text-wrap: balance }
+h2 { font: 600 20px/1.2 var(--display); margin: 0; text-wrap: balance }
+.lede { color: var(--muted); max-width: 68ch; margin: 6px 0 0 }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 500 13px/1.4 var(--mono); color: var(--muted); margin-top: 10px }
+.stats b { color: var(--ink); font-weight: 500 }
+a { color: var(--info) }
+button, .btn { font: 600 14px/1 var(--body); border-radius: 8px; padding: 10px 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap }
+button:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--info); outline-offset: 2px }
+.go { background: var(--go); color: var(--go-ink); border-color: var(--go) }
+.setup { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: grid; gap: 14px }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: s }
+.steps li { counter-increment: s; display: grid; gap: 6px; align-content: start; min-width: 0 }
+.steps li::before { content: "Step " counter(s); font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.steps p { margin: 0; color: var(--muted); font-size: 14px }
+.alt { border-top: 1px dashed var(--line); padding-top: 12px; display: grid; gap: 8px }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+input[type=text], input[type=email], textarea { font: 14px/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; min-width: 0 }
+.bm { border: 1px dashed var(--go); color: var(--go); background: var(--soft) }
+.note { font-size: 13px; color: var(--muted); margin: 0; max-width: 80ch }
+.cats { display: grid; gap: 18px }
+.cat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden }
+.cat-head { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid var(--line) }
+.cat-head .meta { font: 500 12.5px/1.4 var(--mono); color: var(--muted); margin-top: 2px }
+.cat-head .acts { display: flex; flex-wrap: wrap; gap: 8px }
+.tbl { overflow-x: auto }
+table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: fixed; min-width: 760px }
+col.c-age { width: 64px } col.c-co { width: 150px } col.c-where { width: 210px } col.c-pay { width: 170px } col.c-st { width: 104px }
+td { overflow-wrap: anywhere }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top }
+th { font: 500 11px/1.2 var(--mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); background: var(--bg) }
+tr:last-child td { border-bottom: 0 }
+td.age, td.comp { font-family: var(--mono); font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums }
+td.co { font-weight: 600; white-space: nowrap }
+.chip { display: inline-block; font: 500 11.5px/1 var(--mono); padding: 4px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap }
+.chip.remote { color: var(--go); border-color: var(--go) }
+.chip.hy { color: var(--info); border-color: var(--info) }
+.st { font: 600 12px/1 var(--body); padding: 4px 8px; border-radius: 6px; white-space: nowrap }
+.st.submitted { background: var(--soft); color: var(--go) }
+.st.needs, .st.captcha, .st.unknown, .st.skipped { background: var(--warn-bg); color: var(--warn) }
+.st.blocked, .st.closed { background: var(--bad-bg); color: var(--bad) }
+tr.done td:not(.stc) { opacity: .55 }
+.fresh { color: var(--go); font-weight: 500 }
+.flag { color: var(--warn); font-size: 12.5px }
+details.paste summary { cursor: pointer; font-weight: 600 }
+details.paste textarea { width: 100%; min-height: 90px; margin-top: 8px }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity .2s; pointer-events: none; max-width: calc(100% - 32px) }
+.toast.on { opacity: 1 }
+@media (prefers-reduced-motion: reduce) { .toast { transition: none } }
+@media (max-width: 640px) { th.hide, td.hide, col.c-pay { display: none } table { min-width: 560px } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Ashby Run Sheet</h1>
+    <p class="lede">Every role here passed your rules: US remote, SF Bay Area hybrid or NYC hybrid with fewer than 3 required office days, no on-site, no investment banks, no companies you excluded, at most 3 roles per company. One click per category opens its jobs in one tab. The filler attaches your resume and answers each form; you either let it submit the fully answered ones or click Submit yourself.</p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <section class="setup" aria-labelledby="setup-h">
+    <h2 id="setup-h">Set up once on this computer</h2>
+    <ol class="steps">
+      <li><strong>Install Tampermonkey</strong><p>Free browser extension: <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank" rel="noopener">Edge</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" target="_blank" rel="noopener">Firefox</a>. In Chrome or Edge, open the extension's Details and turn on <em>Allow user scripts</em>.</p></li>
+      <li><strong>Install the filler</strong><p><a id="us-link" href="#" target="_blank" rel="noopener">Install Ashby filler</a>. Tampermonkey shows an Install button. It updates itself from this repository.</p></li>
+      <li><strong>Add your details</strong><p>Open any Ashby job. In the filler panel at the bottom right, open Setup: your Gmail address, phone, and your two resumes (architect and executive). They stay in this browser only.</p></li>
+    </ol>
+    <div class="alt">
+      <strong>No extension? Use the bookmark instead</strong>
+      <p class="note">It fills one application per click (no batches). Type your Gmail and phone, then drag the green button to your bookmarks bar. The first time you click it on an Ashby page, its panel asks for your resume once.</p>
+      <div class="row">
+        <label for="bm-email" class="note">Gmail</label><input id="bm-email" type="email" placeholder="you@gmail.com" autocomplete="email">
+        <label for="bm-phone" class="note">Phone</label><input id="bm-phone" type="text" placeholder="650 555 0100" autocomplete="tel">
+        <a id="bm" class="btn bm" href="#">Fill Ashby</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cats" id="cats" aria-label="Categories"></section>
+
+  <section class="setup" aria-labelledby="res-h">
+    <h2 id="res-h">Results</h2>
+    <p class="note">Results appear here by themselves while this page stays open. If you closed it, click <em>Copy results</em> at the end of a batch on the Ashby tab and paste them below. Confirmation emails go to your Gmail, where I count them for the daily report.</p>
+    <details class="paste"><summary>Paste results</summary>
+      <textarea id="paste" aria-label="Pasted results"></textarea>
+      <div class="row"><button id="paste-go">Mark these jobs</button><button id="clear-marks">Clear all marks</button></div>
+    </details>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const store = { get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+                set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+let marks = store.get('akf_marks', {});
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const idOf = u => ((u || '').match(/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/i) || [])[1]?.toLowerCase();
+function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 3500); }
+function age(ts) {
+  if (!ts) return '';
+  const h = (Date.now() / 1000 - ts) / 3600;
+  return h < 48 ? `${Math.max(1, Math.round(h))} h` : `${Math.round(h / 24)} d`;
+}
+const STAT_LABEL = { submitted: 'Submitted', needs: 'Needs you', captcha: 'Captcha', unknown: 'Check', skipped: 'Skipped', blocked: 'Blocked', closed: 'Closed' };
+function open_(it) { const m = marks[it.id]; return !(m && /submitted|closed/.test(m.status)); }
+function b64url(s) { return btoa(unescape(encodeURIComponent(s))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+function launch(cat, auto) {
+  const items = cat.items.filter(open_);
+  if (!items.length) { toast('Every job in this category is already marked done.'); return; }
+  const payload = { name: cat.name, auto, items: items.map(it => ({ u: it.u, t: it.t, c: it.c, p: it.p || [] })) };
+  const url = items[0].u.replace(/\/$/, '') + '/application#akf=' + b64url(JSON.stringify(payload));
+  let w = null;
+  try { w = window.open(url, 'akf_worker'); } catch (e) {}
+  if (!w) { const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'opener'; document.body.appendChild(a); a.click(); a.remove(); }
+  toast(`${auto ? 'Auto-apply' : 'One by one'}: ${items.length} jobs. Confirm on the Ashby tab.`);
+}
+function render() {
+  const all = DATA.cats.flatMap(c => c.items);
+  const done = all.filter(it => (marks[it.id] || {}).status === 'submitted').length;
+  const fresh = all.filter(it => it.ts && (Date.now() / 1000 - it.ts) < 72 * 3600).length;
+  $('#stats').innerHTML = `<span><b>${all.length}</b> roles</span><span><b>${DATA.cats.length}</b> categories</span><span><b>${fresh}</b> posted in the last 72 h</span><span><b>${done}</b> marked submitted</span><span>built ${esc(DATA.built)}</span>`;
+  $('#cats').innerHTML = DATA.cats.map((c, ci) => {
+    const left = c.items.filter(open_).length;
+    const ages = c.items.map(i => i.ts).filter(Boolean);
+    const span = ages.length ? `${age(Math.max(...ages))} to ${age(Math.min(...ages))} old` : '';
+    const rows = c.items.map(it => {
+      const m = marks[it.id]; const st = m ? `<span class="st ${esc(m.status)}" title="${esc(m.why || '')}">${esc(STAT_LABEL[m.status] || m.status)}</span>` : '';
+      const isFresh = it.ts && (Date.now() / 1000 - it.ts) < 72 * 3600;
+      return `<tr class="${m && /submitted|closed/.test(m.status) ? 'done' : ''}">
+        <td class="age ${isFresh ? 'fresh' : ''}">${esc(age(it.ts))}</td>
+        <td class="co">${esc(it.c)}</td>
+        <td><a href="${esc(it.u)}" target="_blank" rel="noopener">${esc(it.t)}</a>${it.flag ? `<div class="flag">${esc(it.flag)}</div>` : ''}</td>
+        <td><span class="chip ${it.mode.startsWith('Remote') ? 'remote' : 'hy'}">${esc(it.mode)}</span><div class="note">${esc(it.loc)}</div></td>
+        <td class="comp hide">${esc(it.comp || '')}</td>
+        <td class="stc">${st}</td></tr>`;
+    }).join('');
+    return `<article class="cat" id="cat-${ci}">
+      <div class="cat-head"><div><h2>${esc(c.name)}</h2><div class="meta">${c.items.length} jobs · ${left} left · ${esc(span)}</div></div>
+        <div class="acts"><button class="go" data-ci="${ci}" data-auto="1">Auto-apply ${left}</button><button data-ci="${ci}" data-auto="0">One by one</button><button data-copy="${ci}">Copy links</button></div></div>
+      <div class="tbl"><table><colgroup><col class="c-age"><col class="c-co"><col><col class="c-where"><col class="c-pay"><col class="c-st"></colgroup><thead><tr><th>Posted</th><th>Company</th><th>Role</th><th>Where</th><th class="hide">Pay</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div></article>`;
+  }).join('');
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.ci != null) launch(DATA.cats[+b.dataset.ci], b.dataset.auto === '1');
+  if (b.dataset.copy != null) {
+    const t = DATA.cats[+b.dataset.copy].items.map(i => `${i.c} | ${i.t} | ${i.u}/application`).join('\n');
+    navigator.clipboard.writeText(t).then(() => toast('Links copied.'), () => toast('Copy was blocked by the browser.'));
+  }
+});
+function mark(id, res) { if (!id || !res) return; marks[id] = { status: res.status, why: res.why || '', at: Date.now() }; store.set('akf_marks', marks); }
+window.addEventListener('message', e => {
+  if (e.origin !== 'https://jobs.ashbyhq.com' || !e.data || !e.data.akf) return;
+  if (e.data.akf === 'result') { mark(e.data.id, e.data.res); render(); toast(`${e.data.res.c || ''}: ${STAT_LABEL[e.data.res.status] || e.data.res.status}`); }
+  if (e.data.akf === 'done' && e.data.results) { for (const [id, r] of Object.entries(e.data.results)) mark(id, r); render(); toast('Batch finished.'); }
+});
+$('#paste-go').onclick = () => {
+  let n = 0;
+  try { const arr = JSON.parse($('#paste').value); for (const r of (Array.isArray(arr) ? arr : Object.values(arr))) { const id = idOf(r.u); if (id) { mark(id, r); n++; } } }
+  catch (e) { toast('That is not the text from Copy results.'); return; }
+  render(); toast(`Marked ${n} jobs.`);
+};
+$('#clear-marks').onclick = () => { marks = {}; store.set('akf_marks', marks); render(); toast('Marks cleared.'); };
+function bookmarklet() {
+  const v = { email: $('#bm-email').value.trim(), phone: $('#bm-phone').value.trim() };
+  store.set('akf_bm', v);
+  const code = `(function(){window.__AKF=${JSON.stringify(v)};var s=document.createElement('script');s.src=${JSON.stringify(DATA.loader)}+'?t='+Date.now();document.body.appendChild(s);})()`;
+  $('#bm').href = 'javascript:' + encodeURIComponent(code);
+}
+(() => { const v = store.get('akf_bm', {}); $('#bm-email').value = v.email || ''; $('#bm-phone').value = v.phone || ''; })();
+$('#bm-email').addEventListener('input', bookmarklet); $('#bm-phone').addEventListener('input', bookmarklet);
+$('#bm').addEventListener('click', e => { e.preventDefault(); toast('Drag this button to your bookmarks bar, then click it on an Ashby page.'); });
+$('#us-link').href = DATA.userscript;
+bookmarklet(); render();
+</script>
