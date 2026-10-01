@@ -401,13 +401,14 @@ async def set_check(inp, on):
         try: return await inp.is_checked()
         except Exception: return None
     attempts = []
+    # a native DOM click on the (often visually-hidden) input fires React's handler and toggles it — the most reliable (proven on Adobe's T&C box)
+    attempts.append(lambda: inp.evaluate("(el)=>el.click()"))
     if rid: attempts.append(lambda: page.locator(f'label[for="{rid}"]').first.click(timeout=2500))
     # the visible Workday checkbox is usually a sibling/wrapper, not the (hidden) input
     attempts.append(lambda: inp.evaluate("(el)=>{const w=el.closest('[data-automation-id]')||el.parentElement; (w||el).click();}"))
     attempts.append(lambda: inp.click(force=True, timeout=2500))
     attempts.append(lambda: _mouse_click(page, inp))
     attempts.append(lambda: inp.set_checked(on, force=True, timeout=2500))
-    attempts.append(lambda: inp.evaluate("(el,on)=>{if(el.checked!==on){el.checked=on; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true})); el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}}", on))
     for act in attempts:
         try: await act()
         except Exception: continue
