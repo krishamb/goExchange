@@ -61,6 +61,8 @@ TEXT_RULES=[
  (r"name of the entity for which you will be performing the outside activity|outside (business )?activity.{0,80}(name of the entity|description)", "N/A (no outside business activities)"),
  (r"^(?!.*e-?mail)(.*\b(street|residential|home|permanent|mailing|physical|current) (residence )?(street )?address\b|^address$|^what is your (home |current )?address)", P.get("street","")+", Santa Clara, CA "+P.get("zip","95054") if P.get("street") else P["location"]),
  (r"^(street )?address( line)? ?1$|^street( address)?$|^address line one$", P.get("street") or "Santa Clara, California, United States"),
+ (r"full (legal )?name,? (exactly )?as (it )?appears|legal name (exactly )?as (it )?appears|name as (it )?appears on (your )?(government|passport|id)", P["name"]),
+ (r"(list|any) (of )?(professional |securities |finra )?licen[cs]es (that )?you (currently )?(hold|have)|licen[cs]es you (currently )?hold or (have )?previously held", "None"),   # never FINRA-registered; no professional licenses
  (r"(work|company|business|corporate|former|previous|prior) e-?mail|e-?mail .{0,30}(while|when) (you )?(work|were employed)|what was your .{0,20}e-?mail", "N/A"),   # never his personal email as a former-employer work address
  (r"if applying to (a )?remote (us )?location,? what state", "California"),
  (r"student or temporary visa|temporary visa|(visa|opt|cpt) (type|expir|end date)|f-?1 opt|(if|are) you (are )?(currently )?on a non-?immigrant visa", "N/A (I am a US citizen)"),
@@ -275,6 +277,8 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"minimum (annual |base )*salary|salary desired|desired (minimum )?(annual )?salary \(in usd\)", ["250,000 to 260,000 USD","250,000 to 275,000 USD","250,000 - 260,000","250,000-260,000","$250,000 - $260,000","$250,000+","250,000+ USD","250,000+","240,000 to 250,000 USD","Over $250,000","More than $250,000"]),
+ (r"area of emphasis .{0,40}(best )?match", ["Datastore Systems Profile","Systems","Architecture","Platform"]),   # Beacon: leads design across the platform
  (r"are you a referral of (a |an )?(current |existing |potential )?(senior commercial person|scp\b|government official|senior government|merchant|third party|client|customer)", ["No","no"]),   # not referred by anyone
  (r"(engaged|involved|participat\w*) in any (outside|additional|other) (employment|activit|business)|outside (employment|activit\w*|business\w*) .{0,60}(continue|maintain|keep) .{0,30}(if|once|after) (you are )?hired", ["No","no"]),   # consistent with the outside-activities text answer ("None")
  (r"provide verification of (your )?identity|verify your identity (upon|at) hire", ["Yes","yes"]),
