@@ -351,9 +351,13 @@ async def listbox_choose(page, button, ranker, typeahead=""):
     try:
         await button.scroll_into_view_if_needed(timeout=3000); await button.click(timeout=4000)
         opts = page.locator(LISTBOX_OPT)
-        for _ in range(10):
-            await page.wait_for_timeout(300)
+        for attempt in range(2):   # some lists load their options slowly: wait longer, then reopen once
+            for _ in range(20 if attempt else 12):
+                await page.wait_for_timeout(300)
+                if await opts.count(): break
             if await opts.count(): break
+            await page.keyboard.press("Escape"); await page.wait_for_timeout(800)
+            await button.click(timeout=4000)
         texts = [(await opts.nth(i).inner_text()).strip() for i in range(min(await opts.count(), 400))]
         k = ranker(texts)
         if k is None and typeahead:   # a long list may render only part of its options: jump by typing
