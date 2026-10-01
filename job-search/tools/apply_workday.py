@@ -42,6 +42,8 @@ exec(_seg("EDU_START=", "\nasync def is_edu_date"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 exec(_seg("NEVER_APPLY=", "\n"), G)
+exec(_seg("NJ_LOC=", "\n    return None\n") + "\n    return None\n", G)   # applicant: no NJ hybrid/on-site roles, no investment-bank roles on site in New York
+location_block = G["location_block"]
 TEXT_RULES, CHOICE_RULES, pick, best_index, _match, mask_hear, NEVER_APPLY, tech_answer = (G[k] for k in ("TEXT_RULES", "CHOICE_RULES", "pick", "best_index", "_match", "mask_hear", "NEVER_APPLY", "tech_answer"))
 HEAR_Q, HEAR_BAD, EDU_START, EDU_END = G["HEAR_Q"], G["HEAR_BAD"], G["EDU_START"], G["EDU_END"]
 FIRST, LAST = G["first"], G["last"]
@@ -575,6 +577,9 @@ TODAY_Q = re.compile(r"today|signature date|date signed|^date\*?$|^signed on|dat
 async def date_field(page, box, lab):
     """Today's date on signature / 'today's date' fields (Self Identify form); any other date is left for the applicant.
     Workday checks it against its own clock (UTC: 'Enter today's date' after midnight UTC), not the browser's."""
+    if re.search(r"(desired|preferred|earliest|available|availability|possible) (start|starting) date|start date|date (you are|you\'re) available", (lab or "").lower()):
+        d = datetime.datetime.now(datetime.timezone.utc).date() + datetime.timedelta(days=14)   # two weeks after an offer
+        return await set_date(page, box, d.month, d.day, d.year)
     if not TODAY_Q.search((lab or "").strip().lower()): return None
     d = datetime.datetime.now(datetime.timezone.utc).date()
     return await set_date(page, box, d.month, d.day, d.year)
@@ -1028,6 +1033,9 @@ async def run_one(ctx, item, s):
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
+        _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))
+        if _lb:
+            job.report["result"] = "NOT SUBMITTED: " + _lb; return job.report
         await page.goto(job.url, wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(4000)
         body = await text(page)
         if re.search(r"no longer (available|accepting)|job (posting )?(is )?closed|page you are looking for doesn.t exist", body, re.I):

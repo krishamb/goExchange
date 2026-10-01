@@ -69,6 +69,17 @@ account; tell them you are a US citizen if they reply).
 
 ## Do not apply (applicant instruction)
 
+- Alpaca (Alpaca Markets): never apply (applicant, 2026-10-01). Blocked in both fillers and removed from every queue and the
+  by-hand page. Two applications had already gone through before the instruction: Staff Software Engineer - Margin & Risk
+  (2026-09-29) and Senior Software Engineer - Payments & Treasury (2026-09-30 5:41 pm PT, minutes before the instruction).
+  Withdraw them from Alpaca's Greenhouse candidate portal if you want them gone; the Clearing role was stopped before it ran.
+- New Jersey hybrid or on-site roles: never (applicant, 2026-10-01). Fully remote roles that list an NJ city are still fine.
+  Already submitted before the instruction: Citi - Senior Low Latency Java Developer, Equities Connectivity, VP (Jersey City /
+  New York hybrid, 2026-09-30 5:42 pm PT) and Orquesta.Ai - Founding AI / Backend Engineer (listed "New Jersey", 2026-09-29).
+- Investment-bank roles that need on-site presence in New York, hybrid included: never (applicant, 2026-10-01). Already
+  submitted before the instruction: Citi - Head of Group Wide AI First Engineering, Managing Director (New York hybrid,
+  2026-09-30 5:16 pm PT). Blocked in both fillers from now on (Citi, JPMorgan, Goldman, BofA/Merrill, Barclays, Wells Fargo
+  New York roles, and other banks). Fiserv is fine (applicant).
 - Morgan Stanley: never apply to any position (applicant, 2026-09-30). Blocked in both fillers; no application was submitted.
 - Global Settlement Systems (Miami, FL) - Senior Blockchain Engineer: never apply. Blocked in the filler for every queue.
 - Tata Consultancy Services (TCS): never apply to any position. Blocked in the filler for every queue.
