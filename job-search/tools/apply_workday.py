@@ -579,12 +579,18 @@ async def set_date(page, box, month=None, day=None, year=None):
 TODAY_Q = re.compile(r"today|signature date|date signed|^date\*?$|^signed on|date of signature")
 async def date_field(page, box, lab):
     """Today's date on signature / 'today's date' fields (Self Identify form); any other date is left for the applicant.
-    Workday checks it against its own clock (UTC: 'Enter today's date' after midnight UTC), not the browser's."""
+    Workday checks it against the browser's clock (the context's America/Los_Angeles time zone)."""
+    # Workday checks 'today' against the browser's clock (America/Los_Angeles here), not UTC: take the date from the page
+    try:
+        mo, dy, yr = await page.evaluate("()=>{const d=new Date();return [d.getMonth()+1,d.getDate(),d.getFullYear()]}")
+        today = datetime.date(yr, mo, dy)
+    except Exception:
+        today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-7))).date()
     if re.search(r"(desired|preferred|earliest|available|availability|possible) (start|starting) date|start date|date (you are|you\'re) available", (lab or "").lower()):
-        d = datetime.datetime.now(datetime.timezone.utc).date() + datetime.timedelta(days=14)   # two weeks after an offer
+        d = today + datetime.timedelta(days=14)   # two weeks after an offer
         return await set_date(page, box, d.month, d.day, d.year)
     if not TODAY_Q.search((lab or "").strip().lower()): return None
-    d = datetime.datetime.now(datetime.timezone.utc).date()
+    d = today
     return await set_date(page, box, d.month, d.day, d.year)
 
 DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i (have|had) (a |an )?(disabilit|relative|family|conflict|financial|non-?compete|criminal|conviction)|^\s*i have a disability", re.I)   # 'Yes, I have read the Terms' is an acknowledgement, not a disclosure
