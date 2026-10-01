@@ -1,0 +1,72 @@
+[
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/verkada/jobs/5254501007",
+  "tag": "verkada_engineering_manager_access_control",
+  "company": "verkada",
+  "title": "Engineering Manager, Access Control",
+  "comp": null,
+  "loc": "San Mateo, CA United States",
+  "posted_ts": 1790878138.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/stackav/jobs/5254676007",
+  "tag": "stackav_staff_software_engineer_ml_training_",
+  "company": "stackav",
+  "title": "Staff Software Engineer, ML Training Infrastructure",
+  "comp": null,
+  "loc": "Pittsburgh, PA or Remote",
+  "posted_ts": 1790884544.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/mozilla/jobs/8247802",
+  "tag": "mozilla_staff_product_engineer_enterprise_ai",
+  "company": "mozilla",
+  "title": "Staff Product Engineer, Enterprise AI ",
+  "comp": "$185,000 - $220,000 ",
+  "loc": "Remote US",
+  "posted_ts": 1790885350.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://boards.greenhouse.io/chime/jobs/8733757002?gh_jid=8733757002",
+  "tag": "chime_tech_lead_manager_data_integration_pla",
+  "company": "chime",
+  "title": "Tech Lead Manager, Data Integration Platform",
+  "comp": null,
+  "loc": "San Francisco, CA, USA",
+  "posted_ts": 1790873152.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/zetaglobal/jobs/6214600004",
+  "tag": "zetaglobal_staff_software_engineer",
+  "company": "zetaglobal",
+  "title": "Staff Software Engineer",
+  "comp": null,
+  "loc": "New York, NY",
+  "posted_ts": 1790879757.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://job-boards.greenhouse.io/defcon/jobs/5253391007",
+  "tag": "defcon_ml_engineer_retrieval_grounded_genera",
+  "company": "defcon",
+  "title": "ML Engineer, Retrieval & Grounded Generation ",
+  "comp": "$165,000\u2013$200,000. ",
+  "loc": "Remote, USA",
+  "posted_ts": 1790860062.0
+ },
+ {
+  "ats": "greenhouse",
+  "url": "https://ionq.com/job?gh_jid=6211311004",
+  "tag": "ionq_principal_distributed_systems_engineer",
+  "company": "ionq",
+  "title": "Principal Distributed Systems Engineer",
+  "comp": null,
+  "loc": "Santa Clara, California, United States",
+  "posted_ts": 1790884726.0
+ }
+]
