@@ -618,10 +618,16 @@ async def fill_field(page, job, f):
         return keep(v) if await fill(page, box.locator("textarea, input").first, v) else None
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
         # a draft's saved answer is kept only when it is not one the applicant would never give (needing sponsorship)
-        if cur and not BAD_SAVED.search(cur) and rank([x.strip() for x in cur.split(";")][:1], prefs, mlabel or key, strict, exact=(kind == "prompt")) is not None: return keep(cur)
+        saved_ok = False
+        if cur and not BAD_SAVED.search(cur):
+            c0 = [x.strip() for x in cur.split(";")][:1]
+            ci = next((i for i, pv in enumerate(prefs) if rank(c0, [pv], mlabel or key, strict, exact=(kind == "prompt")) is not None), None)
+            if ci == 0 or (ci is not None and kind != "listbox"): return keep(cur)
+            saved_ok = ci is not None   # a listbox draft value matching only a later preference: look for a better option first
         r = lambda texts: rank(texts, prefs, mlabel or key, strict)
         if kind == "listbox":
             v, texts = await listbox_choose(page, btn, r, typeahead)
+            if not v and saved_ok: return keep(cur)
             if not v and texts: job.report.setdefault("options", {})[key[:120]] = texts[:20]   # what the list offered, for a rule fix
         elif kind == "radio": v = await pick_radio(page, box, r)
         elif kind == "checkbox":
