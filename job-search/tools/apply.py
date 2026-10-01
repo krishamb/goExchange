@@ -143,7 +143,7 @@ TEXT_RULES=[
  (r"end (date )?year|^to year|end \(year\)", "2026"),
  (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
  (r"^(street |home |mailing )?address", P["location"]),
- (r"linkedin|linkedln", P["linkedin"]),(r"github", P["github"]),(r"portfolio|website|personal site", P["github"]),
+ (r"linkedin|linkedln", P["linkedin"]),(r"github|git (repo|repository|profile)|url to your git", P["github"]),(r"portfolio|website|personal site", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
  (r"^(?!.*\b(how|describe|explain|tell us|ways?)\b).*(current (title|role)|job title|^title$)", "CTO & Technical Co-Founder / Principal Architect"),
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
@@ -273,6 +273,12 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"citizen or (a )?permanent resident of (one of )?(these|the following|any of the following) (nations|countries|regions)|(citizen|national|resident) of (cuba|iran|north korea|syria).{0,80}\?", ["Does Not Apply","Does not apply","None of the above","None of these","None","No","Not applicable","N/A"]),   # US citizen; export-control country list
+ (r"how familiar are you with (distributed systems|asynchronous|microservices|event[- ]driven|test automation|automated testing|cloud|kubernetes|kafka|system design|ci/cd|observability)", ["I have used it in production systems","Used it in production","Production","Expert","Very familiar","I have led complex"]),   # resume: JPMorgan, Yahoo Finance, Hyperion AI (all in production)
+ (r"involvement (with|in) architecture (discussions|decisions)|best describes your (involvement|experience) (with|in) architecture", ["I have led complex architecture decisions","I have led architecture discussions","Led"]),   # Chief Architect, Yahoo Finance; CTO, Hyperion AI
+ (r"which work arrangement|work arrangement (are you|you('re| are)) (looking for|seeking|interested in)|preferred work (arrangement|model|setup|location type)|what (type of )?work (arrangement|model|setup) (are you|do you|would you)", ["Fully remote","Remote","Remote (US)","Hybrid"]),   # applicant (2026-10-01): remote, or Bay Area / NYC hybrid; never 5 days in person
+ (r"(experience|background) (building|with|in) (ai|llm|ai/llm|ai or llm)[^?]{0,60}(production|systems)|what best describes your experience (building|with) (ai|llm)", ["I have built and shipped","built and shipped","I have built","Production"]),   # Hyperion AI: agentic platform built end to end and shipped
+ (r"level of ownership.{0,60}(0\s*(→|->|to)\s*1|zero to one|ambiguous)|ownership .{0,30}0\s*(→|->|to)\s*1", ["I’ve led or been a primary driver","I've led or been a primary driver","I have led","Led"]),   # CTO and co-founder of Hyperion AI, co-founder of Motocho
  (r"personally participate in (each|every|all|any) interview|will not use another person to interview|interview on my behalf|not use ai tools .{0,120}(during|in) (any|the|my|each) interview", ["Yes, I agree","I agree","Yes","yes","Agree"]),   # interview-integrity pledge about his own future interviews (not the application); "criminal" in the fine print must not trip the No rule
  (r"engage with .{0,40}employees to negotiate|negotiate, influence and/or sign .{0,40}contracts", ["No","no"]),
  (r"employee of a government (office|agency|entity)|government (office|agency) .{0,40}oversight", ["No","no"]),
@@ -1283,7 +1289,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             global JOB_CHOICE_RULES, JOB_TEXT_RULES
             try: _prior=prior_company_apps(tag,company)
             except Exception: _prior=[]
-            _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+"
+            _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+|participated in (a|any) (hiring|recruiting|interview) process|interviewed (with|at) .{0,40}(before|previously|in the (past|last))"
             JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
             try:
                 _top=(await page.evaluate("()=>document.body.innerText.slice(0,1500)"))
