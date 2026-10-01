@@ -627,6 +627,7 @@ async def fill_field(page, job, f):
         r = lambda texts: rank(texts, prefs, mlabel or key, strict)
         if kind == "listbox":
             v, texts = await listbox_choose(page, btn, r, typeahead)
+            if texts and re.search(r"ethnic|\brace\b|racial", key, re.I): job.report.setdefault("options", {})[key[:120]] = texts[:80]   # audit trail for the race/ethnicity pick
             if not v and saved_ok: return keep(cur)
             if not v and texts: job.report.setdefault("options", {})[key[:120]] = texts[:20]   # what the list offered, for a rule fix
         elif kind == "radio": v = await pick_radio(page, box, r)
