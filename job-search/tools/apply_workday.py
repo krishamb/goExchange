@@ -1109,6 +1109,8 @@ async def run_one(ctx, item, s):
             if re.search(r"review", step, re.I) or await page.locator(A("applyFlowReviewPage")).count():
                 log(job, "at Review"); return await at_review(page, job, item)
             log(job, f"step: {step or '?'}")
+            if re.search(r"assessment|\btest\b|questionnaire.{0,20}assessment", step, re.I) or re.search(r"complete the assessment|assessment test", body, re.I):   # applicant (2026-10-01): never take an assessment to apply
+                job.report["result"] = "SKIPPED: the application requires an assessment (applicant: never)"; return job.report
             if re.search(r"experience", step, re.I): await experience_page(page, job)
             missing = await fill_page(page, job)
             if missing:
@@ -1166,7 +1168,7 @@ async def main():
             if os.path.exists(rp):
                 try:
                     rr = json.load(open(rp))
-                    if rr.get("submitted") or "ALREADY APPLIED" in (rr.get("result") or ""): continue
+                    if rr.get("submitted") or "ALREADY APPLIED" in (rr.get("result") or "") or "requires an assessment" in (rr.get("result") or "") or "assessment test" in str(rr.get("errors") or ""): continue
                 except Exception: pass
             await run_one(ctx, item, s)
             if n < len(q) - 1:
