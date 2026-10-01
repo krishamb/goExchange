@@ -1,0 +1,34 @@
+[
+ {
+  "ats": "greenhouse",
+  "company": "affirm",
+  "title": "Staff Software Engineer, Backend (Search)",
+  "loc": "Remote US",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/8005406003",
+  "posted_ts": 1790813646.0,
+  "comp": null,
+  "where": "remote",
+  "score": 0.37,
+  "tag": "affirm_staff_software_engineer_backend_searc",
+  "found_on": "greenhouse_api",
+  "tier": 2,
+  "dom": 2,
+  "skill_hits": 10
+ },
+ {
+  "ats": "greenhouse",
+  "company": "hark",
+  "title": "Member of Technical Staff, Hark Desktop ",
+  "loc": "San Jose",
+  "url": "https://job-boards.greenhouse.io/hark/jobs/4429039009",
+  "posted_ts": 1790825194.0,
+  "comp": null,
+  "where": "bay",
+  "score": 0.48,
+  "tag": "hark_member_of_technical_staff_hark_desktop",
+  "found_on": "greenhouse_api",
+  "tier": 2,
+  "dom": 1,
+  "skill_hits": 13
+ }
+]
