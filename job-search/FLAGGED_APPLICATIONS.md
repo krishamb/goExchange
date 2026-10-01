@@ -72,6 +72,13 @@ account; tell them you are a US citizen if they reply).
 - Altruist: never apply again (applicant, 2026-10-01); two applications were already submitted earlier. Only new positions from now on, no resubmissions.
 - Any application that requires an assessment or test to submit: skip it (applicant, 2026-10-01; interviews are fine). The Fiserv roles that asked for one were dropped.
 - GEICO: never apply (applicant, 2026-10-01). Blocked in both fillers; no GEICO application was submitted.
+- Early Warning Services (Zelle): never apply (applicant, 2026-10-01). Blocked in both fillers. Three applications were already
+  submitted before this instruction (Distinguished Engineer earlier; Principal Software Engineer - AWS and Sr Staff Engineer -
+  Cross-Border on 2026-10-01). They can be withdrawn from Early Warning's Workday Candidate Home if the applicant wants.
+- Office days (applicant, 2026-10-01): no hybrid role that requires 3+ office days a week and no on-site role. Dropped from
+  the Workday queue for this reason: PayPal x2 (3 days), Postman (5 days), NY Post (3 days), PTC (3 days), Palo Alto
+  Networks x2 (full time in office), Snap x2 (4+ days), Genentech (on-site), Target (on-site MN), Exelixis (office), Gap
+  (not remote).
 - Alpaca (Alpaca Markets): never apply (applicant, 2026-10-01). Blocked in both fillers and removed from every queue and the
   by-hand page. Two applications had already gone through before the instruction: Staff Software Engineer - Margin & Risk
   (2026-09-29) and Senior Software Engineer - Payments & Treasury (2026-09-30 5:41 pm PT, minutes before the instruction).

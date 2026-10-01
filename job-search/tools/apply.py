@@ -1026,7 +1026,7 @@ def company_keys(tag,company=None):
     ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=2 and k not in GENERIC_TOKENS}
 # companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
-NEVER_APPLY=re.compile(r"altruist|geico|alpaca|morgan[ _-]?stanley|ms\.wd5\.myworkdayjobs|(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+NEVER_APPLY=re.compile(r"early[ _-]?warning|earlywarning|zelle|altruist|geico|alpaca|morgan[ _-]?stanley|ms\.wd5\.myworkdayjobs|(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
 # Applicant (2026-10-01): no New Jersey hybrid / on-site roles, and no investment-bank roles that need on-site presence in New
 # York (hybrid included). Fully remote roles are fine. The primary location is the Workday URL's location segment or the first
 # listed location.
