@@ -273,6 +273,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"privacy notice|privacy (policy|statement) (to|for) (applicants|candidates)", ["Acknowledged","I acknowledge","Acknowledge","Yes","I agree","I have read","I consent","Consent","Confirmed","Confirm"]),
  (r"talent community|(receive|get) (information|communications|updates|emails) about (future |other )?(job )?(opportunities|positions|openings|roles)", ["Yes, I would like to receive communications","Yes","yes","I agree","I consent","Consent"]),   # same answer as the future-positions question elsewhere
  (r"citizen or (a )?permanent resident of (one of )?(these|the following|any of the following) (nations|countries|regions)|(citizen|national|resident) of (cuba|iran|north korea|syria).{0,80}\?", ["Does Not Apply","Does not apply","None of the above","None of these","None","No","Not applicable","N/A"]),   # US citizen; export-control country list
  (r"how familiar are you with (distributed systems|asynchronous|microservices|event[- ]driven|test automation|automated testing|cloud|kubernetes|kafka|system design|ci/cd|observability)", ["I have used it in production systems","Used it in production","Production","Expert","Very familiar","I have led complex"]),   # resume: JPMorgan, Yahoo Finance, Hyperion AI (all in production)
