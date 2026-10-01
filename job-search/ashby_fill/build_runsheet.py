@@ -4,11 +4,13 @@ usage: python3 build_runsheet.py <verified json files...>
 Each input is a list in the a150 output shape; only verdict == "keep" items are used. Roles are de-duplicated by Ashby job
 id, capped at 3 per company (earlier real submissions count; per_co from lead_common), grouped into categories and sorted
 newest first inside each category. Contact details are never written to the page."""
-import json, re, sys, os, time, glob, collections
+import json, re, sys, os, time, glob, collections, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
 SC = "/tmp/claude-0/-home-user-goExchange/8d20ffb7-2488-5f8f-a666-35334b9e3ba6/scratchpad"
 sys.path.insert(0, f"{SC}/lead"); import lead_common as L
 BRANCH = "claude/ai-founding-engineer-jobs-l1urgc"
+try: SHA = subprocess.check_output(["git", "-C", REPO, "rev-parse", "HEAD"], text=True).strip()
+except Exception: SHA = BRANCH
 DROP = {   # dropped after verification, with the reason (applicant rule: no 3+ required office days)
     "4ca2e49f-83bb-4276-be17-d85a9a0c58e9": "OpenAI application asks for 3 office days a week",
 }
@@ -86,9 +88,10 @@ if older:
     for pi, p in enumerate(parts): cats.append({"name": "Still open · posted 8 to 14 days ago" + (f" · part {pi + 1}" if len(parts) > 1 else ""), "items": p})
 for c in cats:
     for r in c["items"]: r.pop("tier", None); r.pop("dom", None)
+# loader is commit-pinned: jsDelivr serves a SHA fresh, while branch refs can cache up to 12h
 data = {"cats": cats, "built": time.strftime("%b %d, %H:%M UTC", time.gmtime()),
         "userscript": f"https://raw.githubusercontent.com/krishamb/goExchange/{BRANCH}/job-search/ashby_fill/ashby_fill.user.js",
-        "loader": f"https://cdn.jsdelivr.net/gh/krishamb/goExchange@{BRANCH}/job-search/ashby_fill/ashby_fill.js"}
+        "loader": f"https://cdn.jsdelivr.net/gh/krishamb/goExchange@{SHA}/job-search/ashby_fill/ashby_fill.js"}
 html = open(os.path.join(HERE, "runsheet_template.html")).read().replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
 out = os.path.join(REPO, "job-search", "ASHBY_RUN_SHEET.html"); open(out, "w").write(html)
 json.dump([r for c in cats for r in c["items"]], open(os.path.join(REPO, "job-search", "batches", "ashby_run_sheet.json"), "w"), indent=1)
