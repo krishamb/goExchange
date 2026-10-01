@@ -358,6 +358,12 @@ async def listbox_choose(page, button, ranker, typeahead=""):
             if await opts.count(): break
             await page.keyboard.press("Escape"); await page.wait_for_timeout(800)
             await button.click(timeout=4000)
+        if not await opts.count():   # nothing opened: note what the button and the page show, for a fix
+            try:
+                LB_ERR.append("no options; button=" + (await button.evaluate("b=>b.outerHTML.slice(0,260)")) + " lists=" + json.dumps(await page.evaluate(
+                    "()=>[...document.querySelectorAll('[role=\"listbox\"]')].map(l=>[l.getAttribute('data-automation-id'),l.querySelectorAll('[role=\"option\"]').length,!!l.offsetParent,(l.innerText||'').replace(/\\s+/g,' ').slice(0,60)])"))[:500])
+                await page.screenshot(path=f"{OUT}/lbprobe_{int(time.time())}.png")
+            except Exception as e: LB_ERR.append(f"probe failed: {type(e).__name__}")
         texts = [(await opts.nth(i).inner_text()).strip() for i in range(min(await opts.count(), 400))]
         k = ranker(texts)
         if k is None and typeahead:   # a long list may render only part of its options: jump by typing
@@ -366,13 +372,17 @@ async def listbox_choose(page, button, ranker, typeahead=""):
             k = ranker(texts)
         if k is None:
             await page.keyboard.press("Escape"); return None, texts
-        await opts.nth(k).scroll_into_view_if_needed(timeout=2000); await opts.nth(k).click(timeout=4000); await page.wait_for_timeout(600)
-        now = (await button.inner_text()).strip()
-        return (texts[k] if norm(now) == norm(texts[k]) else None), texts
-    except Exception:
+        await opts.nth(k).scroll_into_view_if_needed(timeout=2000); await opts.nth(k).click(timeout=4000)
+        for _ in range(8):   # some tenants re-render the form after each answer: the button shows the choice only after a moment
+            await page.wait_for_timeout(400)
+            if norm((await button.inner_text()).strip()) == norm(texts[k]): return texts[k], texts
+        return None, texts
+    except Exception as e:
+        LB_ERR.append(f"{type(e).__name__}: {str(e).splitlines()[0][:120] if str(e) else ''}")
         try: await page.keyboard.press("Escape")
         except Exception: pass
         return None, []
+LB_ERR = []   # why a listbox could not be opened (reported with the field it belonged to)
 async def input_label(inp):
     # the label for= the input, else the enclosing label, else the nearest ancestor (up to 4 levels) with a short text
     try: return (await inp.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l&&l.innerText.trim()) return l.innerText.replace(/\\s+/g,' ').trim(); const c=el.closest('label'); if(c&&c.innerText.trim()) return c.innerText.replace(/\\s+/g,' ').trim(); let p=el.parentElement; for(let i=0;i<4&&p;i++){const t=(p.innerText||'').replace(/\\s+/g,' ').trim(); if(t&&t.length<260) return t; p=p.parentElement;} return '';}"))
@@ -760,6 +770,28 @@ async def fill_page(page, job):
             except Exception as e:
                 v = None; job.report["errors"].append(f"{(f['label'] or f['id'])[:60]}: {type(e).__name__}")
             if not v and f["req"]: missing.append(f["label"] or f["id"])
+    if missing:   # a list that did not open or confirm on the first pass (the page was re-rendering after an earlier answer): settle, re-read, try once more
+        # (a list that shows a value now goes through the same rules: kept only when it is the rules' answer)
+        try: await page.keyboard.press("Escape")
+        except Exception: pass
+        await page.wait_for_timeout(2000)
+        again = {k for k in missing}; missing = []
+        for f in await page.evaluate(FIELD_JS):
+            k = f["label"] or f["id"]
+            if k not in again or f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or not f["id"]: continue
+            again.discard(k)
+            if f["kind"] != "listbox":
+                if f["req"]: missing.append(k)   # only an empty list is retried; everything else stays as the first pass left it
+                continue
+            del LB_ERR[:]
+            try: v = await fill_field(page, job, f)
+            except Exception as e:
+                v = None; job.report["errors"].append(f"{k[:60]}: {type(e).__name__}")
+            if not v and f["req"]:
+                missing.append(k)
+                job.report.setdefault("debug", {})[k[:80]] = {"kind": f["kind"], "id": f["id"], "fkit": f.get("fkit"), "lb_err": LB_ERR[-2:]}
+        missing += sorted(again)   # not found on the re-read: still unanswered
+        if job.report.get("debug"): log(job, "retry debug: " + json.dumps(job.report["debug"])[:600])
     return missing
 
 # ---- My Experience
