@@ -14,8 +14,12 @@
   "tier": 2,
   "dom": 3,
   "skill_hits": 15,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Please provide your full name exactly as it appears on your government-issued id",
+   "Please provide a list of licenses that you currently hold or have previously hel",
+   "What is the minimum annual salary desired (in USD)?"
+  ]
  },
  {
   "ats": "greenhouse",
@@ -32,7 +36,7 @@
   "tier": 2,
   "dom": 2,
   "skill_hits": 11,
-  "last_result": "(no report)",
+  "last_result": "a United States military operation for which an Armed Forces service medal was awarded pursuant to E",
   "last_unanswered": []
  },
  {
@@ -50,7 +54,7 @@
   "tier": 2,
   "dom": 2,
   "skill_hits": 10,
-  "last_result": "(no report)",
+  "last_result": "ly reside?* | Have you previously worked at Branch as an employee or contractor?* | No | What are yo",
   "last_unanswered": []
  },
  {
@@ -68,8 +72,10 @@
   "tier": 2,
   "dom": 0,
   "skill_hits": 18,
-  "last_result": "(no report)",
-  "last_unanswered": []
+  "last_result": "NOT SUBMITTED: unanswered required questions",
+  "last_unanswered": [
+   "Which area of emphasis below best matches your interest and experience?"
+  ]
  },
  {
   "ats": "greenhouse",
