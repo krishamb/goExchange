@@ -279,6 +279,9 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"which state .{0,40}(reside|live) permanently|as of your .{0,30}start date,? which state", ["California","CA"]),
+ (r"(posted|listed|stated|advertised) (base )?(salary|pay|compensation)( range)? .{0,30}align|align\w* with your (salary|compensation|pay) (requirements|expectations)", ["Yes","yes"]),
+ (r"interested in (regular )?full[- ]time or part[- ]time|(full[- ]time|part[- ]time),? (contract|temporary)|type of employment (are you|you are) (interested|seeking|looking)", ["Regular Full-Time","Regular Full Time","Full-Time Regular","Full-Time","Full time","Regular","Permanent"]),
  (r"work (environment|model|arrangement)\(?s?\)? .{0,40}(open to|interested in|prefer)|which work (models?|arrangements?) .{0,30}open", ["100% Remote","Remote","Fully Remote","Hybrid (Combination of Office/Remote)","Hybrid"]),   # remote US anywhere; hybrid in the Bay Area / NYC
  (r"minimum (annual |base )*salary|salary desired|desired (minimum )?(annual )?salary \(in usd\)", ["250,000 to 260,000 USD","250,000 to 275,000 USD","250,000 - 260,000","250,000-260,000","$250,000 - $260,000","$250,000+","250,000+ USD","250,000+","240,000 to 250,000 USD","Over $250,000","More than $250,000"]),
  (r"area of emphasis .{0,40}(best )?match", ["Datastore Systems Profile","Systems","Architecture","Platform"]),   # Beacon: leads design across the platform
@@ -1004,7 +1007,24 @@ def company_keys(tag,company=None):
     ks={BOARD_ALIAS.get(k,k) for k in ks}
     return {k for k in ks if len(k)>=2 and k not in GENERIC_TOKENS}
 # companies the applicant never wants to apply to (checked against tag, company, title and URL of every job)
-NEVER_APPLY=re.compile(r"morgan[ _-]?stanley|ms\.wd5\.myworkdayjobs|(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+NEVER_APPLY=re.compile(r"alpaca|morgan[ _-]?stanley|ms\.wd5\.myworkdayjobs|(^|[^a-z0-9])x9_|tapestry|epic[ _-]?semi\w*|global[ _-]?settlement[ _-]?systems?|globalsettlement|tata[ _-]?consult\w*|(^|[^a-z])tcs([^a-z]|$)|cloudflare|anthropic|roblox|waymo|snorkel|real[ _-]?chemistry",re.I)
+# Applicant (2026-10-01): no New Jersey hybrid / on-site roles, and no investment-bank roles that need on-site presence in New
+# York (hybrid included). Fully remote roles are fine. The primary location is the Workday URL's location segment or the first
+# listed location.
+NJ_LOC=re.compile(r"\bNJ\b|new[ -]jersey|jersey[ -]city|hoboken|newark|iselin|princeton|parsippany|berkeley[ -]heights|basking[ -]ridge|weehawken|secaucus|morristown|whippany|piscataway|holmdel|bridgewater",re.I)
+NY_LOC=re.compile(r"new[ -]york|\bnyc\b|\bny\b|manhattan|brooklyn|white plains|rye brook",re.I)
+IB_CO=re.compile(r"\bciti(group|bank)?\b|j\.?\s?p\.?\s?morgan|jpmc|\bchase\b|goldman|bank of america|\bbofa\b|merrill|barclays|deutsche|\bubs\b|credit suisse|jefferies|evercore|lazard|moelis|\bpjt\b|houlihan|\brbc\b|\bbmo\b|td securities|wells[ _-]?fargo|\bbny\b|bank of new york|nomura|mizuho|\bhsbc\b|soci[eé]t[eé] g[eé]n[eé]rale|\bbnp\b|macquarie|piper sandler|raymond james|stifel|cowen|guggenheim|perella|centerview|state street|northern trust",re.I)
+def location_block(company, url="", loc="", where=""):
+    m=re.search(r"/job/([^/]+)/",url or "")
+    txt=(loc or where or "").strip()
+    first=re.split(r"\s*(?:/|;|\||\bor\b)\s*",txt)[0] if txt else ""
+    if first==txt and txt.count(",")>=3: first=txt.split(",")[0]   # a long comma list of places: the first one
+    primary=(m.group(1).replace("-"," ") if m else "")+" "+first
+    alltext=" ".join([url or "",loc or "",where or ""])
+    if re.search(r"\bremote\b",primary+" "+alltext,re.I) and not re.search(r"hybrid|on-?site|in[- ]office",alltext,re.I): return None   # fully remote, even when an NJ/NY city is listed
+    if NJ_LOC.search(primary): return "New Jersey hybrid/on-site role (applicant: never)"
+    if IB_CO.search(company or "") and (NY_LOC.search(primary) or NJ_LOC.search(primary) or (not primary.strip() and (where or "").strip().lower()=="nyc")): return "investment bank with on-site presence in New York (applicant: never)"
+    return None
 # one company behind two Greenhouse board names (found from the security-code e-mail's company name)
 BOARD_ALIAS={"cssmerge":"atoms","cssmergestaff":"atoms","addepar1":"addepar","hubspotjobs":"hubspot","truebill":"rocketmoney","digitalocean98":"digitalocean"}
 _META_TITLES={}
@@ -1102,6 +1122,10 @@ async def run():
                 print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":False,"result":"SKIPPED: the site's spam check blocked this earlier - apply by hand"}),flush=True); continue
             if NEVER_APPLY.search(" ".join(str(job.get(k) or "") for k in ("tag","company","title","url"))):
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: company on the applicant's do-not-apply list","unanswered":[],"errors":[]}
+                print(json.dumps(r),flush=True); continue
+            _lb=location_block(job.get("company") or job.get("tag","").split("_")[0],job.get("url",""),job.get("loc",""),job.get("where",""))
+            if _lb:
+                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: "+_lb,"unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
             prior=None if job.get("resubmit") else applied_elsewhere(job["tag"],job.get("company"),title=job.get("title"))   # one application per company across every stream and site (a correction resubmit is exempt)
             if prior:
