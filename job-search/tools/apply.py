@@ -843,16 +843,18 @@ def mask_hear(texts,label):
         elif t and LOC_Q.search(label or "") and re.search(r"santa clara",t,re.I) and not re.search(r"california|\bca\b|united states|\busa?\b",t,re.I): t=""
         out.append(t)
     return out
+PREF_ALIASES={"united states":["United States of America","USA","U.S.","US"],"united states of america":["United States","USA","US"],"united kingdom":["UK","Great Britain"]}   # fallback only: menus that abbreviate the answer
 async def choose_react_select(page,control,options_pref,label):
     """react-select: type the preferred answer into the inner input, pick the visible matching option (or Enter), verify."""
     if options_pref==["__ASK__"]: return None
     inp=control.locator('input[role="combobox"], input.select__input, input').first
-    if not await inp.count(): return None
+    has_inp=bool(await inp.count())
+    if not has_inp: inp=control   # button[aria-haspopup="listbox"] controls have no inner input: keys go to the control itself
     async def current():
         try: return (await control.inner_text()).strip()
         except Exception: return ""
     try:
-        for pref in options_pref[:4]:
+        for pref in (options_pref[:4] if has_inp else []):   # type-to-filter needs a real inner input
             await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp)
             await inp.press("Control+A"); await inp.press("Backspace"); await page.wait_for_timeout(200)
             await inp.type(pref[:30],delay=25); await page.wait_for_timeout(900)
@@ -890,6 +892,38 @@ async def choose_react_select(page,control,options_pref,label):
             await opts.nth(real[0]).click(timeout=3000); await page.wait_for_timeout(500)
             cur=await current()
             if cur and cur.lower()!="select...": return cur[:80]
+        # still unmatched: retry with abbreviation aliases (Stripe's country list says "US", not "United States"),
+        # then drive menus the scan couldn't see whole: ARIA typeahead for button listboxes, scroll+rescan for virtualized ones.
+        prefs2=options_pref+[a for p in options_pref for a in PREF_ALIASES.get((p or "").lower().strip(),[]) if a.lower() not in [x.lower() for x in options_pref]]
+        async def try_visible(opts,texts):
+            texts=mask_hear(texts,label)
+            for pref in prefs2:
+                i=best_index(texts,pref)
+                if i is not None:
+                    await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
+                    cur=await current()
+                    if cur and cur.lower()!="select...": return cur[:80]
+            return None
+        got=await try_visible(opts,texts)   # alias pass over the menu already open
+        if got: return got
+        if not has_inp:
+            try:   # typeahead: a focused button listbox jumps to the typed prefix (a real input would filter instead, maybe to nothing)
+                for ch in re.sub(r"[^a-z]","",prefs2[0].lower())[:6]: await page.keyboard.press(ch)
+                await page.wait_for_timeout(400)
+                got=await try_visible(*await visible_options(page))
+                if got: return got
+            except Exception: pass
+        seen=set(LAST_OPTIONS.get(label[:160]) or []); stall=0
+        for _ in range(30):   # virtualized/paginated menus render options only as the list scrolls
+            moved=await page.evaluate('()=>{const vis=e=>e&&e.getClientRects().length;const scr=e=>e&&e.scrollHeight>e.clientHeight+4;const cands=[];for(const lb of [...document.querySelectorAll(\'[role="listbox"],[class*="select__menu-list"]\')].filter(vis).reverse()){cands.push(lb);let p=lb.parentElement;for(let i=0;i<3&&p;i++){cands.push(p);p=p.parentElement}cands.push(...lb.querySelectorAll("*"))}const o=[...document.querySelectorAll(\'[role="option"],[class*="select__option"]\')].find(vis);if(o){let p=o.parentElement;while(p&&p!==document.body){cands.push(p);p=p.parentElement}}const el=cands.find(scr);if(!el)return false;const b=el.scrollTop;el.scrollTop+=el.clientHeight*0.8;el.dispatchEvent(new Event("scroll",{bubbles:true}));return el.scrollTop>b}')
+            await page.wait_for_timeout(300)
+            opts,texts=await visible_options(page)
+            new=[t for t in texts if t and t not in seen]
+            if new: seen.update(new); LAST_OPTIONS[label[:160]]=(LAST_OPTIONS.get(label[:160]) or [])+new
+            got=await try_visible(opts,texts)
+            if got: return got
+            stall=0 if (moved or new) else stall+1
+            if stall>=3: break
         await dismiss_menu(page,inp)
     except Exception:
         try: await dismiss_menu(page,inp)
@@ -1615,6 +1649,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             for pv in ov:
                                 bi=best_index(mem,str(pv))
                                 if bi is None: bi=next((j for j,t in enumerate(mem) if t and (str(pv).lower() in t.lower() or t.strip().lower() in str(pv).lower())),None)
+                                if bi is None: bi=next((b for a in PREF_ALIASES.get(str(pv).lower().strip(),[]) for b in [best_index(mem,a)] if b is not None),None)   # "United States" ticks a box labeled "US"
                                 if bi is not None and mem[bi][:40] not in ticked:
                                     try: await tick(members[bi][0]); ticked.append(mem[bi][:40])
                                     except Exception: pass
