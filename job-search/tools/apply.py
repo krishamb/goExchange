@@ -280,6 +280,7 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"(use|work on) the workday system", ["No, I do not use the Workday system","No, I do not","No"]),   # Hyperion AI does not run on Workday
  (r"(currently )?(live in|located in|based in) or (are you )?(able|willing) to relocate to the (location|city|area)", ["Yes","yes"]),   # queued roles are all in his locations (Bay Area / NYC hybrid / remote), and he will relocate
  (r"(commit to|able to) (coming|come|commute|report) (into|in|to) the office|(come|coming) into the office as advertised", ["Yes","yes"]),   # in-office as advertised: queued roles are Bay Area (any mode) or NYC hybrid
  (r"i (attest|confirm|certify)\S* that i have no post-government|no post-government employment restrictions", ["Yes","yes","I attest","I confirm","I agree","Agree"]),   # an attestation of having no restrictions: Yes
