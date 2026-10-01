@@ -11,7 +11,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-01.2';
+const VERSION = '2026-10-01.3';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const clean = s => (s || '').replace(/\s+/g, ' ').replace(/[✱*]/g, '').trim();
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -490,6 +490,15 @@ function ui() {
   if (!m.email || !(S.get('resume_main') || S.get('resume_exec'))) panel.querySelector('#akf-setup').open = true;
   return panel;
 }
+function banner(text, good) {   // an unmissable confirmation that the filler is live on this page
+  try {
+    let el = document.getElementById('akf-banner');
+    if (!el) { el = document.createElement('div'); el.id = 'akf-banner'; document.documentElement.appendChild(el); }
+    el.textContent = text;
+    el.style.cssText = `position:fixed;top:0;left:0;right:0;z-index:2147483647;padding:10px 14px;text-align:center;font:600 14px system-ui,sans-serif;color:#fff;background:${good ? '#0b6b58' : '#a15c07'}`;
+    clearTimeout(banner.t); banner.t = setTimeout(() => { try { el.remove(); } catch (e) {} }, good ? 4000 : 9000);
+  } catch (e) {}
+}
 function status(t) { ui().querySelector('#akf-status').textContent = t; }
 function buttons(list) {
   const b = ui().querySelector('#akf-btns'); b.innerHTML = '';
@@ -593,6 +602,17 @@ async function run(opts = {}) {
   if (!HAS_GM && !opts.manual && !S.get('autofill', false)) { status('Click "Fill this application".'); buttons([['Fill this application', () => run({ manual: true }), true]]); return; }
   status('Filling...'); buttons([]);
   const rep = await fillForm({ prior: opts.prior || [] });
+  // apply on its own when asked to and the form is complete (bookmarklet single-job auto-submit)
+  if (opts.submit && rep.ready && !captchaChallenge()) {
+    banner('Submitting your application…', true);
+    status(summary(rep) + '\n\nSubmitting…');
+    const res = await submitForm();
+    if (res.status === 'submitted') { banner('✓ Application submitted', true); status(summary(rep) + '\n\n✓ Submitted. Open the next job and click the bookmark again.'); buttons([['Fill again', () => run({ manual: true })]]); window.__AKF_LAST = rep; return rep; }
+    status(summary(rep) + `\n\nCould not confirm (${res.why}). Review and click Submit Application yourself.`);
+    buttons([['Fill again', () => run({ manual: true })]]); window.__AKF_LAST = rep; return rep;
+  }
+  if (rep.ready) banner('✓ Form filled — review and click Submit Application', true);
+  else banner('Form filled; some items need you (see the panel)', false);
   status(summary(rep));
   buttons([['Fill again', () => run({ manual: true })]]);
   window.__AKF_LAST = rep;
@@ -600,6 +620,7 @@ async function run(opts = {}) {
 }
 async function boot() {
   if (!/(^|\.)jobs\.ashbyhq\.com$/.test(location.hostname)) { alert('Open an Ashby application page (jobs.ashbyhq.com) first.'); return; }
+  banner('✓ Ashby filler active · v' + VERSION, true);
   const hq = readHashQueue();
   if (hq) {
     const n = hq.items.length;
@@ -614,7 +635,7 @@ async function boot() {
   }
   if (q && q.done) { ui(); finish(q); }
   const auto = S.get('autofill', HAS_GM);
-  if (curJobId() && (auto || window.__AKF)) { await sleep(1500); return run({ manual: true }); }
+  if (curJobId() && (auto || window.__AKF)) { await sleep(1500); return run({ manual: true, submit: !!(window.__AKF && window.__AKF.auto) }); }
   ui(); status('Open an application, then click Fill.'); buttons([['Fill this application', () => run({ manual: true }), true]]);
 }
 window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, version: VERSION };

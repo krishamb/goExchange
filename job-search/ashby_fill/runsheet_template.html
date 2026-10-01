@@ -79,21 +79,25 @@ details.paste textarea { width: 100%; min-height: 90px; margin-top: 8px }
   </header>
 
   <section class="setup" aria-labelledby="setup-h">
-    <h2 id="setup-h">Set up once on this computer</h2>
+    <h2 id="setup-h">Simplest: the bookmark (no extension)</h2>
+    <p class="note">Works on any computer, nothing to install. It fills <em>and submits</em> one application per click.</p>
     <ol class="steps">
-      <li><strong>Install Tampermonkey</strong><p>Free browser extension: <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank" rel="noopener">Edge</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" target="_blank" rel="noopener">Firefox</a>. In Chrome or Edge, open the extension's Details and turn on <em>Allow user scripts</em>.</p></li>
-      <li><strong>Install the filler</strong><p><a id="us-link" href="#" target="_blank" rel="noopener">Install Ashby filler</a>. Tampermonkey shows an Install button. It updates itself from this repository.</p></li>
-      <li><strong>Add your details</strong><p>Open any Ashby job. In the filler panel at the bottom right, open Setup: your Gmail address, phone, and your two resumes (architect and executive). They stay in this browser only.</p></li>
+      <li><strong>Enter your details</strong><p>Type your Gmail and phone below. (Your resume is asked for once, the first time you use it on an Ashby page.)</p>
+        <div class="row" style="margin-top:6px">
+          <input id="bm-email" type="email" placeholder="you@gmail.com" autocomplete="email">
+          <input id="bm-phone" type="text" placeholder="650 555 0100" autocomplete="tel">
+        </div></li>
+      <li><strong>Drag this to your bookmarks bar</strong><p>Drag the green <strong>Fill&nbsp;Ashby</strong> button up to your bookmarks bar (press Ctrl/Cmd&nbsp;+&nbsp;Shift&nbsp;+&nbsp;B to show it first).</p>
+        <div class="row" style="margin-top:6px"><a id="bm" class="btn bm" href="#">Fill Ashby</a></div></li>
+      <li><strong>On each job: open it, click the bookmark</strong><p>Open a job from the list below, then click <em>Fill Ashby</em>. A green <strong>“✓ Ashby filler active”</strong> bar appears, it fills every answer, and submits if the form is complete. It pauses only for a captcha or an “are you an AI agent?” question.</p></li>
     </ol>
-    <div class="alt">
-      <strong>No extension? Use the bookmark instead</strong>
-      <p class="note">It fills one application per click (no batches). Type your Gmail and phone, then drag the green button to your bookmarks bar. The first time you click it on an Ashby page, its panel asks for your resume once.</p>
-      <div class="row">
-        <label for="bm-email" class="note">Gmail</label><input id="bm-email" type="email" placeholder="you@gmail.com" autocomplete="email">
-        <label for="bm-phone" class="note">Phone</label><input id="bm-phone" type="text" placeholder="650 555 0100" autocomplete="tel">
-        <a id="bm" class="btn bm" href="#">Fill Ashby</a>
-      </div>
-    </div>
+    <details class="alt" style="margin-top:4px"><summary style="cursor:pointer;font-weight:600">Power option: Tampermonkey userscript — one click applies to a whole category</summary>
+      <ol class="steps" style="margin-top:10px">
+        <li><strong>Install Tampermonkey</strong><p><a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Chrome</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank" rel="noopener">Edge</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" target="_blank" rel="noopener">Firefox</a>. In Chrome/Edge you MUST then open the extension's Details and turn on <em>Allow user scripts</em> — without it the script silently never runs.</p></li>
+        <li><strong>Install the filler</strong><p><a id="us-link" href="#" target="_blank" rel="noopener">Install Ashby filler</a> — Tampermonkey shows an Install button.</p></li>
+        <li><strong>Confirm it works</strong><p>Open any Ashby job. You should see the green <strong>“✓ Ashby filler active”</strong> bar and a panel at bottom right. If you don't, step 1's toggle is off. Then the <strong>Auto-apply</strong> buttons here work a whole category at a time.</p></li>
+      </ol>
+    </details>
   </section>
 
   <section class="cats" id="cats" aria-label="Categories"></section>
@@ -189,14 +193,15 @@ $('#paste-go').onclick = () => {
 };
 $('#clear-marks').onclick = () => { marks = {}; store.set('akf_marks', marks); render(); toast('Marks cleared.'); };
 function bookmarklet() {
-  const v = { email: $('#bm-email').value.trim(), phone: $('#bm-phone').value.trim() };
+  const v = { email: $('#bm-email').value.trim(), phone: $('#bm-phone').value.trim(), auto: true };
   store.set('akf_bm', v);
-  const code = `(function(){window.__AKF=${JSON.stringify(v)};var s=document.createElement('script');s.src=${JSON.stringify(DATA.loader)}+'?t='+Date.now();document.body.appendChild(s);})()`;
+  // inject the filler from jsDelivr (the only CDN Ashby's security policy allows); retry a few times if the CDN hiccups
+  const code = `(function(){if(window.__AKF_LOADED){window.__AKF_LOADED.run({manual:true,submit:true});return}window.__AKF=${JSON.stringify(v)};var u=${JSON.stringify(DATA.loader)},n=0;(function go(){var s=document.createElement('script');s.src=u+(u.indexOf('?')<0?'?':'&')+'r='+n+Date.now();s.onerror=function(){s.remove();if(++n<5)setTimeout(go,900);else alert('The filler could not load (CDN busy). Click the bookmark again in a moment.')};document.body.appendChild(s);})();})()`;
   $('#bm').href = 'javascript:' + encodeURIComponent(code);
 }
 (() => { const v = store.get('akf_bm', {}); $('#bm-email').value = v.email || ''; $('#bm-phone').value = v.phone || ''; })();
 $('#bm-email').addEventListener('input', bookmarklet); $('#bm-phone').addEventListener('input', bookmarklet);
 $('#bm').addEventListener('click', e => { e.preventDefault(); toast('Drag this button to your bookmarks bar, then click it on an Ashby page.'); });
-const openN = DATA.cats.flatMap(c=>c.items).filter(open_).length; $('#apply-all-note').textContent = openN + ' roles not yet marked done'; $('#us-link').href = DATA.userscript;
+const openN = DATA.cats.flatMap(c=>c.items).filter(open_).length; $('#apply-all-note').textContent = `${openN} open — needs the userscript. Bookmark users: open a job below, then click Fill Ashby.`; $('#us-link').href = DATA.userscript;
 bookmarklet(); render();
 </script>
