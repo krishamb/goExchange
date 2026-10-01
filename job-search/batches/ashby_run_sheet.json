@@ -117,6 +117,19 @@
   "flag": ""
  },
  {
+  "id": "32eb8288-f53a-40f6-9c90-1a0063bcabca",
+  "u": "https://jobs.ashbyhq.com/1password/32eb8288-f53a-40f6-9c90-1a0063bcabca",
+  "t": "Director Analytics Engineering",
+  "c": "1Password",
+  "loc": "Remote (United States | Canada) (Remote)",
+  "mode": "Remote (US)",
+  "comp": "",
+  "ts": 1790880350,
+  "fit": 7,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "0ad27864-ce95-4797-ab5d-b24de8f78d94",
   "u": "https://jobs.ashbyhq.com/semgrep/0ad27864-ce95-4797-ab5d-b24de8f78d94",
   "t": "Senior Engineering Manager, Guardian",
@@ -221,19 +234,6 @@
   "flag": ""
  },
  {
-  "id": "4575a40a-1bfc-419c-90e2-687a09678d22",
-  "u": "https://jobs.ashbyhq.com/qualified-health-pbc/4575a40a-1bfc-419c-90e2-687a09678d22",
-  "t": "Technical Lead Applied AI Engineer",
-  "c": "Qualified Health Pbc",
-  "loc": "Palo Alto - Hybrid ",
-  "mode": "Hybrid \u00b7 days not stated",
-  "comp": "",
-  "ts": 1790814532,
-  "fit": 75,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "dda40371-508c-4471-9e23-cf5cb4f9b621",
   "u": "https://jobs.ashbyhq.com/meadow/dda40371-508c-4471-9e23-cf5cb4f9b621",
   "t": "Staff Software Engineer",
@@ -242,7 +242,7 @@
   "mode": "Remote (US)",
   "comp": "",
   "ts": 1790805549,
-  "fit": 75,
+  "fit": 77,
   "p": [],
   "flag": ""
  },
@@ -255,19 +255,6 @@
   "mode": "Remote (US)",
   "comp": "$200K \u2013 $225K",
   "ts": 1790800860,
-  "fit": 75,
-  "p": [],
-  "flag": ""
- },
- {
-  "id": "813f97f9-2ae3-4192-a624-59df51b7b987",
-  "u": "https://jobs.ashbyhq.com/rivianvw.tech/813f97f9-2ae3-4192-a624-59df51b7b987",
-  "t": "Staff Software Engineer - AI Platform",
-  "c": "Rivian and VW Tech",
-  "loc": "Palo Alto, California (Remote)",
-  "mode": "Remote (US)",
-  "comp": "$206.5K \u2013 $283.9K \u2022 Offers Equity \u2022 Offe",
-  "ts": 1790791808,
   "fit": 75,
   "p": [],
   "flag": ""
@@ -295,6 +282,32 @@
   "comp": "$325K - $410K + bonus",
   "ts": 1790359842,
   "fit": 85,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "c1930f55-3d31-4634-9786-3c466f36a003",
+  "u": "https://jobs.ashbyhq.com/onoshealth/c1930f55-3d31-4634-9786-3c466f36a003",
+  "t": "Staff Software Engineer (AI)",
+  "c": "Onoshealth",
+  "loc": "San Francisco (Remote)",
+  "mode": "Remote (US)",
+  "comp": "$200K \u2013 $275K \u2022 Offers Equity",
+  "ts": 1790881950,
+  "fit": 7,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "883bd78f-c9cd-4ae5-afbf-b21f16f06a6f",
+  "u": "https://jobs.ashbyhq.com/perplexity/883bd78f-c9cd-4ae5-afbf-b21f16f06a6f",
+  "t": "Engineering Manager (Enterprise)",
+  "c": "Perplexity",
+  "loc": "San Francisco",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "$300K \u2013 $405K \u2022 Offers Equity",
+  "ts": 1790875513,
+  "fit": 7,
   "p": [],
   "flag": ""
  },
@@ -377,15 +390,28 @@
   "flag": ""
  },
  {
+  "id": "4575a40a-1bfc-419c-90e2-687a09678d22",
+  "u": "https://jobs.ashbyhq.com/qualified-health-pbc/4575a40a-1bfc-419c-90e2-687a09678d22",
+  "t": "Technical Lead Applied AI Engineer",
+  "c": "Qualified Health Pbc",
+  "loc": "Palo Alto - Hybrid",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": 1790814532,
+  "fit": 82,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "63a52ee6-2b43-4b12-837a-7bda59ca62fd",
   "u": "https://jobs.ashbyhq.com/openloophealth/63a52ee6-2b43-4b12-837a-7bda59ca62fd",
   "t": "Sr. Staff Applied AI Engineer (Tech Lead)",
   "c": "OpenLoop Health",
-  "loc": "United States - Remote; Toronto, Canada (Remote)",
+  "loc": "United States - Remote; Toronto, Canada",
   "mode": "Remote (US)",
-  "comp": "",
+  "comp": "not stated ('Competitive compensation')",
   "ts": 1790811335,
-  "fit": 75,
+  "fit": 82,
   "p": [],
   "flag": ""
  },
@@ -455,17 +481,30 @@
   "flag": ""
  },
  {
+  "id": "813f97f9-2ae3-4192-a624-59df51b7b987",
+  "u": "https://jobs.ashbyhq.com/rivianvw.tech/813f97f9-2ae3-4192-a624-59df51b7b987",
+  "t": "Staff Software Engineer - AI Platform",
+  "c": "Rivian and VW Tech",
+  "loc": "Palo Alto, California (Hybrid)",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "$206.5K \u2013 $283.9K \u2022 Offers Equity \u2022 Offe",
+  "ts": 1790791808,
+  "fit": 82,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "eac0980c-6e8d-40ad-9329-0b338bada6be",
   "u": "https://jobs.ashbyhq.com/radai/eac0980c-6e8d-40ad-9329-0b338bada6be",
-  "t": "Staff Software Engineer, Continuity ",
+  "t": "Staff Software Engineer, Continuity",
   "c": "Radai",
   "loc": "San Francisco - Onsite; United States - Remote",
   "mode": "Remote option",
   "comp": "$175K \u2013 $245K \u2022 Offers Equity",
   "ts": 1790789208,
-  "fit": 75,
+  "fit": 70,
   "p": [],
-  "flag": ""
+  "flag": "Check office days before submitting"
  },
  {
   "id": "ff5a33ce-c255-49ad-b926-9bcd1135d06d",
@@ -572,19 +611,6 @@
   "flag": ""
  },
  {
-  "id": "ea86bb66-c471-4e7e-b0f1-42d1c78dc2d1",
-  "u": "https://jobs.ashbyhq.com/montecarlodata/ea86bb66-c471-4e7e-b0f1-42d1c78dc2d1",
-  "t": "Senior Backend Engineer",
-  "c": "Monte Carlo",
-  "loc": "Remote, US (Remote)",
-  "mode": "Remote (US)",
-  "comp": "$180K \u2013 $230K \u2022 Offers Equity",
-  "ts": 1790795846,
-  "fit": 75,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "08bbec3d-0923-4370-bc58-30a8e8a90a95",
   "u": "https://jobs.ashbyhq.com/helius/08bbec3d-0923-4370-bc58-30a8e8a90a95",
   "t": "Platform Engineer, Infrastructure",
@@ -611,19 +637,6 @@
   "flag": ""
  },
  {
-  "id": "899496e3-cbb0-4c84-885a-7391991054b5",
-  "u": "https://jobs.ashbyhq.com/ambrook/899496e3-cbb0-4c84-885a-7391991054b5",
-  "t": "Software Engineer, Platform",
-  "c": "Ambrook",
-  "loc": "San Francisco; New York, Denver, Remote (Remote)",
-  "mode": "Remote (US)",
-  "comp": "$115K \u2013 $280K \u2022 Offers Equity",
-  "ts": 1790349212,
-  "fit": 73,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "b977ddd1-13eb-405a-8a32-9b3d76814b56",
   "u": "https://jobs.ashbyhq.com/payabli/b977ddd1-13eb-405a-8a32-9b3d76814b56",
   "t": "Senior Software Engineer, Platform",
@@ -633,6 +646,19 @@
   "comp": "",
   "ts": 1790288405,
   "fit": 73,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "03db09e8-f499-408c-89b3-9fed0bea865c",
+  "u": "https://jobs.ashbyhq.com/ease-health/03db09e8-f499-408c-89b3-9fed0bea865c",
+  "t": "Applied AI Engineer",
+  "c": "Ease Health",
+  "loc": "New York City (Remote)",
+  "mode": "Remote (US)",
+  "comp": "",
+  "ts": 1790868183,
+  "fit": 7,
   "p": [],
   "flag": ""
  },
@@ -650,19 +676,6 @@
   "flag": ""
  },
  {
-  "id": "5ef1ec36-3f38-45ff-adff-1bd72d6c0b68",
-  "u": "https://jobs.ashbyhq.com/wispr-flow/5ef1ec36-3f38-45ff-adff-1bd72d6c0b68",
-  "t": "Product Engineer, New Products",
-  "c": "Wispr Flow",
-  "loc": "San Francisco; Remote",
-  "mode": "Remote option",
-  "comp": "$180K \u2013 $300K \u2022 Offers Equity \u2022 Multiple",
-  "ts": 1790824043,
-  "fit": 70,
-  "p": [],
-  "flag": "Check office days before submitting"
- },
- {
   "id": "c16a0b39-dd62-4925-886a-66eb322c599a",
   "u": "https://jobs.ashbyhq.com/formenergy/c16a0b39-dd62-4925-886a-66eb322c599a",
   "t": "Senior Microsoft 365 & Azure Engineer",
@@ -671,19 +684,6 @@
   "mode": "Remote option",
   "comp": "$128,662 \u2013 $160,807",
   "ts": 1790809442,
-  "fit": 75,
-  "p": [],
-  "flag": ""
- },
- {
-  "id": "804f6fcb-e244-4734-b3c9-029c108359f4",
-  "u": "https://jobs.ashbyhq.com/1password/804f6fcb-e244-4734-b3c9-029c108359f4",
-  "t": "Senior Developer Advocate",
-  "c": "1Password",
-  "loc": "United States; San Francisco, CA, New York, NY (Remote)",
-  "mode": "Remote (US)",
-  "comp": "",
-  "ts": 1790801569,
   "fit": 75,
   "p": [],
   "flag": ""
@@ -698,6 +698,19 @@
   "comp": "",
   "ts": 1790796589,
   "fit": 80,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "ea86bb66-c471-4e7e-b0f1-42d1c78dc2d1",
+  "u": "https://jobs.ashbyhq.com/montecarlodata/ea86bb66-c471-4e7e-b0f1-42d1c78dc2d1",
+  "t": "Senior Backend Engineer",
+  "c": "Monte Carlo",
+  "loc": "Remote, US",
+  "mode": "Remote (US)",
+  "comp": "$180K \u2013 $230K \u2022 Offers Equity",
+  "ts": 1790795846,
+  "fit": 76,
   "p": [],
   "flag": ""
  },
@@ -763,19 +776,6 @@
   "comp": "",
   "ts": 1790343187,
   "fit": 74,
-  "p": [],
-  "flag": ""
- },
- {
-  "id": "0be49174-9463-4c93-82d9-f227b0ab6a7c",
-  "u": "https://jobs.ashbyhq.com/adaption/0be49174-9463-4c93-82d9-f227b0ab6a7c",
-  "t": "Inference Performance Engineer",
-  "c": "Adaption",
-  "loc": "San Francisco",
-  "mode": "Remote option",
-  "comp": "",
-  "ts": 1790285116,
-  "fit": 86,
   "p": [],
   "flag": ""
  },
@@ -1100,6 +1100,19 @@
   "mode": "Remote (US)",
   "comp": "$171K \u2013 $214K \u2022 Offers Equity \u2022 Offers B",
   "ts": 1790007760,
+  "fit": 86,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "0be49174-9463-4c93-82d9-f227b0ab6a7c",
+  "u": "https://jobs.ashbyhq.com/adaption/0be49174-9463-4c93-82d9-f227b0ab6a7c",
+  "t": "Inference Performance Engineer",
+  "c": "Adaption",
+  "loc": "San Francisco",
+  "mode": "Remote option",
+  "comp": "",
+  "ts": 1790285116,
   "fit": 86,
   "p": [],
   "flag": ""
