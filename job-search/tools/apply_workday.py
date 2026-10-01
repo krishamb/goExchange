@@ -389,19 +389,41 @@ async def input_label(inp):
     try: return (await inp.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]'); if(l&&l.innerText.trim()) return l.innerText.replace(/\\s+/g,' ').trim(); const c=el.closest('label'); if(c&&c.innerText.trim()) return c.innerText.replace(/\\s+/g,' ').trim(); let p=el.parentElement; for(let i=0;i<4&&p;i++){const t=(p.innerText||'').replace(/\\s+/g,' ').trim(); if(t&&t.length<260) return t; p=p.parentElement;} return '';}"))
     except Exception: return ""
 async def set_check(inp, on):
+    page = inp.page
     try:
         if await inp.is_checked() == on: return True
-        rid = await inp.get_attribute("id")
+    except Exception: pass
+    rid = None
+    try: rid = await inp.get_attribute("id")
+    except Exception: pass
+    # several ways to toggle a Workday checkbox, trying each until is_checked() agrees (its React widget ignores some)
+    async def checked():
+        try: return await inp.is_checked()
+        except Exception: return None
+    attempts = []
+    if rid: attempts.append(lambda: page.locator(f'label[for="{rid}"]').first.click(timeout=2500))
+    # the visible Workday checkbox is usually a sibling/wrapper, not the (hidden) input
+    attempts.append(lambda: inp.evaluate("(el)=>{const w=el.closest('[data-automation-id]')||el.parentElement; (w||el).click();}"))
+    attempts.append(lambda: inp.click(force=True, timeout=2500))
+    attempts.append(lambda: _mouse_click(page, inp))
+    attempts.append(lambda: inp.set_checked(on, force=True, timeout=2500))
+    attempts.append(lambda: inp.evaluate("(el,on)=>{if(el.checked!==on){el.checked=on; el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true})); el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}}", on))
+    for act in attempts:
+        try: await act()
+        except Exception: continue
+        await page.wait_for_timeout(300)
+        if await checked() == on: return True
+    return await checked() == on
+async def _mouse_click(page, inp):
+    b = None
+    try: b = await inp.bounding_box()
+    except Exception: pass
+    if not b or b.get("width", 0) < 2:   # the input is visually hidden: click its visible wrapper instead
         try:
-            if rid: await inp.page.locator(f'label[for="{rid}"]').first.click(timeout=3000)
-            else: await inp.click(force=True, timeout=3000)
-        except Exception:
-            await inp.evaluate("(el)=>{const l=el.id&&document.querySelector('label[for=\"'+CSS.escape(el.id)+'\"]');(l||el).click()}")
-        await inp.page.wait_for_timeout(300)
-        if await inp.is_checked() != on: await inp.set_checked(on, force=True, timeout=3000)
-        return await inp.is_checked() == on
-    except Exception:
-        return False
+            h = await inp.evaluate_handle("(el)=>el.closest('[data-automation-id]')||el.parentElement")
+            b = await h.as_element().bounding_box() if h.as_element() else None
+        except Exception: b = None
+    if b and b.get("width", 0) >= 2: await page.mouse.click(b["x"] + b["width"] / 2, b["y"] + b["height"] / 2)
 async def pick_radio(page, box, ranker):
     radios = box.locator('input[type="radio"]'); n = await radios.count()
     texts = [await input_label(radios.nth(i)) for i in range(n)]
