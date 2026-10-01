@@ -222,19 +222,6 @@
  },
  {
   "ats": "indeed",
-  "url": "https://click.appcast.io/t/BtNFe5wpqu2v55EgjBPZMmlL2x2pPVVAfH4A90fUU5o=",
-  "indeed_url": "https://www.indeed.com/viewjob?jk=4f3cc2ae90b2cb8b",
-  "tag": "geico_distinguished_engineer_ai_applicati",
-  "company": "GEICO",
-  "title": "Distinguished Engineer, AI Applications",
-  "comp": 350000.0,
-  "loc": "Palo Alto, CA, US",
-  "remote": false,
-  "source": "Indeed",
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "indeed",
   "url": "https://click.appcast.io/t/zSBPONhirGJwAiaPD8kRBfuFxlVrFYnxK50K0csyJEM=",
   "indeed_url": "https://www.indeed.com/viewjob?jk=ba7b1deac4de1a4f",
   "tag": "walmart_usa_distinguished_software_engineer",

@@ -69,6 +69,7 @@ account; tell them you are a US citizen if they reply).
 
 ## Do not apply (applicant instruction)
 
+- GEICO: never apply (applicant, 2026-10-01). Blocked in both fillers; no GEICO application was submitted.
 - Alpaca (Alpaca Markets): never apply (applicant, 2026-10-01). Blocked in both fillers and removed from every queue and the
   by-hand page. Two applications had already gone through before the instruction: Staff Software Engineer - Margin & Risk
   (2026-09-29) and Senior Software Engineer - Payments & Treasury (2026-09-30 5:41 pm PT, minutes before the instruction).
