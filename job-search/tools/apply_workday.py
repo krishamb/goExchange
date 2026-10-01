@@ -699,7 +699,7 @@ async def fill_field(page, job, f):
             cbs = box.locator('input[type="checkbox"]')
             f["opts"] = [await input_label(cbs.nth(i)) for i in range(min(await cbs.count(), 12))]
         except Exception: pass
-    if kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid))):   # not the form's 'Language' listbox (id disabilityForm)
+    if kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid)) or re.search(r"check one of the boxes below", key, re.I)):   # the CC-305 self-ID (sometimes a bare 'Please check one of the boxes below:' listbox); not the form's 'Language' listbox (id disabilityForm)
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
     # ---- everything else from the rules

@@ -48,12 +48,12 @@ for f in sys.argv[1:]:
         if not j or j in seen: continue
         if j in DROP or any(a.search(x.get("company", "")) and b.search(x.get("title", "")) for a, b, _ in DROP_RX): continue
         seen.add(j); items.append(x)
-# at most 3 per company, counting real submissions
+# at most ONE per company, counting real submissions (applicant rule 2026-10-01)
 items.sort(key=lambda x: (x.get("tier", 3), -(x.get("dom") or 0), -(x.get("fit") or 0), -(x.get("posted_ts") or 0)))
 per, kept = collections.Counter(), []
 for x in items:
     k = re.sub(r"[^a-z0-9]", "", x["company"].lower().replace(".com", ""))
-    if L.per_co.get(k, 0) + per[k] >= 3: continue
+    if L.per_co.get(k, 0) + per[k] >= 1: continue   # applicant (2026-10-01): one application per company
     per[k] += 1; kept.append(x)
 NOW = time.time()
 def row(x):
