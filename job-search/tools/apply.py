@@ -280,6 +280,7 @@ CHOICE_RULES=[
  (r"of legal age to work|legally permitted to work", ["Yes","yes"]),
  (r"\b(age|are you) (18|eighteen)( years)?( of age| old)? or (over|older)|\bat least (18|eighteen)( years)?( of age| old)?\??\s*$", ["Yes","yes"]),
  (r"do you meet the (preferred|basic|minimum|required) qualifications", ["Yes","yes"]),
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|hyperion)\b).*(ever been issued|been issued|ever had) (a |an )?.{0,30}(employee id|email address|badge)", ["No","no"]),   # never worked at the company he applies to
  (r"(25|10)% or more .{0,40}ownership interest|ownership interest in,? or plan to have such an ownership", ["No","no"]),   # applicant (2026-10-01): owns under 25% of any business
  (r"position of control with a for-profit|serve,? service,? or plan to serve in any position of control", ["No","no"]),   # applicant (2026-10-01): no position of control
  (r"disciplined by an administrative agency|subject of an administrative order", ["No","no"]),
