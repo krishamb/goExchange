@@ -1632,7 +1632,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
                     if re.search(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export",lab,re.I):   # a disclosure statement ("I am subject to a non-compete", "I hold a financial interest"): never tick it
                         report["chosen"][lab[:60]]="left unticked (disclosure)"; continue
-                    if re.search(r"agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present|^accept\*?$|i accept",lab,re.I):
+                    if re.search(r"agree|acknowledge|consent|certify|confirm|\battest\b|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present|^accept\*?$|i accept",lab,re.I):
                         await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
@@ -1676,7 +1676,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not choice and is_src:
                             choice=next((b for b in members if re.search(r"other",b[1],re.I)),members[0])
                         if choice: await tick(choice[0]); report["chosen"][(q or lab)[:60]]=choice[1][:60]
-                    elif await is_required(h): report["unanswered"].append({"type":"checkbox","label":lab[:160]})   # a required box that is not an acknowledgment: never tick it blind
+                    elif await is_required(h):
+                        # a per-item "answers" override naming this lone box ticks it; otherwise never tick it blind
+                        if any(k.lower() in lab.lower() and str(v).lower() in ("check","checked","yes","true") for k,v in extra.items() if isinstance(v,(str,bool))):
+                            await tick(h); report["chosen"][lab[:60]]="checked (override)"
+                        else: report["unanswered"].append({"type":"checkbox","label":lab[:160]})
                 except Exception: pass
             answered={k.lower()[:40] for k,v in report["chosen"].items() if v} | {k.lower()[:40] for k in report["filled"].keys()}
             seen=set(); uu=[]
