@@ -81,7 +81,7 @@ items.sort(key=lambda x: (x.get("tier", 3), -(x.get("dom") or 0), -(x.get("fit")
 per, kept = collections.Counter(), []
 for x in items:
     k = re.sub(r"[^a-z0-9]", "", x["company"].lower().replace(".com", ""))
-    if L.per_co.get(k, 0) + per[k] >= 1: continue   # applicant (2026-10-01): one application per company
+    if L.per_co.get(k, 0) + per[k] >= 2: continue   # applicant (2026-10-02): up to two per company when the roles differ
     per[k] += 1; kept.append(x)
 NOW = time.time()
 def row(x):
