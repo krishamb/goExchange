@@ -41,6 +41,9 @@ NAMES = {"kraken.com": "Kraken", "ava-labs": "Ava Labs", "hims-and-hers": "Hims 
 _A = open(os.path.join(REPO, "job-search", "tools", "apply.py")).read(); _G = {"re": re}
 exec(_A[_A.index("NEVER_APPLY="):_A.index(chr(10), _A.index("NEVER_APPLY="))], _G)
 NEVER = _G["NEVER_APPLY"]
+try: REJECTED = set(json.load(open(f"{SC}/rejected.json")))
+except Exception: REJECTED = set()   # companies that sent a rejection: never list again
+
 jid = lambda u: (re.search(r"([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})", u or "") or [None, None])[1]
 def pretty(slug):
     s = (slug or "").strip()
@@ -69,6 +72,7 @@ for f in sys.argv[1:]:
         j = (jid(x.get("url")) or "").lower()
         if not j or j in seen: continue
         if NEVER.search((x.get("company") or "") + " " + (x.get("title") or "") + " " + (x.get("url") or "")): continue
+        if re.sub(r"[^a-z0-9]", "", (x.get("company") or "").lower()) in REJECTED: continue
         if ACTIVE_CHECK and not _is_active(x.get("company"), j): continue
         if j in DROP or any(a.search(x.get("company", "")) and b.search(x.get("title", "")) for a, b, _ in DROP_RX): continue
         seen.add(j); items.append(x)
