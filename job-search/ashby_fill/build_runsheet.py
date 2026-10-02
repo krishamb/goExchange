@@ -43,6 +43,17 @@ exec(_A[_A.index("NEVER_APPLY="):_A.index(chr(10), _A.index("NEVER_APPLY="))], _
 NEVER = _G["NEVER_APPLY"]
 try: REJECTED = set(json.load(open(f"{SC}/rejected.json")))
 except Exception: REJECTED = set()   # companies that sent a rejection: never list again
+# submitted-this-week company keys, token-join tolerant ("wf2_onos_health_1_..." covers "onoshealth")
+_PFX={"wf","wf2","wd","dgh","dice","dice2","gh","li","yc","vl","x9","mac"}
+WEEK_KEYS=set()
+_now=time.time()
+for _f in glob.glob(f"{SC}/f/out/*_report.json"):
+    try: _r=json.load(open(_f))
+    except Exception: continue
+    if not _r.get("submitted") or _now-os.path.getmtime(_f)>7*86400 or "ALREADY" in (_r.get("result") or ""): continue
+    _toks=[t for t in (_r.get("tag") or os.path.basename(_f)).split("_") if t and t not in _PFX]
+    for _n in (1,2,3):
+        if len(_toks)>=_n: WEEK_KEYS.add("".join(_toks[:_n]).lower())
 
 jid = lambda u: (re.search(r"([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})", u or "") or [None, None])[1]
 def pretty(slug):
@@ -82,6 +93,7 @@ per, kept = collections.Counter(), []
 for x in items:
     k = re.sub(r"[^a-z0-9]", "", x["company"].lower().replace(".com", ""))
     if L.per_co.get(k, 0) + per[k] >= 1: continue   # applicant (2026-10-02): one application per company per rolling week
+    if k in WEEK_KEYS: continue   # a slug-variant submission this week (wf2_onos_health_1 covers onoshealth)
     per[k] += 1; kept.append(x)
 NOW = time.time()
 def row(x):
