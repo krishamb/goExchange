@@ -1431,7 +1431,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             got=await autocomplete_fill(page,h,"Santa Clara, California",r"santa clara.{0,40}(california|\bca\b|united states|usa)",strict=True,retry_texts=("Santa Clara, CA","Santa Clara"))
                             report["filled"][lab[:60] or name]=f"autocomplete:{got}"
                         continue
-                    if re.search(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai",lab,re.I): report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
+                    if re.search(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai",lab,re.I):
+                        _aiv=next((v for k,v in extra.items() if k.lower() in (name+" "+lab).lower()),None) or pick(lab,TEXT_RULES)
+                        if not _aiv or _aiv==["__ASK__"]:
+                            report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
+                        # the applicant's reviewed AI-disclosure rules (2026-10-02) answer this: fall through to the normal fill
                     key=lab or name
                     val=None
                     for k,v in extra.items():
