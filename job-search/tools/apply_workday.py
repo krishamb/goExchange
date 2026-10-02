@@ -683,6 +683,17 @@ async def fill_field(page, job, f):
             v = await prompt_choose(page, box, prefs, key)
         else: v = None
         return keep(v) if v else None
+    # ---- a per-item "answers" override from the queue file (the applicant's explicit answer): wins over every rule and hold
+    _ov = next((v for k, v in (job.item.get("answers") or {}).items() if k.lower() in low), None)
+    if _ov is not None:
+        _ovl = [_ov] if isinstance(_ov, str) else [str(x) for x in _ov]
+        if kind == "checkbox" and f.get("nbox", 1) == 1 and re.search(r"^(check(ed)?|yes|i agree|i acknowledge|acknowledged?|agree|true)$", _ovl[0], re.I):
+            cb = box.locator('input[type="checkbox"]').first
+            if await set_check(cb, True): return keep("checked (applicant-authorized)")
+        v = await choose(_ovl)
+        if v: return v
+        job.report.setdefault("errors", []).append(f"override matched no option: {key[:80]}")
+        return None
     # ---- the fixed My Information fields
     if re.search(r"firstname$", fid, re.I) or re.search(r"^(given|first) name", low): return await text_to(FIRST)
     if re.search(r"lastname$", fid, re.I) or re.search(r"^(family|last) name|^surname", low): return await text_to(LAST)
