@@ -134,6 +134,10 @@ async def settle(page, secs=45):
     fields, and the draft's values a moment later (NVIDIA: Phone Device Type ~1 s after the rest). Filling earlier
     fills a blank form over the draft ('A phone number already exists for this application'). So: no loading sign,
     and the step's fields (or the review) unchanged over two polls."""
+    try:   # a tenant's cookie/legal-notice overlay (Thomson Reuters) blocks every later click: accept the necessary-cookies notice first
+        ln = page.locator(A("legalNoticeAcceptButton"))
+        if await ln.count() and await ln.first.is_visible(): await ln.first.click(timeout=2500); await page.wait_for_timeout(800)
+    except Exception: pass
     end, last, stable = time.time() + secs, None, 0
     while time.time() < end:
         await page.wait_for_timeout(700)
