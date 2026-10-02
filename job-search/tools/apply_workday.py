@@ -1019,6 +1019,8 @@ async def auth(page, job, s):
         form to fill (nothing was submitted, so it is not an attempt)."""
         if await page.locator(f'{A("signInLink")}:visible').count() and not await page.locator(f'{A("signInSubmitButton")}:visible').count():
             await click_button(page, "signInLink"); await page.wait_for_timeout(1500)
+        if not await page.locator(f'input{A("password")}:visible, {A("SignInWithEmailButton")}:visible').count() and await page.locator(f'{A("utilityButtonSignIn")}:visible').count():
+            await click_button(page, "utilityButtonSignIn"); await page.wait_for_timeout(2000)   # tenants whose apply step renders empty until the header's Sign In opens the chooser (Thomson Reuters)
         if not await page.locator(f'input{A("password")}:visible').count():   # social chooser first: pick "Sign in with email"
             await click_last_visible(page, "SignInWithEmailButton") or await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
             await page.wait_for_timeout(1500)
