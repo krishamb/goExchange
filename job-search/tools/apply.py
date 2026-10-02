@@ -1223,6 +1223,9 @@ async def run():
 async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
     global CUR_ATS
     CUR_ATS=ats
+    if ats=="lever":
+        m=re.match(r"(https://jobs\.(?:eu\.)?lever\.co/[^/?#]+/[0-9a-f-]{36})/?(?:\?.*)?$",url)
+        if m: url=m.group(1)+"/apply"   # the posting page has no form; the application lives at /apply
     if True:
         page=await ctx.new_page(); report={"ats":ats,"url":url,"tag":tag,"filled":{},"chosen":{},"unanswered":[],"submitted":False,"result":""}
         cl_text=""; cl_pdf=None
