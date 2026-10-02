@@ -453,6 +453,7 @@ CHOICE_RULES=[
  (r"require .{0,60}(participate in a government program|government program to maintain|\bopt\b|stem opt)", ["No","no"]),
  (r"which languages,? if any,? can you communicate|languages? .{0,40}professional (working )?proficiency|languages? (can|do) you (speak|communicate)|languages of fluency", ["English","Tamil","Hindi"]),   # applicant: English, Tamil, Hindi
  (r"location of your primary residence|state of (your )?(primary )?residence|primary residence.{0,20}(state|location)", ["California","CA","United States"]),
+ (r"involve .{0,40}practical training|curricular practical training|optional practical training|\(cpt\)|\(opt\)|\bcpt\b.{0,10}\bopt\b", ["No","NO","no"]),   # US citizen: work authorization never involves CPT/OPT
  (r"confirm that you are legally authori[sz]ed to work in the us|verify that (you|i) (am|are) authori[sz]ed", ["I verify that I am authorized to work in the US","authorized to work in the US","Yes"]),
  (r"cuba|iran\b|north korea|dprk|syria|crimea|donetsk|luhansk|sanction|embargo|ofac|restricted (countries|country)|(one of|any of) the following countries", ["No","no"]),   # US citizen, US resident: never from or in a sanctioned country
  (r"(presently|currently|legally|lawfully) authori[sz]ed (under .{0,40})?to work|authori[sz]ed under (u\.?s\.?|united states) immigration", ["Yes","yes"]),   # US citizen
