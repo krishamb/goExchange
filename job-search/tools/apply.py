@@ -1068,7 +1068,8 @@ async def enter_email_code(page,report,baseline=()):
         else: await boxes.first.fill(code)
         report["code_entered"]=True; return True
     except Exception as e: report.setdefault("errors",[]).append(f"code entry failed: {e}"); return False
-GENERIC_TOKENS={"the","ai","san","new","open","one","first","next","big","blue","red","green","smart","data","cloud","tech","labs","lab","inc","co","company","team","global","digital","alpha","beta","meta","x","a","an","of","and"}
+GENERIC_TOKENS={"the","ai","san","new","open","one","first","next","big","blue","red","green","smart","data","cloud","tech","labs","lab","inc","co","company","team","global","digital","alpha","beta","meta","x","a","an","of","and",
+ "wf","wf2","wd","dgh","dice2","gh","li","yc","batch"}   # batch/stream prefixes in tags are never company names
 def company_keys(tag,company=None):
     toks=[t for t in (tag or "").split("_") if t]
     ks=set()
