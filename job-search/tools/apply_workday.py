@@ -86,6 +86,12 @@ def log(job, msg): print(f"[{job.tag}] {msg}", flush=True)
 async def text(page):
     try: return await page.evaluate("()=>document.body.innerText")
     except Exception: return ""
+async def click_text(page, rx, timeout=3000):
+    """Click any visible element by its text (choosers whose 'Sign in with email' is not a role=button)."""
+    try:
+        loc = page.get_by_text(re.compile(rx, re.I)).first
+        await loc.wait_for(state="visible", timeout=timeout); await loc.click(timeout=3000); return True
+    except Exception: return False
 async def click_button(page, auto_id=None, name=None, timeout=8000):
     """Workday buttons are often covered by a click_filter overlay: click the overlay when the button itself is blocked."""
     loc = page.locator(A(auto_id)) if auto_id else page.get_by_role("button", name=re.compile(name, re.I))
@@ -1003,7 +1009,7 @@ async def auth(page, job, s):
         if await page.locator(f'{A("signInLink")}:visible').count() and not await page.locator(f'{A("signInSubmitButton")}:visible').count():
             await click_button(page, "signInLink"); await page.wait_for_timeout(1500)
         if not await page.locator(f'input{A("password")}:visible').count():   # social chooser first: pick "Sign in with email"
-            await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000)
+            await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
             await page.wait_for_timeout(1500)
         if not await page.locator(f'input{A("email")}:visible').count() or not await page.locator(f'input{A("password")}:visible').count():
             return "noform"   # no sign-in form: nothing was submitted
@@ -1045,7 +1051,7 @@ async def auth(page, job, s):
         if r is not True and r != "noform": remember(creds["login"][0], "login")
         return "ok"
     if not await page.locator(f'{A("createAccountLink")}:visible, input{A("verifyPassword")}:visible').count():   # social chooser first (PTC)
-        await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000)
+        await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
         await page.wait_for_timeout(1500)
     if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
     if not await page.locator(f'input{A("verifyPassword")}').count():
