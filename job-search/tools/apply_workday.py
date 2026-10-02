@@ -707,6 +707,7 @@ async def fill_field(page, job, f):
         if kind == "checkbox" and f.get("nbox", 1) == 1 and re.search(r"^(check(ed)?|yes|i agree|i acknowledge|acknowledged?|agree|true)$", _ovl[0], re.I):
             cb = box.locator('input[type="checkbox"]').first
             if await set_check(cb, True): return keep("checked (applicant-authorized)")
+        if kind in ("text", "textarea"): return await text_to(_ovl[0])
         v = await choose(_ovl)
         if v: return v
         job.report.setdefault("errors", []).append(f"override matched no option: {key[:80]}")
