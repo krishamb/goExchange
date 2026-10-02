@@ -32,12 +32,8 @@ def _is_active(company, jid):
 BRANCH = "claude/ai-founding-engineer-jobs-l1urgc"
 try: SHA = subprocess.check_output(["git", "-C", REPO, "rev-parse", "HEAD"], text=True).strip()
 except Exception: SHA = BRANCH
-DROP = {   # dropped after verification, with the reason (applicant rule: no 3+ required office days)
-    "4ca2e49f-83bb-4276-be17-d85a9a0c58e9": "OpenAI application asks for 3 office days a week",
-}
-DROP_RX = [(re.compile(r"^replit$", re.I), re.compile(r".", re.I), "Replit's form asks for 3 days a week at the Foster City HQ"),
-           (re.compile(r"^nvidia$", re.I), re.compile(r".", re.I), "NVIDIA: already 14 active applications on the applicant's account"),
-           (re.compile(r"^laurel$", re.I), re.compile(r"staff backend", re.I), "Laurel: Tue-Thu office default")]
+DROP = {}   # office-day drops retired (applicant 2026-10-02: hybrid/onsite fine unless strict/enforced wording)
+DROP_RX = [(re.compile(r"^nvidia$", re.I), re.compile(r".", re.I), "NVIDIA: already 14 active applications on the applicant's account")]
 NAMES = {"kraken.com": "Kraken", "ava-labs": "Ava Labs", "hims-and-hers": "Hims & Hers", "openloophealth": "OpenLoop Health", "council-capital": "Council Capital",
          "thyme-care": "Thyme Care", "wispr-flow": "Wispr Flow", "redpanda-data": "Redpanda", "montecarlodata": "Monte Carlo", "rivianvw.tech": "Rivian and VW Tech",
          "goteleport": "Teleport", "dailypay": "DailyPay", "paxoslabs": "Paxos Labs", "wealth-com": "Wealth.com", "d-matrix": "d-Matrix", "openai": "OpenAI",
