@@ -104,19 +104,6 @@
   "flag": ""
  },
  {
-  "id": "ef398821-8ee9-4f7c-824b-fac83d0a3023",
-  "u": "https://jobs.ashbyhq.com/Commure/ef398821-8ee9-4f7c-824b-fac83d0a3023",
-  "t": "Senior Engineering Manager, Financial Data, Reporting & Analytics",
-  "c": "Commure",
-  "loc": "Mountain View, CA; Los Angeles, CA; San Francisco, CA",
-  "mode": "Hybrid \u00b7 days not stated",
-  "comp": "$240K \u2013 $275K \u2022 Offers Equity",
-  "ts": 1790381405,
-  "fit": 78,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "02da7869-3abb-4cfb-8891-79620c6709a1",
   "u": "https://jobs.ashbyhq.com/plantedsolar/02da7869-3abb-4cfb-8891-79620c6709a1",
   "t": "VP Software Engineering",
@@ -598,19 +585,6 @@
   "flag": ""
  },
  {
-  "id": "d99f98e2-a727-4c7a-b176-3294d4fb68fb",
-  "u": "https://jobs.ashbyhq.com/thyme-care/d99f98e2-a727-4c7a-b176-3294d4fb68fb",
-  "t": "Senior Staff Software Engineer - New Initiatives",
-  "c": "Thyme Care",
-  "loc": "Remote",
-  "mode": "Remote (US)",
-  "comp": "$220,000 - $260,000 base + bonus + equit",
-  "ts": 1790370799,
-  "fit": 72,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "46c99e96-9cf5-4dfd-a20e-62acd5a4693c",
   "u": "https://jobs.ashbyhq.com/dave/46c99e96-9cf5-4dfd-a20e-62acd5a4693c",
   "t": "Senior Software Engineer, Fullstack ",
@@ -659,19 +633,6 @@
   "comp": "Market-leading salary + meaningful equit",
   "ts": 1790619993,
   "fit": 80,
-  "p": [],
-  "flag": ""
- },
- {
-  "id": "8f7b0733-dda2-459b-bfc0-7cc428036701",
-  "u": "https://jobs.ashbyhq.com/paxoslabs/8f7b0733-dda2-459b-bfc0-7cc428036701",
-  "t": "Senior Backend Engineer",
-  "c": "Paxos Labs",
-  "loc": "In-Person or Remote | NYC Preferred ",
-  "mode": "Remote option",
-  "comp": "",
-  "ts": 1790367821,
-  "fit": 84,
   "p": [],
   "flag": ""
  },
@@ -815,6 +776,19 @@
   "comp": "$200K \u2013 $250K \u2022 Offers Equity",
   "ts": 1789686894,
   "fit": 71,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "ef398821-8ee9-4f7c-824b-fac83d0a3023",
+  "u": "https://jobs.ashbyhq.com/Commure/ef398821-8ee9-4f7c-824b-fac83d0a3023",
+  "t": "Senior Engineering Manager, Financial Data, Reporting & Analytics",
+  "c": "Commure",
+  "loc": "Mountain View, CA; Los Angeles, CA; San Francisco, CA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "$240K \u2013 $275K \u2022 Offers Equity",
+  "ts": 1790381405,
+  "fit": 78,
   "p": [],
   "flag": ""
  },
@@ -1352,6 +1326,32 @@
   "flag": ""
  },
  {
+  "id": "ecac7c4f-7316-47b7-a57f-687640fe482d",
+  "u": "https://jobs.ashbyhq.com/vals-ai/ecac7c4f-7316-47b7-a57f-687640fe482d",
+  "t": "Head of Research",
+  "c": "Valsai",
+  "loc": "San Francisco CA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "f0396971-39fa-4d40-9af8-60e529bb6c86",
+  "u": "https://jobs.ashbyhq.com/langchain/f0396971-39fa-4d40-9af8-60e529bb6c86",
+  "t": "Software Engineering Manager, AI Observability & Evals Platform",
+  "c": "Langchain",
+  "loc": "Cambridge MA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "296da785-bbbe-4a44-b58e-e55419c3eeea",
   "u": "https://jobs.ashbyhq.com/voleon/296da785-bbbe-4a44-b58e-e55419c3eeea",
   "t": "Staff Software Engineer, Strategy Platform",
@@ -1517,6 +1517,19 @@
   "comp": "",
   "ts": null,
   "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "d99f98e2-a727-4c7a-b176-3294d4fb68fb",
+  "u": "https://jobs.ashbyhq.com/thyme-care/d99f98e2-a727-4c7a-b176-3294d4fb68fb",
+  "t": "Senior Staff Software Engineer - New Initiatives",
+  "c": "Thyme Care",
+  "loc": "Remote",
+  "mode": "Remote (US)",
+  "comp": "$220,000 - $260,000 base + bonus + equit",
+  "ts": 1790370799,
+  "fit": 72,
   "p": [],
   "flag": ""
  },
@@ -1898,19 +1911,6 @@
   "flag": ""
  },
  {
-  "id": "de59bff8-d14d-489a-96d9-b0a5cfceea4f",
-  "u": "https://jobs.ashbyhq.com/vals-ai/de59bff8-d14d-489a-96d9-b0a5cfceea4f",
-  "t": "Member of Technical Staff - Platform",
-  "c": "Valsai",
-  "loc": "San Francisco, CA",
-  "mode": "Hybrid \u00b7 days not stated",
-  "comp": "",
-  "ts": null,
-  "fit": 8,
-  "p": [],
-  "flag": ""
- },
- {
   "id": "50663072-e0f8-48ce-bf95-934ea9049919",
   "u": "https://jobs.ashbyhq.com/hadrian-automation/50663072-e0f8-48ce-bf95-934ea9049919",
   "t": "Senior Engineering Manager, Machine Learning",
@@ -2210,6 +2210,58 @@
   "flag": ""
  },
  {
+  "id": "a49dac34-4190-47d8-b6eb-e62750f4dd88",
+  "u": "https://jobs.ashbyhq.com/arketa/a49dac34-4190-47d8-b6eb-e62750f4dd88",
+  "t": "Staff Software Engineer, AI & Platform",
+  "c": "Arketa",
+  "loc": "New York NY",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "c7d880eb-4fb5-48db-b325-595cc8a8d017",
+  "u": "https://jobs.ashbyhq.com/docker/c7d880eb-4fb5-48db-b325-595cc8a8d017",
+  "t": "Principal Software Engineer, Networking (Seattle or SF Bay Area)",
+  "c": "Dockerinc",
+  "loc": "Seattle WA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "29ab5b82-f0ad-43e0-a27b-77a27726c6f8",
+  "u": "https://jobs.ashbyhq.com/dex/29ab5b82-f0ad-43e0-a27b-77a27726c6f8",
+  "t": "Founding Analytics Engineer ",
+  "c": "Dex",
+  "loc": "San Francisco Bay Area None",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "82e7772f-562d-4089-b62e-f9907f3086ed",
+  "u": "https://jobs.ashbyhq.com/drata/82e7772f-562d-4089-b62e-f9907f3086ed",
+  "t": "Staff Software Engineer, Monetization Platform",
+  "c": "Drata",
+  "loc": "San Francisco CA",
+  "mode": "Hybrid \u00b7 days not stated",
+  "comp": "",
+  "ts": null,
+  "fit": 8,
+  "p": [],
+  "flag": ""
+ },
+ {
   "id": "227ebdc6-1384-4c5b-84de-19d996eeca28",
   "u": "https://jobs.ashbyhq.com/amplitude/227ebdc6-1384-4c5b-84de-19d996eeca28",
   "t": "Staff Software Engineer",
@@ -2245,6 +2297,19 @@
   "comp": "$170K \u2013 $190K",
   "ts": 1790242920,
   "fit": 72,
+  "p": [],
+  "flag": ""
+ },
+ {
+  "id": "8f7b0733-dda2-459b-bfc0-7cc428036701",
+  "u": "https://jobs.ashbyhq.com/paxoslabs/8f7b0733-dda2-459b-bfc0-7cc428036701",
+  "t": "Senior Backend Engineer",
+  "c": "Paxos Labs",
+  "loc": "In-Person or Remote | NYC Preferred ",
+  "mode": "Remote option",
+  "comp": "",
+  "ts": 1790367821,
+  "fit": 84,
   "p": [],
   "flag": ""
  },
