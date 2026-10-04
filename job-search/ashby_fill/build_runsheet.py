@@ -43,6 +43,10 @@ exec(_A[_A.index("NEVER_APPLY="):_A.index(chr(10), _A.index("NEVER_APPLY="))], _
 NEVER = _G["NEVER_APPLY"]
 try: REJECTED = set(json.load(open(f"{SC}/rejected.json")))
 except Exception: REJECTED = set()   # companies that sent a rejection: never list again
+# applicant (2026-10-04): the mailbox is the ground truth for what was already applied; container restarts
+# wipe the disk reports. Every company with application evidence in applied_gmail.json stays off the sheet.
+try: REJECTED |= {re.sub(r"[^a-z0-9]", "", _k.lower()) for _k in json.load(open(f"{SC}/applied_gmail.json"))["companies"]}
+except Exception: pass
 # submitted-this-week company keys, token-join tolerant ("wf2_onos_health_1_..." covers "onoshealth")
 _PFX={"wf","wf2","wd","dgh","dice","dice2","gh","li","yc","vl","x9","mac"}
 WEEK_KEYS=set()
