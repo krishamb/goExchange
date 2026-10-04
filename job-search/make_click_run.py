@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Click-run page: ONLY the still-open, never-applied Ashby queue (not the historic piles).
+"""Click-run page: the live, never-applied Ashby queue, with a ONE-CLICK hands-free launcher.
 
 Runs on the applicant's Mac. Reads the current queue (batches/ashby_all.json), drops anything
-with a submitted report in ~/jobs-private/out/ and any company in the Gmail applied ledger
-shipped with the repo, and writes ~/jobs-private/click_run.html, newest first.
-With the Tampermonkey filler installed, each link auto-fills on open; the applicant clicks
-Submit. Done-state lives in the page (localStorage) so progress survives reopening.
+already submitted locally or present in the Gmail applied ledger, and writes
+~/jobs-private/click_run.html, newest first.
+
+With the Tampermonkey filler installed, the big START button hands the whole queue to the
+userscript via the page-URL #akf= hash (auto:true). The script then opens each job in that
+one tab, fills it, submits the ones every required question is answered for, waits for Ashby
+to confirm, and moves to the next by itself - no further clicks. It pauses on a captcha and
+stops after two spam-blocks in a row, leaving the rest as individual links. Nothing is
+spoofed or disguised: this is the applicant's own browser and session doing what they would
+do by hand, faster.
 """
-import json, re, os, glob, time, html as H
+import json, re, os, glob, time, base64, html as H
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRIV = os.path.expanduser(os.environ.get("JOBS_DIR", "~/jobs-private"))
@@ -32,6 +38,24 @@ for j in sorted(queue, key=lambda x: -(x.get("posted_ts") or 0)):
     if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
     rows.append(j)
 
+def appurl(u): return re.sub(r"/application/?$", "", (u or "").rstrip("/")) + "/application"
+
+def akf_hash(items, auto):
+    """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
+    its hash regex would truncate). Pad the JSON so the byte length is a multiple of 3."""
+    payload = {"name": "Ashby queue", "auto": auto, "pad": "",
+               "items": [{"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in items]}
+    js = json.dumps(payload, ensure_ascii=False)
+    extra = (3 - (len(js.encode("utf-8")) % 3)) % 3
+    if extra:
+        payload["pad"] = " " * extra
+        js = json.dumps(payload, ensure_ascii=False)
+    b = base64.b64encode(js.encode("utf-8")).decode("ascii").replace("+", "-").replace("/", "_")
+    assert "=" not in b, "padding would be truncated by the userscript hash regex"
+    return b
+
+start_href = (appurl(rows[0]["url"]) + "#akf=" + akf_hash(rows, True)) if rows else "#"
+
 def age(j):
     ts = j.get("posted_ts")
     if not ts: return ""
@@ -42,14 +66,14 @@ tr = "\n".join(
     f'<tr id="r{i}"><td><input type="checkbox" data-i="{i}"></td><td class="a">{age(j)}</td>'
     f'<td class="c">{H.escape(j["company"])}</td><td>{H.escape(j["title"])}</td>'
     f'<td class="l">{H.escape((j.get("loc") or "")[:40])}</td>'
-    f'<td><a href="{H.escape(j["url"])}" target="_blank" rel="noopener" data-i="{i}">Open &amp; fill</a></td></tr>'
+    f'<td><a href="{H.escape(appurl(j["url"]))}" target="_blank" rel="noopener" data-i="{i}">Open &amp; fill</a></td></tr>'
     for i, j in enumerate(rows))
 
 us_path = os.path.join(HERE, "ashby_fill", "ashby_fill.user.js")
 page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ashby Click Run</title><style>
-:root{{--bg:#fff;--fg:#111;--mut:#667;--line:#e5e7eb;--acc:#0a66c2;--card:#f6f8fa;--ok:#15803d}}
-@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--bg:#0f1115;--fg:#e8eaf0;--mut:#9aa3b2;--line:#2a2f3a;--acc:#6ab0f3;--card:#171b22;--ok:#4ade80}}}}
+:root{{--bg:#fff;--fg:#111;--mut:#667;--line:#e5e7eb;--acc:#0a66c2;--card:#f6f8fa;--ok:#15803d;--go:#1a7f37}}
+@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--bg:#0f1115;--fg:#e8eaf0;--mut:#9aa3b2;--line:#2a2f3a;--acc:#6ab0f3;--card:#171b22;--ok:#4ade80;--go:#2ea043}}}}
 body{{background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;max-width:1060px;margin:24px auto;padding:0 16px}}
 h1{{font-size:21px;margin:0}} table{{border-collapse:collapse;width:100%;margin-top:10px}}
 td,th{{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}} .a{{color:var(--mut);font-size:13px;white-space:nowrap}}
@@ -58,17 +82,22 @@ tr.done{{opacity:.42}} tr.done .c{{text-decoration:line-through}}
 .box{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:14px}}
 code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 #prog{{font-size:16px;font-weight:600;color:var(--ok);margin:8px 0}}
+.start{{display:inline-block;background:var(--go);color:#fff;font-size:17px;font-weight:700;padding:14px 26px;border-radius:12px;text-decoration:none;margin:6px 0}}
+.start:hover{{filter:brightness(1.07)}}
 </style></head><body>
 <h1>Ashby Click Run — {len(rows)} live, never-applied roles</h1>
 <div id="prog"></div>
-<div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo).</div>
-<div class="box"><b>The run:</b> click <i>Open &amp; fill</i> → the form fills itself in a few seconds → click <b>Submit application</b> on the page → close the tab → tick the row. Repeat. About 15 seconds each.</div>
+<div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
+<div class="box"><b>Apply to all — one click, hands-free:</b><br>
+<a class="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
+It opens one tab, confirms once, then fills and submits each role on its own, moving to the next after Ashby confirms. It submits only forms every required question is answered for, pauses if a role shows a captcha, and stops if Ashby blocks two in a row — the rest stay as links below. Leave the tab in front; you don't have to click again.</div>
+<div class="box"><b>Prefer to go one at a time?</b> Click <i>Open &amp; fill</i> on any row — the form fills itself, you review and click <b>Submit application</b>, tick the row.</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
 const K='akf_clickrun_v1';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
 const boxes=document.querySelectorAll('input[type=checkbox]');
 function paint(){{let d=0;boxes.forEach(b=>{{const on=!!st[b.dataset.i];b.checked=on;b.closest('tr').classList.toggle('done',on);if(on)d++}});
-document.getElementById('prog').textContent=d+' of {len(rows)} submitted';}}
+document.getElementById('prog').textContent=d+' of {len(rows)} marked done';}}
 function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.i]=b.checked?1:0;save();paint()}}));
 document.querySelectorAll('a[data-i]').forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>{{st[a.dataset.i]=1;save();paint()}},800)}}));
@@ -76,4 +105,4 @@ paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
 open(OUT, "w").write(page)
-print(f"{OUT}: {len(rows)} roles (skipped {len(queue)-len(rows)} already submitted/ledgered)")
+print(f"{OUT}: {len(rows)} roles, one-click launcher built (skipped {len(queue)-len(rows)} already submitted/ledgered)")
