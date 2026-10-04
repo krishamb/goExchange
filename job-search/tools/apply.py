@@ -1125,10 +1125,19 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
     (MAX_PER_COMPANY, default 3: the applicant allows 2-3 different roles per company when they match the resume; the
     same position is never submitted twice, which the per-tag report check in the batch runner enforces), else None."""
     import glob as _glob
-    cap=int(os.environ.get("MAX_PER_COMPANY","3"))
+    cap=int(os.environ.get("MAX_PER_COMPANY","1"))   # applicant (2026-10-04): one application per company, full stop
     ks=company_keys(tag,company)
     if not ks: return None
     cutoff=time.time()-days*86400
+    # Gmail is the ground truth: reports vanish with the container, confirmations don't. Any company with
+    # application evidence in the mailbox ledger (applied_gmail.json) inside the window is blocked outright.
+    g=_gmail_ledger()
+    SUFG={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies"}
+    for a in ks:
+        for b,dt in g.items():
+            if dt<cutoff: continue
+            if a==b or (min(len(a),len(b))>=5 and ((a.startswith(b) and a[len(b):] in SUFG) or (b.startswith(a) and b[len(a):] in SUFG))):
+                return f"{b} (gmail ledger, applied {time.strftime('%Y-%m-%d',time.localtime(dt))})"
     SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
     hits=[]
     for f in _glob.glob(f"{OUT}/*_report.json"):
@@ -1146,6 +1155,21 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
         if k in ks: hits += [f"{k} (applied by the applicant)"]*n
     return hits[0] if len(hits)>=cap else None
 APPLIED_BY_APPLICANT={"welbehealth":2}
+_GMAIL_LEDGER_CACHE=None
+def _gmail_ledger():
+    """Normalized company key -> latest application timestamp, from the mailbox audit (applied_gmail.json,
+    rebuilt from Gmail confirmations/security-code emails). Empty dict when the file is absent."""
+    global _GMAIL_LEDGER_CACHE
+    if _GMAIL_LEDGER_CACHE is not None: return _GMAIL_LEDGER_CACHE
+    out={}
+    try:
+        d=json.load(open(os.path.join(os.path.dirname(os.path.dirname(OUT)),"applied_gmail.json")))
+        for k,v in (d.get("companies") or {}).items():
+            ts=[time.mktime(time.strptime(x,"%Y-%m-%d")) for x in (v.get("dates") or []) if re.match(r"\d{4}-\d{2}-\d{2}$",x)]
+            if ts: out[re.sub(r"[^a-z0-9]","",k.lower())]=max(ts)
+    except Exception: pass
+    _GMAIL_LEDGER_CACHE=out
+    return out
 def prior_company_apps(tag,company=None,days=183):
     """Titles of earlier submitted applications at the same company (other tags) within `days`: answers "have you applied to us before?" truthfully."""
     import glob as _glob
