@@ -4,6 +4,7 @@
 #   bash ~/ashby.sh           get the newest job list, then start 2 parallel workers (background, no browser windows)
 #   bash ~/ashby.sh start 3   same, with 3 workers (default 2)
 #   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
+#   bash ~/ashby.sh click     open the CLICK RUN: only the live never-applied queue; each link auto-fills in your own Chrome (Tampermonkey), you just click Submit
 #   bash ~/ashby.sh assist    finish blocked jobs: a window opens with the form filled, you click Submit
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
 #   bash ~/ashby.sh report    open a report of every application confirmed as submitted from this Mac
@@ -42,6 +43,7 @@ case "${1:-start}" in
   start)  update; bash job-search/run_ashby.sh start "${2:-2}" ;;
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
   status) in_repo; bash job-search/run_ashby.sh status ;;
+  click)  update; python3 job-search/make_click_run.py && { open "$HOME/jobs-private/click_run.html" 2>/dev/null || echo "Open $HOME/jobs-private/click_run.html in your browser"; } ;;
   manual) in_repo; bash job-search/run_ashby.sh manual ;;
   assist) update; bash job-search/run_ashby.sh assist ;;
   report) in_repo; bash job-search/run_ashby.sh report ;;
