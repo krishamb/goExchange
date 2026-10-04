@@ -622,7 +622,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT®",
+   "name": "DEPT\u00ae",
    "dates": [
     "2026-10-03"
    ],
@@ -1013,7 +1013,7 @@
    "count": 3
   },
   "gruns": {
-   "name": "Grüns",
+   "name": "Gr\u00fcns",
    "dates": [
     "2026-10-03"
    ],
@@ -1972,7 +1972,7 @@
    "count": 1
   },
   "schrodinger": {
-   "name": "Schrödinger",
+   "name": "Schr\u00f6dinger",
    "dates": [
     "2026-10-01"
    ],
@@ -2583,6 +2583,14 @@
     "2026-10-03"
    ],
    "count": 1
+  },
+  "ceribellaipoweredpoint": {
+   "name": "Ceribell (board alias)",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
   }
  }
 }
