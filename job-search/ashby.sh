@@ -4,6 +4,8 @@
 #   bash ~/ashby.sh           get the newest job list, then start 2 parallel workers (background, no browser windows)
 #   bash ~/ashby.sh start 3   same, with 3 workers (default 2)
 #   bash ~/ashby.sh status    submitted / blocked / need-your-answer counts and what each worker is doing
+#   bash ~/ashby.sh setup     one-time: opens Tampermonkey's install page (click 'Add to Chrome'), then run 'fill'
+#   bash ~/ashby.sh fill      one-time: opens the filler userscript so Tampermonkey installs it (click 'Install')
 #   bash ~/ashby.sh click     open the CLICK RUN: only the live never-applied queue; each link auto-fills in your own Chrome (Tampermonkey), you just click Submit
 #   bash ~/ashby.sh assist    finish blocked jobs: a window opens with the form filled, you click Submit
 #   bash ~/ashby.sh manual    open a page with every job to finish by hand: links plus the answers ready to paste
@@ -43,6 +45,10 @@ case "${1:-start}" in
   start)  update; bash job-search/run_ashby.sh start "${2:-2}" ;;
   update) update; echo "Up to date. Start with: bash ~/ashby.sh" ;;
   status) in_repo; bash job-search/run_ashby.sh status ;;
+  setup)  update; echo "1) In the tab that opens, click 'Add to Chrome' to install Tampermonkey."; echo "2) Then run:  bash ~/ashby.sh fill   (opens the filler script - click 'Install' on the Tampermonkey page)"
+          open "https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" 2>/dev/null || echo "Open https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" ;;
+  fill)   in_repo; open "file://$REPO/job-search/ashby_fill/ashby_fill.user.js" 2>/dev/null || echo "Open file://$REPO/job-search/ashby_fill/ashby_fill.user.js in Chrome"
+          echo "Tampermonkey should show an Install page - click Install. If Chrome just shows the code instead: Tampermonkey icon -> Utilities -> Import from file -> pick $REPO/job-search/ashby_fill/ashby_fill.user.js" ;;
   click)  update; python3 job-search/make_click_run.py && { open "$HOME/jobs-private/click_run.html" 2>/dev/null || echo "Open $HOME/jobs-private/click_run.html in your browser"; } ;;
   manual) in_repo; bash job-search/run_ashby.sh manual ;;
   assist) update; bash job-search/run_ashby.sh assist ;;
