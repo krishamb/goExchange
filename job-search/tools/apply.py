@@ -138,6 +138,9 @@ TEXT_RULES=[
  (r"country( of residence| you (live|reside) in)?$|^country\b|which country|country of residence", "United States"),
  (r"sponsorship needs?|require (employer |visa |company )?sponsorship|sponsorship to work|need sponsorship", "None. I am a US citizen and need no sponsorship or visa transfer."),
  (r"where do you (currently )?(reside|live)|city,? state|current city|city and state|city of residence|what city do you live", "Santa Clara, CA"),
+ (r"^nationality$|your nationality|nationality\b.{0,20}(:|\*|$)", "United States (U.S. citizen)"),
+ (r"most interesting (paper|blog|article|documentation|post)|paper, blog post, or documentation", "Anthropic's 'Building effective agents' post - it matches what we learned building Hyperion AI the hard way: simple composable patterns (routing, tool use, evaluator loops) beat heavyweight agent frameworks in production, and the discipline of keeping a human-verifiable boundary around each agent step is what makes the system debuggable. I pair it with the MCP spec docs, which turned our one-off tool integrations into a clean contract."),
+ (r"(more than |over )?(three|3)\+? years .{0,30}(deploying|delivering|implementing) .{0,30}(solutions|products)? ?(at|with|for) (customer|client)", ["Yes","YES","yes"]),
  (r"held a u\.?s\.? security clearance|security clearance in the past|(hold|have|held) .{0,25}security clearance", "N/A - I have never held a U.S. security clearance."),   # applicant is a US citizen but has never held a clearance; never answered otherwise
  (r"(able|willing) to (work|be|commute) (from|in|into) (the |our )?office [123] days?|office [123] days? (a |per )?week|work (from|in) the office (up to )?[123] days?|in[\s-]*office [123] days?", ["Yes","YES","yes"]),   # applicant (2026-10-04): yes to office presence up to 3 days/week (4- and 5-day asks stay excluded/flagged)
  (r"u\.?s\.? person\b|citizen, legal permanent resident", ["Yes","YES","yes"]),
