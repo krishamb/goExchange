@@ -31,16 +31,6 @@
  },
  {
   "ats": "ashby",
-  "company": "goaly",
-  "title": "Founding Developer Relations Engineer",
-  "url": "https://jobs.ashbyhq.com/goaly/d67ea078-e77c-48e9-bb20-f02a8af60575",
-  "tag": "goaly_founding_developer_relatio",
-  "loc": "Palo Alto, CA, USA",
-  "posted_ts": 1790988443.23,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "hcompany",
   "title": "Founding Forward Deployed Engineer - US",
   "url": "https://jobs.ashbyhq.com/hcompany/c911df44-270c-42b3-9572-dc0ef5a34006",
@@ -57,16 +47,6 @@
   "tag": "netic_founding_web_platform_engi",
   "loc": "San Francisco",
   "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "SunnyData",
-  "title": "Client Principal (Financial Services)",
-  "url": "https://jobs.ashbyhq.com/SunnyData/e777b5aa-0097-4659-9d6f-20f3e0b21b29",
-  "tag": "sunnydata_client_principal_financial",
-  "loc": "United States (Remote)",
-  "posted_ts": 1790952079.404,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -97,16 +77,6 @@
   "tag": "sentry_staff_software_engineer_ai",
   "loc": "San Francisco, California (Remote)",
   "posted_ts": 1791085538.493,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Ridealso",
-  "title": "Staff Dyno Controls Engineer",
-  "url": "https://jobs.ashbyhq.com/Ridealso/4b12cbaf-072f-48c9-8f0e-71d5c353d7ce",
-  "tag": "ridealso_staff_dyno_controls_engine",
-  "loc": "Palo Alto",
-  "posted_ts": 1790974521.73,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -211,16 +181,6 @@
  },
  {
   "ats": "ashby",
-  "company": "Applied",
-  "title": "Vehicle Controls - Technical Lead",
-  "url": "https://jobs.ashbyhq.com/Applied/f87db9ad-09e0-4d26-8d10-005c501043d1",
-  "tag": "applied_vehicle_controls_technical",
-  "loc": "Sunnyvale",
-  "posted_ts": 1790972444.475,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "cursor",
   "title": "Engineering Manager, ML",
   "url": "https://jobs.ashbyhq.com/cursor/3752886b-a6e2-402c-ba2a-47d0659ff335",
@@ -261,62 +221,12 @@
  },
  {
   "ats": "ashby",
-  "company": "Applied Intuition",
-  "title": "Vehicle Controls - Technical Lead",
-  "url": "https://jobs.ashbyhq.com/applied/f87db9ad-09e0-4d26-8d10-005c501043d1/application",
-  "tag": "applied_intuition_vehicle_controls_technical",
-  "loc": "SF Bay Area - Sunnyvale \u00b7 Sunnyvale, California, United States",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "parasail",
-  "title": "Software Engineer, Forward Deploy -- New Graduate '27",
-  "url": "https://jobs.ashbyhq.com/parasail/da595923-4e35-4ba1-875d-383276069cf7",
-  "tag": "parasail_software_engineer_forward_",
-  "loc": "San Mateo",
-  "posted_ts": 1790983634.196,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "writer",
-  "title": "Strategic AI adoption lead (West)",
-  "url": "https://jobs.ashbyhq.com/writer/ebb7c4fe-1cd6-48ad-b03c-c01ab2d05b09",
-  "tag": "writer_strategic_ai_adoption_lead",
-  "loc": "San Francisco, CA / Seattle, WA (Remote)",
-  "posted_ts": 1790979121.71,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "withclutch",
   "title": "Forward Deployed Engineer",
   "url": "https://jobs.ashbyhq.com/withclutch/8f1aa776-2c8a-4367-be4d-e25ba5e25fd9",
   "tag": "withclutch_forward_deployed_engineer",
   "loc": "United States (Remote)",
   "posted_ts": 1790976879.931,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "blitzy",
-  "title": "Head of Forward Deployed Engineering",
-  "url": "https://jobs.ashbyhq.com/blitzy/2a8c95cd-907b-4504-9c90-ddb7a75f1ece",
-  "tag": "blitzy_head_of_forward_deployed_e",
-  "loc": "Cambridge MA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "fonziai",
-  "title": "Senior Full Stack Engineer",
-  "url": "https://jobs.ashbyhq.com/fonzi/3a992ea2-3674-4439-8a04-5c4e60f21b7f",
-  "tag": "fonziai_senior_full_stack_engineer",
-  "loc": "San Francisco Bay Area None",
-  "posted_ts": null,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -401,32 +311,12 @@
  },
  {
   "ats": "ashby",
-  "company": "Shepherd",
-  "title": "Technical Lead, Inland Marine",
-  "url": "https://jobs.ashbyhq.com/shepherd/d894c88b-d135-4003-bf5d-8ee409716ca6",
-  "tag": "shepherd_technical_lead_inland_mari",
-  "loc": "San Francisco / New York City, Los Angeles, DFW, Chicago",
-  "posted_ts": 1790906831,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "Extremenetworks",
   "title": "Staff Software Engineer \u2013 Extreme Platform ONE (10548)",
   "url": "https://jobs.lever.co/extremenetworks/539a2035-a501-4ee5-9520-bd7e05f80450",
   "tag": "extremenetworks_staff_software_engineer_ex",
   "loc": "San Jose, California, United States",
   "posted_ts": 1790891800,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Fluidstack",
-  "title": "ICT Infrastructure Architect",
-  "url": "https://jobs.ashbyhq.com/fluidstack/8b4a98d9-ac3d-4508-8e80-02916bb5df2b",
-  "tag": "fluidstack_ict_infrastructure_archite",
-  "loc": "Austin, TX / New York, NY, San Francisco, CA, Seattle, WA (Remote)",
-  "posted_ts": 1790891630,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -451,32 +341,12 @@
  },
  {
   "ats": "ashby",
-  "company": "Formenergy",
-  "title": "Staff Cost Engineer",
-  "url": "https://jobs.ashbyhq.com/formenergy/b658f5a1-9a5a-4635-acfb-dbc83a3a5a9d",
-  "tag": "formenergy_staff_cost_engineer",
-  "loc": "Berkeley, CA / Somerville, MA, Weirton, WV",
-  "posted_ts": 1790889923,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "Mashgin",
   "title": "Software Engineering Manager",
   "url": "https://jobs.lever.co/mashgin/b4296191-22e9-4a1f-a479-82dca6bf49b7",
   "tag": "mashgin_software_engineering_manag",
   "loc": "Palo Alto, CA",
   "posted_ts": 1790888437,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Minerva",
-  "title": "Forward Deployed Marketer",
-  "url": "https://jobs.ashbyhq.com/minerva/d2d11ac5-09fb-43bc-b310-34161f16ee16",
-  "tag": "minerva_forward_deployed_marketer",
-  "loc": "New York City",
-  "posted_ts": 1790887375,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -497,16 +367,6 @@
   "tag": "vibe_staff_or_senior_machine_le",
   "loc": "Paris / New York (Remote)",
   "posted_ts": 1790886201,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Delos Data",
-  "title": "Principal Package Engineer",
-  "url": "https://jobs.ashbyhq.com/delos-data/5e69c121-9909-4c52-a81c-030a0f0234dc",
-  "tag": "delos_data_principal_package_engineer",
-  "loc": "Palo Alto (Remote)",
-  "posted_ts": 1790885137,
   "email": "amba_rish@hotmail.com"
  },
  {
@@ -541,52 +401,12 @@
  },
  {
   "ats": "ashby",
-  "company": "Sift",
-  "title": "Staff Accountant ",
-  "url": "https://jobs.ashbyhq.com/sift/b7f8c68c-41e5-4c7f-8308-e18bdfc855bf",
-  "tag": "sift_staff_accountant",
-  "loc": "Remote - USA (Remote)",
-  "posted_ts": 1790872441,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "Scope Labs",
   "title": "Founding Engineer (DreamLever) - NY",
   "url": "https://jobs.ashbyhq.com/scope-labs/985fa1d4-613a-471e-9164-60b9f64ee2dc",
   "tag": "scope_labs_founding_engineer_dreamlev",
   "loc": "New York City (Remote)",
   "posted_ts": 1790872054,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Dave",
-  "title": "Senior Software Engineer, Fullstack ",
-  "url": "https://jobs.ashbyhq.com/dave/46c99e96-9cf5-4dfd-a20e-62acd5a4693c",
-  "tag": "dave_senior_software_engineer_f",
-  "loc": "United States (Remote)",
-  "posted_ts": 1790871364,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Delinea",
-  "title": "Senior Fullstack Web Development Engineer - React/Typescript",
-  "url": "https://jobs.ashbyhq.com/delinea/0749e2c2-92a2-4c49-8d7c-1ee9cfdb76e1",
-  "tag": "delinea_senior_fullstack_web_devel",
-  "loc": "U.S. Remote (Remote)",
-  "posted_ts": 1790868707,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "Qumulo",
-  "title": "Senior Member of Technical Staff",
-  "url": "https://jobs.ashbyhq.com/qumulo/92fe1c10-7bc1-4388-a039-df1ce54d7ec3",
-  "tag": "qumulo_senior_member_of_technical",
-  "loc": "Seattle (hybrid) (Remote)",
-  "posted_ts": 1790868488,
   "email": "amba_rish@hotmail.com"
  },
  {
