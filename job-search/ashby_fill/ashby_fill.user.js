@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.04.1
+// @version      2026.10.04.2
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -551,6 +551,10 @@ async function batchStep(q) {
   if (!item || curJobId() !== item.id) return false;
   status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
+  if (OK_RX.test(document.body.innerText || '') && !entries().length) {   // already-submitted confirmation reloaded under this job's URL: record and move on, do not re-fill
+    report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || [''])[0], answered: -1 });
+    q.blocks = 0; S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+  }
   const rep = await fillForm({ prior: item.p || [] });
   let res;
   if (q.stopped) return true;
@@ -648,6 +652,21 @@ async function boot() {
   const q = S.get(Q_KEY, null);
   if (q && !q.done && !q.stopped && q.items && q.items[q.i]) {
     if (curJobId() === q.items[q.i].id) { await sleep(1500); if (await batchStep(q)) return; }
+    else if (/(^|\.)jobs\.ashbyhq\.com$/.test(location.hostname)) {
+      // a submit reloaded us onto a confirmation / redirect page that is not the expected
+      // application form: classify where we landed and move on, never re-opening the same job
+      await sleep(1200);
+      const body = document.body.innerText || '';
+      const item = q.items[q.i]; let res;
+      if (OK_RX.test(body)) res = { status: 'submitted', why: (body.match(OK_RX) || [''])[0], answered: -1 };
+      else if (SPAM_RX.test(body)) res = { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0], answered: -1 };
+      else res = { status: 'unknown', why: 'left the application page before a confirmation was seen', answered: -1 };
+      report(q, item, res);
+      q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
+      if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
+      S.set(Q_KEY, q);
+      await sleep(1200); advance(q); return;
+    }
   }
   if (q && q.done) { ui(); finish(q); }
   const auto = S.get('autofill', HAS_GM);
