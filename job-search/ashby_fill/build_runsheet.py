@@ -84,6 +84,8 @@ for f in sys.argv[1:]:
         if not j or j in seen: continue
         if NEVER.search((x.get("company") or "") + " " + (x.get("title") or "") + " " + (x.get("url") or "")): continue
         if re.sub(r"[^a-z0-9]", "", (x.get("company") or "").lower()) in REJECTED: continue
+        # applicant (2026-10-03): sheet carries only roles posted within the past week (FRESH_ONLY=0 restores the 8-14 day section)
+        if os.environ.get("FRESH_ONLY", "1") == "1" and not (x.get("posted_ts") and time.time() - x["posted_ts"] <= 7 * 86400): continue
         if ACTIVE_CHECK and not _is_active(x.get("company"), j): continue
         if j in DROP or any(a.search(x.get("company", "")) and b.search(x.get("title", "")) for a, b, _ in DROP_RX): continue
         seen.add(j); items.append(x)
@@ -116,7 +118,7 @@ for name, fn in GROUPS:
     for r in g: used.add(r["id"])
     parts = [g[i:i + 16] for i in range(0, len(g), 16)] or []
     for pi, p in enumerate(parts): cats.append({"name": name + (f" · part {pi + 1}" if len(parts) > 1 else ""), "items": p})
-if older:
+if older and os.environ.get("FRESH_ONLY", "1") != "1":
     o = sorted(older, key=lambda r: (r["tier"], -(r["dom"]), -(r["ts"] or 0)))
     parts = [o[i:i + 16] for i in range(0, len(o), 16)]
     for pi, p in enumerate(parts): cats.append({"name": "Still open · posted 8 to 14 days ago" + (f" · part {pi + 1}" if len(parts) > 1 else ""), "items": p})
