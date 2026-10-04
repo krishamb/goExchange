@@ -139,6 +139,7 @@ TEXT_RULES=[
  (r"sponsorship needs?|require (employer |visa |company )?sponsorship|sponsorship to work|need sponsorship", "None. I am a US citizen and need no sponsorship or visa transfer."),
  (r"where do you (currently )?(reside|live)|city,? state|current city|city and state|city of residence|what city do you live", "Santa Clara, CA"),
  (r"^nationality$|your nationality|nationality\b.{0,20}(:|\*|$)", "United States (U.S. citizen)"),
+ (r"age (range|bracket|group)|what is your age|select your age", ["40-49","40 - 49","40 to 49","45-49","40-44"]),   # applicant (2026-10-04)
  (r"most interesting (paper|blog|article|documentation|post)|paper, blog post, or documentation", "Anthropic's 'Building effective agents' post - it matches what we learned building Hyperion AI the hard way: simple composable patterns (routing, tool use, evaluator loops) beat heavyweight agent frameworks in production, and the discipline of keeping a human-verifiable boundary around each agent step is what makes the system debuggable. I pair it with the MCP spec docs, which turned our one-off tool integrations into a clean contract."),
  (r"(more than |over )?(three|3)\+? years .{0,30}(deploying|delivering|implementing) .{0,30}(solutions|products)? ?(at|with|for) (customer|client)", ["Yes","YES","yes"]),
  (r"held a u\.?s\.? security clearance|security clearance in the past|(hold|have|held) .{0,25}security clearance", "N/A - I have never held a U.S. security clearance."),   # applicant is a US citizen but has never held a clearance; never answered otherwise
@@ -869,7 +870,9 @@ async def choose_react_select(page,control,options_pref,label):
             else: inp=control   # button[aria-haspopup="listbox"]: keys go to the control itself
         except Exception: inp=control
     async def current():
-        try: return (await control.inner_text()).strip()
+        try:
+            if (await control.evaluate("el=>el.tagName"))=="INPUT": return (await control.input_value()).strip()
+            return (await control.inner_text()).strip()
         except Exception: return ""
     try:
         for pref in (options_pref[:4] if has_inp else []):   # type-to-filter needs a real inner input
