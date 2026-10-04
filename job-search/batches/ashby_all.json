@@ -1,6 +1,166 @@
 [
  {
   "ats": "ashby",
+  "company": "legora",
+  "title": "Staff Site Reliability Engineer ",
+  "url": "https://jobs.ashbyhq.com/legora/c7a8d50e-c7f9-4a65-984d-dfa9239335e7",
+  "tag": "legora_staff_site_reliability_eng",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "beaconai",
+  "title": "Staff Software Engineer, Artificial Intelligence/LLM ",
+  "url": "https://jobs.ashbyhq.com/beaconai/28c6c5cb-e9db-4bea-a4ea-815b5616b590",
+  "tag": "beaconai_staff_software_engineer_ar",
+  "loc": "San Carlos CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "sentilink",
+  "title": "Staff Software Engineer, Data Platform",
+  "url": "https://jobs.ashbyhq.com/sentilink/9bc3de0b-1638-4310-8df1-2dd965f0bdf4",
+  "tag": "sentilink_staff_software_engineer_da",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "scribdinc",
+  "title": "Staff Software Engineer (Backend) - Everand Core",
+  "url": "https://jobs.ashbyhq.com/scribdinc/c8fbcc07-e25a-4aa1-8208-306659febb36",
+  "tag": "scribdinc_staff_software_engineer_ba",
+  "loc": "Portland OR",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "fluidstack",
+  "title": "Architect, Data Center",
+  "url": "https://jobs.ashbyhq.com/fluidstack/b20734dd-fa58-4c64-b0fa-fe8996d3b604",
+  "tag": "fluidstack_architect_data_center",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "hingehealth",
+  "title": "Senior Engineering Manager, Outcomes",
+  "url": "https://jobs.ashbyhq.com/hinge-health/383dd2f7-f67a-49ab-a61b-e3c9eec51a4a",
+  "tag": "hingehealth_senior_engineering_manager",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "whoop",
+  "title": "Software Engineering Manager (Health Records)",
+  "url": "https://jobs.ashbyhq.com/whoop/f28f3b24-3b28-45d1-8c49-fb90e02f9e9d",
+  "tag": "whoop_software_engineering_manag",
+  "loc": "Boston MA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "elicit",
+  "title": "Engineering Manager",
+  "url": "https://jobs.ashbyhq.com/elicit/6d979836-e243-4bb0-aa8c-0f6a7ae7b122",
+  "tag": "elicit_engineering_manager",
+  "loc": "Oakland CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "blitzy",
+  "title": "Head of Forward Deployed Engineering",
+  "url": "https://jobs.ashbyhq.com/blitzy/2a8c95cd-907b-4504-9c90-ddb7a75f1ece",
+  "tag": "blitzy_head_of_forward_deployed_e",
+  "loc": "Cambridge MA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "reflection",
+  "title": "Member of Technical Staff - Pre-Training Infra",
+  "url": "https://jobs.ashbyhq.com/reflectionai/5f773a1e-fee2-427d-88f5-0eee11b76d77",
+  "tag": "reflection_member_of_technical_staff_",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "footprint",
+  "title": "Member of Technical Staff (Infrastructure)",
+  "url": "https://jobs.ashbyhq.com/footprint/f2b59688-c435-4a24-946e-f18d200a0db3",
+  "tag": "footprint_member_of_technical_staff_",
+  "loc": "New York City Metropolitan Area None",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "assorthealth",
+  "title": "Staff Software Engineer",
+  "url": "https://jobs.ashbyhq.com/assorthealth/fd49c83d-c0e8-4247-87f8-633d636e1472",
+  "tag": "assorthealth_staff_software_engineer",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "fonziai",
+  "title": "Senior Full Stack Engineer",
+  "url": "https://jobs.ashbyhq.com/fonzi/3a992ea2-3674-4439-8a04-5c4e60f21b7f",
+  "tag": "fonziai_senior_full_stack_engineer",
+  "loc": "San Francisco Bay Area None",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "lightsage",
+  "title": "Founding Engineer",
+  "url": "https://jobs.ashbyhq.com/lightsage/5b733733-b1ed-44ec-a4ca-0ad72d979562",
+  "tag": "lightsage_founding_engineer",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "osmo",
+  "title": "Head of AI",
+  "url": "https://jobs.ashbyhq.com/osmo/f1d607f1-40ee-40e7-9da8-48ca939bd5b2",
+  "tag": "osmo_head_of_ai",
+  "loc": "Somerville MA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "etched",
+  "title": "Head of Supercomputing",
+  "url": "https://jobs.ashbyhq.com/etched/fb76e6e8-d07a-4830-b88e-ca8c1483f801",
+  "tag": "etched_head_of_supercomputing",
+  "loc": "San Jose CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "company": "Temporal Technologies",
   "title": "Staff Software Engineer, Replication Foundations",
   "url": "https://jobs.ashbyhq.com/temporal/dc4021c5-b1d0-49a8-8342-6c68969192b5",
