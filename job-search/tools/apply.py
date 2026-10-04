@@ -863,7 +863,11 @@ async def choose_react_select(page,control,options_pref,label):
     if options_pref==["__ASK__"]: return None
     inp=control.locator('input[role="combobox"], input.select__input, input').first
     has_inp=bool(await inp.count())
-    if not has_inp: inp=control   # button[aria-haspopup="listbox"] controls have no inner input: keys go to the control itself
+    if not has_inp:
+        try:   # the control may itself be the typeahead input (Ashby's location autocomplete)
+            if (await control.evaluate("el=>el.tagName"))=="INPUT": inp=control; has_inp=True
+            else: inp=control   # button[aria-haspopup="listbox"]: keys go to the control itself
+        except Exception: inp=control
     async def current():
         try: return (await control.inner_text()).strip()
         except Exception: return ""
@@ -1524,7 +1528,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             _ctried=set()
             for _cpass in range(2):   # a second pass catches selects revealed by earlier answers (Upstart: Veteran Status after Hispanic/Latino)
                 # react-select style comboboxes (Greenhouse/Ashby)
-                combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"], input[id^="react-select-"][id$="-input"]:not([class*="select__input"])')
+                combos=page.locator('[class*="select__control"], [role="combobox"]:not(input), div[class*="Select"] [class*="control"], button[aria-haspopup="listbox"], input[id^="react-select-"][id$="-input"]:not([class*="select__input"]), input.ashby-application-form-input-autocomplete')
                 n=await combos.count()
                 for i in range(n):
                     h=combos.nth(i)
