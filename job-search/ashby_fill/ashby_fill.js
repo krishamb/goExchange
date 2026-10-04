@@ -631,7 +631,7 @@ async function boot() {
   const hq = readHashQueue();
   if (hq) {
     const n = hq.items.length;
-    const ok = confirm(`${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} Ashby application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
+    const ok = (hq.auto && n === 1) ? true : confirm(`${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} Ashby application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
       hq.items.slice(0, 20).map(x => `• ${x.c} - ${x.t}`).join('\n') + (n > 20 ? `\n...and ${n - 20} more` : '') +
       (hq.auto ? '\n\nEach form is submitted only if every required question is answered by your rules; anything else is left for you.' : ''));
     if (ok) S.set(Q_KEY, hq);
