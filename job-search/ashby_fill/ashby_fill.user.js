@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.04.2
+// @version      2026.10.04.3
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -244,10 +244,12 @@ async function answerLocation(e, q, input, rep) {
       }
     }
   }
-  // some forms only list countries (Docker): the applicant is in the United States
-  setValue(input, 'United States');
-  const us = await waitFor(() => optionsNow().filter(x => /^united states( of america)?$/i.test(clean(x.innerText))), 5000, 300);
-  if (us) { press(us[0]); await sleep(500); input.blur(); rep.filled.push([q, 'United States']); return true; }
+  // region-level pickers (e.g. Docker) only offer state/country: accept California, else the United States
+  for (const [typed, re] of [['Santa Clara, California', /^california,\s*united states$|^california$/i], ['California', /^california,\s*united states$|^california$/i], ['United States', /^united states( of america)?$/i]]) {
+    setValue(input, typed);
+    const opt = await waitFor(() => optionsNow().filter(x => re.test(clean(x.innerText))), 6000, 300);
+    if (opt && opt.length) { press(opt[0]); await sleep(500); input.blur(); rep.filled.push([q, clean(opt[0].innerText).slice(0, 60)]); return true; }
+  }
   setValue(input, ''); input.blur();
   return false;
 }
