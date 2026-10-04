@@ -56,6 +56,10 @@ def akf_hash(items, auto):
 
 start_href = (appurl(rows[0]["url"]) + "#akf=" + akf_hash(rows, True)) if rows else "#"
 
+def one_href(j):
+    """A single-job auto link: opening it fills AND submits that one job, no chain to break."""
+    return appurl(j["url"]) + "#akf=" + akf_hash([j], True)
+
 def age(j):
     ts = j.get("posted_ts")
     if not ts: return ""
@@ -66,7 +70,7 @@ tr = "\n".join(
     f'<tr id="r{i}"><td><input type="checkbox" data-i="{i}"></td><td class="a">{age(j)}</td>'
     f'<td class="c">{H.escape(j["company"])}</td><td>{H.escape(j["title"])}</td>'
     f'<td class="l">{H.escape((j.get("loc") or "")[:40])}</td>'
-    f'<td><a href="{H.escape(appurl(j["url"]))}" target="_blank" rel="noopener" data-i="{i}">Open &amp; fill</a></td></tr>'
+    f'<td><a class="go1" href="{H.escape(one_href(j))}" target="_blank" rel="noopener" data-i="{i}">Apply ▸</a></td></tr>'
     for i, j in enumerate(rows))
 
 us_path = os.path.join(HERE, "ashby_fill", "ashby_fill.user.js")
@@ -91,16 +95,33 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 <div class="box"><b>Apply to all — one click, hands-free:</b><br>
 <a class="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
 It opens one tab, confirms once, then fills and submits each role on its own, moving to the next after Ashby confirms. It submits only forms every required question is answered for, pauses if a role shows a captcha, and stops if Ashby blocks two in a row — the rest stay as links below. Leave the tab in front; you don't have to click again.</div>
-<div class="box"><b>Prefer to go one at a time?</b> Click <i>Open &amp; fill</i> on any row — the form fills itself, you review and click <b>Submit application</b>, tick the row.</div>
+<div class="box"><b>If Start stalls — fire waves instead (most reliable):</b> each button below opens that wave of roles as background tabs; every tab fills AND submits itself, no chaining. Do one wave, glance at the tabs, close them, do the next.<br>
+<span id="waves"></span>
+<br><span style="color:var(--mut);font-size:13px">Or Apply any single row below — it opens one tab that applies itself. (If Chrome asks, allow pop-ups for this page so a wave can open its tabs.)</span></div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
 const K='akf_clickrun_v1';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
 const boxes=document.querySelectorAll('input[type=checkbox]');
+const links=[...document.querySelectorAll('a.go1[data-i]')];
 function paint(){{let d=0;boxes.forEach(b=>{{const on=!!st[b.dataset.i];b.checked=on;b.closest('tr').classList.toggle('done',on);if(on)d++}});
 document.getElementById('prog').textContent=d+' of {len(rows)} marked done';}}
 function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
+function mark(i){{st[i]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.i]=b.checked?1:0;save();paint()}}));
-document.querySelectorAll('a[data-i]').forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>{{st[a.dataset.i]=1;save();paint()}},800)}}));
+links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.i),800)}}));
+// wave buttons: open the next N not-yet-done rows as self-submitting background tabs
+const WAVE=10;
+function buildWaves(){{
+  const todo=links.filter(a=>!st[a.dataset.i]);
+  const w=document.getElementById('waves'); w.innerHTML='';
+  if(!todo.length){{w.textContent='All rows marked done.';return;}}
+  const n=Math.min(WAVE,todo.length);
+  const b=document.createElement('button'); b.className='start'; b.style.fontSize='15px'; b.style.padding='10px 18px';
+  b.textContent='▶ Apply next '+n+' ('+todo.length+' left)';
+  b.onclick=()=>{{todo.slice(0,WAVE).forEach((a,k)=>{{setTimeout(()=>{{window.open(a.href,'_blank');mark(a.dataset.i);}},k*600);}});setTimeout(buildWaves,n*600+400);}};
+  w.appendChild(b);
+}}
+buildWaves();
 paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
