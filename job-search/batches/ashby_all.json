@@ -1,6 +1,336 @@
 [
  {
   "ats": "ashby",
+  "company": "planted",
+  "title": "VP Software Engineering",
+  "url": "https://jobs.ashbyhq.com/planted/02da7869-3abb-4cfb-8891-79620c6709a1",
+  "tag": "planted_vp_software_engineering",
+  "loc": "Oakland, CA",
+  "posted_ts": 1790955927.193,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "patreon",
+  "title": "Director of Engineering, Payments",
+  "url": "https://jobs.ashbyhq.com/patreon/f145bbff-8927-48dc-8f48-290f7978a752",
+  "tag": "patreon_director_of_engineering_pa",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "crusoe",
+  "title": "Director of Engineering, Compute Cloud",
+  "url": "https://jobs.ashbyhq.com/crusoe/6c4d634c-fd4a-4709-b836-72e5d6087e94",
+  "tag": "crusoe_director_of_engineering_co",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "goaly",
+  "title": "Founding Developer Relations Engineer",
+  "url": "https://jobs.ashbyhq.com/goaly/d67ea078-e77c-48e9-bb20-f02a8af60575",
+  "tag": "goaly_founding_developer_relatio",
+  "loc": "Palo Alto, CA, USA",
+  "posted_ts": 1790988443.23,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "hcompany",
+  "title": "Founding Forward Deployed Engineer - US",
+  "url": "https://jobs.ashbyhq.com/hcompany/c911df44-270c-42b3-9572-dc0ef5a34006",
+  "tag": "hcompany_founding_forward_deployed_",
+  "loc": "Austin TX",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Netic",
+  "title": "Founding Web Platform Engineer",
+  "url": "https://jobs.ashbyhq.com/netic/a6db2b87-4a27-4ca1-8c0c-288651eb5ba6",
+  "tag": "netic_founding_web_platform_engi",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "SunnyData",
+  "title": "Client Principal (Financial Services)",
+  "url": "https://jobs.ashbyhq.com/SunnyData/e777b5aa-0097-4659-9d6f-20f3e0b21b29",
+  "tag": "sunnydata_client_principal_financial",
+  "loc": "United States (Remote)",
+  "posted_ts": 1790952079.404,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "nekohealth",
+  "title": "Principal Platform Engineer",
+  "url": "https://jobs.ashbyhq.com/neko-health/8c2d7874-2d84-45b8-9012-4c7bffa28962",
+  "tag": "nekohealth_principal_platform_enginee",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Edison Scientific",
+  "title": "Member of Technical Staff, Principal Infrastructure Engineer",
+  "url": "https://jobs.ashbyhq.com/Edison%20Scientific/059399ca-4f0c-454d-ba18-c9d064c13f27",
+  "tag": "edison_scientific_member_of_technical_staff_",
+  "loc": "San Francisco / New York; Boston",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "sentry",
+  "title": "Staff Software Engineer, AI Developer Tooling",
+  "url": "https://jobs.ashbyhq.com/sentry/c00e77f5-bd58-49da-b4a8-3b6249529747",
+  "tag": "sentry_staff_software_engineer_ai",
+  "loc": "San Francisco, California (Remote)",
+  "posted_ts": 1791085538.493,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Ridealso",
+  "title": "Staff Dyno Controls Engineer",
+  "url": "https://jobs.ashbyhq.com/Ridealso/4b12cbaf-072f-48c9-8f0e-71d5c353d7ce",
+  "tag": "ridealso_staff_dyno_controls_engine",
+  "loc": "Palo Alto",
+  "posted_ts": 1790974521.73,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "strava",
+  "title": "Staff AI Engineer",
+  "url": "https://jobs.ashbyhq.com/strava/dc37642d-399e-49a3-853f-81fdc0eee2b4",
+  "tag": "strava_staff_ai_engineer",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "flowengineering",
+  "title": "Staff Software Engineer, Infrastructure",
+  "url": "https://jobs.ashbyhq.com/flowengineering/0fc59da9-d62e-48d6-9f4e-4b334aee2fdd",
+  "tag": "flowengineering_staff_software_engineer_in",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "pebl",
+  "title": "Staff Software Engineer",
+  "url": "https://jobs.ashbyhq.com/pebl/02335e73-ec73-4162-b724-cbbebfcfd2b0",
+  "tag": "pebl_staff_software_engineer",
+  "loc": "Palo Alto CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "suno",
+  "title": "Senior/Staff Software Engineer - Commerce Platform",
+  "url": "https://jobs.ashbyhq.com/suno/16c7d5bf-e43c-4319-bdfc-6a7dbdf58e43",
+  "tag": "suno_senior_staff_software_engi",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Mercor",
+  "title": "Member of Technical Staff, Backend",
+  "url": "https://jobs.ashbyhq.com/mercor/ce84b612-89fb-4fac-976e-ac7dbcdb7da1",
+  "tag": "mercor_member_of_technical_staff_",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "LatchBio",
+  "title": "Member of Technical Staff, Proteomics",
+  "url": "https://jobs.ashbyhq.com/latchbio/98a23a07-0de0-4a6e-ba18-e448358660d3",
+  "tag": "latchbio_member_of_technical_staff_",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "David AI",
+  "title": "Staff Software Engineer, Platform",
+  "url": "https://jobs.ashbyhq.com/david-ai/111cd71f-99c3-48ad-9cdc-73354f7ff0b9",
+  "tag": "david_ai_staff_software_engineer_pl",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "OpenArt AI",
+  "title": "Senior/Staff Software Engineer, Agent",
+  "url": "https://jobs.ashbyhq.com/openart/b5e04802-f810-4da8-867d-37edfdef0001",
+  "tag": "openart_ai_senior_staff_software_engi",
+  "loc": "San Carlos, California, USA (remote)",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Probook",
+  "title": "Staff Software Engineer",
+  "url": "https://jobs.ashbyhq.com/probook/6b75ec3e-3156-405d-b79b-6e03dcd217cd",
+  "tag": "probook_staff_software_engineer",
+  "loc": "Manhattan",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Whatnot",
+  "title": "Senior Staff Software Engineer",
+  "url": "https://jobs.ashbyhq.com/whatnot/9d62f1c3-db2d-4191-94ec-99aa4c39c29d/application",
+  "tag": "whatnot_senior_staff_software_engi",
+  "loc": "SF Bay Area - New York, NY \u00b7 San Francisco, CA \u00b7 Los Angeles, CA \u00b7 Seattle, WA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Applied",
+  "title": "Vehicle Controls - Technical Lead",
+  "url": "https://jobs.ashbyhq.com/Applied/f87db9ad-09e0-4d26-8d10-005c501043d1",
+  "tag": "applied_vehicle_controls_technical",
+  "loc": "Sunnyvale",
+  "posted_ts": 1790972444.475,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "cursor",
+  "title": "Engineering Manager, ML",
+  "url": "https://jobs.ashbyhq.com/cursor/3752886b-a6e2-402c-ba2a-47d0659ff335",
+  "tag": "cursor_engineering_manager_ml",
+  "loc": "San Francisco CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "datasnipper",
+  "title": "Engineering Manager, Billing & Monetization ",
+  "url": "https://jobs.ashbyhq.com/datasnipper/df4fef6d-2324-479d-b07b-c7f4182b20e1",
+  "tag": "datasnipper_engineering_manager_billin",
+  "loc": "New York NY",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "replit",
+  "title": "Engineering Manager, UX ",
+  "url": "https://jobs.ashbyhq.com/replit/7e48291b-6188-46d7-bc21-1d66a512ffcb",
+  "tag": "replit_engineering_manager_ux",
+  "loc": "Foster City CA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Savvy-Wealth",
+  "title": "Senior Engineering Manager",
+  "url": "https://jobs.ashbyhq.com/savvy/f6be9992-fbb1-4e0a-846e-5ef4692d93bb",
+  "tag": "savvy_wealth_senior_engineering_manager",
+  "loc": "NYC Office",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Applied Intuition",
+  "title": "Vehicle Controls - Technical Lead",
+  "url": "https://jobs.ashbyhq.com/applied/f87db9ad-09e0-4d26-8d10-005c501043d1/application",
+  "tag": "applied_intuition_vehicle_controls_technical",
+  "loc": "SF Bay Area - Sunnyvale \u00b7 Sunnyvale, California, United States",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "parasail",
+  "title": "Software Engineer, Forward Deploy -- New Graduate '27",
+  "url": "https://jobs.ashbyhq.com/parasail/da595923-4e35-4ba1-875d-383276069cf7",
+  "tag": "parasail_software_engineer_forward_",
+  "loc": "San Mateo",
+  "posted_ts": 1790983634.196,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "writer",
+  "title": "Strategic AI adoption lead (West)",
+  "url": "https://jobs.ashbyhq.com/writer/ebb7c4fe-1cd6-48ad-b03c-c01ab2d05b09",
+  "tag": "writer_strategic_ai_adoption_lead",
+  "loc": "San Francisco, CA / Seattle, WA (Remote)",
+  "posted_ts": 1790979121.71,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "withclutch",
+  "title": "Forward Deployed Engineer",
+  "url": "https://jobs.ashbyhq.com/withclutch/8f1aa776-2c8a-4367-be4d-e25ba5e25fd9",
+  "tag": "withclutch_forward_deployed_engineer",
+  "loc": "United States (Remote)",
+  "posted_ts": 1790976879.931,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "blitzy",
+  "title": "Head of Forward Deployed Engineering",
+  "url": "https://jobs.ashbyhq.com/blitzy/2a8c95cd-907b-4504-9c90-ddb7a75f1ece",
+  "tag": "blitzy_head_of_forward_deployed_e",
+  "loc": "Cambridge MA",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "fonziai",
+  "title": "Senior Full Stack Engineer",
+  "url": "https://jobs.ashbyhq.com/fonzi/3a992ea2-3674-4439-8a04-5c4e60f21b7f",
+  "tag": "fonziai_senior_full_stack_engineer",
+  "loc": "San Francisco Bay Area None",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Serval",
+  "title": "Engineering Leadership",
+  "url": "https://jobs.ashbyhq.com/serval/f460585b-a77c-4fe3-b282-a72607893614",
+  "tag": "serval_engineering_leadership",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "company": "Vanta",
   "title": "Staff Software Engineer, Program Structure & Trust",
   "url": "https://jobs.ashbyhq.com/vanta/9962b3c8-f1c4-4ad1-9308-7c8df6a28b28",

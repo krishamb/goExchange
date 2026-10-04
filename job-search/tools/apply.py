@@ -1163,7 +1163,10 @@ def _gmail_ledger():
     if _GMAIL_LEDGER_CACHE is not None: return _GMAIL_LEDGER_CACHE
     out={}
     try:
-        d=json.load(open(os.path.join(os.path.dirname(os.path.dirname(OUT)),"applied_gmail.json")))
+        _p=os.path.join(os.path.dirname(os.path.dirname(OUT)),"applied_gmail.json")
+        if not os.path.exists(_p):   # Mac runs: the ledger ships with the repo
+            _p=os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","applied_gmail.json")
+        d=json.load(open(_p))
         for k,v in (d.get("companies") or {}).items():
             ts=[time.mktime(time.strptime(x,"%Y-%m-%d")) for x in (v.get("dates") or []) if re.match(r"\d{4}-\d{2}-\d{2}$",x)]
             if ts: out[re.sub(r"[^a-z0-9]","",k.lower())]=max(ts)

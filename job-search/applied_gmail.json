@@ -1,0 +1,2588 @@
+{
+ "generated": "2026-10-04",
+ "source": "Gmail (last 30 days): Greenhouse security-code emails, ATS application confirmations, and rejection emails proving a prior application",
+ "date_basis": "distinct days in America/Los_Angeles (UTC-7)",
+ "companies": {
+  "3cloud": {
+   "name": "3Cloud",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "9thwayinsignia": {
+   "name": "9th Way Insignia",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "abinbev": {
+   "name": "AB InBev",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "abacus": {
+   "name": "ABACUS",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "abacusinsights": {
+   "name": "Abacus Insights",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "acadiapharmaceuticals": {
+   "name": "Acadia Pharmaceuticals",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "acquia": {
+   "name": "Acquia",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "adapturerenewables": {
+   "name": "Adapture Renewables",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "addepar": {
+   "name": "Addepar",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "adobe": {
+   "name": "Adobe",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "adyen": {
+   "name": "Adyen",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "affirm": {
+   "name": "Affirm",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "afresh": {
+   "name": "Afresh",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "air": {
+   "name": "Air",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "airbnb": {
+   "name": "Airbnb",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "aircallio": {
+   "name": "Aircall.io",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "aircall": {
+   "name": "Aircall",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "alpaca": {
+   "name": "Alpaca",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "alphasense": {
+   "name": "AlphaSense",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "altana": {
+   "name": "Altana",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "altruist": {
+   "name": "Altruist",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "anaplan": {
+   "name": "Anaplan",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "apolloio": {
+   "name": "Apollo.io",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "apollo": {
+   "name": "Apollo",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "appian": {
+   "name": "Appian",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "appnovationtechnologies": {
+   "name": "Appnovation Technologies",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "arcesium": {
+   "name": "Arcesium",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "armada": {
+   "name": "Armada",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "asana": {
+   "name": "Asana",
+   "dates": [
+    "2026-09-08",
+    "2026-09-29"
+   ],
+   "count": 2
+  },
+  "asurion": {
+   "name": "Asurion",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "atoms": {
+   "name": "Atoms",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "atomscareerspage": {
+   "name": "ATOMS Careers page (Greenhouse alias)",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "attain": {
+   "name": "Attain",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "avathon": {
+   "name": "Avathon",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "axios": {
+   "name": "Axios",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "b12": {
+   "name": "B12",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "bill": {
+   "name": "BILL",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "bamboohr": {
+   "name": "BambooHR",
+   "dates": [
+    "2026-09-29",
+    "2026-10-01"
+   ],
+   "count": 2
+  },
+  "baselayer": {
+   "name": "Baselayer",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "beaconbiosignals": {
+   "name": "Beacon Biosignals",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "beaconsoftware": {
+   "name": "Beacon Software",
+   "dates": [
+    "2026-09-24"
+   ],
+   "count": 1
+  },
+  "bertramcapitalmanagement": {
+   "name": "Bertram Capital Management",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "betterhelp": {
+   "name": "BetterHelp",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "betterment": {
+   "name": "Betterment",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "blacksky": {
+   "name": "BlackSky",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "block": {
+   "name": "Block",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "branch": {
+   "name": "Branch",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "braze": {
+   "name": "Braze",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "brex": {
+   "name": "Brex",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "bridgewaybenefittechnologies": {
+   "name": "Bridgeway Benefit Technologies",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "buildops": {
+   "name": "BuildOps",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "bullhorn": {
+   "name": "Bullhorn",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "butterflynetwork": {
+   "name": "Butterfly Network",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "buzzsolutions": {
+   "name": "Buzz Solutions",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "chaosindustries": {
+   "name": "CHAOS Industries",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "ciq": {
+   "name": "CIQ",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "cancernavigator": {
+   "name": "CancerNavigator",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "capco": {
+   "name": "Capco",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "cargurus": {
+   "name": "CarGurus",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "cariad": {
+   "name": "Cariad",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "carta": {
+   "name": "Carta",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "cellanome": {
+   "name": "Cellanome",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "celonis": {
+   "name": "Celonis",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "censys": {
+   "name": "Censys",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "centralreach": {
+   "name": "CentralReach",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "ceribell": {
+   "name": "Ceribell",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "chainguard": {
+   "name": "Chainguard",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 3
+  },
+  "charliehealth": {
+   "name": "Charlie Health",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "chimefinancial": {
+   "name": "Chime Financial",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "chime": {
+   "name": "Chime",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "circleci": {
+   "name": "CircleCI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "cisco": {
+   "name": "Cisco",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "clearstreet": {
+   "name": "Clear Street",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "cleerly": {
+   "name": "Cleerly",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "cloudflare": {
+   "name": "Cloudflare",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "colabsoftware": {
+   "name": "CoLab Software",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "coalition": {
+   "name": "Coalition",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "codeforamerica": {
+   "name": "Code for America",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "cohesity": {
+   "name": "Cohesity",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "coinbase": {
+   "name": "Coinbase",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "convera": {
+   "name": "Convera",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "coreweave": {
+   "name": "CoreWeave",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "coupang": {
+   "name": "Coupang",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "crunchyroll": {
+   "name": "Crunchyroll",
+   "dates": [
+    "2026-10-01",
+    "2026-10-02"
+   ],
+   "count": 2
+  },
+  "crunchyrollllc": {
+   "name": "Crunchyroll, LLC",
+   "dates": [
+    "2026-10-01",
+    "2026-10-02"
+   ],
+   "count": 2
+  },
+  "customerio": {
+   "name": "Customer.io",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "dept": {
+   "name": "DEPT®",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "drw": {
+   "name": "DRW",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "databricks": {
+   "name": "Databricks",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "datadog": {
+   "name": "Datadog",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "datavant": {
+   "name": "Datavant",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "datavations": {
+   "name": "Datavations",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "dealpath": {
+   "name": "Dealpath",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "didilabs": {
+   "name": "DiDi Labs",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "digicert": {
+   "name": "DigiCert",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "digitalocean": {
+   "name": "DigitalOcean",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "discord": {
+   "name": "Discord",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "domatechnology": {
+   "name": "Doma Technology",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "doordash": {
+   "name": "DoorDash",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "doordashusa": {
+   "name": "DoorDash USA",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "dragos": {
+   "name": "Dragos",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "drivewealth": {
+   "name": "DriveWealth",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "earnin": {
+   "name": "EarnIn",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "efficientcomputer": {
+   "name": "Efficient Computer",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "elastic": {
+   "name": "Elastic",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "elationhealth": {
+   "name": "Elation Health",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "elitetechnology": {
+   "name": "Elite Technology",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "enchargeai": {
+   "name": "EnCharge AI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "engine": {
+   "name": "Engine",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "everpure": {
+   "name": "Everpure",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 3
+  },
+  "purestorage": {
+   "name": "Pure Storage (applies via Greenhouse as 'Everpure')",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 3
+  },
+  "expel": {
+   "name": "Expel",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "extend": {
+   "name": "Extend",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "faire": {
+   "name": "Faire",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "fanduel": {
+   "name": "FanDuel",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "fanaticscommerce": {
+   "name": "Fanatics Commerce",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "fastly": {
+   "name": "Fastly",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "federato": {
+   "name": "Federato",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "figma": {
+   "name": "Figma",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "fingerprint": {
+   "name": "Fingerprint",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "five9": {
+   "name": "Five9",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "fivetran": {
+   "name": "Fivetran",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "fivetrandbtlabs": {
+   "name": "Fivetran + dbt Labs",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "flatironhealth": {
+   "name": "Flatiron Health",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "flowtraders": {
+   "name": "Flow Traders",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "focused": {
+   "name": "Focused",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "formhealth": {
+   "name": "Form Health",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "formationbio": {
+   "name": "Formation Bio",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "forward": {
+   "name": "Forward",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "fourkites": {
+   "name": "FourKites",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "furiosaai": {
+   "name": "FuriosaAI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "futurestandard": {
+   "name": "Future Standard",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "gallup": {
+   "name": "Gallup",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "gametimeunited": {
+   "name": "Gametime United",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "garnerhealth": {
+   "name": "Garner Health",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "gatikai": {
+   "name": "Gatik AI",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "genedx": {
+   "name": "GeneDx",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "gitlab": {
+   "name": "GitLab",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "globality": {
+   "name": "Globality",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "google": {
+   "name": "Google",
+   "dates": [
+    "2026-09-11",
+    "2026-09-29",
+    "2026-10-01"
+   ],
+   "count": 3
+  },
+  "gruns": {
+   "name": "Grüns",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "gusto": {
+   "name": "Gusto",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "hark": {
+   "name": "Hark",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "harness": {
+   "name": "Harness",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "healthie": {
+   "name": "Healthie",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "heartflow": {
+   "name": "Heartflow",
+   "dates": [
+    "2026-09-29",
+    "2026-10-01"
+   ],
+   "count": 2
+  },
+  "heygen": {
+   "name": "HeyGen",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "hiddenlayer": {
+   "name": "HiddenLayer",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "hightouch": {
+   "name": "Hightouch",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "honor": {
+   "name": "Honor",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "hover": {
+   "name": "Hover",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "hubspot": {
+   "name": "HubSpot",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "hudsonrivertrading": {
+   "name": "Hudson River Trading",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "huntress": {
+   "name": "Huntress",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "idme": {
+   "name": "ID.me",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "ixllearning": {
+   "name": "IXL Learning",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "imbue": {
+   "name": "Imbue",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "impiricus": {
+   "name": "Impiricus",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "imply": {
+   "name": "Imply",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "inmobi": {
+   "name": "InMobi",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "infosys": {
+   "name": "Infosys",
+   "dates": [
+    "2026-09-12"
+   ],
+   "count": 1
+  },
+  "inizioevoke": {
+   "name": "Inizio Evoke",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "interpayments": {
+   "name": "InterPayments",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "invisibletechnologies": {
+   "name": "Invisible Technologies",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "ionq": {
+   "name": "IonQ",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "jumio": {
+   "name": "Jumio",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "kbra": {
+   "name": "KBRA",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "kalepa": {
+   "name": "Kalepa",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "kapitus": {
+   "name": "Kapitus",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "kardfinancial": {
+   "name": "Kard Financial",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "kard": {
+   "name": "Kard",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "kargo": {
+   "name": "Kargo",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "kikoff": {
+   "name": "Kikoff",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "known": {
+   "name": "Known",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "labelbox": {
+   "name": "Labelbox",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "latitudeai": {
+   "name": "Latitude AI",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 3
+  },
+  "launchdarkly": {
+   "name": "LaunchDarkly",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "layerhealth": {
+   "name": "Layer Health",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "leaflink": {
+   "name": "LeafLink",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "legion": {
+   "name": "Legion",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "legionintelligence": {
+   "name": "Legion Intelligence",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "liftoff": {
+   "name": "Liftoff",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "lilasciences": {
+   "name": "Lila Sciences",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "limrun": {
+   "name": "Limrun",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "lindenlab": {
+   "name": "Linden Lab",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "lithic": {
+   "name": "Lithic",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "livefront": {
+   "name": "Livefront",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "ludiaconsulting": {
+   "name": "Ludia Consulting",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "mammothbrands": {
+   "name": "Mammoth Brands",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "mastercard": {
+   "name": "Mastercard",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "mavenclinic": {
+   "name": "Maven Clinic",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "mercury": {
+   "name": "Mercury",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "merlin": {
+   "name": "Merlin",
+   "dates": [
+    "2026-09-10",
+    "2026-09-29"
+   ],
+   "count": 2
+  },
+  "mesh": {
+   "name": "Mesh",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "metropolis": {
+   "name": "Metropolis",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "midihealth": {
+   "name": "Midi Health",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "mindbody": {
+   "name": "Mindbody",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "missionlane": {
+   "name": "Mission Lane",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "mixpanel": {
+   "name": "Mixpanel",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "mongodb": {
+   "name": "MongoDB",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "motional": {
+   "name": "Motional",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "motive": {
+   "name": "Motive",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "mozilla": {
+   "name": "Mozilla",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "myfitnesspal": {
+   "name": "MyFitnessPal",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "myriad360": {
+   "name": "Myriad360",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "nice": {
+   "name": "NICE",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "nvidia": {
+   "name": "NVIDIA",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "natera": {
+   "name": "Natera",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "netdocuments": {
+   "name": "NetDocuments",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "netskope": {
+   "name": "Netskope",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "nourish": {
+   "name": "Nourish",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "nscale": {
+   "name": "Nscale",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "nuro": {
+   "name": "Nuro",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "okx": {
+   "name": "OKX",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "oasishealthpartners": {
+   "name": "Oasis Health Partners",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "octave": {
+   "name": "Octave",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "okta": {
+   "name": "Okta",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "olemaoncology": {
+   "name": "Olema Oncology",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "omadahealth": {
+   "name": "Omada Health",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "onetrust": {
+   "name": "OneTrust",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "openteams": {
+   "name": "OpenTeams",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "orcristtechnologies": {
+   "name": "Orcrist Technologies",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "orioninnovation": {
+   "name": "Orion Innovation",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "oscarhealth": {
+   "name": "Oscar Health",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "otterai": {
+   "name": "Otter.ai",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "owner": {
+   "name": "Owner",
+   "dates": [
+    "2026-09-04"
+   ],
+   "count": 1
+  },
+  "ownercom": {
+   "name": "Owner.com",
+   "dates": [
+    "2026-09-04"
+   ],
+   "count": 1
+  },
+  "pallet": {
+   "name": "Pallet",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pantheonsystems": {
+   "name": "Pantheon Systems",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pantheon": {
+   "name": "Pantheon",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pathward": {
+   "name": "Pathward",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "patronusai": {
+   "name": "Patronus AI",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "payoneer": {
+   "name": "Payoneer",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "pendo": {
+   "name": "Pendo",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "peregrinetechnologies": {
+   "name": "Peregrine Technologies",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "perfectserve": {
+   "name": "PerfectServe",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "phizenix": {
+   "name": "Phizenix",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pindrop": {
+   "name": "Pindrop",
+   "dates": [
+    "2026-09-29",
+    "2026-10-01"
+   ],
+   "count": 2
+  },
+  "pinterest": {
+   "name": "Pinterest",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "placerai": {
+   "name": "Placer.ai",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "pluribusdigital": {
+   "name": "Pluribus Digital",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "podium": {
+   "name": "Podium",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "point": {
+   "name": "Point",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pointdigitalfinance": {
+   "name": "Point Digital Finance, Inc.",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "pointc": {
+   "name": "Point C",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "precisely": {
+   "name": "Precisely",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "preciselyusjobs": {
+   "name": "Precisely US Jobs",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "prenuvo": {
+   "name": "Prenuvo",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "privacy": {
+   "name": "Privacy",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "prizepicks": {
+   "name": "PrizePicks",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "quanata": {
+   "name": "Quanata",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "quince": {
+   "name": "Quince",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "quisitive": {
+   "name": "Quisitive",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "qventus": {
+   "name": "Qventus",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "rebuildmanufacturing": {
+   "name": "Re:Build Manufacturing",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "redventures": {
+   "name": "Red Ventures",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "reddit": {
+   "name": "Reddit",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "resortpass": {
+   "name": "ResortPass",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "revance": {
+   "name": "Revance",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "revancetherapeutics": {
+   "name": "Revance Therapeutics",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "ridgeline": {
+   "name": "Ridgeline",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "rightway": {
+   "name": "Rightway",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "ripple": {
+   "name": "Ripple",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "robinhood": {
+   "name": "Robinhood",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "robotsandpencils": {
+   "name": "Robots and Pencils",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "rubrik": {
+   "name": "Rubrik",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "rubrikjobboard": {
+   "name": "Rubrik Job Board (Greenhouse alias)",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "rxsense": {
+   "name": "RxSense",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "spglobal": {
+   "name": "S&P Global",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "skhynixamerica": {
+   "name": "SK hynix America",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "ss8networks": {
+   "name": "SS8 Networks",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "sambanova": {
+   "name": "SambaNova",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "samsungsemiconductor": {
+   "name": "Samsung Semiconductor",
+   "dates": [
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 2
+  },
+  "scaleai": {
+   "name": "Scale AI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "schrodinger": {
+   "name": "Schrödinger",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "scowtt": {
+   "name": "Scowtt",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "securityscorecard": {
+   "name": "SecurityScorecard",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "seenhealth": {
+   "name": "Seen Health",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "sentinelone": {
+   "name": "SentinelOne",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "servicenow": {
+   "name": "ServiceNow",
+   "dates": [
+    "2026-09-09"
+   ],
+   "count": 1
+  },
+  "sidecarhealth": {
+   "name": "Sidecar Health",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "signifyd": {
+   "name": "Signifyd",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "singlestore": {
+   "name": "SingleStore",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "sirenopt": {
+   "name": "SirenOpt",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "smartsheet": {
+   "name": "Smartsheet",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "smithrx": {
+   "name": "SmithRx",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "snorkelai": {
+   "name": "Snorkel AI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "sofi": {
+   "name": "SoFi",
+   "dates": [
+    "2026-09-30",
+    "2026-10-03"
+   ],
+   "count": 2
+  },
+  "sofitechsolutions": {
+   "name": "SoFi Tech Solutions",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "sorosfundmanagement": {
+   "name": "Soros Fund Management",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "sothebys": {
+   "name": "Sotheby's",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "stackav": {
+   "name": "Stack AV",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "step": {
+   "name": "Step",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "stitchfix": {
+   "name": "Stitch Fix",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "striim": {
+   "name": "Striim",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "stripe": {
+   "name": "Stripe",
+   "dates": [
+    "2026-10-01",
+    "2026-10-03"
+   ],
+   "count": 2
+  },
+  "strivehealth": {
+   "name": "Strive Health",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "synchrony": {
+   "name": "Synchrony",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "synerg": {
+   "name": "Syner-G",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "tanium": {
+   "name": "Tanium",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "taskrabbit": {
+   "name": "Taskrabbit",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "teikametrics": {
+   "name": "Teikametrics",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "tensordyne": {
+   "name": "Tensordyne",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "tenstorrent": {
+   "name": "Tenstorrent",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "thefarmersdog": {
+   "name": "The Farmer's Dog",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "thenewyorktimes": {
+   "name": "The New York Times",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "thenewsliteracyproject": {
+   "name": "The News Literacy Project",
+   "dates": [
+    "2026-09-08"
+   ],
+   "count": 1
+  },
+  "thorn": {
+   "name": "Thorn",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "thrivemarket": {
+   "name": "Thrive Market",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "toast": {
+   "name": "Toast",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "togetherai": {
+   "name": "Together AI",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "turing": {
+   "name": "Turing",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "turnkey": {
+   "name": "Turnkey",
+   "dates": [
+    "2026-09-29",
+    "2026-10-01"
+   ],
+   "count": 2
+  },
+  "twilio": {
+   "name": "Twilio",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "twitch": {
+   "name": "Twitch",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "typeform": {
+   "name": "Typeform",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "unconventional": {
+   "name": "Unconventional",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "unitedmasters": {
+   "name": "UnitedMasters",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "unity": {
+   "name": "Unity",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "upbound": {
+   "name": "Upbound",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "upboundjobposting": {
+   "name": "Upbound - Job Posting (Greenhouse alias)",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "upstart": {
+   "name": "Upstart",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "veeamsoftware": {
+   "name": "Veeam Software",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "venn": {
+   "name": "Venn",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "vercel": {
+   "name": "Vercel",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "verkada": {
+   "name": "Verkada",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "via": {
+   "name": "Via",
+   "dates": [
+    "2026-10-02"
+   ],
+   "count": 1
+  },
+  "virbiotechnology": {
+   "name": "Vir Biotechnology",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "visa": {
+   "name": "Visa",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "voyagertechnologies": {
+   "name": "Voyager Technologies",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "waymark": {
+   "name": "Waymark",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "waymo": {
+   "name": "Waymo",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "wayve": {
+   "name": "Wayve",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "welbehealth": {
+   "name": "WelbeHealth",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "wonderschool": {
+   "name": "Wonderschool",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "workstream": {
+   "name": "Workstream",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "x": {
+   "name": "X",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "xpeng": {
+   "name": "XPENG",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "yahoo": {
+   "name": "Yahoo",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "yipitdata": {
+   "name": "YipitData",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "yugabytedb": {
+   "name": "YugabyteDB",
+   "dates": [
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "count": 2
+  },
+  "zenbusiness": {
+   "name": "ZenBusiness",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "zetaglobal": {
+   "name": "Zeta Global",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "zip": {
+   "name": "Zip",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "zipco": {
+   "name": "Zip Co Limited (Greenhouse board name for Zip)",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "ziprecruiter": {
+   "name": "ZipRecruiter",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "zipline": {
+   "name": "Zipline",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  },
+  "zocdoc": {
+   "name": "Zocdoc",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "zoneco": {
+   "name": "Zone & Co",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "zone": {
+   "name": "Zone",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "zoominfo": {
+   "name": "ZoomInfo",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "count": 3
+  },
+  "zoominfotechnologies": {
+   "name": "ZoomInfo Technologies LLC",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "count": 3
+  },
+  "zscaler": {
+   "name": "Zscaler",
+   "dates": [
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "count": 2
+  },
+  "elend": {
+   "name": "eLEND",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "ifit": {
+   "name": "iFIT",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "itradenetwork": {
+   "name": "iTradeNetwork",
+   "dates": [
+    "2026-09-29"
+   ],
+   "count": 1
+  },
+  "insightsoftware": {
+   "name": "insightsoftware",
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1
+  },
+  "phdata": {
+   "name": "phData",
+   "dates": [
+    "2026-09-30"
+   ],
+   "count": 1
+  },
+  "teamlfg": {
+   "name": "teamLFG",
+   "dates": [
+    "2026-10-03"
+   ],
+   "count": 1
+  }
+ }
+}
