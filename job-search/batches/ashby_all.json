@@ -1,6 +1,26 @@
 [
  {
   "ats": "ashby",
+  "company": "Temporal Technologies",
+  "title": "Staff Software Engineer, Replication Foundations",
+  "url": "https://jobs.ashbyhq.com/temporal/dc4021c5-b1d0-49a8-8342-6c68969192b5",
+  "tag": "temporal_technolog_staff_software_engineer_re",
+  "loc": "Seattle, Washington; United States; Remote",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Finch",
+  "title": "Member of Technical Staff",
+  "url": "https://jobs.ashbyhq.com/finch-legal/4b300ee1-bfb0-4c90-b88a-3c7d513e7c06",
+  "tag": "finch_member_of_technical_staff",
+  "loc": "New York, New York; Hybrid",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "company": "planted",
   "title": "VP Software Engineering",
   "url": "https://jobs.ashbyhq.com/planted/02da7869-3abb-4cfb-8891-79620c6709a1",
