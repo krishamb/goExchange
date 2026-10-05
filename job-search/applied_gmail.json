@@ -3399,6 +3399,126 @@
    ],
    "count": 1,
    "note": "user-confirmed applied"
+  },
+  "minio": {
+   "name": "minio",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "sb": {
+   "name": "sb",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "pacvue": {
+   "name": "pacvue",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "bankrate": {
+   "name": "bankrate",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "billiontoone": {
+   "name": "billiontoone",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "mochi": {
+   "name": "mochi",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "mochihealth": {
+   "name": "mochi",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "amperesand": {
+   "name": "amperesand",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "astera": {
+   "name": "astera",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "asteralabs": {
+   "name": "astera",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "on": {
+   "name": "on",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "onenergy": {
+   "name": "on",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "synack": {
+   "name": "synack",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "roku": {
+   "name": "roku",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
+  },
+  "8thlightrebuild": {
+   "name": "8thlight",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "cloud-applied today"
   }
  }
 }
