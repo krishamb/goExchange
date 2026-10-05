@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.04.3
+// @version      2026.10.05.1
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -449,7 +449,7 @@ async function fillForm(opts = {}) {
 
 // ---------------- submit (batch mode only, after the applicant confirmed the batch) ----------------
 const OK_RX = /thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was |is )?(successfully )?(submitted|received|sent|complete)|we('ve| have) received your application|successfully submitted|you're all set/i;
-const SPAM_RX = /possible spam|flagged as (possible )?spam|pause (your )?(browser extensions|ad ?blockers)|different (network )?connection|unusual activity|could not verify|verify (that )?you are (a )?human/i;
+const SPAM_RX = /possible spam|flagged as (possible )?spam|pause (your )?(browser extensions|ad ?blockers)|different (network )?connection|unusual activity|could not verify|verify (that )?you are (a )?human|submission (is |currently )?unavailable|application submission unavailable|temporarily unavailable|too many (requests|submissions)|try again (later|in a)/i;
 function captchaChallenge() {
   return [...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"], iframe[src*="hcaptcha"], iframe[title*="challenge" i]')].some(f => { const r = f.getBoundingClientRect(); return r.width > 50 && r.height > 50 && getComputedStyle(f).visibility !== 'hidden'; });
 }
@@ -581,7 +581,20 @@ async function batchStep(q) {
   q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
   if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
   S.set(Q_KEY, q);
-  await sleep(2000);
+  // pace: after an actual submission, wait a random 60-110 s before the next job so Ashby does not
+  // rate-limit ("application submission unavailable"). No wait for jobs that were not submitted.
+  const didSubmit = res.status === 'submitted' || res.status === 'blocked';
+  if (didSubmit && !q.stopped && q.i + 1 < q.items.length) {
+    let skip = false;
+    buttons([['Skip the wait, next now', () => { skip = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skip = true; }]]);
+    const wait = 60 + Math.floor(Math.random() * 51);   // 60-110 s between submissions
+    for (let s = wait; s > 0 && !skip; s--) {
+      status(`${res.status === 'submitted' ? '✓ Submitted' : '⚠ Ashby blocked'} ${item.c} - ${item.t}.\nSpacing submissions so Ashby does not rate-limit: next application in ${s}s…\n(${q.i + 1} of ${q.items.length} done)`);
+      await sleep(1000);
+    }
+  } else {
+    await sleep(1500);
+  }
   advance(q);
   return true;
 }
