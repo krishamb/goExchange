@@ -92,12 +92,10 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 <h1>Ashby Click Run — {len(rows)} live, never-applied roles</h1>
 <div id="prog"></div>
 <div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
-<div class="box"><b>Apply to all — one click, hands-free:</b><br>
+<div class="box"><b>Apply to all — one click, hands-free and paced:</b><br>
 <a class="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
-It opens one tab, confirms once, then fills and submits each role on its own, moving to the next after Ashby confirms. It submits only forms every required question is answered for, pauses if a role shows a captcha, and stops if Ashby blocks two in a row — the rest stay as links below. Leave the tab in front; you don't have to click again.</div>
-<div class="box"><b>If Start stalls — fire waves instead (most reliable):</b> each button below opens that wave of roles as background tabs; every tab fills AND submits itself, no chaining. Do one wave, glance at the tabs, close them, do the next.<br>
-<span id="waves"></span>
-<br><span style="color:var(--mut);font-size:13px">Or Apply any single row below — it opens one tab that applies itself. (If Chrome asks, allow pop-ups for this page so a wave can open its tabs.)</span></div>
+It opens <b>one tab</b>, confirms once, then fills and submits each role on its own — and <b>waits a random 60–110 seconds between submissions</b> so Ashby never rate-limits you ("application submission unavailable"). It pauses if a role shows a captcha and stops if Ashby blocks two in a row. Leave the tab in front; you don't click again. The whole queue takes a few hours — that spacing is deliberate and is what keeps submissions going through.</div>
+<div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
 const K='akf_clickrun_v1';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
@@ -109,19 +107,6 @@ function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
 function mark(i){{st[i]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.i]=b.checked?1:0;save();paint()}}));
 links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.i),800)}}));
-// wave buttons: open the next N not-yet-done rows as self-submitting background tabs
-const WAVE=10;
-function buildWaves(){{
-  const todo=links.filter(a=>!st[a.dataset.i]);
-  const w=document.getElementById('waves'); w.innerHTML='';
-  if(!todo.length){{w.textContent='All rows marked done.';return;}}
-  const n=Math.min(WAVE,todo.length);
-  const b=document.createElement('button'); b.className='start'; b.style.fontSize='15px'; b.style.padding='10px 18px';
-  b.textContent='▶ Apply next '+n+' ('+todo.length+' left)';
-  b.onclick=()=>{{todo.slice(0,WAVE).forEach((a,k)=>{{setTimeout(()=>{{window.open(a.href,'_blank');mark(a.dataset.i);}},k*600);}});setTimeout(buildWaves,n*600+400);}};
-  w.appendChild(b);
-}}
-buildWaves();
 paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
