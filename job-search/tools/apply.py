@@ -639,6 +639,7 @@ CHOICE_RULES=[
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|(worked|employed|interviewed|applied|contracted|consulted) .{0,60}in the past|in the past .{0,40}(worked|employed|interviewed|applied)", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
+ (r"professional engineer \(pe\)|professional engineer licens|\bpe licens|licensed professional engineer|fundamentals of engineering|\bfe exam\b|engineer[- ]in[- ]training", ["No","no","None"]),   # applicant holds no PE/FE license -> No
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
@@ -1502,6 +1503,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if _req or not re.search(r"\b(link|url|website|github|portfolio|profile|handle|twitter|linkedin)\b|^\s*if (yes|so|applicable|other)\b|anything else|additional (info|comments?|notes?|details)|cover letter|message (to|for)|note (to|for)",key,re.I):
                             val=tech_answer(key)
                             if val: report.setdefault("tech_fallback" if _req else "tech_fallback_optional",[]).append(key[:120])
+                    if val is None and await is_required(h) and not (await h.input_value()).strip():
+                        _k=key.lower()
+                        _hc=re.search(r"type\s+[\"']?([A-Za-z0-9]{2,20})[\"']?\s*(?:below|here|in the box|to (?:confirm|verify|proceed)|$)",key,re.I)
+                        if _hc and re.search(r"real person|not a robot|prove you|human|verify you are|type the word",_k):
+                            val=_hc.group(1)                       # anti-bot check: type the exact required word (e.g. "Real")
+                        elif not PERSONAL_Q.search(_k) and re.search(r"\bwhy\b|describe|tell us|what (makes|draws|interests|excites|motivat)|how (do|would|have) you|motivat|interest you|passion|about (this|the|our) (role|company|team|mission|product)|most (proud|excited)|anything (else|you)",_k):
+                            val=("I'm a hands-on engineering leader - CTO and co-founder of Hyperion AI, and formerly Chief Architect at Yahoo Finance leading 75+ engineers on a platform serving about 40M daily users - who still writes critical-path code in Python, Rust, Go and C++. I build AI, platform and data-intensive systems where performance, correctness and trust matter, and I would bring that mix of architecture and engineering leadership to this role.")
+                            report.setdefault("generic_fallback",[]).append(key[:100])
                     cur=await h.input_value()
                     if cur.strip() and await h.evaluate("(el)=>el.tagName==='TEXTAREA'") and not re.search(r"cover letter",lab,re.I): continue   # keep a note already written (e.g. Wellfound)
                     if val:
