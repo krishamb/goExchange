@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.4
+// @version      2026.10.05.5
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -568,12 +568,14 @@ function report(q, item, res) {
 async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
-  status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
   if (OK_RX.test(document.body.innerText || '') && !entries().length) {   // already-submitted confirmation reloaded under this job's URL: record and move on, do not re-fill
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || [''])[0], answered: -1 });
-    q.blocks = 0; S.set(Q_KEY, q); await paceAndAdvance(q, item, true); return true;
+    q.blocks = 0; S.set(Q_KEY, q); advance(q); return true;
   }
+  await paceGate(q);                 // wait a random 1–2 min before every application after the first
+  if (q.stopped) return true;
+  status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   const rep = await fillForm({ prior: item.p || [] });
   let res;
   if (q.stopped) return true;
@@ -598,26 +600,25 @@ async function batchStep(q) {
   q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
   if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
   S.set(Q_KEY, q);
-  await paceAndAdvance(q, item, res.status === 'submitted' || res.status === 'blocked');
+  advance(q);   // the 1–2 min pace is applied at the NEXT application's turn (see paceGate)
   return true;
 }
-// pace: after an actual submission, wait a random 60-110 s before the next job so Ashby does not
-// rate-limit ("application submission unavailable"). Used by every path that advances after a submit
-// (inline confirmation, a confirmation-page reload, or the boot recovery) so the spacing always applies.
-async function paceAndAdvance(q, item, didSubmit) {
+// pace: wait a random 1–2 minutes BEFORE filling every application after the first, so Ashby never
+// rate-limits ("application submission unavailable"). Gated on the queue position (q.pacedI), not on
+// detecting the previous submission — so the spacing ALWAYS applies, no matter how this job was
+// reached (a fresh navigation, a confirmation-page reload, or boot recovery).
+async function paceGate(q) {
   q = S.get(Q_KEY, q) || q;
-  if (didSubmit && !q.stopped && q.i + 1 < q.items.length) {
-    let skip = false;
-    buttons([['Skip the wait, next now', () => { skip = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skip = true; }]]);
-    const wait = 60 + Math.floor(Math.random() * 51);   // 60-110 s between submissions
-    for (let s = wait; s > 0 && !skip; s--) {
-      status(`✓ Submitted ${item ? item.c + ' - ' + item.t : ''}.\nSpacing submissions so Ashby does not rate-limit: next application in ${s}s…\n(${q.i + 1} of ${q.items.length} done)`);
-      await sleep(1000);
-    }
-  } else {
-    await sleep(1500);
+  if (q.i <= 0 || q.pacedI === q.i || q.stopped) return;   // first job applies immediately; pace once per later job
+  let skip = false;
+  buttons([['Skip the wait, fill now', () => { skip = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skip = true; }]]);
+  const item = q.items[q.i];
+  const wait = 60 + Math.floor(Math.random() * 61);   // 60–120 s (1–2 min) between applications
+  for (let s = wait; s > 0 && !skip; s--) {
+    status(`Pacing so Ashby does not rate-limit.\nNext application in ${s}s…  (${q.i + 1} of ${q.items.length})\n${item ? item.c + ' - ' + item.t : ''}`);
+    await sleep(1000);
   }
-  advance(q);
+  q.pacedI = q.i; S.set(Q_KEY, q);
 }
 function advance(q) {
   q = S.get(Q_KEY, q);
@@ -713,7 +714,7 @@ async function boot() {
       q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
       if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
       S.set(Q_KEY, q);
-      await paceAndAdvance(q, item, res.status === 'submitted' || res.status === 'blocked'); return;
+      advance(q); return;   // the next application's turn applies the 1–2 min pace (see paceGate)
     }
   }
   if (q && q.done) { ui(); finish(q); }
