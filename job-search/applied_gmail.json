@@ -2598,6 +2598,20 @@
     "2026-10-04"
    ],
    "count": 1
+  },
+  "instacart": {
+   "name": "Instacart",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "seatgeek": {
+   "name": "SeatGeek",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
   }
  }
 }
