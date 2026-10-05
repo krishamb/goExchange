@@ -1,6 +1,16 @@
 [
  {
   "ats": "ashby",
+  "company": "HiringCafe",
+  "title": "Founding Backend / Infra Engineer",
+  "url": "https://jobs.ashbyhq.com/hiring-cafe/13c90281-2da8-4459-9eab-f68dbe6cdf59",
+  "tag": "hiringcafe_founding_backend_infra_eng",
+  "loc": "Cupertino, CA (SF Bay Area)",
+  "posted_ts": null,
+  "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
   "company": "legora",
   "title": "Staff Site Reliability Engineer ",
   "url": "https://jobs.ashbyhq.com/legora/c7a8d50e-c7f9-4a65-984d-dfa9239335e7",
