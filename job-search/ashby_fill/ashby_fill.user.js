@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.2
+// @version      2026.10.05.3
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -555,7 +555,7 @@ async function batchStep(q) {
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
   if (OK_RX.test(document.body.innerText || '') && !entries().length) {   // already-submitted confirmation reloaded under this job's URL: record and move on, do not re-fill
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || [''])[0], answered: -1 });
-    q.blocks = 0; S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+    q.blocks = 0; S.set(Q_KEY, q); await paceAndAdvance(q, item, true); return true;
   }
   const rep = await fillForm({ prior: item.p || [] });
   let res;
@@ -581,22 +581,26 @@ async function batchStep(q) {
   q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
   if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
   S.set(Q_KEY, q);
-  // pace: after an actual submission, wait a random 60-110 s before the next job so Ashby does not
-  // rate-limit ("application submission unavailable"). No wait for jobs that were not submitted.
-  const didSubmit = res.status === 'submitted' || res.status === 'blocked';
+  await paceAndAdvance(q, item, res.status === 'submitted' || res.status === 'blocked');
+  return true;
+}
+// pace: after an actual submission, wait a random 60-110 s before the next job so Ashby does not
+// rate-limit ("application submission unavailable"). Used by every path that advances after a submit
+// (inline confirmation, a confirmation-page reload, or the boot recovery) so the spacing always applies.
+async function paceAndAdvance(q, item, didSubmit) {
+  q = S.get(Q_KEY, q) || q;
   if (didSubmit && !q.stopped && q.i + 1 < q.items.length) {
     let skip = false;
     buttons([['Skip the wait, next now', () => { skip = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skip = true; }]]);
     const wait = 60 + Math.floor(Math.random() * 51);   // 60-110 s between submissions
     for (let s = wait; s > 0 && !skip; s--) {
-      status(`${res.status === 'submitted' ? '✓ Submitted' : '⚠ Ashby blocked'} ${item.c} - ${item.t}.\nSpacing submissions so Ashby does not rate-limit: next application in ${s}s…\n(${q.i + 1} of ${q.items.length} done)`);
+      status(`✓ Submitted ${item ? item.c + ' - ' + item.t : ''}.\nSpacing submissions so Ashby does not rate-limit: next application in ${s}s…\n(${q.i + 1} of ${q.items.length} done)`);
       await sleep(1000);
     }
   } else {
     await sleep(1500);
   }
   advance(q);
-  return true;
 }
 function advance(q) {
   q = S.get(Q_KEY, q);
@@ -692,7 +696,7 @@ async function boot() {
       q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
       if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
       S.set(Q_KEY, q);
-      await sleep(1200); advance(q); return;
+      await paceAndAdvance(q, item, res.status === 'submitted' || res.status === 'blocked'); return;
     }
   }
   if (q && q.done) { ui(); finish(q); }
