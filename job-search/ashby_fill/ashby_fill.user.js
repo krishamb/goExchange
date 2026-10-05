@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.1
+// @version      2026.10.05.2
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -625,6 +625,18 @@ function readHashQueue() {
   try {
     const json = decodeURIComponent(escape(atob(m[1].replace(/-/g, '+').replace(/_/g, '/'))));
     const d = JSON.parse(json);
+    if (d.me && typeof d.me === 'object') {   // the local page carries the applicant's email/phone so they autofill without the panel
+      const cur = S.get('me', {});
+      if (d.me.email) cur.email = String(d.me.email);
+      if (d.me.phone) cur.phone = String(d.me.phone);
+      S.set('me', cur); S.set('autofill', true);
+    }
+    if (d.resumes && typeof d.resumes === 'object') {   // a one-time setup page can embed the resumes/cover so nothing is uploaded by hand
+      for (const [k, slot] of [['main', 'resume_main'], ['exec', 'resume_exec'], ['cover', 'cover']]) {
+        const f = d.resumes[k];
+        if (f && f.b64 && f.name && !S.get(slot)) S.set(slot, { name: String(f.name), type: String(f.type || 'application/pdf'), b64: String(f.b64) });
+      }
+    }
     const items = (d.items || []).filter(x => x && /^https:\/\/jobs\.ashbyhq\.com\/[^/]+\/[0-9a-f-]{36}/i.test(x.u)).map(x => Object.assign(x, { id: x.u.match(/([0-9a-f-]{36})/i)[1].toLowerCase() }));
     if (!items.length) return null;
     return { name: String(d.name || 'batch').slice(0, 60), auto: !!d.auto, items, i: 0, results: {} };

@@ -40,10 +40,17 @@ for j in sorted(queue, key=lambda x: -(x.get("posted_ts") or 0)):
 
 def appurl(u): return re.sub(r"/application/?$", "", (u or "").rstrip("/")) + "/application"
 
+# applicant contact for autofill — carried only in the LOCALLY generated page (its #akf hash),
+# never referenced by the public userscript. The filler reads it into its own storage so email
+# and phone fill without the one-time panel step.
+AUTOFILL_EMAIL = "ambarishkrishnamurthy@gmail.com"
+AUTOFILL_PHONE = "650 334 6892"
+
 def akf_hash(items, auto):
     """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
     its hash regex would truncate). Pad the JSON so the byte length is a multiple of 3."""
     payload = {"name": "Ashby queue", "auto": auto, "pad": "",
+               "me": {"email": AUTOFILL_EMAIL, "phone": AUTOFILL_PHONE},
                "items": [{"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in items]}
     js = json.dumps(payload, ensure_ascii=False)
     extra = (3 - (len(js.encode("utf-8")) % 3)) % 3
