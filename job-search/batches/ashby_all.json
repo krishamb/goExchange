@@ -1,46 +1,6 @@
 [
  {
   "ats": "ashby",
-  "company": "HiringCafe",
-  "title": "Founding Backend / Infra Engineer",
-  "url": "https://jobs.ashbyhq.com/hiring-cafe/13c90281-2da8-4459-9eab-f68dbe6cdf59",
-  "tag": "hiringcafe_founding_backend_infra_eng",
-  "loc": "Cupertino, CA (SF Bay Area)",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "legora",
-  "title": "Staff Site Reliability Engineer ",
-  "url": "https://jobs.ashbyhq.com/legora/c7a8d50e-c7f9-4a65-984d-dfa9239335e7",
-  "tag": "legora_staff_site_reliability_eng",
-  "loc": "New York NY",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "beaconai",
-  "title": "Staff Software Engineer, Artificial Intelligence/LLM ",
-  "url": "https://jobs.ashbyhq.com/beaconai/28c6c5cb-e9db-4bea-a4ea-815b5616b590",
-  "tag": "beaconai_staff_software_engineer_ar",
-  "loc": "San Carlos CA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "sentilink",
-  "title": "Staff Software Engineer, Data Platform",
-  "url": "https://jobs.ashbyhq.com/sentilink/9bc3de0b-1638-4310-8df1-2dd965f0bdf4",
-  "tag": "sentilink_staff_software_engineer_da",
-  "loc": "San Francisco CA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "scribdinc",
   "title": "Staff Software Engineer (Backend) - Everand Core",
   "url": "https://jobs.ashbyhq.com/scribdinc/c8fbcc07-e25a-4aa1-8208-306659febb36",

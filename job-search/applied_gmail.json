@@ -2668,6 +2668,34 @@
     "2026-10-05"
    ],
    "count": 1
+  },
+  "hiringcafe": {
+   "name": "HiringCafe (applied via filler)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "legora": {
+   "name": "Legora (applied via filler)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "beaconai": {
+   "name": "BeaconAI (applied via filler)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "sentilink": {
+   "name": "SentiLink (applied via filler)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
   }
  }
 }
