@@ -2759,6 +2759,646 @@
     "2026-10-05"
    ],
    "count": 1
+  },
+  "blitzy": {
+   "name": "blitzy",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "reflection": {
+   "name": "reflection",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "footprint": {
+   "name": "footprint",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "assorthealth": {
+   "name": "assorthealth",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "fonziai": {
+   "name": "fonziai",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "lightsage": {
+   "name": "lightsage",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "osmo": {
+   "name": "osmo",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "etched": {
+   "name": "etched",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "temporaltechnologies": {
+   "name": "Temporal Technologies",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "finch": {
+   "name": "Finch",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "planted": {
+   "name": "planted",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "patreon": {
+   "name": "patreon",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "crusoe": {
+   "name": "crusoe",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "hcompany": {
+   "name": "hcompany",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "netic": {
+   "name": "Netic",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "nekohealth": {
+   "name": "nekohealth",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "edisonscientific": {
+   "name": "Edison Scientific",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "sentry": {
+   "name": "sentry",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "strava": {
+   "name": "strava",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "flowengineering": {
+   "name": "flowengineering",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "pebl": {
+   "name": "pebl",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "suno": {
+   "name": "suno",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "latchbio": {
+   "name": "LatchBio",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "davidai": {
+   "name": "David AI",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "openartai": {
+   "name": "OpenArt AI",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "probook": {
+   "name": "Probook",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "whatnot": {
+   "name": "Whatnot",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "cursor": {
+   "name": "cursor",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "datasnipper": {
+   "name": "datasnipper",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "savvywealth": {
+   "name": "Savvy-Wealth",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "withclutch": {
+   "name": "withclutch",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "workos": {
+   "name": "Workos",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "gamechanger": {
+   "name": "GameChanger",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "ddn": {
+   "name": "Ddn",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "inferact": {
+   "name": "Inferact",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "plantedsolar": {
+   "name": "Plantedsolar",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "extremenetworks": {
+   "name": "Extremenetworks",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "docker": {
+   "name": "Docker",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "wisprflow": {
+   "name": "Wispr Flow",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "mashgin": {
+   "name": "Mashgin",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "glimpse": {
+   "name": "Glimpse",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "glacier": {
+   "name": "Glacier",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "whirlai": {
+   "name": "Whirlai",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "scopelabs": {
+   "name": "Scope Labs",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "easehealth": {
+   "name": "Ease Health",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "litmus": {
+   "name": "Litmus",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "tensorwave": {
+   "name": "Tensorwave",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "bastion": {
+   "name": "Bastion",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "mavenagi": {
+   "name": "Maven Agi",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "deepgram": {
+   "name": "Deepgram",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "kayak": {
+   "name": "Kayak",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "bjakcareer": {
+   "name": "Bjakcareer",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "demandbase": {
+   "name": "Demandbase",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "qualifiedhealthpbc": {
+   "name": "Qualified Health Pbc",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "openloophealth": {
+   "name": "OpenLoop Health",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "iambictherapeutics": {
+   "name": "Iambic Therapeutics",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "campfire": {
+   "name": "Campfire",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "meadow": {
+   "name": "Meadow",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "webai": {
+   "name": "Webai",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "solace": {
+   "name": "Solace",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "brainco": {
+   "name": "Brainco",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "harvey": {
+   "name": "Harvey",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "turbopuffer": {
+   "name": "Turbopuffer",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "montecarlo": {
+   "name": "Monte Carlo",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "dmatrix": {
+   "name": "d-Matrix",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "rivianandvwtech": {
+   "name": "Rivian and VW Tech",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "radai": {
+   "name": "Radai",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "laurel": {
+   "name": "Laurel",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "plaid": {
+   "name": "Plaid",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "bernard": {
+   "name": "Bernard",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "givebutter": {
+   "name": "Givebutter",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "siftstack": {
+   "name": "SiftStack",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "councilcapital": {
+   "name": "Council Capital",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "cerebras": {
+   "name": "Cerebras",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "helius": {
+   "name": "Helius",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "argonai": {
+   "name": "Argon Ai",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "twenty": {
+   "name": "Twenty",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "confido": {
+   "name": "Confido",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "fernstone": {
+   "name": "Fernstone",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "prior Ashby queue (applied-before per user)"
+  },
+  "decagon": {
+   "name": "Decagon",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "user-confirmed applied"
   }
  }
 }
