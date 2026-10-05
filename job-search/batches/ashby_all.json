@@ -128,5 +128,25 @@
   "loc": "US",
   "posted_ts": null,
   "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "paraform",
+  "title": "Technical Lead Manager, AI Platform",
+  "url": "https://jobs.ashbyhq.com/paraform/301b3163-a3fb-40e1-bfb1-fcd992046e0d",
+  "tag": "paraform_technical_lead_manager_ai_platform",
+  "loc": "San Francisco",
+  "posted_ts": 1791214849.218,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "camunda",
+  "title": "Senior Forward Deployed Engineer - NA",
+  "url": "https://jobs.ashbyhq.com/camunda/61f4461d-0d1f-4fc0-8842-11c4325595fa",
+  "tag": "camunda_senior_forward_deployed_engineer_na",
+  "loc": "Remote",
+  "posted_ts": 1791219007.315,
+  "email": "ambarishkrishnamurthy@gmail.com"
  }
 ]
