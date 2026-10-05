@@ -2612,6 +2612,34 @@
     "2026-10-05"
    ],
    "count": 1
+  },
+  "1password": {
+   "name": "1Password (applied; do-not-reapply)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "onepassword": {
+   "name": "1Password (applied; do-not-reapply)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "vanta": {
+   "name": "Vanta (applied; do-not-reapply)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "pariveda": {
+   "name": "Pariveda (applied; do-not-reapply)",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
   }
  }
 }
