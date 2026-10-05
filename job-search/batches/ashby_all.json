@@ -808,5 +808,105 @@
   "loc": "New York City",
   "posted_ts": 1790485036,
   "email": "amba_rish@hotmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "kayak",
+  "title": "Staff Software Engineer, Meta AI",
+  "url": "https://jobs.ashbyhq.com/kayak/fd8e3038-dde9-40ed-9dba-6b3b49ecb7d3",
+  "tag": "kayak_staff_software_engineer_meta_ai",
+  "loc": "Concord Office (Remote)",
+  "posted_ts": 1790946569.535,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "inferact",
+  "title": "Member of Technical Staff, Forward Deployed Engineer",
+  "url": "https://jobs.ashbyhq.com/inferact/b127864f-5c71-4c96-90ce-cb20c57391a9",
+  "tag": "inferact_member_of_technical_staff_forward_d",
+  "loc": "San Francisco",
+  "posted_ts": 1790958376.571,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "onoshealth",
+  "title": "Staff Software Engineer (AI)",
+  "url": "https://jobs.ashbyhq.com/onoshealth/c1930f55-3d31-4634-9786-3c466f36a003",
+  "tag": "onoshealth_staff_software_engineer_ai",
+  "loc": "San Francisco (Remote)",
+  "posted_ts": 1790881950.309,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "ddn",
+  "title": "Senior Software Engineering Manager \u2013 KV Cache Platform",
+  "url": "https://jobs.ashbyhq.com/ddn/08207657-a686-45b4-929e-d26d00879642",
+  "tag": "ddn_senior_software_engineering_manager_kv_c",
+  "loc": "Santa Clara Colocation (Remote)",
+  "posted_ts": 1790885706.676,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "ddn",
+  "title": "Staff Engineer, Lustre",
+  "url": "https://jobs.ashbyhq.com/ddn/ad1bf0c9-50cf-41c6-b361-3a36a9c28125",
+  "tag": "ddn_staff_engineer_lustre",
+  "loc": "Santa Clara Office (Remote)",
+  "posted_ts": 1790884036.384,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "vibe",
+  "title": "Staff or Senior Data Platform Engineer - Data Infrastructure",
+  "url": "https://jobs.ashbyhq.com/vibe/8284bc22-6569-474f-8270-2f3a7ef4009d",
+  "tag": "vibe_staff_or_senior_data_platform_engineer_",
+  "loc": "Paris / New York (Remote)",
+  "posted_ts": 1790886103.288,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "scope-labs",
+  "title": "AI Engineer - NY",
+  "url": "https://jobs.ashbyhq.com/scope-labs/601d4f78-cb99-4ab7-9391-c8a9b6dafe75",
+  "tag": "scope_labs_ai_engineer_ny",
+  "loc": "New York City (Remote)",
+  "posted_ts": 1790823247.851,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "rula",
+  "title": "Staff Software Engineer - Referrals & Conversions (Remote)",
+  "url": "https://jobs.ashbyhq.com/rula/2c32a914-28de-4c32-84d9-89f71a5a39f2",
+  "tag": "rula_staff_software_engineer_referrals_conve",
+  "loc": "Remote - United States (Remote)",
+  "posted_ts": 1790893500.926,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "gamechanger",
+  "title": "Senior Engineering Manager, Basketball Coverage",
+  "url": "https://jobs.ashbyhq.com/gamechanger/879e394e-5c24-48ea-8370-d7db5893ac37",
+  "tag": "gamechanger_senior_engineering_manager_baske",
+  "loc": "GameChanger Remote - US (Remote)",
+  "posted_ts": 1790785776.869,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "scope-labs",
+  "title": "Forward Deployed Engineer - NY ",
+  "url": "https://jobs.ashbyhq.com/scope-labs/05728ede-c5ec-4ee2-ad1c-1d18ac3d66ee",
+  "tag": "scope_labs_forward_deployed_engineer_ny",
+  "loc": "New York City (Remote)",
+  "posted_ts": 1790694284.463,
+  "email": "ambarishkrishnamurthy@gmail.com"
  }
 ]
