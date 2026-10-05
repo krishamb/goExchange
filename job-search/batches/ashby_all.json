@@ -148,5 +148,545 @@
   "loc": "Remote",
   "posted_ts": 1791219007.315,
   "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Periodic Labs",
+  "title": "ML Systems Engineer",
+  "url": "https://jobs.ashbyhq.com/periodic-labs/d9180228-c113-4d5f-a4d6-793994e50b7c",
+  "tag": "periodic_labs_ml_systems_engineer",
+  "loc": "Menlo Park, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "CuspAI",
+  "title": "Applied AI/ML Engineer (Agents)",
+  "url": "https://jobs.ashbyhq.com/cuspai/916e1489-6624-4a87-90e6-218dc7ebb6fb",
+  "tag": "cuspai_applied_ai_ml_engineer_agents",
+  "loc": "Amsterdam, NL Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "SandboxAQ",
+  "title": "Staff Machine Learning Engineer, AI Generation Engine",
+  "url": "https://jobs.ashbyhq.com/sandboxaq/f760ffd1-3795-4fb1-bb33-8478d4bab7f6",
+  "tag": "sandboxaq_staff_machine_learning_engineer_ai_g",
+  "loc": "United States Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "SandboxAQ",
+  "title": "Senior Staff Software Engineer, Medical Devices",
+  "url": "https://jobs.ashbyhq.com/sandboxaq/a0140ea3-59b1-48b5-aaef-dfb6ba5cabdb",
+  "tag": "sandboxaq_senior_staff_software_engineer_medic",
+  "loc": "United States Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "SandboxAQ",
+  "title": "Senior Machine Learning Engineer, AI Generation Engine",
+  "url": "https://jobs.ashbyhq.com/sandboxaq/5d096708-36f4-4f94-96b9-59b5e9b88f3f",
+  "tag": "sandboxaq_senior_machine_learning_engineer_ai_",
+  "loc": "United States Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "XDOF",
+  "title": "Member of Technical Staff, Robotics",
+  "url": "https://jobs.ashbyhq.com/xdof/77c2c370-3dd7-4997-9d19-746b55b98ff5",
+  "tag": "xdof_member_of_technical_staff_robotics",
+  "loc": "San Mateo On-site",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "XDOF",
+  "title": "Member of Technical Staff, Humanoid Engineer",
+  "url": "https://jobs.ashbyhq.com/xdof/313b9f27-74c1-4c71-844f-4dadecdc6082",
+  "tag": "xdof_member_of_technical_staff_humanoid_engine",
+  "loc": "San Mateo Hybrid Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "XDOF",
+  "title": "Member of Technical Staff, Vision / Language",
+  "url": "https://jobs.ashbyhq.com/xdof/1e7de4e3-094f-4267-876d-2ccb8b2246eb",
+  "tag": "xdof_member_of_technical_staff_vision_language",
+  "loc": "San Mateo Hybrid Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Physical Intelligence",
+  "title": "Robotics Software Engineer",
+  "url": "https://jobs.ashbyhq.com/physicalintelligence/f6bee7a7-57ae-4ec1-9276-ae3bcbdc7327",
+  "tag": "physical_intelligence_robotics_software_engine",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Physical Intelligence",
+  "title": "Forward Deployed Robotics Engineer",
+  "url": "https://jobs.ashbyhq.com/physicalintelligence/567d620f-7600-4e35-9edd-f41ed4db45ce",
+  "tag": "physical_intelligence_forward_deployed_robotic",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Physical Intelligence",
+  "title": "Software Engineer, AI Productivity",
+  "url": "https://jobs.ashbyhq.com/physicalintelligence/7f8397a4-c3cd-45c6-90c7-13c4481f4699",
+  "tag": "physical_intelligence_software_engineer_ai_pro",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Generalist",
+  "title": "Software Engineer: ML Robotics Systems",
+  "url": "https://jobs.ashbyhq.com/generalist/bfdbc2cc-3dda-43d6-963a-d3d763ebf6e5",
+  "tag": "generalist_software_engineer_ml_robotics_syste",
+  "loc": "San Francisco Bay Area (San Mateo) or Boston (Somerville)",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Generalist",
+  "title": "Software Engineer: ML Infra",
+  "url": "https://jobs.ashbyhq.com/generalist/20e8ffcf-0834-48ac-b94f-c1f3d441d6b8",
+  "tag": "generalist_software_engineer_ml_infra",
+  "loc": "San Francisco Bay Area (San Mateo) or Boston (Somerville)",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Generalist",
+  "title": "Software Engineer: ML Optimization",
+  "url": "https://jobs.ashbyhq.com/generalist/2837706a-640c-41dc-a061-b17c6acea971",
+  "tag": "generalist_software_engineer_ml_optimization",
+  "loc": "San Francisco Bay Area (San Mateo) or Boston (Somerville)",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Humanoid",
+  "title": "Senior Platform Software Engineer",
+  "url": "https://jobs.ashbyhq.com/humanoid/bf4c34c3-541d-4497-8aa3-9fae8f82e396",
+  "tag": "humanoid_senior_platform_software_engineer",
+  "loc": "US, Boston, MA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Humanoid",
+  "title": "Senior Staff Software Engineer - Secure Manufacturing",
+  "url": "https://jobs.ashbyhq.com/humanoid/08e53cbd-9bc8-4d36-8228-2e5fe08ece4e",
+  "tag": "humanoid_senior_staff_software_engineer_secure",
+  "loc": "US, San Diego, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Humanoid",
+  "title": "Robotics Controls Engineer",
+  "url": "https://jobs.ashbyhq.com/humanoid/fd2e5af4-9583-426c-820c-e968b4a06fec",
+  "tag": "humanoid_robotics_controls_engineer",
+  "loc": "US, Boston, MA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Rhoda AI",
+  "title": "Research Member of Technical Staff- Training Systems",
+  "url": "https://jobs.ashbyhq.com/rhoda-ai/643d697d-45c4-4505-8967-433df7873134",
+  "tag": "rhoda_ai_research_member_of_technical_staff_tr",
+  "loc": "Mountain View",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Rhoda AI",
+  "title": "Research Member of Technical Staff- Data Infrastructure",
+  "url": "https://jobs.ashbyhq.com/rhoda-ai/c90321f2-5085-4f99-ac13-0de996ba1dd1",
+  "tag": "rhoda_ai_research_member_of_technical_staff_da",
+  "loc": "Mountain View",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Rhoda AI",
+  "title": "Senior Inference Optimization ML Engineer",
+  "url": "https://jobs.ashbyhq.com/rhoda-ai/5fbe9c15-342b-4d46-b1bf-34d99d2f243c",
+  "tag": "rhoda_ai_senior_inference_optimization_ml_engi",
+  "loc": "Mountain View",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Genesis AI",
+  "title": "ML Compiler & System",
+  "url": "https://jobs.ashbyhq.com/genesis/8604aae5-a89e-4e6f-8f5e-dce2008cc6bc",
+  "tag": "genesis_ai_ml_compiler_system",
+  "loc": "Bay Area",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Genesis AI",
+  "title": "Training / AI Infrastructure",
+  "url": "https://jobs.ashbyhq.com/genesis/d1aa8c84-a8d3-4ddb-a360-444b9cb25975",
+  "tag": "genesis_ai_training_ai_infrastructure",
+  "loc": "Bay Area",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Genesis AI",
+  "title": "Member of Technical Staff, IT",
+  "url": "https://jobs.ashbyhq.com/genesis/5f2b51d4-698c-40b3-858b-f79bd778cd97",
+  "tag": "genesis_ai_member_of_technical_staff_it",
+  "loc": "Bay Area",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Dyna Robotics",
+  "title": "Software Engineer, Data Infra",
+  "url": "https://jobs.ashbyhq.com/dyna-robotics/43dcc186-62b1-4641-9365-3cb9767fc653",
+  "tag": "dyna_robotics_software_engineer_data_infra",
+  "loc": "Redwood City, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Volta",
+  "title": "Platform Engineer",
+  "url": "https://jobs.ashbyhq.com/volta/610cc420-1cd8-401e-92a8-b0c45136a4a9",
+  "tag": "volta_platform_engineer",
+  "loc": "Palo Alto, CA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Runpod",
+  "title": "Engineering Manager - Cloud",
+  "url": "https://jobs.ashbyhq.com/runpod/e80fc6f8-8590-4161-b6b8-c44ace57f2b1",
+  "tag": "runpod_engineering_manager_cloud",
+  "loc": "Remote - USA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Runpod",
+  "title": "Director of Infrastructure Engineering",
+  "url": "https://jobs.ashbyhq.com/runpod/33f23f31-4751-49d8-b6ce-8e26df7104a6",
+  "tag": "runpod_director_of_infrastructure_engineering",
+  "loc": "Remote - USA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Runpod",
+  "title": "Senior ML Systems Engineer, Inference",
+  "url": "https://jobs.ashbyhq.com/runpod/6c67ef7b-ae53-42fd-a1ca-6c635f8f00ff",
+  "tag": "runpod_senior_ml_systems_engineer_inference",
+  "loc": "Remote - USA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Modal",
+  "title": "Member of Technical Staff - Systems",
+  "url": "https://jobs.ashbyhq.com/modal/9b33ebe7-e829-4f03-97ba-5c94dbd7daf6",
+  "tag": "modal_member_of_technical_staff_systems",
+  "loc": "New York",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Modal",
+  "title": "Member of Technical Staff - ML Performance",
+  "url": "https://jobs.ashbyhq.com/modal/af17da5e-23ca-4802-854d-5f0546e1ed32",
+  "tag": "modal_member_of_technical_staff_ml_performance",
+  "loc": "New York",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Modal",
+  "title": "Member of Technical Staff - Product (Backend)",
+  "url": "https://jobs.ashbyhq.com/modal/a4b8b2b6-5d0c-4ba6-9256-b84be84fb79e",
+  "tag": "modal_member_of_technical_staff_product_backen",
+  "loc": "San Francisco",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Andromeda",
+  "title": "Software Engineer - AI Infrastructure",
+  "url": "https://jobs.ashbyhq.com/andromeda/68403563-daff-449c-83cf-ea346c0e1c7d",
+  "tag": "andromeda_software_engineer_ai_infrastructure",
+  "loc": "North America Remote / San Francisco, CA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Andromeda",
+  "title": "General Interest - Experience w/ AI Infrastructure ",
+  "url": "https://jobs.ashbyhq.com/andromeda/25fef440-56c1-433f-8791-6c28500526dc",
+  "tag": "andromeda_general_interest_experience_w_ai_inf",
+  "loc": "Global Remote / San Francisco, CA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "MatX",
+  "title": "Software Engineer, AI Tooling",
+  "url": "https://jobs.ashbyhq.com/matx/4d6a4a63-2430-4ada-86b7-4c17cecad6b5",
+  "tag": "matx_software_engineer_ai_tooling",
+  "loc": "Mountain View",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "MatX",
+  "title": "Infrastructure Engineer, AI Tooling",
+  "url": "https://jobs.ashbyhq.com/matx/f63c692f-297c-4bf1-955d-cc0e808289bf",
+  "tag": "matx_infrastructure_engineer_ai_tooling",
+  "loc": "Mountain View (HQ) or Remote Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lightning AI",
+  "title": "Platform Engineer (Remote)",
+  "url": "https://jobs.ashbyhq.com/lightning/fde1d2b6-99e1-404a-b343-c35b2c40f9ae",
+  "tag": "lightning_ai_platform_engineer_remote",
+  "loc": "Lightning Labs Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lightning AI",
+  "title": "Senior Engineering Manager (Remote)",
+  "url": "https://jobs.ashbyhq.com/lightning/1cb32982-e9b5-400b-9b24-18369a53d63a",
+  "tag": "lightning_ai_senior_engineering_manager_remote",
+  "loc": "Lightning Labs Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lambda",
+  "title": "Senior Platform Engineer - Core Infrastructure",
+  "url": "https://jobs.ashbyhq.com/lambda/22067697-90e0-4a9a-bc08-954ce6796537",
+  "tag": "lambda_senior_platform_engineer_core_infrastru",
+  "loc": "San Francisco Office (Fremont St) Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lambda",
+  "title": "Account CTO",
+  "url": "https://jobs.ashbyhq.com/lambda/4605a295-8303-45be-9ba7-f26af3bae8cd",
+  "tag": "lambda_account_cto",
+  "loc": "Remote, USA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lambda",
+  "title": "Staff Software Engineer - Infrastructure Storage",
+  "url": "https://jobs.ashbyhq.com/lambda/c7ecb434-fdc0-434e-a455-9c200055cda0",
+  "tag": "lambda_staff_software_engineer_infrastructure_",
+  "loc": "San Francisco Office (Fremont St) Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Achira",
+  "title": "Machine Learning Research Engineer (MLRE) - GPUs",
+  "url": "https://jobs.ashbyhq.com/achira/f7893ad8-8da1-4ae3-b56b-151feb17d324",
+  "tag": "achira_machine_learning_research_engineer_mlre",
+  "loc": "San Francisco Office Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Achira",
+  "title": "Machine Learning Research Engineer (MLRE) - Workflows/Systems",
+  "url": "https://jobs.ashbyhq.com/achira/bb70d7b1-6da0-4271-85b6-caec85254dea",
+  "tag": "achira_machine_learning_research_engineer_mlre_2",
+  "loc": "San Francisco Office Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Achira",
+  "title": "Machine Learning Research Engineer (MLRE) - Research",
+  "url": "https://jobs.ashbyhq.com/achira/08b9b6bd-9f8f-4a7d-9fdd-48bb19affe20",
+  "tag": "achira_machine_learning_research_engineer_mlre_2_2",
+  "loc": "San Francisco Office Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Periodic Labs",
+  "title": "Software Engineer ",
+  "url": "https://jobs.ashbyhq.com/periodic-labs/1d6ade4f-ae4c-4bde-baf7-82c401063e42",
+  "tag": "periodic_labs_software_engineer",
+  "loc": "Menlo Park, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Periodic Labs",
+  "title": "Research Engineer, Semiconductor",
+  "url": "https://jobs.ashbyhq.com/periodic-labs/95d290bd-6420-42e8-82a0-f0230722c19c",
+  "tag": "periodic_labs_research_engineer_semiconductor",
+  "loc": "Menlo Park, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Dyna Robotics",
+  "title": "Research Engineer",
+  "url": "https://jobs.ashbyhq.com/dyna-robotics/ec8f09de-ee26-4117-9b41-d317b074c2dc",
+  "tag": "dyna_robotics_research_engineer",
+  "loc": "Redwood City, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Dyna Robotics",
+  "title": "Software Engineer, Applications",
+  "url": "https://jobs.ashbyhq.com/dyna-robotics/bc58be77-e81e-4a39-bdbb-257b8f4f0dfd",
+  "tag": "dyna_robotics_software_engineer_applications",
+  "loc": "Redwood City, CA",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Foundation",
+  "title": "Software Engineering",
+  "url": "https://jobs.ashbyhq.com/foundation/2fffc9a2-7e3a-461c-8bb1-675540024014",
+  "tag": "foundation_software_engineering",
+  "loc": "San Francisco, Boulder, or Austin",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Parasail",
+  "title": "Senior Software Engineer, Distributed Systems",
+  "url": "https://jobs.ashbyhq.com/parasail/ed1dc7fe-031e-40be-b61d-7153aa7a094a",
+  "tag": "parasail_senior_software_engineer_distributed_",
+  "loc": "San Mateo",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Parasail",
+  "title": "Supply Chain & Procurement Lead, GPU Infrastructure",
+  "url": "https://jobs.ashbyhq.com/parasail/ccf76786-daf2-4704-b356-9dc003ee9775",
+  "tag": "parasail_supply_chain_procurement_lead_gpu_inf",
+  "loc": "San Mateo Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Parasail",
+  "title": "Senior Site Reliability Engineer",
+  "url": "https://jobs.ashbyhq.com/parasail/84999241-e92e-41f0-95bc-589b1e883abb",
+  "tag": "parasail_senior_site_reliability_engineer",
+  "loc": "San Mateo",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Andromeda",
+  "title": "Senior Site Reliability Engineer ",
+  "url": "https://jobs.ashbyhq.com/andromeda/c0129afa-ddfb-47e1-9968-b3dbf27b5d55",
+  "tag": "andromeda_senior_site_reliability_engineer",
+  "loc": "Global Remote / San Francisco, CA Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "MatX",
+  "title": "System Software Engineer, Linux Kernel and Device Drivers",
+  "url": "https://jobs.ashbyhq.com/matx/22b757ee-40cd-455e-8b66-4334abf8fbc8",
+  "tag": "matx_system_software_engineer_linux_kernel_and",
+  "loc": "Mountain View",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Lightning AI",
+  "title": "Lightning Infrastructure Engineer (Remote)",
+  "url": "https://jobs.ashbyhq.com/lightning/7ad4b807-e61c-4d9b-a9f4-7a375002466f",
+  "tag": "lightning_ai_lightning_infrastructure_engineer",
+  "loc": "Lightning Labs Remote",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
  }
 ]
