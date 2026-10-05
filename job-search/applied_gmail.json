@@ -87,7 +87,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "afresh": {
    "name": "Afresh",
@@ -151,7 +153,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "anaplan": {
    "name": "Anaplan",
@@ -324,7 +328,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "block": {
    "name": "Block",
@@ -345,7 +351,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "brex": {
    "name": "Brex",
@@ -375,7 +383,8 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "butterflynetwork": {
    "name": "Butterfly Network",
@@ -431,7 +440,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "carta": {
    "name": "Carta",
@@ -546,7 +557,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "coalition": {
    "name": "Coalition",
@@ -567,7 +580,9 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "coinbase": {
    "name": "Coinbase",
@@ -575,7 +590,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "convera": {
    "name": "Convera",
@@ -648,7 +665,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "datavant": {
    "name": "Datavant",
@@ -656,7 +675,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "datavations": {
    "name": "Datavations",
@@ -817,7 +838,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "faire": {
    "name": "Faire",
@@ -994,7 +1017,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "globality": {
    "name": "Globality",
@@ -1096,7 +1121,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "hudsonrivertrading": {
    "name": "Hudson River Trading",
@@ -1117,7 +1144,8 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "ixllearning": {
    "name": "IXL Learning",
@@ -1346,7 +1374,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "ludiaconsulting": {
    "name": "Ludia Consulting",
@@ -1432,7 +1462,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "mongodb": {
    "name": "MongoDB",
@@ -1454,7 +1486,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "mozilla": {
    "name": "Mozilla",
@@ -1534,7 +1568,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "okx": {
    "name": "OKX",
@@ -1555,7 +1591,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "okta": {
    "name": "Okta",
@@ -1569,7 +1607,8 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "omadahealth": {
    "name": "Omada Health",
@@ -1640,7 +1679,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "pantheonsystems": {
    "name": "Pantheon Systems",
@@ -1712,7 +1753,9 @@
     "2026-09-29",
     "2026-10-01"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "pinterest": {
    "name": "Pinterest",
@@ -1733,7 +1776,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "podium": {
    "name": "Podium",
@@ -1846,7 +1891,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "resortpass": {
    "name": "ResortPass",
@@ -1874,7 +1921,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "rightway": {
    "name": "Rightway",
@@ -1991,7 +2040,8 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "applied"
   },
   "seenhealth": {
    "name": "Seen Health",
@@ -2005,7 +2055,8 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "servicenow": {
    "name": "ServiceNow",
@@ -2090,7 +2141,8 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "stackav": {
    "name": "Stack AV",
@@ -2105,7 +2157,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "stitchfix": {
    "name": "Stitch Fix",
@@ -2157,7 +2211,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "taskrabbit": {
    "name": "Taskrabbit",
@@ -2172,7 +2228,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "tensordyne": {
    "name": "Tensordyne",
@@ -2221,7 +2279,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "toast": {
    "name": "Toast",
@@ -2316,7 +2376,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "veeamsoftware": {
    "name": "Veeam Software",
@@ -2358,7 +2420,8 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "visa": {
    "name": "Visa",
@@ -2386,7 +2449,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "wayve": {
    "name": "Wayve",
@@ -2451,7 +2516,9 @@
     "2026-09-30",
     "2026-10-01"
    ],
-   "count": 2
+   "count": 2,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "zenbusiness": {
    "name": "ZenBusiness",
@@ -2507,7 +2574,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "zone": {
    "name": "Zone",
@@ -2575,7 +2644,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   },
   "teamlfg": {
    "name": "teamLFG",
@@ -2737,7 +2808,8 @@
    "dates": [
     "2026-10-05"
    ],
-   "count": 1
+   "count": 1,
+   "note": "applied"
   },
   "greensandai": {
    "name": "GreenSand AI",
@@ -3519,6 +3591,33 @@
    ],
    "count": 1,
    "note": "cloud-applied today"
+  },
+  "veeam": {
+   "name": "Veeam",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
+  },
+  "yugabyte": {
+   "name": "Yugabyte",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
+  },
+  "fanatics": {
+   "name": "Fanatics",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "note": "rejected (do not re-apply)",
+   "rejected": true
   }
  }
 }
