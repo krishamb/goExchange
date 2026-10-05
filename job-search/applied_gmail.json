@@ -2696,6 +2696,41 @@
     "2026-10-05"
    ],
    "count": 1
+  },
+  "scribdinc": {
+   "name": "Scribd",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "fluidstack": {
+   "name": "FluidStack",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "hingehealth": {
+   "name": "Hinge Health",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "whoop": {
+   "name": "WHOOP",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
+  },
+  "elicit": {
+   "name": "Elicit",
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1
   }
  }
 }

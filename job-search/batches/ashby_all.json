@@ -1,56 +1,6 @@
 [
  {
   "ats": "ashby",
-  "company": "scribdinc",
-  "title": "Staff Software Engineer (Backend) - Everand Core",
-  "url": "https://jobs.ashbyhq.com/scribdinc/c8fbcc07-e25a-4aa1-8208-306659febb36",
-  "tag": "scribdinc_staff_software_engineer_ba",
-  "loc": "Portland OR",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "fluidstack",
-  "title": "Architect, Data Center",
-  "url": "https://jobs.ashbyhq.com/fluidstack/b20734dd-fa58-4c64-b0fa-fe8996d3b604",
-  "tag": "fluidstack_architect_data_center",
-  "loc": "New York NY",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "hingehealth",
-  "title": "Senior Engineering Manager, Outcomes",
-  "url": "https://jobs.ashbyhq.com/hinge-health/383dd2f7-f67a-49ab-a61b-e3c9eec51a4a",
-  "tag": "hingehealth_senior_engineering_manager",
-  "loc": "San Francisco CA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "whoop",
-  "title": "Software Engineering Manager (Health Records)",
-  "url": "https://jobs.ashbyhq.com/whoop/f28f3b24-3b28-45d1-8c49-fb90e02f9e9d",
-  "tag": "whoop_software_engineering_manag",
-  "loc": "Boston MA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "elicit",
-  "title": "Engineering Manager",
-  "url": "https://jobs.ashbyhq.com/elicit/6d979836-e243-4bb0-aa8c-0f6a7ae7b122",
-  "tag": "elicit_engineering_manager",
-  "loc": "Oakland CA",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "blitzy",
   "title": "Head of Forward Deployed Engineering",
   "url": "https://jobs.ashbyhq.com/blitzy/2a8c95cd-907b-4504-9c90-ddb7a75f1ece",
