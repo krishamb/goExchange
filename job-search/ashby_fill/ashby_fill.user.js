@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.3
+// @version      2026.10.05.4
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -478,7 +478,7 @@ function ui() {
   panel = document.createElement('div');
   panel.id = 'akf-panel';
   panel.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:2147483647;width:340px;max-height:70vh;overflow:auto;background:#0f172a;color:#e2e8f0;font:13px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);padding:12px 14px';
-  panel.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><b>Ashby filler</b><span style="opacity:.6;font-size:11px">${VERSION}</span></div>
+  panel.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><b>Ashby filler</b><span><button id="akf-log" style="font-size:11px;padding:2px 6px;border-radius:6px;border:0;background:#334155;color:#e2e8f0;cursor:pointer">⬇ Log (<span id="akf-logn">0</span>)</button> <span style="opacity:.6;font-size:11px">${VERSION}</span></span></div>
   <div id="akf-status" style="white-space:pre-wrap"></div>
   <div id="akf-btns" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"></div>
   <details id="akf-setup" style="margin-top:8px"><summary style="cursor:pointer">Setup (once)</summary>
@@ -506,7 +506,18 @@ function ui() {
     panel.querySelector('#akf-saved').textContent = 'Saved.\n' + files();
   };
   if (!m.email || !(S.get('resume_main') || S.get('resume_exec'))) panel.querySelector('#akf-setup').open = true;
+  try { panel.querySelector('#akf-logn').textContent = S.get('log', []).length; } catch (e) {}
+  const lb = panel.querySelector('#akf-log'); if (lb) lb.onclick = exportLog;
   return panel;
+}
+// the full, persistent record of every confirmed submission across all runs; copies to clipboard and downloads a CSV
+function exportLog() {
+  const log = S.get('log', []);
+  if (!log.length) { banner('No submissions logged yet.', false); return; }
+  const csv = 'date,company,role,url\n' + log.map(x => [new Date(x.at).toISOString().slice(0, 16).replace('T', ' '), x.c, x.t, x.u].map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+  try { navigator.clipboard.writeText(csv); } catch (e) {}
+  try { const b = new Blob([csv], { type: 'text/csv' }); const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'ashby_applications_' + new Date().toISOString().slice(0, 10) + '.csv'; document.body.appendChild(a); a.click(); a.remove(); } catch (e) {}
+  banner(log.length + ' applications copied to clipboard + downloaded as CSV', true);
 }
 function banner(text, good) {   // an unmissable confirmation that the filler is live on this page
   try {
@@ -546,6 +557,12 @@ function report(q, item, res) {
   q.results = q.results || {};
   q.results[item.id] = Object.assign({ t: item.t, c: item.c, u: item.u, at: Date.now() }, res);
   S.set(Q_KEY, q);
+  try {   // persistent cross-run log of confirmed submissions, independent of email
+    if (res.status === 'submitted') {
+      const log = S.get('log', []);
+      if (!log.some(x => x.u === item.u)) { log.push({ at: Date.now(), c: item.c, t: item.t, u: item.u }); S.set('log', log); }
+    }
+  } catch (e) {}
   try { if (W.opener) W.opener.postMessage({ akf: 'result', id: item.id, res: q.results[item.id] }, '*'); } catch (e) {}
 }
 async function batchStep(q) {
@@ -618,7 +635,7 @@ function finish(q) {
   status(lines.join('\n') + (todo.length ? '\n\nOpen these to finish (the form fills itself):\n' : ''));
   const st = ui().querySelector('#akf-status');
   for (const x of todo) { const a = document.createElement('a'); a.href = x.u.replace(/\/$/, '') + '/application'; a.target = '_blank'; a.textContent = `• ${x.c} - ${x.t} (${x.status}${x.why ? ': ' + x.why.slice(0, 50) : ''})`; a.style.cssText = 'display:block;color:#93c5fd'; st.appendChild(a); }
-  buttons([['Copy results', () => navigator.clipboard.writeText(JSON.stringify(r, null, 1)), true], ['Clear batch', () => { S.set(Q_KEY, null); status('Cleared.'); buttons([]); }]]);
+  buttons([['⬇ Download full log', exportLog, true], ['Copy results', () => navigator.clipboard.writeText(JSON.stringify(r, null, 1))], ['Clear batch', () => { S.set(Q_KEY, null); status('Cleared.'); buttons([]); }]]);
   q.done = true; S.set(Q_KEY, q);
   try { if (W.opener) W.opener.postMessage({ akf: 'done', results: q.results }, '*'); } catch (e) {}
 }
