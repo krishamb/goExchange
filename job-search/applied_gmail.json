@@ -5078,6 +5078,31 @@
    "company": "vitalize",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "scout": {
+   "company": "scout",
+   "first": "2026-10-05",
+   "via": "cloud"
+  },
+  "gather": {
+   "company": "gather",
+   "first": "2026-10-05",
+   "via": "cloud"
+  },
+  "kobold": {
+   "company": "kobold",
+   "first": "2026-10-05",
+   "via": "cloud"
+  },
+  "roboforce": {
+   "company": "roboforce",
+   "first": "2026-10-05",
+   "via": "cloud"
+  },
+  "maven": {
+   "company": "maven",
+   "first": "2026-10-05",
+   "via": "cloud"
   }
  }
 }
