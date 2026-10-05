@@ -5103,6 +5103,16 @@
    "company": "maven",
    "first": "2026-10-05",
    "via": "cloud"
+  },
+  "oura": {
+   "company": "oura",
+   "first": "2026-10-05",
+   "via": "cloud"
+  },
+  "jfrog": {
+   "company": "jfrog",
+   "first": "2026-10-05",
+   "via": "cloud"
   }
  }
 }
