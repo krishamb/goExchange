@@ -958,5 +958,45 @@
   "loc": "San Francisco",
   "posted_ts": 1790862361.552,
   "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "HERCULES",
+  "title": "Staff Software Engineer, AI Agent",
+  "url": "https://jobs.ashbyhq.com/hercules/9ee9a087-9c1b-40e3-ab15-f28d42802314?utm_source=9z1yy13llA",
+  "tag": "hercules_staff_software_engineer_ai_agent",
+  "loc": "San Francisco, CA, US",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "HERCULES",
+  "title": "Staff Software Engineer, Infrastructure",
+  "url": "https://jobs.ashbyhq.com/hercules/82a99b66-1f85-4f31-9268-f4d93b760ff6?utm_source=9z1yy13llA",
+  "tag": "hercules_staff_software_engineer_infrastruct_2",
+  "loc": "San Francisco, CA, US",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Pomelo Care",
+  "title": "Staff Software Engineer",
+  "url": "https://jobs.ashbyhq.com/pomelo-care/991734de-4a2f-4b72-b8de-6ba599152e1b?utm_source=Z9zX6GN2J5",
+  "tag": "pomelo_care_staff_software_engineer",
+  "loc": "US",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "Pomelo Care",
+  "title": "Staff Software Engineer, Patient Experience",
+  "url": "https://jobs.ashbyhq.com/pomelo-care/2878cdf4-e80d-4321-912f-abab200c1475?utm_source=Z9zX6GN2J5",
+  "tag": "pomelo_care_staff_software_engineer_patient_",
+  "loc": "US",
+  "posted_ts": null,
+  "email": "ambarishkrishnamurthy@gmail.com"
  }
 ]
