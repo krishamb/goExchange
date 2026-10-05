@@ -311,16 +311,6 @@
  },
  {
   "ats": "ashby",
-  "company": "Mercor",
-  "title": "Member of Technical Staff, Backend",
-  "url": "https://jobs.ashbyhq.com/mercor/ce84b612-89fb-4fac-976e-ac7dbcdb7da1",
-  "tag": "mercor_member_of_technical_staff_",
-  "loc": "San Francisco",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
   "company": "LatchBio",
   "title": "Member of Technical Staff, Proteomics",
   "url": "https://jobs.ashbyhq.com/latchbio/98a23a07-0de0-4a6e-ba18-e448358660d3",
@@ -386,16 +376,6 @@
   "url": "https://jobs.ashbyhq.com/datasnipper/df4fef6d-2324-479d-b07b-c7f4182b20e1",
   "tag": "datasnipper_engineering_manager_billin",
   "loc": "New York NY",
-  "posted_ts": null,
-  "email": "amba_rish@hotmail.com"
- },
- {
-  "ats": "ashby",
-  "company": "replit",
-  "title": "Engineering Manager, UX ",
-  "url": "https://jobs.ashbyhq.com/replit/7e48291b-6188-46d7-bc21-1d66a512ffcb",
-  "tag": "replit_engineering_manager_ux",
-  "loc": "Foster City CA",
   "posted_ts": null,
   "email": "amba_rish@hotmail.com"
  },
