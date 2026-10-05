@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.5
+// @version      2026.10.05.6
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -553,6 +553,10 @@ function summary(rep) {
 const Q_KEY = 'queue';
 function curJobId() { const m = location.pathname.match(/\/([0-9a-f-]{36})/i); return m && m[1].toLowerCase(); }
 function nextUrl(item) { return item.u.replace(/\/application\/?$/, '').replace(/\/$/, '') + '/application'; }
+// normalize an Ashby job URL to .../<org>/<uuid> so the same job compares equal regardless of /application, query or case
+function normJobUrl(u) { return String(u || '').toLowerCase().replace(/[#?].*$/, '').replace(/\/application\/?$/, '').replace(/\/+$/, ''); }
+function appliedUrlSet() { try { return new Set((S.get('log', []) || []).map(e => normJobUrl(e.u))); } catch (e) { return new Set(); } }
+function alreadyApplied(item) { return item && appliedUrlSet().has(normJobUrl(item.u)); }
 function report(q, item, res) {
   q.results = q.results || {};
   q.results[item.id] = Object.assign({ t: item.t, c: item.c, u: item.u, at: Date.now() }, res);
@@ -569,6 +573,10 @@ async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
+  if (alreadyApplied(item)) {   // already in this browser's applied log: skip without re-applying (no fill, no pace)
+    report(q, item, { status: 'submitted', why: 'already in your applied log (skipped)', answered: -1 });
+    q.blocks = 0; S.set(Q_KEY, q); advance(q); return true;
+  }
   if (OK_RX.test(document.body.innerText || '') && !entries().length) {   // already-submitted confirmation reloaded under this job's URL: record and move on, do not re-fill
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || [''])[0], answered: -1 });
     q.blocks = 0; S.set(Q_KEY, q); advance(q); return true;
@@ -659,7 +667,11 @@ function readHashQueue() {
         if (f && f.b64 && f.name && !S.get(slot)) S.set(slot, { name: String(f.name), type: String(f.type || 'application/pdf'), b64: String(f.b64) });
       }
     }
-    const items = (d.items || []).filter(x => x && /^https:\/\/jobs\.ashbyhq\.com\/[^/]+\/[0-9a-f-]{36}/i.test(x.u)).map(x => Object.assign(x, { id: x.u.match(/([0-9a-f-]{36})/i)[1].toLowerCase() }));
+    let items = (d.items || []).filter(x => x && /^https:\/\/jobs\.ashbyhq\.com\/[^/]+\/[0-9a-f-]{36}/i.test(x.u)).map(x => Object.assign(x, { id: x.u.match(/([0-9a-f-]{36})/i)[1].toLowerCase() }));
+    const applied = appliedUrlSet();   // never re-queue a job already in this browser's applied log (verify against the log, not the page)
+    const n0 = items.length;
+    items = items.filter(x => !applied.has(normJobUrl(x.u)));
+    if (n0 - items.length > 0) banner(`Skipping ${n0 - items.length} role(s) you already applied to (from your log).`, true);
     if (!items.length) return null;
     return { name: String(d.name || 'batch').slice(0, 60), auto: !!d.auto, items, i: 0, results: {} };
   } catch (e) { return null; }
