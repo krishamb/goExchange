@@ -908,5 +908,85 @@
   "loc": "New York City (Remote)",
   "posted_ts": 1790694284.463,
   "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "hercules",
+  "title": "Staff Software Engineer, Infrastructure",
+  "url": "https://jobs.ashbyhq.com/hercules/82a99b66-1f85-4f31-9268-f4d93b760ff6",
+  "tag": "hercules_staff_software_engineer_infrastruct",
+  "loc": "San Francisco (Remote)",
+  "posted_ts": 1791150112.886,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "generalintuition-medal",
+  "title": "Senior/Staff Software Engineer \u2013 Backend",
+  "url": "https://jobs.ashbyhq.com/generalintuition-medal/614954ad-e2e8-4484-9fe6-235a3336d9a8",
+  "tag": "generalintuition_medal_senior_staff_software",
+  "loc": "New York City",
+  "posted_ts": 1790683343.196,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "generalintuition-medal",
+  "title": "Member of Technical Staff",
+  "url": "https://jobs.ashbyhq.com/generalintuition-medal/762cfb8e-03cd-4eca-8e26-a074323b1923",
+  "tag": "generalintuition_medal_member_of_technical_s",
+  "loc": "New York City",
+  "posted_ts": 1790683255.509,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "adonis",
+  "title": "Engineering Manager, Data Platform",
+  "url": "https://jobs.ashbyhq.com/adonis/777f31b6-51b7-4c93-a3e7-7bb4feca1c20",
+  "tag": "adonis_engineering_manager_data_platform",
+  "loc": "New York City (Remote)",
+  "posted_ts": 1788294662.166,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "illumio",
+  "title": "Member of Technical Staff II- Cloud Security",
+  "url": "https://jobs.ashbyhq.com/illumio/8f74910f-e291-49ac-9d9f-913c7babe459",
+  "tag": "illumio_member_of_technical_staff_ii_cloud_s",
+  "loc": "Sunnyvale, California - HQ",
+  "posted_ts": 1787849901.476,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "illumio",
+  "title": "Sr. Engineering Manager, Analytics and Applied AI",
+  "url": "https://jobs.ashbyhq.com/illumio/dddfb92d-ad05-4845-b6fa-87650b9166f3",
+  "tag": "illumio_sr_engineering_manager_analytics_and",
+  "loc": "HQ - Sunnyvale (Office)",
+  "posted_ts": 1788390598.547,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "cascade-ai",
+  "title": "Engineering Manager",
+  "url": "https://jobs.ashbyhq.com/cascade-ai/89b4bf22-7d09-4bba-97cb-73f870c1687d",
+  "tag": "cascade_ai_engineering_manager",
+  "loc": "Bellevue (Remote)",
+  "posted_ts": 1790185605.636,
+  "email": "ambarishkrishnamurthy@gmail.com"
+ },
+ {
+  "ats": "ashby",
+  "company": "universalagi",
+  "title": "ML Engineer",
+  "url": "https://jobs.ashbyhq.com/universalagi/995ceec2-c76e-4466-9859-05bda9898284",
+  "tag": "universalagi_ml_engineer",
+  "loc": "San Francisco",
+  "posted_ts": 1790862361.552,
+  "email": "ambarishkrishnamurthy@gmail.com"
  }
 ]
