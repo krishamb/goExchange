@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"highest (level of )?(education|schooling|school|degree)|level of education|education (level )?(you )?(completed|attained|achieved)|highest (degree|qualification)", "Bachelor of Engineering, Computer Science and Engineering (University of Madras)"),   # same facts as the 'degree / field of study' rule
  (r"earliest (date )?(that )?you (can|could) (begin|start|join)|earliest you can (begin|start)|how much notice do you need", "Immediately (available to start right away)"),   # the applicant's start answer; placed before the current-employer rule, which 'if you're currently working' would otherwise hit
  (r"(current |your )?work authori[sz]ation( status)?|(what is your )?(employment|work) eligibility( status)?", "Authorized to work in the United States; no visa sponsorship required now or in the future"),
  (r"preferred (work )?shifts?|shift preference|which shifts?", "Standard business hours, Pacific time (flexible for global teams)"),
@@ -695,6 +696,7 @@ NOT_MINE=re.compile(r"salesforce|\bsap\b|servicenow|camunda|snowflake|angular|\b
 def tech_answer(label):
     l=(label or "").lower()
     if PERSONAL_Q.search(l) or not TECH_Q.search(l): return None
+    if re.search(r"\b(education|degree|diploma|school|university|college|gpa|graduat\w*|certification)\b",l): return None   # facts, never a technical narrative
     if re.match(r"\s*if (yes|so|applicable|other)\b",l):
         # a follow-up to a Yes/No question: N/A when the question was about something the applicant answers No to
         if NOT_MINE.search(label or "") or re.search(r"camunda|\bbpm\b|clinical|government|clearance|relative|referr|sponsor|visa|previous(ly)? (employ|work)|worked (for|at)|non-?compete|convict",l): return "N/A"
