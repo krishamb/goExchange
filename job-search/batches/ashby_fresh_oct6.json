@@ -1,6 +1,19 @@
 [
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
+  "apply_url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
+  "tag": "scribe_senior_full_stack_engineer_enterprise_s",
+  "company": "Scribe",
+  "slug": "scribe",
+  "title": "Senior Full-Stack Engineer, Enterprise Scale",
+  "loc": "Remote (EST)",
+  "tier": 5,
+  "priority": 0,
+  "posted_ts": 1791320405.9255137
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/coram-ai/a6ceee18-33ae-40e6-9a1f-2f178c7199c5",
   "apply_url": "https://jobs.ashbyhq.com/coram-ai/a6ceee18-33ae-40e6-9a1f-2f178c7199c5/application",
   "tag": "coram_ai_member_of_technical_staff_full_stack",
