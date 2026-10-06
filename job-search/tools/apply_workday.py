@@ -362,7 +362,8 @@ def cat_rank(c, toks=()):
     return 9
 
 # ---- Workday widgets
-SKILL_TAGS = ["Python", "Java", "C++", "Rust", "AWS", "Kubernetes", "Machine Learning", "Software Architecture", "Distributed Systems", "Microservices", "Kafka", "Terraform", "Engineering Management", "Software Engineering", "Cloud Computing", "SQL"]
+SKILL_TAGS = ["Python", "Java", "C++", "Rust", "Amazon Web Services", "Kubernetes", "Machine Learning", "Software Architecture", "Distributed Systems", "Microservices", "Apache Kafka", "Terraform", "Engineering Management", "Software Engineering", "Cloud Computing", "SQL", "Artificial Intelligence"]
+SKILL_ALIASES = {"Amazon Web Services": ["Amazon Web Services (AWS)", "AWS"], "Machine Learning": ["Machine Learning (ML)"], "Artificial Intelligence": ["Artificial Intelligence (AI)"], "Software Architecture": ["Software Architectures"], "Apache Kafka": ["Kafka"], "SQL": ["SQL (Structured Query Language)"]}
 LISTBOX_OPT = '[role="listbox"]:not([data-automation-id="selectedItemList"]) [role="option"]:visible:not([aria-disabled="true"])'
 async def listbox_choose(page, button, ranker, typeahead=""):
     """Workday single-select (button[aria-haspopup=listbox]): open it, click the option ranker(texts) names, and verify
@@ -748,17 +749,35 @@ async def fill_field(page, job, f):
     # real past employers (Morgan Stanley, JPMorgan Chase, Bloomberg, ...), No for every other company
     if kind == "prompt" and (re.search(r"skills?$", fid, re.I) or re.search(r"add skills|^skills?\b", low)):
         # Workday's Skills multiselect (required on some tenants, e.g. Thomson Reuters): the applicant's documented stack
-        # (apply.py 'relevant technical skills' rule), searched one tag at a time; only exact / containing matches are taken
-        if cur and len(cur.split(";")) >= 3: return keep(cur)
-        got = []
+        # (apply.py 'relevant technical skills' rule), one tag at a time. Only an exact skill is kept: the tag itself, the
+        # tag with a '(Programming Language)'-style qualifier, or a listed alias; anything else Workday picked is removed.
+        def skill_ok(t, q):
+            nt, nq = norm(t), norm(q)
+            if nt == nq or nt in {norm(a) for a in SKILL_ALIASES.get(q, [])}: return True
+            m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", t or "")
+            return bool(m) and norm(m.group(1)) == nq and bool(re.search(r"programming language|software|framework|cloud|platform", m.group(2), re.I))
+        def any_ok(t): return any(skill_ok(t, q) for q in SKILL_TAGS)
+        async def drop_last():   # remove the most recently added pill
+            try:
+                x = box.locator(A("DELETE_charm"))
+                if await x.count(): await x.nth(await x.count() - 1).click(timeout=3000); await page.wait_for_timeout(500)
+            except Exception: pass
+        have = [x for x in await prompt_selected(box) if x]
+        if have and all(any_ok(x) for x in have) and len(have) >= 3: return keep("; ".join(have))
+        if have and not all(any_ok(x) for x in have): await prompt_clear(page, box); have = []
+        got = list(have)
         for q in SKILL_TAGS:
             if len(got) >= 8: break
+            if any(skill_ok(x, q) for x in got): continue
             try:
                 auto = await prompt_open(page, box, q)
-                if auto: got += auto; continue
+                if auto:
+                    if all(skill_ok(x, q) for x in auto): got += auto
+                    else:
+                        for _ in auto: await drop_last()
+                    continue
                 loc, texts, subs = await menu_items(page)
-                k = next((i for i, t in enumerate(texts) if not subs[i] and norm(t) == norm(q)), None)
-                if k is None: k = next((i for i, t in enumerate(texts) if not subs[i] and norm(q) in norm(t)), None)
+                k = next((i for i, t in enumerate(texts) if not subs[i] and skill_ok(t, q)), None)
                 if k is None:
                     await page.keyboard.press("Escape"); continue
                 await loc.nth(k).click(timeout=4000); await page.wait_for_timeout(800); await page.keyboard.press("Escape")
