@@ -2988,6 +2988,20 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/vclusterlabs/d17b6d62-a120-43d5-959e-ce2026b89bea",
+  "apply_url": "https://jobs.ashbyhq.com/vclusterlabs/d17b6d62-a120-43d5-959e-ce2026b89bea/application",
+  "tag": "vcluster_labs_staff_software_engineer",
+  "company": "vCluster Labs",
+  "slug": "vclusterlabs",
+  "title": "Staff Software Engineer",
+  "loc": "United States",
+  "tier": 2,
+  "priority": 0,
+  "posted_ts": 0,
+  "src": "linkedin-24h/new-board"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/tereina/a20124d5-1989-455c-8503-b40683dafe8d",
   "apply_url": "https://jobs.ashbyhq.com/tereina/a20124d5-1989-455c-8503-b40683dafe8d/application",
   "tag": "tereina_engineering_manager_payment_team",
