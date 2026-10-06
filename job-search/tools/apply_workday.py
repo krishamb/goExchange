@@ -751,11 +751,12 @@ async def fill_field(page, job, f):
         # Workday's Skills multiselect (required on some tenants, e.g. Thomson Reuters): the applicant's documented stack
         # (apply.py 'relevant technical skills' rule), one tag at a time. Only an exact skill is kept: the tag itself, the
         # tag with a '(Programming Language)'-style qualifier, or a listed alias; anything else Workday picked is removed.
+        snorm = lambda x: re.sub(r"[^a-z0-9+#]", "", (x or "").lower())   # keeps + and #: 'C' is not 'C++', 'C#' is not 'C'
         def skill_ok(t, q):
-            nt, nq = norm(t), norm(q)
-            if nt == nq or nt in {norm(a) for a in SKILL_ALIASES.get(q, [])}: return True
+            nt, nq = snorm(t), snorm(q)
+            if nt == nq or nt in {snorm(a) for a in SKILL_ALIASES.get(q, [])}: return True
             m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", t or "")
-            return bool(m) and norm(m.group(1)) == nq and bool(re.search(r"programming language|software|framework|cloud|platform", m.group(2), re.I))
+            return bool(m) and snorm(m.group(1)) == nq and bool(re.search(r"programming language|software|framework|cloud|platform", m.group(2), re.I))
         def any_ok(t): return any(skill_ok(t, q) for q in SKILL_TAGS)
         async def drop_last():   # remove the most recently added pill
             try:
