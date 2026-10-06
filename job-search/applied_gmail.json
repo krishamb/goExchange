@@ -5521,6 +5521,16 @@
    "company": "Sedgwick",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "nextpower": {
+   "company": "NextPower",
+   "first": "2026-10-06",
+   "via": "workday-cloud"
+  },
+  "nextracker": {
+   "company": "Nextracker",
+   "first": "2026-10-06",
+   "via": "workday-cloud"
   }
  }
 }
