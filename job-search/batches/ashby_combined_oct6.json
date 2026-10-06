@@ -1,6 +1,36 @@
 [
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/tapcart/03ff19a6-1f6d-4c5b-8e20-4fb7b6a2f57e",
+  "apply_url": "https://jobs.ashbyhq.com/tapcart/03ff19a6-1f6d-4c5b-8e20-4fb7b6a2f57e",
+  "tag": "tapcart_sr_full_stack_engineer",
+  "company": "Tapcart",
+  "title": "Sr. Full Stack Engineer",
+  "loc": "Santa Monica, CA, US",
+  "tier": 4,
+  "posted": "2026-10-06",
+  "src": "indeed-direct",
+  "slug": "tapcart",
+  "priority": 0,
+  "posted_ts": 1791328453.563622
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/aurora-operations-inc/2ec0909b-6edb-4e63-9877-b850ae46b983",
+  "apply_url": "https://jobs.ashbyhq.com/aurora-operations-inc/2ec0909b-6edb-4e63-9877-b850ae46b983",
+  "tag": "aurora_innovation_staff_software_engineer_full",
+  "company": "Aurora Innovation",
+  "title": "Staff Software Engineer, Full Stack \u2013 Aurora Services",
+  "loc": "Mountain View, CA, US",
+  "tier": 2,
+  "posted": "2026-10-06",
+  "src": "indeed-direct",
+  "slug": "aurora-operations-inc",
+  "priority": 0,
+  "posted_ts": 1791328452.915585
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
   "apply_url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
   "tag": "scribe_senior_full_stack_engineer_enterprise_s",
