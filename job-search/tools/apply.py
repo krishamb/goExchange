@@ -58,6 +58,9 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"earliest (date )?(you|that you) (can|could) (begin|start)|when (can|could|are you able to) (you )?(begin|start)|how much notice|notice period|start date|date available|availability to start", "Within two weeks of an offer (two weeks' notice to my current engagement)"),
+ (r"salary expectations?|compensation expectations?|expected (salary|compensation|pay)|desired (salary|compensation|pay)|salary requirements?", "Negotiable, depending on the scope of the role"),   # never a number the applicant did not give
+ (r"(current |your )?work authori[sz]ation( status)?|(what is your )?(employment|work) eligibility( status)?", "Authorized to work in the United States; no visa sponsorship required now or in the future"),
  (r"preferred (work )?shifts?|shift preference|which shifts?", "Standard business hours, Pacific time (flexible for global teams)"),
  (r"languages? (that )?you speak|spoken languages|languages? spoken|what languages do you speak", "English (fluent)"),
  (r"what do you (enjoy|like|love|value) (most )?about (people )?(leadership|management|managing|leading)|why (do you (enjoy|like|want to)|people leadership)|what draws you to (people )?(leadership|management)", "Building a team that ships: hiring and growing engineers into tech leads and managers, setting clear technical direction and then getting out of the way, and keeping my own hands on the architecture so I can make the hard calls with the team rather than for it. At Hyperion AI I built the engineering team as CTO and co-founder and owned customer deployments end to end; at Yahoo (75+ engineers) and JPMorgan (50+ engineers) I led platform organizations through large migrations and platform rebuilds. The part I enjoy most is watching engineers I coached take ownership of systems and go on to lead their own teams."),
