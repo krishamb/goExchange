@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
-// @version      2026.10.05.6
+// @version      2026.10.06.1
 // @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
 // @grant        GM_getValue
@@ -17,7 +17,10 @@ const AKF_RULES = {"TEXT_RULES": [["typ(e|ing) (in )?(my |your )?initials\\b.{0,
 /* Ashby application filler (core). Runs in the applicant's own browser on jobs.ashbyhq.com.
  * - Attaches the applicant's resume (picked once, kept only in this browser) and answers the form with the same rules
  *   as job-search/tools/apply.py (exported to rules.js; email/phone/street come from the one-time setup, never the repo).
- * - Never answers AI-use / AI-agent questions, never guesses a question it has no rule for, never ticks disclosures.
+ * - Never answers AI-use / AI-agent questions, never ticks disclosures. A REQUIRED open-ended text question with
+ *   no rule gets a guarded generic answer (factual background / "how did you hear" / start date / years of
+ *   experience / "negotiable" for comp) so the form can submit; legal, personal, visa and clearance questions are
+ *   never guessed.
  * - Fill mode: fills and stops; the applicant reviews and clicks Submit.
  * - Batch mode (userscript only): the applicant confirms a category once; each form is submitted only when every
  *   required question was answered by the rules and no captcha challenge is shown. Anything else is left for the
@@ -201,6 +204,10 @@ const AI_TEXT = /ai policy|use of ai|ai assistance|ai tools? (in|during)|without
 const DISCLOSE = /non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export/i;
 const ACK = /agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|^accept$|i accept|i have read/i;
 const PERSONAL_CERT = /personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)/i;
+// Generic answer for a REQUIRED open-ended question that no rule covers (leadership style, biggest
+// accomplishment, what you're looking for, background...). Facts match the cover letter. Never used for
+// legal / disclosure / AI-use / personal / salary-number / visa questions — those keep their own guards.
+const GENERIC_ANSWER = "I'm a hands-on engineering leader: CTO and co-founder of Hyperion AI, where I built an agentic AI platform end to end, and previously Chief Architect at Yahoo Finance, leading 75+ engineers on a platform serving about 40M daily users. Across 25+ years in financial technology, distributed systems and AI I have designed the architecture, written the critical-path code in Python, Go, Rust and C++, and led teams through delivery. What I am looking for is a role where that mix of architecture depth and engineering leadership moves both the product and the team forward.";
 const BAY_OFFICE = [/santa clara/i, /san jose|sunnyvale|mountain view|palo alto|menlo park|cupertino|redwood city|san mateo/i, /san francisco|bay area|south san francisco|oakland/i, /remote.{0,15}(us|united states)|united states.{0,10}remote/i, /remote/i];
 
 async function answerText(e, q, input, rep) {
@@ -221,6 +228,24 @@ async function answerText(e, q, input, rep) {
       const req = isRequired(e);
       if (req || !/\b(link|url|website|github|portfolio|profile|handle|twitter|linkedin)\b|^\s*if (yes|so|applicable|other)\b|anything else|additional (info|comments?|notes?|details)|cover letter|message (to|for)|note (to|for)/i.test(q)) {
         v = techAnswer(q); if (v) rep.tech.push(q);
+      }
+      // Answer-every-question fallback: a REQUIRED free-text question with still no answer would block
+      // submission. Fill the common factual ones, and open-ended narrative ones with GENERIC_ANSWER.
+      // Hard guards: never personal/legal/disclosure/AI-use, never a salary number, never visa/clearance.
+      if (v == null && req) {
+        const ql = q.toLowerCase();
+        const blocked = PERSONAL_Q.test(ql) || DISCLOSE.test(q) || AI_TEXT.test(q) ||
+          /\b(visa|sponsor|clearance|citizen|authori[sz]ed to work|ssn|social security|date of birth|gender|race|ethnic|veteran|disab|pronoun|address|phone number|passport)\b/.test(ql);
+        if (!blocked) {
+          if (/hear (about|of)|how did you (find|learn|discover)|\bsource\b|referr?(ed|al)/.test(ql)) v = 'Through your careers page and LinkedIn.';
+          else if (/linkedin/.test(ql) && /url|link|profile/.test(ql)) v = P.linkedin || null;
+          else if (/\b(start date|available to start|availability|notice period|earliest|when (can|could) you)\b/.test(ql)) v = 'Available to start immediately; two weeks if a clean handoff is needed.';
+          else if (/years? of (professional |relevant |software |engineering |industry )?experience|how many years/.test(ql)) v = (input.type === 'number') ? '25' : '25+ years';
+          else if (/(salary|compensation|pay|comp)\b.{0,25}(expectation|requirement|range|target)|expected (salary|compensation)|desired (salary|compensation)/.test(ql)) v = 'Negotiable - open to discussing based on total compensation and scope.';
+          else if (/\b(why|describe|tell (us|me)|what|how|which|share|explain|walk (us|me) through|give an example|biggest|most (proud|significant|impactful|recent)|accomplish|achievement|challenge|strength|weakness|leadership|manage|managed|team|looking for|bring to|interest|motivat|excite|passion|experience (with|in)|background|about (yourself|you)|proud of|superpower|unique)\b/.test(ql)
+                   && !/\b(link|url|website|github|portfolio|handle|twitter|relocat|commut|on-?site|remote work)\b/.test(ql)) v = GENERIC_ANSWER;
+          if (v) { rep.generic = rep.generic || []; rep.generic.push(q.slice(0, 80)); }
+        }
       }
     }
   }

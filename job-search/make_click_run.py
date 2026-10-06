@@ -34,7 +34,8 @@ try: ledger = {norm(k) for k in json.load(open(os.path.join(HERE, "applied_gmail
 except Exception: pass
 
 rows = []
-for j in sorted(queue, key=lambda x: -(x.get("posted_ts") or 0)):
+# exec/leadership roles (priority=1: Director / VP / CTO / Head of) first, then newest first
+for j in sorted(queue, key=lambda x: (-(x.get("priority") or 0), -(x.get("posted_ts") or 0))):
     if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
     rows.append(j)
 
@@ -73,11 +74,15 @@ def age(j):
     h = (time.time() - ts) / 3600
     return f"{int(h)}h" if h < 48 else f"{int(h/24)}d"
 
+# Done-state is keyed by the job's tag (unique per posting), NOT the row index, and the storage
+# key carries the generation date — so a fresh list never inherits stale strike-throughs from a
+# previous list's first rows.
+GEN = time.strftime("%Y%m%d")
 tr = "\n".join(
-    f'<tr id="r{i}"><td><input type="checkbox" data-i="{i}"></td><td class="a">{age(j)}</td>'
+    f'<tr><td><input type="checkbox" data-k="{H.escape(j.get("tag") or j["url"])}"></td><td class="a">{age(j)}</td>'
     f'<td class="c">{H.escape(j["company"])}</td><td>{H.escape(j["title"])}</td>'
     f'<td class="l">{H.escape((j.get("loc") or "")[:40])}</td>'
-    f'<td><a class="go1" href="{H.escape(one_href(j))}" target="_blank" rel="noopener" data-i="{i}">Apply ▸</a></td></tr>'
+    f'<td><a class="go1" href="{H.escape(one_href(j))}" target="_blank" rel="noopener" data-k="{H.escape(j.get("tag") or j["url"])}">Apply ▸</a></td></tr>'
     for i, j in enumerate(rows))
 
 us_path = os.path.join(HERE, "ashby_fill", "ashby_fill.user.js")
@@ -105,15 +110,15 @@ It opens <b>one tab</b>, confirms once, then fills and submits each role on its 
 <div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
-const K='akf_clickrun_v1';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
-const boxes=document.querySelectorAll('input[type=checkbox]');
-const links=[...document.querySelectorAll('a.go1[data-i]')];
-function paint(){{let d=0;boxes.forEach(b=>{{const on=!!st[b.dataset.i];b.checked=on;b.closest('tr').classList.toggle('done',on);if(on)d++}});
+const K='akf_clickrun_{GEN}';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
+const boxes=document.querySelectorAll('input[type=checkbox][data-k]');
+const links=[...document.querySelectorAll('a.go1[data-k]')];
+function paint(){{let d=0;boxes.forEach(b=>{{const on=!!st[b.dataset.k];b.checked=on;b.closest('tr').classList.toggle('done',on);if(on)d++}});
 document.getElementById('prog').textContent=d+' of {len(rows)} marked done';}}
 function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
-function mark(i){{st[i]=1;save();paint();}}
-boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.i]=b.checked?1:0;save();paint()}}));
-links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.i),800)}}));
+function mark(k){{st[k]=1;save();paint();}}
+boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.k]=b.checked?1:0;save();paint()}}));
+links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.k),800)}}));
 paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
