@@ -7568,5 +7568,35 @@
   "loc": "Redwood City, CA",
   "posted_ts": null,
   "priority": 0
+ },
+ {
+  "ats": "ashby",
+  "company": "TENEX.AI",
+  "loc": "Remote, USA",
+  "posted_ts": 1791268183.8285646,
+  "priority": 0,
+  "tag": "tenex_ai_ai_ml_engineer",
+  "title": "AI/ML Engineer",
+  "url": "https://jobs.ashbyhq.com/tenex/f51b4747-9987-494e-bb7a-fed9fde929af"
+ },
+ {
+  "ats": "ashby",
+  "company": "TENEX.AI",
+  "loc": "San Jose, CA",
+  "posted_ts": 1791268183.8285673,
+  "priority": 0,
+  "tag": "tenex_ai_software_engineer",
+  "title": "Software Engineer ",
+  "url": "https://jobs.ashbyhq.com/tenex/3b828a98-6e81-4300-a966-eecd4da37a31"
+ },
+ {
+  "ats": "ashby",
+  "company": "TENEX.AI",
+  "loc": "San Jose, CA",
+  "posted_ts": 1791268183.8285682,
+  "priority": 0,
+  "tag": "tenex_ai_principal_ai_engineer",
+  "title": "Principal AI Engineer ",
+  "url": "https://jobs.ashbyhq.com/tenex/0d98d3c1-bf9b-458c-8d5e-6c39829283c1"
  }
 ]
