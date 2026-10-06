@@ -11,7 +11,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-01.3';
+const VERSION = '2026-10-06.2';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const clean = s => (s || '').replace(/\s+/g, ' ').replace(/[✱*]/g, '').trim();
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -530,12 +530,31 @@ function report(q, item, res) {
   S.set(Q_KEY, q);
   try { if (W.opener) W.opener.postMessage({ akf: 'result', id: item.id, res: q.results[item.id] }, '*'); } catch (e) {}
 }
+const CLOSED_RX = /job (is )?no longer|not found|no longer accepting|no longer available|(doesn.t|does not|don.t) exist|(has been|is|was) (closed|filled|removed|unpublished)|position (is )?(closed|filled)|404/i;
 async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
   status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
-  const rep = await fillForm({ prior: item.p || [] });
+  if (OK_RX.test(document.body.innerText || '') && !entries().length) {
+    report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || [''])[0], answered: -1 });
+    q.blocks = 0; S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+  }
+  // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
+  const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 20000, 400);
+  if (seen !== 'form') {
+    if (q.stopped) return true;
+    report(q, item, { status: 'closed', why: seen === 'closed' ? 'posting closed / not found' : 'no application form on the page (posting removed?)', answered: 0 });
+    status(`${item.c} - ${item.t}: ${seen === 'closed' ? 'closed' : 'no form'} - skipping`);
+    q.blocks = 0; S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+  }
+  let rep;
+  try { rep = await fillForm({ prior: item.p || [] }); }
+  catch (e) {   // a filler error on one job is logged and the batch continues
+    if (q.stopped) return true;
+    report(q, item, { status: 'unknown', why: 'filler error: ' + String((e && e.message) || e).slice(0, 80), answered: 0 });
+    S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+  }
   let res;
   if (q.stopped) return true;
   if (/job (is )?no longer|not found|no longer accepting/i.test(document.body.innerText) && !entries().length) res = { status: 'closed', why: 'posting closed' };
@@ -624,7 +643,7 @@ async function boot() {
   const hq = readHashQueue();
   if (hq) {
     const n = hq.items.length;
-    const ok = confirm(`${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} Ashby application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
+    const ok = (hq.auto && n === 1) ? true : confirm(`${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} Ashby application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
       hq.items.slice(0, 20).map(x => `• ${x.c} - ${x.t}`).join('\n') + (n > 20 ? `\n...and ${n - 20} more` : '') +
       (hq.auto ? '\n\nEach form is submitted only if every required question is answered by your rules; anything else is left for you.' : ''));
     if (ok) S.set(Q_KEY, hq);
@@ -632,6 +651,19 @@ async function boot() {
   const q = S.get(Q_KEY, null);
   if (q && !q.done && !q.stopped && q.items && q.items[q.i]) {
     if (curJobId() === q.items[q.i].id) { await sleep(1500); if (await batchStep(q)) return; }
+    else if (/(^|\.)jobs\.ashbyhq\.com$/.test(location.hostname)) {
+      await sleep(1200);
+      const body = document.body.innerText || '';
+      const item = q.items[q.i]; let res;
+      if (OK_RX.test(body)) res = { status: 'submitted', why: (body.match(OK_RX) || [''])[0], answered: -1 };
+      else if (SPAM_RX.test(body)) res = { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0], answered: -1 };
+      else res = { status: 'unknown', why: 'left the application page before a confirmation was seen', answered: -1 };
+      report(q, item, res);
+      q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
+      if (q.blocks >= 2) q.stopped = "Ashby's spam check rejected two submissions in a row";
+      S.set(Q_KEY, q);
+      await sleep(1200); advance(q); return;
+    }
   }
   if (q && q.done) { ui(); finish(q); }
   const auto = S.get('autofill', HAS_GM);
