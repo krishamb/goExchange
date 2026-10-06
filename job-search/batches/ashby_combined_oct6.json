@@ -31,6 +31,22 @@
  },
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/astronomer/89a60cf7-cdde-45b4-b09c-c0e527217cb0",
+  "apply_url": "https://jobs.ashbyhq.com/astronomer/89a60cf7-cdde-45b4-b09c-c0e527217cb0/application",
+  "tag": "astronomer_senior_software_engineer_core_platf",
+  "company": "astronomer",
+  "slug": "astronomer",
+  "title": "Senior Software Engineer, Core Platform",
+  "loc": "New York City",
+  "mode": "ny-hybrid",
+  "tier": 5,
+  "priority": 0,
+  "published": "2026-10-06T22:00:58.694000+00:00",
+  "posted_ts": 1791324058.694,
+  "job_id": "89a60cf7-cdde-45b4-b09c-c0e527217cb0"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
   "apply_url": "https://jobs.ashbyhq.com/scribe/a5650f40-bfe5-4b14-b5e6-49ed6edd619f",
   "tag": "scribe_senior_full_stack_engineer_enterprise_s",
