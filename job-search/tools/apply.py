@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"earliest (date )?(that )?you (can|could) (begin|start|join)|earliest you can (begin|start)|how much notice do you need", "Immediately (available to start right away)"),   # the applicant's start answer; placed before the current-employer rule, which 'if you're currently working' would otherwise hit
  (r"(current |your )?work authori[sz]ation( status)?|(what is your )?(employment|work) eligibility( status)?", "Authorized to work in the United States; no visa sponsorship required now or in the future"),
  (r"preferred (work )?shifts?|shift preference|which shifts?", "Standard business hours, Pacific time (flexible for global teams)"),
  (r"languages? (that )?you speak|spoken languages|languages? spoken|what languages do you speak", "English (fluent)"),
