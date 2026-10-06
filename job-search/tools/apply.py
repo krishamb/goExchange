@@ -291,6 +291,8 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"hands-on experience integrating (blockchain|web3)|experience (integrating|with) (blockchain|web3) functionality|(blockchain|web3|on-chain|smart contract).{0,80}(most accurately|best describes|reflects)|(most accurately|best describes|reflects).{0,80}(blockchain|web3|on-chain|smart contract)", ["I have shipped production features","shipped production features","production","mainnet"]),   # digital-asset / smart-contract systems in production (TEXT rule: Hyperion AI digital-asset systems in Rust; CHOICE rule: solidity/smart contracts hands-on)
+ (r"react native|experience with react\b.{0,40}native", ["React (web) but never React Native","using React (web) but never","React (web)","React"]),   # React web on his stack; never shipped React Native
  (r"^are you a referral\b|^were you referred\b|^referral\?$|^(is this|are you) an? (employee )?referral", ["No","no"]),   # not referred (Fieldwire)
  (r"(professional )?(working )?experience (coding|programming|developing|writing (code|software)) in (python|go\b|golang|rust|c\+\+|c#|java\b|typescript|javascript|sql)", ["Yes","yes"]),   # languages on his stack (TEXT rule: Python, Go, Rust, C++, C#/.NET, Java)
  (r"database administrat(or|ion)( experience)?|experience (as a |with )?(dba|database administrat\w+)", ["Yes","yes"]),   # ran Postgres/MySQL at scale in production (CHOICE rule 'personally built with or operated in production')

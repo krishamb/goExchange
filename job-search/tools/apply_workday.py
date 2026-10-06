@@ -1112,6 +1112,15 @@ async def auth(page, job, s):
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
             remember(e, _key); return "verify"
         if APPLIED.search(body) or await signed_in_now(page): remember(e, _key); return "ok"
+        if time.time() > end - 32 and not await page.locator(f'input{A("verifyPassword")}').count() and await page.locator(f'{A("SignInWithEmailButton")}:visible, {A("signInSubmitButton")}:visible').count():
+            # the tenant created the account and returned to its Sign In page (Thomson Reuters): sign in once with the new account
+            log(job, "create account: back at Sign In; signing in with the new account")
+            if (s["tenants"].get(ten) or {}).get("new_failed"): return "fail"
+            r = await sign_in(e, pw)
+            if r is True: remember(e, _key); return "ok"
+            if r is None: return "blocked"
+            if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
+            log(job, f"create account: sign-in with the new account -> {r}"); return "fail"
         errs = await form_errors(page)
         if errs:   # e.g. Visa: 'Password must include: A minimum of 12 characters' (wf_creds new_account_password)
             if "strong" in creds and pw != creds["strong"][1] and any(re.search(r"password", x, re.I) for x in errs):
