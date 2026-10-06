@@ -5361,6 +5361,21 @@
    "company": "Human Interest",
    "first": "2026-10-06",
    "via": "greenhouse-cloud"
+  },
+  "fieldwire": {
+   "company": "Fieldwire",
+   "first": "2026-10-06",
+   "via": "greenhouse-cloud"
+  },
+  "metamask": {
+   "company": "MetaMask",
+   "first": "2026-10-06",
+   "via": "greenhouse-cloud"
+  },
+  "consensys": {
+   "company": "Consensys",
+   "first": "2026-10-06",
+   "via": "greenhouse-cloud"
   }
  }
 }
