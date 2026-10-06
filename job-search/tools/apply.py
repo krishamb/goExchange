@@ -639,7 +639,14 @@ CHOICE_RULES=[
  (r"family member|relative|personal relationship|related to (anyone|any employee|an employee)|know anyone|referred by|were you referred|referred to this", ["No","no","None"]),
  (r"been employed by|employed by .* in the past|(worked|employed|interviewed|applied|contracted|consulted) .{0,60}in the past|in the past .{0,40}(worked|employed|interviewed|applied)", ["No","no","Never"]),
  (r"security clearance|clearance", ["No","None","no"]),
- (r"professional engineer \(pe\)|professional engineer licens|\bpe licens|licensed professional engineer|fundamentals of engineering|\bfe exam\b|engineer[- ]in[- ]training", ["No","no","None"]),   # applicant holds no PE/FE license -> No
+ (r"professional engineer \(pe\)|professional engineer licens|\bpe licens|licensed professional engineer|fundamentals of engineering|\bfe exam\b|engineer[- ]in[- ]training", ["No","no","None"]),
+ # --- recurring dropdowns that used to be left for the user (answer-every-question) ---
+ (r"years? of (professional |relevant |software |industry |work |engineering )?experience|how many years|years in the (software )?industry", ["25+","25+ years","25","20+","20+ years","20","15+","15+ years","15","10+","10+ years","10","8+","7+","6+","5+","5+ years","5"]),   # 25+ years: take the highest band offered
+ (r"willing to work (on[- ]?site|in[- ]?(the )?office|from (the|our) office)|work on[- ]?site|onsite (role|position|work)|able to work (on[- ]?site|in[- ]office)|commute to (the )?office", ["Yes","yes"]),   # only Bay Area onsite roles reach this queue (Santa Clara based)
+ (r"python (proficiency|experience|skill)|proficien(cy|t) (in|with) python|describe your python", ["Advanced","Advanced — regularly build production solutions or substantial integrations","Expert","Proficient","4","5"]),
+ (r"accurately reflect|(information|details) (i|you) (submitted|provided|entered) (is|are) (accurate|true|correct)|my own (employment|work) history", ["Yes","I confirm","Confirm","I agree"]),   # résumé/application accuracy confirmation
+ (r"professional languages? spoken|languages? (you )?(speak|are fluent)|fluent languages?", ["English","english"]),
+ (r"(currently|previously|ever) (been )?(employed|worked) (by|at|for|with)|former (employee|contractor)|have you (ever )?worked (for|at)|employment history (with|at)", ["No","I have never","Never","None","I have not"]),   # never worked for the hiring company   # applicant holds no PE/FE license -> No
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
@@ -1697,7 +1704,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     if re.search(r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)",lab,re.I): report["unanswered"].append({"type":"checkbox","label":lab[:160],"note":"personal certification left for the applicant","keep":True}); continue
                     if re.search(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export",lab,re.I):   # a disclosure statement ("I am subject to a non-compete", "I hold a financial interest"): never tick it
                         report["chosen"][lab[:60]]="left unticked (disclosure)"; continue
-                    if re.search(r"agree|acknowledge|consent|certify|confirm|\battest\b|\bauthorize\b|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present|^accept\*?$|i accept",lab,re.I):
+                    if re.search(r"agree|acknowledge|consent|certify|confirm|\battest\b|\bauthorize\b|privacy|terms|policy|accurate|true|currently work|current (role|position|job)|i still work|to present|^accept\*?$|i accept"
+                                 r"|tools assist our recruit|do not replace human judgment|(use of |uses? |may use )ai (tools )?(in|during|for|to assist) (the |our |its )?(hiring|recruit|application|screening)|ai (tools|technolog(y|ies)) (may be|are|is) used",lab,re.I):   # employer's AI-in-hiring process acknowledgment (Lever): accepted, like its dropdown form
                         await tick(h); report["chosen"][lab[:60]]="checked"; continue
                     if len(members)>1:
                         # a pick-list rendered as checkboxes (e.g. "How did you hear about us?"): tick exactly one option
