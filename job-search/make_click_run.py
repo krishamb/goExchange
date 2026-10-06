@@ -17,11 +17,11 @@ import json, re, os, glob, time, base64, html as H
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRIV = os.path.expanduser(os.environ.get("JOBS_DIR", "~/jobs-private"))
-OUT = os.path.join(PRIV, "click_run.html")
+OUT = os.path.join(PRIV, os.environ.get("CLICK_RUN_OUT", "click_run.html"))
 
 def norm(s): return re.sub(r"[^a-z0-9]", "", str(s or "").lower())
 
-queue = json.load(open(os.path.join(HERE, "batches", "ashby_all.json")))
+queue = json.load(open(os.environ.get("ASHBY_QUEUE") or os.path.join(HERE, "batches", "ashby_all.json")))
 
 done_tags, done_cos = set(), set()
 for f in glob.glob(os.path.join(PRIV, "out", "*_report.json")):
