@@ -10,7 +10,7 @@
   "loc": "Remote (US)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790705879.4177523,
+  "posted_ts": 1790706716.6985316,
   "src": "ventureloop"
  },
  {
@@ -24,7 +24,7 @@
   "loc": "Remote (United States)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790705879.4177606,
+  "posted_ts": 1790706716.6985402,
   "src": "ventureloop"
  },
  {
@@ -38,7 +38,7 @@
   "loc": "Americas (USA or Canada) (Remote)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790187479.4177651,
+  "posted_ts": 1790188316.698545,
   "src": "ventureloop"
  },
  {
@@ -52,7 +52,7 @@
   "loc": "Brooklyn, NYC (Remote)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790187479.4177697,
+  "posted_ts": 1790188316.69855,
   "src": "ventureloop"
  },
  {
@@ -66,7 +66,7 @@
   "loc": "Remote",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790187479.4177744,
+  "posted_ts": 1790188316.698555,
   "src": "ventureloop"
  },
  {
@@ -80,7 +80,7 @@
   "loc": "USA (Remote) / Canada (Remote)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790187479.4177785,
+  "posted_ts": 1790188316.6985586,
   "src": "ventureloop"
  },
  {
@@ -94,7 +94,7 @@
   "loc": "Remote (San Francisco, CA, Seattle, WA, New York City)",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1790187479.4177823,
+  "posted_ts": 1790188316.6985624,
   "src": "ventureloop"
  },
  {
@@ -108,7 +108,7 @@
   "loc": "U.S Remote",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1789582679.4177892,
+  "posted_ts": 1789583516.6985693,
   "src": "ventureloop"
  },
  {
@@ -122,7 +122,7 @@
   "loc": "San Francisco",
   "tier": 1,
   "priority": 1,
-  "posted_ts": 1789582679.4177935,
+  "posted_ts": 1789497116.6985738,
   "src": "ventureloop"
  },
  {
@@ -136,7 +136,7 @@
   "loc": "New York (Preferred) or Remote",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790965079.417797,
+  "posted_ts": 1790965916.6985774,
   "src": "ventureloop"
  },
  {
@@ -150,7 +150,7 @@
   "loc": "Boston (Remote)",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790705879.4178002,
+  "posted_ts": 1790706716.6985805,
   "src": "ventureloop"
  },
  {
@@ -164,7 +164,7 @@
   "loc": "Remote",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790705879.417803,
+  "posted_ts": 1790706716.6985834,
   "src": "ventureloop"
  },
  {
@@ -178,7 +178,7 @@
   "loc": "Remote (U.S. or Canada)",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790705879.4178061,
+  "posted_ts": 1790706716.6985862,
   "src": "ventureloop"
  },
  {
@@ -192,7 +192,7 @@
   "loc": "Remote",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790705879.4178092,
+  "posted_ts": 1790706716.698589,
   "src": "ventureloop"
  },
  {
@@ -206,7 +206,7 @@
   "loc": "New York / Boston (Remote)",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790187479.4178119,
+  "posted_ts": 1790188316.6985922,
   "src": "ventureloop"
  },
  {
@@ -220,7 +220,7 @@
   "loc": "Remote - US",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790187479.4178152,
+  "posted_ts": 1790188316.6985955,
   "src": "ventureloop"
  },
  {
@@ -234,7 +234,7 @@
   "loc": "Remote - U.S.",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790187479.4178183,
+  "posted_ts": 1790188316.6985986,
   "src": "ventureloop"
  },
  {
@@ -248,7 +248,7 @@
   "loc": "East Coast US & Europe (Remote)",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790187479.4178212,
+  "posted_ts": 1790188316.6986017,
   "src": "ventureloop"
  },
  {
@@ -262,7 +262,35 @@
   "loc": "East Coast US & Europe (Remote)",
   "tier": 2,
   "priority": 0,
-  "posted_ts": 1790187479.4178245,
+  "posted_ts": 1790188316.698605,
+  "src": "ventureloop"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/kong/ef91ea5c-d9f7-40b4-a62d-62453cf942d2",
+  "apply_url": "https://jobs.ashbyhq.com/kong/ef91ea5c-d9f7-40b4-a62d-62453cf942d2",
+  "tag": "kong_senior_staff_forward_deployed_engineer",
+  "company": "Kong",
+  "slug": "kong",
+  "title": "Senior Staff Forward Deployed Engineer",
+  "loc": "Texas, United States (Remote)",
+  "tier": 2,
+  "priority": 0,
+  "posted_ts": 1790188316.6986082,
+  "src": "ventureloop"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/stellar-health/f9202f23-6e6a-4272-b1e8-21ac70c95741",
+  "apply_url": "https://jobs.ashbyhq.com/stellar-health/f9202f23-6e6a-4272-b1e8-21ac70c95741",
+  "tag": "stellar_health_senior_staff_ai_data_engineer",
+  "company": "Stellar Health",
+  "slug": "stellar-health",
+  "title": "Senior Staff, AI Data Engineer",
+  "loc": "Remote",
+  "tier": 2,
+  "priority": 0,
+  "posted_ts": 1790188316.6986113,
   "src": "ventureloop"
  }
 ]
