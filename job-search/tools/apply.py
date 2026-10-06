@@ -1559,7 +1559,12 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         _hc=re.search(r"type\s+[\"']?([A-Za-z0-9]{2,20})[\"']?\s*(?:below|here|in the box|to (?:confirm|verify|proceed)|$)",key,re.I)
                         if _hc and re.search(r"real person|not a robot|prove you|human|verify you are|type the word",_k):
                             val=_hc.group(1)                       # anti-bot check: type the exact required word (e.g. "Real")
-                        elif not PERSONAL_Q.search(_k) and re.search(r"\bwhy\b|describe|tell us|what (makes|draws|interests|excites|motivat)|how (do|would|have) you|motivat|interest you|passion|about (this|the|our) (role|company|team|mission|product)|most (proud|excited)|anything (else|you)",_k):
+                        elif re.search(r"start date|availability|available to start|when (can|could) you start|notice period|earliest",_k): val="Within two weeks of an offer"
+                        elif re.search(r"years? of (relevant |professional |work |industry )?experience|how many years",_k): val="25"
+                        elif re.search(r"(current |your |home )?(location|city|where (are you|do you) (located|based|live|reside))|city and state|time ?zone",_k): val="Santa Clara, California, United States (Pacific time)"
+                        elif re.search(r"salary|compensation|remuneration|renumeration|pay (range|expectation|rate)|hourly rate|expected (rate|pay)",_k): val="Negotiable, depending on the scope of the role"   # never a number the applicant did not give
+                        elif not PERSONAL_Q.search(_k) and not re.search(r"\b(link|url|website|github|portfolio|profile|handle|twitter|linkedin)\b|password|ssn|social security|date of birth|\bdob\b",_k):
+                            # any other required open question (why / describe / tell us / what / how ...): the factual background paragraph
                             val=("I'm a hands-on engineering leader - CTO and co-founder of Hyperion AI, and formerly Chief Architect at Yahoo Finance leading 75+ engineers on a platform serving about 40M daily users - who still writes critical-path code in Python, Rust, Go and C++. I build AI, platform and data-intensive systems where performance, correctness and trust matter, and I would bring that mix of architecture and engineering leadership to this role.")
                             report.setdefault("generic_fallback",[]).append(key[:100])
                     cur=await h.input_value()
