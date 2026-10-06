@@ -671,13 +671,14 @@ async def fill_field(page, job, f):
         if cur: job.report.setdefault("kept_unverified", {})[key[:120]] = cur; job.ans(key, cur)
         return cur or None
     async def text_to(v):
-        if cur and norm(cur) == norm(v): return keep(cur)
         inp = box.locator("textarea, input").first
-        try:   # a numeric field (Workday numericInput / type=number): the first number of the answer, digits only (e.g. the low end of the applicant's salary range)
-            if (await inp.get_attribute("type") or "") == "number" or (await inp.get_attribute("inputmode") or "") in ("numeric", "decimal") or "numeric" in (await inp.get_attribute("data-automation-id") or "").lower() or re.search(r"numeric|currency", fid, re.I):
+        try:   # a numeric field (Workday numericInput / type=number, or one Workday rejected as a number on this step): the first number of the answer, digits only (e.g. the low end of the applicant's salary range)
+            nk = getattr(job, "numeric_keys", set())
+            if (await inp.get_attribute("type") or "") == "number" or (await inp.get_attribute("inputmode") or "") in ("numeric", "decimal") or "numeric" in (await inp.get_attribute("data-automation-id") or "").lower() or re.search(r"numeric|currency", fid, re.I) or await box.locator('[data-automation-id*="numeric" i], [data-automation-id*="currency" i]').count() or any(norm(k) and (norm(k) in norm(key) or norm(key) in norm(k)) for k in nk):
                 m = re.search(r"\d[\d,]*(\.\d+)?", v or "")
                 if m: v = m.group(0).replace(",", "")
         except Exception: pass
+        if cur and norm(cur) == norm(v): return keep(cur)
         return keep(v) if await fill(page, inp, v) else None
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
         # a draft's saved answer is kept only when it is not one the applicant would never give (needing sponsorship)
@@ -1321,7 +1322,12 @@ async def run_one(ctx, item, s):
                     job.report["errors"] = errs; await page.screenshot(path=f"{OUT}/{job.tag}_wd_error.png", full_page=True)
                     job.report["result"] = "NOT SUBMITTED: form errors"; return job.report
                 repaired.add(raw)
-                log(job, f"Workday errors on '{step}': {errs[:4]}; filling the step once more")
+                for e in errs:   # 'Error-What is your desired Annual Salary? The number entered is too large.' -> refill that field with a plain number
+                    m = re.match(r"\s*Error[-:]\s*(.+?)\s+(The number entered|must be a (whole )?number|enter a (valid )?number|is not a valid number|must be numeric)", e, re.I)
+                    if m:
+                        if not hasattr(job, "numeric_keys"): job.numeric_keys = set()
+                        job.numeric_keys.add(m.group(1).strip())
+                log(job, f"Workday errors on '{step}': {errs[:4]}; filling the step once more" + (f" (numeric: {sorted(getattr(job, 'numeric_keys', []))})" if getattr(job, "numeric_keys", None) else ""))
                 need = {k for k, rx in (("work", r"work experience"), ("edu", r"education"), ("lang", r"\blanguage\b")) if any(re.search(rx, e, re.I) for e in errs)}
                 if need: await experience_page(page, job, need)
                 continue
