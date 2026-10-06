@@ -5386,6 +5386,86 @@
    "company": "Thomson Reuters",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "magnitudesoftware": {
+   "company": "Magnitude Software",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "workday": {
+   "company": "Workday",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "citi": {
+   "company": "Citi",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "earlywarning": {
+   "company": "Early Warning",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "autodesk": {
+   "company": "Autodesk",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "capitalone": {
+   "company": "Capital One",
+   "first": "2026-09-30",
+   "via": "workday-cloud"
+  },
+  "salesforce": {
+   "company": "Salesforce",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "invesco": {
+   "company": "Invesco",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "shipt": {
+   "company": "Shipt",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "crowdstrike": {
+   "company": "CrowdStrike",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "relativity": {
+   "company": "Relativity",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "paloaltonetworks": {
+   "company": "Palo Alto Networks",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "walmart": {
+   "company": "Walmart",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "tdbank": {
+   "company": "TD Bank",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "lendingclub": {
+   "company": "LendingClub",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
+  },
+  "generalmotors": {
+   "company": "General Motors",
+   "first": "2026-10-01",
+   "via": "workday-cloud"
   }
  }
 }
