@@ -672,7 +672,13 @@ async def fill_field(page, job, f):
         return cur or None
     async def text_to(v):
         if cur and norm(cur) == norm(v): return keep(cur)
-        return keep(v) if await fill(page, box.locator("textarea, input").first, v) else None
+        inp = box.locator("textarea, input").first
+        try:   # a numeric field (Workday numericInput / type=number): the first number of the answer, digits only (e.g. the low end of the applicant's salary range)
+            if (await inp.get_attribute("type") or "") == "number" or (await inp.get_attribute("inputmode") or "") in ("numeric", "decimal") or "numeric" in (await inp.get_attribute("data-automation-id") or "").lower() or re.search(r"numeric|currency", fid, re.I):
+                m = re.search(r"\d[\d,]*(\.\d+)?", v or "")
+                if m: v = m.group(0).replace(",", "")
+        except Exception: pass
+        return keep(v) if await fill(page, inp, v) else None
     async def choose(prefs, strict=None, typeahead="", mlabel=None):
         # a draft's saved answer is kept only when it is not one the applicant would never give (needing sponsorship)
         saved_ok = False
