@@ -1004,6 +1004,17 @@ async def auth_state(page, secs=30):
         except Exception: pass
         await page.wait_for_timeout(800)
     return "unknown"
+async def open_email_signin(page, want="password"):
+    """Social chooser (Apple / Google / 'Sign in with email'): click 'Sign in with email' until the email form is showing.
+    A click right after the page renders can land before Workday's handlers are attached, so it is retried (3 tries)."""
+    target = f'input{A(want)}:visible, {A("createAccountLink")}:visible' if want == "password" else f'input{A(want)}:visible'
+    for _ in range(3):
+        if await page.locator(target).count(): return True
+        if not await page.locator(f'{A("SignInWithEmailButton")}:visible').count() and not await page.get_by_role("button", name=re.compile(r"sign in with email", re.I)).count(): return False
+        await click_last_visible(page, "SignInWithEmailButton") or await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
+        try: await page.locator(target).first.wait_for(state="visible", timeout=5000); return True
+        except Exception: await page.wait_for_timeout(1500)
+    return await page.locator(target).count() > 0
 async def auth(page, job, s):
     """Sign in or create the tenant account (applicant's plan): one sign-in attempt with his Workday login
     (wf_creds workday.email + first password); if that fails, create the account with workday.new_account_email /
@@ -1023,8 +1034,7 @@ async def auth(page, job, s):
         if not await page.locator(f'input{A("password")}:visible, {A("SignInWithEmailButton")}:visible').count() and await page.locator(f'{A("utilityButtonSignIn")}:visible').count():
             await click_button(page, "utilityButtonSignIn"); await page.wait_for_timeout(2000)   # tenants whose apply step renders empty until the header's Sign In opens the chooser (Thomson Reuters)
         if not await page.locator(f'input{A("password")}:visible').count():   # social chooser first: pick "Sign in with email"
-            await click_last_visible(page, "SignInWithEmailButton") or await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
-            await page.wait_for_timeout(1500)
+            await open_email_signin(page)
         if not await page.locator(f'input{A("email")}:visible').count() or not await page.locator(f'input{A("password")}:visible').count():
             return "noform"   # no sign-in form: nothing was submitted
         await fill(page, page.locator(f'input{A("email")}:visible').first, email)
@@ -1064,12 +1074,15 @@ async def auth(page, job, s):
     if st == "in":   # the one sign-in went through after all (slow tenant), or the form needs no account
         if r is not True and r != "noform": remember(creds["login"][0], "login")
         return "ok"
-    if not await page.locator(f'{A("createAccountLink")}:visible, input{A("verifyPassword")}:visible').count():   # social chooser first (PTC)
-        await click_last_visible(page, "SignInWithEmailButton") or await click_button(page, "SignInWithEmailButton", timeout=3000) or await click_button(page, name=r"sign in with email", timeout=3000) or await click_text(page, r"sign in with email")
-        await page.wait_for_timeout(1500)
-    if await page.locator(A("createAccountLink")).count(): await click_button(page, "createAccountLink"); await page.wait_for_timeout(1500)
+    if not await page.locator(f'{A("createAccountLink")}:visible, input{A("verifyPassword")}:visible').count():   # social chooser first (PTC, Thomson Reuters)
+        log(job, f"create account: email chooser -> {await open_email_signin(page)}")
+    if await page.locator(A("createAccountLink")).count():
+        await click_button(page, "createAccountLink")
+        try: await page.locator(f'input{A("verifyPassword")}').first.wait_for(state="visible", timeout=8000)
+        except Exception: pass
     if not await page.locator(f'input{A("verifyPassword")}').count():
-        return "fail"
+        log(job, "create account: no create-account form (verifyPassword) after the chooser / link"); return "fail"
+    log(job, "create account: form open")
     e, pw = creds["new"]; _key = "new"
     await fill(page, page.locator(f'input{A("email")}').first, e)
     await fill(page, page.locator(f'input{A("password")}').first, pw)
@@ -1080,11 +1093,16 @@ async def auth(page, job, s):
         except Exception: await cb.first.evaluate("(el)=>el.click()")
     if await page.locator(CAPTCHA).count(): return "blocked"
     await click_button(page, "createAccountSubmitButton") or await click_button(page, name=r"^create account$")
-    end = time.time() + 40
+    log(job, "create account: submitted")
+    end = time.time() + 40; _shot = 0
     while time.time() < end:
         await page.wait_for_timeout(1500)
         if await page.locator(CAPTCHA).count(): return "blocked"
         body = await text(page)
+        if time.time() > _shot + 10:
+            _shot = time.time(); log(job, f"create account: page now '{re.sub(chr(10), ' ', body)[:160]}'")
+            try: await page.screenshot(path=f"{OUT}/{job.tag}_wd_create_{int(_shot) % 1000}.png", full_page=True)
+            except Exception: pass
         if re.search(r"already (exists|in use|registered)|account with this email", body, re.I):
             if (s["tenants"].get(ten) or {}).get("new_failed"): return "fail"   # tried once already: never again (lockouts)
             r = await sign_in(e, pw)
