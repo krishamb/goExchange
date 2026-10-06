@@ -293,6 +293,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(are you |^)(currently |presently )?(a )?(current |former |previous |ex-)?(contractor|consultant|contingent worker|temp(orary)? (worker|employee)|intern|vendor)( employee)? (at|with|for|of)\b|current contractor", ["No","no"]),   # not a contractor / contingent worker at any employer's site (Thomson Reuters)
  (r"hands-on experience integrating (blockchain|web3)|experience (integrating|with) (blockchain|web3) functionality|(blockchain|web3|on-chain|smart contract).{0,80}(most accurately|best describes|reflects)|(most accurately|best describes|reflects).{0,80}(blockchain|web3|on-chain|smart contract)", ["I have shipped production features","shipped production features","production","mainnet"]),   # digital-asset / smart-contract systems in production (TEXT rule: Hyperion AI digital-asset systems in Rust; CHOICE rule: solidity/smart contracts hands-on)
  (r"react native|experience with react\b.{0,40}native", ["React (web) but never React Native","using React (web) but never","React (web)","React"]),   # React web on his stack; never shipped React Native
  (r"^are you a referral\b|^were you referred\b|^referral\?$|^(is this|are you) an? (employee )?referral", ["No","no"]),   # not referred (Fieldwire)
@@ -638,8 +639,8 @@ CHOICE_RULES=[
  (r"languages? (you|do you) (speak|are proficient)|select all the languages|languages? .{0,20}proficient|spoken languages?|fluent in", ["English","Python","Go"]),
  (r"(which|what) (departments?|teams?|functions?|areas?) (are|would) you (be )?interested in|departments? of interest", ["Engineering","Software Engineering","Technology","Engineering & Technology","Product & Engineering","Data Science","Data","Research & Development","IT"]),
  (r"office location|preferred (office|location|hub)|which office|office (would|do|will) you|closest office|nearest office",["Menlo Park","San Francisco","Santa Clara","Sunnyvale","Mountain View","Palo Alto","San Jose","Bay Area","California","Remote","New York"]),
- (r"hispanic|latino", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),
  (r"\brace\b|racial|ethnic|hispanic|asian|caucasian|african", ["I don't wish to answer","Do not wish to identify","I do not wish to identify","I do not wish to answer","Decline to State","Decline to state","Decline To Self Identify","Decline to self identify","Decline to self-identify","I choose not to disclose","Choose not to disclose","I prefer not to disclose","Prefer not to disclose","I choose not to self-identify","Not disclosed","Decline","Prefer not to say","Prefer not to answer","I do not wish to answer","I don't wish","Asian: Indian","Asian - Indian","Asian Indian","Asian or Indian Subcontinent","Asian (Indian)","South Asian","Asian","Asian (Not Hispanic or Latino)","Asian or Asian American"]),   # applicant: Asian (Indian) where no decline option exists; never a bare "Indian" (would match American Indian)
+ (r"^(?!.*\b(race|racial|ethnicity)\b).*(hispanic|latino)", ["No","I am not Hispanic or Latino","Not Hispanic or Latino"]),   # only the stand-alone Hispanic/Latino question; a Race select is declined above (a substring match once picked 'White (Not Hispanic or Latino)')
  (r"golden record|master data management|\bMDM\b|data governance (lead|owner)|chief data officer", ["No","no"]),   # not in the applicant's background: answer honestly
  (r"support of .{0,40} to maintain (that |your )?(work )?authori[sz]ation|maintain (that |your )?(work )?authori[sz]ation|visa support|immigration support", ["No","no"]),
  (r"how much notice|notice period|notice do you (require|need)", ["Immediate","Immediately","None","No notice required","Less than 1 week","1 week","2 weeks","Two weeks","Less than 2 weeks","Less than 1 month"]),   # applicant: two weeks' notice
@@ -653,7 +654,7 @@ CHOICE_RULES=[
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
  (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
- (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Career Site","Careers Website","Career Website","Careers Page","Career Page","Website","Careers","Job Post Site","Job Board","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page"]),
+ (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["Company Website","Company website","Company Careers","Careers Site","Career Site","Careers Website","Career Website","Careers Page","Career Page","Website","Careers","Job Post Site","Job Board","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page","Indeed","Glassdoor"]),
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
  (r"school|university|college", ["University of Madras","Other","School Not Listed","Other Institution","Madras University","Other School","Not Listed"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
@@ -1839,6 +1840,13 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 report["result"]=("Submitted by the applicant in assist mode: "+sm.group(0)) if sm else "NOT SUBMITTED: assist mode - not submitted (skipped or timed out)"
                 if not sm and re.search(r"possible spam|flagged as (possible )?spam|pause browser extensions|different (network )?connection instead",body,re.I): report["spam_blocked"]=True
             elif submit and not report["unanswered"]:
+                net=[]
+                if ats=="lever":   # diagnostics: Lever's submit POST and its answer (a silent failure shows here)
+                    async def _resp(r):
+                        try:
+                            if r.request.method in ("POST","PUT") and re.search(r"lever\.co|hcaptcha",r.url): net.append({"url":r.url[:140],"status":r.status,"body":(await r.text())[:300]})
+                        except Exception: pass
+                    page.on("response", lambda r: asyncio.ensure_future(_resp(r)))
                 cands=page.locator('button:has-text("Send application"), button#btn-submit, button[type="submit"], input[type="submit"], button:has-text("Submit application"), button:has-text("Submit Application"), button:has-text("Submit")')
                 btn=None
                 for i in range(await cands.count()):
@@ -1888,6 +1896,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             report.setdefault("notes",[]).append("resume re-attached after uploader error"); continue
                         except Exception: pass
                     break
+                if net: report["net"]=net[-8:]
                 sm=re.search(r"thank you for (applying|your application|submitting|your interest|sharing)|thanks for applying|application (has been |was |is )?(submitted|received|sent|in\b|complete)|we('ve| have) received your application|successfully submitted|you're all set|task complete|good news",body,re.I)
                 if re.search(r"/confirmation\b",page.url) and re.search(r"upstream (request failed|connect error)|bad gateway|service unavailable|gateway time-?out|\b50[234]\b",body[:400],re.I):
                     # the confirmation page itself failed to render (proxy/CDN hiccup): reload it once to read the real confirmation
