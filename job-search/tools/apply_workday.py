@@ -362,6 +362,7 @@ def cat_rank(c, toks=()):
     return 9
 
 # ---- Workday widgets
+SKILL_TAGS = ["Python", "Java", "C++", "Rust", "AWS", "Kubernetes", "Machine Learning", "Software Architecture", "Distributed Systems", "Microservices", "Kafka", "Terraform", "Engineering Management", "Software Engineering", "Cloud Computing", "SQL"]
 LISTBOX_OPT = '[role="listbox"]:not([data-automation-id="selectedItemList"]) [role="option"]:visible:not([aria-disabled="true"])'
 async def listbox_choose(page, button, ranker, typeahead=""):
     """Workday single-select (button[aria-haspopup=listbox]): open it, click the option ranker(texts) names, and verify
@@ -745,6 +746,27 @@ async def fill_field(page, job, f):
         return keep(v) if v else None
     # 'Have you previously worked for <company>?' is answered by the rules like any question: Yes for the applicant's
     # real past employers (Morgan Stanley, JPMorgan Chase, Bloomberg, ...), No for every other company
+    if kind == "prompt" and (re.search(r"skills?$", fid, re.I) or re.search(r"add skills|^skills?\b", low)):
+        # Workday's Skills multiselect (required on some tenants, e.g. Thomson Reuters): the applicant's documented stack
+        # (apply.py 'relevant technical skills' rule), searched one tag at a time; only exact / containing matches are taken
+        if cur and len(cur.split(";")) >= 3: return keep(cur)
+        got = []
+        for q in SKILL_TAGS:
+            if len(got) >= 8: break
+            try:
+                auto = await prompt_open(page, box, q)
+                if auto: got += auto; continue
+                loc, texts, subs = await menu_items(page)
+                k = next((i for i, t in enumerate(texts) if not subs[i] and norm(t) == norm(q)), None)
+                if k is None: k = next((i for i, t in enumerate(texts) if not subs[i] and norm(q) in norm(t)), None)
+                if k is None:
+                    await page.keyboard.press("Escape"); continue
+                await loc.nth(k).click(timeout=4000); await page.wait_for_timeout(800); await page.keyboard.press("Escape")
+                if any(norm(texts[k]) == norm(x) for x in await prompt_selected(box)): got.append(texts[k])
+            except Exception:
+                try: await page.keyboard.press("Escape")
+                except Exception: pass
+        return keep("; ".join(dict.fromkeys(got))) if got else None
     if "linkedin" in low and kind in ("text", "textarea"): return await text_to(P["linkedin"])
     if kind == "checkbox" and not f.get("opts"):   # some tenants' checkbox labels are not tied to the inputs: read them from the page
         try:
