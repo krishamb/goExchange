@@ -5466,6 +5466,31 @@
    "company": "General Motors",
    "first": "2026-10-01",
    "via": "workday-cloud"
+  },
+  "guidewire": {
+   "company": "Guidewire",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "paypal": {
+   "company": "PayPal",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "snap": {
+   "company": "Snap",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "ssctechnologies": {
+   "company": "SS&C Technologies",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
+  },
+  "wellsfargo": {
+   "company": "Wells Fargo",
+   "first": "2026-10-02",
+   "via": "workday-cloud"
   }
  }
 }
