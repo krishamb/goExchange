@@ -58,7 +58,6 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
- (r"earliest (date )?(you|that you) (can|could) (begin|start)|when (can|could|are you able to) (you )?(begin|start)|how much notice|notice period|start date|date available|availability to start", "Within two weeks of an offer (two weeks' notice to my current engagement)"),
  (r"(current |your )?work authori[sz]ation( status)?|(what is your )?(employment|work) eligibility( status)?", "Authorized to work in the United States; no visa sponsorship required now or in the future"),
  (r"preferred (work )?shifts?|shift preference|which shifts?", "Standard business hours, Pacific time (flexible for global teams)"),
  (r"languages? (that )?you speak|spoken languages|languages? spoken|what languages do you speak", "English (fluent)"),
