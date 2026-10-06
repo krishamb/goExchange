@@ -291,6 +291,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^are you a referral\b|^were you referred\b|^referral\?$|^(is this|are you) an? (employee )?referral", ["No","no"]),   # not referred (Fieldwire)
+ (r"(professional )?(working )?experience (coding|programming|developing|writing (code|software)) in (python|go\b|golang|rust|c\+\+|c#|java\b|typescript|javascript|sql)", ["Yes","yes"]),   # languages on his stack (TEXT rule: Python, Go, Rust, C++, C#/.NET, Java)
+ (r"database administrat(or|ion)( experience)?|experience (as a |with )?(dba|database administrat\w+)", ["Yes","yes"]),   # ran Postgres/MySQL at scale in production (CHOICE rule 'personally built with or operated in production')
  (r"experience (using|with) ai[- ]assisted (development |dev |coding )?tools|github copilot|\bcursor\b|ai[- ]assisted (coding|development|dev)|ai (coding|development|dev|pair[- ]?programming) tools|use ai[- ]assisted (development|coding) tools", ["Yes","yes"]),   # applicant uses agentic engineering / AI dev tools daily (CTO building AI)
  (r"would you like to receive (mobile )?text|(text message|sms|mobile text).{0,40}(opt-?in|opt-?out|updates|consent|recruiting)|opt-?in below", ["Opt-Out from receiving text messages from Walmart","Opt-Out from receiving text messages","Opt-Out","Opt Out","Decline","No","Do not opt-in"]),   # applicant declines SMS/text recruiting messages
  (r"(select|what is) your age category|^age category|please select your age", ["18 years of age and Over","18 years or older","18 and over","18 or older","Over 18","18+","Yes"]),   # applicant is over 18 (age-eligibility, not a demographic band)
