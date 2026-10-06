@@ -1161,6 +1161,8 @@ async def auth(page, job, s):
             r = await sign_in(e, pw)
             if r is True: remember(e, _key); return "ok"
             if r is None: return "blocked"
+            if re.search(r"verify your (account|email)|request a verification email|account verification", await text(page), re.I):
+                remember(e, _key); log(job, "create account: the tenant wants the email verified first"); return "verify"   # the link is read from Gmail and written to out/<tag>_verify.txt
             if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
             log(job, f"create account: sign-in with the new account -> {r}"); return "fail"
         errs = await form_errors(page)
