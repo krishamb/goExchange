@@ -5546,6 +5546,11 @@
    "company": "White Cap",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "dexcom": {
+   "company": "Dexcom",
+   "first": "2026-10-06",
+   "via": "workday-cloud"
   }
  }
 }
