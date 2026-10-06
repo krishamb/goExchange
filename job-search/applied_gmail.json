@@ -5113,6 +5113,21 @@
    "company": "jfrog",
    "first": "2026-10-05",
    "via": "cloud"
+  },
+  "twelvelabs": {
+   "company": "twelvelabs",
+   "first": "2026-10-06",
+   "via": "applied (browser filler)"
+  },
+  "superpower": {
+   "company": "superpower",
+   "first": "2026-10-06",
+   "via": "user removed"
+  },
+  "revecore": {
+   "company": "revecore",
+   "first": "2026-10-06",
+   "via": "user removed"
   }
  }
 }
