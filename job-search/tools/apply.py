@@ -646,7 +646,9 @@ CHOICE_RULES=[
  (r"python (proficiency|experience|skill)|proficien(cy|t) (in|with) python|describe your python", ["Advanced","Advanced — regularly build production solutions or substantial integrations","Expert","Proficient","4","5"]),
  (r"accurately reflect|(information|details) (i|you) (submitted|provided|entered) (is|are) (accurate|true|correct)|my own (employment|work) history", ["Yes","I confirm","Confirm","I agree"]),   # résumé/application accuracy confirmation
  (r"professional languages? spoken|languages? (you )?(speak|are fluent)|fluent languages?", ["English","english"]),
- (r"(currently|previously|ever) (been )?(employed|worked) (by|at|for|with)|former (employee|contractor|associate|team member|staff member|intern|colleague)|are you a former|previously (an? )?(employee|associate|contractor)|have you (ever )?worked (for|at)|employment history (with|at)|rehire|boomerang", ["No","I have never","Never","None","I have not"]),   # never worked for the hiring company ("associate" = employee at some firms)   # applicant holds no PE/FE license -> No
+ (r"(currently|previously|ever) (been )?(employed|worked) (by|at|for|with)|former (employee|contractor|associate|team member|staff member|intern|colleague)|are you a former|previously (an? )?(employee|associate|contractor)|have you (ever )?worked (for|at)|employment history (with|at)|rehire|boomerang", ["No","I have never","Never","None","I have not"]),   # never worked for the hiring company ("associate" = employee at some firms)
+ (r"basis of your right to work|right to work in (the )?(country|united states|us|usa)|legal (basis|status) (to|for) work|confirm .{0,30}right to work", ["I have the right to work","I have the right","Authorized to work","I am authorized","Citizen","Yes"]),   # US-authorized, no sponsorship (same fact as the Yes/No work-auth rule)
+ (r"age group|your age\b|age range|age bracket|how old are you|date of birth|year (you were )?born", ["I don't wish to say","Prefer not to say","I don't wish to answer","Prefer not to answer","Decline to self-identify","Decline","Prefer not to disclose"]),   # demographic: decline, like the other self-ID questions   # applicant holds no PE/FE license -> No
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
@@ -1599,7 +1601,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
                         if not pref:
                             # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
-                            pref=["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
+                            pref=["I don't wish to answer","I don't wish to say","I'd rather not say","Do not wish to disclose","Prefer not to disclose","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I acknowledge","I agree","I have read","Acknowledge","Agree"]
                         got=await choose_react_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
                         if not got: report["unanswered"].append({"type":"combo","label":lab[:160],"options":LAST_OPTIONS.get(lab[:160],[])[:12]})
                     except Exception: pass
