@@ -1,6 +1,20 @@
 [
  {
   "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/cloaked/66a831e8-1b22-458d-bc04-505e4ce7b3d2",
+  "apply_url": "https://jobs.ashbyhq.com/cloaked/66a831e8-1b22-458d-bc04-505e4ce7b3d2/application",
+  "tag": "cloaked_senior_software_engineer_voice_ai",
+  "company": "cloaked",
+  "slug": "cloaked",
+  "title": "Senior Software Engineer, Voice AI",
+  "loc": "New York, NY",
+  "tier": 4,
+  "priority": 0,
+  "posted_ts": 1791237972.292,
+  "src": "ashby-50h"
+ },
+ {
+  "ats": "ashby",
   "url": "https://jobs.ashbyhq.com/wagmo/b98348bc-2d3e-4fff-8714-37627cd44e58",
   "apply_url": "https://jobs.ashbyhq.com/wagmo/b98348bc-2d3e-4fff-8714-37627cd44e58",
   "tag": "wagmo_principal_engineer",
@@ -1031,21 +1045,6 @@
   "tier": 1,
   "priority": 0,
   "posted_ts": 1788461211.7883701,
-  "age_days": 33,
-  "src": "ventureloop"
- },
- {
-  "ats": "ashby",
-  "url": "https://jobs.ashbyhq.com/ironcladhq/070ff029-9740-4898-a233-a4f0d4e659b3",
-  "apply_url": "https://jobs.ashbyhq.com/ironcladhq/070ff029-9740-4898-a233-a4f0d4e659b3",
-  "tag": "ironclad_director_gtm_engineering_systems_arch",
-  "company": "Ironclad",
-  "slug": "ironcladhq",
-  "title": "Director, GTM Engineering & Systems Architecture",
-  "loc": "San Francisco / New York City (Hybrid)",
-  "tier": 1,
-  "priority": 0,
-  "posted_ts": 1788461211.788366,
   "age_days": 33,
   "src": "ventureloop"
  },
