@@ -5491,6 +5491,11 @@
    "company": "Wells Fargo",
    "first": "2026-10-02",
    "via": "workday-cloud"
+  },
+  "convoso": {
+   "company": "Convoso",
+   "first": "2026-10-06",
+   "via": "greenhouse-cloud"
   }
  }
 }
