@@ -297,6 +297,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b).*have you (ever )?(previously )?(worked|been employed) (with|for|at|by) .{1,60}\b(affiliates?|subsidiar(y|ies)|parent compan(y|ies)|sister compan(y|ies)|family of companies)\b", ["No","no"]),   # former-employer question (R1 RCM): never worked for the hiring company or its affiliates; must precede the 'have you worked with <tech>' Yes rule
  (r"(currently )?(under|on) (an )?opt status|\bopt status\b|on (f-?1 )?opt\b|\bf-?1 (visa )?status|applying for (opt|stem opt|cpt)|\bstem opt\b|\bcpt\b", ["No","no"]),   # not on F-1 OPT: authorized to work without sponsorship (Press Ganey)
  (r"signed any (documents?|agreements?).{0,80}(prohibit|prevent|restrict).{0,60}(employ|work)|(non-?compete|non-?solicit|restrictive covenant).{0,80}(prohibit|prevent|restrict|preclude)", ["No","no"]),   # no agreement bars employment (same as the restrictive-covenants rule)
  (r"(are|were) you (an? )?((current|former|previous|past)( or (former|previous|past))? )?employee (of|at|with)\b|employee of .{0,80}\((currently|current) or (previously|former)\)|\(currently or previously\)", ["No","no"]),   # not a current or former employee of the hiring company or its affiliates (Lyra / Bend)
