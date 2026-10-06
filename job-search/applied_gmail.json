@@ -5541,6 +5541,11 @@
    "company": "Centrum Health",
    "first": "2026-10-06",
    "via": "greenhouse-cloud"
+  },
+  "whitecap": {
+   "company": "White Cap",
+   "first": "2026-10-06",
+   "via": "workday-cloud"
   }
  }
 }
