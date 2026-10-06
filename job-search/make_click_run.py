@@ -35,7 +35,8 @@ except Exception: pass
 
 rows = []
 # exec/leadership roles (priority=1: Director / VP / CTO / Head of) first, then newest first
-for j in sorted(queue, key=lambda x: (-(x.get("priority") or 0), -(x.get("posted_ts") or 0))):
+_key = (lambda x: -(x.get("posted_ts") or 0)) if os.environ.get("ASHBY_SORT") == "recency" else (lambda x: (-(x.get("priority") or 0), -(x.get("posted_ts") or 0)))
+for j in sorted(queue, key=_key):
     if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
     rows.append(j)
 
@@ -105,8 +106,8 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 <div id="prog"></div>
 <div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
 <div class="box"><b>Apply to all — one click, hands-free and paced:</b><br>
-<a class="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
-It opens <b>one tab</b>, confirms once, then fills and submits each role on its own — and <b>waits a random 1–2 minutes before each new application</b> so Ashby never rate-limits you ("application submission unavailable"). It pauses if a role shows a captcha and stops if Ashby blocks two in a row. Leave the tab in front; you don't click again. The whole queue takes a few hours — that spacing is deliberate and is what keeps submissions going through.</div>
+<a class="start" id="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
+It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random 10 seconds to 2 minutes before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. It pauses on a captcha and stops after three blocks in a row (wait an hour, then press Start again).</div>
 <div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
@@ -119,6 +120,10 @@ function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
 function mark(k){{st[k]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.k]=b.checked?1:0;save();paint()}}));
 links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.k),800)}}));
+const ITEMS={json.dumps([{"k": (j.get("tag") or j["url"]), "u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in rows], ensure_ascii=False)};
+const ME={json.dumps({"email": AUTOFILL_EMAIL, "phone": AUTOFILL_PHONE})};
+function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,me:ME,items:items.map(x=>({{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
+document.getElementById('start').addEventListener('click',function(){{const left=ITEMS.filter(x=>!st[x.k]);if(!left.length){{alert('Every row is ticked as done.');return;}}this.href=left[0].u+'#akf='+akfHash(left);this.textContent='▶ Start — apply to '+left.length+' not yet done';}});
 paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
