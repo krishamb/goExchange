@@ -298,7 +298,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
- (r"(currently )?(under|on) (an )?opt status|\bopt status\b|on (f-?1 )?opt\b", ["No","no"]),   # not on F-1 OPT: authorized to work without sponsorship (Press Ganey)
+ (r"(currently )?(under|on) (an )?opt status|\bopt status\b|on (f-?1 )?opt\b|\bf-?1 (visa )?status|applying for (opt|stem opt|cpt)|\bstem opt\b|\bcpt\b", ["No","no"]),   # not on F-1 OPT: authorized to work without sponsorship (Press Ganey)
  (r"signed any (documents?|agreements?).{0,80}(prohibit|prevent|restrict).{0,60}(employ|work)|(non-?compete|non-?solicit|restrictive covenant).{0,80}(prohibit|prevent|restrict|preclude)", ["No","no"]),   # no agreement bars employment (same as the restrictive-covenants rule)
  (r"(are|were) you (an? )?((current|former|previous|past)( or (former|previous|past))? )?employee (of|at|with)\b|employee of .{0,80}\((currently|current) or (previously|former)\)|\(currently or previously\)", ["No","no"]),   # not a current or former employee of the hiring company or its affiliates (Lyra / Bend)
  (r"(are you |^)(currently |presently )?(a )?(current |former |previous |ex-)?(contractor|consultant|contingent worker|temp(orary)? (worker|employee)|intern|vendor)( employee)? (at|with|for|of)\b|current contractor", ["No","no"]),   # not a contractor / contingent worker at any employer's site (Thomson Reuters)
