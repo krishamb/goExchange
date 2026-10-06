@@ -882,6 +882,24 @@ async def choose_react_select(page,control,options_pref,label):
             if (await control.evaluate("el=>el.tagName"))=="INPUT": return (await control.input_value()).strip()
             return (await control.inner_text()).strip()
         except Exception: return ""
+    # Years-of-experience menus ("<1, 1 .. 9, >9", "5+", "10+ years"): the right answer is the highest band
+    # the menu offers, which no fixed preference list can know in advance. Read the menu and put it first.
+    if has_inp and re.search(r"years? of (professional |relevant |software |industry |work |engineering )?experience|how many years|years in the (software )?industry",label or "",re.I):
+        try:
+            await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp); await page.wait_for_timeout(700)
+            _o,_t=await visible_options(page)
+            def _yv(t):
+                m=re.search(r"(\d+(?:\.\d+)?)",t or "")
+                if not m: return None
+                v=float(m.group(1))
+                if re.search(r"^\s*(>|more than|over|above)|\+\s*$|\+ ?(years?|yrs?)|or more",t,re.I): v+=0.5
+                if re.search(r"^\s*(<|less than|under|fewer than)",t,re.I): v-=0.5
+                return v
+            _s=[(_yv(t),t) for t in _t if t and _yv(t) is not None]
+            if _s:
+                _best=max(_s)[1]; options_pref=[_best]+[p for p in options_pref if p!=_best]
+            await dismiss_menu(page,inp)
+        except Exception: pass
     try:
         for pref in (options_pref[:4] if has_inp else []):   # type-to-filter needs a real inner input
             await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp)
