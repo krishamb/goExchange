@@ -5551,6 +5551,11 @@
    "company": "Dexcom",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "motorolasolutions": {
+   "company": "Motorola Solutions",
+   "first": "2026-10-06",
+   "via": "workday-cloud"
   }
  }
 }
