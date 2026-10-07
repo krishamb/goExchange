@@ -891,7 +891,7 @@ async def open_menu(control,inp):
     except Exception:
         try: await control.click(timeout=3000)
         except Exception: await inp.focus()
-HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |initially )?(hear|learn|find)|\bsource\b|referred",re.I)
+HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |initially )?(hear|learn|find)|\bsource\b|\breferred\b",re.I)   # \b: "preferred ..." questions are not source questions
 HEAR_BAD=re.compile(r"recruit|employee|referr|refer(ral|red)|event|fair|conference|meetup|friend|colleague|agency|linkedin|university|campus|blog|podcast|hosted",re.I)
 LOC_Q=re.compile(r"location|city|where .{0,20}(based|live|located|reside)|residence",re.I)
 def mask_hear(texts,label):
