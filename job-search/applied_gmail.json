@@ -5611,6 +5611,11 @@
    "company": "CoStar Group",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "trasesystems": {
+   "company": "Trase Systems",
+   "first": "2026-10-07",
+   "via": "greenhouse-cloud"
   }
  }
 }
