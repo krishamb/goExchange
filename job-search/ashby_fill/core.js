@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.5';
+const VERSION = '2026-10-07.6';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -603,7 +603,7 @@ function report(q, item, res) {
 }
 const CLOSED_RX = /job (is )?no longer|not found|no longer accepting|no longer available|(doesn.t|does not|don.t) exist|(has been|is|was) (closed|filled|removed|unpublished)|position (is )?(closed|filled)|404/i;
 // ---- pacing, one-window lock, and a persistent record of every job this browser already submitted ----
-const PACE_MIN = 2000, PACE_MAX = 45000;            // random wait before each submission: 2 s - 45 s (the run page can set its own), doubled after each Ashby block (up to x4)
+const PACE_MIN = 5000, PACE_MAX = 50000;            // random wait AFTER the form is filled, right before each submission: 5 s - 50 s (the run page can set its own), doubled after each Ashby block (up to x4)
 const CAPTCHA_WAIT = 3 * 60000;                      // a captcha waits 3 min for the applicant (desktop notification), then the run moves on
 const BLOCK_WAIT = [240000, 360000];                 // after Ashby's "submission unavailable" / spam block: 4-6 min before the next job
 const TAB_ID = (() => {   // one id per browser tab: window.name survives every page load in the tab (also Ashby <-> Lever)
@@ -667,9 +667,9 @@ async function batchStep(q) {
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || ['confirmation page'])[0], answered: -1 }); markDone(item.id);
     q.blocks = 0; S.set(Q_KEY, q); await sleep(800); advance(q); return true;
   }
-  // the random pacing counts from page load and overlaps the form filling; closed / skipped jobs never wait
+  // the full random wait runs after the form is filled, right before Submit (never overlapped with filling); closed / skipped jobs never wait
   const [pMin, pMax] = (Array.isArray(q.pace) && q.pace.length === 2 && q.pace[1] >= q.pace[0]) ? q.pace : [PACE_MIN, PACE_MAX];   // pacing chosen by the run page
-  const tPage = Date.now(), paceMs = (q.auto && q.i > 0) ? Math.round((pMin + Math.random() * (pMax - pMin)) * (q.paceMul || 1)) : 0;
+  const paceMs = q.auto ? Math.round((pMin + Math.random() * (pMax - pMin)) * (q.paceMul || 1)) : 0;
   heartbeat();
   // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
   const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 12000, 300);
@@ -691,8 +691,7 @@ async function batchStep(q) {
   if (/job (is )?no longer|not found|no longer accepting/i.test(document.body.innerText) && !entries().length) res = { status: 'closed', why: 'posting closed' };
   else if (q.auto && rep.ready && captchaChallenge()) res = { status: 'captcha', why: 'tick the captcha, then click Submit application' };
   else if (q.auto && rep.ready) {
-    const left = paceMs - (Date.now() - tPage);
-    if (left > 0 && !await paceWait(item, q, left)) return true;
+    if (paceMs > 0 && !await paceWait(item, q, paceMs)) return true;
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
