@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.3';
+const VERSION = '2026-10-07.4';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -603,7 +603,7 @@ function report(q, item, res) {
 }
 const CLOSED_RX = /job (is )?no longer|not found|no longer accepting|no longer available|(doesn.t|does not|don.t) exist|(has been|is|was) (closed|filled|removed|unpublished)|position (is )?(closed|filled)|404/i;
 // ---- pacing, one-window lock, and a persistent record of every job this browser already submitted ----
-const PACE_MIN = 1000, PACE_MAX = 30000;            // random wait before each submission: 1 s - 30 s, doubled after each Ashby block (up to x4)
+const PACE_MIN = 2000, PACE_MAX = 45000;            // random wait before each submission: 2 s - 45 s (the run page can set its own), doubled after each Ashby block (up to x4)
 const CAPTCHA_WAIT = 3 * 60000;                      // a captcha waits 3 min for the applicant (desktop notification), then the run moves on
 const BLOCK_WAIT = [240000, 360000];                 // after Ashby's "submission unavailable" / spam block: 4-6 min before the next job
 const TAB_ID = (() => {   // one id per browser tab: window.name survives every page load in the tab (also Ashby <-> Lever)
@@ -668,7 +668,8 @@ async function batchStep(q) {
     q.blocks = 0; S.set(Q_KEY, q); await sleep(800); advance(q); return true;
   }
   // the random pacing counts from page load and overlaps the form filling; closed / skipped jobs never wait
-  const tPage = Date.now(), paceMs = (q.auto && q.i > 0) ? Math.round((PACE_MIN + Math.random() * (PACE_MAX - PACE_MIN)) * (q.paceMul || 1)) : 0;
+  const [pMin, pMax] = (Array.isArray(q.pace) && q.pace.length === 2 && q.pace[1] >= q.pace[0]) ? q.pace : [PACE_MIN, PACE_MAX];   // pacing chosen by the run page
+  const tPage = Date.now(), paceMs = (q.auto && q.i > 0) ? Math.round((pMin + Math.random() * (pMax - pMin)) * (q.paceMul || 1)) : 0;
   heartbeat();
   // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
   const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 12000, 300);
@@ -758,7 +759,8 @@ function readHashQueue() {
     const d = JSON.parse(json);
     const items = (d.items || []).filter(x => x && /^https:\/\/jobs\.(ashbyhq\.com|lever\.co)\/[^/]+\/[0-9a-f-]{36}/i.test(x.u)).map(x => Object.assign(x, { id: x.u.match(/([0-9a-f-]{36})/i)[1].toLowerCase() }));
     if (!items.length) return null;
-    return { name: String(d.name || 'batch').slice(0, 60), auto: !!d.auto, items, i: 0, results: {} };
+    const pace = Array.isArray(d.pace) && d.pace.length === 2 ? d.pace.map(Number).map(x => Math.max(1000, Math.min(300000, x || 0))) : null;
+    return { name: String(d.name || 'batch').slice(0, 60), auto: !!d.auto, pace, items, i: 0, results: {} };
   } catch (e) { return null; }
 }
 
