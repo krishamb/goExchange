@@ -5596,6 +5596,11 @@
    "company": "Veritone",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "genesys": {
+   "company": "Genesys",
+   "first": "2026-10-07",
+   "via": "workday-cloud"
   }
  }
 }
