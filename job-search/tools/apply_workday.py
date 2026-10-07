@@ -343,6 +343,8 @@ def hear_score(t, toks, cat=""):
     (not where the applicant found the role), a referral, recruiter, event or university."""
     tl = (t or "").strip().lower()
     if not tl: return 0
+    if SOURCE_SITE == "company":   # found on the company's own careers site: that item is the true source
+        return 0 if LINKEDIN_SRC.search(tl) else _old_hear_score(t, toks, cat)
     src = re.compile(r"\bindeed\b", re.I) if SOURCE_SITE == "indeed" else LINKEDIN_SRC
     bad = re.search(r"recruit|inmail|message|referr|employee|learning|event|fair", tl)
     if src.search(tl) and not bad: return 120
@@ -1256,7 +1258,8 @@ async def open_apply(page):
 
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
-    global SOURCE_SITE; SOURCE_SITE = "indeed" if re.search(r"indeed", str(item.get("src") or ""), re.I) else "linkedin"
+    global SOURCE_SITE; _src = str(item.get("src") or "")
+    SOURCE_SITE = "indeed" if re.search(r"indeed", _src, re.I) else ("company" if re.search(r"site-careers|company-site|careers", _src, re.I) else "linkedin")
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
     # Santa Clara); elsewhere the rule says No and the COMMUTE_Q guard leaves it for the applicant
     G["JOB_CHOICE_RULES"] = [(COMMUTE_Q.pattern, ["Yes", "yes"] if (item.get("where") == "bay" or re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|foster city|cupertino|milpitas|fremont|pleasanton|emeryville", str(item.get("where") or "") + " " + str(item.get("loc") or ""), re.I)) else ["No", "no"])]
