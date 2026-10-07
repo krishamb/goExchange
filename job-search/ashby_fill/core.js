@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.2';
+const VERSION = '2026-10-07.3';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -667,7 +667,8 @@ async function batchStep(q) {
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || ['confirmation page'])[0], answered: -1 }); markDone(item.id);
     q.blocks = 0; S.set(Q_KEY, q); await sleep(800); advance(q); return true;
   }
-  if (q.auto && q.i > 0) { const ms = Math.round((PACE_MIN + Math.random() * (PACE_MAX - PACE_MIN)) * (q.paceMul || 1)); if (!await paceWait(item, q, ms)) return true; }
+  // the random pacing counts from page load and overlaps the form filling; closed / skipped jobs never wait
+  const tPage = Date.now(), paceMs = (q.auto && q.i > 0) ? Math.round((PACE_MIN + Math.random() * (PACE_MAX - PACE_MIN)) * (q.paceMul || 1)) : 0;
   heartbeat();
   // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
   const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 12000, 300);
@@ -688,7 +689,11 @@ async function batchStep(q) {
   if (q.stopped) return true;
   if (/job (is )?no longer|not found|no longer accepting/i.test(document.body.innerText) && !entries().length) res = { status: 'closed', why: 'posting closed' };
   else if (q.auto && rep.ready && captchaChallenge()) res = { status: 'captcha', why: 'tick the captcha, then click Submit application' };
-  else if (q.auto && rep.ready) { status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm(); }
+  else if (q.auto && rep.ready) {
+    const left = paceMs - (Date.now() - tPage);
+    if (left > 0 && !await paceWait(item, q, left)) return true;
+    status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
+  }
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
   res.answered = rep.filled.length;
   if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after the site confirms
