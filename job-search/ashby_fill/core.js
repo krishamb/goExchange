@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.7';
+const VERSION = '2026-10-07.9';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -558,13 +558,13 @@ function ui() {
   if (!m.email || !(S.get('resume_main') || S.get('resume_exec'))) panel.querySelector('#akf-setup').open = true;
   return panel;
 }
-function banner(text, good) {   // an unmissable confirmation that the filler is live on this page
+function banner(text, good, ms) {   // an unmissable confirmation that the filler is live on this page
   try {
     let el = document.getElementById('akf-banner');
     if (!el) { el = document.createElement('div'); el.id = 'akf-banner'; document.documentElement.appendChild(el); }
     el.textContent = text;
     el.style.cssText = `position:fixed;top:0;left:0;right:0;z-index:2147483647;padding:10px 14px;text-align:center;font:600 14px system-ui,sans-serif;color:#fff;background:${good ? '#0b6b58' : '#a15c07'}`;
-    clearTimeout(banner.t); banner.t = setTimeout(() => { try { el.remove(); } catch (e) {} }, good ? 4000 : 9000);
+    clearTimeout(banner.t); banner.t = setTimeout(() => { try { el.remove(); } catch (e) {} }, ms || (good ? 4000 : 9000));
   } catch (e) {}
 }
 function status(t) { ui().querySelector('#akf-status').textContent = t; }
@@ -629,13 +629,13 @@ async function acquireLock(q) {
 }
 function heartbeat() { progress(); const l = S.get('lock', null); if (!l || l.id === TAB_ID) S.set('lock', { id: TAB_ID, ts: Date.now() }); }
 function releaseLock() { const l = S.get('lock', null); if (l && l.id === TAB_ID) S.set('lock', null); }
-async function paceWait(item, q, ms) {
+async function paceWait(item, q, ms, label) {
   const t0 = Date.now();
   while (Date.now() - t0 < ms) {
     if (S.get(Q_KEY, q).stopped) return false;
     heartbeat();
     const last = S.get('lastSubmitAt', 0); const ago = last ? Math.round((Date.now() - last) / 1000) : null;
-    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nForm filled. Waiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before submitting (random ${(q.pace || [PACE_MIN, PACE_MAX]).map(x => Math.round(x / 1000)).join('-')} s, filler v${VERSION})${ago != null ? `\nLast submission: ${ago} s ago` : ''}`);
+    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\n${label || 'Form filled. Waiting'} ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s ${label ? '' : 'before submitting '}(random ${(q.pace || [PACE_MIN, PACE_MAX]).map(x => Math.round(x / 1000)).join('-')} s, filler v${VERSION})${ago != null ? `\nLast submission: ${ago} s ago` : ''}`);
     await sleep(1000);
   }
   return true;
@@ -656,44 +656,55 @@ async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
   progress(); watchdog(q, item);
+  // ONE random wait per job, whatever happens to it: before Submit when it is submitted, before moving on otherwise
+  const [pMin, pMax] = (Array.isArray(q.pace) && q.pace.length === 2 && q.pace[1] >= q.pace[0]) ? q.pace : [PACE_MIN, PACE_MAX];   // pacing chosen by the run page
+  const paceMs = q.auto ? Math.round((pMin + Math.random() * (pMax - pMin)) * (q.paceMul || 1)) : 0;
+  const gap = async (why) => {   // the SPACER: a visible countdown after every job, before the next application opens
+    if (!(paceMs > 0) || S.get(Q_KEY, q).stopped) return true;
+    const t0 = Date.now(), pz = [pMin, pMax].map(x => Math.round(x / 1000)).join('-');
+    while (Date.now() - t0 < paceMs) {
+      if (S.get(Q_KEY, q).stopped) return false;
+      heartbeat();
+      const left = Math.ceil((paceMs - (Date.now() - t0)) / 1000);
+      banner(`⏳ ${why} - next application in ${left} s (random ${pz} s spacing, v${VERSION})`, true, 2500);
+      status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\n${why}.\nNext application in ${left} s (random ${pz} s spacing).`);
+      await sleep(1000);
+    }
+    return true;
+  };
   status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
   if (doneMap()[item.id]) {   // this browser already submitted this exact job (an earlier batch / the other window)
     report(q, item, { status: 'skipped', why: 'already submitted earlier from this browser', answered: 0 });
-    S.set(Q_KEY, q); await sleep(800); advance(q); return true;
+    S.set(Q_KEY, q); await gap('Already submitted earlier - skipped'); advance(q); return true;
   }
   if (!await acquireLock(q)) return true;
   keepAlive();
   if (onThanks() || (OK_RX.test(document.body.innerText || '') && !entries().length)) {   // the confirmation page of the job just submitted
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || ['confirmation page'])[0], answered: -1 }); markDone(item.id);
-    q.blocks = 0; S.set(Q_KEY, q); await sleep(800); advance(q); return true;
+    q.blocks = 0; S.set(Q_KEY, q); await gap(`Submitted ${item.c}`); advance(q); return true;
   }
-  // the full random wait runs after the form is filled, right before Submit (never overlapped with filling); closed / skipped jobs never wait
-  const [pMin, pMax] = (Array.isArray(q.pace) && q.pace.length === 2 && q.pace[1] >= q.pace[0]) ? q.pace : [PACE_MIN, PACE_MAX];   // pacing chosen by the run page
-  const paceMs = q.auto ? Math.round((pMin + Math.random() * (pMax - pMin)) * (q.paceMul || 1)) : 0;
   heartbeat();
   // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
   const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 12000, 300);
   if (seen !== 'form') {
     if (q.stopped) return true;
     report(q, item, { status: 'closed', why: seen === 'closed' ? 'posting closed / not found' : 'no application form on the page (posting removed?)', answered: 0 });
-    status(`${item.c} - ${item.t}: ${seen === 'closed' ? 'closed' : 'no form'} - skipping`);
-    q.blocks = 0; S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+    q.blocks = 0; S.set(Q_KEY, q); await gap(seen === 'closed' ? 'Posting closed - skipped' : 'No application form - skipped'); advance(q); return true;
   }
   let rep;
   try { rep = await fillForm({ prior: item.p || [] }); }
   catch (e) {   // a filler error on one job is logged and the batch continues
     if (q.stopped) return true;
     report(q, item, { status: 'unknown', why: 'filler error: ' + String((e && e.message) || e).slice(0, 80), answered: 0 });
-    S.set(Q_KEY, q); await sleep(1200); advance(q); return true;
+    S.set(Q_KEY, q); await gap('Filler error - skipped'); advance(q); return true;
   }
   let res;
   if (q.stopped) return true;
   if (/job (is )?no longer|not found|no longer accepting/i.test(document.body.innerText) && !entries().length) res = { status: 'closed', why: 'posting closed' };
   else if (q.auto && rep.ready && captchaChallenge()) res = { status: 'captcha', why: 'tick the captcha, then click Submit application' };
   else if (q.auto && rep.ready) {
-    if (paceMs > 0 && !await paceWait(item, q, paceMs)) return true;
-    const since = Date.now() - (S.get('lastSubmitAt', 0) || 0);   // shared by every tab and window of this browser
+    const since = Date.now() - (S.get('lastSubmitAt', 0) || 0);   // shared by every tab and window: never two submissions closer than the spacing
     if (since < paceMs && !await paceWait(item, q, paceMs - since)) return true;
     S.set('lastSubmitAt', Date.now());
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
@@ -727,6 +738,7 @@ async function batchStep(q) {
     const t0 = Date.now();
     while (Date.now() - t0 < ms && !S.get(Q_KEY, q).stopped) { heartbeat(); status(`Ashby blocked that submission ("${(res.why || '').slice(0, 60)}"). Waiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before the next job...`); await sleep(1000); }
   }
+  if (res.status !== 'blocked') await gap(res.status === 'submitted' ? `✓ Submitted ${item.c}` : res.status === 'needs' ? `Not submitted: ${item.c} needs an answer (listed at the end)` : `Not submitted (${res.status}): ${item.c}`);
   await sleep(800);
   advance(q);
   return true;
@@ -796,7 +808,7 @@ async function boot() {
   if (hq) {
     const n = hq.items.length;
     const pz = (hq.pace || [PACE_MIN, PACE_MAX]).map(x => Math.round(x / 1000)).join('-');
-    const ok = (hq.auto && n === 1) ? true : confirm(`Filler v${VERSION} - waits a random ${pz} s after filling, before every submission.\n\n${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
+    const ok = (hq.auto && n === 1) ? true : confirm(`Filler v${VERSION} - after every application it counts down a random ${pz} s before opening the next one.\n\n${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
       hq.items.slice(0, 20).map(x => `• ${x.c} - ${x.t}`).join('\n') + (n > 20 ? `\n...and ${n - 20} more` : '') +
       (hq.auto ? '\n\nEach form is submitted only if every required question is answered by your rules; anything else is left for you.' : ''));
     if (ok) S.set(Q_KEY, hq);
