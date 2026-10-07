@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.1';
+const VERSION = '2026-10-07.2';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -461,7 +461,7 @@ async function fillForm(opts = {}) {
   const done = new Set();
   for (let pass = 0; pass < 2; pass++) {
     for (const e of entries()) {
-      if (done.has(e)) continue; done.add(e);
+      if (done.has(e)) continue; done.add(e); progress();
       const path = e.getAttribute('data-field-path') || '';
       if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) continue;
       const q = titleOf(e) || descOf(e);
@@ -509,8 +509,8 @@ async function submitForm() {
   btn.scrollIntoView({ block: 'center' }); await sleep(300);
   btn.click();
   const t0 = Date.now();
-  while (Date.now() - t0 < 45000) {
-    await sleep(700);
+  while (Date.now() - t0 < 30000) {
+    await sleep(500); progress();
     const body = document.body.innerText || '';
     if (OK_RX.test(body)) return { status: 'submitted', why: (body.match(OK_RX) || [''])[0] };
     if (SPAM_RX.test(body)) return { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0] };
@@ -518,7 +518,7 @@ async function submitForm() {
     const err = [...document.querySelectorAll('[class*="error" i], [role="alert"]')].filter(visible).map(x => clean(x.innerText)).filter(Boolean);
     if (err.length && Date.now() - t0 > 4000) return { status: 'needs', why: err.slice(0, 3).join(' | ').slice(0, 200) };
   }
-  return { status: 'unknown', why: 'no confirmation within 45 s' };
+  return { status: 'unknown', why: 'no confirmation within 30 s' };
 }
 
 // ---------------- panel ----------------
@@ -603,10 +603,16 @@ function report(q, item, res) {
 }
 const CLOSED_RX = /job (is )?no longer|not found|no longer accepting|no longer available|(doesn.t|does not|don.t) exist|(has been|is|was) (closed|filled|removed|unpublished)|position (is )?(closed|filled)|404/i;
 // ---- pacing, one-window lock, and a persistent record of every job this browser already submitted ----
-const PACE_MIN = 1000, PACE_MAX = 60000;            // random wait before each submission: 1 s - 60 s (applicant, 2026-10-07)
-const CAPTCHA_WAIT = 10 * 60000;                     // a captcha waits 10 min for the applicant (desktop notification), then the batch moves on
+const PACE_MIN = 1000, PACE_MAX = 30000;            // random wait before each submission: 1 s - 30 s, doubled after each Ashby block (up to x4)
+const CAPTCHA_WAIT = 3 * 60000;                      // a captcha waits 3 min for the applicant (desktop notification), then the run moves on
 const BLOCK_WAIT = [240000, 360000];                 // after Ashby's "submission unavailable" / spam block: 4-6 min before the next job
-const TAB_ID = Math.random().toString(36).slice(2, 10);
+const TAB_ID = (() => {   // one id per browser tab: window.name survives every page load in the tab (also Ashby <-> Lever)
+  try { const n = String(W.name || ''); if (/^akf-[a-z0-9]{6,}$/.test(n)) return n; const id = 'akf-' + Math.random().toString(36).slice(2, 10); W.name = id; return id; }
+  catch (e) { return 'akf-' + Math.random().toString(36).slice(2, 10); }
+})();
+let lastProgress = Date.now();
+const progress = () => { lastProgress = Date.now(); };
+const STUCK_MS = 120000;                             // a job with no progress for 2 minutes is recorded and the run moves on
 const DONE_KEY = 'done';                             // {jobId: ts} - submitted jobs, kept across batches so a job is never sent twice
 function doneMap() { return S.get(DONE_KEY, {}) || {}; }
 function markDone(id) { const d = doneMap(); d[id] = Date.now(); S.set(DONE_KEY, d); }
@@ -617,25 +623,38 @@ async function acquireLock(q) {
     if (!l || l.id === TAB_ID || Date.now() - l.ts > 150000) { S.set('lock', { id: TAB_ID, ts: Date.now() }); return true; }
     if (q && S.get(Q_KEY, q).stopped) return false;
     status(`Another window is applying right now; this one waits so Ashby is not hit twice at once... (${Math.round((150000 - (Date.now() - l.ts)) / 1000)} s)`);
-    await sleep(5000);
+    progress(); await sleep(5000);
   }
   return true;
 }
-function heartbeat() { const l = S.get('lock', null); if (!l || l.id === TAB_ID) S.set('lock', { id: TAB_ID, ts: Date.now() }); }
+function heartbeat() { progress(); const l = S.get('lock', null); if (!l || l.id === TAB_ID) S.set('lock', { id: TAB_ID, ts: Date.now() }); }
 function releaseLock() { const l = S.get('lock', null); if (l && l.id === TAB_ID) S.set('lock', null); }
 async function paceWait(item, q, ms) {
   const t0 = Date.now();
   while (Date.now() - t0 < ms) {
     if (S.get(Q_KEY, q).stopped) return false;
     heartbeat();
-    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nWaiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before submitting (random 1 s - 60 s pacing)...`);
+    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nWaiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before submitting (random pacing)...`);
     await sleep(1000);
   }
   return true;
 }
+function watchdog(q, item) {   // a job that makes no progress for 2 minutes (page hung, form never loads) is recorded and skipped
+  (async () => {
+    for (;;) {
+      await sleep(5000);
+      if (advance.once || waitingForYou) return;
+      const cur = S.get(Q_KEY, null);
+      if (!cur || cur.done || cur.stopped || cur.i !== q.i) return;
+      if (Date.now() - lastProgress > STUCK_MS) { report(cur, item, { status: 'unknown', why: 'no progress for 2 minutes: moved on', answered: -1 }); advance(cur); return; }
+    }
+  })();
+}
+let waitingForYou = false;
 async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
+  progress(); watchdog(q, item);
   status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
   buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
   if (doneMap()[item.id]) {   // this browser already submitted this exact job (an earlier batch / the other window)
@@ -648,10 +667,10 @@ async function batchStep(q) {
     report(q, item, { status: 'submitted', why: (document.body.innerText.match(OK_RX) || ['confirmation page'])[0], answered: -1 }); markDone(item.id);
     q.blocks = 0; S.set(Q_KEY, q); await sleep(800); advance(q); return true;
   }
-  if (q.auto && q.i > 0) { const ms = PACE_MIN + Math.floor(Math.random() * (PACE_MAX - PACE_MIN)); if (!await paceWait(item, q, ms)) return true; }
+  if (q.auto && q.i > 0) { const ms = Math.round((PACE_MIN + Math.random() * (PACE_MAX - PACE_MIN)) * (q.paceMul || 1)); if (!await paceWait(item, q, ms)) return true; }
   heartbeat();
   // a closed / removed posting never holds the batch: wait (20 s at most) for the form OR a closed notice, then move on
-  const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 20000, 400);
+  const seen = await waitFor(() => entries().length ? 'form' : (CLOSED_RX.test(document.body.innerText || '') ? 'closed' : null), 12000, 300);
   if (seen !== 'form') {
     if (q.stopped) return true;
     report(q, item, { status: 'closed', why: seen === 'closed' ? 'posting closed / not found' : 'no application form on the page (posting removed?)', answered: 0 });
@@ -673,11 +692,11 @@ async function batchStep(q) {
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
   res.answered = rep.filled.length;
   if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after the site confirms
-    status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + `\n\nWhen you click Submit and the site confirms, the next job opens by itself.${q.auto ? ' (Moves on by itself after 10 minutes.)' : ''}`);
+    status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + `\n\nWhen you click Submit and the site confirms, the next job opens by itself.${q.auto ? ' (Moves on by itself after 3 minutes.)' : ''}`);
     if (res.status === 'captcha') { notify(`Captcha for ${item.c} - ${item.t}: tick it and click Submit`); banner('Captcha: tick it, then click Submit application', false); }
     let skipped = false;
     buttons([['Skip this job', () => { skipped = true; }], ['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); skipped = true; }]]);
-    const t0 = Date.now();
+    const t0 = Date.now(); waitingForYou = true;
     while (!skipped && Date.now() - t0 < (q.auto ? CAPTCHA_WAIT : 30 * 60000)) {
       heartbeat();
       await sleep(1000);
@@ -685,11 +704,13 @@ async function batchStep(q) {
       if (OK_RX.test(body)) { res = { status: 'submitted', why: (body.match(OK_RX) || [''])[0], by: 'you', answered: rep.filled.length }; break; }
       if (SPAM_RX.test(body)) { res = { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0], by: 'you', answered: rep.filled.length }; break; }
     }
+    waitingForYou = false; progress();
     if (skipped && res.status !== 'submitted') res = { status: 'skipped', why: 'skipped by you', answered: rep.filled.length };
   }
   report(q, item, res);
   if (res.status === 'submitted') markDone(item.id);
   q.blocks = res.status === 'blocked' ? (q.blocks || 0) + 1 : 0;
+  if (res.status === 'blocked') q.paceMul = Math.min(4, (q.paceMul || 1) * 2);   // Ashby pushed back: slow down for the rest of the run
   if (q.blocks >= 3) q.stopped = "Ashby rejected three submissions in a row (submission unavailable / spam check): wait an hour, then press Start again";
   S.set(Q_KEY, q);
   if (res.status === 'blocked' && !q.stopped) {   // back off before the next job instead of hammering
@@ -702,6 +723,7 @@ async function batchStep(q) {
   return true;
 }
 function advance(q) {
+  if (advance.once) return; advance.once = true;   // one job per page: never skip a job by advancing twice
   q = S.get(Q_KEY, q);
   if (q.stopped) return finish(q);
   q.i += 1; S.set(Q_KEY, q);

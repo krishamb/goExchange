@@ -3076,18 +3076,7 @@
   "company": "Lyra Health",
   "title": "Manager, AI/ML Engineering",
   "loc": "United States (remote)",
-  "posted_ts": 1791336573.6546283,
-  "src": "handoff-lever"
- },
- {
-  "ats": "lever",
-  "url": "https://jobs.lever.co/zoox/48a6b2ac-0dcb-4481-ab26-386ce62decab",
-  "apply_url": "https://jobs.lever.co/zoox/48a6b2ac-0dcb-4481-ab26-386ce62decab/apply",
-  "tag": "zoox_leadaiengineerenterprisedataai",
-  "company": "Zoox",
-  "title": "Lead AI Engineer \u2013 Enterprise, Data & AI",
-  "loc": "Foster City, CA",
-  "posted_ts": 1791336573.65463,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3098,7 +3087,7 @@
   "company": "Aera Technology",
   "title": "Senior Software Engineer | Backend",
   "loc": "Mountain View, CA (hybrid, 3 days)",
-  "posted_ts": 1791336573.6546304,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3109,7 +3098,7 @@
   "company": "Quantum Health",
   "title": "Senior Software Engineer (Fullstack CirrusMD)",
   "loc": "Remote, US",
-  "posted_ts": 1791336573.6546307,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3120,7 +3109,7 @@
   "company": "Saviynt",
   "title": "Associate Principal Software Engineer",
   "loc": "San Francisco, CA",
-  "posted_ts": 1791336573.654631,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3131,7 +3120,7 @@
   "company": "Spotify",
   "title": "Staff Machine Learning Engineer, Home Surfaces",
   "loc": "New York, NY",
-  "posted_ts": 1791336573.654631,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3142,7 +3131,7 @@
   "company": "Sysdig",
   "title": "Staff AI Platform Engineer",
   "loc": "Remote, US",
-  "posted_ts": 1791336573.6546311,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3153,7 +3142,7 @@
   "company": "FloQast",
   "title": "Senior Software Engineer, AI",
   "loc": "San Jose, CA",
-  "posted_ts": 1791336573.6546314,
+  "posted_ts": -1,
   "src": "handoff-lever"
  },
  {
@@ -3164,7 +3153,7 @@
   "company": "AngelList",
   "title": "Head of Engineering, Foundations",
   "loc": "San Francisco, CA (hybrid)",
-  "posted_ts": 1791336573.6546314,
+  "posted_ts": -1,
   "src": "handoff-lever"
  }
 ]
