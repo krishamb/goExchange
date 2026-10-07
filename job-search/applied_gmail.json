@@ -5566,6 +5566,11 @@
    "company": "Pfizer",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "lemurianlabs": {
+   "company": "Lemurian Labs",
+   "first": "2026-10-07",
+   "via": "greenhouse-cloud"
   }
  }
 }
