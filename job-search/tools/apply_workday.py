@@ -335,12 +335,14 @@ def company_tokens(company, url=""):
     if len(t) >= 4: toks.add(t)
     return {x for x in toks if len(x) >= 3}
 SITE = re.compile(r"\.com\b|\.co\b|web ?site|\bcareers?\b( (site|page|portal|web ?site|home ?page))?\s*$|\bcareers? (site|page|portal|web ?site)\b|\bjobs? (site|page|portal)\b|\bsite\b|\bportal\b|\bweb\b|\bhome ?page\b", re.I)
+LINKEDIN_SRC = re.compile(r"\blinked ?in\b", re.I)   # the applicant's real source (his answer, 2026-10-07): LinkedIn, never a LinkedIn recruiter / InMail
 def hear_score(t, toks, cat=""):
     """How well a 'How did you hear about us?' item describes the applicant's real source, the company's own careers site:
     100 names the company's website / careers site (NVIDIA.COM), 90 a generic careers site or company website, 60 a plain
     website / internet item, 40 a generic job-board item, 20 'Other'; 0 is never picked (referral, recruiter, event,
     university, LinkedIn, a named job board or social network, a programme, ...)."""
     tl = (t or "").strip().lower()
+    if tl and LINKEDIN_SRC.search(tl) and not HEAR_BAD.search(tl) and not re.search(r"recruit|inmail|message|referr|employee|learning", tl): return 110   # 'LinkedIn', 'Job Board > LinkedIn', 'Social Media - LinkedIn'
     if not tl or HEAR_BAD.search(tl) or HEAR_NOT.search(tl): return 0
     webcat = bool(re.search(r"web|site|career|internet|online", cat or "", re.I))
     web = SITE.search(tl) or webcat   # a site, not just 'career': 'Adobe Career Academy' is a programme
@@ -354,8 +356,10 @@ def hear_score(t, toks, cat=""):
 def cat_rank(c, toks=()):
     """Which categories of a source tree may hold the company's careers site: website-like first, then company-named
     ('Company Marketing', 'Cohesity Talent Community'), then 'Other', then job boards (only generic items count there)."""
+    if LINKEDIN_SRC.search(c) and not HEAR_BAD.search(c): return 0
+    if re.search(r"social|job ?boards?|recruiting (boards?|sites?|websites?)|online job|job posting|internet|online", c, re.I) and not re.search(r"recruiter|referr|employee|event|fair|agency", c, re.I): return 0   # where 'LinkedIn' usually sits ('Recruiting Boards' = job boards)
     if HEAR_BAD.search(c) or HEAR_NOT.search(c): return 9
-    if re.search(r"web|site|career|internet|online|search", c, re.I): return 0
+    if re.search(r"web|site|career|internet|online|search", c, re.I): return 1
     if re.search(r"company|corporate", c, re.I) or any(k in norm(c) for k in toks): return 1
     if re.search(r"other", c, re.I): return 2
     if re.search(r"job|posting|advert", c, re.I): return 3
@@ -583,16 +587,17 @@ async def hear_choose(page, box, job):
     top, subs = await menu_scan(page)
     cands = [(hear_score(t, toks), [t]) for t, c in zip(top, subs) if not c]
     best = max(cands, default=(0, None), key=lambda x: x[0])
-    if best[0] < 90:
+    if best[0] < 110:   # LinkedIn first (110); else the company's careers site (100/90)
         for cat in sorted([t for t, c in zip(top, subs) if c and cat_rank(t, toks) <= 3], key=lambda c: cat_rank(c, toks)):
             await prompt_open(page, box)
             if not await menu_click(page, cat): continue
             items, isub = await menu_scan(page)
+            job.report.setdefault("source_options", {})[cat[:40]] = items[:30]
             cands += [(hear_score(t, toks, cat), [cat, t]) for t, c in zip(items, isub) if not c]
             best = max(cands, default=(0, None), key=lambda x: x[0])
-            if best[0] >= 90: break
-    if best[0] < 90:   # a long or oddly grouped tree: search for the company's own site
-        for q in sorted(toks, key=len, reverse=True)[:2]:
+            if best[0] >= 110: break
+    if best[0] < 90:   # a long or oddly grouped tree: search for LinkedIn, then the company's own site
+        for q in ["LinkedIn"] + sorted(toks, key=len, reverse=True)[:2]:
             auto = await prompt_open(page, box, q)
             if auto: await prompt_clear(page, box)   # a lone result Workday selected by itself: scored like the others
             _, res, rsub = await menu_items(page)
@@ -725,7 +730,7 @@ async def fill_field(page, job, f):
     if re.search(r"firstname$", fid, re.I) or re.search(r"^(given|first) name", low): return await text_to(FIRST)
     if re.search(r"lastname$", fid, re.I) or re.search(r"^(family|last) name|^surname", low): return await text_to(LAST)
     if re.search(r"middlename$|preferredcheck$|addressline[2-9]$|extension$", fid, re.I) or re.search(r"^(phone )?extension\b|^middle name", low): return cur or None   # the phone extension label, not a question that mentions an 'extension'
-    if re.search(r"addressline1$", fid, re.I): return await text_to(P.get("street") or "") if P.get("street") else (keep(cur) if cur else None)   # applicant (2026-09-30): 592 Mill Creek Lane
+    if re.search(r"addressline1$", fid, re.I): return await text_to(P.get("street") or "") if P.get("street") else (keep(cur) if cur else None)   # applicant (2026-09-30): (street address from the private profile)
     if re.search(r"(^|-|_)city$", fid, re.I): return await text_to("Santa Clara")
     if re.search(r"postalcode$", fid, re.I): return await text_to(P.get("zip") or "95054")
     if re.search(r"phonenumber$", fid, re.I): return await text_to(re.sub(r"\D", "", P["phone"])[-10:])

@@ -40,19 +40,23 @@ for j in sorted(queue, key=_key):
     if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
     rows.append(j)
 
-def appurl(u): return re.sub(r"/application/?$", "", (u or "").rstrip("/")) + "/application"
+def appurl(u):
+    if "jobs.lever.co" in (u or ""): return re.sub(r"/apply/?$", "", u.rstrip("/")) + "/apply"   # Lever: the apply form
+    return re.sub(r"/application/?$", "", (u or "").rstrip("/")) + "/application"
 
-# applicant contact for autofill — carried only in the LOCALLY generated page (its #akf hash),
-# never referenced by the public userscript. The filler reads it into its own storage so email
-# and phone fill without the one-time panel step.
-AUTOFILL_EMAIL = "ambarishkrishnamurthy@gmail.com"
-AUTOFILL_PHONE = "650 334 6892"
+# applicant contact for autofill — read from the private jobs folder (me.json: {"email": ..., "phone": ...}) and
+# carried only in the LOCALLY generated page (its #akf hash); never written into this public repository. Without
+# me.json the filler uses the email/phone saved once in its own Setup panel.
+try: _me = json.load(open(os.path.join(PRIV, "me.json")))
+except Exception: _me = {}
+AUTOFILL_EMAIL = os.environ.get("AKF_EMAIL") or _me.get("email", "")
+AUTOFILL_PHONE = os.environ.get("AKF_PHONE") or _me.get("phone", "")
+ME = {k: v for k, v in (("email", AUTOFILL_EMAIL), ("phone", AUTOFILL_PHONE)) if v}
 
 def akf_hash(items, auto):
     """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
     its hash regex would truncate). Pad the JSON so the byte length is a multiple of 3."""
-    payload = {"name": "Ashby queue", "auto": auto, "pad": "",
-               "me": {"email": AUTOFILL_EMAIL, "phone": AUTOFILL_PHONE},
+    payload = {"name": "Ashby queue", "auto": auto, "pad": "", "me": ME,
                "items": [{"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in items]}
     js = json.dumps(payload, ensure_ascii=False)
     extra = (3 - (len(js.encode("utf-8")) % 3)) % 3
@@ -88,7 +92,7 @@ tr = "\n".join(
 
 us_path = os.path.join(HERE, "ashby_fill", "ashby_fill.user.js")
 page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ashby Click Run</title><style>
+<title>Job Click Run</title><style>
 :root{{--bg:#fff;--fg:#111;--mut:#667;--line:#e5e7eb;--acc:#0a66c2;--card:#f6f8fa;--ok:#15803d;--go:#1a7f37}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--bg:#0f1115;--fg:#e8eaf0;--mut:#9aa3b2;--line:#2a2f3a;--acc:#6ab0f3;--card:#171b22;--ok:#4ade80;--go:#2ea043}}}}
 body{{background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;max-width:1060px;margin:24px auto;padding:0 16px}}
@@ -102,12 +106,12 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 .start{{display:inline-block;background:var(--go);color:#fff;font-size:17px;font-weight:700;padding:14px 26px;border-radius:12px;text-decoration:none;margin:6px 0}}
 .start:hover{{filter:brightness(1.07)}}
 </style></head><body>
-<h1>Ashby Click Run — {len(rows)} live, never-applied roles</h1>
+<h1>Click Run (Ashby + Lever) — {len(rows)} live, never-applied roles</h1>
 <div id="prog"></div>
 <div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
 <div class="box"><b>Apply to all — one click, hands-free and paced:</b><br>
 <a class="start" id="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
-It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random 10 seconds to 2 minutes before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. It pauses on a captcha and stops after three blocks in a row (wait an hour, then press Start again).</div>
+It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random 1 to 60 seconds before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). It keeps running with the tab in the background (keep it the front tab of its own window). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. A captcha (mostly Lever) pops up a desktop notification: tick it and click Submit; after 10 minutes the run moves on without it. It stops after three Ashby blocks in a row (wait an hour, then press Start again).</div>
 <div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
@@ -121,7 +125,7 @@ function mark(k){{st[k]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.k]=b.checked?1:0;save();paint()}}));
 links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.k),800)}}));
 const ITEMS={json.dumps([{"k": (j.get("tag") or j["url"]), "u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in rows], ensure_ascii=False)};
-const ME={json.dumps({"email": AUTOFILL_EMAIL, "phone": AUTOFILL_PHONE})};
+const ME={json.dumps(ME)};
 function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,me:ME,items:items.map(x=>({{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
 document.getElementById('start').addEventListener('click',function(){{const left=ITEMS.filter(x=>!st[x.k]);if(!left.length){{alert('Every row is ticked as done.');return;}}this.href=left[0].u+'#akf='+akfHash(left);this.textContent='▶ Start — apply to '+left.length+' not yet done';}});
 paint();

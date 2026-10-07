@@ -21,7 +21,7 @@ for s in srcs:
 ok=sum(1 for x in rows if x[3]=="submitted")
 with open(dest,"w") as f:
     f.write(f"# Applications submitted {datetime.date.today().isoformat()}\n\n")
-    f.write(f"**{ok} submitted** out of {len(rows)} attempted (Greenhouse, from the cloud session, applicant email ambarishkrishnamurthy@gmail.com).\n\n")
+    f.write(f"**{ok} submitted** out of {len(rows)} attempted (Greenhouse, from the cloud session, applicant email (your Gmail)).\n\n")
     f.write("| # | Company | Title | Posted pay | Status | Note |\n|---|---|---|---|---|---|\n")
     for i,(c,t,p,st,why,u) in enumerate(sorted(rows,key=lambda x:(x[3]!="submitted",x[0])),1):
         f.write(f"| {i} | {c} | [{t}]({u}) | {p} | {st} | {why} |\n")

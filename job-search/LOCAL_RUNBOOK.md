@@ -28,7 +28,7 @@ already applied to from the cloud removed.
 ## Steps
 1. Put four files in `~/jobs-private/` (never inside the repo). They were provided in the cloud session; look in
    `~/Downloads` first:
-   `profile.json` (email is ambarishkrishnamurthy@gmail.com), `answers.json`,
+   `profile.json` (email is (your Gmail)), `answers.json`,
    `Ambarish_Krishnamurthy_Resume.pdf`, `Ambarish_Krishnamurthy_Cover_Letter.pdf`.
 2. Run it in the background so no browser windows appear (the run is headless):
    `nohup bash job-search/run.sh > ~/jobs-private/run.log 2>&1 &` and follow it with `tail -f ~/jobs-private/run.log`.
