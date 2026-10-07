@@ -336,7 +336,22 @@ def company_tokens(company, url=""):
     return {x for x in toks if len(x) >= 3}
 SITE = re.compile(r"\.com\b|\.co\b|web ?site|\bcareers?\b( (site|page|portal|web ?site|home ?page))?\s*$|\bcareers? (site|page|portal|web ?site)\b|\bjobs? (site|page|portal)\b|\bsite\b|\bportal\b|\bweb\b|\bhome ?page\b", re.I)
 LINKEDIN_SRC = re.compile(r"\blinked ?in\b", re.I)   # the applicant's real source (his answer, 2026-10-07): LinkedIn, never a LinkedIn recruiter / InMail
+SOURCE_SITE = "linkedin"   # per job (run_one): 'indeed' for roles found on Indeed, else 'linkedin'
 def hear_score(t, toks, cat=""):
+    """The real source first: LinkedIn (or Indeed for Indeed-found roles) 120; a generic job-board item 60; a generic
+    social-media item 50 (LinkedIn roles); 'Other' 20; anything else 0 - never the company website / careers page
+    (not where the applicant found the role), a referral, recruiter, event or university."""
+    tl = (t or "").strip().lower()
+    if not tl: return 0
+    src = re.compile(r"\bindeed\b", re.I) if SOURCE_SITE == "indeed" else LINKEDIN_SRC
+    bad = re.search(r"recruit|inmail|message|referr|employee|learning|event|fair", tl)
+    if src.search(tl) and not bad: return 120
+    if src.search(cat or "") and not bad and re.search(r"^(job (board|posting|post|ad)s?|posting|other|website)$", tl): return 110   # 'LinkedIn > Job Posting'
+    if re.search(r"^(online |internet )?(job ?boards?|job postings?|job post site|job sites?|job search (site|engine)s?|job boards?/websites?|online job (board|posting)s?)$", tl): return 60
+    if SOURCE_SITE == "linkedin" and re.search(r"^social( media| networks?| networking( sites?)?)?$", tl): return 50
+    if re.search(r"^other\b|not listed", tl) and not re.search(r"recruit|referr|employee|event", cat or "", re.I): return 20
+    return 0
+def _old_hear_score(t, toks, cat=""):
     """How well a 'How did you hear about us?' item describes the applicant's real source, the company's own careers site:
     100 names the company's website / careers site (NVIDIA.COM), 90 a generic careers site or company website, 60 a plain
     website / internet item, 40 a generic job-board item, 20 'Other'; 0 is never picked (referral, recruiter, event,
@@ -587,7 +602,7 @@ async def hear_choose(page, box, job):
     top, subs = await menu_scan(page)
     cands = [(hear_score(t, toks), [t]) for t, c in zip(top, subs) if not c]
     best = max(cands, default=(0, None), key=lambda x: x[0])
-    if best[0] < 110:   # LinkedIn first (110); else the company's careers site (100/90)
+    if best[0] < 120:   # the real source (120) first; else a generic job board / social / Other
         for cat in sorted([t for t, c in zip(top, subs) if c and cat_rank(t, toks) <= 3], key=lambda c: cat_rank(c, toks)):
             await prompt_open(page, box)
             if not await menu_click(page, cat): continue
@@ -595,16 +610,16 @@ async def hear_choose(page, box, job):
             job.report.setdefault("source_options", {})[cat[:40]] = items[:30]
             cands += [(hear_score(t, toks, cat), [cat, t]) for t, c in zip(items, isub) if not c]
             best = max(cands, default=(0, None), key=lambda x: x[0])
-            if best[0] >= 110: break
-    if best[0] < 90:   # a long or oddly grouped tree: search for LinkedIn, then the company's own site
-        for q in ["LinkedIn"] + sorted(toks, key=len, reverse=True)[:2]:
+            if best[0] >= 120: break
+    if best[0] < 120:   # a long or oddly grouped tree: search for the real source by name
+        for q in (["Indeed"] if SOURCE_SITE == "indeed" else ["LinkedIn"]):
             auto = await prompt_open(page, box, q)
             if auto: await prompt_clear(page, box)   # a lone result Workday selected by itself: scored like the others
             _, res, rsub = await menu_items(page)
             res, rsub = (auto, [False] * len(auto)) if auto else (res, rsub)
-            cands += [(hear_score(t, toks), ["", q, t]) for t, c in zip(res, rsub) if not c and hear_score(t, toks) >= 90]
+            cands += [(hear_score(t, toks), ["", q, t]) for t, c in zip(res, rsub) if not c and hear_score(t, toks) >= 110]
             best = max(cands, default=(0, None), key=lambda x: x[0])
-            if best[0] >= 90: break
+            if best[0] >= 110: break
     job.report.setdefault("source_options", {})["top"] = top[:40]
     if best[0] <= 0:
         await page.keyboard.press("Escape"); return None
@@ -749,7 +764,7 @@ async def fill_field(page, job, f):
         return await choose(["United States of America", "United States", "USA"], strict=True, typeahead="United S")
     if re.search(r"(^|-)source$|sourceprompt", fid, re.I) or re.search(r"how did you (first )?(hear|learn|find)", low):
         toks = company_tokens(job.item.get("company"), job.url)
-        if cur and hear_score(cur.split(";")[0], toks) >= 60: return keep(cur)
+        if cur and hear_score(cur.split(";")[0], toks) >= 120: return keep(cur)
         if kind == "prompt":
             v = await hear_choose(page, box, job)
             if not v: await page.wait_for_timeout(2000); v = await hear_choose(page, box, job)   # a slow first load of the tree
@@ -1241,6 +1256,7 @@ async def open_apply(page):
 
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
+    global SOURCE_SITE; SOURCE_SITE = "indeed" if re.search(r"indeed", str(item.get("src") or ""), re.I) else "linkedin"
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
     # Santa Clara); elsewhere the rule says No and the COMMUTE_Q guard leaves it for the applicant
     G["JOB_CHOICE_RULES"] = [(COMMUTE_Q.pattern, ["Yes", "yes"] if (item.get("where") == "bay" or re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|foster city|cupertino|milpitas|fremont|pleasanton|emeryville", str(item.get("where") or "") + " " + str(item.get("loc") or ""), re.I)) else ["No", "no"])]

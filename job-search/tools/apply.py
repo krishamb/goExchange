@@ -674,7 +674,7 @@ CHOICE_RULES=[
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
  (r"\bsms\b|whatsapp|text message|receive (communications|updates|marketing|alerts)|marketing communications|newsletter|opt.in|stay up to date|keep me (updated|informed)|job alerts|similar jobs|careers content", ["No","no"]),
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
- (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["LinkedIn","LinkedIn Job Posting","LinkedIn Jobs","LinkedIn job post","LinkedIn Job Board","Linkedin","Social Media - LinkedIn","LinkedIn (job posting)","Company Website","Company website","Company Careers","Careers Site","Career Site","Careers Website","Career Website","Careers Page","Career Page","Website","Careers","Job Post Site","Job Board","Other","Job Board","Other/Not Listed","Google Search","Search engine","Careers page","Career Page","Indeed","Glassdoor"]),
+ (r"how did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|source", ["LinkedIn","LinkedIn Job Posting","LinkedIn Jobs","LinkedIn job post","LinkedIn Job Board","Linkedin","Social Media - LinkedIn","LinkedIn (job posting)","Job Board","Job Boards","Online Job Board","Job board","Job Posting","Job Post Site","Online job posting","Social Media","Social Network","Other","Other/Not Listed"]),   # the real source (applicant, 2026-10-07): LinkedIn; else a generic job board / social / Other - never the company website
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
  (r"school|university|college", ["University of Madras","Other","School Not Listed","Other Institution","Madras University","Other School","Not Listed"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
@@ -845,6 +845,7 @@ def set_email(em):
     for i,(pat,val) in enumerate(TEXT_RULES):
         if pat==r"e-?mail": TEXT_RULES[i]=(pat,em)
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
+CUR_JOB={"src":None}   # set per job by the batch: where the role was found ('indeed...' -> the source answer is Indeed)
 # work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)
 ENV_TRUE=r"internal or external audit controls|audit controls|\bsoc ?2\b|\bsox\b|sarbanes|vendor negotiation|budget ownership|healthcare or benefits|healthcare|health ?tech|backend systems powering|consumer apps|start-?up|scale-?up|product-led|ambiguous|evolving|roadmap|enterprise|established processes|remote|distributed|hybrid|cross-functional|global|regulated|fintech|financ|b2b|saas|platform|\bai\b|\bml\b|cloud|high-growth|fast-moving|early-stage|growth-stage|public company|series [a-f]"
 # option statements that are true for the applicant (Santa Clara, CA; hybrid in SF Bay Area fine; open to relocation elsewhere)
@@ -1324,6 +1325,7 @@ async def run():
                 summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
+            CUR_JOB["src"]=job.get("src")
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             if not r.get("submitted") and any(("uploadFile" in (e or "")) or ("Resume/CV is required" in (e or "")) for e in (r.get("errors") or [])):
                 # Greenhouse's uploader sometimes fails to initialise: load the whole form again once
@@ -1646,8 +1648,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
                         if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
                             cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
-                            _li=[x for x in pref if re.search(r"linked ?in",x,re.I)]
-                            pref=_li+[f"{cn} careers",f"{cn} career site",f"{cn} careers site",f"{cn} website",f"{cn}.com",f"{cn} careers page",f"{cn} job board"]+[x for x in pref if x not in _li]   # LinkedIn first (the applicant's source); never the bare company name: it matches "<Company> Recruiter" / "<Company> Employee"
+                            if re.search(r"indeed",str(CUR_JOB.get("src") or ""),re.I): pref=["Indeed","Indeed.com","Indeed Job Board","Job Board - Indeed","Job Board","Job Boards","Online Job Board","Job Posting","Other"]   # found on Indeed: say so
                             if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
                         if not pref:
                             # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
@@ -1802,7 +1803,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             if not ticked: report["unanswered"].append({"type":"checkbox","label":(q or lab)[:160],"note":"override matched no option","options":mem[:8]})
                             continue
                         is_src=bool(re.search(r"hear about|learn about|find out about|source|referred|how did you find",q+" "+lab,re.I))
-                        want=pick(q or lab,CHOICE_RULES) or (["LinkedIn","Company Website","Careers page","Job Board","Other","Greenhouse"] if is_src else None)
+                        want=pick(q or lab,CHOICE_RULES) or (["LinkedIn","Job Board","Online Job Board","Social Media","Other"] if is_src else None)
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
                         if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not HEAR_BAD.search(b[1])] or members   # never claim a referral, an event or a recruiter as the source (LinkedIn is the real source)
