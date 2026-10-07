@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.6';
+const VERSION = '2026-10-07.7';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -634,7 +634,8 @@ async function paceWait(item, q, ms) {
   while (Date.now() - t0 < ms) {
     if (S.get(Q_KEY, q).stopped) return false;
     heartbeat();
-    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nWaiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before submitting (random pacing)...`);
+    const last = S.get('lastSubmitAt', 0); const ago = last ? Math.round((Date.now() - last) / 1000) : null;
+    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nForm filled. Waiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before submitting (random ${(q.pace || [PACE_MIN, PACE_MAX]).map(x => Math.round(x / 1000)).join('-')} s, filler v${VERSION})${ago != null ? `\nLast submission: ${ago} s ago` : ''}`);
     await sleep(1000);
   }
   return true;
@@ -692,6 +693,9 @@ async function batchStep(q) {
   else if (q.auto && rep.ready && captchaChallenge()) res = { status: 'captcha', why: 'tick the captcha, then click Submit application' };
   else if (q.auto && rep.ready) {
     if (paceMs > 0 && !await paceWait(item, q, paceMs)) return true;
+    const since = Date.now() - (S.get('lastSubmitAt', 0) || 0);   // shared by every tab and window of this browser
+    if (since < paceMs && !await paceWait(item, q, paceMs - since)) return true;
+    S.set('lastSubmitAt', Date.now());
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
@@ -791,7 +795,8 @@ async function boot() {
   const hq = readHashQueue();
   if (hq) {
     const n = hq.items.length;
-    const ok = (hq.auto && n === 1) ? true : confirm(`${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
+    const pz = (hq.pace || [PACE_MIN, PACE_MAX]).map(x => Math.round(x / 1000)).join('-');
+    const ok = (hq.auto && n === 1) ? true : confirm(`Filler v${VERSION} - waits a random ${pz} s after filling, before every submission.\n\n${hq.auto ? 'AUTO-SUBMIT' : 'Fill'} ${n} application${n > 1 ? 's' : ''} for "${hq.name}"?\n\n` +
       hq.items.slice(0, 20).map(x => `• ${x.c} - ${x.t}`).join('\n') + (n > 20 ? `\n...and ${n - 20} more` : '') +
       (hq.auto ? '\n\nEach form is submitted only if every required question is answered by your rules; anything else is left for you.' : ''));
     if (ok) S.set(Q_KEY, hq);
