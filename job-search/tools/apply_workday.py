@@ -341,7 +341,7 @@ def hear_score(t, toks, cat=""):
     """The real source first: LinkedIn (or Indeed for Indeed-found roles) 120; a generic job-board item 60; a generic
     social-media item 50 (LinkedIn roles); 'Other' 20; anything else 0 - never the company website / careers page
     (not where the applicant found the role), a referral, recruiter, event or university."""
-    tl = (t or "").strip().lower()
+    tl = re.sub(r"^[^a-z0-9]+", "", (t or "").strip().lower())   # Kohl's lists items as '*linkedin', '*other'
     if not tl: return 0
     if SOURCE_SITE == "company":   # found on the company's own careers site: that item is the true source
         return 0 if LINKEDIN_SRC.search(tl) else _old_hear_score(t, toks, cat)
@@ -358,7 +358,7 @@ def _old_hear_score(t, toks, cat=""):
     100 names the company's website / careers site (NVIDIA.COM), 90 a generic careers site or company website, 60 a plain
     website / internet item, 40 a generic job-board item, 20 'Other'; 0 is never picked (referral, recruiter, event,
     university, LinkedIn, a named job board or social network, a programme, ...)."""
-    tl = (t or "").strip().lower()
+    tl = re.sub(r"^[^a-z0-9]+", "", (t or "").strip().lower())
     if tl and LINKEDIN_SRC.search(tl) and not HEAR_BAD.search(tl) and not re.search(r"recruit|inmail|message|referr|employee|learning", tl): return 110   # 'LinkedIn', 'Job Board > LinkedIn', 'Social Media - LinkedIn'
     if not tl or HEAR_BAD.search(tl) or HEAR_NOT.search(tl): return 0
     webcat = bool(re.search(r"web|site|career|internet|online", cat or "", re.I))
@@ -366,7 +366,7 @@ def _old_hear_score(t, toks, cat=""):
     if toks and any(k in norm(tl) for k in toks) and web: return 100 if (not cat or webcat) else 85   # 85: e.g. 'Talent Community > Cohesity Careers'
     if re.search(r"(company|corporate|employer|organi[sz]ation)('?s)? ?(career|careers|jobs?|web ?site|site|page|portal)|careers? ?(web ?site|site|page|portal|section)|^careers?$", tl): return 90
     if re.search(r"\b(jobs?|careers?) (page|section|site|board)\b.{0,30}\b(your|our|the company.?s|company) (web ?site|site)|\b(your|our|the company.?s) (careers? |jobs? )?(web ?site|site|page)\b", tl): return 90   # 'Jobs page on your website'
-    if re.search(r"^(the )?(web ?site|internet|online|web|internet search|online search|search engine|google( search)?|web search)$", tl): return 60
+    if re.search(r"^(the )?(web ?site|internet|online|web|internet search|online search|web search)$", tl): return 60   # never a named search engine (Google/Bing): not where he found it
     if re.search(r"^(online )?(job board|job boards|job posting|job postings|job post site|job site|job search site)$", tl): return 40
     if re.search(r"^other\b|not listed", tl) and (not cat or re.search(r"other|web|site|internet|online", cat, re.I)): return 20
     return 0
@@ -771,7 +771,8 @@ async def fill_field(page, job, f):
             v = await hear_choose(page, box, job)
             if not v: await page.wait_for_timeout(2000); v = await hear_choose(page, box, job)   # a slow first load of the tree
         elif kind == "listbox":
-            v, _ = await listbox_choose(page, btn, lambda t: max((i for i in range(len(t)) if hear_score(t[i], toks) > 0), key=lambda i: hear_score(t[i], toks), default=None))
+            v, seen = await listbox_choose(page, btn, lambda t: max((i for i in range(len(t)) if hear_score(t[i], toks) > 0), key=lambda i: hear_score(t[i], toks), default=None))
+            if not v: job.report["source_options"] = {"listbox": seen}   # logged so the applicant (or a rule) can pick the true source
         else: v = await choose(prefs_for(key) or [])
         return keep(v) if v else None
     # 'Have you previously worked for <company>?' is answered by the rules like any question: Yes for the applicant's
@@ -889,7 +890,7 @@ async def fill_page(page, job):
         if not fields: break
         for f in fields:
             seen.add((f["id"], f["label"]))
-            if f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or not f["id"]: continue
+            if f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or ENTRY_FKIT.match(f.get("fkit") or "") or not f["id"]: continue
             try: v = await fill_field(page, job, f)
             except Exception as e:
                 v = None; job.report["errors"].append(f"{(f['label'] or f['id'])[:60]}: {type(e).__name__}")
@@ -902,7 +903,7 @@ async def fill_page(page, job):
         again = {k for k in missing}; missing = []
         for f in await page.evaluate(FIELD_JS):
             k = f["label"] or f["id"]
-            if k not in again or f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or not f["id"]: continue
+            if k not in again or f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or ENTRY_FKIT.match(f.get("fkit") or "") or not f["id"]: continue
             again.discard(k)
             if f["kind"] != "listbox":
                 if f["req"]:
@@ -928,6 +929,7 @@ async def fill_page(page, job):
     return missing
 
 # ---- My Experience
+ENTRY_FKIT = re.compile(r"(workExperience|education)-\d+--")   # Work Experience / Education entry fields: experience_page() fills them, whatever the section is called
 WORK_ENTRY = {"jobTitle": "CTO & Technical Co-Founder", "companyName": P["org"], "location": "Santa Clara, CA", "start": (1, 2023)}   # resume: HYPERION AI 2023-, Santa Clara, CA (rules: start month January)
 FIELD_OF_STUDY = ["Computer Science and Engineering", "Computer Science & Engineering", "Computer Science & Engin.", "Computer Science & Engin", "Computer Science and Engin"]
 async def upload_resume(page, job):
@@ -1031,7 +1033,10 @@ async def experience_page(page, job, need=()):
             await fill_language(page, job, panels.nth(i))
     for sec, kind in (("Work-Experience", "work"), ("Education", "edu")):
         g = page.locator(f'[role="group"][aria-labelledby="{sec}-section"]')
-        if not await g.count(): continue
+        if not await g.count():   # tenants that title the section differently (Buildertrend: 'Add a Job'): find it by its entries
+            g = page.locator('[role="group"][aria-labelledby$="-section"]').filter(has=page.locator(f'[data-fkit-id^="{"workExperience" if kind == "work" else "education"}-"]'))
+            if not await g.count(): continue
+            sec = (await g.first.get_attribute("aria-labelledby") or sec).replace("-section", ""); g = g.first
         try: head = (await page.locator(f'[id="{sec}-section"]').first.inner_text(timeout=2000)).strip()
         except Exception: head = ""
         panels = g.locator('[role="group"][aria-labelledby$="-panel"]')

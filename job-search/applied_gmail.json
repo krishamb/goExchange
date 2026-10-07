@@ -5651,6 +5651,104 @@
    "company": "Freestar",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "buildertrend": {
+   "name": "Buildertrend",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "franklintempleton": {
+   "name": "Franklin Templeton",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "inovalon": {
+   "name": "Inovalon",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "permitflow": {
+   "name": "PermitFlow",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "roboflow": {
+   "name": "Roboflow",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "marianaminerals": {
+   "name": "Mariana Minerals",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "f2": {
+   "name": "F2",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "cyderes": {
+   "name": "Cyderes",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "aeratechnology": {
+   "name": "Aera Technology",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "quantumhealth": {
+   "name": "Quantum Health",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "spotify": {
+   "name": "Spotify",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "sysdig": {
+   "name": "Sysdig",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "floqast": {
+   "name": "FloQast",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
+  },
+  "journaltechnologies": {
+   "name": "Journal Technologies",
+   "dates": [
+    "2026-10-07"
+   ],
+   "count": 1
   }
  }
 }
