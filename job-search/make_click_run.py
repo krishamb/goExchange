@@ -36,7 +36,9 @@ except Exception: pass
 rows = []
 # exec/leadership roles (priority=1: Director / VP / CTO / Head of) first, then newest first
 _key = (lambda x: -(x.get("posted_ts") or 0)) if os.environ.get("ASHBY_SORT") == "recency" else (lambda x: (-(x.get("priority") or 0), -(x.get("posted_ts") or 0)))
-for j in sorted(queue, key=_key):
+_ordered = queue if os.environ.get("ASHBY_SORT") == "none" else sorted(queue, key=_key)   # none: the queue file's own order (groups)
+PACE = [int(x) for x in os.environ.get("AKF_PACE", "2000,45000").split(",")]
+for j in _ordered:
     if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
     rows.append(j)
 
@@ -56,7 +58,7 @@ ME = {k: v for k, v in (("email", AUTOFILL_EMAIL), ("phone", AUTOFILL_PHONE)) if
 def akf_hash(items, auto):
     """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
     its hash regex would truncate). Pad the JSON so the byte length is a multiple of 3."""
-    payload = {"name": "Ashby queue", "auto": auto, "pad": "", "me": ME,
+    payload = {"name": "Ashby queue", "auto": auto, "pad": "", "pace": PACE, "me": ME,
                "items": [{"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in items]}
     js = json.dumps(payload, ensure_ascii=False)
     extra = (3 - (len(js.encode("utf-8")) % 3)) % 3
@@ -83,7 +85,14 @@ def age(j):
 # key carries the generation date — so a fresh list never inherits stale strike-throughs from a
 # previous list's first rows.
 GEN = time.strftime("%Y%m%d")
-tr = "\n".join(
+def _hdr(j, prev):
+    g = "Maybe already applied (old fresh page, second window, no record): ticked = skipped; untick to include" if j.get("maybe") else (j.get("group") or "")[2:]
+    pg = None if prev is None else ("M" if prev.get("maybe") else prev.get("group"))
+    cur = "M" if j.get("maybe") else j.get("group")
+    if not g or cur == pg: return ""
+    n = sum(1 for x in rows if (("M" if x.get("maybe") else x.get("group")) == cur))
+    return f'<tr class="grp"><td colspan="6">{H.escape(g)} — {n}</td></tr>'
+tr = "\n".join(_hdr(j, rows[i-1] if i else None) +
     f'<tr><td><input type="checkbox" data-k="{H.escape(j.get("tag") or j["url"])}"></td><td class="a">{age(j)}</td>'
     f'<td class="c">{H.escape(j["company"])}</td><td>{H.escape(j["title"])}</td>'
     f'<td class="l">{H.escape((j.get("loc") or "")[:40])}</td>'
@@ -99,7 +108,7 @@ body{{background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,Segoe UI
 h1{{font-size:21px;margin:0}} table{{border-collapse:collapse;width:100%;margin-top:10px}}
 td,th{{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}} .a{{color:var(--mut);font-size:13px;white-space:nowrap}}
 .c{{font-weight:600;white-space:nowrap}} .l{{color:var(--mut);font-size:13px}} a{{color:var(--acc)}}
-tr.done{{opacity:.42}} tr.done .c{{text-decoration:line-through}}
+tr.done{{opacity:.42}} tr.done .c{{text-decoration:line-through}} tr.grp td{{background:var(--card);font-weight:700;padding-top:12px}}
 .box{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:14px}}
 code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 #prog{{font-size:16px;font-weight:600;color:var(--ok);margin:8px 0}}
@@ -111,11 +120,12 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 <div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
 <div class="box"><b>Apply to all — one click, hands-free and paced:</b><br>
 <a class="start" id="start" href="{H.escape(start_href)}" target="_blank" rel="noopener">▶ Start — apply to all {len(rows)}</a><br>
-It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random 1 to 60 seconds before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). It keeps running with the tab in the background (keep it the front tab of its own window). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. A captcha (mostly Lever) pops up a desktop notification: tick it and click Submit; after 10 minutes the run moves on without it. It stops after three Ashby blocks in a row (wait an hour, then press Start again).</div>
+It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random {PACE[0]//1000} to {PACE[1]//1000} seconds before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). It keeps running with the tab in the background (keep it the front tab of its own window). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. A captcha (mostly Lever) pops up a desktop notification: tick it and click Submit; after 10 minutes the run moves on without it. It stops after three Ashby blocks in a row (wait an hour, then press Start again).</div>
 <div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
-const K='akf_clickrun_{GEN}';let st={{}};try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
+const K='akf_clickrun_{GEN}_{H.escape(os.path.basename(OUT))}';let st=null;try{{st=JSON.parse(localStorage.getItem(K)||'null')}}catch(e){{}}
+const DEF={json.dumps([(j.get("tag") or j["url"]) for j in rows if j.get("maybe")])};if(!st){{st={{}};DEF.forEach(k=>st[k]=1);}}
 const boxes=document.querySelectorAll('input[type=checkbox][data-k]');
 const links=[...document.querySelectorAll('a.go1[data-k]')];
 function paint(){{let d=0;boxes.forEach(b=>{{const on=!!st[b.dataset.k];b.checked=on;b.closest('tr').classList.toggle('done',on);if(on)d++}});
@@ -125,8 +135,8 @@ function mark(k){{st[k]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.k]=b.checked?1:0;save();paint()}}));
 links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.k),800)}}));
 const ITEMS={json.dumps([{"k": (j.get("tag") or j["url"]), "u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in rows], ensure_ascii=False)};
-const ME={json.dumps(ME)};
-function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,me:ME,items:items.map(x=>({{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
+const ME={json.dumps(ME)};const PACE={json.dumps(PACE)};
+function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,pace:PACE,me:ME,items:items.map(x=>({{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
 document.getElementById('start').addEventListener('click',function(){{const left=ITEMS.filter(x=>!st[x.k]);if(!left.length){{alert('Every row is ticked as done.');return;}}this.href=left[0].u+'#akf='+akfHash(left);this.textContent='▶ Start — apply to '+left.length+' not yet done';}});
 paint();
 </script></body></html>"""

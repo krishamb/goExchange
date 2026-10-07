@@ -5591,6 +5591,11 @@
    "company": "Box",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "veritone": {
+   "company": "Veritone",
+   "first": "2026-10-07",
+   "via": "workday-cloud"
   }
  }
 }
