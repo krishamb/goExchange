@@ -5626,6 +5626,11 @@
    "company": "Zuora",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "dominodatalab": {
+   "company": "Domino Data Lab",
+   "first": "2026-10-07",
+   "via": "greenhouse-cloud"
   }
  }
 }
