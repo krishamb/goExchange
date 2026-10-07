@@ -5616,6 +5616,11 @@
    "company": "Trase Systems",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "digitalturbine": {
+   "company": "Digital Turbine",
+   "first": "2026-10-07",
+   "via": "workday-cloud"
   }
  }
 }
