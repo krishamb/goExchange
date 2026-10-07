@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.10';
+const VERSION = '2026-10-07.11';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -267,7 +267,7 @@ async function answerLocation(e, q, input, rep) {
   if (input.value && /santa clara/i.test(input.value)) return true;
   for (const t of ['Santa Clara, California', 'Santa Clara, CA', 'Santa Clara']) {
     setValue(input, t);
-    const opt = await waitFor(() => optionsNow().filter(x => /santa clara/i.test(x.innerText)), 7000, 300);
+    const opt = await waitFor(() => optionsNow().filter(x => /santa clara/i.test(x.innerText)), 12000, 300);
     if (opt) {
       const o = opt.find(x => /santa clara.{0,40}(california|\bca\b|united states|usa)/i.test(x.innerText));
       if (o) {
@@ -683,6 +683,32 @@ function watchdog(q, item) {   // a job that makes no progress for 2 minutes (pa
   })();
 }
 let waitingForYou = false;
+// Chrome slows a HIDDEN tab's own timers (after 5 minutes: to about once a minute). Ashby's form code runs on those timers,
+// so in such a tab Location look-ups and Yes/No answers do not take and jobs come out half-filled ('needs you' for questions
+// the rules answer). The filler's own timers run in a Worker and are not slowed, so it can measure the page's: a 20 ms page
+// timer that has not fired within 2.5 s means the tab is throttled. Then the run PAUSES (banner + desktop notification) until
+// the tab is in front again; nothing is filled or submitted meanwhile. With Chrome started by 'ashby.sh fast' (throttling
+// switched off) the check passes and the run keeps going in the background.
+async function pageThrottled() {
+  if (!document.hidden) return false;
+  return await Promise.race([new Promise(res => setTimeout(() => res(false), 20)), sleep(2500).then(() => true)]);
+}
+async function whileThrottled(q, item, what) {
+  if (!await pageThrottled()) return true;
+  waitingForYou = true; let told = false; const t0 = Date.now();
+  while (await pageThrottled()) {
+    if (S.get(Q_KEY, q).stopped) { waitingForYou = false; return false; }
+    heartbeat();
+    const m = Math.round((Date.now() - t0) / 60000);
+    banner(`⏸ Paused before ${what} ${item.c}: Chrome is slowing this hidden tab, so forms would come out half-filled. Bring this tab to the front (or run 'bash ~/ashby.sh fast') and it continues by itself.${m ? ' Paused ' + m + ' min.' : ''}`, false, 4000);
+    status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nPAUSED: this tab is hidden and Chrome is slowing it.\nBring it to the front to continue.`);
+    if (!told) { notify(`Ashby run paused at ${item.c}: bring the run tab to the front to continue.`); told = true; }
+    await sleep(3000);
+  }
+  waitingForYou = false; progress();
+  if (told) watchdog(q, item);   // the stuck-job watchdog stood down while paused: start it again
+  return true;
+}
 async function batchStep(q) {
   const item = q.items[q.i];
   if (!item || curJobId() !== item.id) return false;
@@ -723,8 +749,17 @@ async function batchStep(q) {
     report(q, item, { status: 'closed', why: seen === 'closed' ? 'posting closed / not found' : 'no application form on the page (posting removed?)', answered: 0 });
     q.blocks = 0; S.set(Q_KEY, q); await gap(seen === 'closed' ? 'Posting closed - skipped' : 'No application form - skipped'); advance(q); return true;
   }
+  if (!await whileThrottled(q, item, 'filling')) return true;
   let rep; const tFill = Date.now(); STEP = 'filling the form';
-  try { rep = await fillForm({ prior: item.p || [] }); }
+  try {
+    rep = await fillForm({ prior: item.p || [] });
+    if (!rep.ready && rep.missing.length && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP') {
+      // questions the rules answer but the page did not take (slow list, re-render): settle, then answer them once more
+      STEP = 'second pass on: ' + rep.missing.join('; ').slice(0, 60);
+      if (!await whileThrottled(q, item, 'filling')) return true;
+      await sleep(2500); rep = await fillForm({ prior: item.p || [] }); rep.notes.push('second pass');
+    }
+  }
   catch (e) {   // a filler error on one job is logged and the batch continues
     if (q.stopped) return true;
     report(q, item, { status: 'unknown', why: 'filler error: ' + String((e && e.message) || e).slice(0, 80), answered: 0 });
@@ -737,6 +772,7 @@ async function batchStep(q) {
   else if (q.auto && rep.ready) {
     const since = Date.now() - (S.get('lastSubmitAt', 0) || 0);   // shared by every tab and window: never two submissions closer than the spacing
     if (since < paceMs && !await paceWait(item, q, paceMs - since)) return true;
+    if (!await whileThrottled(q, item, 'submitting')) return true;
     S.set('lastSubmitAt', Date.now());
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
