@@ -5606,6 +5606,11 @@
    "company": "Alkami Technology",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "costargroup": {
+   "company": "CoStar Group",
+   "first": "2026-10-07",
+   "via": "workday-cloud"
   }
  }
 }
