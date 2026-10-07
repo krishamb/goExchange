@@ -301,6 +301,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(consider you for|be considered for|use (the|your) information .{0,60}for) (other|additional|future|different) (positions|roles|opportunities|openings)|allow .{0,40} to (use|retain|keep) (the|your) (information|application|data) .{0,80}(other|future) (positions|roles|opportunities)", ["Yes","yes","I agree"]),   # being considered for other roles at the same company
  (r"you answered .{0,3}yes.{0,3} to the previous question.{0,120}(most accurately fits|best describes|applies to) your (situation|status)", ["I am authorized to work permanently in the country","I am authorized to work permanently","authorized to work permanently","I am a U.S. citizen","U.S. Citizen","US Citizen"]),   # work-authorization follow-up: a US citizen (other options never match)
  (r"authori[sz](ation|ed) to work in (more than one|multiple|other|additional) countr|work authori[sz]ation (in|for) (more than one|multiple) countr", ["No","no"]),   # his listed countries are the United States only
  (r"^if you are (a|an) (current |former )?.{0,40}\b(employee|team member|contractor)\b", ["N/A","Not applicable","Not Applicable","I am not an employee","I am not a current employee","No","no"]),   # a question for the company's own staff: the applicant is not one
