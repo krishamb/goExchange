@@ -24,5 +24,18 @@
   "tier": 2,
   "posted_ts": 1787614917.499,
   "src": "linkedin-24h"
+ },
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/capy/bd60cf12-18f4-473e-acd4-aa62ae859388",
+  "apply_url": "https://jobs.ashbyhq.com/capy/bd60cf12-18f4-473e-acd4-aa62ae859388/application",
+  "tag": "capy_member_of_technical_staff",
+  "company": "CAPY",
+  "slug": "capy",
+  "title": "Member of Technical Staff",
+  "loc": "SF (OnSite)",
+  "tier": 2,
+  "posted_ts": 1791319712.86,
+  "src": "indeed-24h"
  }
 ]
