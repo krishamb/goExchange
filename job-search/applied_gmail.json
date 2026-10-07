@@ -5601,6 +5601,11 @@
    "company": "Genesys",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "alkamitechnology": {
+   "company": "Alkami Technology",
+   "first": "2026-10-07",
+   "via": "workday-cloud"
   }
  }
 }
