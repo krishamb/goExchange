@@ -13,7 +13,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.9';
+const VERSION = '2026-10-07.10';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -461,7 +461,7 @@ async function fillForm(opts = {}) {
   const done = new Set();
   for (let pass = 0; pass < 2; pass++) {
     for (const e of entries()) {
-      if (done.has(e)) continue; done.add(e); progress();
+      if (done.has(e)) continue; done.add(e); progress(); STEP = 'answering: ' + (titleOf(e) || descOf(e) || '').slice(0, 70);
       const path = e.getAttribute('data-field-path') || '';
       if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) continue;
       const q = titleOf(e) || descOf(e);
@@ -503,22 +503,35 @@ const SPAM_RX = /submission (is )?(currently )?unavailable|unable to submit|poss
 function captchaChallenge() {
   return [...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"], iframe[src*="hcaptcha"], iframe[title*="challenge" i]')].some(f => { const r = f.getBoundingClientRect(); return r.width > 50 && r.height > 50 && getComputedStyle(f).visibility !== 'hidden'; });
 }
+let STEP = 'starting';                                // where the current job is (shown in the log if it gets stuck)
 async function submitForm() {
   const btn = (SITE === 'lever' && document.querySelector('#btn-submit, button[data-qa="btn-submit"]')) || [...document.querySelectorAll('button')].find(b => /^submit application$/i.test(clean(b.innerText)) && visible(b));
-  if (!btn) return { status: 'error', why: 'no Submit button' };
-  btn.scrollIntoView({ block: 'center' }); await sleep(300);
+  if (!btn) return { status: 'error', why: 'no Submit button on the form' };
+  const before = document.body.innerText || '';
+  const OKG = new RegExp(OK_RX.source, 'gi');
+  const okBefore = new Set((before.match(OKG) || []).map(x => x.toLowerCase()));
+  const spamBefore = SPAM_RX.test(before);
+  btn.scrollIntoView({ block: 'center' }); await sleep(400);
+  STEP = 'clicked Submit, waiting for the confirmation';
   btn.click();
-  const t0 = Date.now();
-  while (Date.now() - t0 < 30000) {
-    await sleep(500); progress();
+  const t0 = Date.now(); let errSince = 0;
+  while (Date.now() - t0 < 90000) {   // never leave before Ashby answers: the confirmation, a block, a captcha, or real field errors
+    await sleep(700); progress();
+    const secs = Math.round((Date.now() - t0) / 1000);
+    status(`Submitted the form - waiting for the confirmation... ${secs} s`);
     const body = document.body.innerText || '';
-    if (OK_RX.test(body)) return { status: 'submitted', why: (body.match(OK_RX) || [''])[0] };
-    if (SPAM_RX.test(body)) return { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0] };
-    if (captchaChallenge()) return { status: 'captcha', why: 'a captcha challenge appeared: please solve it and click Submit yourself' };
-    const err = [...document.querySelectorAll('[class*="error" i], [role="alert"]')].filter(visible).map(x => clean(x.innerText)).filter(Boolean);
-    if (err.length && Date.now() - t0 > 4000) return { status: 'needs', why: err.slice(0, 3).join(' | ').slice(0, 200) };
+    const fresh = (body.match(OKG) || []).filter(x => !okBefore.has(x.toLowerCase()));
+    if (fresh.length) return { status: 'submitted', why: fresh[0], confirmSecs: secs };
+    if (!spamBefore && SPAM_RX.test(body)) return { status: 'blocked', why: (body.match(SPAM_RX) || [''])[0], confirmSecs: secs };
+    if (captchaChallenge()) return { status: 'captcha', why: 'a captcha challenge appeared', confirmSecs: secs };
+    const busy = !document.contains(btn) || btn.disabled || btn.getAttribute('aria-busy') === 'true' || /submitting|loading|sending/i.test((btn.innerText || '') + ' ' + (btn.className || ''));
+    const bad = entries().filter(e => [...e.querySelectorAll('[class*="error" i], [aria-invalid="true"]')].some(x => visible(x) && (x.getAttribute('aria-invalid') === 'true' || clean(x.innerText))));
+    if (bad.length && !busy) {   // field errors, and the Submit button usable again: Ashby refused the form
+      if (!errSince) errSince = Date.now();
+      if (Date.now() - errSince > 4000) return { status: 'needs', why: 'Ashby flagged: ' + bad.map(e => titleOf(e) || descOf(e)).filter(Boolean).slice(0, 4).join('; ').slice(0, 220), confirmSecs: secs };
+    } else errSince = 0;
   }
-  return { status: 'unknown', why: 'no confirmation within 30 s' };
+  return { status: 'unconfirmed', why: 'clicked Submit, but no confirmation appeared within 90 s - please check this one', confirmSecs: 90 };
 }
 
 // ---------------- panel ----------------
@@ -595,7 +608,25 @@ function nextUrl(item) {
   if (/jobs\.lever\.co/.test(item.u)) return item.u.replace(/\/apply\/?$/, '').replace(/\/$/, '') + '/apply';
   return item.u.replace(/\/application\/?$/, '').replace(/\/$/, '') + '/application';
 }
+const LOG_KEY = 'runlog';
+function logRun(e) { try { const L = S.get(LOG_KEY, []) || []; L.push(Object.assign({ at: new Date().toISOString() }, e)); if (L.length > 4000) L.splice(0, L.length - 4000); S.set(LOG_KEY, L); } catch (x) {} }
+const LOG_LABEL = { submitted: 'SUBMITTED (confirmation seen)', unconfirmed: 'CLICKED SUBMIT - NO CONFIRMATION', needs: 'NOT SUBMITTED - needs an answer', blocked: 'BLOCKED by Ashby (spam / unavailable)', captcha: 'CAPTCHA - not submitted', closed: 'CLOSED / no form', skipped: 'SKIPPED - already submitted earlier', stuck: 'STUCK - moved on', error: 'ERROR', unknown: 'UNKNOWN' };
+function logCSV() {
+  const L = S.get(LOG_KEY, []) || []; const cols = ['at', 'run', 'n', 'company', 'title', 'result', 'detail', 'answered', 'fill_s', 'confirm_s', 'url'];
+  const q = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+  return [cols.join(',')].concat(L.map(e => cols.map(c => q(e[c])).join(','))).join('\n');
+}
+function downloadLog() {
+  try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([logCSV()], { type: 'text/csv' })); a.download = `ashby_run_log_${new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-')}.csv`; document.body.appendChild(a); a.click(); a.remove(); }
+  catch (e) { alert('Could not download the log: ' + e); }
+}
+function showLog() {
+  const L = (S.get(LOG_KEY, []) || []).slice(-40).reverse();
+  const by = {}; (S.get(LOG_KEY, []) || []).forEach(e => { by[e.result] = (by[e.result] || 0) + 1; });
+  status('Run log (newest first, last 40):\n' + Object.entries(by).map(([k, v]) => `${v} ${k}`).join(' | ') + '\n\n' + L.map(e => `${e.at.slice(11, 19)}  ${e.result}  ${e.company} - ${(e.title || '').slice(0, 40)}${e.detail ? '  (' + String(e.detail).slice(0, 90) + ')' : ''}`).join('\n'));
+}
 function report(q, item, res) {
+  logRun({ run: q.name, n: (q.i || 0) + 1, company: item.c, title: item.t, url: item.u, result: LOG_LABEL[res.status] || res.status, detail: res.why || '', answered: res.answered, fill_s: res.fillSecs, confirm_s: res.confirmSecs });
   q.results = q.results || {};
   q.results[item.id] = Object.assign({ t: item.t, c: item.c, u: item.u, at: Date.now() }, res);
   S.set(Q_KEY, q);
@@ -647,7 +678,7 @@ function watchdog(q, item) {   // a job that makes no progress for 2 minutes (pa
       if (advance.once || waitingForYou) return;
       const cur = S.get(Q_KEY, null);
       if (!cur || cur.done || cur.stopped || cur.i !== q.i) return;
-      if (Date.now() - lastProgress > STUCK_MS) { report(cur, item, { status: 'unknown', why: 'no progress for 2 minutes: moved on', answered: -1 }); advance(cur); return; }
+      if (Date.now() - lastProgress > STUCK_MS) { report(cur, item, { status: 'stuck', why: `no progress for 2 minutes while: ${STEP}`, answered: -1 }); advance(cur); return; }
     }
   })();
 }
@@ -673,7 +704,7 @@ async function batchStep(q) {
     return true;
   };
   status(`Batch "${q.name}": ${q.i + 1} of ${q.items.length}\n${item.c} - ${item.t}\nFilling...`);
-  buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([]); }]]);
+  buttons([['Stop batch', () => { q.stopped = 'by you'; S.set(Q_KEY, q); status('Batch stopped.'); buttons([['Run log', showLog], ['Download log', downloadLog]]); }], ['Run log', showLog], ['Download log', downloadLog]]);
   if (doneMap()[item.id]) {   // this browser already submitted this exact job (an earlier batch / the other window)
     report(q, item, { status: 'skipped', why: 'already submitted earlier from this browser', answered: 0 });
     S.set(Q_KEY, q); await gap('Already submitted earlier - skipped'); advance(q); return true;
@@ -692,7 +723,7 @@ async function batchStep(q) {
     report(q, item, { status: 'closed', why: seen === 'closed' ? 'posting closed / not found' : 'no application form on the page (posting removed?)', answered: 0 });
     q.blocks = 0; S.set(Q_KEY, q); await gap(seen === 'closed' ? 'Posting closed - skipped' : 'No application form - skipped'); advance(q); return true;
   }
-  let rep;
+  let rep; const tFill = Date.now(); STEP = 'filling the form';
   try { rep = await fillForm({ prior: item.p || [] }); }
   catch (e) {   // a filler error on one job is logged and the batch continues
     if (q.stopped) return true;
@@ -710,7 +741,7 @@ async function batchStep(q) {
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
   else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
-  res.answered = rep.filled.length;
+  res.answered = rep.filled.length; res.fillSecs = Math.round((Date.now() - tFill) / 1000) - (res.confirmSecs || 0);
   if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after the site confirms
     status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + `\n\nWhen you click Submit and the site confirms, the next job opens by itself.${q.auto ? ' (Moves on by itself after 3 minutes.)' : ''}`);
     if (res.status === 'captcha') { notify(`Captcha for ${item.c} - ${item.t}: tick it and click Submit`); banner('Captcha: tick it, then click Submit application', false); }
@@ -738,7 +769,7 @@ async function batchStep(q) {
     const t0 = Date.now();
     while (Date.now() - t0 < ms && !S.get(Q_KEY, q).stopped) { heartbeat(); status(`Ashby blocked that submission ("${(res.why || '').slice(0, 60)}"). Waiting ${Math.ceil((ms - (Date.now() - t0)) / 1000)} s before the next job...`); await sleep(1000); }
   }
-  if (res.status !== 'blocked') await gap(res.status === 'submitted' ? `✓ Submitted ${item.c}` : res.status === 'needs' ? `Not submitted: ${item.c} needs an answer (listed at the end)` : `Not submitted (${res.status}): ${item.c}`);
+  if (res.status !== 'blocked') await gap(res.status === 'submitted' ? `✓ Submitted ${item.c} (confirmation seen)` : res.status === 'unconfirmed' ? `⚠ ${item.c}: clicked Submit, no confirmation (logged)` : res.status === 'needs' ? `Not submitted: ${item.c} needs an answer (logged)` : `Not submitted (${res.status}): ${item.c}`);
   await sleep(800);
   advance(q);
   return true;
@@ -755,13 +786,13 @@ function finish(q) {
   releaseLock();
   const r = Object.values(q.results || {});
   const by = s => r.filter(x => x.status === s);
-  const lines = [`Batch "${q.name}" ${q.stopped ? 'stopped: ' + q.stopped : 'finished'}.`, `Submitted: ${by('submitted').length}`, `Need you: ${by('needs').length + by('captcha').length + by('unknown').length}`, `Skipped: ${by('skipped').length}`, `Blocked by Ashby: ${by('blocked').length}`, `Closed: ${by('closed').length}`];
+  const lines = [`Batch "${q.name}" ${q.stopped ? 'stopped: ' + q.stopped : 'finished'}.`, `Submitted (confirmation seen): ${by('submitted').length}`, `Clicked Submit, no confirmation: ${by('unconfirmed').length}`, `Need you (missing answers / captcha): ${by('needs').length + by('captcha').length}`, `Stuck / errors: ${by('stuck').length + by('unknown').length + by('error').length}`, `Skipped (already submitted earlier): ${by('skipped').length}`, `Blocked by Ashby: ${by('blocked').length}`, `Closed: ${by('closed').length}`];
   const left = q.items.slice(q.i + (q.stopped ? 1 : 0)).filter(x => !(q.results || {})[x.id]).map(x => ({ c: x.c, t: x.t, u: x.u, status: 'not started' }));
-  const todo = r.filter(x => /needs|captcha|unknown|blocked|skipped/.test(x.status)).concat(q.stopped ? left : []);
+  const todo = r.filter(x => /needs|captcha|unknown|blocked|unconfirmed|stuck|error/.test(x.status)).concat(q.stopped ? left : []);
   status(lines.join('\n') + (todo.length ? '\n\nOpen these to finish (the form fills itself):\n' : ''));
   const st = ui().querySelector('#akf-status');
   for (const x of todo) { const a = document.createElement('a'); a.href = x.u.replace(/\/$/, '') + '/application'; a.target = '_blank'; a.textContent = `• ${x.c} - ${x.t} (${x.status}${x.why ? ': ' + x.why.slice(0, 50) : ''})`; a.style.cssText = 'display:block;color:#93c5fd'; st.appendChild(a); }
-  buttons([['Copy results', () => navigator.clipboard.writeText(JSON.stringify(r, null, 1)), true], ['Clear batch', () => { S.set(Q_KEY, null); status('Cleared.'); buttons([]); }]]);
+  buttons([['Download log', downloadLog, true], ['Run log', showLog], ['Clear batch', () => { S.set(Q_KEY, null); status('Cleared.'); buttons([['Run log', showLog], ['Download log', downloadLog]]); }]]);
   q.done = true; S.set(Q_KEY, q);
   try { if (W.opener) W.opener.postMessage({ akf: 'done', results: q.results }, '*'); } catch (e) {}
 }
@@ -834,7 +865,7 @@ async function boot() {
   if (q && q.done) { ui(); finish(q); }
   const auto = S.get('autofill', HAS_GM);
   if (curJobId() && (auto || window.__AKF) && (SITE === 'ashby' || /\/apply\/?$/.test(location.pathname))) { await sleep(1500); return run({ manual: true, submit: !!(window.__AKF && window.__AKF.auto) }); }
-  ui(); status('Open an application, then click Fill.'); buttons([['Fill this application', () => run({ manual: true }), true]]);
+  ui(); status('Open an application, then click Fill.'); buttons([['Fill this application', () => run({ manual: true }), true], ['Run log', showLog], ['Download log', downloadLog]]);
 }
 window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, version: VERSION };
 if (!window.__AKF_TEST) boot();
