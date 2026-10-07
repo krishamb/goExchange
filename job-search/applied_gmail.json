@@ -5631,6 +5631,11 @@
    "company": "Domino Data Lab",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "gemini": {
+   "company": "Gemini",
+   "first": "2026-10-07",
+   "via": "greenhouse-cloud"
   }
  }
 }
