@@ -16,10 +16,12 @@ header = f"""// ==UserScript==
 // @name         Ashby filler (Ambarish)
 // @namespace    https://github.com/krishamb/goExchange
 // @version      {ver.replace('-', '.')}
-// @description  Attaches your resume and answers Ashby application forms with your rules; batch mode submits only fully answered forms.
+// @description  Attaches your resume and answers Ashby and Lever application forms with your rules; batch mode submits only fully answered forms.
 // @match        https://jobs.ashbyhq.com/*
+// @match        https://jobs.lever.co/*
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_notification
 // @run-at       document-idle
 // @noframes
 // @updateURL    {RAW}

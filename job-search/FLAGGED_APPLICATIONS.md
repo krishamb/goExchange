@@ -57,7 +57,7 @@ honest answer is the company's careers page / job board.
 - Pinterest (Director of Engineering, Core Ads): "Pinterest-hosted Recruiting Event"
 - Brex (Engineering Manager, Bill Pay; Staff Software Engineer, Acquisition): "Brex Blog / Employee Stories"
 
-## Resubmitted with corrected answers (2026-09-29, from [profile:email])
+## Resubmitted with corrected answers (2026-09-29, from (your Gmail))
 
 Elastic (Director of Software Engineering; Principal Software Engineer I, Serverless Platform), Airbnb (Senior Staff
 Data Engineer; Senior Staff Software Engineer, Tech Foundations) and Figma (Manager, Software Engineering, AI
