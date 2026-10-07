@@ -5621,6 +5621,11 @@
    "company": "Digital Turbine",
    "first": "2026-10-07",
    "via": "workday-cloud"
+  },
+  "zuora": {
+   "company": "Zuora",
+   "first": "2026-10-07",
+   "via": "greenhouse-cloud"
   }
  }
 }
