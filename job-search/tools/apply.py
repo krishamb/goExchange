@@ -168,6 +168,7 @@ TEXT_RULES=[
  (r"end (date )?year|^to year|end \(year\)", "2026"),
  (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
  (r"^(street |home |mailing )?address", P["location"]),
+ (r"(how|where) did you (first |initially )?(hear|learn|find out|come across)|hear about (us|this|the)|hear of (us|this)", "LinkedIn"),   # 'How did you hear about Hex? (eg LinkedIn, Friend, ...)': the source, not the profile URL
  (r"linkedin|linkedln", P["linkedin"]),(r"github|git (repo|repository|profile)|url to your git", P["github"]),(r"portfolio|website|personal site", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
  (r"^(?!.*\b(how|describe|explain|tell us|ways?)\b).*(current (title|role)|job title|^title$)", "CTO & Technical Co-Founder / Principal Architect"),
