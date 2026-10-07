@@ -1,0 +1,41 @@
+[
+ {
+  "ats": "ashby",
+  "url": "https://jobs.ashbyhq.com/f2-ai/56196214-958d-4c02-97e2-8e03fab97d09",
+  "apply_url": "https://jobs.ashbyhq.com/f2-ai/56196214-958d-4c02-97e2-8e03fab97d09/application",
+  "tag": "f2_staff_software_engineer",
+  "company": "F2",
+  "slug": "f2-ai",
+  "title": "Staff Software Engineer",
+  "loc": "San Francisco",
+  "tier": 2,
+  "priority": 0,
+  "posted_ts": 1,
+  "group": "2 SF Bay hybrid",
+  "src": "linkedin-24h"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/mainspringenergy/9c970940-6251-41fd-a2c6-c6a77dc54db1",
+  "apply_url": "https://jobs.lever.co/mainspringenergy/9c970940-6251-41fd-a2c6-c6a77dc54db1/apply",
+  "tag": "mainspring_energy_senior_software_engineering_",
+  "company": "Mainspring Energy",
+  "title": "Senior Software Engineering Manager",
+  "loc": "Menlo Park, CA (Bay Area hybrid)",
+  "group": "5 Lever (may show a captcha)",
+  "posted_ts": 0,
+  "src": "linkedin-24h"
+ },
+ {
+  "ats": "lever",
+  "url": "https://jobs.lever.co/bellotalabs/6fe1883c-54b6-4b4a-a162-04faf4053169",
+  "apply_url": "https://jobs.lever.co/bellotalabs/6fe1883c-54b6-4b4a-a162-04faf4053169/apply",
+  "tag": "bellota_labs_senior_principal_software_enginee",
+  "company": "Bellota Labs",
+  "title": "Senior/Principal Software Engineer",
+  "loc": "Redwood City, CA (Bay Area onsite)",
+  "group": "5 Lever (may show a captcha)",
+  "posted_ts": 0,
+  "src": "linkedin-24h"
+ }
+]
