@@ -317,6 +317,7 @@ CHOICE_RULES=[
  (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
  (r"willing to (submit|provide) (documentation|documents|proof|transcripts?)", ["Yes","yes"]),
  (r"(state|federal|oig|sam) exclusion list|excluded from (participating in )?(a |any )?federal(ly funded)? health ?care program", ["No","no"]),
+ (r"permit .{0,80}to process your (personal )?data .{0,140}(artificial intelligence|\bai\b)|(uses|use|using) artificial intelligence \(ai\) to (help )?(match|evaluate|screen|review|assess)|consent to .{0,60}(use|using) (of )?(ai|artificial intelligence) (tools )?(to|in) (evaluat|screen|review|assess|match)", ["Yes","I agree","I consent","I acknowledge","I understand","Accept","Agree","Opt in"]),   # consent to the EMPLOYER's AI screening (applicant: consent -> Yes); not the 'did you use AI' certification, which stays __ASK__
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
  (r"pending investigations? or disciplinary|disciplinary actions? .{0,60}(licen[sc]es|registrations|certifications)", ["No","no"]),
