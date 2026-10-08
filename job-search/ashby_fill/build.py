@@ -22,6 +22,7 @@ header = f"""// ==UserScript==
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_notification
+// @grant        GM_addElement
 // @run-at       document-idle
 // @noframes
 // @updateURL    {RAW}
