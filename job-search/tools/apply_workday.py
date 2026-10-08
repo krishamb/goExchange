@@ -356,6 +356,7 @@ def hear_score(t, toks, cat=""):
     if src.search(tl) and not bad: return 120
     if src.search(cat or "") and not bad and re.search(r"^(job (board|posting|post|ad)s?|posting|other|website)$", tl): return 110   # 'LinkedIn > Job Posting'
     if re.search(r"^(online |internet )?(job ?boards?|job postings?|job post site|job sites?|job search (site|engine)s?|job boards?/websites?|online job (board|posting)s?)$", tl): return 60
+    if re.search(r"^(internet|online)\s*[-\u2013:/]\s*job (boards?|sites?|search)", tl) and not bad: return 60   # CVS 'Internet - Job Boards/Search Engines' (LinkedIn is one)
     if SOURCE_SITE == "linkedin" and re.search(r"^social( media| networks?| networking( sites?)?)?$", tl): return 50
     if SOURCE_SITE == "linkedin" and re.search(r"\bsocial (media|network)", tl) and not bad: return 45   # 'Saw ICF on social media' (LinkedIn is a social network)
     if SOURCE_SITE == "linkedin" and re.search(r"^browsing the internet$|^internet( search)?$|^online( search)?$", tl): return 30
