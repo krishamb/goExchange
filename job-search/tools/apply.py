@@ -324,6 +324,13 @@ CHOICE_RULES=[
  (r"if you do not live within (a )?commut\w* distance.{0,80}(willing|open) to.{0,12}relocat", ["Yes","yes"]),   # applicant: relocates (ahead of the commute rule, which would answer No; 10-08 Live Nation)
  (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out|uses artificial intelligence \(ai\) tools to assist in reviewing applications", ["I understand and consent to the process described above","I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to the employer's AI screening (10-08 TruStage); no bare Yes next to an opt-out choice
  (r"how would you like us to communicate updates", ["Email","E-mail","Email Only","Email only"]),   # 10-08 Pax8
+ (r"how would you prefer we contact you for scheduling", ["Email","E-mail"]),   # 10-08 Allstate
+ (r"would you be interested in hearing about contract roles", ["No","no"]),   # applicant: full-time only (temp/contract -> No)
+ (r"^i acknowledge that if i live within a .{0,20}commute of any", ["Yes","I acknowledge","I Acknowledge","Acknowledge","I agree"]),   # 10-08 Collectors: an acknowledgement (applicant: acknowledgements -> Yes)
+ (r"massachusetts applicants:? note that it is unlawful .{0,80}lie detector", ["I am in California and I agree"]),   # 10-08 Simpson Thacher: applicant lives in California; consent -> agree
+ (r"^do you speak any other languages besides english", ["Yes","yes"]),   # applicant also speaks Tamil and Hindi
+ (r"appropriate state insurance license", ["No","no"]),   # applicant holds no insurance licence
+ (r"^what type of role are you seeking\??\*?$", ["Remote","Hybrid"]),   # 10-08 Baldwin remote role
  (r"best way to reach you", ["Email","E-mail"]),   # 10-08 Vistra
  (r"^currency( type)?\??\*?$", ["USD","US Dollar","United States Dollar"]),   # 10-08 Sony
  (r"^are you a (current )?resident of (?!(the )?(united states|u\.?s\.?a?\b|america|california))[a-z .]+\?\*?$", ["No","no"]),   # applicant lives in Santa Clara, California (10-08 Sony: Massachusetts / Maryland)
