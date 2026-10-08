@@ -7565,6 +7565,293 @@
     "2026-10-01"
    ],
    "count": 1
+  },
+  "icf": {
+   "name": "ICF",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "ecmcgroup": {
+   "name": "ECMC Group",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "lseg": {
+   "name": "LSEG",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dataminr": {
+   "name": "Dataminr",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "fico": {
+   "name": "FICO",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "simpro": {
+   "name": "simpro",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "generalmotorsgm": {
+   "name": "General Motors (GM)",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "vignasolutionsinc": {
+   "name": "Vigna Solutions Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "healthcareitleaders": {
+   "name": "Healthcare IT Leaders",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "internationalsolutionsgroup": {
+   "name": "International Solutions Group",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "digitalmindsglobaltechnologiesinc": {
+   "name": "Digital Minds Global Technologies Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "roseinternational": {
+   "name": "Rose International",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "systemone": {
+   "name": "System One",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "symphonycorporation": {
+   "name": "Symphony Corporation",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "yohadayzimmermancompany": {
+   "name": "Yoh - A Day & Zimmerman Company",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "alphasilicon": {
+   "name": "Alpha Silicon",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "nexorantllc": {
+   "name": "Nexorant LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "krasanconsultingservices": {
+   "name": "Krasan Consulting Services",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "fixitytechnologies": {
+   "name": "Fixity Technologies",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "drunixsolutioninc": {
+   "name": "Drunix Solution Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "quantumtechnologiesllc": {
+   "name": "QUANTUM TECHNOLOGIES LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "talentrixaiinc": {
+   "name": "Talentrix AI INC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "infinitecomputersolutionsics": {
+   "name": "Infinite Computer Solutions (ICS)",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "ptrglobal": {
+   "name": "PTR Global",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "globalalliantinc": {
+   "name": "Global Alliant Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "vegaintellisoftinc": {
+   "name": "Vega Intellisoft Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "inspyrsolutions": {
+   "name": "INSPYR Solutions",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "collasysllc": {
+   "name": "Collasys LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "thehartford": {
+   "name": "The Hartford",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "vestmark": {
+   "name": "Vestmark",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dickssportinggoods": {
+   "name": "dickssportinggoods",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dentsu": {
+   "name": "Dentsu",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "cambiumlearninggroup": {
+   "name": "Cambium Learning Group",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "hitachirail": {
+   "name": "Hitachi Rail",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "danaher": {
+   "name": "danaher",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "chrobinson": {
+   "name": "C.H. Robinson",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "hypr": {
+   "name": "HYPR",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "judihealth": {
+   "name": "Judi Health",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "paperlessparts": {
+   "name": "Paperless Parts",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "simplesense": {
+   "name": "Simplesense",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "taboola": {
+   "name": "Taboola",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
   }
  }
 }
