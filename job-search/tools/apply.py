@@ -582,6 +582,7 @@ CHOICE_RULES=[
  (r"(uses|use) text messag|text messag.{0,80}(interview|application|hiring|recruit)|consent to (receive )?(sms|text)", ["Yes","yes","I consent","Opt in"]),   # applicant: consent -> yes
  (r"willing to complete an identity verification|identity verification as part of", ["Yes","yes"]),
  (r"right to accept unrestricted employment", ["Yes","yes"]),   # US citizen
+ (r"which of these (programming )?languages have you (written|used|shipped).{0,40}production", ["Python","Go","Golang","Rust","C++","Java","C#","TypeScript","JavaScript","SQL"]),   # his production languages (resume)
  (r"hands-on experience with data engines", ["I've built high-throughput services or APIs on top of engines like ClickHouse, Druid, Pinot, or DuckDB"]),   # high-throughput streaming/data services (resume)
  (r"verify that a prompt or model change improves an agent", ["Run an automated offline evaluation dataset measuring deterministic assertions and task success rates."]),   # evaluation frameworks (Hyperion AI)
  (r"how frequently and extensively do you use ai tools", ["I have designed, built, or maintained internal AI platforms, custom models, or infrastructure for my organization."]),   # Hyperion AI agentic platform (resume)
