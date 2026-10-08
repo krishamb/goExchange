@@ -6487,6 +6487,34 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "stubhub": {
+   "name": "StubHub",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "gapinc": {
+   "name": "Gap Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "gap": {
+   "name": "Gap Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "circle": {
+   "name": "Circle",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
   }
  }
 }
