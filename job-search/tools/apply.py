@@ -585,6 +585,23 @@ CHOICE_RULES=[
  (r"right to accept unrestricted employment", ["Yes","yes"]),   # US citizen
  (r"policy may prohibit the employment of relatives|relatives? (currently )?employed (by|at|with)", ["No","no"]),   # no relatives there (DICK'S asked names after a wrong Yes)
  (r"additional applicable documents", ["No","no"]),
+ (r"is your current employer a .{0,60}customer", ["No","no"]),   # Hyperion AI
+ (r"current work authorization status", ["U.S. Citizenship","U.S. Citizen","US Citizen","Citizen"]),
+ (r"(currently|previously) perform(ed)? work (in|for) the u\.?s\.? federal government", ["No","no"]),
+ (r"working from within the continental united states", ["Yes","yes"]),
+ (r"hands-on experience with big data processing tools", ["Built jobs: I've built or modified batch or streaming jobs (e.g., Spark, Hadoop, Flink) that run in production"]),   # streaming / Kafka pipelines (resume)
+ (r"experience designing backend systems", ["Multi-service / architecture: I've designed systems spanning multiple services, including trade-offs around consistency, latency, and failure handling"]),
+ (r"largest system you've owned end to end", ["A critical system: I owned a high-traffic or revenue-critical system and was accountable for its reliability, performance, and roadmap"]),   # trading / market-data platforms (resume)
+ (r"experience supporting production systems", ["Incident lead: I've led incident response, run root-cause analyses and postmortems, and driven fixes that prevent issues from happening again"]),
+ (r"hybrid position requiring .{0,40}in-person at our .{0,40}office.{0,40}best describes your situation", ["I am not currently based in the greater LA area, but I am open to relocating for this role","open to relocating"]),   # hybrid anywhere in the US: relocates
+ (r"export regulations.{0,80}which of the following applies to you", ["I am a U.S. Citizen.","I am a U.S. Citizen","U.S. Citizen"]),
+ (r"ability to meet our hybrid work requirement", ["I am willing to relocate to one of these locations if selected for the role."]),
+ (r"from the point of an offer, how much time would you need", ["2 weeks","Two weeks","1-2 weeks","Less than 2 weeks","2 weeks or less","Immediately"]),
+ (r"ever been an employee or a contractor/contingent worker with", ["No","no"]),
+ (r"are you a former .{0,80}(employee|emp\b)", ["No","no"]),
+ (r"possess the following active licen[cs]es/registrations", ["None","None of the above","N/A","Not applicable","I do not have any"]),   # none
+ (r"uses artificial intelligence \(ai\) tools to assist in review", ["Yes","I agree","I consent","I acknowledge","I understand","Accept","Opt in"]),   # consent to the employer's AI review
+ (r"requires background checks of all new employees", ["Yes","I acknowledge","I understand","I agree","Acknowledged"]),
  (r"legally permitted to reside and work in the united states", ["Yes","yes"]),
  (r"engaged as a temp or contractor .{0,60}\bat\b", ["No","no"]),
  (r"located or applying to a role in canada or the uk", ["No","no"]),
