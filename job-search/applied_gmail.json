@@ -5749,6 +5749,41 @@
     "2026-10-07"
    ],
    "count": 1
+  },
+  "kong": {
+   "name": "Kong",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "lyrahealth": {
+   "name": "Lyra Health",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "attentive": {
+   "name": "Attentive",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "place": {
+   "name": "PLACE",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "cloverhealth": {
+   "name": "Clover Health",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
   }
  }
 }
