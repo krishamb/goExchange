@@ -6464,6 +6464,22 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "lumindigital": {
+   "name": "Lumin Digital",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "via": "applicant: remove"
+  },
+  "xero": {
+   "name": "Xero",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "via": "applicant: remove"
   }
  }
 }
