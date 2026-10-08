@@ -324,6 +324,9 @@ CHOICE_RULES=[
  (r"if you do not live within (a )?commut\w* distance.{0,80}(willing|open) to.{0,12}relocat", ["Yes","yes"]),   # applicant: relocates (ahead of the commute rule, which would answer No; 10-08 Live Nation)
  (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out|uses artificial intelligence \(ai\) tools to assist in reviewing applications", ["I understand and consent to the process described above","I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to the employer's AI screening (10-08 TruStage); no bare Yes next to an opt-out choice
  (r"how would you like us to communicate updates", ["Email","E-mail","Email Only","Email only"]),   # 10-08 Pax8
+ (r"^please select one of the following:?\*?$", ["I am a U.S. Citizen, lawful permanent resident or conditional lawful permanent resident, Refugee, or Asylee","I am a U.S. Citizen"]),   # 10-08 Dimensional export-control status; matches only the citizen option
+ (r"do you have any licenses or professional certifications that are relevant", ["No","no"]),   # applicant: certifications -> No
+ (r"may we share your resume with our clients", ["Yes","yes"]),   # consent -> Yes
  (r"how would you prefer we contact you for scheduling", ["Email","E-mail"]),   # 10-08 Allstate
  (r"would you be interested in hearing about contract roles", ["No","no"]),   # applicant: full-time only (temp/contract -> No)
  (r"^i acknowledge that if i live within a .{0,20}commute of any", ["Yes","I acknowledge","I Acknowledge","Acknowledge","I agree"]),   # 10-08 Collectors: an acknowledgement (applicant: acknowledgements -> Yes)
