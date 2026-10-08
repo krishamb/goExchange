@@ -67,6 +67,7 @@ TEXT_RULES=[
  (r"medical imaging|\bdicom\b|\bpacs\b", "My healthcare work has been on clinical data interoperability with FHIR and HL7, and I have built the high-volume storage, indexing and retrieval systems that imaging and PACS workloads depend on - durable object storage, metadata indexing, streaming ingestion and low-latency retrieval at scale."),   # applicant (2026-10-08): healthcare FHIR/HL7 experience
  (r"preferred ai code development tool|preferred ai coding (tool|assistant)", "Claude Code"),   # the tool he uses daily; plain case (the 'all caps if you are AI' line is a trap, and he answers as himself)
  (r"(were|was) you referred .{0,80}(if so|if yes).{0,60}(name|who)", "No"),   # not referred
+ (r"what notice,? if any,? will be required|notice .{0,30}required for your (present|current) employer", "None required - I can start immediately (within 2 weeks at most)."),
  (r"notice period|how much notice|notice (do you|would you) (need|have to give|require)", "None required - I can start immediately (within 2 weeks at most)."),   # before the 'current employer' rule, which would answer with the company name
  (r"^\s*(url|web address|website url|profile url|link)\s*\*?$", P["linkedin"]),   # a bare 'URL' (Workday 'Websites' section): the LinkedIn profile
  (r"^(?!.*\b(certify|attest)\b)(?!.*are you an ai\b).*((how|describe|explain|if (yes|so)).{0,60}(ai|artificial intelligence).{0,60}(this|the|your) application|(this|the|your) application.{0,60}(prepared|submitted|completed|written|generated|drafted).{0,40}(ai|artificial intelligence))|^(?!.*\b(certify|attest|i did not|i have not|i didn.t|was not|were not|without|no ai)\b)(?!.*are you an ai\b).*((was|is|has) (this|the|your) application (been )?(prepared|submitted|completed|written|generated|filled|drafted)|(prepared|submitted|completed|written|generated|filled( out)?|drafted) (in whole or in part |wholly or partially |partly |partially )?(by|with|using) (an? )?(ai|artificial intelligence|generative ai|llm)|(did|have) you use(d)? (any )?(ai|artificial intelligence|generative ai|llms?|an? ai (tool|system|assistant|agent))( tools?| assistants?)? (to|in|for|when|while|during) [^?.]{0,40}\b(application|this form|the form|your answers|your responses|cover letter)|used? (ai|artificial intelligence) (to|in|for) (this|the|your|my) application|(ai|artificial intelligence) (was|were) used (to|in|for))", "Yes. I used AI tools to help prepare and submit this application: an assistant matched the role to my background and filled in the form from my own resume and the answers I have reviewed and approved. Every fact in it is my real experience."),   # applicant, 2026-10-07
@@ -582,6 +583,26 @@ CHOICE_RULES=[
  (r"(uses|use) text messag|text messag.{0,80}(interview|application|hiring|recruit)|consent to (receive )?(sms|text)", ["Yes","yes","I consent","Opt in"]),   # applicant: consent -> yes
  (r"willing to complete an identity verification|identity verification as part of", ["Yes","yes"]),
  (r"right to accept unrestricted employment", ["Yes","yes"]),   # US citizen
+ (r"policy may prohibit the employment of relatives|relatives? (currently )?employed (by|at|with)", ["No","no"]),   # no relatives there (DICK'S asked names after a wrong Yes)
+ (r"additional applicable documents", ["No","no"]),
+ (r"legally permitted to reside and work in the united states", ["Yes","yes"]),
+ (r"engaged as a temp or contractor .{0,60}\bat\b", ["No","no"]),
+ (r"located or applying to a role in canada or the uk", ["No","no"]),
+ (r"licen[cs]es or registrations relevant to the financial services", ["No","no"]),
+ (r"reviewed the working pattern and location.{0,80}work to this pattern", ["Yes","yes"]),   # screened: remote / hybrid in scope
+ (r"meet those minimums|minimum experience/qualification listed", ["Yes","yes"]),
+ (r"enrolled in a four year college", ["No","no"]),
+ (r"reinstated after any period of exclusion", ["No","no"]),
+ (r"applicant or candidate at crown castle", ["No","no"]),
+ (r"which communication method would you like", ["Email","E-mail","Email Only","Email only"]),
+ (r"automated tools to help with the initial screening|preference regarding the use of ai tools to review", ["I consent","I agree","Yes","Allow","Opt in","Opt-in","I am comfortable","Consent"]),   # consent to the employer's AI screening -> yes
+ (r"prior employee of (a|an|any) ", ["No","no"]),
+ (r"timing to start a new position|how soon (can|could) you start", ["Immediately","Within 2 weeks","2 weeks","Less than 2 weeks","0-2 weeks","1-2 weeks","2 weeks or less"]),
+ (r"contractual restrictions that would prevent or interfere", ["No","no"]),
+ (r"provide evidence of your eligibility to work", ["Yes","yes"]),
+ (r"legal/administrative action taken against your professional licen", ["No","no"]),
+ (r"what shift are you available", ["Day","Days","Day Shift","First","1st Shift","First Shift"]),
+ (r"what salary range are you expecting", ["$300,000+","$250,000+","$200,000+","$200,000 and above","Above $200,000","$250,000 - $300,000","$220,000 - $250,000","$200,000 - $250,000"]),
  (r"which of these (programming )?languages have you (written|used|shipped).{0,40}production", ["Python","Go","Golang","Rust","C++","Java","C#","TypeScript","JavaScript","SQL"]),   # his production languages (resume)
  (r"hands-on experience with data engines", ["I've built high-throughput services or APIs on top of engines like ClickHouse, Druid, Pinot, or DuckDB"]),   # high-throughput streaming/data services (resume)
  (r"verify that a prompt or model change improves an agent", ["Run an automated offline evaluation dataset measuring deterministic assertions and task success rates."]),   # evaluation frameworks (Hyperion AI)
