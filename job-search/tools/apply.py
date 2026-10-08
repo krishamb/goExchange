@@ -62,6 +62,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"from the point of an offer,? how much time would you need|how much time would you need before you.{0,3}re able to start", "Two weeks from an offer; I can start sooner if needed."),   # 10-08 Q2
+ (r"percentage (number )?(that )?you are willing to travel", "25"),   # applicant: travel up to 25% (see the travel rule in CHOICE_RULES)
  (r"experience (with|on|using|in) (aws|amazon web services|gcp|google cloud|azure|(other )?cloud platforms?)|(aws|cloud platforms?).{0,40}(list|specific) services", "Extensive, hands-on. AWS: EC2, S3, Lambda, EKS, RDS, DynamoDB, Kinesis, SQS/SNS, IAM and CloudWatch; GCP: Vertex AI, BigQuery, GKE and Bigtable; plus Azure. At Yahoo Finance I led the AWS modernization of the platform alongside GCP / Vertex AI work with Google, and at Hyperion AI I run our agentic AI platform and model inference on AWS and GCP with Kubernetes and Terraform."),   # before the 'if applicable -> N/A' rule
  (r"hands-on experience with c#.{0,20}java|experience with (java|c#) and (java|c#)|how you.ve used each", "Java: many years of production backend work in financial services (Morgan Stanley, JPMorgan Chase, Bank of America Merrill Lynch, Barclays, Bloomberg) - trading, risk and market-data services, messaging and low-latency components. C#/.NET: services and internal tooling in those financial-services environments and integrations since. Today I mostly write Python, Go, Rust and C++, and I still review and design Java and C# systems."),
  (r"medical imaging|\bdicom\b|\bpacs\b", "My healthcare work has been on clinical data interoperability with FHIR and HL7, and I have built the high-volume storage, indexing and retrieval systems that imaging and PACS workloads depend on - durable object storage, metadata indexing, streaming ingestion and low-latency retrieval at scale."),   # applicant (2026-10-08): healthcare FHIR/HL7 experience
@@ -320,8 +322,12 @@ CHOICE_RULES=[
  (r"you answered .{0,3}no.{0,3} to the previous question.{0,120}(most accurately fits|best describes|applies to) your (situation|status)", ["I am a U.S. citizen.","I am a U.S. citizen","U.S. citizen","US Citizen","I am authorized to work permanently in the country"]),   # follow-up to 'need sponsorship? No': he is a US citizen
  (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
  (r"if you do not live within (a )?commut\w* distance.{0,80}(willing|open) to.{0,12}relocat", ["Yes","yes"]),   # applicant: relocates (ahead of the commute rule, which would answer No; 10-08 Live Nation)
- (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out", ["I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to the employer's AI screening (10-08 TruStage); no bare Yes next to an opt-out choice
+ (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out|uses artificial intelligence \(ai\) tools to assist in reviewing applications", ["I understand and consent to the process described above","I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to the employer's AI screening (10-08 TruStage); no bare Yes next to an opt-out choice
  (r"how would you like us to communicate updates", ["Email","E-mail","Email Only","Email only"]),   # 10-08 Pax8
+ (r"what annual salary do you expect for this role", ["300,000 - 325,000","300,000 - 350,000","$300,000 - $350,000","301,000 - 350,000"]),   # 10-08 Live Nation bands; applicant $220K-$350K, $300K-$350K band first as elsewhere
+ (r"have you ever been an employee or a contractor/contingent worker with", ["Not Applicable","No","no"]),   # 10-08 Elevance: never worked there
+ (r"requires background checks of all new employees", ["I have read the above statement and wish to continue","I Acknowledge","I acknowledge","Acknowledge"]),   # 10-08 Western Union acknowledgement
+ (r"how you would like to be contacted for scheduling interviews", ["Email","E-mail"]),   # 10-08 Western Union
  (r"may use artificial intelligence in the application screening.{0,500}opt out", ["I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to AI screening (10-08 DIRECTV)
  (r"please indicate if you worked here previously|have you (ever )?worked here (before|previously)", ["No","no"]),   # 10-08 DoubleVerify: never worked there
  (r"willing to (submit|provide) (documentation|documents|proof|transcripts?)", ["Yes","yes"]),
@@ -631,7 +637,7 @@ CHOICE_RULES=[
  (r"provide evidence of your eligibility to work", ["Yes","yes"]),
  (r"legal/administrative action taken against your professional licen", ["No","no"]),
  (r"what shift are you available", ["Day","Days","Day Shift","First","1st Shift","First Shift"]),
- (r"what salary range are you expecting", ["$300,000+","$250,000+","$200,000+","$200,000 and above","Above $200,000","$250,000 - $300,000","$220,000 - $250,000","$200,000 - $250,000"]),
+ (r"what salary range are you expecting", ["301,000 - 350,000","300,000 - 350,000","$300,000+","$250,000+","$200,000+","$200,000 and above","Above $200,000","$250,000 - $300,000","$220,000 - $250,000","$200,000 - $250,000"]),
  (r"which of these (programming )?languages have you (written|used|shipped).{0,40}production", ["Python","Go","Golang","Rust","C++","Java","C#","TypeScript","JavaScript","SQL"]),   # his production languages (resume)
  (r"hands-on experience with data engines", ["I've built high-throughput services or APIs on top of engines like ClickHouse, Druid, Pinot, or DuckDB"]),   # high-throughput streaming/data services (resume)
  (r"verify that a prompt or model change improves an agent", ["Run an automated offline evaluation dataset measuring deterministic assertions and task success rates."]),   # evaluation frameworks (Hyperion AI)
