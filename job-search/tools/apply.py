@@ -67,6 +67,9 @@ TEXT_RULES=[
  (r"medical imaging|\bdicom\b|\bpacs\b", "My healthcare work has been on clinical data interoperability with FHIR and HL7, and I have built the high-volume storage, indexing and retrieval systems that imaging and PACS workloads depend on - durable object storage, metadata indexing, streaming ingestion and low-latency retrieval at scale."),   # applicant (2026-10-08): healthcare FHIR/HL7 experience
  (r"preferred ai code development tool|preferred ai coding (tool|assistant)", "Claude Code"),   # the tool he uses daily; plain case (the 'all caps if you are AI' line is a trap, and he answers as himself)
  (r"(were|was) you referred .{0,80}(if so|if yes).{0,60}(name|who)", "No"),   # not referred
+ (r"earliest date you would be able to start", "Within two weeks of an offer (immediately available)."),
+ (r"^state \(please provide the name of your state\)", "California"),
+ (r"what annual salary do you expect.{0,40}currency", "USD 220,000 - 350,000 (negotiable, depending on scope)"),
  (r"what notice,? if any,? will be required|notice .{0,30}required for your (present|current) employer", "None required - I can start immediately (within 2 weeks at most)."),
  (r"notice period|how much notice|notice (do you|would you) (need|have to give|require)", "None required - I can start immediately (within 2 weeks at most)."),   # before the 'current employer' rule, which would answer with the company name
  (r"^\s*(url|web address|website url|profile url|link)\s*\*?$", P["linkedin"]),   # a bare 'URL' (Workday 'Websites' section): the LinkedIn profile
@@ -586,6 +589,11 @@ CHOICE_RULES=[
  (r"policy may prohibit the employment of relatives|relatives? (currently )?employed (by|at|with)", ["No","no"]),   # no relatives there (DICK'S asked names after a wrong Yes)
  (r"additional applicable documents", ["No","no"]),
  (r"is your current employer a .{0,60}customer", ["No","no"]),   # Hyperion AI
+ (r"professional project experience designing autonomous ai agents|experience (designing|building) (autonomous |agentic )?ai agents", ["Yes","yes"]),   # Hyperion AI agentic platform (resume)
+ (r"select the checkbox to indicate your understanding and agreement", ["Yes","I agree","I understand","I acknowledge","Agree","Accept"]),
+ (r"need any interview adjustments|interview (adjustments|accommodations)", ["No","no"]),
+ (r"what type\(?s?\)? of employment are you interested in", ["Full-time","Full Time","Full-Time","Regular Full-Time","Permanent"]),
+ (r"if you do not live within a commutable distance.{0,80}(willing|open) to relocate", ["Yes","yes"]),   # applicant: relocates
  (r"current work authorization status", ["U.S. Citizenship","U.S. Citizen","US Citizen","Citizen"]),
  (r"(currently|previously) perform(ed)? work (in|for) the u\.?s\.? federal government", ["No","no"]),
  (r"working from within the continental united states", ["Yes","yes"]),
