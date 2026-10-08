@@ -59,7 +59,7 @@ def akf_hash(items, auto):
     """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
     its hash regex would truncate). Pad the JSON so the byte length is a multiple of 3."""
     payload = {"name": "Ashby queue", "auto": auto, "pad": "", "pace": PACE, "me": ME,
-               "items": [{"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in items]}
+               "items": [dict({"u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]}, **({"a": j["a"]} if j.get("a") else {})) for j in items]}   # a: per-job answers (filler v.12+)
     js = json.dumps(payload, ensure_ascii=False)
     extra = (3 - (len(js.encode("utf-8")) % 3)) % 3
     if extra:
@@ -100,6 +100,7 @@ tr = "\n".join(_hdr(j, rows[i-1] if i else None) +
     for i, j in enumerate(rows))
 
 us_path = os.path.join(HERE, "ashby_fill", "ashby_fill.user.js")
+ITEMS_JS = json.dumps([dict({"k": (j.get("tag") or j["url"]), "u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]}, **({"a": j["a"]} if j.get("a") else {})) for j in rows], ensure_ascii=False).replace("</", "<\\/")   # a: per-job answers (filler v.12+)
 page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Job Click Run</title><style>
 :root{{--bg:#fff;--fg:#111;--mut:#667;--line:#e5e7eb;--acc:#0a66c2;--card:#f6f8fa;--ok:#15803d;--go:#1a7f37}}
@@ -135,9 +136,9 @@ function save(){{try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}}}
 function mark(k){{st[k]=1;save();paint();}}
 boxes.forEach(b=>b.addEventListener('change',()=>{{st[b.dataset.k]=b.checked?1:0;save();paint()}}));
 links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.k),800)}}));
-const ITEMS={json.dumps([{"k": (j.get("tag") or j["url"]), "u": appurl(j["url"]), "t": (j.get("title") or "")[:70], "c": (j.get("company") or "")[:40]} for j in rows], ensure_ascii=False)};
+const ITEMS={ITEMS_JS};
 const ME={json.dumps(ME)};const PACE={json.dumps(PACE)};
-function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,pace:PACE,me:ME,items:items.map(x=>({{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
+function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,pace:PACE,me:ME,items:items.map(x=>(x.a?{{u:x.u,t:x.t,c:x.c,a:x.a}}:{{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
 document.getElementById('start').addEventListener('click',function(){{const left=ITEMS.filter(x=>!st[x.k]);if(!left.length){{alert('Every row is ticked as done.');return;}}this.href=left[0].u+'#akf='+akfHash(left);this.textContent='▶ Start — apply to '+left.length+' not yet done';}});
 paint();
 </script></body></html>"""
