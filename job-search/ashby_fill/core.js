@@ -16,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-08.15';
+const VERSION = '2026-10-08.16';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -391,7 +391,7 @@ async function answerCheckboxes(e, q, rep) {
     for (const [b, l] of members) if ((ENV_TRUE.test(l) || STACK_TRUE.test(l)) && !/none of the above|not applicable|n\/a|prefer not|^other\b/i.test(l)) { if (await check(b)) ticked.push(l.slice(0, 30)); }
     if (ticked.length) { rep.filled.push([q, ticked.join(', ')]); return true; }
   }
-  let want = pick(q, 'choice') || (isSrc ? ['LinkedIn', 'Company Website', 'Careers page', 'Job Board', 'Other'] : null);
+  let want = pick(q, 'choice') || pick(q + ' ' + descOf(e), 'choice') || (isSrc ? ['LinkedIn', 'Company Website', 'Careers page', 'Job Board', 'Other'] : null);
   if (want && want[0] === '__ASK__') { rep.ask.push(q); return false; }
   if (!want) { rep.options[q] = labs.slice(0, 12); return false; }
   let i = bestIndex(members.map(m => m[1]), want.filter(p => typeof p === 'string'));
