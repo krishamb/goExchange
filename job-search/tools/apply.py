@@ -58,6 +58,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"notice period|how much notice|notice (do you|would you) (need|have to give|require)", "None required - I can start immediately (within 2 weeks at most)."),   # before the 'current employer' rule, which would answer with the company name
  (r"^\s*(url|web address|website url|profile url|link)\s*\*?$", P["linkedin"]),   # a bare 'URL' (Workday 'Websites' section): the LinkedIn profile
  (r"^(?!.*\b(certify|attest)\b)(?!.*are you an ai\b).*((how|describe|explain|if (yes|so)).{0,60}(ai|artificial intelligence).{0,60}(this|the|your) application|(this|the|your) application.{0,60}(prepared|submitted|completed|written|generated|drafted).{0,40}(ai|artificial intelligence))|^(?!.*\b(certify|attest|i did not|i have not|i didn.t|was not|were not|without|no ai)\b)(?!.*are you an ai\b).*((was|is|has) (this|the|your) application (been )?(prepared|submitted|completed|written|generated|filled|drafted)|(prepared|submitted|completed|written|generated|filled( out)?|drafted) (in whole or in part |wholly or partially |partly |partially )?(by|with|using) (an? )?(ai|artificial intelligence|generative ai|llm)|(did|have) you use(d)? (any )?(ai|artificial intelligence|generative ai|llms?|an? ai (tool|system|assistant|agent))( tools?| assistants?)? (to|in|for|when|while|during) [^?.]{0,40}\b(application|this form|the form|your answers|your responses|cover letter)|used? (ai|artificial intelligence) (to|in|for) (this|the|your|my) application|(ai|artificial intelligence) (was|were) used (to|in|for))", "Yes. I used AI tools to help prepare and submit this application: an assistant matched the role to my background and filled in the form from my own resume and the answers I have reviewed and approved. Every fact in it is my real experience."),   # applicant, 2026-10-07
  (r"best (way|method|time) to (contact|reach) you|preferred (method|way|mode|means) of (contact|communication)|how (should|can|do|would) (we|you like us to) (best )?(contact|reach) you|preferred contact (method|channel)", f"Email ({P['email']}) or mobile ({P['phone']})"),
@@ -302,6 +303,13 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
+ (r"willing to (submit|provide) (documentation|documents|proof|transcripts?)", ["Yes","yes"]),
+ (r"(state|federal|oig|sam) exclusion list|excluded from (participating in )?(a |any )?federal(ly funded)? health ?care program", ["No","no"]),
+ (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
+ (r"pending investigations? or disciplinary|disciplinary actions? .{0,60}(licen[sc]es|registrations|certifications)", ["No","no"]),
+ (r"(currently )?enrolled in (a |an |our )?.{0,40}(medicare|medicaid|health|insurance) plan|are you (a |an )?(current )?(member|customer|patient) of", ["No","no"]),   # not a member / enrollee of the employer's plans
+ (r"(minimum|dedicated|reliable) .{0,40}\b\d+\s*mbps|internet (speed|connection) .{0,60}(comply|meet|have|minimum)|high[- ]speed internet", ["Yes","yes"]),   # home office with reliable broadband
  (r"(hands-on|production) experience .{0,60}\b(fhir|hl7)\b|\b(fhir|hl7)\b.{0,80}(experience|production)|healthcare (data|interoperability|experience)", ["Production experience with both FHIR and HL7","Yes","yes"]),   # the applicant: "I have worked on Healthcare FHIR/HL7" (2026-10-08)
  (r"confirm your ability to work (in|from) the office|ability to work in the office location associated with|(hybrid work model|hybrid schedule) of (two|three|2|3) days in the office", ["Yes","yes","I confirm","Confirmed"]),   # roles are pre-filtered to SF Bay (any mode) and NY hybrid, which the applicant accepts
  (r"have you (already )?(completed|taken|done) (the|a|our) .{0,40}(survey|assessment|questionnaire|test)\b", ["No","no"]),   # a company's own pre-hire survey: not taken yet
