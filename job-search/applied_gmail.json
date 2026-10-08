@@ -6774,6 +6774,440 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "antares": {
+   "name": "antares",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "motion": {
+   "name": "Motion",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "gnw": {
+   "name": "gnw",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "procore": {
+   "name": "procore",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "current": {
+   "name": "Current",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "stash": {
+   "name": "Stash",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dotmatics": {
+   "name": "Dotmatics",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "muonspace": {
+   "name": "Muon Space",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "simplisafe": {
+   "name": "SimpliSafe",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "beyondfinance": {
+   "name": "Beyond Finance",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "chghealthcare": {
+   "name": "CHG Healthcare",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "allegion": {
+   "name": "allegion",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "globalpayments": {
+   "name": "Global Payments",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "mcghealth": {
+   "name": "MCG Health",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "abclegalservices": {
+   "name": "ABC Legal Services",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "enovainternational": {
+   "name": "Enova International",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "independencepetholdings": {
+   "name": "Independence Pet Holdings",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "workiva": {
+   "name": "Workiva",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "atpco": {
+   "name": "ATPCO",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "diligentetechnologies": {
+   "name": "Diligente Technologies",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "tandavixllc": {
+   "name": "Tandavix llc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "requesttechnologyllc": {
+   "name": "Request Technology, LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "arohakinc": {
+   "name": "Arohak Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "nitorinfotech": {
+   "name": "Nitor Infotech",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "s3staffingusa": {
+   "name": "S3 Staffing USA",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "ekfrazotechnologiesllc": {
+   "name": "Ekfrazo Technologies LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "newtglobal": {
+   "name": "Newt Global",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "maxwell": {
+   "name": "Maxwell",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "remitly": {
+   "name": "Remitly",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "entrustcorporation": {
+   "name": "Entrust Corporation",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "farther": {
+   "name": "Farther",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "sncloudsolutions": {
+   "name": "SN Cloud Solutions",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "johnsontechnologysystemsincjtsi": {
+   "name": "Johnson Technology Systems Inc (JTSI)",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "aptask": {
+   "name": "ApTask",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "konnectingtreeinc": {
+   "name": "KONNECTINGTREE INC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "photon": {
+   "name": "Photon",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "abhyanthsolutions": {
+   "name": "Abhyanth Solutions",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "prointegrate": {
+   "name": "Pro Integrate",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "m2stechsolutions": {
+   "name": "M2S Tech Solutions",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "visionaryinnovativetechnologysolutions": {
+   "name": "Visionary Innovative Technology Solutions",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "debtbook": {
+   "name": "DebtBook",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dropbox": {
+   "name": "Dropbox",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "labcorp": {
+   "name": "Labcorp",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "genpact": {
+   "name": "Genpact",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "summittechpartners": {
+   "name": "Summit Tech Partners",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "techneptuneconsultinginc": {
+   "name": "TECHNEPTUNE CONSULTING INC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "sourcecodetechnologiesllc": {
+   "name": "Source Code Technologies LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "solugenixcorporation": {
+   "name": "Solugenix Corporation",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dbestworkzllc": {
+   "name": "dBestWorkz LLC",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "stonesearch": {
+   "name": "Stone Search",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "techridgeinc": {
+   "name": "Techridge, Inc.",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "xforiainc": {
+   "name": "XFORIA Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "scadeasolutionsinc": {
+   "name": "Scadea Solutions Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "digicomplishinc": {
+   "name": "Digicomplish Inc",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "sabioinfotech": {
+   "name": "Sabio infotech",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "designedconveyorsystems": {
+   "name": "Designed Conveyor Systems",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "draftkings": {
+   "name": "DraftKings",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "mckesson": {
+   "name": "McKesson",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "wmeimg": {
+   "name": "wmeimg",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "automationanywhere": {
+   "name": "Automation Anywhere",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "altentechnologyusa": {
+   "name": "ALTEN Technology USA",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "falconx": {
+   "name": "FalconX",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
   }
  }
 }
