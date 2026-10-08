@@ -3,7 +3,10 @@
  *   as job-search/tools/apply.py (exported to rules.js; email/phone/street come from the one-time setup, never the repo).
  * - AI-use questions about this application are answered Yes (the applicant's answer, 2026-10-07); a certification that
  *   no AI was used, or that the applicant personally filled the form, is never ticked. Never guesses a question it has
- *   no rule for, never ticks disclosures.
+ *   no rule for, never ticks disclosures. Consent / agreement / 'my answers are true and accurate' boxes are ticked
+ *   (the applicant's instruction, 2026-10-08).
+ * - v.12: a run page can carry per-job answers written ahead of time for each posting (item.a, keyed by Ashby's field
+ *   path); they are tried first, the rules are the fallback, and the run log says why any question stayed unanswered.
  * - Fill mode: fills and stops; the applicant reviews and clicks Submit.
  * - Batch mode (userscript only): the applicant confirms a category once; each form is submitted only when every
  *   required question was answered by the rules and no captcha challenge is shown. Anything else is left for the
@@ -13,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-07.11';
+const VERSION = '2026-10-08.12';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -99,15 +102,13 @@ function techAnswer(label) {
   let l = (label || '').toLowerCase();
   if (PERSONAL_Q.test(l) || !TECH_Q.test(l)) return null;
   if (/^\s*if (yes|so|applicable|other)\b/.test(l)) {
-    if (NOT_MINE.test(label) || /camunda|\bbpm\b|clinical|government|clearance|relative|referr|sponsor|visa|previous(ly)? (employ|work)|worked (for|at)|non-?compete|convict/.test(l)) return 'N/A';
+    if (/government|clearance|relative|referr|sponsor|visa|previous(ly)? (employ|work)|worked (for|at)|non-?compete|convict/.test(l)) return 'N/A';   // technical follow-ups are answered (applicant, 2026-10-08)
     l = l.replace(/^\s*if (yes|so|applicable)[,:]?\s*/, '');
   }
   const count = re => (l.match(new RegExp(re.source, 'g')) || []).length;
   const hits = TECH_BANK.map((b, i) => [count(b[0]), i, b]).filter(x => x[0] > 0).sort((a, b) => b[0] - a[0] || a[1] - b[1]).slice(0, 2).map(x => x[2][1]);
   let ans = hits.length ? hits.join(' ') : R.TECH_DEFAULT;
-  const m = (label || '').match(NOT_MINE);
-  if (m) ans = `My production work has been in Python, Go, Rust, C++, Java and C#/.NET on AWS, GCP and Azure rather than ${m[0].trim()}, so here is the closest comparable experience. ` + ans;
-  return ans;
+  return ans;   // applicant (2026-10-08): Yes to all technical questions - no 'rather than X' disclaimer
 }
 function category(title, desc) {
   const t = (title || '') + ' ' + (desc || ''); let best = ['platform', 0];
@@ -149,9 +150,11 @@ function setValue(el, v) {
   el.dispatchEvent(new Event('input', { bubbles: true }));
   el.dispatchEvent(new Event('change', { bubbles: true }));
 }
-function press(el) {
-  for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup']) el.dispatchEvent(new MouseEvent(t, { bubbles: true, cancelable: true, view: window }));
-  el.click();
+function press(el) {   // never throws: a failed synthetic event must not cost the answer (the plain click still runs)
+  for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup']) {
+    try { const E = t.startsWith('pointer') && typeof PointerEvent === 'function' ? PointerEvent : MouseEvent; el.dispatchEvent(new E(t, { bubbles: true, cancelable: true, button: 0, buttons: t.endsWith('down') ? 1 : 0 })); } catch (e) {}
+  }
+  try { el.click(); } catch (e) {}
 }
 const visible = el => !!(el && (el.offsetParent || el.getClientRects().length));
 function labelOf(input) {
@@ -326,9 +329,19 @@ async function answerYesNo(e, q, rep) {
   const texts = btns.map(b => clean(b.innerText));
   const i = bestIndex(texts, prefs);
   if (i < 0) { rep.options[q] = texts; return false; }
-  press(btns[i]); await sleep(250);
-  rep.filled.push([q, texts[i]]);
-  return btns[i].getAttribute('aria-pressed') === 'true' || !!(await waitFor(() => btns[i].getAttribute('aria-pressed') === 'true', 1500, 150));
+  return await pressYesNo(e, q, btns, i, texts, rep);
+}
+async function pressYesNo(e, q, btns, i, texts, rep) {
+  const on = () => btns[i].getAttribute('aria-pressed') === 'true';
+  for (let a = 0; a < 3 && !on(); a++) {
+    if (a === 0) press(btns[i]);
+    else if (a === 1) { const inner = btns[i].querySelector('span, div') || btns[i]; press(inner); }
+    else { try { btns[i].focus(); btns[i].dispatchEvent(new KeyboardEvent('keydown', { key: ' ', code: 'Space', bubbles: true })); btns[i].dispatchEvent(new KeyboardEvent('keyup', { key: ' ', code: 'Space', bubbles: true })); } catch (x) {} }
+    await waitFor(on, 1500, 150);
+  }
+  if (on()) { rep.filled.push([q, texts[i]]); return true; }
+  rep.notes.push(`${q.slice(0, 50)}: clicked '${texts[i]}' but the page did not take it`);
+  return false;
 }
 async function check(input) {
   if (input.checked) return true;
@@ -419,6 +432,69 @@ function answered(e) {
   return true;
 }
 
+// ---------------- per-job answers (written ahead of time for this exact posting, keyed by Ashby's field path) ----------------
+const fieldPath = e => e.getAttribute('data-field-path') || ((e.closest('[data-field-path]') || { getAttribute: () => '' }).getAttribute('data-field-path') || '');
+const PLAN_SKIP = /^_systemfield_(name|email|phone|resume|location)$|^_systemfield_eeoc_/;   // contact, resume, location and EEO stay with the setup and the rules
+const TRUTHY = /^(yes|true|checked|tick|i agree|agree|i consent|consent|i confirm|confirm|i acknowledge|acknowledge|accept|i accept)\b/i;
+async function answerPlanned(e, q, v, rep) {
+  const vals = (Array.isArray(v) ? v : [v]).map(x => String(x));
+  if (e.querySelector('input[type="file"]')) return false;
+  if (e.querySelector('.ashby-application-form-input-yesno')) {
+    const btns = [...e.querySelectorAll('button[data-option], .ashby-application-form-input-yesno button')];
+    if (btns.some(b => b.getAttribute('aria-pressed') === 'true') && clean((btns.find(b => b.getAttribute('aria-pressed') === 'true') || {}).innerText) === clean(vals[0])) return true;
+    const texts = btns.map(b => clean(b.innerText)); const i = bestIndex(texts, vals);
+    if (i < 0) { rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0]}' is not an option`); return false; }
+    return await pressYesNo(e, q, btns, i, texts, rep);
+  }
+  const radios = [...e.querySelectorAll('input[type="radio"]')];
+  if (radios.length) {
+    const opts = radios.map(labelOf); const i = bestIndex(opts, vals);
+    if (i < 0) { rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0].slice(0, 30)}' is not an option`); return false; }
+    if (radios[i].checked) return true;
+    const ok = await check(radios[i]); if (ok) rep.filled.push([q, opts[i].slice(0, 60)]); return ok;
+  }
+  const boxes = [...e.querySelectorAll('input[type="checkbox"]')].filter(b => !b.closest('.ashby-application-form-input-yesno'));
+  if (boxes.length === 1) {
+    const t = labelOf(boxes[0]) || q;
+    if (PERSONAL_CERT.test(t) || PERSONAL_CERT.test(q)) { rep.ask.push(q); return false; }   // never certify that no AI was used
+    if (!TRUTHY.test(vals[0])) return true;   // planned 'No' on a lone box: leave it unticked
+    const ok = await check(boxes[0]); if (ok) rep.filled.push([q, 'checked']); return ok;
+  }
+  if (boxes.length > 1) {
+    const labs = boxes.map(labelOf); const ticked = [];
+    for (const want of vals) { const i = bestIndex(labs, [want]); if (i >= 0 && (boxes[i].checked || await check(boxes[i]))) ticked.push(labs[i].slice(0, 30)); }
+    if (ticked.length) { rep.filled.push([q, ticked.join(', ')]); return true; }
+    rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0].slice(0, 30)}' is not an option`); return false;
+  }
+  const combo = e.querySelector('input[role="combobox"]');
+  if (combo) {
+    const cur = clean(combo.value);
+    if (cur && bestIndex([cur], vals) === 0) return true;
+    const toggle = e.querySelector('button[class*="toggle"]');
+    if (toggle) press(toggle); else { combo.focus(); press(combo); }
+    let opts = await waitFor(optionsNow, 5000, 250) || [];
+    let texts = opts.map(o => clean(o.innerText)); let i = bestIndex(texts, vals);
+    if (i < 0) { setValue(combo, vals[0].slice(0, 25)); opts = await waitFor(optionsNow, 5000, 250) || []; texts = opts.map(o => clean(o.innerText)); i = bestIndex(texts, vals); }
+    if (i < 0) { try { combo.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); } catch (x) {} combo.blur(); rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0].slice(0, 30)}' not in the list`); return false; }
+    press(opts[i]); await sleep(500); combo.blur(); rep.filled.push([q, texts[i].slice(0, 60)]); return true;
+  }
+  const sel = e.querySelector('select');
+  if (sel) {
+    const texts = [...sel.options].map(o => clean(o.text)); const i = bestIndex(texts, vals);
+    if (i < 0) return false;
+    sel.value = sel.options[i].value; sel.dispatchEvent(new Event('change', { bubbles: true })); rep.filled.push([q, texts[i]]); return true;
+  }
+  const date = e.querySelector('.ashby-application-form-input-date, input[placeholder*="date" i]');
+  const inp = date || e.querySelector(TEXT_SEL);
+  if (inp) {
+    if (clean(inp.value) === clean(vals[0])) return true;
+    setValue(inp, vals.join(', ')); if (date) { try { inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); } catch (x) {} }
+    inp.blur(); await sleep(150);
+    const ok = !!clean(inp.value); if (ok) rep.filled.push([q, vals.join(', ').slice(0, 60)]); return ok;
+  }
+  return false;
+}
+
 // ---------------- one form ----------------
 function jobInfo() {
   const m = location.pathname.match(/^\/([^/]+)\/([0-9a-f-]{36})/i);
@@ -444,6 +520,7 @@ async function fillForm(opts = {}) {
   ]);
   JOB.textRules = compile([["^if (yes|so).{0,80}\\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", prior.length ? 'Yes: ' + prior.slice(0, 3).join('; ') + ' (2026)' : 'N/A']]);
   JOB.why = whyFor(info.company, info.title, info.desc);
+  JOB.plan = (opts.answers && typeof opts.answers === 'object') ? opts.answers : {};
   if (SITE === 'ashby' && !/\/application/.test(location.pathname)) {   // on the posting: open the application tab
     const a = [...document.querySelectorAll('a, button')].find(x => /^apply( for this job)?$/i.test(clean(x.innerText)) || /\/application$/.test(x.getAttribute('href') || ''));
     if (a) { press(a); await sleep(2500); }
@@ -466,6 +543,10 @@ async function fillForm(opts = {}) {
       if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) continue;
       const q = titleOf(e) || descOf(e);
       try {
+        const fp = fieldPath(e);
+        if (fp && !PLAN_SKIP.test(fp) && Object.prototype.hasOwnProperty.call(JOB.plan, fp) && JOB.plan[fp] !== null && JOB.plan[fp] !== '') {
+          if (await answerPlanned(e, q, JOB.plan[fp], rep)) continue;   // the per-job answer took; otherwise the rules below get their turn
+        }
         const file = e.querySelector('input[type="file"]');
         if (file) {
           if (/cover/i.test(q) && S.get('cover')) { const ok = await attach(file, S.get('cover'), e); if (ok) rep.filled.push([q, S.get('cover').name]); }
@@ -752,12 +833,12 @@ async function batchStep(q) {
   if (!await whileThrottled(q, item, 'filling')) return true;
   let rep; const tFill = Date.now(); STEP = 'filling the form';
   try {
-    rep = await fillForm({ prior: item.p || [] });
+    rep = await fillForm({ prior: item.p || [], answers: item.a });
     if (!rep.ready && rep.missing.length && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP') {
       // questions the rules answer but the page did not take (slow list, re-render): settle, then answer them once more
       STEP = 'second pass on: ' + rep.missing.join('; ').slice(0, 60);
       if (!await whileThrottled(q, item, 'filling')) return true;
-      await sleep(2500); rep = await fillForm({ prior: item.p || [] }); rep.notes.push('second pass');
+      await sleep(2500); rep = await fillForm({ prior: item.p || [], answers: item.a }); rep.notes.push('second pass');
     }
   }
   catch (e) {   // a filler error on one job is logged and the batch continues
@@ -776,7 +857,7 @@ async function batchStep(q) {
     S.set('lastSubmitAt', Date.now());
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
-  else res = { status: 'needs', why: rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') || rep.notes.join('; ') || 'not auto-submitted' };
+  else res = { status: 'needs', why: (rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') + (rep.notes.length ? ' || ' + rep.notes.filter(n => n !== 'second pass').slice(0, 3).join(' | ') : '')).replace(/^ \|\| /, '') || 'not auto-submitted' };
   res.answered = rep.filled.length; res.fillSecs = Math.round((Date.now() - tFill) / 1000) - (res.confirmSecs || 0);
   if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after the site confirms
     status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + `\n\nWhen you click Submit and the site confirms, the next job opens by itself.${q.auto ? ' (Moves on by itself after 3 minutes.)' : ''}`);
@@ -851,7 +932,8 @@ async function run(opts = {}) {
   ui();
   if (!HAS_GM && !opts.manual && !S.get('autofill', false)) { status('Click "Fill this application".'); buttons([['Fill this application', () => run({ manual: true }), true]]); return; }
   status('Filling...'); buttons([]);
-  const rep = await fillForm({ prior: opts.prior || [] });
+  const qq = S.get(Q_KEY, null); const mine = qq && qq.items && qq.items.find(x => x.id === curJobId());   // per-job answers of this posting, if a run page sent them
+  const rep = await fillForm({ prior: opts.prior || [], answers: (mine && mine.a) || undefined });
   // apply on its own when asked to and the form is complete (bookmarklet single-job auto-submit)
   if (opts.submit && rep.ready && !captchaChallenge()) {
     banner('Submitting your application…', true);
