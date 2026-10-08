@@ -306,6 +306,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"^please check one of the boxes below|voluntary self-identification of disability|form cc-305", ["No, I do not have a disability and have not had one in the past","No, I don't have a disability and have not had one in the past","No, I do not have a disability","No, I don't have a disability","No"]),   # disability self-ID (CC-305): standing answer No
  (r"you answered .{0,3}no.{0,3} to the previous question.{0,120}(most accurately fits|best describes|applies to) your (situation|status)", ["I am a U.S. citizen.","I am a U.S. citizen","U.S. citizen","US Citizen","I am authorized to work permanently in the country"]),   # follow-up to 'need sponsorship? No': he is a US citizen
  (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
  (r"willing to (submit|provide) (documentation|documents|proof|transcripts?)", ["Yes","yes"]),
