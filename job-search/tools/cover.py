@@ -19,11 +19,14 @@ def category(title, desc):
     scores=[(len(re.findall(pat,t,re.I)),c) for c,pat in CATS]
     scores.sort(reverse=True)
     return scores[0][1] if scores[0][0]>0 else "platform"
-def text(company, title, desc, profile):
+def text(company, title, desc, profile, pitch=None):
+    """pitch: a paragraph written for this posting (what the role needs, matched to the applicant's own record); it leads
+    the letter, followed by the category paragraph."""
     cat=category(title,desc)
     company=company or "your team"
     return (f"Dear {company} Hiring Team,\n\n"
             f"I am applying for the {title} role. I bring the combination this position needs: the ability to design the architecture, build the critical software and lead engineering through delivery. Across 25+ years in financial technology, distributed systems and, most recently, agentic AI and open-model inference, I have worked where performance, correctness and trust are non-negotiable.\n\n"
+            + (f"{pitch.strip()}\n\n" if pitch else "") +
             f"{PARA[cat]}\n\n"
             f"I still write critical-path Python, Rust, C++ and Go, I use agentic engineering practices daily, and I measure what I build. I am based in Santa Clara, CA, fully authorized to work in the United States with no sponsorship required, open to remote, hybrid or relocation, and available to start immediately.\n\n"
             f"I would welcome the chance to discuss how I can contribute to {company}.\n\n"

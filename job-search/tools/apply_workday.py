@@ -48,7 +48,11 @@ TEXT_RULES, CHOICE_RULES, pick, best_index, _match, mask_hear, NEVER_APPLY, tech
 HEAR_Q, HEAR_BAD, EDU_START, EDU_END = G["HEAR_Q"], G["HEAR_BAD"], G["EDU_START"], G["EDU_END"]
 FIRST, LAST = G["first"], G["last"]
 
+RESUME_VARIANTS = {"exec": "Ambarish_Krishnamurthy_Executive_Resume.pdf", "main": "Ambarish_Krishnamurthy_Resume.pdf", "blockchain": "Ambarish_Krishnamurthy_Blockchain_AI_Resume.pdf"}
+CUR_RESUME = {"v": None}   # the queue item's own pick (exec / main / blockchain), set per job
 def resume_for(title):
+    v = RESUME_VARIANTS.get(str(CUR_RESUME["v"] or ""))
+    if v and os.path.exists(os.path.join(JOBS_DIR, v)): return os.path.join(JOBS_DIR, v)
     if title and os.path.exists(EXEC_RESUME) and re.search(r"\b(CTO|Chief|VP|SVP|Vice President|Head of|Director|Manager)\b", title, re.I) and not re.search(r"Architect", title, re.I):
         return EXEC_RESUME
     return P["resume"]
@@ -1263,7 +1267,7 @@ async def open_apply(page):
 
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
-    global SOURCE_SITE; _src = str(item.get("src") or "")
+    global SOURCE_SITE; _src = str(item.get("src") or ""); CUR_RESUME["v"] = item.get("resume")
     SOURCE_SITE = "indeed" if re.search(r"indeed", _src, re.I) else ("company" if re.search(r"site-careers|company-site|careers", _src, re.I) else "linkedin")
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
     # Santa Clara); elsewhere the rule says No and the COMMUTE_Q guard leaves it for the applicant

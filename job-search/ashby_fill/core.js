@@ -16,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-08.17';
+const VERSION = '2026-10-08.18';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -280,6 +280,10 @@ function resumeFor(title) {
   const exec = /\b(CTO|Chief (Technology|AI|Executive|Product|Information)|VP|SVP|EVP|Vice President|Head of|Director|Manager|TLM)\b/i.test(title || '') && !/\bArchitect/i.test(title || '');
   return (exec && S.get('resume_exec')) || S.get('resume_main') || S.get('resume_exec');
 }
+function hasResume(input) {   // the file input holds a file, or its entry shows an uploaded file name
+  const box = input && (input.closest('.ashby-application-form-field-entry') || input.parentElement);
+  return !!(input && ((input.files && input.files.length) || (box && /\.(pdf|docx?)\b/i.test(box.innerText || '') && !/uploading|parsing|analyzing/i.test(box.innerText || ''))));
+}
 async function attach(input, f, entry) {
   const dt = new DataTransfer(); dt.items.add(b64ToFile(f));
   input.files = dt.files;
@@ -291,7 +295,7 @@ async function attach(input, f, entry) {
     return !!ok || (!!(input.files && input.files.length) && !/error|fail|too large/i.test(box ? box.innerText : ''));
   }
   const box = entry || input.closest('.ashby-application-form-field-entry') || input.parentElement;
-  return !!(await waitFor(() => box && box.innerText.includes(f.name) && !/uploading|parsing|analyzing/i.test(box.innerText), 20000, 400));
+  return !!(await waitFor(() => { const b = (document.contains(box) ? box : (input.closest('.ashby-application-form-field-entry') || document.querySelector('[data-field-path="_systemfield_resume"]'))); return b && b.innerText.includes(f.name) && !/uploading|parsing|analyzing/i.test(b.innerText); }, 45000, 400));
 }
 
 // ---------------- answering one question ----------------
@@ -606,6 +610,7 @@ async function answerEntry(e, rep) {   // one question: this job's own answer fi
     const file = e.querySelector('input[type="file"]');
     if (file) {
       if (/cover/i.test(q) && S.get('cover')) { const ok = await attach(file, S.get('cover'), e); if (ok) rep.filled.push([q, S.get('cover').name]); }
+      else if (/resume|\bcv\b|curriculum/i.test(q) && !hasResume(file)) { const rf = resumeFor(JOB.title); if (rf && await attach(file, rf, e)) rep.filled.push([q, rf.name]); }
       return;
     }
     if (OFFICE3_Q.test(q + ' ' + descOf(e)) && !JOB.okOffice) rep.office.push(q);
@@ -644,11 +649,14 @@ async function fillForm(opts = {}) {
   await waitFor(() => document.querySelector(SITE === 'lever' ? '#application-form, form[action*="apply"] .application-question' : '#_systemfield_name, .ashby-application-form-field-entry'), 15000);
   for (const t of ['Necessary Only', 'Accept All']) { const b = [...document.querySelectorAll('button')].find(x => clean(x.innerText) === t); if (b) { b.click(); break; } }
   // 1) resume first: Ashby may pre-fill from it, so everything else is answered after it
-  const rin = document.querySelector('#_systemfield_resume') || document.querySelector('input[type="file"][id*="resume"], input[type="file"][name="resume"]');
+  const resumeInput = () => document.querySelector('#_systemfield_resume') || document.querySelector('input[type="file"][id*="resume"], input[type="file"][name="resume"]');
+  const rin = resumeInput() || await waitFor(resumeInput, 6000, 300);
   const rf = resumeFor(info.title);
-  if (rin && rf) {
-    const ok = (rin.files && rin.files.length) || await attach(rin, rf);
+  if (rin && rf) {   // a real resume can take a while (upload, then Ashby reads it and re-draws the form): wait, and try again if it did not take
+    let ok = hasResume(rin);
+    for (let a = 0; a < 3 && !ok; a++) { STEP = 'attaching the resume' + (a ? ` (try ${a + 1})` : ''); ok = await attach(resumeInput() || rin, rf); }
     rep.resume = ok ? rf.name : 'FAILED'; if (!ok) rep.notes.push('resume upload not confirmed');
+    await waitFor(() => !/uploading|parsing|analyzing|autofill(ing)? from/i.test(document.body.innerText || ''), 30000, 500);   // let Ashby finish reading it before answering
   } else if (rin) { rep.resume = 'NOT SET UP'; rep.notes.push('no resume saved yet: open the panel and choose your resume once'); }
   // 2) every question, twice (answers can reveal follow-up questions)
   const done = new Set();
@@ -659,6 +667,20 @@ async function fillForm(opts = {}) {
     }
     await sleep(600);
   }
+  // 3) repair: every required question still empty (an answer lost while the form re-drew, a slow upload) is answered again
+  const empty = () => entries().filter(e => !/_systemfield_education/.test(e.getAttribute('data-field-path') || '') && isRequired(e) && !answered(e));
+  for (let round = 0; round < 3; round++) {
+    await sleep(round ? 2000 : 800);
+    const todo = empty(); if (!todo.length) break;
+    STEP = 'answering again: ' + todo.map(e => titleOf(e) || descOf(e)).join('; ').slice(0, 80);
+    for (const e of todo) {
+      const f = e.querySelector('input[type="file"]');
+      if (f && rf && /resume|\bcv\b|curriculum/i.test((titleOf(e) || '') + ' ' + fieldPath(e))) { if (await attach(f, rf, e)) { rep.resume = rf.name; rep.notes = rep.notes.filter(n => !/resume upload not confirmed/.test(n)); } continue; }
+      await answerEntry(e, rep);
+    }
+  }
+  if (rep.resume === 'FAILED' && rin && hasResume(resumeInput() || rin)) { rep.resume = rf.name; rep.notes = rep.notes.filter(n => !/resume upload not confirmed/.test(n)); }
+  for (const k of ['ask', 'notes', 'tech', 'office']) rep[k] = [...new Set(rep[k])];
   for (const e of entries()) {
     const path = e.getAttribute('data-field-path') || '';
     if (/_systemfield_education/.test(path)) continue;
@@ -992,7 +1014,7 @@ async function batchStep(q) {
   let rep; const tFill = Date.now(); STEP = 'filling the form';
   try {
     rep = await fillForm({ prior: item.p || [], answers: item.a });
-    if (!rep.ready && rep.missing.length && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP') {
+    if (!rep.ready && (rep.missing.length || rep.resume === 'FAILED') && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'NOT SET UP') {
       // questions the rules answer but the page did not take (slow list, re-render): settle, then answer them once more
       STEP = 'second pass on: ' + rep.missing.join('; ').slice(0, 60);
       if (!await whileThrottled(q, item, 'filling')) return true;

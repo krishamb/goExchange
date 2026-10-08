@@ -15,9 +15,13 @@ P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
 for _k in ("resume","cover_letter"):
     if P.get(_k): P[_k]=os.path.expanduser(P[_k])
 EXEC_RESUME=os.path.join(JOBS_DIR,"Ambarish_Krishnamurthy_Executive_Resume.pdf")
+RESUME_VARIANTS={"exec":"Ambarish_Krishnamurthy_Executive_Resume.pdf","main":"Ambarish_Krishnamurthy_Resume.pdf","blockchain":"Ambarish_Krishnamurthy_Blockchain_AI_Resume.pdf"}
 def resume_for(title):
-    """Executive resume (CTO / VP / Head / Director / Engineering Manager) for leadership roles; the Distinguished Architect
+    """The batch item's own pick ("resume": exec / main / blockchain, chosen from the posting) when that file exists; else the
+    executive resume (CTO / VP / Head / Director / Engineering Manager) for leadership roles and the Distinguished Architect
     resume for principal, staff, architect and engineer roles. Falls back to the architect resume if the executive file is absent."""
+    v=RESUME_VARIANTS.get(str((globals().get("CUR_JOB") or {}).get("resume") or ""))
+    if v and os.path.exists(os.path.join(JOBS_DIR,v)): return os.path.join(JOBS_DIR,v)
     if title and os.path.exists(EXEC_RESUME) and re.search(r"\b(CTO|Chief (Technology|AI|Executive|Product|Information)|VP|SVP|EVP|Vice President|Head of|Director|Manager|TLM)\b",title,re.I) and not re.search(r"\bArchitect",title,re.I):
         return EXEC_RESUME
     return P["resume"]
@@ -567,6 +571,7 @@ CHOICE_RULES=[
  (r"requir\w* (spon?orship|sponsership)", ["No","no"]),   # misspelt "sponsorship" on some forms; US citizen needs none
  (r"from 0.?(→|->|to).?1|0 ?to ?1 .{0,40}(model|ml)|new ml model or ml-powered system", ["Yes","yes"]),   # Yahoo TFX recommendation/clustering models, Hyperion fraud-detection ML
  (r"metaview|ai notetaking tool|record(ing)? and summariz", ["Yes","yes"]),   # consent to an AI notetaker in interviews
+ (r"recording consent|consent to (be(ing)? )?record|(interviews?|calls?|conversations?|meetings?) (may|will|might) be recorded|record(ed|ing)? (of )?(the |your |our )?(interviews?|calls?|conversations?)|okay (with|to) (be(ing)? )?record", ["Yes, I consent to be recorded","Yes, I consent","I consent to be recorded","I consent","Yes","Opt in","I agree"]),   # applicant: consent / I agree
  (r"what is your (current )?age|^your age$|^age$|current age|how old are you|age (range|group|bracket)", ["50-59","50 - 59","50 to 59","50-54","50 - 54","45-54","50+","50 or older","Over 50","40+","40 or older","35+","35 or older","Over 35","I don't wish to say","Prefer not to say","I don't wish to answer","Prefer not to answer","Decline to self-identify","Decline"]),   # applicant: age 50; coarse bands ("35+") are the same fact, else decline like other self-ID questions
  (r"(40|forty) (years (of age|old) )?or older|over (the age of )?(40|forty)|at least (40|forty)", ["Yes","yes"]),   # applicant: age 50
  (r"based out of our (nyc|new york)|(nyc|new york) (headquarters|hq|office).{0,80}(situation|describes)|relocate to (nyc|new york)", ["I'm not in NYC yet, but I'm able and willing to relocate within 3 months of starting.","willing to relocate","able and willing to relocate","Yes","yes"]),   # applicant: will move to NYC
@@ -1344,7 +1349,7 @@ async def run():
                 summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
-            CUR_JOB["src"]=job.get("src")
+            CUR_JOB["src"]=job.get("src"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why")
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             if not r.get("submitted") and any(("uploadFile" in (e or "")) or ("Resume/CV is required" in (e or "")) for e in (r.get("errors") or [])):
                 # Greenhouse's uploader sometimes fails to initialise: load the whole form again once
@@ -1492,7 +1497,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 _ptitle=await page.title(); _m2=re.search(r"\bat ([^|\-–]+?)\s*$",_ptitle or "")
                 _co=(_m2.group(1).strip() if _m2 else None) or (re.sub(r"[-_]+"," ",company).title() if company else None)
                 _body=await page.evaluate("()=>document.body.innerText.slice(0,6000)")
-                JOB_WHY=why_for(_co, jtitle or re.sub(r"\s*[|@\-–].*$","",_ptitle or ""), _body)
+                JOB_WHY=CUR_JOB.get("why") or why_for(_co, jtitle or re.sub(r"\s*[|@\-–].*$","",_ptitle or ""), _body)
             except Exception: JOB_WHY=""
             # an "application password" printed in the posting (a did-you-read-it check): answer it from the posting itself
             try:
@@ -1502,14 +1507,14 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     extra=dict(extra); extra["application "+_m.group(1).lower()]=_m.group(2); report["posting_password"]=_m.group(2)
             except Exception: pass
             # cover letter: the applicant's own PDF (profile.json "cover_letter") when present, else a per-posting one
-            if CL_OWN and P.get("cover_letter") and os.path.exists(P["cover_letter"]):
+            if CL_OWN and P.get("cover_letter") and os.path.exists(P["cover_letter"]) and not CUR_JOB.get("pitch"):   # a posting with its own pitch gets a letter written for it
                 cl_text=CL_OWN; cl_pdf=P["cover_letter"]; report["cover_source"]="applicant"
             else:
                 try:
                     ptitle=jtitle or re.sub(r"\s*[|@\-–].*$","",await page.title())
                     pdesc=await page.evaluate("()=>document.body.innerText.slice(0,6000)")
                     comp=company or re.sub(r"[-_]"," ",url.split("/")[3]).title()
-                    cl_text=cover.text(comp,ptitle,pdesc,P); cl_pdf=cover.pdf(f"{OUT}/{tag}_cover.pdf",cl_text); report["cover_category"]=cover.category(ptitle,pdesc)
+                    cl_text=cover.text(comp,ptitle,pdesc,P,pitch=CUR_JOB.get("pitch")); cl_pdf=cover.pdf(f"{OUT}/{tag}_cover.pdf",cl_text); report["cover_category"]=cover.category(ptitle,pdesc); report["cover_source"]="tailored" if CUR_JOB.get("pitch") else "generated"
                 except Exception as e: report["cover_err"]=str(e)[:100]; cl_pdf=P.get("cover_letter")
             # resume upload first (autofill may follow), then the cover letter
             async def file_labels():
