@@ -97,14 +97,6 @@ except Exception as _e:
     prior_company_apps = PRIOR_Q = PRIOR_FOLLOWUP = None
     print(f"[jv] note: apply.py's prior-application helper could not be loaded ({type(_e).__name__}); 'applied before' uses the generic rule", file=sys.stderr)
 
-def rule_pattern(label, table):
-    """The pattern of the rule pick() would use for this label (same order as pick: the per-job rules first)."""
-    rules = (G["JOB_CHOICE_RULES"] + CHOICE_RULES) if table == "choice" else (G["JOB_TEXT_RULES"] + TEXT_RULES)
-    l = label.lower()
-    for pat, _ in rules:
-        if re.search(pat, l) or (re.search(r"[A-Z]", pat) and re.search(pat, label)): return pat
-    return None
-
 # ---- Jobvite questions the shared tables phrase differently. Each line restates an applicant answer that apply.py already
 # records (cited), so nothing new is decided here; they apply only when the shared tables have no rule for the label.
 JV_CHOICE_RULES = [
@@ -190,6 +182,8 @@ INTERNET_OPT = re.compile(r"job ?boards?|job (site|website|search|posting)s?|onl
 NOTICE_Q = re.compile(r"notice period|how (soon|quickly) can you start|available to start|availability to start|start date|before being able to start|when (can|could) you (start|begin|join)", re.I)
 START_DATE_Q = re.compile(r"(desired|preferred|earliest|available|availability|possible) (start|starting) date|earliest date .{0,40}\bstart|start date|date (you are|you're) available|date available|available to start|earliest availability|availability to (start|begin|join)|when (can|could) you (start|begin|join)", re.I)
 TODAY_Q = re.compile(r"today'?s? date|signature date|date signed|^date\*?$|^signed on|date of signature|current date", re.I)
+RESIDE_IF_Q = re.compile(r"^\s*if you (currently )?(live|reside|are located|are based) in (?!.*\b(california|ca|santa clara|san jose|bay area|silicon valley|united states|the us|usa)\b)", re.I)
+NA_OPT = re.compile(r"^\s*n/?a\b|not applicable|(do not|don.t) (live|reside)|does not apply|not in (that|this) (state|city)", re.I)
 GITHUB_Q = re.compile(r"(link|url).{0,40}(portfolio|github).{0,60}(resume|cv)|(portfolio|github).{0,60}(included|listed|in|on) (in |on )?your (resume|cv)", re.I)
 IF_FOLLOWUP = re.compile(r"^\s*(if (yes|so|applicable|other|you were referred|referred|you answered|you selected)|please (list|provide|explain|specify).{0,30}(if|referr))|who (can we thank|referred you)|"
                          r"^\s*if (your|the|my) .{0,40}(w(as|ere) not|is not|are not|isn.t|aren.t) listed|not listed (above|here)|^\s*if (none|other) of the above|^\s*(please )?specify( other)?:?$", re.I)
@@ -203,7 +197,10 @@ def loose(s):
     return re.sub(r"\bdeclines\b", "decline", s)
 
 def usable(texts, label):
-    out = mask_hear(texts, label)
+    # apply.py's source-question mask ('never a referral / recruiter option'); not on a Yes/No list, where it would hide both
+    # answers of 'Were you referred ...? No, I was not referred / Yes, I was referred'
+    yn = any(re.match(r"\s*(yes|no)\b", t or "", re.I) for t in texts)
+    out = list(texts) if yn else mask_hear(texts, label)
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
     if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
@@ -224,15 +221,46 @@ def rank(texts, prefs, label):
         neg = [i for i, t in enumerate(u0) if t and NEG_OPT.search(t)]
         if len(neg) == 1: return neg[0]
     return None
-def choice_for(label):
-    v = pick(label, CHOICE_RULES)
+def rules_value(label, table, q=None):
+    """apply.py's pick() (same tables, same order, per-job rules first), except that the generic 'worked for <company>
+    before' rule is passed over where it answers a different question ('experience in your current or former jobs
+    protecting ...'): the next matching rule answers instead."""
+    rules = (G["JOB_CHOICE_RULES"] + CHOICE_RULES) if table == "choice" else (G["JOB_TEXT_RULES"] + TEXT_RULES)
+    l = (label or "").lower(); qq = q or label or ""
+    for pat, val in rules:
+        if re.search(pat, l) or (re.search(r"[A-Z]", pat) and re.search(pat, label)):
+            if EMPLOY_RULE.search(pat) and EMPLOY_MISFIRE.search(qq): continue
+            return val
+    return None
+def choice_for(label, q=None):
+    v = rules_value(label, "choice", q)
     if v is None:
         v = next((val for pat, val in JV_CHOICE_RULES if re.search(pat, (label or "").lower())), None)
     if v is None: return None
     return v if isinstance(v, list) else [v]
-def text_for(label):
-    v = pick(label, TEXT_RULES)
+def text_for(label, q=None):
+    v = rules_value(label, "text", q)
     return v if isinstance(v, str) and v.strip() else None
+
+def years_index(opts, n):
+    """A years-of-experience bucket list ('Less than 3 years', '3 to 5 years', 'More then 7 years'): the bucket holding n."""
+    for i, o in enumerate(opts):
+        s = (o or "").lower().replace("then", "than")
+        m = re.search(r"(\d+)\s*(-|–|to)\s*(\d+)", s)
+        if m and int(m.group(1)) <= n <= int(m.group(3)): return i
+        if m: continue
+        m = re.search(r"(less|fewer) than (\d+)|under (\d+)|up to (\d+)", s)
+        if m:
+            hi = int(next(g for g in m.groups()[1:] if g))
+            if n < hi or (m.group(4) and n == hi): return i
+            continue
+        m = re.search(r"(more|greater) than (\d+)|over (\d+)", s)
+        if m:
+            if n > int(next(g for g in m.groups()[1:] if g)): return i
+            continue
+        m = re.search(r"(\d+)\s*(\+|or more|or greater|years? or more|years?\+)|at least (\d+)", s)
+        if m and n >= int(m.group(1) or m.group(4)): return i
+    return None
 
 # ---- the location gate
 REMOTE_RE = re.compile(r"\bremote\b|work from home|\bwfh\b|home[- ]based|anywhere in the (us|u\.s\.|usa|united states)", re.I)
@@ -394,9 +422,10 @@ def contact_value(f):
     if re.fullmatch(r"(chosen |preferred |legal )?(last name|family name|surname)( \(legal\))?", low): return LAST
     if re.fullmatch(r"(chosen |legal )?(first name|given name)( \(legal\))?", low): return FIRST
     if re.fullmatch(r"preferred (first )?name|known as|nickname", low): return text_for(f["label"]) or FIRST
-    if re.fullmatch(r"suffix|name suffix|prefix|honorific|address ?(line ?)?[2-9]|apt\.?(, suite.*)?|apartment.*|suite", low): return ""
+    if re.fullmatch(r"suffix|name suffix|prefix|honorific|apt\.?(, suite.*)?|apartment.*|suite", low): return ""
+    if re.search(r"address|street", low) and re.search(r"(line|ln)\.?\s*[2-9]\b|address\s*[2-9]\b|\b(apt|apartment|suite|unit)\b", low): return ""   # line 2: empty
     if re.fullmatch(r"(your )?e-?mail( address)?", low): return P["email"]
-    if re.fullmatch(r"address line 1|street( address)?|(home |mailing |current )?address|street (number and )?name|address 1", low): return P.get("street") or ""
+    if re.fullmatch(r"(street |home |mailing |current |residential )?address( line)?( ?1)?|street( address)?( line)?( ?1)?|street (number and )?name( or p\.?o\.? box)?", low): return P.get("street") or ""
     if re.fullmatch(r"(zip|postal)( code)?|zip/postal code", low): return P.get("zip") or ""
     if re.fullmatch(r"city|town|city/town", low): return P.get("city") or "Santa Clara"
     if re.fullmatch(r"county", low): return "Santa Clara"
@@ -424,7 +453,7 @@ def hear_index(opts, label):
     k = next((i for i, o in enumerate(ok) if o and re.search(r"job ?boards?", o, re.I)), None)
     if k is None: k = next((i for i, o in enumerate(ok) if o and INTERNET_OPT.search(o)), None)
     if k is not None: return k
-    tail = prefs[prefs.index("Social Media"):] if "Social Media" in prefs else []
+    tail = [p for p in (prefs[prefs.index("Social Media"):] if "Social Media" in prefs else []) if re.search(r"social", p, re.I)]   # LinkedIn is social media; never 'Other'
     return rank(ok, tail, label)
 
 def notice_index(opts):
@@ -501,15 +530,17 @@ def decide(job, f):
         prefs = choice_for(t)
         if prefs and re.match(r"\s*(yes|i agree|agree|i acknowledge|i consent|accept)", str(prefs[0]), re.I): return {"act": "check"}
         return {"act": "none"}
+    # ---- an optional 'If ...' follow-up ('If yes, ...', 'If a reasonable accommodation is requested, ...') stays empty
+    if not f.get("req") and (re.match(r"\s*if\b", low) or IF_FOLLOWUP.search(low)): return {"act": "skip"}
     # ---- choice questions (select / radio / checkbox group)
     if kind in ("select", "radio", "checkbox", "mselect"):
-        if SOURCE_Q.search(q) and not any(re.fullmatch(r"\s*(yes|no)\s*", o, re.I) for o in opts):
+        if SOURCE_Q.search(q) and not any(re.match(r"\s*(yes|no)\b", o, re.I) for o in opts):
             k = hear_index(opts, q)
             return {"act": "pick", "k": k} if k is not None else {"act": "none", "why": "no LinkedIn / job-board / internet option"}
-        prefs = choice_for(label) or (choice_for(q) if q != label else None)
-        src_pat = rule_pattern(label, "choice") or (rule_pattern(q, "choice") if q != label else None)
-        if prefs and src_pat and EMPLOY_RULE.search(src_pat) and EMPLOY_MISFIRE.search(q):
-            prefs = None   # the 'worked for <company> before' rule matched a different question
+        if RESIDE_IF_Q.search(q):   # 'If you live in Illinois, is your address in Chicago?': the applicant lives in Santa Clara, CA
+            k = next((i for i, o in enumerate(opts) if NA_OPT.search(o)), None)
+            if k is not None: return {"act": "pick", "k": k}
+        prefs = choice_for(label, q) or (choice_for(q, q) if q != label else None)
         ack = [o for o in opts if ACK_OPT.search(o) and not NEG_OPT.search(o)]
         if ACK_ASK.search(q) and len(ack) == 1 and not DISC.search(q): prefs = ack
         elif SALARY_SHARE.search(q) and any(re.fullmatch(r"\s*yes\s*", o, re.I) for o in opts): prefs = ["Yes", "yes"]
@@ -522,9 +553,8 @@ def decide(job, f):
             if prefs: job.note("derived", f"{label[:80]}: the resume ({os.path.basename(job.resume)}) has a GitHub link")
         if prefs == ["__ASK__"]: return {"act": "leave", "why": "the rules leave this to you"}
         if prefs is None:
-            t = text_for(label)   # a Yes/No rule written for free text ('No', 'Yes. I am a US citizen ...') also answers the choice
-            tp = rule_pattern(label, "text")
-            if t and re.match(r"\s*(yes|no)\b", t, re.I) and not (tp and EMPLOY_RULE.search(tp) and EMPLOY_MISFIRE.search(q)):
+            t = text_for(label, q)   # a Yes/No rule written for free text ('No', 'Yes. I am a US citizen ...') also answers the choice
+            if t and re.match(r"\s*(yes|no)\b", t, re.I):
                 prefs = [re.match(r"\s*(yes|no)\b", t, re.I).group(1).capitalize()]
         if not prefs and ack and ACK_TOPIC.search(gtxt) and not DISC.search(q) and len(ack) == 1:
             prefs = ack; job.note("consent_fallback", label[:120])
@@ -537,6 +567,12 @@ def decide(job, f):
         if COMMUTE_Q.search(q) and re.match(r"\s*no\b", p0, re.I):
             return {"act": "leave", "why": f"rule conflict: the rule says {p0!r} to a commuting-distance question"}
         if FIVE_DAYS_Q.search(q) and re.match(r"\s*yes", p0, re.I):
+            # 'on-site daily (5 days/week) or hybrid (3 days/week)?': the hybrid option only (the location gate has passed
+            # this role, and a hybrid schedule is within the rule); a plain 5-day question stays with the applicant
+            hy = [i for i, o in enumerate(opts) if re.search(r"hybrid", o, re.I) and not NEG_OPT.search(o) and not FIVE_DAYS_Q.search(o) and not re.search(r"daily|5 days|five days", o, re.I)]
+            if len(hy) == 1:
+                job.note("derived", f"{label[:80]}: the hybrid option only (never 5 days a week in the office)")
+                return {"act": "picks", "ks": hy} if kind in ("checkbox", "mselect") and (f.get("multi") or kind == "mselect") else {"act": "pick", "k": hy[0]}
             return {"act": "leave", "why": "rule conflict: 5 days a week in the office (the location rule says never)"}
         if kind in ("checkbox", "mselect") and (f.get("multi") or kind == "mselect"):
             ks = []
@@ -547,6 +583,12 @@ def decide(job, f):
                     if not re.search(r"select all|check all|all that apply", q, re.I): break
             return {"act": "picks", "ks": ks} if ks else {"act": "none", "rule": [str(x) for x in prefs[:6]]}
         k = rank(opts, prefs, q)
+        if k is None and re.search(r"how many years|years of (\w+ )?experience", q, re.I):   # the bucket that holds the rules' number
+            t = text_for(label, q) or ""
+            m = re.match(r"\s*(\d+)", t) or re.match(r"\s*(\d+)", p0)
+            if m:
+                k = years_index(opts, int(m.group(1)))
+                if k is not None: job.note("derived", f"{label[:80]}: {m.group(1)} years (rules) -> {opts[k]!r}")
         if k is None and NOTICE_Q.search(q) and re.match(r"\s*(immediate|asap|as soon|right away|2 weeks|two weeks|within)", p0, re.I):
             k = notice_index(opts)
             if k is not None: job.note("derived", f"{label[:80]}: 'immediately, within 2 weeks at most' -> {opts[k]!r}")
@@ -563,13 +605,10 @@ def decide(job, f):
         return {"act": "keep"} if cur else {"act": "none"}
     # ---- free text
     if kind in ("text", "textarea", "number"):
-        if not f.get("req") and IF_FOLLOWUP.search(low): return {"act": "skip"}   # optional 'if referred / if yes' follow-ups stay empty
         numeric = kind == "number" or bool(re.search(r"numeric|number only|numbers only|digits only|whole number", q, re.I))
-        v = text_for(label) or (text_for(q) if q != label else None)
-        tp = rule_pattern(label, "text")
-        if v and tp and EMPLOY_RULE.search(tp) and EMPLOY_MISFIRE.search(q): v = None
+        v = text_for(label, q) or (text_for(q, q) if q != label else None)
         if v is None:
-            c = choice_for(label) or (choice_for(q) if q != label else None)
+            c = choice_for(label, q) or (choice_for(q, q) if q != label else None)
             if c and c != ["__ASK__"] and isinstance(c[0], str) and re.fullmatch(r"(yes|no|none|n/a)", c[0].strip(), re.I): v = c[0]
         if v is None and f.get("req") and not cur:
             v = tech_answer(label)
