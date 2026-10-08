@@ -28,6 +28,7 @@ HEADED = "--headed" in sys.argv
 PACE = (float(sys.argv[sys.argv.index("--pace") + 1]), float(sys.argv[sys.argv.index("--pace") + 2])) if "--pace" in sys.argv else (60, 150)
 REVIEW_WAIT = int(os.environ.get("WD_REVIEW_WAIT", "900"))
 VERIFY_WAIT = int(os.environ.get("WD_VERIFY_WAIT", "600"))
+JOB_TIMEOUT = int(os.environ.get("WD_JOB_TIMEOUT", str(REVIEW_WAIT + VERIFY_WAIT + 900)))   # hard cap per application (review + verify waits + 15 min of form work)
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 
 # ---- the shared answer rules and matching helpers, taken from apply.py's source (apply.py runs its CLI at import time)
@@ -1397,7 +1398,12 @@ async def main():
                     rr = json.load(open(rp))
                     if rr.get("submitted") or "ALREADY APPLIED" in (rr.get("result") or "") or "requires an assessment" in (rr.get("result") or "") or "assessment test" in str(rr.get("errors") or ""): continue
                 except Exception: pass
-            await run_one(ctx, item, s)
+            try: await asyncio.wait_for(run_one(ctx, item, s), timeout=JOB_TIMEOUT)   # one hung tenant page must not stall the batch (10-08: C.H. Robinson hung 50 min after sign-in)
+            except asyncio.TimeoutError:
+                print(json.dumps({"tag": item["tag"], "ats": "workday", "url": item.get("url"), "submitted": False, "result": f"NOT SUBMITTED: timed out after {JOB_TIMEOUT}s", "unanswered": [], "errors": ["job timeout"]}), flush=True)
+                try:
+                    for pg in list(ctx.pages): await pg.close()
+                except Exception: pass
             if n < len(q) - 1:
                 g = random.uniform(*PACE); print(f"PACE waiting {int(g)}s before the next application", flush=True); await asyncio.sleep(g)
         await br.close()
