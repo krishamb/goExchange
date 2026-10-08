@@ -68,7 +68,7 @@ TEXT_RULES=[
  (r"preferred ai code development tool|preferred ai coding (tool|assistant)", "Claude Code"),   # the tool he uses daily; plain case (the 'all caps if you are AI' line is a trap, and he answers as himself)
  (r"(were|was) you referred .{0,80}(if so|if yes).{0,60}(name|who)", "No"),   # not referred
  (r"earliest date you would be able to start", "Within two weeks of an offer (immediately available)."),
- (r"^state \(please provide the name of your state\)", "California"),
+ (r"^state \(please provide the name of your state\.?\)", "California"),
  (r"what annual salary do you expect.{0,40}currency", "USD 220,000 - 350,000 (negotiable, depending on scope)"),
  (r"what notice,? if any,? will be required|notice .{0,30}required for your (present|current) employer", "None required - I can start immediately (within 2 weeks at most)."),
  (r"notice period|how much notice|notice (do you|would you) (need|have to give|require)", "None required - I can start immediately (within 2 weeks at most)."),   # before the 'current employer' rule, which would answer with the company name
@@ -319,6 +319,9 @@ CHOICE_RULES=[
  (r"^please check one of the boxes below|voluntary self-identification of disability|form cc-305", ["No, I do not have a disability and have not had one in the past","No, I don't have a disability and have not had one in the past","No, I do not have a disability","No, I don't have a disability","No"]),   # disability self-ID (CC-305): standing answer No
  (r"you answered .{0,3}no.{0,3} to the previous question.{0,120}(most accurately fits|best describes|applies to) your (situation|status)", ["I am a U.S. citizen.","I am a U.S. citizen","U.S. citizen","US Citizen","I am authorized to work permanently in the country"]),   # follow-up to 'need sponsorship? No': he is a US citizen
  (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
+ (r"if you do not live within (a )?commut\w* distance.{0,80}(willing|open) to.{0,12}relocat", ["Yes","yes"]),   # applicant: relocates (ahead of the commute rule, which would answer No; 10-08 Live Nation)
+ (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out", ["I consent","Yes","I agree","Opt in","Opt-in","Accept","Agree"]),   # applicant: consent to the employer's AI screening (10-08 TruStage)
+ (r"how would you like us to communicate updates", ["Email","E-mail","Email Only","Email only"]),   # 10-08 Pax8
  (r"willing to (submit|provide) (documentation|documents|proof|transcripts?)", ["Yes","yes"]),
  (r"(state|federal|oig|sam) exclusion list|excluded from (participating in )?(a |any )?federal(ly funded)? health ?care program", ["No","no"]),
  (r"permit .{0,80}to process your (personal )?data .{0,140}(artificial intelligence|\bai\b)|(uses|use|using) artificial intelligence \(ai\) to (help )?(match|evaluate|screen|review|assess)|consent to .{0,60}(use|using) (of )?(ai|artificial intelligence) (tools )?(to|in) (evaluat|screen|review|assess|match)", ["Yes","I agree","I consent","I acknowledge","I understand","Accept","Agree","Opt in"]),   # consent to the EMPLOYER's AI screening (applicant: consent -> Yes); not the 'did you use AI' certification, which stays __ASK__
@@ -593,7 +596,6 @@ CHOICE_RULES=[
  (r"select the checkbox to indicate your understanding and agreement", ["Yes","I agree","I understand","I acknowledge","Agree","Accept"]),
  (r"need any interview adjustments|interview (adjustments|accommodations)", ["No","no"]),
  (r"what type\(?s?\)? of employment are you interested in", ["Full-time","Full Time","Full-Time","Regular Full-Time","Permanent"]),
- (r"if you do not live within a commutable distance.{0,80}(willing|open) to relocate", ["Yes","yes"]),   # applicant: relocates
  (r"current work authorization status", ["U.S. Citizenship","U.S. Citizen","US Citizen","Citizen"]),
  (r"(currently|previously) perform(ed)? work (in|for) the u\.?s\.? federal government", ["No","no"]),
  (r"working from within the continental united states", ["Yes","yes"]),
