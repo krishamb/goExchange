@@ -324,6 +324,10 @@ CHOICE_RULES=[
  (r"if you do not live within (a )?commut\w* distance.{0,80}(willing|open) to.{0,12}relocat", ["Yes","yes"]),   # applicant: relocates (ahead of the commute rule, which would answer No; 10-08 Live Nation)
  (r"would like to process the information you provide.{0,60}artificial intelligence|using an artificial intelligence \(ai\) tool.{0,300}opt out|uses artificial intelligence \(ai\) tools to assist in reviewing applications", ["I understand and consent to the process described above","I consent","I agree","Opt in","Opt-in","Accept","Agree","I acknowledge"]),   # applicant: consent to the employer's AI screening (10-08 TruStage); no bare Yes next to an opt-out choice
  (r"how would you like us to communicate updates", ["Email","E-mail","Email Only","Email only"]),   # 10-08 Pax8
+ (r"best way to reach you", ["Email","E-mail"]),   # 10-08 Vistra
+ (r"^currency( type)?\??\*?$", ["USD","US Dollar","United States Dollar"]),   # 10-08 Sony
+ (r"^are you a (current )?resident of (?!(the )?(united states|u\.?s\.?a?\b|america|california))[a-z .]+\?\*?$", ["No","no"]),   # applicant lives in Santa Clara, California (10-08 Sony: Massachusetts / Maryland)
+ (r"please select the statement applicable to you", ["I am not listed on a sanctions list"]),   # 10-08 Sony sanctions statement (US citizen, not sanctioned); matches only that option
  (r"what annual salary do you expect for this role", ["300,000 - 325,000","300,000 - 350,000","$300,000 - $350,000","301,000 - 350,000"]),   # 10-08 Live Nation bands; applicant $220K-$350K, $300K-$350K band first as elsewhere
  (r"have you ever been an employee or a contractor/contingent worker with", ["Not Applicable","No","no"]),   # 10-08 Elevance: never worked there
  (r"requires background checks of all new employees", ["I have read the above statement and wish to continue","I Acknowledge","I acknowledge","Acknowledge"]),   # 10-08 Western Union acknowledgement
