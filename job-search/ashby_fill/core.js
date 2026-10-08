@@ -16,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-08.14';
+const VERSION = '2026-10-08.15';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -457,7 +457,8 @@ async function answerPlanned(e, q, v, rep) {
   if (boxes.length === 1) {
     const t = labelOf(boxes[0]) || q;
     if (PERSONAL_CERT.test(t) || PERSONAL_CERT.test(q)) { rep.ask.push(q); return false; }   // never certify that no AI was used
-    if (!TRUTHY.test(vals[0])) return true;   // planned 'No' on a lone box: leave it unticked
+    const isLabel = bestIndex([t, q].map(clean), vals) >= 0;   // the planned value is the box's own text ('I have read and agree to the terms above.')
+    if (!TRUTHY.test(vals[0]) && !isLabel) return true;   // planned 'No' on a lone box: leave it unticked
     const ok = await check(boxes[0]); if (ok) rep.filled.push([q, 'checked']); return ok;
   }
   if (boxes.length > 1) {
