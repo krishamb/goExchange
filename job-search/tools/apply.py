@@ -580,6 +580,10 @@ CHOICE_RULES=[
  (r"(uses|use) text messag|text messag.{0,80}(interview|application|hiring|recruit)|consent to (receive )?(sms|text)", ["Yes","yes","I consent","Opt in"]),   # applicant: consent -> yes
  (r"willing to complete an identity verification|identity verification as part of", ["Yes","yes"]),
  (r"right to accept unrestricted employment", ["Yes","yes"]),   # US citizen
+ (r"lived in the united states for at least \d+ of the (past|last) \d+ years", ["Yes","yes"]),   # US citizen, lives in Santa Clara
+ (r"entrusted with a (prominent )?(public )?position or function in any government|politically exposed person|\bpep\b", ["No","no"]),
+ (r"^have you been referred( to us)?\??\*?$|^were you referred( by)?", ["No","no"]),
+ (r"select the salary range that best fits", ["$150,000 +","$150,000+","$200,000 +","$200,000+","$250,000 +","$250,000+"]),   # only an open-ended top band is true for his $220-350K range
  (r"currently living in the us or canada", ["US","United States"]),
  (r"if yes,? please enter (your )?visa type|^visa type$", ["NA","N/A","Not applicable","None"]),   # US citizen: no visa
  (r"accept the listed salary range", ["Yes","yes"]),
