@@ -16,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-08.16';
+const VERSION = '2026-10-08.17';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -142,15 +142,86 @@ function bestIndex(texts, prefs) {
 }
 
 // ---------------- DOM helpers ----------------
+// Ashby saves every answer to its server by itself, one call per field (ApiSetFormValue); Submit only names the saved form,
+// so an answer Ashby never saved is EMPTY on its side however ticked it looks on screen. A click is saved at once; typed text
+// is saved the moment the field loses focus (Tab / click elsewhere), otherwise 0.5 s later by a timer that Chrome slows in a
+// window that is not in front - and in such a window the browser sends the page no focus / blur events at all. So every field
+// gets what a person's Tab gives it (focus in, the value, Tab, focus out), and Submit waits until Ashby has saved them all.
+let LAST_EDIT = 0, EDITS_FOR = '';
+const EDITS = {};   // field path -> when this filler last changed it
+const pathOfEl = el => { const h = el && el.closest && el.closest('[data-field-path]'); return (h && h.getAttribute('data-field-path')) || (el && /^_systemfield_/.test(el.id || '') ? el.id : ''); };
+function edited(el) { LAST_EDIT = Date.now(); const p = pathOfEl(el); if (p) EDITS[p] = LAST_EDIT; }
+function unedit(el) { const p = pathOfEl(el); if (p) delete EDITS[p]; }
+function fire(el, type, bubbles) { try { el.dispatchEvent(new FocusEvent(type, { bubbles })); } catch (e) {} }
+function touch(el) {   // focus the field like a person; when the browser sends no focus events (window not in front), send them
+  if (!el) return;
+  let got = false; const h = () => { got = true; };
+  try { el.addEventListener('focusin', h, true); el.focus(); } catch (e) {} finally { try { el.removeEventListener('focusin', h, true); } catch (e) {} }
+  if (!got) { fire(el, 'focus', false); fire(el, 'focusin', true); }
+}
+function leave(el, tab = true) {   // Tab out of the field: Ashby saves it the moment it loses focus
+  if (!el) return;
+  if (tab) for (const t of ['keydown', 'keyup']) { try { el.dispatchEvent(new KeyboardEvent(t, { key: 'Tab', code: 'Tab', keyCode: 9, which: 9, bubbles: true, cancelable: true })); } catch (e) {} }
+  let got = false; const h = () => { got = true; };
+  try { el.addEventListener('focusout', h, true); if (document.activeElement === el) el.blur(); } catch (e) {} finally { try { el.removeEventListener('focusout', h, true); } catch (e) {} }
+  if (!got) { fire(el, 'blur', false); fire(el, 'focusout', true); }
+}
+function hover(el) {   // the pointer arriving over it first, as a real mouse does before a click (lists highlight the item on hover)
+  for (const t of ['pointerover', 'pointerenter', 'mouseover', 'mouseenter', 'pointermove', 'mousemove']) {
+    try { const E = t.startsWith('pointer') && typeof PointerEvent === 'function' ? PointerEvent : MouseEvent; el.dispatchEvent(new E(t, { bubbles: !/enter$/.test(t), cancelable: true, button: 0 })); } catch (e) {}
+  }
+}
 function setValue(el, v) {
   const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
   const desc = Object.getOwnPropertyDescriptor(proto, 'value');
-  el.focus();
+  touch(el); edited(el);
   desc.set.call(el, v);
   el.dispatchEvent(new Event('input', { bubbles: true }));
   el.dispatchEvent(new Event('change', { bubbles: true }));
 }
+// Ashby's saves, watched from inside the page (a userscript cannot see the page's own requests): each save's field path,
+// start time and outcome go on <html data-akf-saves> for settleSaves() below.
+const SAVE_HOOK = `(() => { if (window.__akfSaves) return; const st = window.__akfSaves = { pend: 0, n: 0, last: 0, ok: {}, bad: {} };
+  const put = () => { try { document.documentElement.setAttribute('data-akf-saves', JSON.stringify(st)); } catch (e) {} };
+  const of = window.fetch;
+  window.fetch = function (u, o) {
+    let path = null; try { const b = o && o.body; if (typeof b === 'string' && b.indexOf('ApiSetFormValue') >= 0) path = JSON.parse(b).variables.path; } catch (e) {}
+    const p = of.apply(this, arguments);
+    if (path == null) return p;
+    const t0 = Date.now(); st.pend++; st.n++; st.last = t0; put();
+    const done = (ok, why) => { st.pend--; st.last = Date.now(); if (ok) { if (!(st.ok[path] > t0)) st.ok[path] = t0; delete st.bad[path]; } else st.bad[path] = String(why || 'failed').slice(0, 80); put(); };
+    p.then(r => { if (!r.ok) return done(false, 'HTTP ' + r.status); r.clone().json().then(j => done(!(j && j.errors && j.errors.length), j && j.errors && j.errors[0] && j.errors[0].message), () => done(true)); }, e => done(false, e && e.message));
+    return p;
+  };
+  put();
+})();`;
+function hookSaves() {
+  if (SITE !== 'ashby' || document.documentElement.hasAttribute('data-akf-saves')) return;
+  try { if (typeof GM_addElement === 'function') GM_addElement('script', { textContent: SAVE_HOOK }); } catch (e) {}
+  if (document.documentElement.hasAttribute('data-akf-saves')) return;
+  try {   // the page's CSP admits scripts that carry its nonce
+    const s = document.createElement('script'); const n = [...document.scripts].map(x => x.nonce).find(Boolean);
+    if (n) s.nonce = n;
+    s.textContent = SAVE_HOOK; (document.head || document.documentElement).appendChild(s); s.remove();
+  } catch (e) {}
+}
+const savesNow = () => { try { return JSON.parse(document.documentElement.getAttribute('data-akf-saves') || 'null'); } catch (e) { return null; } };
+function unsaved() {   // fields this filler changed that Ashby has not confirmed saving since (null: saves cannot be watched here)
+  const s = savesNow(); if (!s) return null;
+  return Object.keys(EDITS).filter(p => s.bad[p] || !(s.ok[p] >= EDITS[p] - 20));
+}
+async function settleSaves(ms = 15000) {   // until every change is saved (or failed), at most ms
+  const t0 = Date.now(); let u = unsaved();
+  while (Date.now() - t0 < ms) {
+    const s = savesNow(); u = unsaved();
+    if (!s || !s.n) { if (Date.now() - LAST_EDIT > 2500) return null; }   // not watchable (Lever / the page refused the hook / a form that saves nothing per field): a quiet pause
+    else if (!s.pend && u.every(p => s.bad[p])) return u;
+    await sleep(250);
+  }
+  return u;
+}
 function press(el) {   // never throws: a failed synthetic event must not cost the answer (the plain click still runs)
+  hover(el);
   for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup']) {
     try { const E = t.startsWith('pointer') && typeof PointerEvent === 'function' ? PointerEvent : MouseEvent; el.dispatchEvent(new E(t, { bubbles: true, cancelable: true, button: 0, buttons: t.endsWith('down') ? 1 : 0 })); } catch (e) {}
   }
@@ -262,7 +333,7 @@ async function answerText(e, q, input, rep) {
   if (v == null || v === '') return !!cur.trim();
   if (cur.trim() && input.tagName === 'TEXTAREA' && !/cover letter/i.test(q)) return true;
   if (cur !== v) setValue(input, v);
-  input.blur();
+  leave(input);
   rep.filled.push([q, String(v).slice(0, 60)]);
   return true;
 }
@@ -274,28 +345,39 @@ async function answerLocation(e, q, input, rep) {
     if (opt) {
       const o = opt.find(x => /santa clara.{0,40}(california|\bca\b|united states|usa)/i.test(x.innerText));
       if (o) {
-        press(o); await sleep(600);
-        if (/santa clara/i.test(input.value) || /santa clara/i.test(e.innerText.replace(q, ''))) { rep.filled.push([q, clean(o.innerText).slice(0, 60)]); input.blur(); return true; }
+        edited(input); press(o); await sleep(600);
+        if (/santa clara/i.test(input.value) || /santa clara/i.test(e.innerText.replace(q, ''))) { rep.filled.push([q, clean(o.innerText).slice(0, 60)]); leave(input, false); return true; }
       }
     }
   }
   // some forms only list countries (Docker): the applicant is in the United States
   setValue(input, 'United States');
   const us = await waitFor(() => optionsNow().filter(x => /^united states( of america)?$/i.test(clean(x.innerText))), 5000, 300);
-  if (us) { press(us[0]); await sleep(500); input.blur(); rep.filled.push([q, 'United States']); return true; }
-  setValue(input, ''); input.blur();
+  if (us) { edited(input); press(us[0]); await sleep(500); leave(input, false); rep.filled.push([q, 'United States']); return true; }
+  setValue(input, ''); leave(input, false); unedit(input);
   return false;
 }
 async function answerLeverLocation(e, q, input, rep) {
   const sel = document.querySelector('#selected-location, input[name="selectedLocation"]');
   if (input.value && /santa clara/i.test(input.value) && (!sel || sel.value)) return true;
-  input.focus(); setValue(input, 'Santa Clara');
+  setValue(input, 'Santa Clara');
   for (const t of ['keydown', 'keypress', 'keyup']) input.dispatchEvent(new KeyboardEvent(t, { key: 'a', bubbles: true }));   // Lever looks places up on key events
   const opt = await waitFor(() => [...document.querySelectorAll('.dropdown-location, .dropdown-results div, [role="option"]')].filter(x => visible(x) && /santa clara/i.test(x.innerText)), 8000, 300);
   const o = opt && opt.find(x => /santa clara.{0,40}(california|\bca\b|united states|usa)/i.test(x.innerText));
   if (o) { press(o); await sleep(500); }
-  input.blur(); rep.filled.push([q, clean(input.value).slice(0, 60) || 'Santa Clara, California']);
+  leave(input, false); rep.filled.push([q, clean(input.value).slice(0, 60) || 'Santa Clara, California']);
   return true;
+}
+async function pickOption(e, input, opt, text) {   // hover the item, click it, leave the field; true when the list shows it picked
+  const want = clean(text).slice(0, 40).toLowerCase();
+  const took = () => {
+    const v = clean(input.value).toLowerCase();
+    if (v && (v.includes(want) || want.includes(v))) return true;
+    return [...e.querySelectorAll('[class*="singleValue" i], [class*="selected" i], [class*="chip" i], [class*="tag" i], [class*="value" i]')].some(x => x !== input && !x.contains(input) && clean(x.innerText).toLowerCase().includes(want));
+  };
+  edited(input); press(opt); await sleep(500);   // no second click when it looks untaken: on a multi-select list it would un-pick it
+  leave(input, false);
+  return took();
 }
 async function answerCombo(e, q, input, rep) {
   const cur = clean(input.value);
@@ -306,7 +388,7 @@ async function answerCombo(e, q, input, rep) {
   prefs = prefs.filter(p => typeof p === 'string');
   if (HEAR_Q.test(q)) prefs = prefs.filter(p => !HEAR_BAD.test(p));
   const toggle = e.querySelector('button[class*="toggle"]');
-  if (toggle) press(toggle); else { input.focus(); press(input); }
+  touch(input); if (toggle) press(toggle); else press(input);
   let opts = await waitFor(optionsNow, 5000, 250) || [];
   let texts = opts.map(o => clean(o.innerText)).map(t => (HEAR_Q.test(q) && HEAR_BAD.test(t)) ? '' : t);
   let i = bestIndex(texts, prefs);
@@ -315,8 +397,8 @@ async function answerCombo(e, q, input, rep) {
     opts = await waitFor(optionsNow, 5000, 250) || [];
     texts = opts.map(o => clean(o.innerText)); i = bestIndex(texts, prefs);
   }
-  if (i < 0) { input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); input.blur(); rep.options[q] = texts.slice(0, 15); return false; }
-  press(opts[i]); await sleep(500); input.blur();
+  if (i < 0) { input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); leave(input, false); unedit(input); rep.options[q] = texts.slice(0, 15); return false; }
+  if (!await pickOption(e, input, opts[i], texts[i])) rep.notes.push(`${q.slice(0, 50)}: picked '${texts[i].slice(0, 30)}' but the list did not take it`);
   rep.filled.push([q, texts[i].slice(0, 60)]);
   return true;
 }
@@ -334,20 +416,22 @@ async function answerYesNo(e, q, rep) {
 async function pressYesNo(e, q, btns, i, texts, rep) {
   const on = () => btns[i].getAttribute('aria-pressed') === 'true';
   for (let a = 0; a < 3 && !on(); a++) {
+    edited(btns[i]);
     if (a === 0) press(btns[i]);
     else if (a === 1) { const inner = btns[i].querySelector('span, div') || btns[i]; press(inner); }
     else { try { btns[i].focus(); btns[i].dispatchEvent(new KeyboardEvent('keydown', { key: ' ', code: 'Space', bubbles: true })); btns[i].dispatchEvent(new KeyboardEvent('keyup', { key: ' ', code: 'Space', bubbles: true })); } catch (x) {} }
     await waitFor(on, 1500, 150);
   }
-  if (on()) { rep.filled.push([q, texts[i]]); return true; }
+  if (on()) { leave(btns[i], false); rep.filled.push([q, texts[i]]); return true; }
   rep.notes.push(`${q.slice(0, 50)}: clicked '${texts[i]}' but the page did not take it`);
   return false;
 }
 async function check(input) {
   if (input.checked) return true;
   const l = input.id && document.querySelector('label[for="' + CSS.escape(input.id) + '"]');
-  (l || input).click(); await sleep(150);
+  edited(input); hover(l || input); (l || input).click(); await sleep(150);
   if (!input.checked) { input.click(); await sleep(150); }
+  if (input.checked) leave(input, false);
   return input.checked;
 }
 async function answerRadio(e, q, rep) {
@@ -405,7 +489,7 @@ async function answerDate(e, q, input, rep) {
   if (input.value) return true;
   const v = /start|available|availability|join|begin|notice/i.test(q) ? today(14) : (/today|date of application|signature|sign/i.test(q) ? today(0) : null);
   if (!v) return false;
-  setValue(input, v); input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); input.blur(); await sleep(300);
+  setValue(input, v); input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); leave(input); await sleep(300);
   const ok = !!input.value; if (ok) rep.filled.push([q, v]);
   return ok;
 }
@@ -414,7 +498,7 @@ async function answerSelect(e, q, sel, rep) {
   const prefs = pick(q, 'choice'); if (!prefs || prefs[0] === '__ASK__') return false;
   const texts = [...sel.options].map(o => clean(o.text));
   const i = bestIndex(texts, prefs); if (i < 0) return false;
-  sel.value = sel.options[i].value; sel.dispatchEvent(new Event('change', { bubbles: true }));
+  touch(sel); edited(sel); sel.value = sel.options[i].value; sel.dispatchEvent(new Event('change', { bubbles: true })); leave(sel, false);
   rep.filled.push([q, texts[i]]); return true;
 }
 const TEXT_SEL = 'textarea, input[type="text"]:not([role="combobox"]):not(.ashby-application-form-input-date), input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input:not([type]):not([role="combobox"])';
@@ -472,25 +556,26 @@ async function answerPlanned(e, q, v, rep) {
     const cur = clean(combo.value);
     if (cur && bestIndex([cur], vals) === 0) return true;
     const toggle = e.querySelector('button[class*="toggle"]');
-    if (toggle) press(toggle); else { combo.focus(); press(combo); }
+    touch(combo); if (toggle) press(toggle); else press(combo);
     let opts = await waitFor(optionsNow, 5000, 250) || [];
     let texts = opts.map(o => clean(o.innerText)); let i = bestIndex(texts, vals);
     if (i < 0) { setValue(combo, vals[0].slice(0, 25)); opts = await waitFor(optionsNow, 5000, 250) || []; texts = opts.map(o => clean(o.innerText)); i = bestIndex(texts, vals); }
-    if (i < 0) { try { combo.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); } catch (x) {} combo.blur(); rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0].slice(0, 30)}' not in the list`); return false; }
-    press(opts[i]); await sleep(500); combo.blur(); rep.filled.push([q, texts[i].slice(0, 60)]); return true;
+    if (i < 0) { try { combo.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); } catch (x) {} leave(combo, false); unedit(combo); rep.notes.push(`${q.slice(0, 50)}: planned '${vals[0].slice(0, 30)}' not in the list`); return false; }
+    if (!await pickOption(e, combo, opts[i], texts[i])) rep.notes.push(`${q.slice(0, 50)}: picked '${texts[i].slice(0, 30)}' but the list did not take it`);
+    rep.filled.push([q, texts[i].slice(0, 60)]); return true;
   }
   const sel = e.querySelector('select');
   if (sel) {
     const texts = [...sel.options].map(o => clean(o.text)); const i = bestIndex(texts, vals);
     if (i < 0) return false;
-    sel.value = sel.options[i].value; sel.dispatchEvent(new Event('change', { bubbles: true })); rep.filled.push([q, texts[i]]); return true;
+    touch(sel); edited(sel); sel.value = sel.options[i].value; sel.dispatchEvent(new Event('change', { bubbles: true })); leave(sel, false); rep.filled.push([q, texts[i]]); return true;
   }
   const date = e.querySelector('.ashby-application-form-input-date, input[placeholder*="date" i]');
   const inp = date || e.querySelector(TEXT_SEL);
   if (inp) {
     if (clean(inp.value) === clean(vals[0])) return true;
     setValue(inp, vals.join(', ')); if (date) { try { inp.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); } catch (x) {} }
-    inp.blur(); await sleep(150);
+    leave(inp); await sleep(150);
     const ok = !!clean(inp.value); if (ok) rep.filled.push([q, vals.join(', ').slice(0, 60)]); return ok;
   }
   return false;
@@ -509,6 +594,34 @@ function jobInfo() {
   const company = clean((document.title.split('@')[1] || (m && m[1]) || '').replace(/[-_]+/g, ' '));
   return { slug: m && m[1], id: m && m[2], title, company, desc: clean(document.body.innerText).slice(0, 6000) };
 }
+async function answerEntry(e, rep) {   // one question: this job's own answer first, then the rules
+  const path = e.getAttribute('data-field-path') || '';
+  if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) return;
+  const q = titleOf(e) || descOf(e);
+  try {
+    const fp = fieldPath(e);
+    if (fp && !PLAN_SKIP.test(fp) && Object.prototype.hasOwnProperty.call(JOB.plan, fp) && JOB.plan[fp] !== null && JOB.plan[fp] !== '') {
+      if (await answerPlanned(e, q, JOB.plan[fp], rep)) return;   // the per-job answer took; otherwise the rules below get their turn
+    }
+    const file = e.querySelector('input[type="file"]');
+    if (file) {
+      if (/cover/i.test(q) && S.get('cover')) { const ok = await attach(file, S.get('cover'), e); if (ok) rep.filled.push([q, S.get('cover').name]); }
+      return;
+    }
+    if (OFFICE3_Q.test(q + ' ' + descOf(e)) && !JOB.okOffice) rep.office.push(q);
+    if (e.querySelector('.ashby-application-form-input-yesno')) { await answerYesNo(e, q, rep); return; }
+    const date = e.querySelector('.ashby-application-form-input-date, input[placeholder*="date" i]');
+    if (date) { await answerDate(e, q, date, rep); return; }
+    const combo = e.querySelector('input[role="combobox"]');
+    if (combo) { if (path === '_systemfield_location' || /location|\bcity\b|where .{0,20}(based|live|located|reside)|intend to work from/i.test(q) && !/country/i.test(q)) await answerLocation(e, q, combo, rep); else await answerCombo(e, q, combo, rep); return; }
+    const inp = e.querySelector(TEXT_SEL);
+    if (inp && SITE === 'lever' && (inp.name === 'location' || inp.id === 'location-input')) { await answerLeverLocation(e, q, inp, rep); return; }
+    if (inp) await answerText(e, q, inp, rep);
+    if (e.querySelector('input[type="radio"]')) await answerRadio(e, q, rep);
+    else if (e.querySelector('input[type="checkbox"]')) await answerCheckboxes(e, q, rep);
+    else { const sel = e.querySelector('select'); if (sel) await answerSelect(e, q, sel, rep); }
+  } catch (err) { rep.notes.push(q.slice(0, 50) + ': ' + (err && err.message || err)); }
+}
 async function fillForm(opts = {}) {
   const rep = { filled: [], ask: [], tech: [], options: {}, missing: [], resume: null, notes: [], office: [] };
   const info = jobInfo(); Object.assign(JOB, info);
@@ -522,6 +635,8 @@ async function fillForm(opts = {}) {
   JOB.textRules = compile([["^if (yes|so).{0,80}\\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", prior.length ? 'Yes: ' + prior.slice(0, 3).join('; ') + ' (2026)' : 'N/A']]);
   JOB.why = whyFor(info.company, info.title, info.desc);
   JOB.plan = (opts.answers && typeof opts.answers === 'object') ? opts.answers : {};
+  if (EDITS_FOR !== location.pathname) { for (const k of Object.keys(EDITS)) delete EDITS[k]; EDITS_FOR = location.pathname; }
+  hookSaves();
   if (SITE === 'ashby' && !/\/application/.test(location.pathname)) {   // on the posting: open the application tab
     const a = [...document.querySelectorAll('a, button')].find(x => /^apply( for this job)?$/i.test(clean(x.innerText)) || /\/application$/.test(x.getAttribute('href') || ''));
     if (a) { press(a); await sleep(2500); }
@@ -540,32 +655,7 @@ async function fillForm(opts = {}) {
   for (let pass = 0; pass < 2; pass++) {
     for (const e of entries()) {
       if (done.has(e)) continue; done.add(e); progress(); STEP = 'answering: ' + (titleOf(e) || descOf(e) || '').slice(0, 70);
-      const path = e.getAttribute('data-field-path') || '';
-      if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) continue;
-      const q = titleOf(e) || descOf(e);
-      try {
-        const fp = fieldPath(e);
-        if (fp && !PLAN_SKIP.test(fp) && Object.prototype.hasOwnProperty.call(JOB.plan, fp) && JOB.plan[fp] !== null && JOB.plan[fp] !== '') {
-          if (await answerPlanned(e, q, JOB.plan[fp], rep)) continue;   // the per-job answer took; otherwise the rules below get their turn
-        }
-        const file = e.querySelector('input[type="file"]');
-        if (file) {
-          if (/cover/i.test(q) && S.get('cover')) { const ok = await attach(file, S.get('cover'), e); if (ok) rep.filled.push([q, S.get('cover').name]); }
-          continue;
-        }
-        if (OFFICE3_Q.test(q + ' ' + descOf(e)) && !JOB.okOffice) rep.office.push(q);
-        if (e.querySelector('.ashby-application-form-input-yesno')) { await answerYesNo(e, q, rep); continue; }
-        const date = e.querySelector('.ashby-application-form-input-date, input[placeholder*="date" i]');
-        if (date) { await answerDate(e, q, date, rep); continue; }
-        const combo = e.querySelector('input[role="combobox"]');
-        if (combo) { if (path === '_systemfield_location' || /location|\bcity\b|where .{0,20}(based|live|located|reside)|intend to work from/i.test(q) && !/country/i.test(q)) await answerLocation(e, q, combo, rep); else await answerCombo(e, q, combo, rep); continue; }
-        const inp = e.querySelector(TEXT_SEL);
-        if (inp && SITE === 'lever' && (inp.name === 'location' || inp.id === 'location-input')) { await answerLeverLocation(e, q, inp, rep); continue; }
-        if (inp) await answerText(e, q, inp, rep);
-        if (e.querySelector('input[type="radio"]')) await answerRadio(e, q, rep);
-        else if (e.querySelector('input[type="checkbox"]')) await answerCheckboxes(e, q, rep);
-        else { const sel = e.querySelector('select'); if (sel) await answerSelect(e, q, sel, rep); }
-      } catch (err) { rep.notes.push(q.slice(0, 50) + ': ' + (err && err.message || err)); }
+      await answerEntry(e, rep);
     }
     await sleep(600);
   }
@@ -574,6 +664,7 @@ async function fillForm(opts = {}) {
     if (/_systemfield_education/.test(path)) continue;
     if (isRequired(e) && !answered(e)) rep.missing.push(titleOf(e) || descOf(e) || path);
   }
+  if (SITE === 'ashby') touchAll();   // a last focus-out on every typed answer, so Ashby saves them even if you click Submit yourself
   rep.ready = !rep.missing.length && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP';
   return rep;
 }
@@ -586,9 +677,65 @@ function captchaChallenge() {
   return [...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"], iframe[src*="hcaptcha"], iframe[title*="challenge" i]')].some(f => { const r = f.getBoundingClientRect(); return r.width > 50 && r.height > 50 && getComputedStyle(f).visibility !== 'hidden'; });
 }
 let STEP = 'starting';                                // where the current job is (shown in the log if it gets stuck)
+// Before Submit every change must be saved on Ashby's side (see 'DOM helpers'): Tab through the answered fields, wait for
+// Ashby's saves, and enter once more (as a person would) any answer it did not confirm.
+const waitIdle = () => waitFor(() => { const s = savesNow(); return !s || !s.pend; }, 6000, 150);
+function entryOf(p) {
+  const h = p && document.querySelector('[data-field-path="' + CSS.escape(p) + '"]');
+  if (h) return h.matches(ENTRY_SEL) ? h : (h.closest(ENTRY_SEL) || h.querySelector(ENTRY_SEL) || h);
+  const el = p && document.getElementById(p); return el ? el.closest(ENTRY_SEL) : null;
+}
+function touchAll() {   // focus in / out of every typed answer once: Ashby saves a field the moment it loses focus
+  for (const e of entries()) for (const el of e.querySelectorAll('input, textarea')) {
+    if (/^(checkbox|radio|file|hidden|submit|button)$/i.test(el.type || '') || el.getAttribute('role') === 'combobox' || !clean(el.value)) continue;
+    fire(el, 'focus', false); fire(el, 'focusin', true); fire(el, 'blur', false); fire(el, 'focusout', true);
+  }
+}
+async function resync(e, rep) {   // enter one field's answer again so Ashby saves it: re-type text, re-click a choice
+  if (!e) return;
+  const yes = [...e.querySelectorAll('.ashby-application-form-input-yesno button')];
+  const radios = [...e.querySelectorAll('input[type="radio"]')];
+  const boxes = [...e.querySelectorAll('input[type="checkbox"]')].filter(b => !b.closest('.ashby-application-form-input-yesno'));
+  const combo = e.querySelector('input[role="combobox"]'), txt = e.querySelector(TEXT_SEL);
+  if (yes.length >= 2) {
+    const i = yes.findIndex(b => b.getAttribute('aria-pressed') === 'true');
+    if (i < 0) return answerEntry(e, rep);
+    press(yes[i ? 0 : 1]); await waitIdle(); await sleep(300);
+    edited(yes[i]); press(yes[i]); await waitFor(() => yes[i].getAttribute('aria-pressed') === 'true', 2000, 150); leave(yes[i], false); await waitIdle(); return;
+  }
+  if (radios.length) {
+    const i = radios.findIndex(r => r.checked);
+    if (i < 0) return answerEntry(e, rep);
+    if (radios.length > 1) { const j = i ? 0 : 1; edited(radios[j]); (document.querySelector('label[for="' + CSS.escape(radios[j].id || 'x') + '"]') || radios[j]).click(); await waitIdle(); await sleep(200); }
+    await check(radios[i]); await waitIdle(); return;
+  }
+  if (boxes.length) {
+    const on = boxes.filter(b => b.checked);
+    if (!on.length) return answerEntry(e, rep);
+    for (const b of on) { edited(b); (document.querySelector('label[for="' + CSS.escape(b.id || 'x') + '"]') || b).click(); await waitIdle(); await sleep(200); await check(b); await waitIdle(); }
+    return;
+  }
+  if (combo) { if (!clean(combo.value) && !answered(e)) return answerEntry(e, rep); touch(combo); leave(combo, false); return; }   // re-picking the same item sends nothing
+  if (txt) { const v = txt.value; if (!clean(v)) return answerEntry(e, rep); setValue(txt, v + ' '); setValue(txt, v); leave(txt); await waitIdle(); return; }
+  return answerEntry(e, rep);
+}
+async function ensureSaved(rep) {   // -> titles of the answers Ashby still has not saved ([] when all saved / not watchable)
+  if (SITE !== 'ashby') return [];
+  STEP = 'checking Ashby saved every answer'; touchAll();
+  let u = await settleSaves(15000);
+  if (u && u.length) {
+    STEP = 'entering again what Ashby had not saved: ' + u.join(', ').slice(0, 60);
+    for (const p of u) await resync(entryOf(p), rep);
+    touchAll(); u = await settleSaves(10000);
+  }
+  return (u || []).map(p => titleOf(entryOf(p) || document.body) || p);
+}
+const findSubmit = () => (SITE === 'lever' && document.querySelector('#btn-submit, button[data-qa="btn-submit"]')) || [...document.querySelectorAll('button')].find(b => /^submit application$/i.test(clean(b.innerText)) && visible(b));
 async function submitForm() {
-  const btn = (SITE === 'lever' && document.querySelector('#btn-submit, button[data-qa="btn-submit"]')) || [...document.querySelectorAll('button')].find(b => /^submit application$/i.test(clean(b.innerText)) && visible(b));
+  let btn = findSubmit();
   if (!btn) return { status: 'error', why: 'no Submit button on the form' };
+  const rep2 = { filled: [], ask: [], tech: [], options: {}, missing: [], notes: [], office: [] };
+  const notSaved = await ensureSaved(rep2);
   const before = document.body.innerText || '';
   const OKG = new RegExp(OK_RX.source, 'gi');
   const okBefore = new Set((before.match(OKG) || []).map(x => x.toLowerCase()));
@@ -596,7 +743,7 @@ async function submitForm() {
   btn.scrollIntoView({ block: 'center' }); await sleep(400);
   STEP = 'clicked Submit, waiting for the confirmation';
   btn.click();
-  const t0 = Date.now(); let errSince = 0;
+  let t0 = Date.now(), errSince = 0, retried = false;
   while (Date.now() - t0 < 90000) {   // never leave before Ashby answers: the confirmation, a block, a captcha, or real field errors
     await sleep(700); progress();
     const secs = Math.round((Date.now() - t0) / 1000);
@@ -610,7 +757,17 @@ async function submitForm() {
     const bad = entries().filter(e => [...e.querySelectorAll('[class*="error" i], [aria-invalid="true"]')].some(x => visible(x) && (x.getAttribute('aria-invalid') === 'true' || clean(x.innerText))));
     if (bad.length && !busy) {   // field errors, and the Submit button usable again: Ashby refused the form
       if (!errSince) errSince = Date.now();
-      if (Date.now() - errSince > 4000) return { status: 'needs', why: 'Ashby flagged: ' + bad.map(e => titleOf(e) || descOf(e)).filter(Boolean).slice(0, 4).join('; ').slice(0, 220), confirmSecs: secs };
+      if (Date.now() - errSince > 4000 && !retried && SITE === 'ashby') {   // once: enter the flagged answers again, let Ashby save them, Submit again
+        retried = true; errSince = 0;
+        STEP = 'Ashby flagged ' + bad.length + ' field(s): entering them again, then Submit once more';
+        status('Ashby flagged: ' + bad.map(e => titleOf(e) || descOf(e)).filter(Boolean).slice(0, 4).join('; ').slice(0, 160) + '\nEntering them again and submitting once more...');
+        for (const e of bad) await resync(e, rep2);
+        await ensureSaved(rep2);
+        btn = findSubmit() || btn; btn.scrollIntoView({ block: 'center' }); await sleep(400);
+        STEP = 'clicked Submit again, waiting for the confirmation'; btn.click(); t0 = Date.now();
+        continue;
+      }
+      if (Date.now() - errSince > 4000) return { status: 'needs', why: 'Ashby flagged' + (retried ? ' (after entering them again)' : '') + ': ' + bad.map(e => titleOf(e) || descOf(e)).filter(Boolean).slice(0, 4).join('; ').slice(0, 200) + (notSaved.length ? ' || not saved by Ashby: ' + notSaved.slice(0, 3).join('; ').slice(0, 120) : ''), confirmSecs: secs };
     } else errSince = 0;
   }
   return { status: 'unconfirmed', why: 'clicked Submit, but no confirmation appeared within 90 s - please check this one', confirmSecs: 90 };
@@ -986,6 +1143,6 @@ async function boot() {
   if (curJobId() && (auto || window.__AKF) && (SITE === 'ashby' || /\/apply\/?$/.test(location.pathname))) { await sleep(1500); return run({ manual: true, submit: !!(window.__AKF && window.__AKF.auto) }); }
   ui(); status('Open an application, then click Fill.'); buttons([['Fill this application', () => run({ manual: true }), true], ['Run log', showLog], ['Download log', downloadLog]]);
 }
-window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, version: VERSION };
+window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, ensureSaved, savesNow, unsaved, touchAll, edits: EDITS, version: VERSION };
 if (!window.__AKF_TEST) boot();
 })();
