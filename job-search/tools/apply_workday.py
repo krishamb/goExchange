@@ -682,7 +682,7 @@ async def date_field(page, box, lab):
     return await set_date(page, box, d.month, d.day, d.year)
 
 DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i (have|had) (a |an )?(disabilit|relative|family|conflict|financial|non-?compete|criminal|conviction)|^\s*i have a disability", re.I)   # 'Yes, I have read the Terms' is an acknowledgement, not a disclosure
-ACK = re.compile(r"i (have read|acknowledge|agree|understand|consent|certify|confirm)|terms and conditions|privacy (notice|policy|statement)|^accept\*?$|i accept|by (selecting|checking|clicking) (the|this) (check)?box|(check|select|tick) (this|the) (check)?box to (confirm|agree|acknowledg|accept|consent|certif|indicate)|confirm the statement", re.I)
+ACK = re.compile(r"i (hereby )?(have read|acknowledge|agree|understand|consent|certify|confirm)|terms and conditions|privacy (notice|policy|statement)|^accept\*?$|i accept|by (selecting|checking|clicking) (the|this) (check)?box|(check|select|tick) (this|the) (check)?box to (confirm|agree|acknowledg|accept|consent|certif|indicate)|confirm the statement", re.I)
 class Job:
     def __init__(self, item):
         self.item = item; self.tag = item["tag"]; self.url = item["url"]; self.title = item.get("title", "")
