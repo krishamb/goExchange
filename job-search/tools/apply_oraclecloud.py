@@ -997,7 +997,27 @@ async def run_one(br, item):
                     if await page.locator("apply-flow-block, .apply-flow-block").count(): break
                     await page.wait_for_timeout(1000)
                 if not await page.locator("apply-flow-block, .apply-flow-block").count():
-                    job.report["errors"].append(re.sub(r"\s+", " ", await text(page))[:300])
+                    b = await text(page)
+                    # an application submitted earlier but never identity-confirmed (Ford): the site offers REMOVE / CONFIRM
+                    if re.search(r"do you want to confirm your job application", b, re.I):
+                        cb = page.get_by_role("button", name=re.compile(r"^confirm$", re.I))
+                        if await cb.count():
+                            await cb.first.click(timeout=5000); job.report["submit_clicked"] = True
+                            for _ in range(30):
+                                await page.wait_for_timeout(1000)
+                                b = await text(page)
+                                if re.search(r"confirm your identity|verification code|enter the code|one-time (code|pin|pass ?code)", b, re.I) and not job.report.get("confirm_code"):
+                                    job.report["confirm_code"] = True
+                                    if not await verify_code(page, job):
+                                        job.report["result"] = "NOT SUBMITTED: confirmation code not received (CONFIRM was clicked: check the site)"; return job.report
+                                    continue
+                                if re.search(r"thank you for (applying|your (job )?application)|application (was |has been )?(successfully )?(submitted|received|confirmed)|you applied for|we('ve| have) received your application", b, re.I) and not re.search(r"do you want to confirm", b, re.I):
+                                    job.report["submitted"] = True; job.report["result"] = "CONFIRMED earlier application: " + re.sub(r"\s+", " ", b)[:250]
+                                    await page.screenshot(path=f"{OUT}/{job.tag}_{ATS}_submitted.png", full_page=True); return job.report
+                            await page.screenshot(path=f"{OUT}/{job.tag}_{ATS}_after_confirm.png", full_page=True)
+                            job.report["errors"].append(re.sub(r"\s+", " ", b)[:300])
+                            job.report["result"] = "NOT SUBMITTED: CONFIRM clicked but no confirmation seen (check the site before any retry)"; return job.report
+                    job.report["errors"].append(re.sub(r"\s+", " ", b)[:300])
                     job.report["result"] = "NOT SUBMITTED: the verification code was not accepted"; return job.report
         await save_state(ctx, page, sp, host)
         job.report["challenge"] = any(challenge)
