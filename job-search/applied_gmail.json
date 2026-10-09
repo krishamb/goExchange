@@ -8497,6 +8497,20 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "netapp": {
+   "name": "NetApp",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "nexteraenergy": {
+   "name": "NextEra Energy",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
