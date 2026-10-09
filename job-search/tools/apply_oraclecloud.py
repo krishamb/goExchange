@@ -359,7 +359,8 @@ async def answer_field(page, job, f):
     def keep(v): job.ans(key, v); return v
     if kind in ("readonly",): return keep(cur) if cur else ""
     # AI-use / "I personally completed this application" certifications: always the applicant's (never ticked or typed)
-    if (AI_CERT.search(q) and not AI_CONSENT.search(q)) or AI_CERT_STRONG.search(q) or EMPLOYER_REL.search(q):
+    _has_ov = any(k and k.lower() in q.lower() for k in (job.item.get("answers") or {}))
+    if (AI_CERT.search(q) and not AI_CONSENT.search(q)) or AI_CERT_STRONG.search(q) or (EMPLOYER_REL.search(q) and not _has_ov):   # employer-relationship questions: the applicant's own answer (queue override) is used when given
         job.report.setdefault("left_for_applicant", []).append(key[:200])
         if cur:   # a value from an earlier run or the site's draft: never vouched for by the filler
             job.miss(f, why=f"left for the applicant; the form already shows {cur[:80]!r} (from a draft or earlier run): check it")
