@@ -284,6 +284,7 @@ DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
 HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
 AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|(did|have) you use(d)? (any )?ai", re.I)
+AI_PLEDGE = re.compile(r"agree (not to|to not) use (artificial intelligence|\bai\b|generative ai)|not (to )?use (artificial intelligence|\bai\b|generative ai|ai tools) (during|in|for) (your |the |any )?(interviews?|assessments?|skills? test)", re.I)   # 10-09 applicant: Yes, he agrees not to use AI in interviews (apply.py rule answers it)
 AI_EXP = re.compile(r"experience (designing|building|developing|deploying|with|in)\b[^?]{0,40}\bai agents?|ai agents? (development )?experience", re.I)   # a factual experience question (resume: Hyperion AI agentic platform), not an AI-use declaration
 AI_CONSENT = re.compile(r"(ai|artificial intelligence|automated) tools? to (help with the initial screening|review your application|assess how your|assist in reviewing applications)|initial screening of resumes|in the application screening process|transcri|note-?tak|summar(y|ies) of (your|the) interview|record(ing)? (of )?(your|the) interview|interview (notes|recordings?)", re.I)   # the company's own AI note-taker: a consent the rules answer
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
@@ -839,7 +840,7 @@ async def fill_field(page, job, f):
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
     # ---- everything else from the rules
-    if AI_Q.search(key) and not AI_CONSENT.search(key) and not AI_EXP.search(key): return kept_unverified()   # AI-use / AI-agent questions are the applicant's to answer
+    if AI_Q.search(key) and not AI_CONSENT.search(key) and not AI_EXP.search(key) and not AI_PLEDGE.search(key): return kept_unverified()   # AI-use / AI-agent questions are the applicant's to answer
     if FORMER_JOB_Q.search(key) and kind in ("text", "textarea"):
         if cur and norm(cur) in {norm(P["email"]), norm(P["name"]), norm(FIRST), norm(LAST)}:   # an earlier run's generic answer: remove it
             await fill(page, box.locator("textarea, input").first, ""); job.report.setdefault("cleared", []).append(key[:120])
