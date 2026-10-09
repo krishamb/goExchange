@@ -835,6 +835,31 @@ async def verify_code(page, job):
     await page.wait_for_timeout(6000)
     return True
 
+async def drop_unnamed_tiles(page, job):
+    """Delete profile tiles the site flags as invalid AND whose title the resume parser left empty ('Unnamed Job Title',
+    'Unnamed ...'): they are parser duplicates of entries the resume already holds. Any other invalid tile is left alone
+    (reported as unanswered). Returns how many were removed."""
+    removed = 0
+    for _ in range(4):
+        tiles = page.locator('article.apply-flow-profile-item-tile--invalid:visible')
+        k = None
+        for i in range(await tiles.count()):
+            if re.search(r"\bunnamed\b", await tiles.nth(i).inner_text(), re.I): k = i; break
+        if k is None: break
+        t = tiles.nth(k)
+        try:
+            btn = t.locator('button[aria-label*="delete" i], button[aria-label*="remove" i], button[title*="delete" i], button[title*="remove" i], .apply-flow-profile-item-tile__remove, button:has-text("Delete"), button:has-text("Remove")')
+            if not await btn.count():
+                await t.hover(); btn = t.locator('button[aria-label*="delete" i], button[aria-label*="remove" i], button:has-text("Delete"), button:has-text("Remove")')
+            if not await btn.count(): break
+            await btn.first.click(timeout=4000); await page.wait_for_timeout(1000)
+            ok = page.get_by_role("button", name=re.compile(r"^(yes|delete|remove|confirm|ok)$", re.I))
+            if await ok.count(): await ok.last.click(timeout=4000); await page.wait_for_timeout(1500)
+            removed += 1; job.report.setdefault("removed_tiles", []).append((await t.inner_text())[:120] if await t.count() else "unnamed tile")
+        except Exception as e:
+            job.report["errors"].append(f"removing an unnamed tile failed: {type(e).__name__}"); break
+    return removed
+
 async def save_state(ctx, page, sp, host):
     """The tenant's cookies + localStorage (storage_state) and sessionStorage, private files in out/orc_state."""
     try:
@@ -874,11 +899,18 @@ async def at_end(page, job, item):
     CONFIRM = re.compile(r"thank you for (applying|your (job )?application|submitting)|application (was |has been )?(successfully )?(submitted|received)|we('ve| have) received your application|successfully applied|you applied for", re.I)
     job.report["submit_clicked"] = True
     await btn.click(timeout=5000)
+    code_done = False
     for _ in range(45):
         await page.wait_for_timeout(1000)
         if await captcha_visible(page):
             job.report["result"] = "NOT SUBMITTED: captcha"; return
         body = await text(page)
+        # some tenants (Ford) confirm the candidate's identity with an emailed code only after Submit
+        if not code_done and re.search(r"confirm your identity|verification code|enter the code|one-time (code|pin|pass ?code)", body, re.I):
+            code_done = True
+            if not await verify_code(page, job):
+                job.report["result"] = "NOT SUBMITTED: post-submit verification code not received (Submit was clicked: check the site before any retry)"; return
+            continue
         # the site's own confirmation, and the form is gone (a form's fine print such as 'once your application has been
         # submitted ...' is not a confirmation while the Submit button is still there)
         if CONFIRM.search(body) and not any(is_submit(t) for t, _ in await page_buttons(page)):
@@ -991,6 +1023,8 @@ async def run_one(br, item):
                     await page.screenshot(path=f"{OUT}/{job.tag}_{ATS}_p{pg + 1}.png", full_page=True)
                     open(f"{OUT}/{job.tag}_{ATS}_p{pg + 1}.html", "w").write((await page.content()).replace(P["email"], "<EMAIL>"))
                 except Exception: pass
+            if await drop_unnamed_tiles(page, job):   # the resume parser's untitled duplicates ('Unnamed Job Title ...') block Next / Submit
+                await page.wait_for_timeout(1500)
             for blk in await required_blocks(page):
                 for it in blk.get("invalid") or []:   # a tile the site flags ('Fields to fix'), e.g. one its resume parser added: Next / Submit would refuse it
                     job.miss({"label": f"{blk['title'].strip()}: item needs fixing ({it[:100]})", "kind": "section"})
