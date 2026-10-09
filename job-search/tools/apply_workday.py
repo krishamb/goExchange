@@ -1058,6 +1058,14 @@ async def experience_page(page, job, need=()):
             await g.locator(A("add-button")).first.click(timeout=4000); await page.wait_for_timeout(1500)
         for i in range(await panels.count()):
             await fill_entry(page, job, kind, panels.nth(i))
+    # Websites: a 'Websites 1' row whose URL is required (IAS) is filled with the applicant's LinkedIn profile; filled rows are kept
+    g = page.locator('[role="group"][aria-labelledby="Websites-section"]')
+    if await g.count():
+        for inp in await g.locator('input[type="text"]:visible, input[type="url"]:visible').all():
+            try:
+                if not (await inp.input_value()).strip():
+                    await fill(page, inp, "https://www.linkedin.com/in/ambarish-krishnamurthy-a72a762"); log(job, "website URL: LinkedIn profile")
+            except Exception: pass
 
 # ---- sign-in
 SIGNIN_UI = f'{A("signInContent")}:visible, {A("SignInWithEmailButton")}:visible, {A("signInSubmitButton")}:visible, {A("createAccountLink")}:visible, {A("createAccountSubmitButton")}:visible, {A("signInLink")}:visible, input{A("password")}:visible'
