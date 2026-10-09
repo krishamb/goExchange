@@ -8160,6 +8160,20 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "nokia": {
+   "name": "Nokia",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "unitedrentals": {
+   "name": "United Rentals",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
