@@ -8174,6 +8174,97 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "fitchgroup": {
+   "name": "Fitch Group",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "fitch": {
+   "name": "Fitch Ratings / Fitch Group",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "supermicro": {
+   "name": "Supermicro",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "supermicrocomputerinc": {
+   "name": "Super Micro Computer Inc",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "bmcsoftware": {
+   "name": "BMC Software",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "bmc": {
+   "name": "BMC Software",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "maximus": {
+   "name": "Maximus",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "intuit": {
+   "name": "Intuit",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "guildmortgage": {
+   "name": "Guild Mortgage",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "guild": {
+   "name": "Guild Mortgage",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "neogov": {
+   "name": "NEOGOV",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "kforce": {
+   "name": "Kforce",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "thesearchsolutions": {
+   "name": "The Search Solutions",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
