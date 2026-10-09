@@ -7985,6 +7985,90 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "axonius": {
+   "name": "Axonius",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dimensional": {
+   "name": "Dimensional Fund Advisors",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "altera": {
+   "name": "Altera",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "bakertillycanada": {
+   "name": "Baker Tilly Canada",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "caresource": {
+   "name": "CareSource",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "creditacceptance": {
+   "name": "Credit Acceptance",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "hamiltonlane": {
+   "name": "hamiltonlane",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dell": {
+   "name": "Dell",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "uber": {
+   "name": "Uber",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "guardianlife": {
+   "name": "Guardian Life",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1
+  },
+  "dimensionalfundadvisors": {
+   "name": "Dimensional Fund Advisors",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "bakertilly": {
+   "name": "Baker Tilly",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
