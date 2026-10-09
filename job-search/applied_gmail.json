@@ -8455,6 +8455,13 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "bloom": {
+   "name": "Bloom (trybloom.ai)",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
