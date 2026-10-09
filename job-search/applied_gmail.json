@@ -8434,6 +8434,27 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "micro1": {
+   "name": "micro1",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "openrelay": {
+   "name": "OpenRelay",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "satlyt": {
+   "name": "Satlyt",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   }
  }
 }
