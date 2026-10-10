@@ -5383,6 +5383,13 @@
    "first": "2026-10-05",
    "via": "gmail confirmation (Oct 3-6 scan)"
   },
+  "ninjaholdings": {
+   "name": "NinjaHoldings",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "nitorinfotech": {
    "name": "Nitor Infotech",
    "dates": [
@@ -6950,6 +6957,13 @@
    "name": "Sidecar Health",
    "dates": [
     "2026-10-02"
+   ],
+   "count": 1
+  },
+  "siemens": {
+   "name": "Siemens",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
