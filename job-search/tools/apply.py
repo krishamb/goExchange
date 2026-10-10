@@ -62,6 +62,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^if (yes|so|applicable)\b.{0,40}(provide|explain|describe|list|detail|specify)|^if (yes|so)[,:]", "Not applicable."),   # follow-ups to a No (conviction, non-compete, prior employment)
  (r"from the point of an offer,? how much time would you need|how much time would you need before you.{0,3}re able to start", "Two weeks from an offer; I can start sooner if needed."),   # 10-08 Q2
  (r"percentage (number )?(that )?you are willing to travel", "25"),   # applicant: travel up to 25% (see the travel rule in CHOICE_RULES)
  (r"experience (with|on|using|in) (aws|amazon web services|gcp|google cloud|azure|(other )?cloud platforms?)|(aws|cloud platforms?).{0,40}(list|specific) services", "Extensive, hands-on. AWS: EC2, S3, Lambda, EKS, RDS, DynamoDB, Kinesis, SQS/SNS, IAM and CloudWatch; GCP: Vertex AI, BigQuery, GKE and Bigtable; plus Azure. At Yahoo Finance I led the AWS modernization of the platform alongside GCP / Vertex AI work with Google, and at Hyperion AI I run our agentic AI platform and model inference on AWS and GCP with Kubernetes and Terraform."),   # before the 'if applicable -> N/A' rule
@@ -319,6 +320,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"do you have (a |an )?(strong |solid |deep |good |basic |working |thorough |excellent )?(fundamental |technical |practical )?(understanding|knowledge|grasp|familiarity|command) (of|with)", ["Yes","yes"]),
+ (r"specify (the )?(clearance )?level|(what|which) (level of |security )?clearance (do you|level)|clearance level", ["No, I do not have a clearance","I do not have a clearance","None","No clearance","N/A","Not applicable"]),
+ (r"percentage of travel|percent(age)? .{0,30}travel|travel .{0,30}percent", ["50+%","50%+","More than 50%","Up to 50%","50%","25-50%","25%"]),
  (r"^please check one of the boxes below|voluntary self-identification of disability|form cc-305", ["No, I do not have a disability and have not had one in the past","No, I don't have a disability and have not had one in the past","No, I do not have a disability","No, I don't have a disability","No"]),   # disability self-ID (CC-305): standing answer No
  (r"you answered .{0,3}no.{0,3} to the previous question.{0,120}(most accurately fits|best describes|applies to) your (situation|status)", ["I am a U.S. citizen.","I am a U.S. citizen","U.S. citizen","US Citizen","I am authorized to work permanently in the country"]),   # follow-up to 'need sponsorship? No': he is a US citizen
  (r"are you (an )?internal (applicant|candidate)|internal applicant\?", ["No","no"]),
@@ -2087,6 +2091,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 m=re.findall(r"Missing entry for required field:\s*([^\n]+)",body)
                 if m: errs=errs+[f"missing: {x.strip()}" for x in m]
                 still_code=await page.locator(CODE_BOXES).count()
+                if not still_code and re.search(r"enter the \d+-character code|security code field|verification code was sent",body,re.I) and re.search(r"submit application",body,re.I): still_code=1   # Brandt (Oct 10): the code boxes use another markup; the form was still up but 'application in' matched the fine print
                 ok=bool(sm) and not still_code and not any(re.search(r"required|invalid|correct|missing",e,re.I) for e in errs)
                 if still_code and not ok: errs.append("still on the security-code step")
                 report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
