@@ -5358,6 +5358,13 @@
    ],
    "count": 2
   },
+  "nebius": {
+   "name": "Nebius",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "neerinfosolutionsincdice": {
    "name": "NeerInfo Solutions Inc. (Dice)",
    "dates": [
@@ -5385,6 +5392,13 @@
    "name": "Nelnet",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "neo4j": {
+   "name": "Neo4j",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -5708,6 +5722,13 @@
    "name": "1Password (applied; do-not-reapply)",
    "dates": [
     "2026-10-05"
+   ],
+   "count": 1
+  },
+  "onestream": {
+   "name": "OneStream",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -6425,6 +6446,13 @@
    "name": "Quince",
    "dates": [
     "2026-10-03"
+   ],
+   "count": 1
+  },
+  "quinstreet": {
+   "name": "QuinStreet",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
