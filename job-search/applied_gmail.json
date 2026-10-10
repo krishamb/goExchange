@@ -6212,6 +6212,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "qualia": {
+   "name": "Qualia",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "qualifiedhealthpbc": {
    "name": "Qualified Health Pbc",
    "dates": [
