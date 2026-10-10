@@ -86,6 +86,13 @@
    ],
    "count": 1
   },
+  "abcfitnesssolutions": {
+   "name": "ABC Fitness Solutions",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "abclegalservices": {
    "name": "ABC Legal Services",
    "dates": [
@@ -123,6 +130,13 @@
    "name": "Acadia Pharmaceuticals",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "accordion": {
+   "name": "Accordion",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -333,6 +347,13 @@
    ],
    "count": 1
   },
+  "alkami": {
+   "name": "Alkami",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "alkamitechnology": {
    "company": "Alkami Technology",
    "first": "2026-10-07",
@@ -444,6 +465,13 @@
    "name": "Ambience Healthcare",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "amerilife": {
+   "name": "AmeriLife",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -562,6 +590,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "archcapitalgroup": {
+   "name": "Arch Capital Group",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "argonai": {
    "name": "Argon Ai",
    "dates": [
@@ -679,6 +714,13 @@
    "name": "Asurion",
    "dates": [
     "2026-10-01"
+   ],
+   "count": 1
+  },
+  "athena": {
+   "name": "Athena",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -1811,6 +1853,13 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "cohuinc": {
+   "name": "Cohu, Inc.",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "coinbase": {
    "name": "Coinbase",
    "dates": [
@@ -1849,6 +1898,13 @@
    ],
    "count": 1
   },
+  "collegeboard": {
+   "name": "College Board",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "collinear": {
    "company": "collinear",
    "first": "2026-10-05",
@@ -1858,6 +1914,20 @@
    "name": "Color",
    "dates": [
     "2026-10-09"
+   ],
+   "count": 1
+  },
+  "commerce": {
+   "name": "Commerce",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "commercecomusinc": {
+   "name": "Commerce.com US, Inc.",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -2043,6 +2113,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "curtisswright": {
+   "name": "Curtiss-Wright",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "cushmanwakefield": {
    "name": "Cushman & Wakefield",
@@ -2503,6 +2580,13 @@
    ],
    "count": 1
   },
+  "dowjonescompany": {
+   "name": "Dow Jones & Company",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "draftkings": {
    "name": "DraftKings",
    "dates": [
@@ -2843,6 +2927,13 @@
    ],
    "count": 1
   },
+  "equipmentshare": {
+   "name": "EquipmentShare",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "erpmarkinc": {
    "company": "ERPMark Inc",
    "first": "2026-10-05",
@@ -2958,10 +3049,24 @@
    ],
    "count": 1
   },
+  "f5": {
+   "name": "F5",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "fact": {
    "company": "fact",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "factset": {
+   "name": "Factset",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "faire": {
    "name": "Faire",
@@ -3318,6 +3423,13 @@
    ],
    "count": 1
   },
+  "fortive": {
+   "name": "Fortive",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "forward": {
    "name": "Forward",
    "dates": [
@@ -3351,6 +3463,13 @@
   },
   "freshfields": {
    "name": "Freshfields",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "fundraiseup": {
+   "name": "Fundraise Up",
    "dates": [
     "2026-10-10"
    ],
@@ -3554,6 +3673,13 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "givecampus": {
+   "name": "GiveCampus",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "givedirectly": {
    "name": "GiveDirectly",
    "dates": [
@@ -3640,6 +3766,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "goodrxinc": {
+   "name": "GoodRx, Inc.",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "google": {
    "name": "Google",
    "dates": [
@@ -3685,6 +3818,13 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-resolved)"
   },
+  "grantthornton": {
+   "name": "Grant Thornton",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "granum": {
    "name": "Granum",
    "dates": [
@@ -3724,6 +3864,13 @@
   },
   "grindr": {
    "name": "Grindr",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "grpscangroup": {
+   "name": "GRP SCAN Group",
    "dates": [
     "2026-10-10"
    ],
@@ -4876,6 +5023,13 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
   },
+  "licor": {
+   "name": "LI-COR",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "lifebonder": {
    "company": "lifebonder",
    "first": "2026-10-05",
@@ -5043,6 +5197,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "magnite": {
+   "name": "Magnite",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "magnitudesoftware": {
    "company": "Magnitude Software",
    "first": "2026-10-01",
@@ -5142,6 +5303,13 @@
    ],
    "count": 1
   },
+  "maymobility": {
+   "name": "May Mobility",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "mcghealth": {
    "name": "MCG Health",
    "dates": [
@@ -5187,6 +5355,13 @@
    "name": "Mercury",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "meredithoperationscorporation": {
+   "name": "Meredith Operations Corporation",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -5322,6 +5497,13 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "mitratech": {
+   "name": "Mitratech",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "mixpanel": {
    "name": "Mixpanel",
@@ -5490,6 +5672,13 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "nayya": {
+   "name": "Nayya",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "nebius": {
    "name": "Nebius",
@@ -5956,6 +6145,13 @@
    ],
    "count": 1
   },
+  "ordergroove": {
+   "name": "Ordergroove",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "orioninnovation": {
    "name": "Orion Innovation",
    "dates": [
@@ -6011,6 +6207,20 @@
    "company": "oura",
    "first": "2026-10-05",
    "via": "cloud"
+  },
+  "outsystemsinc": {
+   "name": "OutSystems, Inc.",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "overstory": {
+   "name": "Overstory",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "oway": {
    "name": "Oway (YC)",
@@ -6813,6 +7023,13 @@
    ],
    "count": 1
   },
+  "rgaenterpriseservicescompany": {
+   "name": "RGA Enterprise Services Company",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "rhizome": {
    "company": "rhizome",
    "first": "2026-10-05",
@@ -6946,6 +7163,13 @@
   },
   "robustwaredice": {
    "name": "Robustware (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "rocketsoftwareinc": {
+   "name": "Rocket Software, Inc.",
    "dates": [
     "2026-10-10"
    ],
@@ -7421,6 +7645,13 @@
    ],
    "count": 2
   },
+  "skygenusa": {
+   "name": "SKYGEN USA",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "slateauto": {
    "name": "Slate Auto",
    "dates": [
@@ -7555,10 +7786,24 @@
    "count": 1,
    "note": "applied"
   },
+  "soundcloud": {
+   "name": "SoundCloud",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "sourcecodetechnologiesllc": {
    "name": "Source Code Technologies LLC",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "sourcegraph": {
+   "name": "Sourcegraph",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -7571,6 +7816,13 @@
    "name": "S&P Global",
    "dates": [
     "2026-10-02"
+   ],
+   "count": 1
+  },
+  "spinmasterinc": {
+   "name": "Spin Master, Inc.",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -7630,6 +7882,13 @@
    "company": "standard",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "starburst": {
+   "name": "Starburst",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "starcast": {
    "company": "starcast",
@@ -7810,6 +8069,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "syllo": {
+   "name": "Syllo",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "symphonycorporation": {
    "name": "Symphony Corporation",
    "dates": [
@@ -7929,6 +8195,13 @@
    "first": "2026-10-02",
    "via": "workday-cloud"
   },
+  "tealiuminc": {
+   "name": "Tealium Inc.",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "teamlfg": {
    "name": "teamLFG",
    "dates": [
@@ -8001,6 +8274,13 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "tempusai": {
+   "name": "Tempus AI",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "tenna": {
    "company": "tenna",
    "first": "2026-10-05",
@@ -8068,10 +8348,24 @@
    ],
    "count": 1
   },
+  "thecollegeboard": {
+   "name": "The College Board",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "thefarmersdog": {
    "name": "The Farmer's Dog",
    "dates": [
     "2026-10-02"
+   ],
+   "count": 1
+  },
+  "thegalluporganization": {
+   "name": "The Gallup Organization",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -8124,6 +8418,13 @@
    ],
    "count": 1
   },
+  "thetorocompany": {
+   "name": "The Toro Company",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "thevoleongroup": {
    "name": "The Voleon Group",
    "dates": [
@@ -8156,6 +8457,13 @@
    "count": 1,
    "note": "rejected (do not re-apply)",
    "rejected": true
+  },
+  "thriventfinancialforlutherans": {
+   "name": "Thrivent Financial for Lutherans",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "thumbtack": {
    "name": "Thumbtack",
@@ -8356,6 +8664,13 @@
    "name": "United Rentals",
    "dates": [
     "2026-10-09"
+   ],
+   "count": 1
+  },
+  "uniteus": {
+   "name": "Unite Us",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -8948,6 +9263,13 @@
    "count": 2,
    "note": "rejected (do not re-apply)",
    "rejected": true
+  },
+  "yumbrands": {
+   "name": "Yum! Brands",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "yurtsai": {
    "company": "yurtsai",
