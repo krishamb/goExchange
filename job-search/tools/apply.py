@@ -62,6 +62,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"ideal (annual |base )?(salary|compensation|pay)|salary (for|in) your next role", "$220,000 - $350,000 (negotiable, depending on scope)"),
  (r"^if (yes|so|applicable)\b.{0,40}(provide|explain|describe|list|detail|specify)|^if (yes|so)[,:]", "Not applicable."),   # follow-ups to a No (conviction, non-compete, prior employment)
  (r"from the point of an offer,? how much time would you need|how much time would you need before you.{0,3}re able to start", "Two weeks from an offer; I can start sooner if needed."),   # 10-08 Q2
  (r"percentage (number )?(that )?you are willing to travel", "25"),   # applicant: travel up to 25% (see the travel rule in CHOICE_RULES)
@@ -320,6 +321,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"opt out of this regular practice|not have your resume considered for these additional opportunities", ["Opt-In","Opt In","opt-in"]),
+ (r"type of employment arrangement", ["Fulltime Employee","Full-time Employee","Full-time","Full time","Fulltime"]),
+ (r"^have you (ever )?(implemented|used|integrated|developed|created|deployed|designed) (or (used|implemented|built|deployed|integrated) )?", ["Yes","yes"]),
  (r"do you have (a |an )?(strong |solid |deep |good |basic |working |thorough |excellent )?(fundamental |technical |practical )?(understanding|knowledge|grasp|familiarity|command) (of|with)", ["Yes","yes"]),
  (r"specify (the )?(clearance )?level|(what|which) (level of |security )?clearance (do you|level)|clearance level", ["No, I do not have a clearance","I do not have a clearance","None","No clearance","N/A","Not applicable"]),
  (r"percentage of travel|percent(age)? .{0,30}travel|travel .{0,30}percent", ["50+%","50%+","More than 50%","Up to 50%","50%","25-50%","25%"]),
@@ -821,7 +825,7 @@ CHOICE_RULES=[
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|\bITAR\b|\bEAR\b(?! about)|\(EAR\)", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
- (r"veteran|military|armed forces", ["I am not a veteran","Not a Veteran","Not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","I do not wish to self-identify","Prefer not to say"]),
+ (r"veteran|military|armed forces", ["I do not identify as a protected veteran","do not identify as a protected veteran","I am not a veteran","Not a Veteran","Not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","I do not wish to self-identify","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
