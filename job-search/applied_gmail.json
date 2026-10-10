@@ -1289,6 +1289,13 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
   },
+  "caltech": {
+   "name": "Caltech",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "cambiumlearninggroup": {
    "name": "Cambium Learning Group",
    "dates": [
@@ -1531,6 +1538,13 @@
    ],
    "count": 3
   },
+  "chamber": {
+   "name": "Chamber",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
   "chaosindustries": {
    "name": "CHAOS Industries",
    "dates": [
@@ -1635,6 +1649,20 @@
    "company": "cityzeen",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "clarium": {
+   "name": "Clarium",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "clasp": {
+   "name": "Clasp",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   },
   "clearesult": {
    "name": "clearesult",
@@ -1825,6 +1853,13 @@
    "company": "collinear",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "color": {
+   "name": "Color",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   },
   "complete": {
    "company": "complete",
@@ -2318,6 +2353,13 @@
    ],
    "count": 1
   },
+  "dill": {
+   "name": "Dill (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "dimensional": {
    "name": "Dimensional Fund Advisors",
    "dates": [
@@ -2600,6 +2642,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "edviro": {
+   "name": "Edviro (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "efficientcomputer": {
    "name": "Efficient Computer",
@@ -2958,6 +3007,20 @@
    "count": 1,
    "rejected": "2026-10-05/06"
   },
+  "farai": {
+   "name": "FAR.AI",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "faros": {
+   "name": "Faros",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
   "farther": {
    "name": "Farther",
    "dates": [
@@ -3286,6 +3349,13 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
   },
+  "freshfields": {
+   "name": "Freshfields",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "furiosaai": {
    "name": "FuriosaAI",
    "dates": [
@@ -3579,6 +3649,13 @@
    ],
    "count": 3
   },
+  "gopuff": {
+   "name": "Gopuff",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "govstar": {
    "company": "govstar",
    "first": "2026-10-05",
@@ -3644,6 +3721,13 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "grindr": {
+   "name": "Grindr",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "gruns": {
    "name": "Grüns",
@@ -4132,6 +4216,13 @@
    ],
    "count": 1
   },
+  "infisical": {
+   "name": "Infisical",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
   "inflectionai": {
    "name": "Inflection AI",
    "dates": [
@@ -4212,6 +4303,13 @@
    "name": "Instacart",
    "dates": [
     "2026-10-05"
+   ],
+   "count": 1
+  },
+  "instituteoffoundationmodels": {
+   "name": "Institute of Foundation Models",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -4713,6 +4811,20 @@
    ],
    "count": 1
   },
+  "leantechniques": {
+   "name": "Lean TECHniques",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
+  "leapingai": {
+   "name": "Leaping AI (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "legion": {
    "name": "Legion",
    "dates": [
@@ -4789,6 +4901,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "lightsprint": {
+   "name": "LightSprint (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "lilaccloud": {
    "name": "Lilac Cloud",
@@ -4963,6 +5082,13 @@
    ],
    "count": 1
   },
+  "matchgroup": {
+   "name": "Match Group",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
   "material": {
    "name": "Material",
    "dates": [
@@ -5042,6 +5168,13 @@
    "company": "medvidi",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "menlosecurity": {
+   "name": "Menlo Security",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   },
   "mercor": {
    "name": "Mercor (applied; do-not-reapply)",
@@ -5446,10 +5579,24 @@
    ],
    "count": 1
   },
+  "neubergerberman": {
+   "name": "Neuberger Berman",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "neuehealth": {
    "company": "NeueHealth",
    "first": "2026-10-06",
    "via": "greenhouse-cloud"
+  },
+  "newsbreak": {
+   "name": "NewsBreak",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "newtglobal": {
    "name": "Newt Global",
@@ -5864,6 +6011,13 @@
    "company": "oura",
    "first": "2026-10-05",
    "via": "cloud"
+  },
+  "oway": {
+   "name": "Oway (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "owner": {
    "name": "Owner",
@@ -6937,6 +7091,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "saunabywordware": {
+   "name": "Sauna by Wordware",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
+  },
   "savvywealth": {
    "name": "Savvy-Wealth",
    "dates": [
@@ -7103,6 +7264,13 @@
    "company": "Serval",
    "first": "2026-10-05",
    "via": "gmail confirmation (Oct 3-6 scan)"
+  },
+  "serveai": {
+   "name": "Serve AI (YC)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "servicenow": {
    "name": "ServiceNow",
@@ -7410,6 +7578,13 @@
    "name": "Spotify",
    "dates": [
     "2026-10-07"
+   ],
+   "count": 1
+  },
+  "squire": {
+   "name": "SQUIRE",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -7946,6 +8121,13 @@
    "name": "The Search Solutions",
    "dates": [
     "2026-10-09"
+   ],
+   "count": 1
+  },
+  "thevoleongroup": {
+   "name": "The Voleon Group",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -8509,6 +8691,13 @@
    "company": "wd",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "wealthcom": {
+   "name": "Wealth.com",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1
   },
   "webai": {
    "name": "Webai",
