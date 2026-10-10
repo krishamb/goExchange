@@ -2668,6 +2668,13 @@
    ],
    "count": 1
   },
+  "elilillyandcompany": {
+   "name": "Eli Lilly and Company",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "elitetechnology": {
    "name": "Elite Technology",
    "dates": [
@@ -2811,6 +2818,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "eve": {
+   "name": "Eve",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "eveoai": {
    "company": "eveoai",
@@ -4148,6 +4162,13 @@
    "company": "inkah",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "inkind": {
+   "name": "inKind",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "inmobi": {
    "name": "InMobi",
@@ -5488,6 +5509,13 @@
    ],
    "count": 1
   },
+  "ninjatrader": {
+   "name": "NinjaTrader",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "nitorinfotech": {
    "name": "Nitor Infotech",
    "dates": [
@@ -6220,6 +6248,13 @@
    "company": "Press Ganey",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "pressganeyassociatesinc": {
+   "name": "Press Ganey Associates Inc",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "prime": {
    "company": "prime",
