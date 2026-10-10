@@ -320,7 +320,7 @@ def rank(texts, prefs, label, strict=None, exact=False):
         # a positive preference ('Agree', 'Yes') never picks a negated option ('No, I do not agree')
         u = [t if not (t and NEG_OPT.search(t) and not NEG_OPT.search(p)) else "" for t in u0]
         if exact: k = next((i for i, t in enumerate(u) if t and norm(t) == norm(p)), None)
-        elif strict: k = next((i for i, t in enumerate(u) if t and _match(t, p, True)), None)
+        elif strict: k = next((i for i, t in enumerate(u) if t and _match(re.sub(r"^\s*\d+\s*[-.):]\s*", "", t), p, True)), None)   # '6 - Not a Protected Veteran (...)': the numbering never blocks a leading match
         else: k = best_index(u, p)
         if k is not None: return k
     return None
