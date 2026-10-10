@@ -4730,6 +4730,13 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "lively": {
+   "name": "Lively",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "livenation": {
    "name": "Live Nation",
    "dates": [
