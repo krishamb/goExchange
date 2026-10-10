@@ -817,7 +817,7 @@ CHOICE_RULES=[
  (r"(directly |previously |ever )?managed (a |an )?(team|engineers|people|direct reports|software)|people manag|managed (software|ml|ai) engineers|have you (been|served as) (a |an )?(engineering |people )?manager", ["Yes","yes"]),
  (r"(willing|able|open|available)[^.?]*travel|travel (twice|once|up to|\d+ ?%|a quarter|per (month|quarter|year))|travel requirement", ["Yes","yes"]),
  (r"export control|u\.?s\.? person|\bITAR\b|\bEAR\b(?! about)|\(EAR\)", ["U.S. Citizen","US Citizen","U.S. citizen or national","I am a U.S. person","Yes","A"]),   # US citizen: option A on lettered export-control lists
- (r"veteran|military", ["I am not a veteran","Not a Veteran","Not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","I do not wish to self-identify","Prefer not to say"]),
+ (r"veteran|military|armed forces", ["I am not a veteran","Not a Veteran","Not a veteran","I am not a protected veteran","I AM NOT A VETERAN","No military service","I have not served","No","Decline To Self Identify","I don't wish to answer","I do not wish to self-identify","Prefer not to say"]),
  (r"disabilit", ["No, I do not have a disability","No, I don't have a disability","No","I do not have a disability","I don't wish to answer"]),
  (r"18\+|18 (years|or older)|age of 18|over 18|at least 18", ["Yes","yes"]),
  (r"subject to (any )?(employment (agreement|restriction|contract|covenant)|non-?compete|restrictive|post)|post-?employment restriction|restrictive covenant|non-?solicit|bound by (a|any) (non-?compete|agreement)", ["No","no","None"]),
