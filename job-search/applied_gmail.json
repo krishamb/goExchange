@@ -3705,6 +3705,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "hearst": {
+   "name": "Hearst (Zynx Health)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "heartflow": {
    "name": "Heartflow",
    "dates": [
