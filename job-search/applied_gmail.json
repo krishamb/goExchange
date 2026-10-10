@@ -31,6 +31,13 @@
    ],
    "count": 1
   },
+  "4consultingincdice": {
+   "name": "4 Consulting Inc (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "6sense": {
    "company": "6sense",
    "first": "2026-10-06",
@@ -319,6 +326,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "alfvollcdice": {
+   "name": "Alfvo, LLC (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "alkamitechnology": {
    "company": "Alkami Technology",
    "first": "2026-10-07",
@@ -340,6 +354,13 @@
    "name": "Allstate",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "alltechconsultingservicesincdice": {
+   "name": "Alltech Consulting Services, Inc. (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -571,6 +592,13 @@
    ],
    "count": 1
   },
+  "arrowmindsincdice": {
+   "name": "Arrowminds inc (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "artisan": {
    "name": "artisan",
    "dates": [
@@ -696,6 +724,13 @@
    "name": "Attentive",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "augustahitechsoftsolutionsllcdice": {
+   "name": "Augusta Hitech Soft Solutions LLC (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -934,6 +969,13 @@
    "company": "bearfoot",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "benchmarkittechnologytalentdice": {
+   "name": "Benchmark IT- Technology Talent (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "bernard": {
    "name": "Bernard",
@@ -1816,6 +1858,13 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "connecttechtalentdice": {
+   "name": "Connect Tech+Talent (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "consensys": {
    "company": "Consensys",
    "first": "2026-10-06",
@@ -2134,6 +2183,13 @@
    "name": "Dell",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "delphicsoftwaresolutionsincdice": {
+   "name": "Delphic Software Solutions Inc (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -2559,6 +2615,13 @@
    ],
    "count": 1
   },
+  "ekmanassociatesincdice": {
+   "name": "Ekman Associates, Inc. (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "elastic": {
    "name": "Elastic",
    "dates": [
@@ -2588,6 +2651,13 @@
    "name": "eLEND",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "elevatedigitaldice": {
+   "name": "Elevate Digital (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -2924,6 +2994,13 @@
    "name": "Fictiv",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "fiekondice": {
+   "name": "Fiekon (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -4034,6 +4111,13 @@
    ],
    "count": 1
   },
+  "infinitekdice": {
+   "name": "Infini-Tek (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "inflectionai": {
    "name": "Inflection AI",
    "dates": [
@@ -4516,6 +4600,13 @@
    "company": "Lantern",
    "first": "2026-10-03",
    "via": "gmail confirmation (Oct 2-4 scan)"
+  },
+  "laresitsolutionsincdice": {
+   "name": "Lares IT Solutions Inc (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "latchbio": {
    "name": "LatchBio",
@@ -5245,6 +5336,13 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "neerinfosolutionsincdice": {
+   "name": "NeerInfo Solutions Inc. (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "negotiateai": {
    "name": "negotiate-ai",
@@ -6223,6 +6321,13 @@
    ],
    "count": 1
   },
+  "pyramidtechnologysolutionsincdice": {
+   "name": "Pyramid Technology Solutions, Inc. (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "pythagoras": {
    "company": "pythagoras",
    "first": "2026-10-05",
@@ -6324,6 +6429,13 @@
    "company": "radical",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "raksgroupllcdice": {
+   "name": "RAKS Group LLC (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "ramp": {
    "name": "Ramp",
@@ -6612,6 +6724,13 @@
    "name": "Robots & Pencils",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "robustwaredice": {
+   "name": "Robustware (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -7158,6 +7277,13 @@
    ],
    "count": 1
   },
+  "softpathtechnologiesllcdice": {
+   "name": "SoftPath Technologies LLC (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "solace": {
    "name": "Solace",
    "dates": [
@@ -7221,6 +7347,13 @@
    "name": "Spotify",
    "dates": [
     "2026-10-07"
+   ],
+   "count": 1
+  },
+  "srsconsultingincdice": {
+   "name": "SRS Consulting Inc (Dice)",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -7565,6 +7698,13 @@
    ],
    "count": 1
   },
+  "techagisolutionsllcdice": {
+   "name": "TECHAGI SOLUTIONS LLC (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "techneptuneconsultinginc": {
    "name": "TECHNEPTUNE CONSULTING INC",
    "dates": [
@@ -7675,6 +7815,20 @@
    "company": "the",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "theastorgroupdice": {
+   "name": "The Astor Group (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
+  "thecaldwellgroupdice": {
+   "name": "The Caldwell Group (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "thefarmersdog": {
    "name": "The Farmer's Dog",
@@ -8022,6 +8176,13 @@
    "company": "utilyze",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "valuetechnologyincdice": {
+   "name": "Value Technology Inc (Dice)",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "vanta": {
    "name": "Vanta (applied; do-not-reapply)",
