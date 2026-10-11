@@ -1615,6 +1615,13 @@
    ],
    "count": 1
   },
+  "chartahealth": {
+   "name": "Charta Health",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "check": {
    "company": "check",
    "first": "2026-10-05",
@@ -2580,6 +2587,13 @@
    ],
    "count": 1
   },
+  "doppel": {
+   "name": "Doppel",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "dotmatics": {
    "name": "Dotmatics",
    "dates": [
@@ -2826,6 +2840,13 @@
    "name": "Elite Technology",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "ello": {
+   "name": "Ello",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -3237,6 +3258,13 @@
    "name": "Fingerprint",
    "dates": [
     "2026-09-30"
+   ],
+   "count": 1
+  },
+  "firecrawl": {
+   "name": "Firecrawl",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -5414,6 +5442,13 @@
    ],
    "count": 1
   },
+  "mergelabs": {
+   "name": "Merge Labs",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "merlin": {
    "name": "Merlin",
    "dates": [
@@ -6384,6 +6419,13 @@
    "name": "PatientPoint",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "patlytics": {
+   "name": "Patlytics",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -8117,6 +8159,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "superdial": {
+   "name": "SuperDial",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "supermicro": {
    "name": "Supermicro",
    "dates": [
@@ -8893,6 +8942,13 @@
    ],
    "count": 1
   },
+  "velaura": {
+   "name": "Velaura",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "venn": {
    "name": "Venn",
    "dates": [
@@ -9199,9 +9255,10 @@
   "wisprflow": {
    "name": "Wispr Flow",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-11"
    ],
-   "count": 1,
+   "count": 2,
    "note": "prior Ashby queue (applied-before per user)"
   },
   "withclutch": {
@@ -9262,6 +9319,13 @@
    "name": "Workstream",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "wovenbytoyota": {
+   "name": "Woven by Toyota",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
