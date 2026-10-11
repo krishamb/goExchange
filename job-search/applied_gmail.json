@@ -878,6 +878,13 @@
    ],
    "count": 1
   },
+  "backopsai": {
+   "name": "BackOps AI",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "backpack": {
    "company": "backpack",
    "first": "2026-10-05",
@@ -7712,6 +7719,13 @@
    "name": "SKYGEN USA",
    "dates": [
     "2026-10-10"
+   ],
+   "count": 1
+  },
+  "skypilot": {
+   "name": "SkyPilot",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
