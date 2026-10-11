@@ -328,6 +328,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"undergone any prior evaluation|prior evaluation at .{0,60}(test|interview)", ["No","no"]),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", ["Yes","yes"]),   # truthful: the application is submitted by an AI agent on the applicant's behalf
  (r"currently live in one of the following (locations|states).{0,400}\bcalifornia\b", ["Yes","yes"]),
  (r"currently live in one of the following (locations|states)", ["No","no"]),
