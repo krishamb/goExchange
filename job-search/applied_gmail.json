@@ -1012,6 +1012,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "beigene": {
+   "name": "BeiGene",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "benchmarkittechnologytalentdice": {
    "name": "Benchmark IT- Technology Talent (Dice)",
    "dates": [
@@ -3504,6 +3511,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "galaxy": {
+   "name": "Galaxy",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "gallop": {
    "company": "gallop",
    "first": "2026-10-05",
@@ -4284,6 +4298,13 @@
    ],
    "count": 1
   },
+  "illinoistoolworks": {
+   "name": "Illinois Tool Works",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "illumio": {
    "name": "illumio",
    "dates": [
@@ -4786,6 +4807,13 @@
    "first": "2026-10-05",
    "via": "gmail confirmation (Oct 3-6 scan)"
   },
+  "kochindustries": {
+   "name": "Koch Industries",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "komodohealth": {
    "name": "Komodo Health",
    "dates": [
@@ -5173,6 +5201,13 @@
    "count": 1,
    "via": "applicant: remove"
   },
+  "lyft": {
+   "name": "Lyft",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "lyrahealth": {
    "name": "Lyra Health",
    "dates": [
@@ -5391,6 +5426,13 @@
    "company": "MetaMask",
    "first": "2026-10-06",
    "via": "greenhouse-cloud"
+  },
+  "metlife": {
+   "name": "MetLife",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "metriport": {
    "company": "metriport",
@@ -6352,6 +6394,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "paulhastings": {
+   "name": "Paul Hastings",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "pave": {
    "company": "pave",
    "first": "2026-10-05",
@@ -7001,6 +7050,13 @@
    "company": "revecore",
    "first": "2026-10-06",
    "via": "user removed"
+  },
+  "reveleer": {
+   "name": "Reveleer",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "revenuecat": {
    "name": "Revenuecat",
@@ -8649,6 +8705,13 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (ventureloop 40d feed)"
   },
+  "uniphore": {
+   "name": "Uniphore",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
+  },
   "unitedconcordiadental": {
    "company": "United Concordia Dental",
    "first": "2026-10-06",
@@ -8769,6 +8832,13 @@
    "name": "Vantor",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "varsitybrands": {
+   "name": "Varsity Brands",
+   "dates": [
+    "2026-10-10"
    ],
    "count": 1
   },
@@ -9171,6 +9241,13 @@
    "company": "writer",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "wwgrainger": {
+   "name": "W.W. Grainger",
+   "dates": [
+    "2026-10-10"
+   ],
+   "count": 1
   },
   "wyshlist": {
    "company": "wyshlist",
