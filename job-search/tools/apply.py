@@ -63,7 +63,8 @@ first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
  (r"on what date can you start|date available for work|available start date", "10/22/2026"),
- (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, 10/10/2026"),
+ (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
+ (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
  (r"by typing my name below|type your full name to (sign|attest)|typing your name .{0,40}(signature|attest)", "Ambarish Krishnamurthy"),
  (r"desired bonus|bonus/commission", "Open to discussion"),
  (r"18 years of age or older|at least 18 years", "Yes"),
@@ -328,6 +329,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
  (r"undergone any prior evaluation|prior evaluation at .{0,60}(test|interview)", ["No","no"]),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", ["Yes","yes"]),   # truthful: the application is submitted by an AI agent on the applicant's behalf
  (r"currently live in one of the following (locations|states).{0,400}\bcalifornia\b", ["Yes","yes"]),

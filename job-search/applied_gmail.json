@@ -385,6 +385,13 @@
    ],
    "count": 1
   },
+  "alluxio": {
+   "name": "Alluxio",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "alpaca": {
    "name": "Alpaca",
    "dates": [
@@ -655,6 +662,13 @@
    ],
    "count": 2
   },
+  "asapp": {
+   "name": "ASAPP",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "ascension": {
    "name": "Ascension",
    "dates": [
@@ -776,6 +790,13 @@
    ],
    "count": 1
   },
+  "audiohook": {
+   "name": "Audiohook",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "augustahitechsoftsolutionsllcdice": {
    "name": "Augusta Hitech Soft Solutions LLC (Dice)",
    "dates": [
@@ -787,6 +808,13 @@
    "name": "Author Health",
    "dates": [
     "2026-10-09"
+   ],
+   "count": 1
+  },
+  "authzed": {
+   "name": "AuthZed",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -1025,6 +1053,13 @@
    "company": "bearfoot",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "bedrockoceanexploration": {
+   "name": "Bedrock Ocean Exploration",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "beigene": {
    "name": "BeiGene",
@@ -1983,6 +2018,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "confiant": {
+   "name": "Confiant",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "confido": {
    "name": "Confido",
    "dates": [
@@ -2065,6 +2107,13 @@
    "name": "Coupang",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "creatoriq": {
+   "name": "CreatorIQ",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -2281,9 +2330,10 @@
   "ddn": {
    "name": "Ddn",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-11"
    ],
-   "count": 1,
+   "count": 2,
    "note": "prior Ashby queue (applied-before per user)"
   },
   "dealpath": {
@@ -2857,6 +2907,13 @@
    ],
    "count": 1
   },
+  "ellipsishealth": {
+   "name": "Ellipsis Health",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "ello": {
    "name": "Ello",
    "dates": [
@@ -3275,6 +3332,13 @@
    ],
    "count": 1
   },
+  "finra": {
+   "name": "FINRA",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "firecrawl": {
    "name": "Firecrawl",
    "dates": [
@@ -3352,6 +3416,13 @@
    ],
    "count": 1
   },
+  "flashpoint": {
+   "name": "Flashpoint",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "flatironhealth": {
    "name": "Flatiron Health",
    "dates": [
@@ -3382,6 +3453,13 @@
    "company": "flocker",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "flocksafety": {
+   "name": "Flock Safety",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "floqast": {
    "name": "FloQast",
@@ -3441,6 +3519,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "foodsmart": {
+   "name": "Foodsmart",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "footprint": {
    "name": "footprint",
@@ -3836,6 +3921,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "goodieai": {
+   "name": "Goodie AI",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "goodrxinc": {
    "name": "GoodRx, Inc.",
    "dates": [
@@ -3888,6 +3980,13 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-resolved)"
   },
+  "granica": {
+   "name": "Granica",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "grantthornton": {
    "name": "Grant Thornton",
    "dates": [
@@ -3931,6 +4030,13 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "gridware": {
+   "name": "Gridware",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "grindr": {
    "name": "Grindr",
@@ -4046,9 +4152,10 @@
   "haus": {
    "name": "haus",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-11"
    ],
-   "count": 1,
+   "count": 2,
    "via": "ashby browser run (part 1)"
   },
   "hawkline": {
@@ -4667,10 +4774,24 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "jasper": {
+   "name": "Jasper",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "jazzxai": {
    "company": "JazzX AI",
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
+  },
+  "jellyfish": {
+   "name": "Jellyfish",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "jfrog": {
    "company": "jfrog",
@@ -4835,6 +4956,13 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "kininsurance": {
+   "name": "Kin Insurance",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "knit": {
    "company": "Knit",
@@ -5220,6 +5348,13 @@
    ],
    "count": 1
   },
+  "liveramp": {
+   "name": "LiveRamp",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "lockedin": {
    "company": "lockedin",
    "first": "2026-10-05",
@@ -5229,6 +5364,13 @@
    "company": "logicmonitor",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "logrocket": {
+   "name": "LogRocket",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "lseg": {
    "name": "LSEG",
@@ -5423,6 +5565,13 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "medicircle": {
+   "name": "MediCircle",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "medvidi": {
    "company": "medvidi",
    "first": "2026-10-05",
@@ -5572,6 +5721,13 @@
    "company": "mintlify",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "miovision": {
+   "name": "Miovision",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "mirendil": {
    "name": "mirendil",
@@ -5947,6 +6103,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "nexxen": {
+   "name": "Nexxen",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "nice": {
    "name": "NICE",
    "dates": [
@@ -6211,9 +6374,10 @@
   "openloophealth": {
    "name": "OpenLoop Health",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-11"
    ],
-   "count": 1,
+   "count": 2,
    "note": "prior Ashby queue (applied-before per user)"
   },
   "openrelay": {
@@ -6324,6 +6488,13 @@
    "name": "OutSystems, Inc.",
    "dates": [
     "2026-10-10"
+   ],
+   "count": 1
+  },
+  "overclocklabs": {
+   "name": "Overclock Labs",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -6593,10 +6764,24 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "philo": {
+   "name": "Philo",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "phizenix": {
    "name": "Phizenix",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "phoenixecommercetechnologies": {
+   "name": "Phoenix eCommerce Technologies",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -6836,6 +7021,13 @@
    ],
    "count": 1
   },
+  "prophetictechnologies": {
+   "name": "Prophetic Technologies",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "proteus": {
    "company": "proteus",
    "first": "2026-10-05",
@@ -6939,6 +7131,13 @@
    ],
    "count": 1
   },
+  "quicknode": {
+   "name": "Quicknode",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "quince": {
    "name": "Quince",
    "dates": [
@@ -7030,6 +7229,13 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "redpandadata": {
+   "name": "Redpanda Data",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "reducto": {
    "name": "Reducto",
    "dates": [
@@ -7056,6 +7262,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "regal": {
+   "name": "Regal",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "relativity": {
    "company": "Relativity",
@@ -7393,6 +7606,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "sageailabs": {
+   "name": "Sage AI Labs",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "sahisofttech": {
    "name": "Sahi Softtech",
    "dates": [
@@ -7705,6 +7925,13 @@
    "company": "signifyd95",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "simberobotics": {
+   "name": "Simbe Robotics",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "simplesense": {
    "name": "Simplesense",
@@ -8370,6 +8597,13 @@
    ],
    "count": 1
   },
+  "teamworks": {
+   "name": "Teamworks",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "techagisolutionsllcdice": {
    "name": "TECHAGI SOLUTIONS LLC (Dice)",
    "dates": [
@@ -8565,6 +8799,13 @@
    ],
    "count": 1
   },
+  "thepublicinterestcompany": {
+   "name": "The Public Interest Company",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "thermofisher": {
    "name": "Thermo Fisher Scientific",
    "dates": [
@@ -8637,6 +8878,13 @@
    "company": "tines",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "tldr": {
+   "name": "TLDR",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
   },
   "toast": {
    "name": "Toast",
@@ -8905,6 +9153,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "valeriehealth": {
+   "name": "Valerie Health",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "valuetechnologyincdice": {
    "name": "Value Technology Inc (Dice)",
    "dates": [
@@ -8970,6 +9225,13 @@
    ],
    "count": 1
   },
+  "veniceai": {
+   "name": "Venice.ai",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "venn": {
    "name": "Venn",
    "dates": [
@@ -9022,6 +9284,13 @@
    "name": "Verkada",
    "dates": [
     "2026-10-01"
+   ],
+   "count": 1
+  },
+  "versana": {
+   "name": "Versana",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -9143,6 +9412,13 @@
    "name": "VTS",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "vynca": {
+   "name": "Vynca",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },

@@ -38,8 +38,16 @@ rows = []
 _key = (lambda x: -(x.get("posted_ts") or 0)) if os.environ.get("ASHBY_SORT") == "recency" else (lambda x: (-(x.get("priority") or 0), -(x.get("posted_ts") or 0)))
 _ordered = queue if os.environ.get("ASHBY_SORT") == "none" else sorted(queue, key=_key)   # none: the queue file's own order (groups)
 PACE = [int(x) for x in os.environ.get("AKF_PACE", "2000,45000").split(",")]
+_seen = done_cos | ledger
+def _known(c):   # prefix match too: "OpenLoop" vs "openloophealth", "Haus.io" vs "haus", "DDN Storage" vs "ddn"
+    k = norm(c)
+    if not k: return False
+    if k in _seen: return True
+    # ...but only when the extra part is a corporate suffix ("black" must not match Black Forest Labs, "luma" not Lumafield)
+    sfx = re.compile(r"(inc|llc|ltd|corp|co|io|ai|hq|app|labs?|health|healthcare|storage|safety|technologies|technology|tech|systems|data|software|group|global|usa|us|security|robotics|finance|financial|bio|therapeutics|network|networks|platform|platforms|solutions|studio|studios|games)+")
+    return any(len(x) >= 3 and len(k) >= 3 and ((k.startswith(x) and sfx.fullmatch(k[len(x):])) or (x.startswith(k) and sfx.fullmatch(x[len(k):]))) for x in _seen)
 for j in _ordered:
-    if j.get("tag") in done_tags or norm(j.get("company")) in done_cos | ledger: continue
+    if j.get("tag") in done_tags or _known(j.get("company")): continue
     rows.append(j)
 
 def appurl(u):
