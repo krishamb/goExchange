@@ -662,6 +662,13 @@
    ],
    "count": 1
   },
+  "assemblyai": {
+   "name": "AssemblyAI",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "assorthealth": {
    "name": "assorthealth",
    "dates": [
@@ -2070,6 +2077,13 @@
    "name": "Credit Acceptance",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "cresta": {
+   "name": "Cresta",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
@@ -6405,6 +6419,13 @@
    "name": "Pariveda (applied; do-not-reapply)",
    "dates": [
     "2026-10-05"
+   ],
+   "count": 1
+  },
+  "parloa": {
+   "name": "Parloa",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
