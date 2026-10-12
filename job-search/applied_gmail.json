@@ -835,6 +835,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "autostore": {
+   "name": "AutoStore",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "avathon": {
    "name": "Avathon",
    "dates": [
