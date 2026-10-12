@@ -497,6 +497,13 @@
    "count": 1,
    "note": "cloud-applied today"
   },
+  "amtexenterprisesdice": {
+   "name": "Amtex Enterprises (Dice)",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "anaplan": {
    "name": "Anaplan",
    "dates": [
@@ -1279,6 +1286,13 @@
    "company": "boockar",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "bostondataprollcdice": {
+   "name": "Boston Data Pro, LLC (Dice)",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "box": {
    "company": "Box",
@@ -6389,6 +6403,13 @@
    ],
    "count": 1,
    "note": "cloud-applied today"
+  },
+  "onboard": {
+   "name": "OnBoard",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "onechronos": {
    "name": "OneChronos",
