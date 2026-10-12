@@ -1211,6 +1211,14 @@
    ],
    "count": 1
   },
+  "bluecrossblueshieldoftennessee": {
+   "name": "BlueCross BlueShield of Tennessee",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+  },
   "blueprinttechnologies": {
    "name": "Blueprint Technologies",
    "dates": [
@@ -3346,6 +3354,14 @@
    ],
    "count": 1
   },
+  "firework": {
+   "name": "Firework",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+  },
   "firstam": {
    "name": "First American (firstam Workday)",
    "dates": [
@@ -5479,9 +5495,11 @@
   "matchgroup": {
    "name": "Match Group",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-11"
    ],
-   "count": 1
+   "count": 2,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
   "material": {
    "name": "Material",
@@ -5669,6 +5687,14 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "microsoft": {
+   "name": "Microsoft",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
   "midihealth": {
    "name": "Midi Health",
@@ -5888,6 +5914,14 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "mutualofomaha": {
+   "name": "Mutual of Omaha",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
   "myfitnesspal": {
    "name": "MyFitnessPal",
@@ -6755,6 +6789,14 @@
    "first": "2026-10-07",
    "via": "workday-cloud"
   },
+  "pge": {
+   "name": "PG&E",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+  },
   "phdata": {
    "name": "phData",
    "dates": [
@@ -7202,6 +7244,14 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "rbglobal": {
+   "name": "RB Global",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
   "reach": {
    "company": "reach",
@@ -8936,6 +8986,14 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "trueaccord": {
+   "name": "TrueAccord",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
   "truefoundry": {
    "company": "truefoundry",
