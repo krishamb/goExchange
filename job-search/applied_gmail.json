@@ -1803,6 +1803,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "clio": {
+   "name": "Clio",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "cloaked": {
    "name": "cloaked",
    "dates": [
@@ -3073,6 +3080,13 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "eudia": {
+   "name": "Eudia",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "eve": {
    "name": "Eve",
    "dates": [
@@ -3084,6 +3098,13 @@
    "company": "eveoai",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "everlaw": {
+   "name": "Everlaw",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "everpure": {
    "name": "Everpure",
@@ -8766,6 +8787,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "thatch": {
+   "name": "Thatch",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "thatgamecompany": {
    "name": "Thatgamecompany",
    "dates": [
@@ -9243,6 +9271,13 @@
    "name": "Vantor",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "vantora": {
+   "name": "Vantora",
+   "dates": [
+    "2026-10-11"
    ],
    "count": 1
   },
