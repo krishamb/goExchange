@@ -62,6 +62,9 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"years of (hands-on )?(experience )?(with )?(databricks|apache spark|spark)", "10"),   # applicant 2026-10-12
+ (r"percentage of back ?-?end|back ?-?end .{0,20}vs\.? .{0,10}front ?-?end", "About 65% back-end, 35% front-end"),   # applicant 2026-10-12
+ (r"(work|working) .{0,30}(us )?eastern time( zone)? hours|eastern time zone hours", "Yes. I am based in Pacific time (Santa Clara, CA) and can work full-time US Eastern hours."),   # applicant 2026-10-12
  (r"on what date can you start|date available for work|available start date", "10/22/2026"),
  (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
@@ -329,6 +332,9 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
+ (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
+ (r"(able|willing) to work .{0,30}eastern time|eastern time zone hours", ["Yes","yes"]),   # applicant 2026-10-12
  (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
  (r"undergone any prior evaluation|prior evaluation at .{0,60}(test|interview)", ["No","no"]),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", ["Yes","yes"]),   # truthful: the application is submitted by an AI agent on the applicant's behalf
