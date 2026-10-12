@@ -679,9 +679,10 @@
   "assemblyai": {
    "name": "AssemblyAI",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "assorthealth": {
    "name": "assorthealth",
@@ -2132,9 +2133,10 @@
   "cresta": {
    "name": "Cresta",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "cribl": {
    "company": "Cribl",
@@ -3335,9 +3337,10 @@
   "finra": {
    "name": "FINRA",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "firecrawl": {
    "name": "Firecrawl",
@@ -3593,9 +3596,10 @@
   "fractal": {
    "name": "Fractal",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "franklintempleton": {
    "name": "Franklin Templeton",
@@ -6596,9 +6600,10 @@
   "parloa": {
    "name": "Parloa",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "pathward": {
    "name": "Pathward",
@@ -8441,9 +8446,10 @@
   "superserve": {
    "name": "Superserve",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "swiftsolar": {
    "name": "Swift Solar",
@@ -9228,9 +9234,10 @@
   "veniceai": {
    "name": "Venice.ai",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-12"
    ],
-   "count": 1
+   "count": 2
   },
   "venn": {
    "name": "Venn",
