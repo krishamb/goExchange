@@ -332,6 +332,7 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"salary range you.?re targeting|targeting for your next opportunity|salary range (are you|you are) targeting", ["$300,001","$250,001 - $300,000","$240,001 - $260,000","$240,001","$220,001 - $240,000","$220,001","$200,001 - $220,000"]),   # highest band inside his $220K-$350K range (OnBoard tops out at $220,001-$240,000)
  (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
  (r"(able|willing) to work .{0,30}eastern time|eastern time zone hours", ["Yes","yes"]),   # applicant 2026-10-12
