@@ -6261,6 +6261,13 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "nutanix": {
+   "name": "Nutanix",
+   "dates": [
+    "2026-10-11"
+   ],
+   "count": 1
+  },
   "nvidia": {
    "name": "NVIDIA",
    "dates": [
@@ -6425,6 +6432,13 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "openlane": {
+   "name": "OPENLANE",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "openloophealth": {
    "name": "OpenLoop Health",
