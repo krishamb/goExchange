@@ -1294,6 +1294,13 @@
    ],
    "count": 1
   },
+  "boulevard": {
+   "name": "Boulevard",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "box": {
    "company": "Box",
    "first": "2026-10-07",
@@ -2452,6 +2459,13 @@
    "name": "DEPT®",
    "dates": [
     "2026-10-03"
+   ],
+   "count": 1
+  },
+  "descript": {
+   "name": "Descript",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -3692,6 +3706,13 @@
    "name": "FuriosaAI",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "future": {
+   "name": "Future",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
