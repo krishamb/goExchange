@@ -1847,10 +1847,24 @@
    ],
    "count": 1
   },
+  "cleartelligence": {
+   "name": "Cleartelligence",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "cleerly": {
    "name": "Cleerly",
    "dates": [
     "2026-09-29"
+   ],
+   "count": 1
+  },
+  "clevelandclinic": {
+   "name": "Cleveland Clinic",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -3671,6 +3685,13 @@
    ],
    "count": 1
   },
+  "fortitudere": {
+   "name": "Fortitude Re",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "fortive": {
    "name": "Fortive",
    "dates": [
@@ -4478,6 +4499,13 @@
    "name": "HR Pundits",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "hsogroupbv": {
+   "name": "HSO Group B.V.",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
