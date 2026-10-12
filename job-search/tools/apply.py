@@ -62,6 +62,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^please list your state\.?$|^what state do you (currently )?(live|reside) in", "California"),
  (r"years of (hands-on )?(experience )?(with )?(databricks|apache spark|spark)", "10"),   # applicant 2026-10-12
  (r"percentage of back ?-?end|back ?-?end .{0,20}vs\.? .{0,10}front ?-?end", "About 65% back-end, 35% front-end"),   # applicant 2026-10-12
  (r"(work|working) .{0,30}(us )?eastern time( zone)? hours|eastern time zone hours", "Yes. I am based in Pacific time (Santa Clara, CA) and can work full-time US Eastern hours."),   # applicant 2026-10-12
@@ -332,6 +333,14 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"(ever been )?(disqualified|excluded|debarred) from or denied participation in any federal or state health ?care program|excluded from (participation in )?(any )?federal (or state )?health ?care program", ["No","no"]),
+ (r"(do you have|hold) any professional licenses? or certifications? that (pertain|relate|apply) to", ["No","no"]),   # he holds none
+ (r"(are you|were you) (currently )?(or were you previously )?(currently )?an? .{0,40}employee\b|currently or (were you )?previously .{0,40}employee", ["No","no"]),
+ (r"which type do you need for work authorization|visa sponsorship, which type|type of (visa )?sponsorship (do )?you (need|require)", ["Not Required","Not required","None","N/A"]),
+ (r"what is your experience with (snowflake|sigma|databricks|dbt|airflow|kafka|spark|aws|gcp|azure|kubernetes|python|java|go|rust|c\+\+)", ["advanced","Advanced","Expert","expert"]),   # applicant 10-08: most experienced option, but never a certification claim
+ (r"personally supported or contributed to taking .{0,40}(solution|product)|provided architectural leadership and technical oversight", ["Yes","yes"]),
+ (r"\bOMOP\b", ["Yes","yes"]),
+ (r"may we contact you about future opportunities|contact you about (other|future) (roles|opportunities)", ["Yes","yes"]),
  (r"salary range you.?re targeting|targeting for your next opportunity|salary range (are you|you are) targeting", ["$300,001","$250,001 - $300,000","$240,001 - $260,000","$240,001","$220,001 - $240,000","$220,001","$200,001 - $220,000"]),   # highest band inside his $220K-$350K range (OnBoard tops out at $220,001-$240,000)
  (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
