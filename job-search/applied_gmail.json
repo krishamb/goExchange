@@ -38,6 +38,13 @@
    ],
    "count": 1
   },
+  "4mp": {
+   "name": "4MP",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "6sense": {
    "company": "6sense",
    "first": "2026-10-06",
@@ -231,6 +238,13 @@
    "name": "Aera Technology",
    "dates": [
     "2026-10-07"
+   ],
+   "count": 1
+  },
+  "aerospike": {
+   "name": "Aerospike",
+   "dates": [
+    "2026-10-13"
    ],
    "count": 1
   },
@@ -3267,6 +3281,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "everfi": {
+   "name": "EVERFI",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "everlaw": {
    "name": "Everlaw",
    "dates": [
@@ -5474,6 +5495,13 @@
    ],
    "count": 1
   },
+  "ledgebrook": {
+   "name": "Ledgebrook",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "legion": {
    "name": "Legion",
    "dates": [
@@ -5600,6 +5628,13 @@
    ],
    "count": 1
   },
+  "linktree": {
+   "name": "Linktree",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "linqglobalgroup": {
    "name": "LinQ Global Group.",
    "dates": [
@@ -5714,6 +5749,13 @@
    "name": "M2S Tech Solutions",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "m3usa": {
+   "name": "M3USA",
+   "dates": [
+    "2026-10-13"
    ],
    "count": 1
   },
@@ -5975,6 +6017,13 @@
    "company": "metropolistechnologies",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "mhc": {
+   "name": "MHC",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "micro1": {
    "name": "micro1",
@@ -7956,6 +8005,13 @@
    "count": 1,
    "note": "cloud-applied today"
   },
+  "rootinsurance": {
+   "name": "Root Insurance",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "roseinternational": {
    "name": "Rose International",
    "dates": [
@@ -8752,6 +8808,13 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "steno": {
+   "name": "Steno",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "step": {
    "name": "Step",
    "dates": [
@@ -9032,6 +9095,13 @@
    "company": "TD Bank",
    "first": "2026-10-02",
    "via": "workday-cloud"
+  },
+  "tds": {
+   "name": "TDS",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "tealiuminc": {
    "name": "Tealium Inc.",
@@ -10171,6 +10241,13 @@
    ],
    "count": 1
   },
+  "xorainnovation": {
+   "name": "Xora Innovation (4MP)",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "xpeng": {
    "name": "XPENG",
    "dates": [
@@ -10381,78 +10458,8 @@
    ],
    "count": 1
   },
-  "steno": {
-   "name": "Steno",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "ledgebrook": {
-   "name": "Ledgebrook",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "linktree": {
-   "name": "Linktree",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "xorainnovation": {
-   "name": "Xora Innovation (4MP)",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "4mp": {
-   "name": "4MP",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "m3usa": {
-   "name": "M3USA",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "mhc": {
-   "name": "MHC",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "everfi": {
-   "name": "EVERFI",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "rootinsurance": {
-   "name": "Root Insurance",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "tds": {
-   "name": "TDS",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "aerospike": {
-   "name": "Aerospike",
+  "mergenitllc": {
+   "name": "Mergen IT LLC",
    "dates": [
     "2026-10-13"
    ],
