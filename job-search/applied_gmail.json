@@ -1432,6 +1432,13 @@
    ],
    "count": 1
   },
+  "brookhavennationallaboratory": {
+   "name": "Brookhaven National Laboratory",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "bubble": {
    "company": "bubble",
    "first": "2026-10-05",
@@ -2258,6 +2265,13 @@
    ],
    "count": 1
   },
+  "coverahealth": {
+   "name": "Covera Health",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "creatoriq": {
    "name": "CreatorIQ",
    "dates": [
@@ -2561,7 +2575,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT\u00ae",
+   "name": "DEPT®",
    "dates": [
     "2026-10-03"
    ],
@@ -4266,7 +4280,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Gr\u00fcns",
+   "name": "Grüns",
    "dates": [
     "2026-10-03"
    ],
@@ -5218,6 +5232,13 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "king": {
+   "name": "King (Activision Blizzard)",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "kininsurance": {
    "name": "Kin Insurance",
@@ -8122,7 +8143,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schr\u00f6dinger",
+   "name": "Schrödinger",
    "dates": [
     "2026-10-01"
    ],
@@ -10350,13 +10371,6 @@
    "name": "Zyxware Technologies",
    "dates": [
     "2026-10-08"
-   ],
-   "count": 1
-  },
-  "king": {
-   "name": "King (Activision Blizzard)",
-   "dates": [
-    "2026-10-12"
    ],
    "count": 1
   }
