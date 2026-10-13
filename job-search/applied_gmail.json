@@ -4624,6 +4624,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "honeycombio": {
+   "name": "Honeycomb.io",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "honor": {
    "name": "Honor",
    "dates": [
@@ -5171,6 +5178,13 @@
    "company": "just",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "kairospower": {
+   "name": "Kairos Power",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "kalepa": {
    "name": "Kalepa",
@@ -7669,6 +7683,13 @@
    ],
    "count": 1
   },
+  "rackspacetechnology": {
+   "name": "Rackspace Technology",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "radai": {
    "name": "Radai",
    "dates": [
@@ -9476,6 +9497,13 @@
    "company": "tradeify",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "transactionnetworkservices": {
+   "name": "Transaction Network Services",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "tranzealinc": {
    "name": "Tranzeal, Inc.",
