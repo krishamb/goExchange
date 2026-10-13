@@ -2582,7 +2582,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT®",
+   "name": "DEPT\u00ae",
    "dates": [
     "2026-10-03"
    ],
@@ -4287,7 +4287,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Grüns",
+   "name": "Gr\u00fcns",
    "dates": [
     "2026-10-03"
    ],
@@ -8150,7 +8150,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schrödinger",
+   "name": "Schr\u00f6dinger",
    "dates": [
     "2026-10-01"
    ],
@@ -10378,6 +10378,83 @@
    "name": "Zyxware Technologies",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "steno": {
+   "name": "Steno",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "ledgebrook": {
+   "name": "Ledgebrook",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "linktree": {
+   "name": "Linktree",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "xorainnovation": {
+   "name": "Xora Innovation (4MP)",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "4mp": {
+   "name": "4MP",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "m3usa": {
+   "name": "M3USA",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "mhc": {
+   "name": "MHC",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "everfi": {
+   "name": "EVERFI",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "rootinsurance": {
+   "name": "Root Insurance",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "tds": {
+   "name": "TDS",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
+  "aerospike": {
+   "name": "Aerospike",
+   "dates": [
+    "2026-10-13"
    ],
    "count": 1
   }
