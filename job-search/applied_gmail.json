@@ -2498,7 +2498,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT®",
+   "name": "DEPT\u00ae",
    "dates": [
     "2026-10-03"
    ],
@@ -4188,7 +4188,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Grüns",
+   "name": "Gr\u00fcns",
    "dates": [
     "2026-10-03"
    ],
@@ -7953,7 +7953,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schrödinger",
+   "name": "Schr\u00f6dinger",
    "dates": [
     "2026-10-01"
    ],
@@ -10139,6 +10139,69 @@
    "name": "Zyxware Technologies",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "auctiontechnologygroup": {
+   "name": "Auction Technology Group",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "millimanintelliscript": {
+   "name": "Milliman IntelliScript",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "kharon": {
+   "name": "Kharon",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "safelyyou": {
+   "name": "SafelyYou",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "quorumsoftware": {
+   "name": "Quorum Software",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "furl": {
+   "name": "Furl",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "spectrocloud": {
+   "name": "Spectro Cloud",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "clipster": {
+   "name": "Clipster",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "avilait": {
+   "name": "Avila IT",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   }
