@@ -5692,6 +5692,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "logicgate": {
+   "name": "LogicGate",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "logicmonitor": {
    "company": "logicmonitor",
    "first": "2026-10-05",
@@ -5964,6 +5971,13 @@
    "name": "Merge Labs",
    "dates": [
     "2026-10-11"
+   ],
+   "count": 1
+  },
+  "mergenitllc": {
+   "name": "Mergen IT LLC",
+   "dates": [
+    "2026-10-13"
    ],
    "count": 1
   },
@@ -9964,6 +9978,13 @@
    ],
    "count": 1
   },
+  "vumedi": {
+   "name": "Vumedi",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "vynca": {
    "name": "Vynca",
    "dates": [
@@ -10458,12 +10479,14 @@
    ],
    "count": 1
   },
-  "mergenitllc": {
-   "name": "Mergen IT LLC",
+  "curanahealth": {
+   "name": "Curana Health",
    "dates": [
     "2026-10-13"
    ],
-   "count": 1
+   "count": 1,
+   "via": "user_filler_icims",
+   "role": "Director, Data Engineering"
   }
  }
 }
