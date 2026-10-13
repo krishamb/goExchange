@@ -2540,7 +2540,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT®",
+   "name": "DEPT\u00ae",
    "dates": [
     "2026-10-03"
    ],
@@ -4237,7 +4237,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Grüns",
+   "name": "Gr\u00fcns",
    "dates": [
     "2026-10-03"
    ],
@@ -8065,7 +8065,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schrödinger",
+   "name": "Schr\u00f6dinger",
    "dates": [
     "2026-10-01"
    ],
@@ -8197,6 +8197,13 @@
    "name": "ServiceNow",
    "dates": [
     "2026-09-09"
+   ],
+   "count": 1
+  },
+  "servicetrade": {
+   "name": "ServiceTrade",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -10272,6 +10279,48 @@
    "name": "Zyxware Technologies",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "keepcompany": {
+   "name": "Keep Company",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "exacare": {
+   "name": "ExaCare",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "johndeere": {
+   "name": "John Deere",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "deepscribe": {
+   "name": "DeepScribe",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "swishanalytics": {
+   "name": "Swish Analytics",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "isolved": {
+   "name": "isolved",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   }
