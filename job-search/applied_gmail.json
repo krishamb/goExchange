@@ -804,6 +804,13 @@
    ],
    "count": 1
   },
+  "auctiontechnologygroup": {
+   "name": "Auction Technology Group",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "audiohook": {
    "name": "Audiohook",
    "dates": [
@@ -867,6 +874,13 @@
    "company": "aviatrix",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "avilait": {
+   "name": "Avila IT",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "avilaitdice": {
    "name": "Avila IT (Dice)",
@@ -1253,6 +1267,13 @@
    ],
    "count": 1,
    "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+  },
+  "blueorigin": {
+   "name": "Blue Origin",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "blueprinttechnologies": {
    "name": "Blueprint Technologies",
@@ -1882,6 +1903,13 @@
   },
   "clio": {
    "name": "Clio",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
+  "clipster": {
+   "name": "Clipster",
    "dates": [
     "2026-10-12"
    ],
@@ -3758,6 +3786,13 @@
    ],
    "count": 1
   },
+  "furl": {
+   "name": "Furl",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "future": {
    "name": "Future",
    "dates": [
@@ -5097,6 +5132,13 @@
    ],
    "count": 1
   },
+  "kharon": {
+   "name": "Kharon",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "kikoff": {
    "name": "Kikoff",
    "dates": [
@@ -5855,6 +5897,13 @@
    "company": "Mill",
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-resolved)"
+  },
+  "millimanintelliscript": {
+   "name": "Milliman IntelliScript",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "mindbody": {
    "name": "Mindbody",
@@ -7386,6 +7435,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "quorumsoftware": {
+   "name": "Quorum Software",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "qventus": {
    "name": "Qventus",
    "dates": [
@@ -7825,6 +7881,13 @@
    "company": "saela",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "safelyyou": {
+   "name": "SafelyYou",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "safetykit": {
    "company": "safetykit",
@@ -8410,6 +8473,13 @@
    "company": "speak",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "spectrocloud": {
+   "name": "Spectro Cloud",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "spglobal": {
    "name": "S&P Global",
@@ -10142,64 +10212,15 @@
    ],
    "count": 1
   },
-  "auctiontechnologygroup": {
-   "name": "Auction Technology Group",
+  "netris": {
+   "name": "Netris",
    "dates": [
     "2026-10-12"
    ],
    "count": 1
   },
-  "millimanintelliscript": {
-   "name": "Milliman IntelliScript",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "kharon": {
-   "name": "Kharon",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "safelyyou": {
-   "name": "SafelyYou",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "quorumsoftware": {
-   "name": "Quorum Software",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "furl": {
-   "name": "Furl",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "spectrocloud": {
-   "name": "Spectro Cloud",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "clipster": {
-   "name": "Clipster",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "avilait": {
-   "name": "Avila IT",
+  "pally": {
+   "name": "Pally",
    "dates": [
     "2026-10-12"
    ],
