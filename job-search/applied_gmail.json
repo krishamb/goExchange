@@ -140,6 +140,13 @@
    ],
    "count": 1
   },
+  "accoengineeredsystems": {
+   "name": "ACCO Engineered Systems",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "accordion": {
    "name": "Accordion",
    "dates": [
@@ -1170,6 +1177,13 @@
    "company": "BeyondTrust",
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-resolved)"
+  },
+  "bikky": {
+   "name": "Bikky",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
   },
   "bill": {
    "name": "BILL",
@@ -2505,6 +2519,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "deepscribe": {
+   "name": "DeepScribe",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "deffai": {
    "company": "deffai",
    "first": "2026-10-05",
@@ -2540,7 +2561,7 @@
    "count": 1
   },
   "dept": {
-   "name": "DEPT\u00ae",
+   "name": "DEPT®",
    "dates": [
     "2026-10-03"
    ],
@@ -3245,6 +3266,13 @@
    "company": "evolutioniq",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "exacare": {
+   "name": "ExaCare",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
   },
   "exactcare": {
    "name": "ExactCare Pharmacy (AnewHealth)",
@@ -4238,7 +4266,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Gr\u00fcns",
+   "name": "Grüns",
    "dates": [
     "2026-10-03"
    ],
@@ -4956,6 +4984,13 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "isolved": {
+   "name": "isolved",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "itradenetwork": {
    "name": "iTradeNetwork",
    "dates": [
@@ -5022,6 +5057,13 @@
    "name": "Jobber",
    "dates": [
     "2026-10-08"
+   ],
+   "count": 1
+  },
+  "johndeere": {
+   "name": "John Deere",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -5127,6 +5169,13 @@
    "name": "KBRA",
    "dates": [
     "2026-09-30"
+   ],
+   "count": 1
+  },
+  "keepcompany": {
+   "name": "Keep Company",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -7130,6 +7179,13 @@
    ],
    "count": 1
   },
+  "pipe": {
+   "name": "Pipe",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "place": {
    "name": "PLACE",
    "dates": [
@@ -8066,7 +8122,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schr\u00f6dinger",
+   "name": "Schrödinger",
    "dates": [
     "2026-10-01"
    ],
@@ -8490,6 +8546,13 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-24h resolved)"
   },
+  "sonos": {
+   "name": "Sonos",
+   "dates": [
+    "2026-10-12"
+   ],
+   "count": 1
+  },
   "sorosfundmanagement": {
    "name": "Soros Fund Management",
    "dates": [
@@ -8801,6 +8864,13 @@
    "name": "Swift Solar",
    "dates": [
     "2026-10-10"
+   ],
+   "count": 1
+  },
+  "swishanalytics": {
+   "name": "Swish Analytics",
+   "dates": [
+    "2026-10-12"
    ],
    "count": 1
   },
@@ -10280,69 +10350,6 @@
    "name": "Zyxware Technologies",
    "dates": [
     "2026-10-08"
-   ],
-   "count": 1
-  },
-  "keepcompany": {
-   "name": "Keep Company",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "exacare": {
-   "name": "ExaCare",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "johndeere": {
-   "name": "John Deere",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "deepscribe": {
-   "name": "DeepScribe",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "swishanalytics": {
-   "name": "Swish Analytics",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "isolved": {
-   "name": "isolved",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "bikky": {
-   "name": "Bikky",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1
-  },
-  "sonos": {
-   "name": "Sonos",
-   "dates": [
-    "2026-10-12"
-   ],
-   "count": 1
-  },
-  "accoengineeredsystems": {
-   "name": "ACCO Engineered Systems",
-   "dates": [
-    "2026-10-12"
    ],
    "count": 1
   }
