@@ -1030,6 +1030,13 @@
    ],
    "count": 1
   },
+  "balsambrands": {
+   "name": "Balsam Brands",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1
+  },
   "bamboohr": {
    "name": "BambooHR",
    "dates": [
@@ -2357,6 +2364,15 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "curanahealth": {
+   "name": "Curana Health",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "via": "user_filler_icims",
+   "role": "Director, Data Engineering"
   },
   "current": {
    "name": "Current",
@@ -3853,6 +3869,13 @@
    "name": "Freshfields",
    "dates": [
     "2026-10-10"
+   ],
+   "count": 1
+  },
+  "fubo": {
+   "name": "Fubo",
+   "dates": [
+    "2026-10-13"
    ],
    "count": 1
   },
@@ -10478,15 +10501,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "curanahealth": {
-   "name": "Curana Health",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1,
-   "via": "user_filler_icims",
-   "role": "Director, Data Engineering"
   }
  }
 }
