@@ -346,6 +346,8 @@ CHOICE_RULES=[
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
  (r"(able|willing) to work .{0,30}eastern time|eastern time zone hours", ["Yes","yes"]),   # applicant 2026-10-12
  (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
+ (r"which best describes the majority of your career", ["A mix of hands-on work and technical leadership or architecture","A mix of hands-on"]),   # hands-on architect + CTO
+ (r"which are you more excited to spend most of your time on", ["Building and owning infrastructure/pipelines","A mix of both"]),
  (r"undergone any prior evaluation|prior evaluation at .{0,60}(test|interview)", ["No","no"]),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", ["Yes","yes"]),   # truthful: the application is submitted by an AI agent on the applicant's behalf
  (r"currently live in one of the following (locations|states).{0,400}\bcalifornia\b", ["Yes","yes"]),
