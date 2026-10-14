@@ -46,8 +46,11 @@ def _known(c):   # prefix match too: "OpenLoop" vs "openloophealth", "Haus.io" v
     # ...but only when the extra part is a corporate suffix ("black" must not match Black Forest Labs, "luma" not Lumafield)
     sfx = re.compile(r"(inc|llc|ltd|corp|co|io|ai|hq|app|labs?|health|healthcare|storage|safety|technologies|technology|tech|systems|data|software|group|global|usa|us|security|robotics|finance|financial|bio|therapeutics|network|networks|platform|platforms|solutions|studio|studios|games)+")
     return any(len(x) >= 3 and len(k) >= 3 and ((k.startswith(x) and sfx.fullmatch(k[len(x):])) or (x.startswith(k) and sfx.fullmatch(x[len(k):]))) for x in _seen)
+# applicant 2026-10-14: up to 3 roles per company when the roles differ; queues built under that rule (scratchpad
+# multirole.py) set MULTIROLE=1 so only the same posting (tag) is skipped, not every company already in the ledger
+_MULTI = os.environ.get("MULTIROLE") == "1"
 for j in _ordered:
-    if j.get("tag") in done_tags or _known(j.get("company")): continue
+    if j.get("tag") in done_tags or (not _MULTI and _known(j.get("company"))): continue
     rows.append(j)
 
 def appurl(u):
