@@ -669,6 +669,16 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "armanino": {
+   "name": "Armanino",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data & AI Platform Engineer"
+   ]
+  },
   "arohakinc": {
    "name": "Arohak Inc",
    "dates": [
@@ -4090,6 +4100,16 @@
    ],
    "count": 1
   },
+  "gileadsciences": {
+   "name": "Gilead Sciences",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Enterprise Architecture - Research and Development"
+   ]
+  },
   "gilgamesh": {
    "company": "gilgamesh",
    "first": "2026-10-05",
@@ -4137,9 +4157,13 @@
   "glean": {
    "name": "Glean",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-13"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Tech Lead Manager, AI Evaluations"
+   ]
   },
   "glimpse": {
    "name": "Glimpse",
@@ -4155,6 +4179,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "globalfoundries": {
+   "name": "GlobalFoundries",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Development Leader"
+   ]
   },
   "globality": {
    "name": "Globality",
@@ -4407,6 +4441,17 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "happybank": {
+   "name": "Happy Bank",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Architect"
+   ],
+   "via": "user (own application, reported in chat)"
   },
   "hark": {
    "name": "Hark",
@@ -5106,6 +5151,16 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
   },
+  "jdpower": {
+   "name": "J.D. Power",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Platform Engineer, Snowflake"
+   ]
+  },
   "jellyfish": {
    "name": "Jellyfish",
    "dates": [
@@ -5685,6 +5740,17 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "lithiamotors": {
+   "name": "Lithia Motors",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect"
+   ],
+   "via": "user (own application, Workday confirmation email)"
   },
   "lithic": {
    "name": "Lithic",
@@ -6571,6 +6637,16 @@
    "company": "nimble",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "nimblegravity": {
+   "name": "Nimble Gravity",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "nimblerobotics": {
    "company": "Nimble Robotics",
@@ -8117,6 +8193,16 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "rzero": {
+   "name": "R-Zero",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Analytics Engineer - Energy & Building Systems"
+   ]
   },
   "s3staffingusa": {
    "name": "S3 Staffing USA",
@@ -9707,9 +9793,13 @@
   "unity": {
    "name": "Unity",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-13"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Machine Learning Engineer"
+   ]
   },
   "unize": {
    "company": "unize",
@@ -10536,28 +10626,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "happybank": {
-   "name": "Happy Bank",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1,
-   "roles": [
-    "Chief Architect"
-   ],
-   "via": "user (own application, reported in chat)"
-  },
-  "lithiamotors": {
-   "name": "Lithia Motors",
-   "dates": [
-    "2026-10-13"
-   ],
-   "count": 1,
-   "roles": [
-    "Solutions Architect"
-   ],
-   "via": "user (own application, Workday confirmation email)"
   }
  }
 }

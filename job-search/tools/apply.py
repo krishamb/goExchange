@@ -173,7 +173,7 @@ TEXT_RULES=[
  (r"personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)|(filled|written) (out )?(this|the) application (myself|personally)|(completed|submitted) by (me|the candidate) (personally|alone)", None),
  (r"^(?!.*\b(agent|project|workflow|system|product|tool|company|school|reference|referr)).*(first and last name|legal name|full legal name|^(full )?name\b(?!\s+(one|a|an|the|two|three|some|any|your|of)\b)|^your name|_systemfield_name)", P["name"]),
  (r"first ?name", first),(r"last ?name|surname|family name", last),
- (r"preferred name", first),(r"e-?mail", P["email"]),(r"phone|mobile|contact number|^tel\b|^telephone", P["phone"]),
+ (r"preferred name", first),(r"^(?=.{0,70}$).*e-?mail", P["email"]),(r"^(?=.{0,70}$).*(phone|mobile|contact number)|^tel\b|^telephone", P["phone"]),   # 10-14: short field labels only (Alt's long essay question mentions the "mobile app")
  (r"zip|postal|post ?code", P.get("zip","[profile:zip]")),
  (r"(what|which) (types?|kinds?) of (roles?|positions?|jobs?) (are|would) you (be )?interested in|roles? (are you|you are) (most )?interested in", "Engineering leadership and senior technical roles in AI/ML: CTO, VP / Head / Director of Engineering or AI, Engineering Manager for AI teams, and Principal / Staff / Distinguished Engineer or AI Architect roles building LLM, data-platform and distributed systems."),
  (r"(list|describe|what are) your (relevant )?(technical )?skills( and competencies)?|relevant technical skills|technical competencies", "AI/ML and LLM systems (RAG, agentic workflows, evaluation, inference optimization); Python, Go, Rust and C++; distributed and low-latency streaming systems (Kafka); cloud and infrastructure (AWS, Kubernetes, Terraform); data platforms (Spark, Postgres/MySQL, vector databases); and leading engineering organizations as CTO and co-founder of Hyperion AI and at Yahoo (75+ engineers) and JPMorgan (50+ engineers)."),
@@ -284,11 +284,11 @@ TEXT_RULES=[
  (r"ux or design decision|more intuitive for non-technical users|intuitive for non-technical", 'For the Yahoo Finance research assistants the key decision was to put the assistant inside the pages investors already used, grounded in the same market data they were looking at, instead of a separate chat tool. People could ask plain-language questions in context, and the answers stayed tied to the data on the page, which made the tool feel familiar and trustworthy to non-technical users.'),
  (r"most challenging project|hardest project|most difficult project", ANS.get("impact","")),
  (r"background or future goals align|how does your background align|align with (our|the) (mission|company)", ANS.get("why_us","")),
- (r"llm inference ecosystem|vllm, sglang|experience with (vllm|sglang|llm serving|inference serving)", 'Hands-on: at Hyperion AI I serve open-weight models (Qwen, Llama 3.3-70B, gpt-oss) through vLLM and llama.cpp paths in production, and I built a reproducible 121-measure benchmarking scorecard informed by MLPerf Inference and BFCL to compare models, quantisations and serving configurations on latency, throughput and task quality before each release.'),
+ (r"llm inference ecosystem|vllm, sglang|experience with (vllm|sglang|llm serving|inference serving)", 'Hands-on: at Hyperion AI I sourced and validated Hugging Face/GGUF open-weight models and profiled Qwen (1.5B to 35B-A3B MoE), gpt-oss-20B and Llama 3.3-70B configurations on llama.cpp (prefill/decode throughput, TTFT, TPOT, memory footprint, serving slots), and analysed vLLM and ONNX Runtime integration paths. I built a reproducible benchmarking platform with a 121-measure scorecard schema and 13 comparability checks, informed by MLPerf Inference and BFCL, to compare models and serving configurations on latency, throughput and task quality.'),
  (r"any deadlines|deadlines we should be aware", 'No hard deadlines. I am actively interviewing and can move quickly.'),
  (r"specific information on how you heard|what job board did you use|where was the job ad posted", "LinkedIn: I found the posting on LinkedIn Jobs while searching for senior engineering and engineering-leadership roles."),
  (r"lead you to apply|led you to apply|made you apply|why did you apply", ANS.get("why_us","")),
- (r"how have you used ai in the last|used ai (recently|lately)|how do you use ai (day to day|daily|in your work)|how do you use (artificial intelligence|ai|ai tools) in your (everyday|daily|day-to-day) (work|life)", 'Daily: building and evaluating agents at Hyperion AI, running open-weight models locally through vLLM and llama.cpp, and using coding assistants for refactors and test generation, always with review and evaluation gates.'),
+ (r"how have you used ai in the last|used ai (recently|lately)|how do you use ai (day to day|daily|in your work)|how do you use (artificial intelligence|ai|ai tools) in your (everyday|daily|day-to-day) (work|life)", 'Daily: building and evaluating agents at Hyperion AI (MCP tools, multi-agent planning loops), running open-weight models locally through llama.cpp for benchmarking, and using Claude Code for code analysis, debugging and test generation, always with review and evaluation gates.'),
  (r"ai-powered (product )?feature you.{0,4}(ve|have) (recently )?shipped|recently shipped .{0,30}ai", 'Most recently, as CTO and Technical Co-Founder at Hyperion AI, I built our agentic platform end to end: MCP clients and servers (3 servers, 9 tools), a multi-agent plan-validate-dispatch-replan loop, open-weight model serving (Qwen, Llama 3.3-70B, gpt-oss) through llama.cpp and vLLM paths, and a reproducible 121-measure benchmarking scorecard informed by MLPerf Inference and BFCL, running in production with correctness gates, replay harnesses and OpenTelemetry/Prometheus observability.'),
  (r"2-3 sentences .{0,30}interest|describing your interest in|your interest in (the company|us)", ANS.get("why_us","")),
  (r"legal full name|full legal name|^legal name|(enter|type) your full name|^your full name|^full name|^(please )?(enter|type|provide) your name\b", P["name"]),
@@ -351,6 +351,14 @@ CHOICE_RULES=[
  (r"(new york city|\bnyc\b|new york state|new jersey|connecticut|massachusetts|washington state|colorado|illinois|texas) resident|resident of (new york|nyc|new jersey|connecticut|massachusetts|colorado|illinois|texas|washington)|(live|reside) in (new york city|nyc|new jersey)", ["No","NO, I am not a New York City resident","NO","no"]),   # lives in Santa Clara, CA (10-13 Cloud Software Group answered YES)
  (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
  (r"what (encouraged|prompted|motivated|led) you to apply", ["Job board / search engine","Job board","Job Board","Online job board","LinkedIn","Other"]),   # 10-13 HopSkipDrive: found via a job-board sweep
+ (r"commercial hvac|\bahus?\b.{0,40}\bvavs?\b|ventilation controls", ["No","no"]),   # 10-14 R-Zero: no HVAC experience
+ (r"located on the west coast|west coast hours", ["Yes","yes"]),   # 10-14 R-Zero: lives in Santa Clara, CA
+ (r"prior interaction with .{0,60}(workshop|fab tour|engagement activit)", ["No","no"]),   # 10-14 GlobalFoundries
+ (r"(present|past|present/past).{0,30}affiliation or working relationship with", ["No","no"]),   # 10-14 Gilead / Kite
+ (r"accept responsibility for (continued|maintaining|ongoing|continuing) work (eligibility|authori[sz]ation)", ["Yes","yes"]),   # 10-14 J.D. Power (U.S. citizen)
+ (r"(directly )?owned a production (data|ml|ai|analytics)? ?(system|pipeline|platform)", ["Yes — I was directly accountable for production reliability","Yes - I was directly accountable","Yes"]),   # 10-14 TGH: resume (Yahoo Finance market-data platform, Hyperion AI data services)
+ (r"consent to the use of (ai|artificial intelligence)( tools)? (for|in|to) (evaluat|review|assess|screen)|tools to assist in the evaluation of (job )?applications", ["I consent","Yes, I consent","Yes","I agree","I accept","I have read and understand","I acknowledge","Acknowledged"]),   # 10-14 OneOncology: applicant consents to employer AI screening (never opt out)
+ (r"(have )?you or your (current )?(company|employer) (ever )?(utilized|used|engaged|retained) [\w&.' -]{2,40} for (any )?services", ["No","None","Neither","None of the above","Not to my knowledge","Not applicable","N/A"]),   # 10-14 Armanino (to the best of his knowledge, no)
  (r"part 810|10 cfr (part )?810", ["No","no"]),   # 10-13 Kairos Power: never held a DOE Part 810 (nuclear export-control) authorization
  (r"which best describes the majority of your career", ["A mix of hands-on work and technical leadership or architecture","A mix of hands-on"]),   # hands-on architect + CTO
  (r"which are you more excited to spend most of your time on", ["Building and owning infrastructure/pipelines","A mix of both"]),
@@ -611,6 +619,8 @@ CHOICE_RULES=[
  (r"geometric processing|3d/cad|\bcad\b applications|computational geometry|mesh processing", ["No","no"]),   # not on the resume
  (r"^(have|do) you (ever )?(used|run|operated|deployed|worked with|have (hands-on |professional )?experience (with|using)) (?!.*(python|golang|\bgo\b|rust|tokio|solidity|c\+\+|c#|\.net|dotnet|bash|shell|scripting|java\b|typescript|javascript|node|react|sql|kafka|kubernetes|k8s|aws|gcp|google cloud|azure|terraform|postgres|spark|docker|redis|grpc|fastapi|llm|vllm|llama|databricks|mcp|rag\b|pytorch|openai|claude|langchain|vector|linux|git|ci/cd|microservices|kinesis|s3|lambda|ec2|bigtable|cassandra|mysql|elasticsearch|prometheus|opentelemetry|grafana|airflow|flink|tensorflow|hugging ?face|agents?\b|model serving|inference))[\w .+#/-]{2,40}? in (a )?production", ["Yes","yes"]),   # a tool that is not on the resume   # applicant (2026-10-08): Yes to all technical questions
  (r"(currently|presently) (based|located|living|residing) (in|near|around) (nyc|new york|manhattan|brooklyn)|are you (based|located|living) (in|near) (nyc|new york)|(live|living) (near|within commut\w+ distance of) (nyc|new york|the (nyc|new york) office)", ["I'm not in NYC yet, but I'm able and willing to relocate","Not yet, but willing to relocate","Willing to relocate","No, but I am willing to relocate","No"]),   # applicant lives in Santa Clara; will move to New York
+ (r"(require|need) relocation (assistance )?to (the )?(sf |san francisco )?(bay area|san francisco|california|sf\b|silicon valley)", ["No","no"]),   # 10-14 Lightfield: he lives in Santa Clara
+ (r"(reside|live|located|living) in the (country|countries) (this|the|where (this|the)) (role|position|job)", ["Yes","yes"]),   # 10-14 NerdWallet: every kept role is in the US, where he lives
  (r"(mountain view|sunnyvale|palo alto|menlo park|redwood city|san mateo|foster city|cupertino|san jose|santa clara|fremont|oakland|berkeley|south san francisco|san francisco|emeryville|burlingame|san carlos|los altos|milpitas|bay area|san ramon|pleasanton|dublin, ca|walnut creek|concord, ca|livermore|hayward|san leandro|union city|campbell|los gatos|saratoga|belmont|san bruno|millbrae|daly city|alameda|richmond, ca|emeryville|novato|san rafael|half moon bay|danville|lafayette, ca|morgan hill|gilroy|newark, ca).{0,160}(commut|relocat|able to work|on-?site|in[- ]office|in person|report to)|(commut|relocat).{0,60}(mountain view|sunnyvale|palo alto|menlo park|redwood city|san mateo|cupertino|san jose|santa clara|san francisco|bay area|san ramon|pleasanton|dublin, ca|walnut creek|concord, ca|livermore|hayward|san leandro|union city|campbell|los gatos|saratoga|belmont|san bruno|millbrae|daly city|alameda|richmond, ca|emeryville|novato|san rafael|half moon bay|danville|lafayette, ca|morgan hill|gilroy|newark, ca)", ["Yes","yes","I currently live","I live in","Bay Area","San Francisco Bay Area","San Francisco based","San Francisco"]),   # applicant lives in Santa Clara; any work mode in the Bay Area
  (r"what did you get when you cracked the code", ["42"]),   # Lithic's posting: base64 Python snippet, XOR of two bytes = "42" (applicant: solve posting puzzles)
  (r"camera on|on video|video interview", ["Yes","yes"]),   # applicant
@@ -865,7 +875,7 @@ CHOICE_RULES=[
  (r"citizen", ["Yes","U.S. Citizen","US Citizen"]),
  (r"^(?!.*(indicate|select|provide|enter|choose|which|what)\b.{0,25}\bstate\b).*(reside|live|based|located|living) in the (united states|u\.?s\.?a?\b|usa)", ["Yes","yes"]),
  (r"(?=.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|united states|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near)", ["Yes","yes","I currently live","I live in"]),   # the applicant lives in Santa Clara, CA
- (r"(?!.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|san ramon|pleasanton|dublin, ca|walnut creek|concord, ca|livermore|hayward|san leandro|union city|campbell|los gatos|saratoga|belmont|san bruno|millbrae|daly city|alameda|richmond, ca|emeryville|novato|san rafael|half moon bay|danville|lafayette, ca|morgan hill|gilroy|newark, ca|united states|north america|\bu\.?s\.?a?\b))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near) ", ["No","no"]),   # any other named place (NYC, Chicago, Taipei, ...): the applicant is in Santa Clara, CA
+ (r"(?!.*(san francisco|bay area|california|santa clara|san jose|palo alto|silicon valley|san ramon|pleasanton|dublin, ca|walnut creek|concord, ca|livermore|hayward|san leandro|union city|campbell|los gatos|saratoga|belmont|san bruno|millbrae|daly city|alameda|richmond, ca|emeryville|novato|san rafael|half moon bay|danville|lafayette, ca|morgan hill|gilroy|newark, ca|united states|north america|\bu\.?s\.?a?\b|the country|this country|the listed location|the location (of|for) this|where this (role|position|job)))(currently |are you |do you )?(located|based|residing|reside|live|living) (in|within|near) ", ["No","no"]),   # any other named place (NYC, Chicago, Taipei, ...): the applicant is in Santa Clara, CA
  (r"currently live (in|or)|live (in|near) (this |the )?(job|role|position)|live or (are you )?willing to relocate", ["I currently live in this job's location","I currently live","I live in","Yes, I live","I am willing to relocate","Willing to relocate","Yes"]),
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
@@ -1452,11 +1462,15 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
     # application evidence in the mailbox ledger (applied_gmail.json) inside the window is blocked outright.
     g=_gmail_ledger()
     SUFG={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies"}
+    ledger_hit=None
     for a in ks:
         for b,dt in g.items():
             if dt<cutoff: continue
             if a==b or (min(len(a),len(b))>=5 and ((a.startswith(b) and a[len(b):] in SUFG) or (b.startswith(a) and b[len(a):] in SUFG))):
-                return f"{b} (gmail ledger, applied {time.strftime('%Y-%m-%d',time.localtime(dt))})"
+                ledger_hit=f"{b} (gmail ledger, applied {time.strftime('%Y-%m-%d',time.localtime(dt))})"
+                if cap<=1: return ledger_hit
+                break
+        if ledger_hit: break
     SUF={"usa","us","inc","llc","hq","co","corp","io","ai","app","labs","lab","global","group","tech","technologies","careers","jobs"}
     hits=[]
     for f in _glob.glob(f"{OUT}/*_report.json"):
@@ -1469,10 +1483,20 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
             hits.append(r.get("tag"))
             t2=r.get("title") or _title_of(r.get("tag"))
             if title and t2 and _norm_role(t2)==_norm_role(title): return f"{r.get('tag')} (same role)"   # never the same role twice, reposts included
+            if cap>1 and title and t2 and _level(t2)==_level(title): return f"{r.get('tag')} (same level: {_level(title)})"   # applicant 2026-10-14: up to 3 DIFFERENT roles per company, e.g. Director, EM and Staff architect
     # applications the applicant sent himself (not in these reports) count toward the cap too
     for k,n in APPLIED_BY_APPLICANT.items():
         if k in ks: hits += [f"{k} (applied by the applicant)"]*n
+    if ledger_hit and not hits: hits.append(ledger_hit)   # mailbox evidence with no local report: one earlier application
     return hits[0] if len(hits)>=cap else None
+def _level(t):
+    """Level bucket of a title (multirole.py): exec / director / manager / staff / ic. One application per bucket per company."""
+    t=t or ""
+    if re.search(r"\b(cto|chief|vp|vice president|svp|evp|head of|head,|^head\b|general manager)\b",t,re.I): return "exec"
+    if re.search(r"\bdirector\b",t,re.I): return "director"
+    if re.search(r"\bmanager\b|\bmgr\b|\btlm\b",t,re.I): return "manager"
+    if re.search(r"\b(staff|principal|distinguished|fellow|architect|lead|founding)\b",t,re.I): return "staff"
+    return "ic"
 APPLIED_BY_APPLICANT={"welbehealth":2}
 _GMAIL_LEDGER_CACHE=None
 def _gmail_ledger():
