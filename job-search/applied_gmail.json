@@ -10536,6 +10536,28 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "happybank": {
+   "name": "Happy Bank",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Architect"
+   ],
+   "via": "user (own application, reported in chat)"
+  },
+  "lithiamotors": {
+   "name": "Lithia Motors",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect"
+   ],
+   "via": "user (own application, Workday confirmation email)"
   }
  }
 }
