@@ -5156,9 +5156,10 @@
    "dates": [
     "2026-10-13"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Platform Engineer, Snowflake"
+    "Senior Data Platform Engineer, Snowflake",
+    "Sr. Manager, Engineering \u2013 AI & Innovation"
    ]
   },
   "jellyfish": {
@@ -8901,6 +8902,16 @@
     "2026-10-01"
    ],
    "count": 1
+  },
+  "stackpointstudio": {
+   "name": "Stackpoint Studio",
+   "dates": [
+    "2026-10-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Head of Engineering - Abstract"
+   ]
   },
   "standard": {
    "company": "standard",
