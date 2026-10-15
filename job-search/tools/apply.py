@@ -363,6 +363,7 @@ CHOICE_RULES=[
  (r"eligible to work in the city/state/country in which this position is located", ["Yes","yes"]),
  (r"willing to travel,? what percentage|what percentage of (the )?time .{0,30}travel", ["Up to 25%","25%","Up to 25","10-25%"]),   # 10-15 Calix (applicant: travel up to 25%); ahead of the plain "willing to travel" Yes rule
  (r"are you,? or are you related to,? a current customer,? supplier", ["No","no"]),   # 10-15 Calix
+ (r"which of the following locations (would )?you (would )?be willing to relocate to", ["Westlake Village, California","Los Angeles, California","New York, New York","New York, NY"]),   # 10-15 Deckers: he relocates only for LA- or NYC-area roles (not "anywhere")
  (r"^overall\W*$", ["Fluent","Fluent (C1)","Full Professional Proficiency","Advanced","Expert","Proficient","Native"]),   # 10-15 HP Workday "Languages" section: Overall proficiency for English (Fluent (C1) per the English rule)
  (r"providing reasonable support and accommodations? in our recruiting process", ["I do not require reasonable accommodation","I do not require an accommodation","No"]),   # 10-15 LendingTree (no accommodation needed)
  (r"what is your work eligibility status in the (us|u\.s\.|united states)", ["US Citizen","U.S. Citizen","United States Citizen"]),   # 10-15 Seneca Holdings
