@@ -802,6 +802,16 @@
    ],
    "count": 1
   },
+  "archer": {
+   "name": "Archer",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Research Engineer - (SJ2026NZ)"
+   ]
+  },
   "arcinstitute": {
    "name": "Arc Institute",
    "dates": [
@@ -2040,9 +2050,13 @@
   "centralreach": {
    "name": "CentralReach",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineer"
+   ]
   },
   "centrumhealth": {
    "company": "Centrum Health",
@@ -3075,7 +3089,14 @@
   "dexcom": {
    "company": "Dexcom",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Director, Infrastructure Platform Services"
+   ],
+   "count": 1
   },
   "dialpad": {
    "company": "Dialpad",
@@ -3870,11 +3891,12 @@
     "2026-09-29",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "note": "rejected (do not re-apply)",
    "rejected": true,
    "roles": [
-    "Manager, Analytics Engineering"
+    "Manager, Analytics Engineering",
+    "Senior Data Platform Engineer, Enterprise Merchant Integrations"
    ]
   },
   "extrahop": {
@@ -4210,6 +4232,16 @@
    ],
    "count": 1
   },
+  "fleetio": {
+   "name": "Fleetio",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer"
+   ]
+  },
   "flex": {
    "company": "flex",
    "first": "2026-10-05",
@@ -4497,9 +4529,13 @@
   "gallup": {
    "name": "Gallup",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "gamechanger": {
    "name": "GameChanger",
@@ -4880,7 +4916,14 @@
   "graphcore": {
    "company": "graphcore",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Principal Storage Architect"
+   ],
+   "count": 1
   },
   "gray": {
    "company": "gray",
@@ -5167,6 +5210,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "henryschein": {
+   "name": "henryschein",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director Commerce Cloud Engineering"
+   ]
+  },
   "hex": {
    "name": "Hex",
    "dates": [
@@ -5279,10 +5332,11 @@
     "2026-10-13",
     "2026-10-15"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "VP, Engineering",
-    "Senior Engineering Manager - Tenant"
+    "Senior Engineering Manager - Tenant",
+    "Staff AI Operations Lead"
    ]
   },
   "honor": {
@@ -5724,9 +5778,13 @@
   "irhythmtechnologies": {
    "name": "iRhythm Technologies",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Director, Global Infrastructure Technology & Operations"
+   ]
   },
   "irvinetechnologycorporationitc": {
    "company": "Irvine Technology Corporation (ITC)",
@@ -5993,7 +6051,14 @@
   "keepersecurity": {
    "company": "Keeper Security",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop 40d feed)"
+   "via": "cloud_greenhouse (ventureloop 40d feed)",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Senior Software Engineer, AI Platform Integration"
+   ],
+   "count": 1
   },
   "keycard": {
    "company": "keycard",
@@ -6394,9 +6459,13 @@
   "lilaccloud": {
    "name": "Lilac Cloud",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Engineering, AI Data Fabric"
+   ]
   },
   "lilasciences": {
    "name": "Lila Sciences",
@@ -7282,9 +7351,13 @@
    "name": "NetDocuments",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Software Engineer - AI Growth"
+   ]
   },
   "netflix": {
    "name": "Netflix",
@@ -8119,6 +8192,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "peloton": {
+   "name": "Peloton",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Software Engineer (E-Commerce)"
+   ]
+  },
   "pendo": {
    "name": "Pendo",
    "dates": [
@@ -8451,6 +8534,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "processstreet": {
+   "name": "Process Street",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer | Remote | AI SaaS Software Role"
+   ]
+  },
   "procore": {
    "name": "procore",
    "dates": [
@@ -8713,9 +8806,13 @@
   "rebuildmanufacturing": {
    "name": "Re:Build Manufacturing",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Data Engineer"
+   ]
   },
   "recidiviz": {
    "company": "recidiviz",
@@ -8891,6 +8988,16 @@
     "Scientific Computer Engineer, Staff Cloud Infrastructure"
    ],
    "count": 1
+  },
+  "revvity": {
+   "name": "revvity",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Development, AI Native"
+   ]
   },
   "rewardsnetwork": {
    "name": "Rewards Network",
@@ -9085,10 +9192,14 @@
   "roku": {
    "name": "roku",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-15"
    ],
-   "count": 1,
-   "note": "cloud-applied today"
+   "count": 2,
+   "note": "cloud-applied today",
+   "roles": [
+    "Senior Software Engineer "
+   ]
   },
   "rootinsurance": {
    "name": "Root Insurance",
@@ -9117,9 +9228,13 @@
   "rubrikjobboard": {
    "name": "Rubrik Job Board (Greenhouse alias)",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior AI Engineer, Agentic Systems"
+   ]
   },
   "rula": {
    "company": "rula",
@@ -9799,9 +9914,13 @@
   "sorosfundmanagement": {
    "name": "Soros Fund Management",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Database Engineer"
+   ]
   },
   "sothebys": {
    "name": "Sotheby's",
@@ -9918,9 +10037,13 @@
   "ssc": {
    "name": "SS&C Technologies",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Full Stack Software Engineer"
+   ]
   },
   "ssctechnologies": {
    "company": "SS&C Technologies",
@@ -10309,9 +10432,13 @@
    "name": "Taskrabbit",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Full Stack Engineer - AI Innovation"
+   ]
   },
   "tdbank": {
    "company": "TD Bank",
@@ -10616,9 +10743,10 @@
     "2026-10-15"
    ],
    "roles": [
-    "Engineering Manager, Materia AI"
+    "Engineering Manager, Materia AI",
+    "Staff Software Engineer - AI II"
    ],
-   "count": 1
+   "count": 2
   },
   "thorn": {
    "name": "Thorn",
