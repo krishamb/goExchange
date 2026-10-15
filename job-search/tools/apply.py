@@ -16,6 +16,16 @@ for _k in ("resume","cover_letter"):
     if P.get(_k): P[_k]=os.path.expanduser(P[_k])
 EXEC_RESUME=os.path.join(JOBS_DIR,"Ambarish_Krishnamurthy_Executive_Resume.pdf")
 RESUME_VARIANTS={"exec":"Ambarish_Krishnamurthy_Executive_Resume.pdf","main":"Ambarish_Krishnamurthy_Resume.pdf","blockchain":"Ambarish_Krishnamurthy_Blockchain_AI_Resume.pdf"}
+_RESUME_TEXT={}
+def resume_text_for(path):
+    """Plain text of a resume PDF (for Greenhouse's "Enter manually" resume box), cached per file."""
+    if path not in _RESUME_TEXT:
+        try:
+            import pypdf
+            t="\n".join((pg.extract_text() or "") for pg in pypdf.PdfReader(path).pages)
+        except Exception: t=""
+        _RESUME_TEXT[path]=re.sub(r"[ \t]+\n","\n",t).strip()[:30000]
+    return _RESUME_TEXT[path]
 def resume_for(title):
     """The batch item's own pick ("resume": exec / main / blockchain, chosen from the posting) when that file exists; else the
     executive resume (CTO / VP / Head / Director / Engineering Manager) for leadership roles and the Distinguished Architect
@@ -358,6 +368,8 @@ CHOICE_RULES=[
  (r"are you an? (existing|current) (employee|team member) (at|of|with)", ["Not an Existing Employee","Not an existing employee","No","None of the above","N/A"]),   # 10-15 Life360 / Tile / Jiobit
  (r"(citizen|national|resident)s?,? .{0,40}of any of the following (countries|nations|regions)", ["None / Not applicable","None/Not applicable","None / Not Applicable","Not applicable","None of the above","None","Does not apply"]),   # 10-15 Torc export control (U.S. citizen)
  (r"if you checked any of the boxes above other than none", ["Not applicable","None / Not applicable","N/A","None","Does not apply"]),   # 10-15 Torc follow-up (nothing checked)
+ (r"(live|reside|located) in .{0,40},? or (are you )?willing to relocate", ["Yes","yes"]),   # 10-15 Kaseya: "Do you currently live in ___, or are you willing to relocate there?" (willing to relocate)
+ (r"professional english fluency|english fluency|speak, write,? and read english", ["Yes","yes","Fluent","Native"]),   # 10-15 Kaseya
  (r"provide documentation (reflecting|of|verifying|for) (the )?(education|employment)", ["Yes","yes"]),   # 10-15 Justworks
  (r"(ethnicity|race).{0,160}how would you describe yourself", ["I don't wish to answer","I don’t wish to answer","I do not wish to answer","Decline to self-identify","Prefer not to say"]),   # 10-15 Justworks lists only Asian sub-groups (East / South / Southeast); the applicant's answer is "Asian", so no sub-group is guessed
  (r"^(?!.*\b(aligned?|within|in line|comfortable|okay|ok|acceptable|fits?|meet)\b).*compensation expectations?", ["$250,000 – $260,000","$250,000 - $260,000","$250,000 –","$250,000","$240,000 – $250,000","$220,000 – $230,000","$220,000 - $230,000","$200,000+","$200,000 and above"]),   # 10-15 Alarm.com $10K brackets (applicant $220K-$350K: a mid-range band)
@@ -1585,12 +1597,13 @@ async def run():
                 summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
-            CUR_JOB["src"]=job.get("src"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why")
+            CUR_JOB["src"]=job.get("src"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why"); CUR_JOB["manual_resume"]=bool(job.get("manual_resume"))
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             if not r.get("submitted") and any(("uploadFile" in (e or "")) or ("Resume/CV is required" in (e or "")) for e in (r.get("errors") or [])):
                 # Greenhouse's uploader sometimes fails to initialise: load the whole form again once
-                print(f"RETRY {job['tag']}: resume uploader error, reloading the form",flush=True)
+                print(f"RETRY {job['tag']}: resume uploader error, reloading the form and pasting the resume text (Enter manually)",flush=True)
                 await ctx.close(); await asyncio.sleep(20)
+                CUR_JOB["manual_resume"]=True
                 ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
                 ctx.set_default_timeout(8000)
                 r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
@@ -1761,7 +1774,21 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 return fl,out
             files,labs=await file_labels()
             ri=next((i for i,l in enumerate(labs) if re.search(r"resume|cv",l)),0 if labs else None)
-            if ri is not None:
+            if ri is not None and CUR_JOB.get("manual_resume"):
+                # second try after a broken Greenhouse uploader ("Cannot read properties of undefined (reading 'uploadFile')"):
+                # use the field's own "Enter manually" option and paste the resume text instead of uploading the file
+                try:
+                    box=files.nth(ri).locator("xpath=ancestor::*[.//button[contains(normalize-space(.),'Enter manually')] or .//a[contains(normalize-space(.),'Enter manually')]][1]")
+                    em=box.locator("button:has-text('Enter manually'), a:has-text('Enter manually')").first
+                    await em.click(timeout=8000); await page.wait_for_timeout(1500)
+                    ta=box.locator("textarea").first
+                    await ta.fill(resume_text_for(resume_for(jtitle)),timeout=10000)
+                    report["filled"]["resume"]="pasted (Enter manually)"; report["resume_file"]=os.path.basename(resume_for(jtitle))+" (text)"
+                except Exception as e:
+                    report["filled"]["resume"]=f"ERR manual {e.__class__.__name__}"
+                    try: await files.nth(ri).set_input_files(resume_for(jtitle),timeout=15000); report["filled"]["resume"]="uploaded"
+                    except Exception: pass
+            elif ri is not None:
                 try: await files.nth(ri).set_input_files(resume_for(jtitle),timeout=15000); report["filled"]["resume"]="uploaded"; report["resume_file"]=os.path.basename(resume_for(jtitle))
                 except Exception as e: report["filled"]["resume"]=f"ERR {e.__class__.__name__}"
             await page.wait_for_timeout(5000)
