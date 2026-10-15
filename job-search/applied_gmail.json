@@ -24,6 +24,16 @@
    ],
    "count": 1
   },
+  "31stunion": {
+   "name": "31st Union",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Backend Engineer"
+   ]
+  },
   "3cloud": {
    "name": "3Cloud",
    "dates": [
@@ -1050,9 +1060,13 @@
   "attentive": {
    "name": "Attentive",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, AI Developer Experience"
+   ]
   },
   "auctiontechnologygroup": {
    "name": "Auction Technology Group",
@@ -4138,7 +4152,14 @@
   "ferguson": {
    "company": "Ferguson",
    "first": "2026-10-06",
-   "via": "workday (already applied on the company site)"
+   "via": "workday (already applied on the company site)",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Principal Solutions Architect - Master Data, Product Data & AI Automation"
+   ],
+   "count": 1
   },
   "fernstone": {
    "name": "Fernstone",
@@ -4726,9 +4747,13 @@
   "generalmotorsgm": {
    "name": "General Motors (GM)",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Data Platform (Autonomous Vehicles)"
+   ]
   },
   "genesis10": {
    "name": "Genesis10",
@@ -5101,6 +5126,16 @@
     "2026-10-03"
    ],
    "count": 1
+  },
+  "guardanthealth": {
+   "name": "Guardant Health",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Bioinformatics"
+   ]
   },
   "guardianlife": {
    "name": "Guardian Life",
@@ -7315,6 +7350,16 @@
    ],
    "count": 1
   },
+  "mufg": {
+   "name": "MUFG",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "VP \u2013 Data Products and AI Enablement"
+   ]
+  },
   "muonspace": {
    "name": "Muon Space",
    "dates": [
@@ -8830,6 +8875,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "quickenloans": {
+   "name": "quickenloans",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Cloud Governance Engineer"
+   ]
   },
   "quicknode": {
    "name": "Quicknode",
