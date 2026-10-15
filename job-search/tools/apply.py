@@ -1186,13 +1186,12 @@ async def visible_options(page):
         try: t.append((await o.nth(i).inner_text()).strip())
         except Exception: t.append("")
     return o,t
-ASIAN_SUBGROUP=re.compile(r"^(asian\s*[-–:]\s*)?(east|southeast|south-east|central|west)\s+asian\b",re.I)
-def _match(t,pref,strict=False):
+def _match(t,pref,strict=False,_ASIAN_SUB=re.compile(r"^(asian\s*[-–:]\s*)?(east|southeast|south-east|central|west)\s+asian\b",re.I)):
     """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female'). strict: equal/leading only.
     A broad 'Asian' never picks a different Asian subgroup ('East Asian', 'Asian - Southeast Asian'): applicant is Asian (Indian) / South Asian."""
     tl,pl=t.lower().strip(),pref.lower().strip()
     if not tl or not pl: return False
-    _sg=ASIAN_SUBGROUP.match(tl)
+    _sg=_ASIAN_SUB.match(tl)
     if _sg and _sg.group(2).lower() not in pl: return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
     if strict: return False
