@@ -212,6 +212,16 @@
    ],
    "count": 1
   },
+  "adaptivefinancialconsulting": {
+   "name": "Adaptive Financial Consulting",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Java Distributed Systems Engineer  - Fintech- NYC - Salary up to 300K depending on experience + Benefits"
+   ]
+  },
   "adapturerenewables": {
    "name": "Adapture Renewables",
    "dates": [
@@ -1459,6 +1469,16 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (linkedin-resolved)"
   },
+  "bigcommerce": {
+   "name": "BigCommerce",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer-Backend (PHP)"
+   ]
+  },
   "bikky": {
    "name": "Bikky",
    "dates": [
@@ -1493,6 +1513,16 @@
    "company": "bitcot",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "bitgo": {
+   "name": "BitGo",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "biztechfusion": {
    "name": "BizTech Fusion",
@@ -2953,9 +2983,10 @@
     "2026-10-01",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Full Stack Engineer"
+    "Staff Full Stack Engineer",
+    "Senior Full Stack Engineer"
    ]
   },
   "debtbook": {
@@ -4200,9 +4231,13 @@
   "fivetran": {
    "name": "Fivetran",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "fivetrandbtlabs": {
    "name": "Fivetran + dbt Labs",
@@ -9424,9 +9459,13 @@
   "scaleai": {
    "name": "Scale AI",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Orchestration Platform"
+   ]
   },
   "scaleops": {
    "name": "ScaleOps",
@@ -9953,6 +9992,16 @@
    "count": 2,
    "roles": [
     "Tech Lead - Code Plane [IC5]"
+   ]
+  },
+  "spe": {
+   "name": "spe",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Executive Director, Enterprise Agent Platform"
    ]
   },
   "speak": {
@@ -10946,6 +10995,16 @@
    "company": "twin",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "twinhealth": {
+   "name": "Twin Health",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer, MarTech"
+   ]
   },
   "twitch": {
    "name": "Twitch",
