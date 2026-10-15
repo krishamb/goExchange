@@ -1875,6 +1875,16 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud"
   },
+  "calix": {
+   "name": "Calix",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer - Calix Cloud"
+   ]
+  },
   "caltech": {
    "name": "Caltech",
    "dates": [
@@ -3293,6 +3303,16 @@
    ],
    "count": 1
   },
+  "disney": {
+   "name": "disney",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Principal Software Engineer"
+   ]
+  },
   "distantjob": {
    "name": "DistantJob",
    "dates": [
@@ -3637,6 +3657,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "elevancehealth": {
+   "name": "elevancehealth",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Distinguished AI Engineer"
+   ]
   },
   "elevatedigitaldice": {
    "name": "Elevate Digital (Dice)",
@@ -8245,9 +8275,13 @@
   "pax8": {
    "name": "Pax8",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer II (Data Platforms)"
+   ]
   },
   "payle": {
    "company": "payle",
@@ -9184,9 +9218,13 @@
   "risepoint": {
    "name": "risepoint",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Director, Partner Data"
+   ]
   },
   "riverai": {
    "company": "River AI",
@@ -10675,6 +10713,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "tempus": {
+   "name": "Tempus",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "tempusai": {
    "name": "Tempus AI",
