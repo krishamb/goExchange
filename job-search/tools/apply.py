@@ -399,7 +399,7 @@ CHOICE_RULES=[
  (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
  (r"(able|willing) to work .{0,30}eastern time|eastern time zone hours", ["Yes","yes"]),   # applicant 2026-10-12
- (r"ethnicities listed below|select (your|from the) ethnicit|please select .{0,40}ethnicit|race ?/ ?ethnicity|race and ethnicity|racial ?/ ?ethnic|select your race", ["Asian (Not Hispanic or Latino)","Asian (United States of America)","Asian","Asian or Pacific Islander","South Asian"]),   # applicant 2026-10-13: Asian
+ (r"ethnicities listed below|select (your|from the) ethnicit|please select .{0,40}ethnicit|race ?/ ?ethnicity|race and ethnicity|racial ?/ ?ethnic|select your race", ["Asian (Not Hispanic or Latino)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American"]),   # applicant 2026-10-13: Asian; 10-01: Asian (Indian) -> South Asian where the list splits Asian into subgroups
  (r"(new york city|\bnyc\b|new york state|new jersey|connecticut|massachusetts|washington state|colorado|illinois|texas) resident|resident of (new york|nyc|new jersey|connecticut|massachusetts|colorado|illinois|texas|washington)|(live|reside) in (new york city|nyc|new jersey)", ["No","NO, I am not a New York City resident","NO","no"]),   # lives in Santa Clara, CA (10-13 Cloud Software Group answered YES)
  (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
  (r"what (encouraged|prompted|motivated|led) you to apply", ["Job board / search engine","Job board","Job Board","Online job board","LinkedIn","Other"]),   # 10-13 HopSkipDrive: found via a job-board sweep
@@ -436,7 +436,9 @@ CHOICE_RULES=[
  (r"currently authorized for employment in the united states|legally (authorized|eligible) to work", ["Yes","yes"]),
  (r"willing to travel", ["Yes","yes"]),
  (r"comply with federal law to provide proof of (your )?(ability|eligibility)", ["Yes","yes"]),
- (r"select the races you identify with|^race\b", ["Asian","asian"]),
+ (r"(currently or have been|ever been) a driver.{0,60}uber|delivered with uber (eats|freight)", ["No"]),   # Uber gig-work question: No (same answer as the Oct Uber application)
+ (r"^race or national origin \(option [23]\)", []),   # Uber: one race in Option 1; the optional extra slots stay blank
+ (r"select the races you identify with|^race\b", ["Asian","asian","Asian Indian","South Asian"]),
  (r"employed by one of the following organizations in the stanford", ["No","no"]),
  (r"desired schedule|employment desired:? full time or part time", ["Full-Time","Full Time","Full-time","Regular"]),
  (r"desired shift|shift preference", ["Day","Days","Day Shift","First Shift","1st Shift","Any"]),
@@ -1184,10 +1186,14 @@ async def visible_options(page):
         try: t.append((await o.nth(i).inner_text()).strip())
         except Exception: t.append("")
     return o,t
+ASIAN_SUBGROUP=re.compile(r"^(asian\s*[-–:]\s*)?(east|southeast|south-east|central|west)\s+asian\b",re.I)
 def _match(t,pref,strict=False):
-    """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female'). strict: equal/leading only."""
+    """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female'). strict: equal/leading only.
+    A broad 'Asian' never picks a different Asian subgroup ('East Asian', 'Asian - Southeast Asian'): applicant is Asian (Indian) / South Asian."""
     tl,pl=t.lower().strip(),pref.lower().strip()
     if not tl or not pl: return False
+    _sg=ASIAN_SUBGROUP.match(tl)
+    if _sg and _sg.group(2).lower() not in pl: return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
     if strict: return False
     return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
