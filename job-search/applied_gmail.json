@@ -489,7 +489,14 @@
   "alkamitechnology": {
    "company": "Alkami Technology",
    "first": "2026-10-07",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Staff Software Engineer (MANTL)"
+   ],
+   "count": 1
   },
   "allegion": {
    "name": "allegion",
@@ -1703,7 +1710,14 @@
   "box": {
    "company": "Box",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Senior Software Engineer, FinOps"
+   ],
+   "count": 1
   },
   "brainco": {
    "name": "Brainco",
@@ -1871,9 +1885,13 @@
   "cambiumlearninggroup": {
    "name": "Cambium Learning Group",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Data Strategy & Analytics"
+   ]
   },
   "campfire": {
    "name": "Campfire",
@@ -2435,6 +2453,16 @@
     "2026-10-01"
    ],
    "count": 1
+  },
+  "coalitioninc": {
+   "name": "Coalition, Inc.",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Scanning Engine"
+   ]
   },
   "coastal": {
    "company": "coastal",
@@ -3067,9 +3095,14 @@
   "dentsu": {
    "name": "Dentsu",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Data Architect, Product Modernization",
+    "Director, AI Engineer"
+   ]
   },
   "dept": {
    "name": "DEPT\u00ae",
@@ -3125,9 +3158,10 @@
     "2026-10-15"
    ],
    "roles": [
-    "Director, Infrastructure Platform Services"
+    "Director, Infrastructure Platform Services",
+    "Sr Staff SW Development Engineer"
    ],
-   "count": 1
+   "count": 2
   },
   "dialpad": {
    "company": "Dialpad",
@@ -3192,9 +3226,13 @@
   "digitalocean": {
    "name": "DigitalOcean",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Engineer I, Compute"
+   ]
   },
   "digitalocean98": {
    "company": "digitalocean98",
@@ -5463,9 +5501,13 @@
   "huntress": {
    "name": "Huntress",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer- Agentic SOC"
+   ]
   },
   "hyatt": {
    "name": "Hyatt",
@@ -6118,9 +6160,13 @@
    "name": "Kikoff",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Fullstack Engineer - User Retention & App Ecosystem"
+   ]
   },
   "kin": {
    "name": "Kin",
@@ -6424,6 +6470,16 @@
    "company": "LendingClub",
    "first": "2026-10-01",
    "via": "workday-cloud"
+  },
+  "lendingtree": {
+   "name": "LendingTree",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "lennar": {
    "name": "Lennar",
@@ -8164,6 +8220,16 @@
    ],
    "count": 1
   },
+  "pattersoncompanies": {
+   "name": "pattersoncompanies",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise Data and AI Architect"
+   ]
+  },
   "paulhastings": {
    "name": "Paul Hastings",
    "dates": [
@@ -9568,6 +9634,16 @@
     "2026-10-01"
    ],
    "count": 1
+  },
+  "senecaholdings": {
+   "name": "Seneca Holdings",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "sentilink": {
    "name": "SentiLink (applied via filler)",
@@ -11105,6 +11181,16 @@
     "Principal Engineer, Enterprise AI \u2014 Technical Fellow Office"
    ]
   },
+  "unitytechnologies": {
+   "name": "Unity Technologies",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Offerwall"
+   ]
+  },
   "unize": {
    "company": "unize",
    "first": "2026-10-05",
@@ -11316,9 +11402,10 @@
     "2026-10-01",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior-Staff Software Engineer, Tooling"
+    "Senior-Staff Software Engineer, Tooling",
+    "Senior Backend Engineer - Intercom"
    ]
   },
   "versana": {
