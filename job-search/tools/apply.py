@@ -436,6 +436,11 @@ CHOICE_RULES=[
  (r"currently authorized for employment in the united states|legally (authorized|eligible) to work", ["Yes","yes"]),
  (r"willing to travel", ["Yes","yes"]),
  (r"comply with federal law to provide proof of (your )?(ability|eligibility)", ["Yes","yes"]),
+ (r"work permit is required for applicants under (age )?18", ["Not Applicable - I am not under 18 years of age or I have already graduated high school","Not Applicable","N/A"]),   # Stanford: an adult applicant
+ (r"would you like to be considered for other similar positions", ["Yes"]),   # Stanford: open to other roles (same as 'open to other roles?' Yes)
+ (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
+ (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
+ (r"(not aware of any process that could give rise|not currently under any coaching|not been performing coaching|not been suspended from coaching).{0,200}ncaa", ["True","Yes"]),   # NCAA coaching statements: never a coach, so each is true
  (r"(currently or have been|ever been) a driver.{0,60}uber|delivered with uber (eats|freight)", ["No"]),   # Uber gig-work question: No (same answer as the Oct Uber application)
  (r"^race or national origin \(option [23]\)", []),   # Uber: one race in Option 1; the optional extra slots stay blank
  (r"select the races you identify with|^race\b", ["Asian","asian","Asian Indian","South Asian"]),
