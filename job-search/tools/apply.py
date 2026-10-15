@@ -361,6 +361,7 @@ CHOICE_RULES=[
  (r"^do you (have|hold|possess) an? master.?s degree", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (10-15 Archer)
  (r"highly skilled with ai and ml frameworks|skilled (with|in) (ai|ml|machine learning)( and (ai|ml))? frameworks.{0,40}(pytorch|tensorflow)", ["Yes","yes"]),   # resume: language models with PyTorch/TensorFlow, open-model serving
  (r"eligible to work in the city/state/country in which this position is located", ["Yes","yes"]),
+ (r"providing reasonable support and accommodations? in our recruiting process", ["I do not require reasonable accommodation","I do not require an accommodation","No"]),   # 10-15 LendingTree (no accommodation needed)
  (r"what is your work eligibility status in the (us|u\.s\.|united states)", ["US Citizen","U.S. Citizen","United States Citizen"]),   # 10-15 Seneca Holdings
  (r"enrolled member of the .{0,40}nation", ["No","no"]),   # 10-15 Seneca Holdings (tribal membership: no)
  (r"ever been employed by .{0,60}family of companies", ["Not Applicable","No","Never"]),   # 10-15 Seneca Holdings
