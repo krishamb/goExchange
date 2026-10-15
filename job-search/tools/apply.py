@@ -368,6 +368,7 @@ CHOICE_RULES=[
  (r"are you an? (existing|current) (employee|team member) (at|of|with)", ["Not an Existing Employee","Not an existing employee","No","None of the above","N/A"]),   # 10-15 Life360 / Tile / Jiobit
  (r"(citizen|national|resident)s?,? .{0,40}of any of the following (countries|nations|regions)", ["None / Not applicable","None/Not applicable","None / Not Applicable","Not applicable","None of the above","None","Does not apply"]),   # 10-15 Torc export control (U.S. citizen)
  (r"if you checked any of the boxes above other than none", ["Not applicable","None / Not applicable","N/A","None","Does not apply"]),   # 10-15 Torc follow-up (nothing checked)
+ (r"bachelor.{0,3}s? degree( or (a )?foreign equivalent)?( in)? .{0,60}(software|computer|engineering|related (technical )?field)", ["Yes","yes"]),   # 10-15 Tebra: B.E. Computer Science and Engineering, University of Madras
  (r"legally entitled to work in the us or canada|entitled to work in (the )?(us|united states) or canada", ["US","United States","USA"]),   # 10-15 Clariti (U.S. citizen)
  (r"(is|are) the (compensation|salary|pay) (range|band)s? within your expectations", ["Yes","yes"]),   # 10-15 Clariti
  (r"rate your ai (fluency|maturity)|ai (fluency|maturity) level", ["Transformation","Optimization"]),   # 10-15 Clariti: CTO of an AI-first company that built agentic platforms (AI as a core capability)
