@@ -1068,6 +1068,9 @@ async def run_one(br, item):
             if any(re.fullmatch(r"submit( application)?", t, re.I) for t in names) or not btns:
                 await at_end(page, job, item); return job.report
             nxt = next((b for t, b in btns if re.fullmatch(r"next|continue|save and continue", t, re.I)), None)
+            if nxt is None and re.search(r"terms and conditions|privacy policy", await text(page), re.I) and not AI_CERT.search(await text(page)):
+                nxt = next((b for t, b in btns if re.fullmatch(r"(i )?agree", t, re.I)), None)   # Mayo: a Terms and Conditions page with one AGREE button before the form
+                if nxt is not None: job.ans("Terms and Conditions (AGREE page)", "agreed")
             if nxt is None:
                 await at_end(page, job, item); return job.report
             if job.report["unanswered"]:
