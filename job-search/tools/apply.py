@@ -367,6 +367,7 @@ CHOICE_RULES=[
  (r"willing to travel,? what percentage|what percentage of (the )?time .{0,30}travel", ["Up to 25%","25%","Up to 25","10-25%"]),   # 10-15 Calix (applicant: travel up to 25%); ahead of the plain "willing to travel" Yes rule
  (r"are you,? or are you related to,? a current customer,? supplier", ["No","no"]),   # 10-15 Calix
  (r"^what is your preferred language\W*$", ["English"]),   # 10-15 Ferguson
+ (r"to the best of your knowledge,? are you related to or a close associate of someone", ["No","no"]),   # 10-15 MUFG (no known relationship to its customers' staff)
  (r"which generation applies to you|(what is your|select your) (age range|generation)|^age range\W*$", ["Prefer not to answer","I prefer not to answer","Decline to answer","Decline to self-identify","I don't wish to answer"]),   # 10-15 Rocket: an age / birth-year proxy is never given (no DOB rule)
  (r"potential reasons were important to your decision to apply", ["Opportunity for career advancement","Company reputation"]),   # 10-15 Disney (never "Friends/Family work at Disney" or "Park admission")
  (r"which of the following locations (would )?you (would )?be willing to relocate to", ["Westlake Village, California","Los Angeles, California","New York, New York","New York, NY"]),   # 10-15 Deckers: he relocates only for LA- or NYC-area roles (not "anywhere")
