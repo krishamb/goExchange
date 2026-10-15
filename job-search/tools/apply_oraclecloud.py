@@ -520,6 +520,11 @@ async def answer_field(page, job, f):
         if not prefs and CONSENT_Q.search(q) and not DISC.search(q) and not MARKETING.search(q):
             prefs = ["Yes", "I agree", "I consent", "I acknowledge", "Agree", "Accept", "I accept"]   # consent / acknowledgement: Yes
             job.report.setdefault("consent_fallback", []).append(key[:120])
+        if prefs == [] and kind == "select" and cur and not f["req"]:   # an explicit-blank rule (Uber's extra race slots): clear what an earlier run or the draft put there
+            try:
+                await row.locator("button.icon-clear").first.click(timeout=3000); await page.wait_for_timeout(500)
+                job.report.setdefault("cleared", []).append(key[:120]); return keep("")
+            except Exception: pass
         if not prefs:
             if kind == "select" and not cur:   # read the list (nothing is chosen) so a rule can be written
                 try:
