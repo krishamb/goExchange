@@ -359,6 +359,9 @@ CHOICE_RULES=[
  (r"willing to work (in|from|at) (san jose|santa clara|sunnyvale|mountain view|palo alto|san francisco|menlo park|redwood city|cupertino|milpitas|fremont|san mateo)\b", ["Yes","yes"]),   # lives in Santa Clara (10-15 Archer San Jose)
  (r"^do you (have|hold|possess) an? master.?s degree", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (10-15 Archer)
  (r"highly skilled with ai and ml frameworks|skilled (with|in) (ai|ml|machine learning)( and (ai|ml))? frameworks.{0,40}(pytorch|tensorflow)", ["Yes","yes"]),   # resume: language models with PyTorch/TensorFlow, open-model serving
+ (r"eligible to work in the city/state/country in which this position is located", ["Yes","yes"]),   # 10-15 BigCommerce (U.S. citizen; queued roles are U.S.)
+ (r"^have you represented yourself and your experience truthfully", ["Yes","yes"]),   # 10-15 Velir (answers come from his resume and standing answers)
+ (r"^are you a bot\??\*?$", ["__ASK__"]),   # 10-15 Velir: an AI agent fills these forms, so the applicant answers this himself (never the filler)
  (r"annual base salary expectation in usd", ["$200K – $250K","$200K - $250K","$250K – $300K","$250K - $300K"]),   # 10-15 Alteryx $50K brackets (IC $200K-$300K: the lower band inside his range)
  (r"hold (legal )?permanent resident status in a country outside the (us|u\.s\.|united states)", ["No","no"]),   # 10-15 Analog Devices export-control question (U.S. citizen; no foreign residency on record)
  (r"commitments to another organi[sz]ation that (might|may|could|would) affect your employment", ["No","no"]),   # 10-15 Analog Devices (no non-compete or other binding commitment)   # 10-15 Samsung Research America: CCPA notice; he is a California resident   # 10-15 Graphcore: the name entered is his full name as on the resume

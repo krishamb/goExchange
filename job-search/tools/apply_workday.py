@@ -1298,6 +1298,10 @@ async def run_one(ctx, item, s):
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
     # Santa Clara); elsewhere the rule says No and the COMMUTE_Q guard leaves it for the applicant
     G["JOB_CHOICE_RULES"] = [(COMMUTE_Q.pattern, ["Yes", "yes"] if (item.get("where") == "bay" or re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|foster city|cupertino|milpitas|fremont|pleasanton|emeryville", str(item.get("where") or "") + " " + str(item.get("loc") or ""), re.I)) else ["No", "no"])]
+    # "do you live in the city/state/country in which this position is located": true for US-remote and Bay Area roles
+    # (he lives in Santa Clara); for NYC / LA hybrid roles he does not live there yet, so the answer is No (10-15 BigCommerce)
+    _lives_there = item.get("where") in ("remote", "bay", "bay-hybrid", "bay-onsite") or bool(re.search(r"\bremote\b|san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|foster city|cupertino|milpitas|fremont", str(item.get("loc") or ""), re.I))
+    G["JOB_CHOICE_RULES"].append((r"(confirm|do) you live in the city/state/country in which this position is located", ["Yes", "yes"] if _lives_there else ["No", "no"]))
     G["JOB_TEXT_RULES"] = []
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
