@@ -381,9 +381,13 @@
   "airbnb": {
    "name": "Airbnb",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Machine Learning Engineer, Trust"
+   ]
   },
   "aircall": {
    "name": "Aircall",
@@ -535,9 +539,13 @@
   "alphasense": {
    "name": "AlphaSense",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer"
+   ]
   },
   "alphasilicon": {
    "name": "Alpha Silicon",
@@ -665,6 +673,16 @@
     "2026-10-12"
    ],
    "count": 1
+  },
+  "analogdevices": {
+   "name": "Analog Devices",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Principal AI/ML Engineer, Time-Series & Sensor Reasoning Models (Lorenz Labs)"
+   ]
   },
   "anaplan": {
    "name": "Anaplan",
@@ -1247,9 +1265,13 @@
    "name": "BambooHR",
    "dates": [
     "2026-09-29",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Sr. Agentic Engineer"
+   ]
   },
   "bamboohr17": {
    "company": "bamboohr17",
@@ -1515,9 +1537,13 @@
   "block": {
    "name": "Block",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Payments Acquiring"
+   ]
   },
   "bloom": {
    "name": "Bloom (trybloom.ai)",
@@ -2910,9 +2936,13 @@
   "dealpath": {
    "name": "Dealpath",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Full Stack Engineer"
+   ]
   },
   "debtbook": {
    "name": "DebtBook",
@@ -2950,6 +2980,16 @@
    "count": 2,
    "roles": [
     "Engineering Manager, Infrastructure and Agentic Platform"
+   ]
+  },
+  "defenseunicorns": {
+   "name": "Defense Unicorns",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer"
    ]
   },
   "deffai": {
@@ -3006,6 +3046,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "deterrencedefenseinc": {
+   "name": "Deterrence Defense, Inc.",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer - Data Platform (Staff)   "
+   ]
   },
   "develophealth": {
    "name": "Develop Health",
@@ -3310,9 +3360,13 @@
   "drivewealth": {
    "name": "DriveWealth",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Engineering"
+   ]
   },
   "dropbox": {
    "name": "Dropbox",
@@ -3903,10 +3957,14 @@
   "fanduel": {
    "name": "FanDuel",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-15"
    ],
-   "count": 1,
-   "rejected": "2026-10-05/06"
+   "count": 2,
+   "rejected": "2026-10-05/06",
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "farai": {
    "name": "FAR.AI",
@@ -3932,9 +3990,13 @@
   "fastly": {
    "name": "Fastly",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Compute Platform"
+   ]
   },
   "feathr": {
    "company": "feathr",
@@ -4261,6 +4323,17 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "foremarklegal": {
+   "name": "Foremark Legal",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "General Manager"
+   ],
+   "via": "hand apply (teamtailor)"
+  },
   "formationbio": {
    "name": "Formation Bio",
    "dates": [
@@ -4548,6 +4621,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "geotab": {
+   "name": "Geotab",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Team Lead, Software Development"
+   ]
   },
   "gersh": {
    "name": "The Gersh Agency",
@@ -7065,9 +7148,13 @@
   "myfitnesspal": {
    "name": "MyFitnessPal",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Manager, Engineering - Ads"
+   ]
   },
   "myriad360": {
    "name": "Myriad360",
@@ -7487,9 +7574,13 @@
   "oddball": {
    "name": "Oddball",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "System Architect"
+   ]
   },
   "odyssey": {
    "name": "Odyssey",
@@ -8043,9 +8134,13 @@
   "peregrinetechnologies": {
    "name": "Peregrine Technologies",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Member of Biz Ops & Strategy"
+   ]
   },
   "perfect": {
    "company": "perfect",
@@ -8165,9 +8260,13 @@
   "placerai": {
    "name": "Placer.ai",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Placer Intelligence"
+   ]
   },
   "placerlabs": {
    "company": "placerlabs",
@@ -8622,6 +8721,16 @@
    "company": "recidiviz",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "redcellpartners": {
+   "name": "Red Cell Partners",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer (Platform and Execution Model)"
+   ]
   },
   "reddit": {
    "name": "Reddit",
@@ -9111,6 +9220,26 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "samsara": {
+   "name": "Samsara",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Maps Services"
+   ]
+  },
+  "samsungresearchamerica": {
+   "name": "Samsung Research America",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff AI Research Engineer - Digital Health"
+   ]
+  },
   "samsungsemiconductor": {
    "name": "Samsung Semiconductor",
    "dates": [
@@ -9555,9 +9684,10 @@
     "2026-09-30",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Engineering Manager, Dashboards"
+    "Engineering Manager, Dashboards",
+    "Principal Software Engineer, Core Experiences (Remote Eligible)"
    ]
   },
   "smartsynergies": {
@@ -10481,7 +10611,14 @@
   "thomsonreuters": {
    "company": "Thomson Reuters",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Engineering Manager, Materia AI"
+   ],
+   "count": 1
   },
   "thorn": {
    "name": "Thorn",
@@ -11487,11 +11624,15 @@
    "name": "YugabyteDB",
    "dates": [
     "2026-09-30",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Staff Engineer Distributed Storage and Transaction"
+   ]
   },
   "yumbrands": {
    "name": "Yum! Brands",
@@ -11585,9 +11726,13 @@
   "zipline": {
    "name": "Zipline",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer \u2013 Integrations Platform"
+   ]
   },
   "ziprecruiter": {
    "name": "ZipRecruiter",
