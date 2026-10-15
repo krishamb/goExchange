@@ -1874,9 +1874,13 @@
   "careaccess": {
    "name": "Care Access",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Engineering (AI Patient Engagement Platform)"
+   ]
   },
   "caredx": {
    "name": "CareDx",
@@ -2295,7 +2299,14 @@
   "clockworkio": {
    "company": "Clockwork.io",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Senior Systems Engineer - AI Infrastructure"
+   ],
+   "count": 1
   },
   "clockworksystems": {
    "company": "Clockwork Systems",
@@ -3425,9 +3436,13 @@
   "efficientcomputer": {
    "name": "Efficient Computer",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Staff Software Engineer, Linux Runtime & Drivers"
+   ]
   },
   "ekfrazotechnologiesllc": {
    "name": "Ekfrazo Technologies LLC",
@@ -3798,11 +3813,15 @@
   "extend": {
    "name": "Extend",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Manager, Analytics Engineering"
+   ]
   },
   "extrahop": {
    "name": "ExtraHop",
@@ -3925,9 +3944,13 @@
   "federato": {
    "name": "Federato",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "ferguson": {
    "company": "Ferguson",
@@ -4056,9 +4079,10 @@
     "2026-10-10",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Director of Engineering"
+    "Director of Engineering",
+    "Engineering Manager"
    ]
   },
   "fiserv": {
@@ -4940,9 +4964,13 @@
   "harness": {
    "name": "Harness",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff/Senior Software Engineer - Cloud Platform Engineering"
+   ]
   },
   "harnessinc": {
    "company": "harnessinc",
@@ -5030,9 +5058,13 @@
    "name": "Heartflow",
    "dates": [
     "2026-09-29",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Platform Engineer (Cloud Foundations)"
+   ]
   },
   "heartflowinc": {
    "company": "heartflowinc",
@@ -6608,9 +6640,13 @@
   "mcghealth": {
    "name": "MCG Health",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Database Engineer"
+   ]
   },
   "mckesson": {
    "name": "McKesson",
@@ -7012,9 +7048,10 @@
     "2026-10-08",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Software Engineering Manager, Information Systems"
+    "Software Engineering Manager, Information Systems",
+    "Senior Software Engineer, Information Systems"
    ]
   },
   "mutualofomaha": {
@@ -7362,9 +7399,10 @@
     "2026-10-02",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Engineering Manager, Provider Supply"
+    "Engineering Manager, Provider Supply",
+    "Staff Software Engineer"
    ]
   },
   "nscale": {
@@ -7502,9 +7540,13 @@
    "name": "Omada Health",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "omnifold": {
    "company": "Omnifold",
@@ -9142,6 +9184,16 @@
    ],
    "count": 1
   },
+  "scaleops": {
+   "name": "ScaleOps",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Infra Engineer Team Lead - US"
+   ]
+  },
   "scalyx": {
    "company": "scalyx",
    "first": "2026-10-05",
@@ -9500,9 +9552,13 @@
   "smartsheet": {
    "name": "Smartsheet",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Dashboards"
+   ]
   },
   "smartsynergies": {
    "company": "Smart  Synergies",
@@ -9684,6 +9740,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer - Full Stack"
+   ]
+  },
+  "spoileralert": {
+   "name": "Spoiler Alert",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
    ]
   },
   "spotify": {
@@ -10152,6 +10218,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "tebra": {
+   "name": "Tebra",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "techagisolutionsllcdice": {
    "name": "TECHAGI SOLUTIONS LLC (Dice)",
@@ -11577,7 +11653,24 @@
   "zuora": {
    "company": "Zuora",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Sr Director, Payments Engineering"
+   ],
+   "count": 1
+  },
+  "zwift": {
+   "name": "Zwift",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager, Game Experience"
+   ]
   },
   "zyxwaretechnologies": {
    "name": "Zyxware Technologies",

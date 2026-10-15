@@ -76,7 +76,7 @@ TEXT_RULES=[
  (r"years of (hands-on )?(experience )?(with )?(databricks|apache spark|spark)", "10"),   # applicant 2026-10-12
  (r"percentage of back ?-?end|back ?-?end .{0,20}vs\.? .{0,10}front ?-?end", "About 65% back-end, 35% front-end"),   # applicant 2026-10-12
  (r"(work|working) .{0,30}(us )?eastern time( zone)? hours|eastern time zone hours", "Yes. I am based in Pacific time (Santa Clara, CA) and can work full-time US Eastern hours."),   # applicant 2026-10-12
- (r"on what date can you start|date available for work|available start date", "10/22/2026"),
+ (r"on what date can you start|date available for work|available start date|what date would you be available to (onboard|start|join)", "10/22/2026"),
  (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
  (r"by typing my name below|type your full name to (sign|attest)|typing your name .{0,40}(signature|attest)", "Ambarish Krishnamurthy"),
@@ -345,6 +345,15 @@ TEXT_RULES=[
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
 CHOICE_RULES=[
+ (r"best describes your ability to meet .{0,40}(nyc|new york) office attendance|(nyc|new york) office attendance requirements", ["I live over 1 hour away from the NYC office","I live over 1 hour away"]),   # 10-15 DriveWealth: lives in Santa Clara (truthfully over an hour away) and will relocate for an NYC hybrid role, so not the "require remote / cannot meet" option
+ (r"open to u\.?s\.?[- ]based candidates only", ["I am based in the U.S., and I am authorized to work in the U.S.","I am based in the U.S."]),   # 10-15 Spoiler Alert (U.S. citizen in California)
+ (r"background check (that includes|with) (identity|identify) and work history verification", ["I am willing to participate in a background check","I am willing to participate"]),   # 10-15 Spoiler Alert: a later-stage check; nothing is entered now
+ (r"directly managed an engineering team responsible for .{0,80}advertising technology", ["No","no"]),   # 10-15 MyFitnessPal: no ad-tech / consumer mobile ads in his record (truthful No)
+ (r"did you (meet with|see|visit) .{0,80}(event|conference|booth|meetup)", ["No","no"]),   # 10-15 Defense Unicorns
+ (r"have you added your full legal name", ["Yes","yes"]),   # 10-15 Graphcore: the name entered is his full name as on the resume
+ (r"which of our offices would you prefer to work from|which (office|location) would you prefer to work (from|in|out of)", ["Milpitas, California","San Francisco","Palo Alto","Mountain View","Sunnyvale","San Jose","Santa Clara","Remote","New York"]),   # 10-15 Graphcore: lives in Santa Clara (Bay Area office first)
+ (r"located within \d+ miles of the .{0,120}office.{0,40}which location", ["None","None of the above","No"]),   # 10-15 FanDuel: Santa Clara is not within 120 miles of NY / Jersey City / Atlanta / LA / Toronto
+ (r"unlawful in massachusetts to require or administer a lie detector", ["I don’t reside in Massachusetts.","I don't reside in Massachusetts.","I do not reside in Massachusetts","I am in California and I agree"]),   # 10-15 FanDuel (lives in California)
  (r"(ever been )?(disqualified|excluded|debarred) from or denied participation in any federal or state health ?care program|excluded from (participation in )?(any )?federal (or state )?health ?care program", ["No","no"]),
  (r"(do you have|hold) any professional licenses? or certifications? that (pertain|relate|apply) to", ["No","no"]),   # he holds none
  (r"(are you|were you) (currently )?(or were you previously )?(currently )?an? .{0,40}employee\b|currently or (were you )?previously .{0,40}employee", ["No","no"]),
