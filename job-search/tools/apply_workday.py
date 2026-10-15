@@ -691,6 +691,8 @@ async def date_field(page, box, lab):
     d = today
     return await set_date(page, box, d.month, d.day, d.year)
 
+SIGN_BOX = re.compile(r"checking the box is equivalent to a handwritten signature|same authority as my original signature|equivalent to (my|a) (handwritten|written) signature", re.I)
+NO_AI_CERT = re.compile(r"personally (completed|filled|prepared|written|wrote)|(without|no) (the )?(use|help|assistance) of (any )?(ai\b|artificial intelligence|generative|chatgpt|automated tools)|my own (independent )?work|not (to )?(use|used) (any )?(ai\b|artificial intelligence|generative)", re.I)   # a no-AI / personally-completed certification is never signed by the bot
 DISC = re.compile(r"non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|yes, i (have|had) (a |an )?(disabilit|relative|family|conflict|financial|non-?compete|criminal|conviction)|^\s*i have a disability", re.I)   # 'Yes, I have read the Terms' is an acknowledgement, not a disclosure
 ACK = re.compile(r"i (hereby )?(have read|acknowledge|agree|understand|consent|certify|confirm)|terms and conditions|privacy (notice|policy|statement)|^accept\*?$|i accept|by (selecting|checking|clicking) (the|this) (check)?box|(check|select|tick) (this|the) (check)?box to (confirm|agree|acknowledg|accept|consent|certif|indicate)|confirm the statement|you (hereby )?(declare|confirm|acknowledge|certify|agree) that you have read|read, understood,? and accepted|have read and accept(ed)? the", re.I)
 class Job:
@@ -880,6 +882,13 @@ async def fill_field(page, job, f):
     if kind == "checkbox":   # one box: an acknowledgement / consent is ticked, a disclosure never is
         cb = box.locator('input[type="checkbox"]').first
         t = await input_label(cb) or lab
+        if SIGN_BOX.search(t) or SIGN_BOX.search(lab):
+            # an e-signature box signs the terms printed above it (10-15 Patterson: accuracy certification, background-check
+            # authorization, at-will): tick it only when nothing on the page certifies a personally completed / no-AI application
+            try: body = await page.inner_text("body")
+            except Exception: body = ""
+            if body and not NO_AI_CERT.search(body) and not DISC.search(t): return keep(t) if await set_check(cb, True) else None
+            job.report.setdefault("rule_conflicts", []).append(f"{t[:120]} -> signature box left for the applicant"); return cur or None
         if DISC.search(t) or not (ACK.search(t) or ACK.search(lab)): return cur or None
         return keep(t) if await set_check(cb, True) else None
     if kind in ("text", "textarea"):
