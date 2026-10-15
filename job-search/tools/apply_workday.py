@@ -670,6 +670,8 @@ async def set_date(page, box, month=None, day=None, year=None):
             except Exception: pass
             await loc.first.focus(); await page.keyboard.type(v, delay=80); await page.wait_for_timeout(200)
         except Exception: pass
+    try: await page.keyboard.press("Tab")   # blur commits the typed sections (10-15 Deckers / Risepoint: the date showed but read as empty)
+    except Exception: pass
     await page.wait_for_timeout(300)
     try: shown = [t.strip() for t in await box.locator('[data-automation-id$="-display"]').all_inner_texts()]
     except Exception: shown = []

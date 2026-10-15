@@ -347,7 +347,9 @@ TEXT_RULES=[
  (r"university|school|college|alma mater", "University of Madras"),
  (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
 ]
+NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (NO_EXP_DOMAIN.pattern, ["0 - 1 year","0-1 year","0-1 years","0 – 1 year","Less than 1 year","< 1 year","None","0"]),   # 10-15 Guardant: no diagnostic / medical-device / pharma years on his record (truthful lowest band)
  (r"best describes your ability to meet .{0,40}(nyc|new york) office attendance|(nyc|new york) office attendance requirements", ["I live over 1 hour away from the NYC office","I live over 1 hour away"]),   # 10-15 DriveWealth: lives in Santa Clara (truthfully over an hour away) and will relocate for an NYC hybrid role, so not the "require remote / cannot meet" option
  (r"open to u\.?s\.?[- ]based candidates only", ["I am based in the U.S., and I am authorized to work in the U.S.","I am based in the U.S."]),   # 10-15 Spoiler Alert (U.S. citizen in California)
  (r"background check (that includes|with) (identity|identify) and work history verification", ["I am willing to participate in a background check","I am willing to participate"]),   # 10-15 Spoiler Alert: a later-stage check; nothing is entered now
@@ -1227,7 +1229,7 @@ async def choose_react_select(page,control,options_pref,label):
         except Exception: return ""
     # Years-of-experience menus ("<1, 1 .. 9, >9", "5+", "10+ years"): the right answer is the highest band
     # the menu offers, which no fixed preference list can know in advance. Read the menu and put it first.
-    if has_inp and re.search(r"years? of (professional |relevant |software |industry |work |engineering )?experience|how many years|years in the (software )?industry",label or "",re.I):
+    if has_inp and re.search(r"years? of (professional |relevant |software |industry |work |engineering )?experience|how many years|years in the (software )?industry",label or "",re.I) and not NO_EXP_DOMAIN.search(label or ""):
         try:
             await inp.scroll_into_view_if_needed(timeout=3000); await open_menu(control,inp); await page.wait_for_timeout(700)
             _o,_t=await visible_options(page)
