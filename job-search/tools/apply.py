@@ -77,6 +77,7 @@ TEXT_RULES=[
  (r"percentage of back ?-?end|back ?-?end .{0,20}vs\.? .{0,10}front ?-?end", "About 65% back-end, 35% front-end"),   # applicant 2026-10-12
  (r"(work|working) .{0,30}(us )?eastern time( zone)? hours|eastern time zone hours", "Yes. I am based in Pacific time (Santa Clara, CA) and can work full-time US Eastern hours."),   # applicant 2026-10-12
  (r"on what date can you start|date available for work|available start date|what date would you be available to (onboard|start|join)", "10/22/2026"),
+ (r"describe your experience building or implementing ai-assisted analytics", "Yes. I built a multi-model evaluation platform with a 121-measure scorecard, a benchmarking UI and 3 MCP servers / 9 tools, and I design RAG and multi-agent workflows (LangChain, LangGraph, MCP, tool calling, model routing). I treat these the way I run financial platforms: data stays behind least-privilege, audited tool access with strong security controls; answers are grounded in retrieved sources and measured with evaluation suites before release, so accuracy and hallucination are tracked rather than assumed; and model choices, approvals and changes are recorded as decisions, with security, legal and compliance (GDPR/CCPA, secure SDLC) involved from the start."),   # 10-15 Cambium Learning (resume facts only)
  (r"specify details from your answer above|please specify .{0,30}\(?example: job board name", "Found the posting on the company's Greenhouse job board (careers page); no employee referral."),   # 10-15 Samsung Research America: follow-up to the source question (found by our Greenhouse board sweep)
  (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
@@ -359,7 +360,11 @@ CHOICE_RULES=[
  (r"willing to work (in|from|at) (san jose|santa clara|sunnyvale|mountain view|palo alto|san francisco|menlo park|redwood city|cupertino|milpitas|fremont|san mateo)\b", ["Yes","yes"]),   # lives in Santa Clara (10-15 Archer San Jose)
  (r"^do you (have|hold|possess) an? master.?s degree", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (10-15 Archer)
  (r"highly skilled with ai and ml frameworks|skilled (with|in) (ai|ml|machine learning)( and (ai|ml))? frameworks.{0,40}(pytorch|tensorflow)", ["Yes","yes"]),   # resume: language models with PyTorch/TensorFlow, open-model serving
- (r"eligible to work in the city/state/country in which this position is located", ["Yes","yes"]),   # 10-15 BigCommerce (U.S. citizen; queued roles are U.S.)
+ (r"eligible to work in the city/state/country in which this position is located", ["Yes","yes"]),
+ (r"what is your work eligibility status in the (us|u\.s\.|united states)", ["US Citizen","U.S. Citizen","United States Citizen"]),   # 10-15 Seneca Holdings
+ (r"enrolled member of the .{0,40}nation", ["No","no"]),   # 10-15 Seneca Holdings (tribal membership: no)
+ (r"ever been employed by .{0,60}family of companies", ["Not Applicable","No","Never"]),   # 10-15 Seneca Holdings
+ (r"^if yes, please select the company below", ["N/A - None of the below","N/A","None of the above","Not Applicable"]),   # 10-15 Seneca Holdings follow-up   # 10-15 BigCommerce (U.S. citizen; queued roles are U.S.)
  (r"^have you represented yourself and your experience truthfully", ["Yes","yes"]),   # 10-15 Velir (answers come from his resume and standing answers)
  (r"^are you a bot\??\*?$", ["__ASK__"]),   # 10-15 Velir: an AI agent fills these forms, so the applicant answers this himself (never the filler)
  (r"annual base salary expectation in usd", ["$200K – $250K","$200K - $250K","$250K – $300K","$250K - $300K"]),   # 10-15 Alteryx $50K brackets (IC $200K-$300K: the lower band inside his range)
