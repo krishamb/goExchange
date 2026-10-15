@@ -64,7 +64,7 @@ def secret():
     """The applicant's Workday logins (JOBS_DIR/wf_creds.json {"workday": {"email", "passwords": [...], "new_account_email",
     "new_account_password"}}): sign in with email + passwords[0]; new tenant accounts use new_account_email / password.
     Per-tenant state (which login worked) is kept in JOBS_DIR/wd_secret.json, outside the repository, without passwords."""
-    s = json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
+    s = _load_state()
     c = json.load(open(os.path.join(JOBS_DIR, "wf_creds.json"))).get("workday") if os.path.exists(os.path.join(JOBS_DIR, "wf_creds.json")) else None
     if c and c.get("email") and c.get("passwords"):
         s["email"], s["passwords"] = c["email"], list(c["passwords"])
@@ -74,9 +74,18 @@ def secret():
         s.setdefault("email", P["email"])
         s.setdefault("passwords", ["".join(secrets.choice(string.ascii_letters + string.digits) for _ in range(14)) + "!7aZ"])
     s["password"] = s["passwords"][0]
-    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(SECRET, "w"), indent=1); os.chmod(SECRET, 0o600)
+    save_secret(s)
     return s
-def save_secret(s): json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(SECRET, "w"), indent=1)
+def _load_state():
+    """Per-tenant state; parallel bots write it too, so an empty / half-written read is retried (10-15: 3 of 5 bots died on one)."""
+    for _ in range(20):
+        try: return json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
+        except json.JSONDecodeError: time.sleep(0.25)
+    return {"tenants": {}}
+def save_secret(s):   # atomic: write a temp file, then rename it over the state file
+    tmp = f"{SECRET}.{os.getpid()}.tmp"
+    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(tmp, "w"), indent=1)
+    os.chmod(tmp, 0o600); os.replace(tmp, SECRET)
 def tenant_of(url):
     m = re.match(r"https?://([^/]+)/(?:recruiting/)?([^/]+)/(?:en-US/)?([^/]+)", url)
     host = m.group(1) if m else url
@@ -284,7 +293,7 @@ DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
 HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
 AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|(did|have) you use(d)? (any )?ai", re.I)
-AI_PLEDGE = re.compile(r"agree (not to|to not) use (artificial intelligence|\bai\b|generative ai)|not (to )?use (artificial intelligence|\bai\b|generative ai|ai tools) (during|in|for) (your |the |any )?(interviews?|assessments?|skills? test)", re.I)   # 10-09 applicant: Yes, he agrees not to use AI in interviews (apply.py rule answers it)
+AI_PLEDGE = re.compile(r"agree (not to|to not) use (artificial intelligence|\bai\b|generative ai)|not (to )?use (artificial intelligence|\bai\b|generative ai|ai tools) (during|in|for) (your |the |any )?(interviews?|assessments?|skills? test)|complete all interviews( and assessments)? through my own independent work", re.I)   # 10-09 applicant: Yes, he agrees not to use AI in interviews (apply.py rule answers it)
 AI_EXP = re.compile(r"experience (designing|building|developing|deploying|with|in)\b[^?]{0,40}\bai agents?|ai agents? (development )?experience", re.I)   # a factual experience question (resume: Hyperion AI agentic platform), not an AI-use declaration
 AI_CONSENT = re.compile(r"hiredscore|ai-assisted review|harness the power of artificial intelligence|consent to the use of ai on this (job )?application|we analy[sz]e your application|ai-powered talent matching|(ai|artificial intelligence|automated) tools? to (help with the initial screening|review your application|assess how your|assist in reviewing applications)|initial screening of resumes|in the application screening process|transcri|note-?tak|summar(y|ies) of (your|the) interview|record(ing)? (of )?(your|the) interview|interview (notes|recordings?)|consent to the use of (ai|artificial intelligence)( tools)? (for|in|to) (evaluat|review|assess|screen)|tools to assist in the evaluation of (job )?applications", re.I)   # the company's own AI note-taker: a consent the rules answer
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
