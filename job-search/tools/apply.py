@@ -368,6 +368,7 @@ CHOICE_RULES=[
  (r"are you,? or are you related to,? a current customer,? supplier", ["No","no"]),   # 10-15 Calix
  (r"^what is your preferred language\W*$", ["English"]),   # 10-15 Ferguson
  (r"to the best of your knowledge,? are you related to or a close associate of someone", ["No","no"]),
+ (r"if you do not currently live in the area for this position,? are you willing to relocate", ["Yes","yes"]),   # 10-15 Acrisure: he relocates for the right role (and lives near its San Jose office)
  (r"track and report certain payments and transfers of value provided to certain health ?care professionals", ["C","(C) None of the above","None of the above"]),   # 10-15 Abbott: not a physician / licensed prescriber   # 10-15 MUFG (no known relationship to its customers' staff)
  (r"which generation applies to you|(what is your|select your) (age range|generation)|^age range\W*$", ["Prefer not to answer","I prefer not to answer","Decline to answer","Decline to self-identify","I don't wish to answer"]),   # 10-15 Rocket: an age / birth-year proxy is never given (no DOB rule)
  (r"potential reasons were important to your decision to apply", ["Opportunity for career advancement","Company reputation"]),   # 10-15 Disney (never "Friends/Family work at Disney" or "Park admission")
