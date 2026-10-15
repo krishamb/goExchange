@@ -368,6 +368,9 @@ CHOICE_RULES=[
  (r"are you an? (existing|current) (employee|team member) (at|of|with)", ["Not an Existing Employee","Not an existing employee","No","None of the above","N/A"]),   # 10-15 Life360 / Tile / Jiobit
  (r"(citizen|national|resident)s?,? .{0,40}of any of the following (countries|nations|regions)", ["None / Not applicable","None/Not applicable","None / Not Applicable","Not applicable","None of the above","None","Does not apply"]),   # 10-15 Torc export control (U.S. citizen)
  (r"if you checked any of the boxes above other than none", ["Not applicable","None / Not applicable","N/A","None","Does not apply"]),   # 10-15 Torc follow-up (nothing checked)
+ (r"legally entitled to work in the us or canada|entitled to work in (the )?(us|united states) or canada", ["US","United States","USA"]),   # 10-15 Clariti (U.S. citizen)
+ (r"(is|are) the (compensation|salary|pay) (range|band)s? within your expectations", ["Yes","yes"]),   # 10-15 Clariti
+ (r"rate your ai (fluency|maturity)|ai (fluency|maturity) level", ["Transformation","Optimization"]),   # 10-15 Clariti: CTO of an AI-first company that built agentic platforms (AI as a core capability)
  (r"(live|reside|located) in .{0,40},? or (are you )?willing to relocate", ["Yes","yes"]),   # 10-15 Kaseya: "Do you currently live in ___, or are you willing to relocate there?" (willing to relocate)
  (r"professional english fluency|english fluency|speak, write,? and read english", ["Yes","yes","Fluent","Native"]),   # 10-15 Kaseya
  (r"provide documentation (reflecting|of|verifying|for) (the )?(education|employment)", ["Yes","yes"]),   # 10-15 Justworks
