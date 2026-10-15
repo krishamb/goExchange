@@ -355,6 +355,9 @@ CHOICE_RULES=[
  (r"located on the west coast|west coast hours", ["Yes","yes"]),   # 10-14 R-Zero: lives in Santa Clara, CA
  (r"prior interaction with .{0,60}(workshop|fab tour|engagement activit)", ["No","no"]),   # 10-14 GlobalFoundries
  (r"(present|past|present/past).{0,30}affiliation or working relationship with", ["No","no"]),   # 10-14 Gilead / Kite
+ (r"are you an? (existing|current) (employee|team member) (at|of|with)", ["Not an Existing Employee","Not an existing employee","No","None of the above","N/A"]),   # 10-15 Life360 / Tile / Jiobit
+ (r"(citizen|national|resident)s?,? .{0,40}of any of the following (countries|nations|regions)", ["None / Not applicable","None/Not applicable","None / Not Applicable","Not applicable","None of the above","None","Does not apply"]),   # 10-15 Torc export control (U.S. citizen)
+ (r"if you checked any of the boxes above other than none", ["Not applicable","None / Not applicable","N/A","None","Does not apply"]),   # 10-15 Torc follow-up (nothing checked)
  (r"accept responsibility for (continued|maintaining|ongoing|continuing) work (eligibility|authori[sz]ation)", ["Yes","yes"]),   # 10-14 J.D. Power (U.S. citizen)
  (r"(directly )?owned a production (data|ml|ai|analytics)? ?(system|pipeline|platform)", ["Yes — I was directly accountable for production reliability","Yes - I was directly accountable","Yes"]),   # 10-14 TGH: resume (Yahoo Finance market-data platform, Hyperion AI data services)
  (r"consent to the use of (ai|artificial intelligence)( tools)? (for|in|to) (evaluat|review|assess|screen)|tools to assist in the evaluation of (job )?applications", ["I consent","Yes, I consent","Yes","I agree","I accept","I have read and understand","I acknowledge","Acknowledged"]),   # 10-14 OneOncology: applicant consents to employer AI screening (never opt out)
