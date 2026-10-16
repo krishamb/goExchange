@@ -707,7 +707,7 @@ async def set_date(page, box, month=None, day=None, year=None):
     try: shown = [t.strip() for t in await box.locator('[data-automation-id$="-display"]').all_inner_texts()]
     except Exception: shown = []
     return "/".join(shown) if shown and all(t.isdigit() for t in shown) else None
-TODAY_Q = re.compile(r"today|signature date|date signed|^date\*?$|^signed on|date of signature")
+TODAY_Q = re.compile(r"today|signature date|date signed|^date\*?$|^signed on|date of signature|by entering the date below you (have )?acknowledg")   # The RealReal: dated acknowledgement of the invention-disclosure condition
 async def date_field(page, box, lab):
     """Today's date on signature / 'today's date' fields (Self Identify form); any other date is left for the applicant.
     Workday checks it against the browser's clock (the context's America/Los_Angeles time zone)."""
