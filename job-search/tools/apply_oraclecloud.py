@@ -1029,6 +1029,16 @@ async def run_one(br, item):
         job.report["challenge"] = any(challenge)
         if re.search(r"already applied|you have applied|you.ve applied", await text(page), re.I):
             job.report["result"] = "ALREADY APPLIED on this company's Oracle site"; return job.report
+        if not await page.locator("apply-flow-block, .apply-flow-block").count() and re.search(r"page has expired", await text(page), re.I):
+            rb = page.get_by_role("button", name=re.compile(r"resume application", re.I))   # Pearson / Hertz: 'Your page has expired. RESUME APPLICATION'
+            if await rb.count():
+                try:
+                    await rb.first.click(timeout=5000)
+                    for _ in range(20):
+                        await page.wait_for_timeout(1000)
+                        if await page.locator("apply-flow-block, .apply-flow-block").count(): break
+                    job.report.setdefault("notes", []).append("clicked RESUME APPLICATION on an expired page")
+                except Exception: pass
         if not await page.locator("apply-flow-block, .apply-flow-block").count():
             await page.screenshot(path=f"{OUT}/{job.tag}_{ATS}_error.png", full_page=True)
             job.report["result"] = "NOT SUBMITTED: the application form did not open"; job.report["errors"].append(re.sub(r"\s+", " ", await text(page))[:300]); return job.report
