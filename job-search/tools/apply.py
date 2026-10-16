@@ -1191,13 +1191,14 @@ async def visible_options(page):
         try: t.append((await o.nth(i).inner_text()).strip())
         except Exception: t.append("")
     return o,t
-def _match(t,pref,strict=False,_ASIAN_SUB=re.compile(r"^(asian\s*[-–:]\s*)?(east|southeast|south-east|central|west)\s+asian\b",re.I)):
+def _match(t,pref,strict=False,_ASIAN_SUB=re.compile(r"\b(east|southeast|south-east|central|west|western|eastern)\s+asian\b",re.I),_OURS=re.compile(r"\bsouth asian\b|\basian indian\b|\bindian\b(?! or alaska)",re.I)):
     """Option text t satisfies preference pref: equal, or pref is a leading/whole-word phrase of t ('Male' never matches 'Female'). strict: equal/leading only.
-    A broad 'Asian' never picks a different Asian subgroup ('East Asian', 'Asian - Southeast Asian'): applicant is Asian (Indian) / South Asian."""
+    An 'Asian' preference never picks an option naming another Asian subgroup ('East Asian', 'Asian - Southeast Asian', 'Middle Eastern/North African And Central Asian')
+    unless it also names South Asian / Indian: applicant is Asian (Indian) / South Asian."""
     tl,pl=t.lower().strip(),pref.lower().strip()
     if not tl or not pl: return False
-    _sg=_ASIAN_SUB.match(tl)
-    if _sg and _sg.group(2).lower() not in pl: return False
+    _sg=_ASIAN_SUB.search(tl)
+    if _sg and "asian" in pl and _sg.group(1).lower() not in pl and not _OURS.search(tl): return False
     if tl==pl or re.match(re.escape(pl)+r"($|[\s,./:;()\-'])",tl): return True
     if strict: return False
     return len(pl)>=3 and re.search(r"(^|[^a-z0-9])"+re.escape(pl)+r"($|[^a-z0-9])",tl) is not None
