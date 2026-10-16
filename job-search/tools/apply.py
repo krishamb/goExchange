@@ -365,6 +365,9 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"what level of ownership have you had over production systems", ["Owned end to end systems/platforms","Owned end-to-end systems/platforms"]),   # NYC CJA (Oct 16): CTO at Hyperion AI (platform end to end), Chief Architect Yahoo Finance (40M daily users)
+ (r"what best describes your role in cloud platform usage|what level of responsibility have you had for system reliability", ["Accountable for production system reliability"]),   # led delivery and 24x7 operation (Yahoo Finance AWS platform, Hyperion AI)
+ (r"what best describes your involvement in engineering standards", ["Defined and enforced standards across teams"]),   # CTO / Chief Architect directing 75+ engineers; evaluation gates and code review for every change
  (r"authori[sz]ed to accept (full[- ]time )?employment in the (united states|u\.?s\.?)", ["Yes","yes"]),   # Eikon (Oct 16): US citizen
  (r"if residing in the u\.?s\.?,? please provide (your )?state|please provide (your )?state( of residence)?\??$", ["California","CA"]),   # Eikon (Oct 16): Santa Clara, CA
  (r"why are you interested in working at .{0,60}select all that apply", ["__MULTI__","Passion for Fintech Industry","Flexible Work Arrangements (Remote/Hybrid)","Remote work","Flexible work"]),   # Rocket Money (Oct 16): fintech focus and remote / hybrid preference - the applicant's own search rules
