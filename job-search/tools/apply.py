@@ -1835,6 +1835,9 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 _bay=bool(re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward|Newark, CA",_top))
             except Exception: _bay=False
             JOB_CHOICE_RULES.append((r"if you are not (a )?local( candidate)?,? (do|would) you (require|need) relocation|not (a )?local candidate.{0,40}relocation", ["No","no","N/A"] if _bay else ["Yes","yes"]))
+            try: _nyla=bool(re.search(r"New York|\bNYC\b|Los Angeles",_top))
+            except Exception: _nyla=False
+            if not _bay and not _nyla: JOB_CHOICE_RULES.append((r"^(are you |would you be )?(willing|open|able) to relocate|willing(ness)? to relocate|open to relocation", ["No","no"]))   # applicant relocates only for NYC / LA hybrid roles
             JOB_TEXT_RULES=[(r"^if (yes|so).{0,80}\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", ("Yes: "+"; ".join(_prior[:3])+" (2026)") if _prior else "N/A")]
             if _prior: report["prior_company_apps"]=_prior[:5]
             global JOB_WHY
