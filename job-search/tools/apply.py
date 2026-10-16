@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"which locations would you consider for relocation", "New York, NY or Los Angeles, CA for hybrid roles. I live in Santa Clara, CA, so San Francisco Bay Area roles need no relocation."),   # Clorox (Oct 16): the applicant relocates only for NYC / LA hybrid
  (r"were you referred (to this role )?by (a |an )?(current )?.{0,60}employee\?.{0,10}if so", "No"),   # Tower Research (Oct 16): not referred
  (r"^applicant.?s statement (&|and) acknowledge?ment", P["name"]),   # Iterative Health (Oct 16): typed full name agreeing to the truthful-answers / at-will statement (same as the Marvell certification rule)
  (r"^do you have \d{1,2}\+? years (of )?(software|engineering|software development|software engineering|professional|technical)( development| engineering)? experience(,? (with|and|including) \d{1,2}\+? years (of )?(experience )?in (a )?(leadership|management|people management|engineering leadership) roles?)?\??$", "Yes"),   # PQShield (Oct 16): 25 years, 10+ leading engineers
@@ -365,6 +366,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^do you speak more than one language", ["Yes","yes"]),   # Clorox (Oct 16): English, Tamil and Hindi (see the 'other languages' rules)
+ (r"hiring process will consist of .{0,400}(copilot|note-?taking)", ["Yes","I agree","I acknowledge","I understand","Agree","Acknowledge","I consent"]),   # Clorox (Oct 16): acknowledges the described process and AI note-taking on screening calls
  (r"what level of ownership have you had over production systems", ["Owned end to end systems/platforms","Owned end-to-end systems/platforms"]),   # NYC CJA (Oct 16): CTO at Hyperion AI (platform end to end), Chief Architect Yahoo Finance (40M daily users)
  (r"what best describes your role in cloud platform usage|what level of responsibility have you had for system reliability", ["Accountable for production system reliability"]),   # led delivery and 24x7 operation (Yahoo Finance AWS platform, Hyperion AI)
  (r"what best describes your involvement in engineering standards", ["Defined and enforced standards across teams"]),   # CTO / Chief Architect directing 75+ engineers; evaluation gates and code review for every change
