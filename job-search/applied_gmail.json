@@ -14234,6 +14234,16 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "terzo": {
+   "name": "Terzo",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "(Sr/Staff) Platform Engineer"
+   ]
+  },
   "textnowinc": {
    "name": "TextNow, Inc.",
    "dates": [
