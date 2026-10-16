@@ -521,6 +521,11 @@ CHOICE_RULES=[
  (r"permit .{0,80}to process your (personal )?data .{0,140}(artificial intelligence|\bai\b)|(uses|use|using) artificial intelligence \(ai\) to (help )?(match|evaluate|screen|review|assess)|consent to .{0,60}(use|using) (of )?(ai|artificial intelligence) (tools )?(to|in) (evaluat|screen|review|assess|match)", ["Yes","I agree","I consent","I acknowledge","I understand","Accept","Agree","Opt in"]),   # consent to the EMPLOYER's AI screening (applicant: consent -> Yes); not the 'did you use AI' certification, which stays __ASK__
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
+ (r"authori[sz]e .{0,40}to communicate with me via text|do not wish to receive text messages about this application", ["No","I do not want to be contacted by text message."]),   # email only, as for Nuveen (no SMS opt-in)
+ (r"base pay expectation for this position", ["$220,000 - $240,000","$200,000 - $220,000"]),   # inside both stated ranges ($220-350K leadership, $200-300K IC)
+ (r"minimum acceptable base salary", ["$175,000 +","$175,000+","$175,000 and above"]),   # floor is $200K: the top band
+ (r"what is your base salary requirement", ["$191,000 - $200,000","$201,000 - $210,000"]),   # IC floor $200K (AudioEye bands)
+ (r"if you worked for nationwide, was it as", ["N/A","Not applicable","I have not worked for Nationwide","None of the above"]),   # never worked there
  (r"which (us )?state or province do you (currently )?live in|which state do you (currently )?(live|reside) in", ["(US) California","California","CA"]),   # Santa Clara, CA
  (r"meet the minimum (education|qualifications?)( and (years of )?experience)? required", ["Yes","yes"]),   # B.E. Computer Science + 25 years (Chamberlain Staff Engineer)
  (r"confirm your current work authori[sz]ation status", ["Yes, I am authorized to work in the country in which this job is listed","Yes, I am authorized","Yes"]),   # DT: US citizen, no sponsorship
@@ -530,7 +535,7 @@ CHOICE_RULES=[
  (r"willing to disclose .{0,80}political contributions|sec rule 206\(4\)-5", ["Yes","yes"]),   # Nuveen: willing to disclose post-offer as the SEC pay-to-play rule requires
  (r"internet speed of at least \d+\s*mbps", ["Yes","yes"]),   # Ensemble: home office broadband (as the 'minimum Mbps' rule below)
  (r"^i will be living and/or working in (?!.*california)", ["No","no"]),   # Ensemble: TN/MT statement; he lives and works in Santa Clara, CA
- (r"pending investigations? or disciplinary|disciplinary actions? .{0,60}(licen[sc]es|registrations|certifications)", ["No","no"]),
+ (r"pending investigations? or disciplinary|disciplinary actions? .{0,60}(licen[sc]es?|registrations?|certifications?|credentials)", ["No","no"]),
  (r"(currently )?enrolled in (a |an |our )?.{0,40}(medicare|medicaid|health|insurance) plan|are you (a |an )?(current )?(member|customer|patient) of", ["No","no"]),   # not a member / enrollee of the employer's plans
  (r"(minimum|dedicated|reliable) .{0,40}\b\d+\s*mbps|internet (speed|connection) .{0,60}(comply|meet|have|minimum)|high[- ]speed internet", ["Yes","yes"]),   # home office with reliable broadband
  (r"(hands-on|production) experience .{0,60}\b(fhir|hl7)\b|\b(fhir|hl7)\b.{0,80}(experience|production)|healthcare (data|interoperability|experience)", ["Production experience with both FHIR and HL7","Yes","yes"]),   # the applicant: "I have worked on Healthcare FHIR/HL7" (2026-10-08)
