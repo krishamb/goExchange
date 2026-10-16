@@ -365,6 +365,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"authori[sz]ed to accept (full[- ]time )?employment in the (united states|u\.?s\.?)", ["Yes","yes"]),   # Eikon (Oct 16): US citizen
+ (r"if residing in the u\.?s\.?,? please provide (your )?state|please provide (your )?state( of residence)?\??$", ["California","CA"]),   # Eikon (Oct 16): Santa Clara, CA
  (r"why are you interested in working at .{0,60}select all that apply", ["__MULTI__","Passion for Fintech Industry","Flexible Work Arrangements (Remote/Hybrid)","Remote work","Flexible work"]),   # Rocket Money (Oct 16): fintech focus and remote / hybrid preference - the applicant's own search rules
  (r"^which of the following have you worked with hands-?on\??", ["__MULTI__","Transport layer (L4) — TCP/UDP","Application layer (L5–L7) — HTTP, DNS, TLS, etc.","Agentic or tool-use systems","Retrieval-augmented generation (RAG)","Evaluation frameworks (offline, human-in-the-loop, or online)","Fine-tuning","Prompting"]),   # Censys (Oct 16): TCP/UDP market-data and trading transports, HTTP/TLS services; AI items as in the 'which of these' rule
  (r"(would|wish|want) (like )?to be contacted about future .{0,60}(opportunit|roles|openings|positions)", ["Yes","yes"]),   # CodePath (Oct 16): open to future roles
