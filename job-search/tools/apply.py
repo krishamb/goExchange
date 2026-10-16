@@ -354,6 +354,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"currently based in any of (these|the following) countries|which of (these|the following) countries are you (currently )?based in", ["United States","United States of America","USA","US"]),   # Vercel 2026-10-16
  (r"base salary for this role is \$?(\d{3}),\d{3}\s*[-–]\s*\$?(2\d\d|3\d\d),\d{3}.{0,40}(align|match|meet)", ["Yes","yes"]),   # posted band reaches the applicant's $200K+ IC range
  (NO_EXP_DOMAIN.pattern, ["0 - 1 year","0-1 year","0-1 years","0 – 1 year","Less than 1 year","< 1 year","None","0"]),   # 10-15 Guardant: no diagnostic / medical-device / pharma years on his record (truthful lowest band)
  (r"range (for this (role|position) )?is \[?\$1\d\d,\d{3}\s*[–-]\s*\$1\d\d,\d{3}\]? annually\.? do you acknowledge and agree that this range aligns", ["No","no"]),   # a posted range under $200K does not match his $200K+ expectation (truthful No)
@@ -464,6 +465,7 @@ CHOICE_RULES=[
  (r"which best describes how you use ai in your work", ["Architect \u2014 I've built systems with AI that others rely on","Architect"]),   # Cognitiv 2026-10-16: CTO of an AI company
  (r"do you have an? (master|ph\.?d|doctorate)\b.{0,20}(or|and)? ?(an? )?(master|ph\.?d|doctorate)?|(master'?s?|ph\.?d) (or|and) (master'?s?|ph\.?d) in an? (science|technology|stem|technical)", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (Genentech 2026-10-16)
  (r"fluency in modern software architecture|solid grasp of data science and ai", ["Yes","yes"]),   # Genentech 2026-10-16: Distinguished Architect, AI/ML platforms
+ (r"double[- ]check all the information|please (review|verify|confirm) (that )?all (the )?information (provided )?(above )?is (accurate|correct)", ["I have double-checked","I have double checked","I confirm","Confirmed","Yes","I understand","Acknowledged","I acknowledge"]),   # Vercel 2026-10-16
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
