@@ -365,6 +365,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^are you (able|eligible|allowed|permitted) to work in the (united states|u\.?s\.?a?\.?|us)\b", ["Yes","yes"]),   # Zeta Global (Oct 16): US citizen
  (r"^did (an? )?ai( tool| agent| assistant)? (complete|fill( out)?|submit|prepare|write) (this|the|your) application", ["Yes","yes"]),   # Censys (Oct 16): truthful disclosure - an AI agent fills these forms (applicant: AI used = Yes)
  (r"which of the following backend languages do you have deep expertise", ["__MULTI__","C++","Golang","Go","Java","Python","Rust"]),   # MariaDB (Oct 16): writes Python, Go, Rust, C++; years of production Java (reviewed answers)
  (r"which public clouds,? (do )?you have hands-on production experience", ["__MULTI__","Amazon Web Services (AWS)","AWS"]),   # AWS only: Yahoo Finance AWS modernization (no Azure/GCP track record on file)
