@@ -1396,6 +1396,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "avidxchangeinc": {
+   "name": "AvidXchange, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Data Engineer"
+   ]
+  },
   "avilait": {
    "name": "Avila IT",
    "dates": [
@@ -1995,9 +2005,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr Platform Engineer, ML Infrastructure"
+    "Sr Platform Engineer, ML Infrastructure",
+    "Director of Engineering, See & Scout"
    ]
   },
   "blueshieldofcalifornia": {
@@ -2211,6 +2222,16 @@
     "Director, Software Engineering - Team Art Locker Platform"
    ],
    "via": "gmail confirmation (Workday)"
+  },
+  "bstock": {
+   "name": "B-Stock",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (AI-Native)"
+   ]
   },
   "bubble": {
    "company": "bubble",
@@ -2499,6 +2520,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "caylent": {
+   "name": "Caylent",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect"
+   ]
   },
   "cedana": {
    "company": "cedana",
@@ -8937,6 +8968,16 @@
     "Member of Technical Staff 4- End User Computing (EUC)"
    ]
   },
+  "nutrafol": {
+   "name": "Nutrafol",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Backend Developer - e-commerce"
+   ]
+  },
   "nuveen": {
    "name": "Nuveen",
    "dates": [
@@ -10869,6 +10910,16 @@
    ],
    "count": 1
   },
+  "rushstreetinteractive": {
+   "name": "Rush Street Interactive",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering"
+   ]
+  },
   "rxsense": {
    "name": "RxSense",
    "dates": [
@@ -11309,6 +11360,16 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer, Accounting Integrations"
+   ]
+  },
+  "sezzle": {
+   "name": "Sezzle",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Infrastructure Engineer"
    ]
   },
   "shiinternational": {
@@ -12666,9 +12727,13 @@
   "togetherai": {
    "name": "Together AI",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer \u2014 Infra Agent Systems"
+   ]
   },
   "torcrobotics": {
    "name": "Torc Robotics",
@@ -13011,9 +13076,13 @@
   "upboundjobposting": {
    "name": "Upbound - Job Posting (Greenhouse alias)",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "upstart": {
    "name": "Upstart",
