@@ -362,6 +362,9 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"subject to any obligations or restrictions that (might|could|would|may) (impact|affect|limit)", ["No","no"]),   # same standing answer as the non-compete rules (Nextiva, Oct 16)
+ (r"are you a current or former [\w .&-]{2,40} employee\??$", ["Not Applicable","No","Neither","I have never worked"]),
+ (r"located within \d+ miles of our .{0,80}(headquarters|office)", ["I live outside the 40-mile radius and can work remotely","I live outside"]),   # remote US role, lives in Santa Clara
  (r"do you have a master.?s degree|master.?s degree \(or (its )?foreign", ["No","no"]),   # B.E. only (Pinterest, Oct 16)
  (r"are you willing to work in (santa monica|los angeles|culver city|san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|oakland|new york|manhattan|brooklyn)", ["Yes","yes"]),   # RAND (Oct 16): Bay Area home; LA / NYC hybrid allowed
  (r"are you willing to work in (washington|pittsburgh|boston|arlington|chicago|seattle|austin|denver|atlanta|dallas)", ["No","no"]),   # other US cities only if remote
