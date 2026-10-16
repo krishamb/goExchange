@@ -572,9 +572,14 @@
   "alltechconsultingservicesincdice": {
    "name": "Alltech Consulting Services, Inc. (Dice)",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Redshift Architect Senior Manager",
+    "Forward deployment Lead / Architect"
+   ]
   },
   "alluxio": {
    "name": "Alluxio",
@@ -1185,7 +1190,7 @@
    ],
    "count": 2,
    "roles": [
-    "Staff Backend Software Engineer \u2013 Platform Enablement"
+    "Staff Backend Software Engineer – Platform Enablement"
    ]
   },
   "audioeye": {
@@ -1394,11 +1399,12 @@
    "name": "BackOps AI",
    "dates": [
     "2026-10-11",
-    "2026-10-13"
+    "2026-10-16"
    ],
    "count": 2,
    "roles": [
-    "Engineering Manager, Core Product Engineering"
+    "Engineering Manager, Core Product Engineering",
+    "AI/ML Engineer"
    ]
   },
   "backpack": {
@@ -1637,7 +1643,7 @@
    ],
    "count": 2,
    "roles": [
-    "Sr Engineering Manager \u2013 API & Auth Platform"
+    "Sr Engineering Manager – API & Auth Platform"
    ]
   },
   "beyondfinance": {
@@ -1751,6 +1757,16 @@
    "count": 1,
    "note": "rejected (do not re-apply)",
    "rejected": true
+  },
+  "blackstrawllcdice": {
+   "name": "Blackstraw LLC (Dice)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Architect"
+   ]
   },
   "blee": {
    "name": "blee",
@@ -3443,7 +3459,7 @@
    ]
   },
   "dept": {
-   "name": "DEPT\u00ae",
+   "name": "DEPT®",
    "dates": [
     "2026-10-03"
    ],
@@ -4991,7 +5007,7 @@
    "count": 3,
    "roles": [
     "Head of AI Community",
-    "Lead \u2013 AI Quant Engineer - Project Sandbox"
+    "Lead – AI Quant Engineer - Project Sandbox"
    ]
   },
   "freestar": {
@@ -5576,7 +5592,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Gr\u00fcns",
+   "name": "Grüns",
    "dates": [
     "2026-10-03"
    ],
@@ -6518,7 +6534,7 @@
    "count": 2,
    "roles": [
     "Senior Data Platform Engineer, Snowflake",
-    "Sr. Manager, Engineering \u2013 AI & Innovation"
+    "Sr. Manager, Engineering – AI & Innovation"
    ]
   },
   "jeeves": {
@@ -8012,8 +8028,8 @@
    ],
    "count": 2,
    "roles": [
-    "VP \u2013 Data Products and AI Enablement",
-    "AVP \u2013 Data Products and AI Enablement"
+    "VP – Data Products and AI Enablement",
+    "AVP – Data Products and AI Enablement"
    ]
   },
   "muonspace": {
@@ -10429,7 +10445,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schr\u00f6dinger",
+   "name": "Schrödinger",
    "dates": [
     "2026-10-01"
    ],
@@ -10742,7 +10758,7 @@
    ],
    "count": 1,
    "roles": [
-    "Director, Software Engineering \u2013 Residential"
+    "Director, Software Engineering – Residential"
    ]
   },
   "simpsonthacherbartlettllp": {
@@ -12209,7 +12225,7 @@
    "count": 3,
    "roles": [
     "Sr. Machine Learning Engineer",
-    "Principal Engineer, Enterprise AI \u2014 Technical Fellow Office"
+    "Principal Engineer, Enterprise AI — Technical Fellow Office"
    ]
   },
   "unitytechnologies": {
@@ -12411,7 +12427,7 @@
    ],
    "count": 2,
    "roles": [
-    "Forward-Deployed Engineer\u00a0"
+    "Forward-Deployed Engineer "
    ]
   },
   "veridiantech": {
@@ -12623,7 +12639,7 @@
    ],
    "count": 1,
    "roles": [
-    "Architect \u2013 Object Storage & Database Systems"
+    "Architect – Object Storage & Database Systems"
    ]
   },
   "watney": {
@@ -13112,7 +13128,7 @@
    ],
    "count": 3,
    "roles": [
-    "Staff Software Engineer \u2013 Integrations Platform",
+    "Staff Software Engineer – Integrations Platform",
     "Senior Data Engineer - Data Platform"
    ]
   },
