@@ -365,6 +365,9 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"which of the following backend languages do you have deep expertise", ["__MULTI__","C++","Golang","Go","Java","Python","Rust"]),   # MariaDB (Oct 16): writes Python, Go, Rust, C++; years of production Java (reviewed answers)
+ (r"which public clouds,? (do )?you have hands-on production experience", ["__MULTI__","Amazon Web Services (AWS)","AWS"]),   # AWS only: Yahoo Finance AWS modernization (no Azure/GCP track record on file)
+ (r"(have )?at least 2 years of your software development,? been focused on data-intensive", ["__MULTI__","I have 2+ years of development focused on data-intensive applications","I have 2+ years of development focused on enterprise software"]),   # market-data / trading platforms and enterprise systems (25 years)
  (r"do you live within (a |an )?(4[5-9]|[5-9]\d|1\d\d)[- ]?miles?( radius)? of the following locations.{0,200}(san francisco|san jose|santa clara|bay area|palo alto|mountain view|sunnyvale)", ["Yes","yes"]),   # Etsy (Oct 16): Santa Clara is ~40 miles from San Francisco
  (r"what is your english (level|proficiency)|english (proficiency )?level\??$", ["C2","Native","Native or bilingual","Fluent","C1"]),   # Sezzle (Oct 16): CEFR scale; 25 years working in English in the US
  (r"have you personally done in a production data engineering", ["Implemented real-time data pipelines","Built AI/LLM/RAG data pipelines","Optimized Spark/PySpark workloads"]),   # AvidXchange (Oct 16): only items on his record (real-time market-data pipelines, LLM/RAG at Yahoo Finance and Hyperion, Spark); one tick satisfies the required list
@@ -2142,6 +2145,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                     for k,v in extra.items():
                         if k.lower() in (name+" "+lab).lower(): pref=[v]; break
                     pref=pref or pick(lab,CHOICE_RULES)
+                    if pref and pref[0]=="__MULTI__": pref=pref[1:]   # multi-select rule used on a single-choice menu: its options in order
                     if pref==["__ASK__"]: pref=None
                     if pref:
                         got=await choose_select(page,h,pref,lab); report["chosen"][lab[:60]]=got
@@ -2177,6 +2181,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         for k,v in extra.items():
                             if k.lower() in lab.lower(): pref=[v]; break
                         pref=pref or pick(lab,CHOICE_RULES)
+                        if pref and pref[0]=="__MULTI__": pref=pref[1:]   # multi-select rule used on a single-choice menu: its options in order
                         if pref==["__ASK__"]:
                             report["unanswered"].append({"type":"combo","label":lab[:160],"note":"AI-use question left for user"}); continue
                         if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
@@ -2338,6 +2343,16 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         is_src=bool(re.search(r"hear about|learn about|find out about|source|referred|how did you find",q+" "+lab,re.I))
                         want=pick(q or lab,CHOICE_RULES) or (["LinkedIn","Job Board","Online Job Board","Social Media","Other"] if is_src else None)
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
+                        if want[0]=="__MULTI__":   # a rule listing every option true for the applicant (Oct 16 MariaDB): tick each one it names, nothing else
+                            mem=[b[1] for b in members]; ticked=[]
+                            for pv in want[1:]:
+                                bi=best_index(mem,str(pv))
+                                if bi is not None and mem[bi][:40] not in ticked:
+                                    try: await tick(members[bi][0]); ticked.append(mem[bi][:40])
+                                    except Exception: pass
+                            report["chosen"][(q or lab)[:60]]=", ".join(ticked)
+                            if not ticked: report["unanswered"].append({"type":"checkbox","label":(q or lab)[:160],"note":"multi rule matched no option","options":mem[:8]})
+                            continue
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
                         if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not HEAR_BAD.search(b[1])] or members   # never claim a referral, an event or a recruiter as the source (LinkedIn is the real source)
                         if re.search(r"select all that apply|check all that apply|environments|best describes?|which (of the following )?(technolog|tools|languages|frameworks|services|platforms|types of|kinds of|practices|people-leadership|leadership)",q,re.I) and not re.search(r"hear|learn|source|where have you seen|personally done|ethnic|race|gender|disab|veteran|pronoun|sanction|citizenship|countr",q,re.I):
