@@ -363,6 +363,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"experience leading backend-heavy teams or customer-facing feature teams", ["Both","Backend-heavy"]),   # Boulevard (Oct 16): backend-heavy trading / platform teams and the Yahoo Finance consumer product
  (r"are you (an? )?(eu|european union) (resident|citizen)|do you (currently )?(reside|live) in the (eu|european union)", ["No","no"]),   # Adaptive (Oct 16): Santa Clara, CA; US citizen
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*have you (ever )?(been|worked as) (a|an) .{0,60}\bemployee\??$", ["No","no"]),   # AB InBev (Oct 16): never worked there (former employers excluded)
  (r"apply to this job as a person with disabilit", ["No","no","I prefer not to disclose","Prefer not to disclose"]),   # AB InBev (Oct 16): no disability; the menu lists only disabilities or a decline

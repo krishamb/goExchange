@@ -7803,9 +7803,10 @@
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer - Services Platform"
+    "Staff Software Engineer - Services Platform",
+    "Senior Software Engineer - Treasury"
    ]
   },
   "meredithoperationscorporation": {
@@ -8654,6 +8655,16 @@
     "Mortgage Forward Deployed Engineer"
    ]
   },
+  "octane": {
+   "name": "Octane",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Infrastructure "
+   ]
+  },
   "octave": {
    "name": "Octave",
    "dates": [
@@ -8816,6 +8827,16 @@
    "company": "onton",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "ooma": {
+   "name": "Ooma",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Infrastructure Engineering"
+   ]
   },
   "opaxa": {
    "name": "Opaxa",
@@ -9085,6 +9106,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "pantheonsystemsinc": {
+   "name": "Pantheon Systems, Inc",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Connectivity & API Transformation"
+   ]
   },
   "paperlessparts": {
    "name": "Paperless Parts",
@@ -9410,6 +9441,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "pingidentity": {
+   "name": "Ping Identity",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
   "pinterest": {
    "name": "Pinterest",
    "dates": [
@@ -9668,6 +9709,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "pronto": {
+   "name": "Pronto",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Perception Engineer"
+   ]
   },
   "prophetictechnologies": {
    "name": "Prophetic Technologies",
@@ -10512,11 +10563,13 @@
   "samsara": {
    "name": "Samsara",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer, Maps Services"
+    "Staff Software Engineer, Maps Services",
+    "ML/AI - Supply Chain"
    ]
   },
   "samsungresearchamerica": {
