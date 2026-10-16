@@ -369,6 +369,13 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^earliest start month", [time.strftime("%Y %B", time.gmtime()), time.strftime("%Y %B", time.gmtime(time.time() + 31 * 86400))]),   # starts immediately: this month (else next)
+ (r"^are you an? .{0,50}\balum(na|nus|ni|nae)?\??\*?$", ["No"]),   # Success Academy: not a former student of the employer's schools
+ (r"family member or close personal relationship with anyone", ["No"]),
+ (r"current level of experience using ai tools or technologies in your work", ["I design, build, or lead AI-driven solutions as a key part of my role."]),   # CTO, Hyperion AI agentic AI platform
+ (r"^what location are you planning to work from", ["California","HQ (San Francisco, CA)"]),   # Doximity: he lives in Santa Clara, CA
+ (r"^what category best describes you\??\*?$", ["Asian","Prefer not to say","I don't wish to answer","Decline to self-identify"]),   # Doximity demographic (race) question: the applicant is Asian
+ (r"what age group are you in|^age( group| range)?\??\*?$", ["Prefer not to say","I prefer not to say","Prefer not to answer","I prefer not to answer","Decline to self-identify","Decline to answer","I don't wish to answer","I do not wish to answer"]),   # no age on record: decline only, never a guess
  (r"best describes your experience with observability in production", ["I have designed, implemented, or significantly improved observability for production systems, including monitoring, logging, alerts, dashboards, reliability metrics, and troubleshooting workflows."]),   # SLOs, OpenTelemetry / Prometheus / Grafana, 24x7 operation (Yahoo Finance)
  (r"which best describes your kubernetes experience", ["Deployed and operated clusters in production."]),   # resume: Kubernetes deployments/automation (Hyperion, exchange connectivity); not control-plane internals
  (r"hands-on experience with aws, gcp or azure", ["Deep experience with one provider"]),   # AWS (Yahoo Finance migration) deep; GCP/Azure lighter
