@@ -2964,9 +2964,13 @@
   "cvshealth": {
    "name": "CVS Health",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Manager, Software Development Engineering"
+   ]
   },
   "cyderes": {
    "name": "Cyderes",
@@ -8382,6 +8386,16 @@
    ],
    "count": 1
   },
+  "pathstone": {
+   "name": "Pathstone",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Investment Technology"
+   ]
+  },
   "pathward": {
    "name": "Pathward",
    "dates": [
@@ -8896,6 +8910,16 @@
    "company": "proteus",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "providence": {
+   "name": "Providence",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer IS - Remote"
+   ]
   },
   "psiquantum": {
    "name": "PsiQuantum",
@@ -9935,6 +9959,16 @@
     "2026-09-09"
    ],
    "count": 1
+  },
+  "servicetitan": {
+   "name": "ServiceTitan",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, AI Engineering (Agent OS Platform)"
+   ]
   },
   "servicetrade": {
    "name": "ServiceTrade",
@@ -11842,7 +11876,14 @@
   "walmart": {
    "company": "Walmart",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "(USA) Senior Manager, Software Engineering"
+   ],
+   "count": 1
   },
   "wasabitechnologies": {
    "name": "Wasabi Technologies",
@@ -12249,6 +12290,17 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "zerohash": {
+   "name": "zerohash",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Blockchain Engineer"
+   ],
+   "via": "hand apply (breezy)"
+  },
   "zeroset": {
    "name": "Zeroset",
    "dates": [
@@ -12393,17 +12445,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "zerohash": {
-   "name": "zerohash",
-   "dates": [
-    "2026-10-15"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior Blockchain Engineer"
-   ],
-   "via": "hand apply (breezy)"
   }
  }
 }
