@@ -341,6 +341,7 @@ BAD_SAVED = re.compile(r"\bwith (company |employer |visa )?sponsorship|\b(will|w
 MULTI_ALL = re.compile(r"select all (the )?(days|shifts)|(days|shifts) (you are|you're) (able|available) to work", re.I)
 WEEKDAYS = re.compile(r"monday|tuesday|wednesday|thursday|friday|weekdays?|mon-fri|monday ?- ?friday", re.I)
 DAY_SHIFTS = re.compile(r"\bday\b|first|1st|morning|business hours|standard|regular|daytime|8 ?(am|a\.m\.)|9 ?(am|a\.m\.)", re.I)
+ETH_NOT = re.compile(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)", re.I)   # 'Asian (Not Hispanic or Latino)' names a race, it is not a negated answer (Home Depot, CrowdStrike, Thermo Fisher Oct 16)
 NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
@@ -351,7 +352,7 @@ def rank(texts, prefs, label, strict=None, exact=False):
     strict = bool(VET_Q.search(label or "")) if strict is None else strict
     for p in prefs or []:
         # a positive preference ('Agree', 'Yes') never picks a negated option ('No, I do not agree')
-        u = [t if not (t and NEG_OPT.search(t) and not NEG_OPT.search(p)) else "" for t in u0]
+        u = [t if not (t and NEG_OPT.search(ETH_NOT.sub("", t)) and not NEG_OPT.search(p)) else "" for t in u0]
         if exact: k = next((i for i, t in enumerate(u) if t and norm(t) == norm(p)), None)
         elif strict: k = next((i for i, t in enumerate(u) if t and _match(re.sub(r"^\s*\d+\s*[-.):]\s*", "", t), p, True)), None)   # '6 - Not a Protected Veteran (...)': the numbering never blocks a leading match
         else: k = best_index(u, p)

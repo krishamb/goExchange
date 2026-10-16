@@ -356,6 +356,18 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^i believe that \(please select one\):?$", ["I AM NOT A VETERAN","I am not a veteran","I am not a protected veteran"]),   # S&P Global's veteran self-ID label (Oct 16)
+ (r"^which of the following describes how you think of yourself\??$", ["Male","Man"]),   # S&P Global's gender label (options Female / Male / Prefer not)
+ (r"are you an existing employee at life360", ["No","no"]),
+
+ (r"select all countries in which you (currently )?hold citizenship|countries of (current )?citizenship|countries in which you (currently )?hold citizenship", ["United States of America","United States","USA","US"]),   # Marvell (Oct 16): US citizen
+
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b)(have you been|were you) formerly employed (at|by|with)", ["No","no"]),   # Caesars (Oracle, Oct 16)
+ (r"statement that best describes your age", ["I am age 21 or older","I am age 18 or older","21 or older","18 or older"]),
+
+ (r"do you actively use ai tools in your (design |engineering |development )?workflow", ["Yes","yes"]),   # AI used = Yes (MrBeast Oct 16)
+ (r"portfolio that includes shipped consumer products", ["Yes","yes"]),   # Yahoo Finance (~40M daily users), consumer fintech apps
+
  (r"which type\(?s?\)? of polygraph", ["None","No","N/A","Not applicable"]),   # Seekr (Oct 16): never had a polygraph
  (r"which level of (security )?clearance (have you|do you)", ["None (no clearance)","None","No clearance","N/A","Not applicable"]),
  (r"have you ever held (a|an|any) (u\.?s\.? )?(government )?(security )?clearance", ["No, never held a clearance","No","no"]),
