@@ -8873,6 +8873,16 @@
     "VP, AI Strategy & Delivery"
    ]
   },
+  "pagerduty": {
+   "name": "PagerDuty",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer (SDEV)"
+   ]
+  },
   "palette": {
    "company": "palette",
    "first": "2026-10-05",
