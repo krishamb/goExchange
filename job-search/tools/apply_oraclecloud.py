@@ -1029,6 +1029,9 @@ async def run_one(br, item):
         job.report["challenge"] = any(challenge)
         if re.search(r"already applied|you have applied|you.ve applied", await text(page), re.I):
             job.report["result"] = "ALREADY APPLIED on this company's Oracle site"; return job.report
+        for _ in range(25):   # slow tenants (Uber, Blue Shield): a blank page with a spinner for several seconds before the form renders
+            if await page.locator("apply-flow-block, .apply-flow-block").count() or re.search(r"page has expired|something went wrong", await text(page), re.I): break
+            await page.wait_for_timeout(1000)
         if not await page.locator("apply-flow-block, .apply-flow-block").count() and re.search(r"page has expired", await text(page), re.I):
             rb = page.get_by_role("button", name=re.compile(r"resume application", re.I))   # Pearson / Hertz: 'Your page has expired. RESUME APPLICATION'
             if not await rb.count(): rb = page.get_by_role("link", name=re.compile(r"resume application", re.I))
