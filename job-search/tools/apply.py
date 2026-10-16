@@ -524,6 +524,8 @@ CHOICE_RULES=[
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
  (r"in which of the following locations do you live", ["United States","United States of America"]),
+ (r"do you have a (legal )?middle name", ["No","no"]),   # none (the 'middle name' text rule answers N/A)
+ (r"(license|registration|certification).{0,80}currently under investigation", ["No","no"]),   # holds no professional license; nothing under investigation
  (r"at least \d+\+? years (of )?(directly )?managing (software )?engineers", ["Yes","yes"]),   # CTO with a 15+ team (2023-2026), directed 75+ engineers at Yahoo Finance
  (r"excluded from providing services or limited in participating|excluded from participat\w* in any federal health ?care program", ["No","no"]),   # OIG-exclusion question (as the 'excluded by the OIG' rule): never excluded
  (r"how would you like to receive communications\??$", ["Text Opt-Out","Email"]),   # email only (no SMS opt-in)
