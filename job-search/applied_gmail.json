@@ -1368,9 +1368,13 @@
   "backblazeexternalwebsite": {
    "name": "Backblaze External Website",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Observability Systems Engineer"
+   ]
   },
   "backopsai": {
    "name": "BackOps AI",
@@ -7846,9 +7850,13 @@
   "mongodb": {
    "name": "MongoDB",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Manager, AI and People Transformation"
+   ]
   },
   "montecarlo": {
    "name": "Monte Carlo",
@@ -7923,9 +7931,10 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "VP \u2013 Data Products and AI Enablement"
+    "VP \u2013 Data Products and AI Enablement",
+    "AVP \u2013 Data Products and AI Enablement"
    ]
   },
   "muonspace": {
@@ -10311,6 +10320,16 @@
    "company": "scalyx",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "scanhealthplan": {
+   "name": "SCAN Health Plan",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Platform Engineering"
+   ]
   },
   "schrdinger": {
    "company": "schrdinger",
