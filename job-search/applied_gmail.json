@@ -2563,9 +2563,13 @@
   "cellanome": {
    "name": "Cellanome",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Director, Artificial Intelligence"
+   ]
   },
   "celonis": {
    "name": "Celonis",
@@ -2581,9 +2585,13 @@
   "censys": {
    "name": "Censys",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Scanning Engineer"
+   ]
   },
   "centralgardenandpet": {
    "name": "Central Garden & Pet",
@@ -4080,9 +4088,13 @@
   "domino": {
    "name": "Domino",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "dominodatalab": {
    "company": "Domino Data Lab",
@@ -13171,6 +13183,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "utilityprofit": {
+   "name": "Utility Profit",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Full Stack Software Engineer \u2014 AI & Automation"
+   ]
   },
   "utilyze": {
    "company": "utilyze",
