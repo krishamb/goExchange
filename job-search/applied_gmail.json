@@ -1101,6 +1101,16 @@
     "Staff Backend Software Engineer \u2013 Platform Enablement"
    ]
   },
+  "audioeye": {
+   "name": "AudioEye",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "audiohook": {
    "name": "Audiohook",
    "dates": [
@@ -1721,9 +1731,13 @@
   "bonterra": {
    "name": "Bonterra",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Engineering - Corporate Giving"
+   ]
   },
   "boockar": {
    "company": "boockar",
@@ -2290,9 +2304,13 @@
   "chime": {
    "name": "Chime",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff AI/ML Engineer"
+   ]
   },
   "chimefinancial": {
    "name": "Chime Financial",
@@ -2598,6 +2616,16 @@
    ],
    "count": 1
   },
+  "coherehealth": {
+   "name": "Cohere Health",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer"
+   ]
+  },
   "cohesity": {
    "name": "Cohesity",
    "dates": [
@@ -2849,7 +2877,15 @@
   "crowdstrike": {
    "company": "CrowdStrike",
    "first": "2026-10-02",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Director, Engineering - Cloud Detection Platform (Remote)",
+    "Vice President, AI Architect (Remote)"
+   ],
+   "count": 2
   },
   "cruitical": {
    "company": "cruitical",
@@ -2932,9 +2968,10 @@
     "2026-10-09",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Lead Integrations Architect"
+    "Lead Integrations Architect",
+    "Senior Manager, Data Engineering"
    ]
   },
   "custom": {
@@ -3526,9 +3563,13 @@
   "doubleverify": {
    "name": "DoubleVerify",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Enterprise Architect"
+   ]
   },
   "dowjonescompany": {
    "name": "Dow Jones & Company",
@@ -3849,7 +3890,14 @@
   "empower": {
    "company": "empower",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Senior Data Engineer"
+   ],
+   "count": 1
   },
   "encharge": {
    "company": "encharge",
@@ -4879,7 +4927,14 @@
   "genesys": {
    "company": "Genesys",
    "first": "2026-10-07",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "AI CX Agent Principal Software Engineer, Go"
+   ],
+   "count": 1
   },
   "gengis": {
    "company": "gengis",
@@ -5508,7 +5563,14 @@
   "highmarkhealth": {
    "company": "Highmark Health",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Principal Architect"
+   ],
+   "count": 1
   },
   "highnote": {
    "company": "Highnote",
@@ -5597,6 +5659,16 @@
     "2026-10-01"
    ],
    "count": 1
+  },
+  "horizonmedia": {
+   "name": "Horizon Media",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, AI (Agentic Platforms & Transformation)"
+   ]
   },
   "hover": {
    "name": "Hover",
@@ -5918,9 +5990,13 @@
   "instacart": {
    "name": "Instacart",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer II, Ads Data Solutions Engineering"
+   ]
   },
   "instituteoffoundationmodels": {
    "name": "Institute of Foundation Models",
@@ -6870,9 +6946,10 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Engineer, Brand"
+    "Staff Engineer, Brand",
+    "Sr Manager, Engineering, Data Engineering"
    ]
   },
   "ludiaconsulting": {
@@ -7557,9 +7634,13 @@
   "nasdaq": {
    "name": "Nasdaq",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Software Engineer"
+   ]
   },
   "nash": {
    "company": "nash",
@@ -8514,6 +8595,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "pearson": {
+   "name": "Pearson",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Specialist, Solution Architect"
+   ]
   },
   "pebalbrighttechnologiesllc": {
    "name": "Pebal Bright Technologies LLC",
@@ -11419,9 +11510,10 @@
     "2026-10-08",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Sr Software Engineer - Experimentation"
+    "Sr Software Engineer - Experimentation",
+    "Sr Staff Engineer - U4B"
    ]
   },
   "unconventional": {
@@ -11885,9 +11977,10 @@
     "2026-10-15"
    ],
    "roles": [
-    "(USA) Senior Manager, Software Engineering"
+    "(USA) Senior Manager, Software Engineering",
+    "(USA) Senior, Machine Learning Engineer"
    ],
-   "count": 1
+   "count": 2
   },
   "wasabitechnologies": {
    "name": "Wasabi Technologies",
@@ -11979,6 +12072,16 @@
    "company": "Wells Fargo",
    "first": "2026-10-02",
    "via": "workday-cloud"
+  },
+  "wellsky": {
+   "name": "WellSky",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Engineering"
+   ]
   },
   "wendys": {
    "name": "Wendy's",
@@ -12204,9 +12307,13 @@
   "yahoo": {
    "name": "Yahoo",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Software Dev Engineer"
+   ]
   },
   "yipitdata": {
    "name": "YipitData",
