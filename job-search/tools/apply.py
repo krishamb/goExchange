@@ -72,6 +72,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"i certify that the foregoing answers are true and correct.{0,120}signature( and date)?", P["name"] + ", " + time.strftime("%m/%d/%Y", time.gmtime(time.time() - 7 * 3600))),   # Marvell (Oct 16): typed signature + date under the export-compliance answers (an accuracy certification, not an AI one)
+
  (r"built or maintained low-latency,? high-throughput feature pipelines", "Yes. Low-latency, high-throughput streaming and batch pipelines in production for trading and market data at JPMorgan Chase and Morgan Stanley, on the Yahoo Finance platform, and behind Hyperion AI's agentic and model-evaluation platform."),   # Cognitiv 2026-10-16 (resume facts)
  (r"used llms or deep learning models to generate contextual/?user embeddings", "Yes. LLM embeddings served through a retrieval system for the RAG research assistants I built at Yahoo Finance (LangChain), and embedding-based retrieval in Hyperion AI's agentic platform."),   # Cognitiv 2026-10-16 (resume facts)
 
@@ -354,6 +356,29 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"which type\(?s?\)? of polygraph", ["None","No","N/A","Not applicable"]),   # Seekr (Oct 16): never had a polygraph
+ (r"which level of (security )?clearance (have you|do you)", ["None (no clearance)","None","No clearance","N/A","Not applicable"]),
+ (r"have you ever held (a|an|any) (u\.?s\.? )?(government )?(security )?clearance", ["No, never held a clearance","No","no"]),
+ (r"^are you open to travel\??$|^(are you )?(open|willing) to travel\??$", ["Up to 25%","25%","0-25%","Yes","yes"]),   # LTS (Oct 16): bucketed options
+
+ (r"previously been directly employed with deutsche telekom|employed (with|by) deutsche telekom ag or softbank", ["No","no"]),   # T-Mobile (Oct 16)
+ (r"^are you interested in relocating\??( if so,? where\??)?$", ["Not interested in relocating","No","Local"]),   # T-Mobile options: Local / Statewide / Nationwide / Anywhere / Not interested (relocates only for NYC / LA hybrid)
+ (r"i consent to .{0,40}retaining and using my application data", ["Yes","I consent","I agree","yes"]),   # BD (Oct 16): future-job matching, incl. AI (applicant consents to AI screening)
+
+ (r"select all (the )?locations you (are|would be) able to work( a)? hybrid|locations? you (are|would be) able to work a hybrid schedule from", ["San Francisco","San Francisco, CA","SF Bay Area","Bay Area","Palo Alto","San Jose","Santa Clara"]),   # Lightning AI (Oct 16): lives in Santa Clara, Bay Area office without relocation
+
+ (r"which cloud platforms have you (worked with|used)", ["AWS","Azure","GCP","Google Cloud"]),   # SS8 (Oct 16)
+ (r"(implemented|managed|experience with) .{0,30}infrastructure as code .{0,120}(ci/?cd|pipelines)", ["Extensive experience","Extensive","Some experience"]),
+ (r"indicate the location of your residency|location of your residency on your first day|state (of|where) you (will )?reside on your first day", ["California","CA","Santa Clara, California","Santa Clara, CA"]),   # Evolve (Oct 16)
+
+ (r"notice period|how much notice", ["Less than 30 days","Less than 2 weeks","2 weeks","Two weeks","Immediately","Immediate","None","0-30 days","Under 30 days","1 month or less","Less than 1 month"]),   # S&P Global (Oct 16): bucketed options
+ (r"what (types?|kinds?) of (work )?schedules? .{0,20}willing to work|work arrangements? .{0,30}(willing|open) to", ["Hybrid","Fully Remote","Remote"]),   # NYC/LA hybrid or remote; never five-day on-site outside the Bay Area
+
+ (r"^(?!.*\b(yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion)\b)(are you currently,? or have you previously been|have you (ever )?(previously )?been) employed by .{0,80}(subsidiar|affiliat)", ["No","Not Applicable","N/A","no"]),   # Home Depot (Oct 16): options are Current/Former Associate or Not Applicable
+ (r"do you have the required (amount of )?(directly )?relevant (work )?experience|have the (minimum )?(required )?(years of )?(directly )?relevant (work )?experience (as )?(specified|described|listed|outlined|required) in the job", ["Yes","yes"]),
+ (r"(meet|have) the (minimum )?education(al)? requirements? (as )?(specified|described|listed|outlined|in)", ["Yes","yes"]),   # B.E. Computer Science and Engineering
+ (r"sms text notifications|consent to receive automated (calls|texts)|pre-?recorded voice messages", ["I do not consent","No","no"]),   # applicant: no SMS (email only)
+
  (r"did you answer .{0,4}no.{0,4} to question ?1|answer(ed)? .{0,4}no.{0,4} to (question|q) ?1 .{0,120}yes.{0,4} to (question|q) ?2", ["No","no"]),   # Snap (Oct 16): the follow-up to "authorized? Yes / need sponsorship? No"
  (r"bilateral agreement|eligible for any visa classification|(e-3|h-1b1|\btn\b).{0,60}visas?\b.{0,40}\?", ["No","no"]),   # US citizen: no treaty-visa eligibility question applies (Snap Oct 16)
  (r"^(?!.*\b(five|5)\s*days).*\b(at least|a minimum of|minimum of)\s*(two|three|four|2|3|4)\s*days\s*(per|a|each)\s*week.{0,300}\b(able|willing) to (meet|comply|work)", ["Yes","yes"]),   # hybrid in-office minimum (2-4 days) at a Bay Area / NYC / LA posting the screens already allowed; five-day on-site stays out
