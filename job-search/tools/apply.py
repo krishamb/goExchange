@@ -358,6 +358,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"tuberculosis|\btb (screening|test)|(unless|other than|except)[^?]{0,120}disabilit[^?]{0,200}\b(are you able|can you|will you be able) to (meet|comply|provide)", ["Yes","yes"]),   # SCAN (Oct 16): a requirement with a disability/medical exception clause is not disability self-ID
+
  (r"proficiency (of|in) the english language|english language proficiency|level of english", ["Fluent / Native Speaker","Fluent","Native","Native or bilingual","Advanced"]),   # J&J (Oct 16)
 
  (r"^are you (currently )?a california resident\??$|^do you (currently )?(live|reside) in (the state of )?california\??$", ["Yes","yes"]),   # lives in Santa Clara, CA (KeyBank Oct 16)
