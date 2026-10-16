@@ -460,7 +460,7 @@ CHOICE_RULES=[
  (r"commutable proximity to .{0,60}office|open to relocat\w* (before|to)", ["I am willing to relocate before starting employment","willing to relocate","Yes"]),
  (r"best describes your data leadership experience", ["I was the founding or first senior data leader and built the function from a small base"]),
  (r"identify as transgender", ["No","no"]),
- (r"^ethnicity\b", ["Not Hispanic or Latino","Not Hispanic","No"]),
+ (r"^ethnicity\b", ["Asian (Not Hispanic or Latino)","Asian (Not Hispanic)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American","Not Hispanic or Latino","Not Hispanic","No"]),   # some Workday "Ethnicity" lists hold race options (Horizon Media); Hispanic-only lists fall through to Not Hispanic
  (r"^(?!.*(veteran|military|armed|clearance|licen[cs]e|disabilit|felony|convict|sponsor|visa)).*^do you have .{0,80}\bexperience\b", ["Yes","yes"]),
  (r"invited to our recruiting events|receive information about our work", ["No","no"]),
  (r"do you have a bachelor.?s degree", ["Yes","yes"]),
