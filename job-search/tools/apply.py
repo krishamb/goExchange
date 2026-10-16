@@ -81,7 +81,7 @@ TEXT_RULES=[
  (r"specify details from your answer above|please specify .{0,30}\(?example: job board name", "Found the posting on the company's Greenhouse job board (careers page); no employee referral."),   # 10-15 Samsung Research America: follow-up to the source question (found by our Greenhouse board sweep)
  (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
- (r"i have read the certification above and understand and agree to its terms\.? please type your name and the date", P["name"] + ", " + (datetime.datetime.utcnow() - datetime.timedelta(hours=7)).strftime("%m/%d/%Y")),   # Cohere Health: the attestations above (background check, eligibility); never a no-AI pledge
+ (r"i have read the certification above and understand and agree to its terms\.? please type your name and the date", P["name"] + ", " + time.strftime("%m/%d/%Y", time.gmtime(time.time() - 7 * 3600))),   # Cohere Health: the attestations above (background check, eligibility); never a no-AI pledge
  (r"by typing my name below|type your full name to (sign|attest)|typing your name .{0,40}(signature|attest)", "Ambarish Krishnamurthy"),
  (r"desired bonus|bonus/commission", "Open to discussion"),
  (r"18 years of age or older|at least 18 years", "Yes"),
