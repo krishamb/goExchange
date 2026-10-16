@@ -363,6 +363,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"hybrid work environment.{0,200}(are you able|can you|will you be able)", ["Yes","yes"]),   # Alloy (Oct 16): NYC Tue-Thu hybrid - the applicant takes NYC / LA hybrid roles (location gates already passed)
  (r"which team are you most interested in|which (of these |of the )?teams? (are you|would you be) (most )?interested", ["All of the above","Any of the above","No preference","Open to any team"]),   # Flex (Oct 16): open to every listed team
  (r"best describes your working rights|your (current )?working rights", ["United States Citizen or Permanent Resident","US Citizen","U.S. Citizen","United States Citizen"]),   # Firmus (Oct 16): US citizen
  (r"are you authori[sz]ed to work in the country (in )?which (this|the) role is located", ["I am authorised to work in the country which this role is located (citizen, permanent resident etc)","I am authorized to work in the country which this role is located (citizen, permanent resident etc)","Yes","yes"]),   # Fin (Oct 16): US citizen, no sponsorship
@@ -592,7 +593,7 @@ CHOICE_RULES=[
  (r"drake software professional customer|taxact professional customer", ["No","no"]),
  (r"track and report certain payments and transfers of value", ["No","no"]),
  (r"previously applied for employment with", ["No","no"]),
- (r"highest level of education", ["Bachelor's Degree","Bachelors Degree","Bachelor's","Bachelor","Bachelors"]),
+ (r"highest level of education", ["Bachelor's Degree","Bachelors Degree","Bachelor's","Bachelor","Bachelors","BS/BA","BS / BA","B.S./B.A.","BA/BS","BA / BS","B.A./B.S.","Undergraduate"]),   # B.E. Computer Science (Formation Bio Oct 16 lists PhD / MBA / MS/MA / BS/BA)
  (r"commutable proximity to .{0,60}office|open to relocat\w* (before|to)", ["I am willing to relocate before starting employment","willing to relocate","Yes"]),
  (r"best describes your data leadership experience", ["I was the founding or first senior data leader and built the function from a small base"]),
  (r"identify as transgender", ["No","no"]),
