@@ -298,9 +298,13 @@
   "adobe": {
    "name": "Adobe",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Core Agent Engineer"
+   ]
   },
   "adonis": {
    "name": "Adonis",
