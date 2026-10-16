@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^applicant.?s statement (&|and) acknowledge?ment", P["name"]),   # Iterative Health (Oct 16): typed full name agreeing to the truthful-answers / at-will statement (same as the Marvell certification rule)
  (r"^do you have \d{1,2}\+? years (of )?(software|engineering|software development|software engineering|professional|technical)( development| engineering)? experience(,? (with|and|including) \d{1,2}\+? years (of )?(experience )?in (a )?(leadership|management|people management|engineering leadership) roles?)?\??$", "Yes"),   # PQShield (Oct 16): 25 years, 10+ leading engineers
  (r"other names used|list any other names|maiden name|aliases?\b.{0,20}(used|names)", "None"),   # no other legal names
  (r"reasons? (for|of) leaving|why (did|are) you (leave|leaving)|why do you want to leave", "I'm looking for a role where I can apply my mix of hands-on architecture and engineering leadership at larger scale, on AI, fintech and data-intensive products with real users and a strong engineering team. Hyperion AI gave me end-to-end experience building an agentic platform from zero; the next step is bringing that to a company with an established product and customers."),   # reviewed answer (ash8/reviewed_answers.md); MUFG Oct 16 had matched the employer-name rule ("last employer")
