@@ -3,6 +3,16 @@
  "source": "Gmail (last 30 days): Greenhouse security-code emails, ATS application confirmations, and rejection emails proving a prior application",
  "date_basis": "distinct days in America/Los_Angeles (UTC-7)",
  "companies": {
+  "10alabs": {
+   "name": "10a Labs",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Engineer"
+   ]
+  },
   "1password": {
    "name": "1Password (applied; do-not-reapply)",
    "dates": [
@@ -556,6 +566,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "akuity": {
+   "name": "Akuity",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer"
+   ]
   },
   "alarmcom": {
    "name": "Alarm.com",
@@ -1520,9 +1540,10 @@
     "2026-10-12",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Lead Software Engineer - Fullstack"
+    "Lead Software Engineer - Fullstack",
+    "VP, Data Engineering"
    ]
   },
   "azx": {
@@ -1927,9 +1948,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Lead Software Engineer (Secrets Manager & AI Identity)"
+    "Lead Software Engineer (Secrets Manager & AI Identity)",
+    "Senior Software Engineer (Auth)"
    ]
   },
   "biztechfusion": {
@@ -2378,6 +2400,16 @@
    "company": "byteport",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "cadencesolutions": {
+   "name": "Cadence Solutions",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "calendly": {
    "company": "Calendly",
@@ -3041,9 +3073,13 @@
   "cloverhealth": {
    "name": "Clover Health",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Engineering, Data Products"
+   ]
   },
   "cmegroup": {
    "name": "CME Group",
@@ -3400,9 +3436,13 @@
   "coupang": {
    "name": "Coupang",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr.Director, Data Science & Data Engineering"
+   ]
   },
   "coverahealth": {
    "name": "Covera Health",
@@ -7937,6 +7977,16 @@
     "Senior Software Engineer, Growth (Payments)"
    ]
   },
+  "linq": {
+   "name": "LINQ ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "linqglobalgroup": {
    "name": "LinQ Global Group.",
    "dates": [
@@ -8242,9 +8292,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Full Stack Engineer"
+    "Staff Full Stack Engineer",
+    "Senior Full Stack Engineer"
    ]
   },
   "matx": {
@@ -9844,6 +9895,16 @@
     "Senior ML Ops Engineer (Machine Learning Infrastructure)"
    ]
   },
+  "paretohealth": {
+   "name": "ParetoHealth",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
   "pariveda": {
    "name": "Pariveda (applied; do-not-reapply)",
    "dates": [
@@ -10172,9 +10233,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Staff Software Engineer, Machine Learning"
    ]
   },
   "pinterest": {
@@ -10461,6 +10523,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "profluent": {
+   "name": "Profluent",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer, Machine Learning Platform"
+   ]
   },
   "prointegrate": {
    "name": "Pro Integrate",
@@ -11237,12 +11309,14 @@
    "name": "roku",
    "dates": [
     "2026-10-05",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "note": "cloud-applied today",
    "roles": [
-    "Senior Software Engineer "
+    "Senior Software Engineer ",
+    "Engineering Manager, Ad Serving"
    ]
   },
   "rootinsurance": {
@@ -11684,10 +11758,14 @@
   "sentinelone": {
    "name": "SentinelOne",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1,
-   "note": "applied"
+   "count": 2,
+   "note": "applied",
+   "roles": [
+    "Principal Software Engineer, AI SIEM"
+   ]
   },
   "sentry": {
    "name": "sentry",
@@ -12491,6 +12569,16 @@
    ],
    "count": 1
   },
+  "sunbound": {
+   "name": "Sunbound",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "suno": {
    "name": "suno",
    "dates": [
@@ -12639,7 +12727,14 @@
   "tailscale": {
    "company": "Tailscale",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop member feed)"
+   "via": "cloud_greenhouse (ventureloop member feed)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Forward Deployed Engineer"
+   ],
+   "count": 1
   },
   "talentdomestaffingllc": {
    "name": "TalentDome Staffing LLC",
@@ -13199,6 +13294,16 @@
     "Head of Life and Annuities Technology"
    ]
   },
+  "transunion": {
+   "name": "TransUnion",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Artificial Intelligence Research & Development"
+   ]
+  },
   "tranzealinc": {
    "name": "Tranzeal, Inc.",
    "dates": [
@@ -13263,6 +13368,16 @@
    "company": "truefoundry",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "trumid": {
+   "name": "Trumid",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (Trading Systems)"
+   ]
   },
   "ttc": {
    "company": "ttc",
@@ -13746,6 +13861,16 @@
     "Staff Software Engineer"
    ]
   },
+  "verse": {
+   "name": "Verse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Fleet Telemetry & Control (Rust)"
+   ]
+  },
   "vertexinc": {
    "name": "vertexinc",
    "dates": [
@@ -13775,6 +13900,16 @@
    "company": "viaduct",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "viam": {
+   "name": "Viam",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Forward Deployed Engineering"
+   ]
   },
   "vibe": {
    "name": "Vibe",
@@ -14267,9 +14402,14 @@
   "xpeng": {
    "name": "XPENG",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Senior Machine Learning Engineer - LLM Quantization & Deployment",
+    "Staff Machine Learning Engineer"
+   ]
   },
   "xpengmotors": {
    "company": "xpengmotors",
