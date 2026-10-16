@@ -364,6 +364,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*have you (ever )?been,? (at any time,? )?(employed|worked) (by|for)", ["No","no"]),   # Nutrafol / Unilever (Oct 16): never worked there (former employers excluded)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*are you (an? )?(active|current) (teammate|team member|employee|associate|colleague)\b", ["No","no"]),   # AvidXchange (Oct 16): not a current employee (former employers excluded)
  (r"will (that|your|this) (work )?authori[sz]ation expire|authori[sz]ation .{0,40}require renewal", ["No","no"]),   # IDEXX (Oct 16): US citizen - authorization never expires
  (r"do you (need|have) to (provide|give|serve) (a |any )?notice( period)?", ["No","no"]),   # TransUnion (Oct 16): available to start immediately (no notice period to serve)
@@ -1978,6 +1979,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             try: _nyla=bool(re.search(r"New York|\bNYC\b|Los Angeles",_top))
             except Exception: _nyla=False
             if not _bay and not _nyla: JOB_CHOICE_RULES.append((r"^(are you |would you be )?(willing|open|able) to relocate|willing(ness)? to relocate|open to relocation", ["No","no"]))   # applicant relocates only for NYC / LA hybrid roles
+            if _bay or _nyla: JOB_CHOICE_RULES.append((r"(able|willing) to work (in|from|at) the office location (specified|listed|in the job)|able to work in the (office|location) (specified|listed)", ["Yes","yes"]))   # MarketAxess (Oct 16): Bay Area any mode / NYC or LA hybrid are the applicant's office cities
             JOB_TEXT_RULES=[(r"^if (yes|so).{0,80}\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", ("Yes: "+"; ".join(_prior[:3])+" (2026)") if _prior else "N/A")]
             if _prior: report["prior_company_apps"]=_prior[:5]
             global JOB_WHY
