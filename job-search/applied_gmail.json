@@ -4926,6 +4926,16 @@
    "count": 1,
    "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
   },
+  "firmustechnologies": {
+   "name": "Firmus Technologies ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Infrastructure Engineer, Kubernetes"
+   ]
+  },
   "firstam": {
    "name": "First American (firstam Workday)",
    "dates": [
@@ -5187,9 +5197,13 @@
   "formationbio": {
    "name": "Formation Bio",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "formenergy": {
    "name": "Formenergy",
@@ -6136,11 +6150,13 @@
   "hewlettpackardenterprise": {
    "name": "Hewlett Packard Enterprise",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Principal AI & Machine Learning Engineer"
+    "Senior Principal AI & Machine Learning Engineer",
+    "Senior Cloud Software Engineer"
    ]
   },
   "hex": {
@@ -7096,6 +7112,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "keyfactorinc": {
+   "name": "Keyfactor, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Forward Deployed Engineer"
+   ]
+  },
   "kforce": {
    "name": "Kforce",
    "dates": [
@@ -7183,9 +7209,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Autonomy Software Engineer, Mapping"
+    "Senior Autonomy Software Engineer, Mapping",
+    "Staff Autonomy Software Engineer, Localization"
    ]
   },
   "komodohealth": {
@@ -7264,9 +7291,13 @@
   "labelbox": {
    "name": "Labelbox",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Member of Technical Staff"
+   ]
   },
   "langchain": {
    "name": "LangChain",
@@ -8204,6 +8235,16 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "miris": {
+   "name": "Miris",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Backend Engineer (Senior+)"
+   ]
   },
   "missionlane": {
    "name": "Mission Lane",
