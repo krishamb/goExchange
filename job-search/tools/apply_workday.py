@@ -1315,6 +1315,10 @@ async def run_one(ctx, item, s):
     # (he lives in Santa Clara); for NYC / LA hybrid roles he does not live there yet, so the answer is No (10-15 BigCommerce)
     _lives_there = item.get("where") in ("remote", "bay", "bay-hybrid", "bay-onsite") or bool(re.search(r"\bremote\b|san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|foster city|cupertino|milpitas|fremont", str(item.get("loc") or ""), re.I))
     G["JOB_CHOICE_RULES"].append((r"(confirm|do) you live in the city/state/country in which this position is located", ["Yes", "yes"] if _lives_there else ["No", "no"]))
+    _nyla = item.get("where") in ("ny-hybrid", "ny-remote", "la-hybrid") or bool(re.search(r"new york|\bnyc\b|los angeles", item.get("loc", "") or "", re.I))
+    _bayj = item.get("where") in ("bay", "bay-hybrid", "bay-onsite") or bool(re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|fremont|cupertino|milpitas|foster city|burlingame|emeryville|berkeley|pleasanton|san ramon", item.get("loc", "") or "", re.I))
+    if not _nyla and not _bayj:   # applicant lives in the SF Bay Area and relocates only for NYC / LA hybrid roles (Coca-Cola 2026-10-16: generic "willing to relocate?" had answered Yes)
+        G["JOB_CHOICE_RULES"].append((r"relocat(?!ion (assistance|package|support|reimbursement))", ["No", "no", "No, I am not willing to relocate", "I am not willing to relocate"]))
     G["JOB_TEXT_RULES"] = []
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
