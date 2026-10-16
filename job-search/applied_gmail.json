@@ -8570,9 +8570,13 @@
   "lenovo": {
    "name": "Lenovo",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Research Manager, AI Infrastructure"
+   ]
   },
   "liberate": {
    "company": "Liberate",
@@ -11887,6 +11891,16 @@
    "company": "reach",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "realtruck": {
+   "name": "RealTruck",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of AI, Data & Analytics"
+   ]
   },
   "rebuildmanufacturing": {
    "name": "Re:Build Manufacturing",
