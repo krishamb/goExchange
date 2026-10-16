@@ -376,6 +376,10 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^if yes,? what kind of sponsorship will you require", ["Not Applicable (No Sponsorship Required)","Not Applicable","N/A","None"]),   # US citizen
+ (r"do you have prior brokerage experience", ["No"]),
+ (r"^if yes,? in what role\??\*?$", ["N/A","Not Applicable","None"]),   # follow-up to a No
+ (r"currently a licensed real estate (salesperson|agent|broker)", ["No"]),
  (r"do you have \d+\+? years of professional software engineering experience", ["Yes"]),   # 25+ years, front end and back end
  (r"heavy daily use of ai coding assistants", ["Yes"]),   # Claude Code daily (resume)
  (r"describe your level of familiarity with ", ["Moderately familiar","Somewhat familiar","Familiar"]),   # general knowledge of the company; never 'extremely'

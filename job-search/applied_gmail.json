@@ -9560,9 +9560,13 @@
   "netflix": {
    "name": "Netflix",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer (L5) - Personalization Data"
+   ]
   },
   "netic": {
    "name": "Netic",
@@ -9650,6 +9654,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "nextiva": {
+   "name": "Nextiva",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff AI Engineer"
+   ]
   },
   "nextpatient": {
    "company": "nextpatient",
@@ -10784,6 +10798,16 @@
    ],
    "count": 1
   },
+  "physicsx": {
+   "name": "PhysicsX",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Software Engineer"
+   ]
+  },
   "picarroinc": {
    "name": "Picarro, Inc",
    "dates": [
@@ -11343,6 +11367,16 @@
    "count": 2,
    "roles": [
     "Senior Back End Engineer  [Remote-US]"
+   ]
+  },
+  "quantifind": {
+   "name": "Quantifind",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Forward Deployed Engineer"
    ]
   },
   "quantiphi": {
