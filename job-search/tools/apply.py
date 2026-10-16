@@ -72,6 +72,9 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"built or maintained low-latency,? high-throughput feature pipelines", "Yes. Low-latency, high-throughput streaming and batch pipelines in production for trading and market data at JPMorgan Chase and Morgan Stanley, on the Yahoo Finance platform, and behind Hyperion AI's agentic and model-evaluation platform."),   # Cognitiv 2026-10-16 (resume facts)
+ (r"used llms or deep learning models to generate contextual/?user embeddings", "Yes. LLM embeddings served through a retrieval system for the RAG research assistants I built at Yahoo Finance (LangChain), and embedding-based retrieval in Hyperion AI's agentic platform."),   # Cognitiv 2026-10-16 (resume facts)
+
  (r"^please list your state\.?$|^what state do you (currently )?(live|reside) in", "California"),
  (r"years of (hands-on )?(experience )?(with )?(databricks|apache spark|spark)", "10"),   # applicant 2026-10-12
  (r"percentage of back ?-?end|back ?-?end .{0,20}vs\.? .{0,10}front ?-?end", "About 65% back-end, 35% front-end"),   # applicant 2026-10-12
@@ -351,6 +354,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"base salary for this role is \$?(\d{3}),\d{3}\s*[-–]\s*\$?(2\d\d|3\d\d),\d{3}.{0,40}(align|match|meet)", ["Yes","yes"]),   # posted band reaches the applicant's $200K+ IC range
  (NO_EXP_DOMAIN.pattern, ["0 - 1 year","0-1 year","0-1 years","0 – 1 year","Less than 1 year","< 1 year","None","0"]),   # 10-15 Guardant: no diagnostic / medical-device / pharma years on his record (truthful lowest band)
  (r"range (for this (role|position) )?is \[?\$1\d\d,\d{3}\s*[–-]\s*\$1\d\d,\d{3}\]? annually\.? do you acknowledge and agree that this range aligns", ["No","no"]),   # a posted range under $200K does not match his $200K+ expectation (truthful No)
  (r"best describes your ability to meet .{0,40}(nyc|new york) office attendance|(nyc|new york) office attendance requirements", ["I live over 1 hour away from the NYC office","I live over 1 hour away"]),   # 10-15 DriveWealth: lives in Santa Clara (truthfully over an hour away) and will relocate for an NYC hybrid role, so not the "require remote / cannot meet" option
@@ -456,6 +460,10 @@ CHOICE_RULES=[
  (r"accountable for defining and executing an? (enterprise[- ]wide|company[- ]wide|organization[- ]wide) (data|ai|technology|engineering) strategy", ["Yes","yes"]),   # AvePoint 2026-10-16: CTO & Co-Founder, Hyperion AI (company-wide data/AI strategy)
  (r"(states|locations) listed below.{0,60}do you live in one of them|do you live in one of (them|these states|the following states)|which of (these|the following) states do you live in", ["California","CA","Yes","yes"]),   # Flodesk 2026-10-16: lives in California
  (r"(willing|able) (and able |and willing )?to adjust your (working )?hours|adjust your working hours|work (later|overlapping|extended) hours (into the evening|when needed)", ["Yes","yes"]),   # Flodesk 2026-10-16
+ (r"previously been directly employed (with|by) t-mobile|directly employed with t-mobile|(employed|worked) (with|for|by) t-mobile", ["No","no"]),   # T-Mobile 2026-10-16
+ (r"which best describes how you use ai in your work", ["Architect \u2014 I've built systems with AI that others rely on","Architect"]),   # Cognitiv 2026-10-16: CTO of an AI company
+ (r"do you have an? (master|ph\.?d|doctorate)\b.{0,20}(or|and)? ?(an? )?(master|ph\.?d|doctorate)?|(master'?s?|ph\.?d) (or|and) (master'?s?|ph\.?d) in an? (science|technology|stem|technical)", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (Genentech 2026-10-16)
+ (r"fluency in modern software architecture|solid grasp of data science and ai", ["Yes","yes"]),   # Genentech 2026-10-16: Distinguished Architect, AI/ML platforms
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
