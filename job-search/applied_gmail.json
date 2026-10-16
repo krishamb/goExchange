@@ -20,9 +20,13 @@
   "2k": {
    "name": "2K",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead Backend Engineer"
+   ]
   },
   "31stunion": {
    "name": "31st Union",
@@ -81,6 +85,16 @@
     "2026-09-30"
    ],
    "count": 1
+  },
+  "a16z": {
+   "name": "a16z",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Partner 20, Senior IT & AI Platform Engineer, San Francisco/Menlo Park"
+   ]
   },
   "abacum": {
    "name": "Abacum (YC)",
@@ -654,6 +668,16 @@
    ],
    "count": 1
   },
+  "alteryx": {
+   "name": "Alteryx",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Developer Platform Engineer"
+   ]
+  },
   "altitudeiq": {
    "company": "altitudeiq",
    "first": "2026-10-05",
@@ -835,6 +859,16 @@
     "2026-10-03"
    ],
    "count": 1
+  },
+  "apptegy": {
+   "name": "Apptegy",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Automation Engineer, Finance & Operations"
+   ]
   },
   "apptronik": {
    "name": "Apptronik",
@@ -1460,6 +1494,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "bd": {
+   "name": "BD",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, AI, Automation & Analytics"
+   ]
   },
   "beaconai": {
    "name": "BeaconAI (applied via filler)",
@@ -2384,9 +2428,13 @@
   "chghealthcare": {
    "name": "CHG Healthcare",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Enterprise Architect"
+   ]
   },
   "chime": {
    "name": "Chime",
@@ -3824,6 +3872,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "eclinicalsolutions": {
+   "name": "eClinical Solutions",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Architect"
+   ]
+  },
   "ecmcgroup": {
    "name": "ECMC Group",
    "dates": [
@@ -4200,6 +4258,16 @@
    "company": "evolutioniq",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "evolve": {
+   "name": "Evolve",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Machine Learning Engineer"
+   ]
   },
   "exacare": {
    "name": "ExaCare",
@@ -5497,9 +5565,13 @@
   "hackerrank": {
    "name": "HackerRank",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "hamiltonlane": {
    "name": "hamiltonlane",
@@ -6951,6 +7023,16 @@
    ],
    "count": 1
   },
+  "life360": {
+   "name": "Life360",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI Platforms"
+   ]
+  },
   "lifebonder": {
    "company": "lifebonder",
    "first": "2026-10-05",
@@ -6968,6 +7050,16 @@
    "company": "lightfield",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "lightningai": {
+   "name": "Lightning AI",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Infrastructure Software Engineer"
+   ]
   },
   "lightsage": {
    "name": "lightsage",
@@ -7134,6 +7226,16 @@
     "Sr Manager, Engineering, Data Engineering"
    ]
   },
+  "lts": {
+   "name": "LTS",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Agentic AI Software Engineer"
+   ]
+  },
   "ludiaconsulting": {
    "name": "Ludia Consulting",
    "dates": [
@@ -7194,6 +7296,17 @@
    "count": 2,
    "roles": [
     "Head of Engineering (Remote)"
+   ]
+  },
+  "machinify": {
+   "name": "Machinify",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Data Engineer, Core Migrations",
+    "Senior Data Engineer - Analytics"
    ]
   },
   "macroscope": {
@@ -7380,6 +7493,16 @@
    "count": 2,
    "roles": [
     "Vice President of Engineering"
+   ]
+  },
+  "medtronic": {
+   "name": "Medtronic",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Digital Transformation & AI Strategy, Customer Experience & Enablement"
    ]
   },
   "medvidi": {
@@ -7630,11 +7753,15 @@
   "mixpanel": {
    "name": "Mixpanel",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Software Engineer, Distributed Systems "
+   ]
   },
   "mochi": {
    "name": "mochi",
@@ -7742,6 +7869,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "mrbeast": {
+   "name": "MrBeast",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Data Engineer, App"
+   ]
   },
   "mufg": {
    "name": "MUFG",
@@ -9731,10 +9868,11 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Software Engineer,  Riot Client - Publishing Platform",
-    "Staff Machine Learning Engineer - Game Tech Group, ML Platform"
+    "Staff Machine Learning Engineer - Game Tech Group, ML Platform",
+    "Manager, Software Engineering (Services Lead) - Unpublished R&D Product"
    ]
   },
   "ripple": {
@@ -10215,6 +10353,16 @@
    "company": "Sedgwick",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "seekr": {
+   "name": "Seekr",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "seenhealth": {
    "name": "Seen Health",
@@ -10713,9 +10861,13 @@
   "spglobal": {
    "name": "S&P Global",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Software Engineering Lead"
+   ]
   },
   "spinmasterinc": {
    "name": "Spin Master, Inc.",
@@ -11477,6 +11629,16 @@
    ],
    "count": 1
   },
+  "thermofisherscientific": {
+   "name": "Thermo Fisher Scientific",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Platform Integrations & Engineering"
+   ]
+  },
   "thesearchsolutions": {
    "name": "The Search Solutions",
    "dates": [
@@ -11497,6 +11659,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "thewaltdisneycompany": {
+   "name": "The Walt Disney Company",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Machine Learning Engineer"
+   ]
   },
   "thirdbase": {
    "company": "thirdbase",
@@ -11568,6 +11740,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "tmobile": {
+   "name": "T-Mobile",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "T-Ads Principal Engineer, Platform"
+   ]
   },
   "toast": {
    "name": "Toast",
@@ -11789,9 +11971,10 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Data & Analytics Engineering Manager"
+    "Data & Analytics Engineering Manager",
+    "Director, Technology Enablement"
    ]
   },
   "unframe": {
