@@ -366,6 +366,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"ideal salary for your next role", ["$250,001 +","$250,001+","$250,000+","$225,001 - $250,000"]),   # Teladoc (Oct 16): inside the applicant's $200K-$300K IC / $220K-$350K leadership range
  (r"current u\.?s\.? government security clearance status", ["Eligible but no active clearance","No active clearance","No clearance"]),   # Mattermost (Oct 16): US citizen who has never held a clearance - no active clearance claimed
  (r"(previously provided|currently providing|ever provided) (services|work) to .{0,60}as (a |an )?(contract|contractor|contingent)", ["No","no"]),   # Solventum (Oct 16): never a contractor there
  (r"^do you speak more than one language", ["Yes","yes"]),   # Clorox (Oct 16): English, Tamil and Hindi (see the 'other languages' rules)
