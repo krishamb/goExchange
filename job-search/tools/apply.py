@@ -2138,6 +2138,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             except Exception: _prior=[]
             _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+|participated in (a|any) (hiring|recruiting|interview) process|interviewed (with|at) .{0,40}(before|previously|in the (past|last))"
             JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
+            # "have you ever worked with/for/at <this company> (before / in the past)?" is a former-employer question: never worked
+            # for the hiring company unless it is on the resume (Ping Identity 10-16 and Figma 09-29 got the generic experience 'Yes')
+            _co=re.sub(r"[,(].*$","",(company or "")).strip().lower()
+            if len(_co)>=3 and not re.search(r"yahoo|jp ?morgan|chase|morgan stanley|bloomberg|cadence|ankr|bank of america|merrill|barclays|mantara|hold brothers|compunnel|motocho|hyperion|goldman|bea systems",_co):
+                JOB_CHOICE_RULES.append((r"(have you|did you|were you) (ever )?(previously )?(worked|been employed|been engaged) (with|for|at|in|by) .{0,40}"+re.escape(_co)+r"(?!\w|'s|’s|\s+(products?|platforms?|tools?|apis?|sdks?|software|solutions?|services?|technolog\w*)\b)",["No","no","No, I have not"]))
             try:
                 _top=(await page.evaluate("()=>document.body.innerText.slice(0,1500)"))
                 _bay=bool(re.search(r"San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward|Newark, CA",_top))
