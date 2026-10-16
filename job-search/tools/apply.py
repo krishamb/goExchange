@@ -443,6 +443,7 @@ CHOICE_RULES=[
  (r"indicate which, if any, where you are a citizen|citizen of any of the following (countries|nations)", ["None of these","None of the above","None"]),   # embargoed-country list (Cuba, Syria, North Korea, Iran, Sudan): applicant is a US citizen
  (r"desired total cash compensation", ["250,000 to 300,000","$250,000 - $300,000","250,000 - 300,000"]),   # bands: inside both stated ranges ($220-350K leadership, $200-300K IC)
  (r"work permit is required for applicants under (age )?18", ["Not Applicable - I am not under 18 years of age or I have already graduated high school","Not Applicable","N/A"]),   # Stanford: an adult applicant
+ (r"(like|want|wish) to be considered for (other|alternative|alternate|additional|similar|future) (positions|roles|opportunities|openings)|consider(ed)? (me|you) for (other|alternative|similar) (positions|roles)", ["Yes","yes"]),   # Coca-Cola 2026-10-16: alternative positions -> Yes
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
