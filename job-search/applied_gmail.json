@@ -3197,6 +3197,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "clicktherapeutics": {
+   "name": "Click Therapeutics",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer"
+   ]
+  },
   "cline": {
    "name": "Cline",
    "dates": [
@@ -3709,6 +3719,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "crexi": {
+   "name": "Crexi",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "cribl": {
    "company": "Cribl",
@@ -5744,11 +5764,13 @@
   "ford": {
    "name": "Ford",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Director, Cloud Platform Engineering"
+    "Director, Cloud Platform Engineering",
+    "Senior Staff Software Engineer OTA"
    ]
   },
   "foremarklegal": {
@@ -7180,6 +7202,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "iconiq": {
+   "name": "ICONIQ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Technical Architect"
+   ]
   },
   "ideo": {
    "name": "IDEO",
@@ -9000,7 +9032,14 @@
   "mill": {
    "company": "Mill",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (linkedin-resolved)"
+   "via": "cloud_greenhouse (linkedin-resolved)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Full Stack Tech Lead - Senior"
+   ],
+   "count": 1
   },
   "millimanintelliscript": {
    "name": "Milliman IntelliScript",
@@ -9774,6 +9813,16 @@
     "VP of Engineering"
    ],
    "via": "gmail sent application (email)"
+  },
+  "observeai": {
+   "name": "Observe.AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Agent Engineer, Client Facing"
+   ]
   },
   "ocrolus": {
    "name": "Ocrolus",
@@ -13045,6 +13094,16 @@
    "roles": [
     "Staff Software Engineer - Core Platform",
     "Senior Software Engineer (Los Angeles, CA)"
+   ]
+  },
+  "successacademycharterschools": {
+   "name": "Success Academy Charter Schools",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Head, AI Engineering"
    ]
   },
   "summittechpartners": {
