@@ -655,6 +655,19 @@ async def upload_resume(page, job):
     stem = os.path.splitext(os.path.basename(path))[0]
     if stem.lower() in (await page.content()).lower():   # attached already (a draft from an earlier run)
         job.ans("Resume", os.path.basename(path) + " (already attached)"); return True
+    # a second application on the same site: the profile lists earlier files with a 'Use' control instead of an upload box
+    use = page.get_by_role("button", name=re.compile(r"^\s*use\s*$", re.I))
+    if not await use.count(): use = page.get_by_role("link", name=re.compile(r"^\s*use\s*$", re.I))
+    if await use.count():
+        mine = re.compile("|".join(re.escape(os.path.splitext(v)[0]) for v in RESUME_VARIANTS.values()), re.I)
+        for i in range(await use.count()):
+            near = await use.nth(i).evaluate("e=>{let p=e.parentElement; for(let k=0;k<5&&p&&(p.innerText||'').length<12;k++) p=p.parentElement; return p? p.innerText : ''}")
+            if mine.search(near or "") and not re.search(r"cover", near or "", re.I):
+                try:
+                    await use.nth(i).click(timeout=4000); await page.wait_for_timeout(3000)
+                    job.ans("Resume", mine.search(near).group(0) + " (used the file already on the profile)"); return True
+                except Exception as e: job.report["errors"].append(f"resume Use click: {type(e).__name__}")
+                break
     fin = page.locator('input[type="file"]')
     n = await fin.count(); done = False
     for i in range(n):
