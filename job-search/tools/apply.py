@@ -376,6 +376,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"live within an? (4[5-9]|[5-9]\d|1\d\d)[ -]?miles? (radius )?of .{0,160}(san francisco|bay area|san jose|palo alto|mountain view)", ["Yes"]),   # Santa Clara is ~40-45 miles from San Francisco (Etsy: 60-mile radius list)
  (r"^are you interested in working from one of our offices", ["Yes - occasionally","Yes – occasionally","Yes, occasionally"]),   # remote role; open to visiting a Bay Area / NYC office
  (r"if you do not (have|hold) a (security )?clearance,? (are|would) you (be )?able to obtain", ["Yes.","Yes","Yes, I am able to obtain one"]),   # US citizen, eligible; never 'already have a clearance' (Defense Unicorns Oct 16)
  (r"^if yes,? what kind of sponsorship will you require", ["Not Applicable (No Sponsorship Required)","Not Applicable","N/A","None"]),   # US citizen
