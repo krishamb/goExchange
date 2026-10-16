@@ -471,6 +471,7 @@ CHOICE_RULES=[
  (r"which cloud platforms have you (worked with|used) in (a )?production", ["AWS","Private Cloud"]),   # resume: Chief Architect for Yahoo Finance bare-metal-to-AWS modernization (SS8 2026-10-16)
  (r"(implemented|managed) (or managed )?infrastructure as code.{0,80}ci/?cd", ["Extensive experience","Yes"]),   # resume: Terraform, CI/CD, AWS modernization
  (r"uses ai-based tools in the recruitment|consent to the use of ai in the recruitment", ["Yes","yes"]),   # Medtronic 2026-10-16: applicant consents to AI screening
+ (r"lesbian,? gay,? bisexual|lgbtq|member of the .{0,40}queer", ["Prefer not to say","I prefer not to say","Prefer not to answer","Decline to self-identify","I don't wish to answer"]),   # not in the applicant's standing answers (Mixpanel 2026-10-16)
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
