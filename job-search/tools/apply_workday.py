@@ -1055,7 +1055,9 @@ async def fill_entry(page, job, kind, panel):
     job.ans(f"{'Work Experience' if kind == 'work' else 'Education'}: {label}", done)
     return done
 def level_rank(texts, prefs):
-    """Language level: CEFR-aware ('Fluent (C1)' picks 'C1 (Advanced)'), otherwise exact or leading matches only."""
+    """Language level: CEFR-aware ('Fluent (C1)' picks 'C1 (Advanced)'), otherwise exact or leading matches only.
+    A leading scale number ('5 - Native or bilingual proficiency', HP Oct 16) is ignored when matching."""
+    texts = [re.sub(r"^\s*\d+\s*[-\u2013.:)]\s*", "", t or "") for t in (texts or [])]
     for p in prefs or []:
         m = re.search(r"\b([abc][12])\b", p, re.I)
         k = next((i for i, t in enumerate(texts) if m and re.search(r"\b" + m.group(1) + r"\b", t or "", re.I)), None) if m else None
@@ -1078,7 +1080,7 @@ async def fill_language(page, job, panel):
         if f["kind"] == "checkbox" and re.search(r"fluent|native", f["label"], re.I):
             done["fluent"] = await set_check(loc.locator('input[type="checkbox"]').first, True)
         elif f["kind"] == "listbox" and f is not lang and re.search(r"level|proficien|reading|writing|speaking|overall|comprehension|^\s*(read|speak|write|listen|understand)\w*\s*\*?\s*$", f["label"], re.I) and not f["val"]:   # Home Depot (Oct 16): bare Read / Speak / Write listboxes
-            v, _ = await listbox_choose(page, loc.locator('button[aria-haspopup="listbox"]').first, lambda t: level_rank(t, list(prefs) + ["Native or Bilingual", "Native", "Fluent", "Full Professional", "Expert", "Advanced", "Excellent", "Proficient", "High"]))
+            v, _ = await listbox_choose(page, loc.locator('button[aria-haspopup="listbox"]').first, lambda t, _l=f["label"]: job.report.setdefault("options", {}).__setitem__("Language " + _l, list(t)[:15]) or level_rank(t, list(prefs) + ["Native or Bilingual", "Native", "Fluent", "Full Professional", "Expert", "Advanced", "Excellent", "Proficient", "High"]))
             done[f["label"]] = v
     job.ans("Language: English", done)
     return done

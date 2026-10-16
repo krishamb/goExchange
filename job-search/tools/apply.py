@@ -357,7 +357,7 @@ TEXT_RULES=[
  (r"pronoun", "He/him"),
  (r"gender identity|^gender$|\bgender\b", "Male"),
  (r"university|school|college|alma mater", "University of Madras"),
- (r"degree|field of study|major", "Bachelor of Engineering, Computer Science and Engineering"),
+ (r"^(?!.*disabilit)(?=.*(degree|field of study|\bmajor\b(?! life)))", "Bachelor of Engineering, Computer Science and Engineering"),   # not the disability question's "major life activities" (RadarFirst, Oct 16)
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
