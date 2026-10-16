@@ -8161,11 +8161,13 @@
    "name": "Nebius",
    "dates": [
     "2026-10-10",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Principal ML Solutions Architect - Token Factory"
+    "Principal ML Solutions Architect - Token Factory",
+    "Senior Customer AI Engineer - Token Factory"
    ]
   },
   "neerinfosolutionsincdice": {
