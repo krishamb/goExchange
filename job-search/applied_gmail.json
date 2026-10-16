@@ -292,9 +292,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "VP, Information Technology"
+    "VP, Information Technology",
+    "Senior Data Architect"
    ]
   },
   "adaptivefinancialconsulting": {
@@ -369,6 +370,16 @@
    "count": 2,
    "roles": [
     "Machine Learning Engineering Manager, Credit & Underwriting"
+   ]
+  },
+  "aegisventures": {
+   "name": "Aegis Ventures",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer"
    ]
   },
   "aeratechnology": {
@@ -834,6 +845,16 @@
    ],
    "count": 1
   },
+  "ampaipoweredsortationforwasteandrecycling": {
+   "name": "AMP: AI-Powered Sortation for Waste and Recycling",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Engineer"
+   ]
+  },
   "amperesand": {
    "name": "amperesand",
    "dates": [
@@ -941,6 +962,16 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "applovin": {
+   "name": "AppLovin",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "ML Data Infrastructure Engineer"
+   ]
   },
   "applyapply": {
    "name": "applyapply",
@@ -1486,9 +1517,13 @@
   "axs": {
    "name": "AXS",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead Software Engineer - Fullstack"
+   ]
   },
   "azx": {
    "company": "azx",
@@ -1887,6 +1922,16 @@
     "Forward Deployed Engineer"
    ]
   },
+  "bitwarden": {
+   "name": "Bitwarden",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer (Secrets Manager & AI Identity)"
+   ]
+  },
   "biztechfusion": {
    "name": "BizTech Fusion",
    "dates": [
@@ -2276,9 +2321,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Engineer - Platform"
+    "Senior Engineer - Platform",
+    "Staff Engineer - DevX"
    ]
   },
   "buildops": {
@@ -2656,6 +2702,16 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "certumlegalsolutions": {
+   "name": "Certum Legal Solutions",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI/ML Engineer"
+   ]
   },
   "chabeztechllc": {
    "company": "Chabez Tech LLC",
@@ -3310,6 +3366,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "cortex": {
+   "name": "Cortex",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "costargroup": {
    "company": "CoStar Group",
@@ -5044,6 +5110,16 @@
     "Forward Deployed Engineer"
    ]
   },
+  "figure": {
+   "name": "Figure",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Helix AI Engineer, Training Performance"
+   ]
+  },
   "finaleinventory": {
    "name": "Finale Inventory",
    "dates": [
@@ -5627,9 +5703,10 @@
     "2026-10-16"
    ],
    "roles": [
-    "Software Engineering Manager, Tooling (Product)"
+    "Software Engineering Manager, Tooling (Product)",
+    "Senior Data Engineer"
    ],
-   "count": 1
+   "count": 2
   },
   "genai": {
    "company": "genai",
@@ -7222,11 +7299,13 @@
   "justworks": {
    "name": "Justworks",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager, Benefits"
+    "Engineering Manager, Benefits",
+    "Senior Software Engineer, Solutions Engineering"
    ]
   },
   "kaavio": {
@@ -7365,6 +7444,16 @@
     "2026-10-12"
    ],
    "count": 1
+  },
+  "khealth": {
+   "name": "K Health",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Full Stack"
+   ]
   },
   "kikoff": {
    "name": "Kikoff",
@@ -8148,6 +8237,16 @@
    ],
    "count": 1
   },
+  "mattermost": {
+   "name": "Mattermost",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Full Stack Engineer"
+   ]
+  },
   "matx": {
    "name": "MatX",
    "dates": [
@@ -8926,9 +9025,13 @@
   "newsbreak": {
    "name": "NewsBreak",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Machine Learning Engineer, Recommendation & AI Platform"
+   ]
   },
   "newtglobal": {
    "name": "Newt Global",
@@ -9225,6 +9328,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "octus": {
+   "name": "Octus",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Data Engineer"
+   ]
+  },
   "oddball": {
    "name": "Oddball",
    "dates": [
@@ -9453,6 +9566,16 @@
     "Senior Software Engineer (R14285)"
    ]
   },
+  "opswat": {
+   "name": "OPSWAT",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
   "opusclip": {
    "name": "opusclip",
    "dates": [
@@ -9543,14 +9666,28 @@
   "otterai": {
    "name": "Otter.ai",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "oura": {
    "company": "oura",
    "first": "2026-10-05",
    "via": "cloud"
+  },
+  "outside": {
+   "name": "Outside",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager - Foundational Services"
+   ]
   },
   "outsystemsinc": {
    "name": "OutSystems, Inc.",
@@ -9994,6 +10131,27 @@
    ],
    "count": 1
   },
+  "picarroinc": {
+   "name": "Picarro, Inc",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineering Manager - Cloud Software, Data Platform & AI-Agentic Product Engineering"
+   ]
+  },
+  "pilotcom": {
+   "name": "Pilot.com",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineer, Bookkeeping Automation",
+    "Staff Software Engineer, Takeoff"
+   ]
+  },
   "pindrop": {
    "name": "Pindrop",
    "dates": [
@@ -10092,9 +10250,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Forward Deployed Engineer"
+    "Senior Forward Deployed Engineer",
+    "Principal Architect"
    ]
   },
   "planted": {
@@ -10888,9 +11047,13 @@
   "rightway": {
    "name": "Rightway",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineer"
+   ]
   },
   "rightwayhealthcare": {
    "company": "rightwayhealthcare",
@@ -11635,6 +11798,16 @@
    ],
    "count": 1
   },
+  "shopmy": {
+   "name": "ShopMy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Agent Platform"
+   ]
+  },
   "sidecarhealth": {
    "name": "Sidecar Health",
    "dates": [
@@ -11676,6 +11849,16 @@
    "company": "sight",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "sigmacomputing": {
+   "name": "Sigma Computing",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Field CTO"
+   ]
   },
   "signifyd": {
    "name": "Signifyd",
@@ -13040,6 +13223,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "trepp": {
+   "name": "Trepp ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI & Data Science"
+   ]
+  },
   "trimble": {
    "name": "Trimble",
    "dates": [
@@ -13542,6 +13735,16 @@
    ],
    "count": 1
   },
+  "versaterm": {
+   "name": "Versaterm",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "vertexinc": {
    "name": "vertexinc",
    "dates": [
@@ -13559,9 +13762,13 @@
   "via": {
    "name": "Via",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of AI Engineering, Internal Products"
+   ]
   },
   "viaduct": {
    "company": "viaduct",
@@ -13786,6 +13993,16 @@
    "company": "wehrtyou",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "weightwatchers": {
+   "name": "Weight Watchers",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "weka": {
    "name": "WEKA ",
