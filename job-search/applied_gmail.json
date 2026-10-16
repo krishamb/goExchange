@@ -887,9 +887,13 @@
   "amgen": {
    "name": "Amgen",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Machine Learning Engineer"
+   ]
   },
   "ampaipoweredsortationforwasteandrecycling": {
    "name": "AMP: AI-Powered Sortation for Waste and Recycling",
@@ -919,11 +923,13 @@
   "analogdevices": {
    "name": "Analog Devices",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Principal AI/ML Engineer, Time-Series & Sensor Reasoning Models (Lorenz Labs)"
+    "Senior Principal AI/ML Engineer, Time-Series & Sensor Reasoning Models (Lorenz Labs)",
+    "Senior Software Engineer, Enterprise AI Platform"
    ]
   },
   "anaplan": {
@@ -939,6 +945,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "answerrocket": {
+   "name": "AnswerRocket",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise Data Architect & AI Solutions Leader"
+   ]
   },
   "antares": {
    "name": "antares",
@@ -2614,6 +2630,16 @@
    ],
    "count": 1
   },
+  "canopyconnect": {
+   "name": "Canopy Connect",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal/Sr Staff Engineer"
+   ]
+  },
   "capco": {
    "name": "Capco",
    "dates": [
@@ -2742,6 +2768,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "carrot": {
+   "name": "Carrot",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Data Engineering"
+   ]
   },
   "carta": {
    "name": "Carta",
@@ -5834,6 +5870,16 @@
    ],
    "count": 1
   },
+  "frontera": {
+   "name": "Frontera",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff+ Software Engineer - B2B Provider Platform"
+   ]
+  },
   "fubo": {
    "name": "Fubo",
    "dates": [
@@ -6910,9 +6956,13 @@
   "honor": {
    "name": "Honor",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer, Applied AI"
+   ]
   },
   "horacemann": {
    "name": "Horace Mann ",
@@ -7066,11 +7116,13 @@
    "name": "Huntress",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer- Agentic SOC"
+    "Senior Software Engineer- Agentic SOC",
+    "Director, Engineering - Platform"
    ]
   },
   "huronconsultinggroup": {
@@ -7182,9 +7234,10 @@
     "2026-10-08",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Principal Software Engineer"
+    "Principal Software Engineer",
+    "Senior Fullstack Engineer"
    ]
   },
   "imbue": {
@@ -7880,7 +7933,14 @@
   "knit": {
    "company": "Knit",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Senior Full Stack Engineer"
+   ],
+   "count": 1
   },
   "known": {
    "name": "Known",
@@ -10387,9 +10447,10 @@
     "2026-10-16"
    ],
    "roles": [
-    "Senior Software Engineer, Agent"
+    "Senior Software Engineer, Agent",
+    "Engineering Manager, Compensation Planning"
    ],
-   "count": 1
+   "count": 2
   },
   "pax8": {
    "name": "Pax8",
@@ -10455,6 +10516,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "pelago": {
+   "name": "Pelago",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "peloton": {
    "name": "Peloton",
@@ -10869,6 +10940,16 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "primerai": {
+   "name": "primer.ai",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Machine Learning Engineer"
+   ]
+  },
   "primitive": {
    "company": "primitive",
    "first": "2026-10-05",
@@ -11249,6 +11330,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "rapidfortinc": {
+   "name": "RapidFort, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer ((Python / Go)"
+   ]
   },
   "rbglobal": {
    "name": "RB Global",
@@ -13139,6 +13230,16 @@
     "Forward Deployed Engineer"
    ],
    "count": 1
+  },
+  "taketwointeractivesoftwareinc": {
+   "name": "Take-Two Interactive Software, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "talentdomestaffingllc": {
    "name": "TalentDome Staffing LLC",
