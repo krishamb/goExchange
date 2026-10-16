@@ -402,7 +402,7 @@ CHOICE_RULES=[
  (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years
  (r"(able|willing) to work .{0,30}eastern time|eastern time zone hours", ["Yes","yes"]),   # applicant 2026-10-12
- (r"ethnicities listed below|select (your|from the) ethnicit|please select .{0,40}ethnicit|race ?/ ?ethnicity|race and ethnicity|racial ?/ ?ethnic|select your race", ["Asian (Not Hispanic or Latino)","Asian (Not Hispanic)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American"]),   # applicant 2026-10-13: Asian; 10-01: Asian (Indian) -> South Asian where the list splits Asian into subgroups
+ (r"ethnicities listed below|select (your|from the) ethnicit|please select .{0,40}ethnicit|race ?/ ?ethnicity|race and ethnicity|racial ?/ ?ethnic|select your race", ["South Asian (Not Latinx or Hispanic)","South Asian (Not Hispanic or Latino)","Asian (Not Hispanic or Latino)","Asian (Not Latinx or Hispanic)","Asian (Not Hispanic)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American"]),   # applicant 2026-10-13: Asian; 10-01: Asian (Indian) -> South Asian where the list splits Asian into subgroups
  (r"(new york city|\bnyc\b|new york state|new jersey|connecticut|massachusetts|washington state|colorado|illinois|texas) resident|resident of (new york|nyc|new jersey|connecticut|massachusetts|colorado|illinois|texas|washington)|(live|reside) in (new york city|nyc|new jersey)", ["No","NO, I am not a New York City resident","NO","no"]),   # lives in Santa Clara, CA (10-13 Cloud Software Group answered YES)
  (r"who is completing this application", ["An AI agent is submitting this on the applicant’s behalf","An AI agent is submitting"]),   # truthful disclosure
  (r"what (encouraged|prompted|motivated|led) you to apply", ["Job board / search engine","Job board","Job Board","Online job board","LinkedIn","Other"]),   # 10-13 HopSkipDrive: found via a job-board sweep
@@ -456,7 +456,7 @@ CHOICE_RULES=[
  (r"(not aware of any process that could give rise|not currently under any coaching|not been performing coaching|not been suspended from coaching).{0,200}ncaa", ["True","Yes"]),   # NCAA coaching statements: never a coach, so each is true
  (r"(currently or have been|ever been) a driver.{0,60}uber|delivered with uber (eats|freight)", ["No"]),   # Uber gig-work question: No (same answer as the Oct Uber application)
  (r"^race or national origin \(option [23]\)", []),   # Uber: one race in Option 1; the optional extra slots stay blank
- (r"select the races you identify with|^race\b", ["Asian","asian","Asian Indian","South Asian"]),
+ (r"select the races you identify with|^race\b", ["South Asian (Not Latinx or Hispanic)","South Asian (Not Hispanic or Latino)","Asian (Not Latinx or Hispanic)","Asian","asian","Asian Indian","South Asian"]),
  (r"employed by one of the following organizations in the stanford", ["No","no"]),
  (r"desired schedule|employment desired:? full time or part time", ["Full-Time","Full Time","Full-time","Regular"]),
  (r"desired shift|shift preference", ["Day","Days","Day Shift","First Shift","1st Shift","Any"]),
@@ -467,7 +467,7 @@ CHOICE_RULES=[
  (r"commutable proximity to .{0,60}office|open to relocat\w* (before|to)", ["I am willing to relocate before starting employment","willing to relocate","Yes"]),
  (r"best describes your data leadership experience", ["I was the founding or first senior data leader and built the function from a small base"]),
  (r"identify as transgender", ["No","no"]),
- (r"^ethnicity\b", ["Asian (Not Hispanic or Latino)","Asian (Not Hispanic)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American","Not Hispanic or Latino","Not Hispanic","No"]),   # some Workday "Ethnicity" lists hold race options (Horizon Media); Hispanic-only lists fall through to Not Hispanic
+ (r"^ethnicity\b", ["South Asian (Not Latinx or Hispanic)","South Asian (Not Hispanic or Latino)","Asian (Not Hispanic or Latino)","Asian (Not Latinx or Hispanic)","Asian (Not Hispanic)","Asian (United States of America)","Asian: Indian","Asian - Indian","Asian Indian","Asian (Indian)","Asian - South Asian","South Asian","Asian","Asian or Pacific Islander","Asian or Asian American","Not Hispanic or Latino","Not Hispanic","No"]),   # some Workday "Ethnicity" lists hold race options (Horizon Media); Hispanic-only lists fall through to Not Hispanic
  (r"^(?!.*(veteran|military|armed|clearance|licen[cs]e|disabilit|felony|convict|sponsor|visa)).*^do you have .{0,80}\bexperience\b", ["Yes","yes"]),
  (r"invited to our recruiting events|receive information about our work", ["No","no"]),
  (r"do you have a bachelor.?s degree", ["Yes","yes"]),
