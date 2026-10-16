@@ -3057,9 +3057,13 @@
   "chrobinson": {
    "name": "C.H. Robinson",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer - Global Forwarding Technology"
+   ]
   },
   "chronicle": {
    "company": "chronicle",
@@ -4555,9 +4559,10 @@
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Principal Data Engineer"
+    "Principal Data Engineer",
+    "Senior AI/ML Engineer"
    ]
   },
   "drata": {
@@ -5841,6 +5846,16 @@
    "roles": [
     "Senior Data Engineer",
     "Associate Director, Data Engineering"
+   ]
+  },
+  "formativgroup": {
+   "name": "FormativGroup",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Full Stack Tech Lead Engineer - Remote"
    ]
   },
   "formenergy": {
@@ -7340,6 +7355,16 @@
    ],
    "count": 1
   },
+  "illumina": {
+   "name": "Illumina",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Engineer"
+   ]
+  },
   "illumio": {
    "name": "illumio",
    "dates": [
@@ -7384,9 +7409,13 @@
   "imply": {
    "name": "Imply",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer (Remote)"
+   ]
   },
   "imprint": {
    "name": "Imprint",
@@ -7492,6 +7521,16 @@
     "2026-10-07"
    ],
    "count": 1
+  },
+  "insightrx": {
+   "name": "InsightRX",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer Full-stack"
+   ]
   },
   "insightsoftware": {
    "name": "insightsoftware",
@@ -8315,6 +8354,16 @@
    ],
    "count": 1
   },
+  "learnlux": {
+   "name": "LearnLux",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Back End Engineer, Data and Cloud"
+   ]
+  },
   "ledgebrook": {
    "name": "Ledgebrook",
    "dates": [
@@ -8574,6 +8623,16 @@
    "company": "lockedin",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "logicalintelligence": {
+   "name": "Logical Intelligence",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer - Reinforcement Learning"
+   ]
   },
   "logicgate": {
    "name": "LogicGate",
@@ -12177,9 +12236,13 @@
   "sambanova": {
    "name": "SambaNova",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Engineering - Inference Platform"
+   ]
   },
   "sambanovasystems": {
    "company": "sambanovasystems",
@@ -12675,6 +12738,16 @@
    "company": "signifyd95",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "sila": {
+   "name": "Sila",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Application Developer"
+   ]
   },
   "simberobotics": {
    "name": "Simbe Robotics",
@@ -13314,6 +13387,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "summittherapeutics": {
+   "name": "Summit Therapeutics",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Artificial Intelligence"
+   ]
   },
   "sunbound": {
    "name": "Sunbound",
@@ -14443,6 +14526,16 @@
    "note": "rejected (do not re-apply)",
    "rejected": true
   },
+  "upwave": {
+   "name": "Upwave",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
   "usenourish": {
    "company": "usenourish",
    "first": "2026-10-05",
@@ -14574,9 +14667,13 @@
   "venn": {
    "name": "Venn",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "venncity": {
    "company": "venncity",
@@ -15505,16 +15602,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "summittherapeutics": {
-   "name": "Summit Therapeutics",
-   "dates": [
-    "2026-10-16"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior Director, Artificial Intelligence"
-   ]
   }
  }
 }
