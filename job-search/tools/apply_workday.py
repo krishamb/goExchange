@@ -314,11 +314,12 @@ VET_PREFS = ["I am not a veteran", "Not a veteran", "No, I am not a veteran", "I
              "I do not wish to self-identify", "I don't wish to self-identify", "I do not wish to answer"]   # applicant: not a veteran; declining is the only other truthful answer
 DIS_Q = re.compile(r"disabilit", re.I)
 DIS_BAD = re.compile(r"^\s*yes\b|^\s*i have a disability", re.I)
+DIS_EXCEPT = re.compile(r"are you able to (meet|perform|fulfil|comply)|can you (meet|perform) (this|these|the)|able to meet (this|these|the) requirements?", re.I)   # Snap (Oct 16): "Other than for reasons related to your religion, a disability, or a medical condition, are you able to meet this [4-day in-office] requirement?" is not disability self-ID
 HEAR_NOT = re.compile(r"residen(cy|t)|program\b|academy|scholarship|community|network\b|club\b|challenge|contest|competition|\bdays?\b|\bweek\b|udacity|coursera|bootcamp|student|intern(ship)?\b|alumni|campus|universit|college|school|event|conference|\bfair\b|expo\b|summit|meetup|webinar|hackathon|ignite|associat|society|diversity|women|veteran|military|referr|employee|recruit|agency|headhunter|linkedin|social|facebook|twitter|instagram|youtube|tiktok|weibo|wechat|xing|glassdoor|indeed|monster|\bdice\b|ziprecruiter|handshake|kaggle|newspaper|magazine|radio|television|\btv\b|billboard|\bprint\b|e-?mail|text message|\bsms\b|word of mouth|friend|colleague|family", re.I)
 AI_Q = re.compile(r"ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|(did|have) you use(d)? (any )?ai", re.I)
 AI_PLEDGE = re.compile(r"agree (not to|to not) use (artificial intelligence|\bai\b|generative ai)|not (to )?use (artificial intelligence|\bai\b|generative ai|ai tools) (during|in|for) (your |the |any )?(interviews?|assessments?|skills? test)|complete all interviews( and assessments)? through my own independent work", re.I)   # 10-09 applicant: Yes, he agrees not to use AI in interviews (apply.py rule answers it)
 AI_EXP = re.compile(r"experience building or implementing ai-assisted analytics|experience (designing|building|developing|deploying|with|in)\b[^?]{0,40}\bai agents?|ai agents? (development )?experience", re.I)   # a factual experience question (resume: Hyperion AI agentic platform), not an AI-use declaration
-AI_CONSENT = re.compile(r"hiredscore|ai-assisted review|harness the power of artificial intelligence|consent to the use of ai on this (job )?application|we analy[sz]e your application|ai-powered talent matching|(ai|artificial intelligence|automated) tools? to (help with the initial screening|review your application|assess how your|assist in reviewing applications)|initial screening of resumes|in the application screening process|transcri|note-?tak|summar(y|ies) of (your|the) interview|record(ing)? (of )?(your|the) interview|interview (notes|recordings?)|consent to the use of (ai|artificial intelligence)( tools)? (for|in|to) (evaluat|review|assess|screen)|tools to assist in the evaluation of (job )?applications", re.I)   # the company's own AI note-taker: a consent the rules answer
+AI_CONSENT = re.compile(r"hiredscore|ai-assisted review|harness the power of artificial intelligence|consent to the use of ai on this (job )?application|we analy[sz]e your application|ai-powered talent matching|(ai|artificial intelligence|automated) tools? to (help with the initial screening|review your application|assess how your|assist in reviewing applications)|initial screening of resumes|in the application screening process|transcri|note-?tak|summar(y|ies) of (your|the) interview|record(ing)? (of )?(your|the) interview|interview (notes|recordings?)|consent to the use of (ai|artificial intelligence)( tools)? (for|in|to) (evaluat|review|assess|screen)|tools to assist in the evaluation of (job )?applications|uses ai-based tools in the recruitment|consent to the use of (ai|artificial intelligence) in the (recruitment|hiring|application) process|retain\w* and us\w* my application data .{0,160}ai-powered", re.I)   # the company's own AI note-taker: a consent the rules answer
 # details of a former job at this company (after "previously worked here? Yes"): his old work email, employee ID or manager
 # are not in the profile, and the generic e-mail / name rules must never answer them with his personal details
 FORMER_JOB_Q = re.compile(r"\b(work|company|business|corporate|employee|office|former|previous|prior)\b.{0,20}\be-?mail|\be-?mail\b.{0,40}\b(while|when)\b|\bwas your\b.{0,30}\b(e-?mail|employee|id|manager|supervisor)|(former|previous|prior) (employee|worker) (id|number)|employee (id|number)", re.I)
@@ -334,7 +335,7 @@ def usable(texts, label):
     out = mask_hear(texts, label)
     if HEAR_Q.search(label or ""): out = ["" if HEAR_NOT.search(t or "") else t for t in out]
     if VET_Q.search(label or ""): out = ["" if VET_BAD.search(t or "") else t for t in out]
-    if DIS_Q.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
+    if DIS_Q.search(label or "") and not DIS_EXCEPT.search(label or ""): out = ["" if DIS_BAD.search(t or "") else t for t in out]
     return out
 BAD_SAVED = re.compile(r"\bwith (company |employer |visa )?sponsorship|\b(will|would|do) (need|require) (visa |employer |company )?sponsorship|\brequire[sd]? sponsorship", re.I)
 MULTI_ALL = re.compile(r"select all (the )?(days|shifts)|(days|shifts) (you are|you're) (able|available) to work", re.I)
@@ -873,7 +874,7 @@ async def fill_field(page, job, f):
             f["opts"] = [await input_label(cbs.nth(i)) for i in range(min(await cbs.count(), 12))]
         except Exception: pass
     _vet_only = bool(VET_Q.search(key[:300]) and not DIS_Q.search(key[:300]) and not any(DIS_Q.search(o) for o in f.get("opts") or []))   # a VEVRAA veteran question whose boilerplate mentions 'disability' near the end (10-08, Global Payments)
-    if not _vet_only and kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid)) or re.search(r"check one of the boxes below", key, re.I)):   # the CC-305 self-ID (sometimes a bare 'Please check one of the boxes below:' listbox); not the form's 'Language' listbox (id disabilityForm)
+    if not _vet_only and not DIS_EXCEPT.search(key) and kind in ("checkbox", "radio", "listbox") and (DIS_Q.search(key) or any(DIS_Q.search(o) for o in f.get("opts") or []) or (kind != "listbox" and DIS_Q.search(fid)) or re.search(r"check one of the boxes below", key, re.I)):   # the CC-305 self-ID (sometimes a bare 'Please check one of the boxes below:' listbox); not the form's 'Language' listbox (id disabilityForm)
         # Self Identify (form CC-305): "Please check one of the boxes below" -> No, I do not have a disability ...
         return await choose(choice_for(key) or choice_for("disability status") or [], mlabel="disability status")
     # ---- everything else from the rules
@@ -1340,7 +1341,9 @@ async def run_one(ctx, item, s):
     _nyla = item.get("where") in ("ny-hybrid", "ny-remote", "la-hybrid") or bool(re.search(r"new york|\bnyc\b|los angeles", item.get("loc", "") or "", re.I))
     _bayj = item.get("where") in ("bay", "bay-hybrid", "bay-onsite") or bool(re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|fremont|cupertino|milpitas|foster city|burlingame|emeryville|berkeley|pleasanton|san ramon", item.get("loc", "") or "", re.I))
     if not _nyla and not _bayj:   # applicant lives in the SF Bay Area and relocates only for NYC / LA hybrid roles (Coca-Cola 2026-10-16: generic "willing to relocate?" had answered Yes)
-        G["JOB_CHOICE_RULES"].append((r"relocat(?!ion (assistance|package|support|reimbursement))", ["No", "no", "No, I am not willing to relocate", "I am not willing to relocate"]))
+        G["JOB_CHOICE_RULES"].append((r"relocat(?!ion (assistance|package|support|reimbursement))", ["No", "no", "No, I am not willing to relocate", "I am not willing to relocate", "Not interested in relocating"]))
+    elif _nyla and not _bayj:   # an NYC / LA hybrid role he would relocate for (T-Mobile 10-16 options: Local / Statewide / Nationwide / Anywhere / Not interested)
+        G["JOB_CHOICE_RULES"].append((r"^are you interested in relocating\??( if so,? where\??)?$", ["Nationwide", "Yes"]))
     G["JOB_TEXT_RULES"] = []
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
