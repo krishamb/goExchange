@@ -3014,6 +3014,16 @@
     "Senior Manager, Enterprise Data Platform & Integration Architect"
    ]
   },
+  "chanzuckerberginitiative": {
+   "name": "Chan Zuckerberg Initiative",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Internal Tools"
+   ]
+  },
   "chaosindustries": {
    "name": "CHAOS Industries",
    "dates": [
@@ -9846,6 +9856,16 @@
     "Forward Deployed Engineer, AI & Agentforce"
    ]
   },
+  "newfolddigital": {
+   "name": "Newfold Digital",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer"
+   ]
+  },
   "newsbreak": {
    "name": "NewsBreak",
    "dates": [
@@ -13502,6 +13522,16 @@
    ],
    "count": 1
   },
+  "stacklok": {
+   "name": "Stacklok",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer - Platform"
+   ]
+  },
   "stackpointstudio": {
    "name": "Stackpoint Studio",
    "dates": [
@@ -13674,6 +13704,16 @@
    "count": 3,
    "roles": [
     "Solutions Architect, AI"
+   ]
+  },
+  "strivacity": {
+   "name": "Strivacity",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform engineer"
    ]
   },
   "strivehealth": {
@@ -13991,6 +14031,26 @@
    "count": 3,
    "roles": [
     "Senior Full Stack Engineer - AI Innovation"
+   ]
+  },
+  "tatari": {
+   "name": "Tatari",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer"
+   ]
+  },
+  "tavily": {
+   "name": "Tavily",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior SWE (Search) - Platform"
    ]
   },
   "tdbank": {
