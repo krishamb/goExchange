@@ -3663,6 +3663,16 @@
    ],
    "count": 1
   },
+  "cordialexperienceinc": {
+   "name": "Cordial Experience Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
   "coreweave": {
    "name": "CoreWeave",
    "dates": [
@@ -11221,9 +11231,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Cloud Engineer"
+    "Staff Cloud Engineer",
+    "Senior Software Engineer, Ticketing"
    ]
   },
   "playstationglobal": {
@@ -12294,9 +12305,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer"
+    "Staff Software Engineer",
+    "Senior Data Engineer"
    ]
   },
   "rubrik": {
@@ -12519,6 +12531,16 @@
    ],
    "count": 1
   },
+  "savantbio": {
+   "name": "Savant Bio",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer \u2014 Applied AI"
+   ]
+  },
   "savvywealth": {
    "name": "Savvy-Wealth",
    "dates": [
@@ -12581,11 +12603,13 @@
   "scaleops": {
    "name": "ScaleOps",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Infra Engineer Team Lead - US"
+    "Infra Engineer Team Lead - US",
+    "AI Engineer - US"
    ]
   },
   "scalyx": {
@@ -12840,6 +12864,16 @@
     "Senior Software Engineer, Accounting Integrations"
    ]
   },
+  "sesoinc": {
+   "name": "Seso Inc.,",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer, AI/Agents"
+   ]
+  },
   "sezzle": {
    "name": "Sezzle",
    "dates": [
@@ -12941,10 +12975,11 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Field CTO",
-    "Staff AI/ML Engineer"
+    "Staff AI/ML Engineer",
+    "Engineering Manager"
    ]
   },
   "signifyd": {
@@ -13064,6 +13099,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "sixfold": {
+   "name": "Sixfold",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Engineer"
+   ]
   },
   "skhynixamerica": {
    "name": "SK hynix America",
@@ -14851,6 +14896,16 @@
     "Director, Data Analytics & Engineering, Operations NA, CO11"
    ],
    "via": "gmail confirmation (Workday)"
+  },
+  "vantagescore": {
+   "name": "VantageScore",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer"
+   ]
   },
   "vantor": {
    "name": "Vantor",
