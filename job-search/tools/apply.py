@@ -436,6 +436,7 @@ CHOICE_RULES=[
  (r"currently authorized for employment in the united states|legally (authorized|eligible) to work", ["Yes","yes"]),
  (r"willing to travel", ["Yes","yes"]),
  (r"comply with federal law to provide proof of (your )?(ability|eligibility)", ["Yes","yes"]),
+ (r"how many years of (work |professional |relevant )?experience do you have (related|relevant) to this (position|role|job)", ["More than 5 years","More than 10 years","10+ years","5+ years","Over 5 years"]),   # Mayo: 20+ years in software / data platforms
  (r"indicate which, if any, where you are a citizen|citizen of any of the following (countries|nations)", ["None of these","None of the above","None"]),   # embargoed-country list (Cuba, Syria, North Korea, Iran, Sudan): applicant is a US citizen
  (r"desired total cash compensation", ["250,000 to 300,000","$250,000 - $300,000","250,000 - 300,000"]),   # bands: inside both stated ranges ($220-350K leadership, $200-300K IC)
  (r"work permit is required for applicants under (age )?18", ["Not Applicable - I am not under 18 years of age or I have already graduated high school","Not Applicable","N/A"]),   # Stanford: an adult applicant
