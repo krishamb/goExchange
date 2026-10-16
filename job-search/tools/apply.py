@@ -72,6 +72,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"what language\(?s\)? are you fluent in", "English, Tamil, Hindi"),
+ (r"share with us your location preferences", "San Francisco Bay Area (I live in Santa Clara, CA); remote within the US also works for me"),
  (r"what are your expectations for pay in this role", "$200,000 - $300,000 base, depending on scope (negotiable)"),   # GHX (Oct 16): the applicant's IC range
  (r"which locations would you consider for relocation", "New York, NY or Los Angeles, CA for hybrid roles. I live in Santa Clara, CA, so San Francisco Bay Area roles need no relocation."),   # Clorox (Oct 16): the applicant relocates only for NYC / LA hybrid
  (r"were you referred (to this role )?by (a |an )?(current )?.{0,60}employee\?.{0,10}if so", "No"),   # Tower Research (Oct 16): not referred
@@ -367,6 +369,36 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"best describes your experience with observability in production", ["I have designed, implemented, or significantly improved observability for production systems, including monitoring, logging, alerts, dashboards, reliability metrics, and troubleshooting workflows."]),   # SLOs, OpenTelemetry / Prometheus / Grafana, 24x7 operation (Yahoo Finance)
+ (r"which best describes your kubernetes experience", ["Deployed and operated clusters in production."]),   # resume: Kubernetes deployments/automation (Hyperion, exchange connectivity); not control-plane internals
+ (r"hands-on experience with aws, gcp or azure", ["Deep experience with one provider"]),   # AWS (Yahoo Finance migration) deep; GCP/Azure lighter
+ (r"built or worked on a voice ai agent|conversational voice assistant", ["No"]),   # nothing voice on the resume
+ (r"require .{0,30}to sponsor a visa|will you ever in the future require .{0,40}sponsor", ["I do not (and will not ever) require sponsorship in order to work in the US","No"]),   # US citizen
+ (r"strong background in backend or full-stack technologies in python", ["Yes"]),
+ (r"exposure to ai agent frameworks", ["Yes"]),   # resume: LangChain RAG, LangGraph / CrewAI / AutoGen integration
+ (r"able to come into the (sf|san francisco) office for an interview", ["Yes"]),   # lives in Santa Clara
+ (r"currently located in the new york area", ["No"]),
+ (r"able to come into the (ny|nyc|new york) office for an interview", ["Yes"]),   # applies to NYC hybrid roles and would relocate for them
+ (r"able to work the hours of .{0,20}pacific time", ["Yes"]),   # lives in Pacific time
+ (r"what language\(?s\)? are you fluent in", ["__MULTI__","English","Tamil","Hindi"]),
+ (r"how involved have you been in system design decisions", ["I regularly lead system design and architecture decisions"]),   # Chief Architect / CTO
+ (r"experience (do you have )?building or maintaining data systems such as sql", ["I’ve designed and owned production data systems, including databases, pipelines, and/or data warehouses","I've designed and owned production data systems, including databases, pipelines, and/or data warehouses"]),
+ (r"experience (do you have )?working in startup or similarly fast-changing", ["Extensive experience thriving in high-change environments, regularly adapting priorities, working across responsibilities, and driving work forward with limited structure"]),   # co-founder twice
+ (r"experience (do you have )?building scalable systems in a saas environment", ["Experience building SaaS systems with some scaling considerations"]),
+ (r"experience with infrastructure-as-code tools", ["I’ve used IaC tools regularly but not as a primary owner","I've used IaC tools regularly but not as a primary owner"]),   # Terraform on the resume
+ (r"which best describes your experience with ml system design", ["I have lead machine learning system designs, set engineering standards, lead technical meetings and proactively engage and mentor other engineers"]),   # CTO, Hyperion AI platform
+ (r"experience owning the end-to-end development of machine learning", ["I have personally owned production ML systems through design, development, testing, deployment, monitoring, and ongoing maintenance."]),
+ (r"identifying and coordinating data sourcing and labeling", ["I have contributed to data or labeling requirements, but have not owned them or coordinated their prioritization across teams."]),
+ (r"largest engineering organization you have directly led", ["D. 60–70+ people, including a significant offshore/contractor organization","D. 60-70+ people, including a significant offshore/contractor organization"]),   # resume: directed 75+ engineers, senior managers and partners (Yahoo Finance)
+ (r"experience managing offshore engineering organizations", ["C. Directly managed offshore teams and leaders across multiple locations/time zones"]),   # JPMorgan Chase org across US, UK and India
+ (r"describe your deepest level of aws experience", ["D. Personally led modernization and scaling of mission-critical AWS platforms, including resiliency, scalability, availability, security, and cost management"]),   # Yahoo Finance bare-metal-to-AWS
+ (r"which best describes your experience leading data platforms", ["C. Led engineering teams responsible for data platforms and pipelines"]),
+ (r"which best describes your experience with healthcare data", ["C. Built or operated systems using healthcare data"]),   # applicant instruction 2026-09-30: healthcare experience Yes
+ (r"how would you characterize your database expertise", ["C. Strong SQL/database architecture and performance-tuning experience"]),
+ (r"how hands-on are you today with architecture and engineering", ["D. Remain deeply hands-on with architecture, technical design, troubleshooting, modernization, and emerging technologies while leading the organization"]),
+ (r"experience using ai in the software development lifecycle", ["C. Have incorporated AI into development workflows such as coding, testing, documentation, code review, or troubleshooting"]),
+ (r"experience with coding agents such as claude code", ["C. Have used them for meaningful development tasks or prototypes"]),
+ (r"most mission-critical saas platform you have been responsible for", ["D. Highly available, mission-critical SaaS platform where outages had substantial customer/business consequences"]),   # Yahoo Finance 24x7, ~40M daily users
  (r"massachusetts to require or administer a lie detector", ["I am not located in Massachusetts"]),   # TransUnion (Oct 16): Santa Clara, CA
  (r"how were you referred to", ["Other","Other (please specify)"]),   # DHI (Oct 16): found on LinkedIn, which the menu does not list
  (r"will you now or in the future require sponsorship for employment visa", ["I am legally authorized to work in this country for any employer.","No","no"]),   # Agero (Oct 16): US citizen
