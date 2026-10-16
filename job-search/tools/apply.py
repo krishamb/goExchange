@@ -369,6 +369,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"can be based in .{0,60}san francisco bay area.{0,120}which best describes your situation", ["I'm currently based in the San Francisco Bay Area.","I’m currently based in the San Francisco Bay Area."]),   # Frontera: lives in Santa Clara
+ (r"which have you used in production within the last 2 years", ["__MULTI__","None of these"]),   # AnswerRocket: Databricks / Delta Lake / Unity Catalog / Snowflake / dbt are not on the resume (Spark/Flink are)
  (r"right to request a non-automated, human-led review|preferred evaluation method", ["Standard Process: I consent to the use of AI-assisted screening to expedite my application."]),   # the applicant consents to AI screening (Workday autoreview rule)
  (r"okay to work in our san francisco,? (ca )?office \d days", ["Yes"]),   # Five9: SF hybrid 3 days; lives in Santa Clara
  (r"been the hiring manager or played a primary role in the hiring process", ["Yes"]),   # built and led teams (CTO, Yahoo Finance 75+, JPMorgan 50+)
