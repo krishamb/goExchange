@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^desired hours( \(per week\))?\s*\*?$|desired (work(ing)? )?hours per week", "40"),   # full-time
  (r"(how many years|years of (professional |hands-on )?experience).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b", "3+ years (LLM, RAG and agentic systems since 2023: Yahoo Finance research assistants, then Hyperion AI); 25+ years of software and systems engineering overall"),
  (r"were you referred to this role by a current .{0,60}employee\?? if so,? please provide their name", "No"),   # Tower Research: not referred
  (r"foresee any conflicts .{0,120}(school|other) commitments", "No"),   # full-time availability: no school or other commitments
