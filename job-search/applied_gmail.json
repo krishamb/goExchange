@@ -252,9 +252,10 @@
     "2026-10-10",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Director, Data Platform"
    ]
   },
   "acquia": {
@@ -277,6 +278,16 @@
    "count": 2,
    "roles": [
     "Lead Integration Architect, Finance Systems Automation"
+   ]
+  },
+  "actblue": {
+   "name": "ActBlue",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Extensibility and Integration"
    ]
   },
   "activisionblizzard": {
@@ -422,9 +433,13 @@
   "afresh": {
    "name": "Afresh",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Forward Deployed Engineer"
+   ]
   },
   "agent": {
    "company": "agent",
@@ -438,6 +453,16 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "agero": {
+   "name": "Agero",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Machine Learning Engineer"
+   ]
   },
   "agilenttechnologies": {
    "name": "Agilent Technologies",
@@ -656,9 +681,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer, Product"
+    "Senior Software Engineer, Product",
+    "Lead Full Stack Engineer, Partner Ecosystem"
    ]
   },
   "allspice": {
@@ -937,9 +963,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer - Data"
+    "Staff Software Engineer - Data",
+    "Senior Software Engineer - Applications"
    ]
   },
   "apexon": {
@@ -948,6 +975,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "apiphani": {
+   "name": "apiphani",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "apollo": {
    "name": "Apollo",
@@ -1038,6 +1075,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "aptos": {
+   "name": "Aptos",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Trading Infrastructure"
+   ]
   },
   "arcade": {
    "company": "arcade",
@@ -1663,6 +1710,16 @@
    "count": 1,
    "note": "cloud-applied today"
   },
+  "barkleyokrp": {
+   "name": "BarkleyOKRP",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (Java Backend)"
+   ]
+  },
   "baselayer": {
    "name": "Baselayer",
    "dates": [
@@ -2128,6 +2185,16 @@
     "Senior Retail AI Solutions Specialist"
    ]
   },
+  "boloai": {
+   "name": "Bolo AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer \u2014 AI-Native Full Stack"
+   ]
+  },
   "bombora": {
    "name": "Bombora",
    "dates": [
@@ -2204,9 +2271,13 @@
   "branch": {
    "name": "Branch",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Platform"
+   ]
   },
   "brandtinformationservices": {
    "name": "Brandt Information Services",
@@ -2401,6 +2472,17 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "c3ai": {
+   "name": "C3 AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 2,
+   "roles": [
+    "Lead Software Engineer - Generative AI",
+    "Senior Software Engineer, Agentic AI Platform"
+   ]
+  },
   "cadencesolutions": {
    "name": "Cadence Solutions",
    "dates": [
@@ -2411,10 +2493,37 @@
     "Engineering Manager"
    ]
   },
+  "cais": {
+   "name": "CAIS",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Platform Solutions Lead"
+   ]
+  },
   "calendly": {
    "company": "Calendly",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Staff Platform Engineer"
+   ],
+   "count": 1
+  },
+  "calico": {
+   "name": "Calico ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior / Staff Cloud Platform Engineer (ML)"
+   ]
   },
   "calix": {
    "name": "Calix",
@@ -2552,6 +2661,16 @@
    ],
    "count": 1
   },
+  "cargomatic": {
+   "name": "Cargomatic",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer"
+   ]
+  },
   "cargurus": {
    "name": "CarGurus",
    "dates": [
@@ -2626,9 +2745,11 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Principal Architect"
+    "Principal Architect",
+    "AI/ML Engineering Manager",
+    "Senior Forward Deployed Engineer"
    ]
   },
   "cedana": {
@@ -2923,6 +3044,16 @@
    "count": 1,
    "roles": [
     "Senior MLOps Engineer"
+   ]
+  },
+  "clarityinnovations": {
+   "name": "Clarity Innovations",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Architect, Software Engineering"
    ]
   },
   "clarium": {
@@ -3425,6 +3556,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "counterpart": {
+   "name": "Counterpart",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Lead"
+   ]
   },
   "counterparthealth": {
    "name": "Counterpart Health",
@@ -3983,6 +4124,16 @@
    ],
    "count": 2
   },
+  "dhigroupinc": {
+   "name": "DHI Group, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Development"
+   ]
+  },
   "dialpad": {
    "company": "Dialpad",
    "first": "2026-10-06",
@@ -4395,6 +4546,16 @@
    "first": "2026-10-01",
    "via": "workday-cloud"
   },
+  "earnest": {
+   "name": "Earnest",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "earnin": {
    "name": "EarnIn",
    "dates": [
@@ -4684,9 +4845,13 @@
   "energyhub": {
    "name": "EnergyHub",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Data and Partner Platform"
+   ]
   },
   "engine": {
    "name": "Engine",
@@ -5155,9 +5320,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Helix AI Engineer, Training Performance"
+    "Helix AI Engineer, Training Performance",
+    "Staff AI Inference and Acceleration Engineer"
    ]
   },
   "finaleinventory": {
@@ -5487,9 +5653,10 @@
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Associate Director, Data Engineering"
    ]
   },
   "formenergy": {
@@ -5864,6 +6031,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "ghx": {
+   "name": "GHX",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
+   ]
   },
   "gigaenergy": {
    "name": "Giga Energy",
@@ -7303,9 +7480,13 @@
   "judihealth": {
    "name": "Judi Health",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "jumio": {
    "name": "Jumio",
@@ -7885,11 +8066,13 @@
   "life360": {
    "name": "Life360",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Director, AI Platforms"
+    "Director, AI Platforms",
+    "Staff Data Engineer, Data Platform Core (AI Native)"
    ]
   },
   "lifebonder": {
@@ -10089,9 +10272,13 @@
   "pendo": {
    "name": "Pendo",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Software Engineer (AI)"
+   ]
   },
   "pepper": {
    "company": "pepper",
@@ -12694,6 +12881,16 @@
     "2026-09-30"
    ],
    "count": 1
+  },
+  "syndio": {
+   "name": "Syndio",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, AI Platform (US  - Remote or Calgary)"
+   ]
   },
   "synerg": {
    "name": "Syner-G",
