@@ -1166,6 +1166,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "arive": {
+   "name": "ARIVE",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Backend"
+   ]
+  },
   "arizeai": {
    "name": "Arize AI",
    "dates": [
@@ -3544,6 +3554,16 @@
    ],
    "count": 1
   },
+  "compass": {
+   "name": "Compass",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
   "complete": {
    "company": "complete",
    "first": "2026-10-05",
@@ -4145,11 +4165,13 @@
   "defenseunicorns": {
    "name": "Defense Unicorns",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Platform Engineer"
+    "Senior Platform Engineer",
+    "Senior Engineering Manager (RD165)"
    ]
   },
   "deffai": {
@@ -7099,6 +7121,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "honehealth": {
+   "name": "Hone Health",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Architect"
+   ]
+  },
   "honeycombio": {
    "name": "Honeycomb.io",
    "dates": [
@@ -9750,9 +9782,13 @@
   "netskope": {
    "name": "Netskope",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineer, Client Backend"
+   ]
   },
   "neubergerberman": {
    "name": "Neuberger Berman",
@@ -9896,6 +9932,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "niraenergy": {
+   "name": "Nira Energy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Product & Technology Officer"
+   ]
   },
   "nitorinfotech": {
    "name": "Nitor Infotech",
@@ -10156,9 +10202,13 @@
   "okx": {
    "name": "OKX",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior AI Full-Stack / Applications Engineer"
+   ]
   },
   "olema": {
    "company": "olema",
@@ -11058,6 +11108,16 @@
     "Director of Engineering"
    ]
   },
+  "pipetechnologies": {
+   "name": "Pipe Technologies",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Infrastructure Engineer"
+   ]
+  },
   "place": {
    "name": "PLACE",
    "dates": [
@@ -11136,6 +11196,16 @@
    "first": "2026-10-03",
    "via": "gmail confirmation (Oct 2-4 scan)"
   },
+  "playonsports": {
+   "name": "PlayOn! Sports",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Cloud Engineer"
+   ]
+  },
   "playstationglobal": {
    "name": "PlayStation Global",
    "dates": [
@@ -11187,6 +11257,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "pointwild": {
+   "name": "Point Wild",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Backend Architect - Golang"
+   ]
   },
   "pomelocare": {
    "name": "Pomelo Care",
@@ -12130,9 +12210,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Applied AI Engineer"
+    "Staff Applied AI Engineer",
+    "Senior Full Stack Engineer, Account Linking"
    ]
   },
   "rocketsoftwareinc": {
@@ -12283,6 +12364,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "sagesure": {
+   "name": "SageSure",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "sahisofttech": {
    "name": "Sahi Softtech",
@@ -13504,9 +13595,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer"
+    "Staff Software Engineer",
+    "Senior Backend Software Engineer"
    ]
   },
   "suno": {
@@ -14103,6 +14195,16 @@
    ],
    "count": 1
   },
+  "thetradedesk": {
+   "name": "The Trade Desk",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Engineering & Applied Science - VenturaOS"
+   ]
+  },
   "thevoleongroup": {
    "name": "The Voleon Group",
    "dates": [
@@ -14362,9 +14464,10 @@
     "2026-10-09",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer, Cobalt"
+    "Senior Software Engineer, Cobalt",
+    "Staff Software Engineer, Internal Tools"
    ]
   },
   "turbopuffer": {
@@ -14757,6 +14860,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "velora": {
+   "name": "Velora",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "veniceai": {
    "name": "Venice.ai",
@@ -15185,9 +15298,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Staff Fullstack Engineer, Clinic"
    ]
   },
   "weka": {
@@ -15284,6 +15398,16 @@
     "2026-10-05"
    ],
    "count": 1
+  },
+  "wing": {
+   "name": "Wing",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Machine Learning Engineer, Simulation"
+   ]
   },
   "wisprflow": {
    "name": "Wispr Flow",
