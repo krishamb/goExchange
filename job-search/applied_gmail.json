@@ -12423,11 +12423,13 @@
    "name": "Visa",
    "dates": [
     "2026-09-30",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Manager, Data & AI Review Enablement"
+    "Manager, Data & AI Review Enablement",
+    "Staff SW Engineer"
    ]
   },
   "visionaryinnovativetechnologysolutions": {
