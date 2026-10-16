@@ -363,6 +363,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"do you (need|have) to (provide|give|serve) (a |any )?notice( period)?", ["No","no"]),   # TransUnion (Oct 16): available to start immediately (no notice period to serve)
  (r"hybrid work environment.{0,200}(are you able|can you|will you be able)", ["Yes","yes"]),   # Alloy (Oct 16): NYC Tue-Thu hybrid - the applicant takes NYC / LA hybrid roles (location gates already passed)
  (r"which team are you most interested in|which (of these |of the )?teams? (are you|would you be) (most )?interested", ["All of the above","Any of the above","No preference","Open to any team"]),   # Flex (Oct 16): open to every listed team
  (r"best describes your working rights|your (current )?working rights", ["United States Citizen or Permanent Resident","US Citizen","U.S. Citizen","United States Citizen"]),   # Firmus (Oct 16): US citizen
