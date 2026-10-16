@@ -358,6 +358,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^are you (currently )?a california resident\??$|^do you (currently )?(live|reside) in (the state of )?california\??$", ["Yes","yes"]),   # lives in Santa Clara, CA (KeyBank Oct 16)
+
  (r"^for california applicants?:", ["I understand","I acknowledge","I confirm receipt","Yes"]),   # he lives in California
  (r"^for (?!california)[a-z .]{3,30} applicants?:", ["Not Applicable - I am not a resident","Not Applicable","N/A","Not applicable"]),   # Bread Financial (Oct 16): other states' notices; he lives and works in California
  (r"^in your government position, do/did you", ["No – My activities in my government position have no relation","No","Not applicable","N/A"]),   # KeyBank (Oct 16)
@@ -372,7 +374,7 @@ CHOICE_RULES=[
 
  (r"^i believe that \(please select one\):?$", ["I AM NOT A VETERAN","I am not a veteran","I am not a protected veteran"]),   # S&P Global's veteran self-ID label (Oct 16)
  (r"^which of the following describes how you think of yourself\??$", ["Male","Man"]),   # S&P Global's gender label (options Female / Male / Prefer not)
- (r"are you an existing employee at life360", ["No","no"]),
+ (r"are you an existing employee at life360", ["Not an Existing Employee","No","no"]),
 
  (r"select all countries in which you (currently )?hold citizenship|countries of (current )?citizenship|countries in which you (currently )?hold citizenship", ["United States of America","United States","USA","US"]),   # Marvell (Oct 16): US citizen
 
