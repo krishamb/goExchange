@@ -364,6 +364,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*are you (an? )?(active|current) (teammate|team member|employee|associate|colleague)\b", ["No","no"]),   # AvidXchange (Oct 16): not a current employee (former employers excluded)
  (r"will (that|your|this) (work )?authori[sz]ation expire|authori[sz]ation .{0,40}require renewal", ["No","no"]),   # IDEXX (Oct 16): US citizen - authorization never expires
  (r"do you (need|have) to (provide|give|serve) (a |any )?notice( period)?", ["No","no"]),   # TransUnion (Oct 16): available to start immediately (no notice period to serve)
  (r"hybrid work environment.{0,200}(are you able|can you|will you be able)", ["Yes","yes"]),   # Alloy (Oct 16): NYC Tue-Thu hybrid - the applicant takes NYC / LA hybrid roles (location gates already passed)
