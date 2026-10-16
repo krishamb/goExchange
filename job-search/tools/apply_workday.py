@@ -42,6 +42,28 @@ exec(_seg("def pick(", "\nLABEL_JS"), G)
 exec(_seg("EDU_START=", "\nasync def is_edu_date"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
+# applicant 2026-10-16: a row marked remote must be remote on the posting itself (Coca-Cola's 'remote' row was an Atlanta role)
+import ssl as _ssl, urllib.request as _ureq
+def wd_remote_check(url):
+    """-> (is_remote: bool|None, where_text). None when the posting data could not be read (do not block then)."""
+    m = re.match(r"https://([^/]+)/(?:[a-z]{2}-[A-Z]{2}/)?([^/]+)/job/(.+?)(?:\?.*)?$", url or "")
+    if not m: return None, ""
+    host, site, path = m.groups(); tenant = host.split(".")[0]
+    cx = f"https://{host}/wday/cxs/{tenant}/{site}/job/{path}"
+    try:
+        ca = os.environ.get("SSL_CERT_FILE") or ("/root/.ccr/ca-bundle.crt" if os.path.exists("/root/.ccr/ca-bundle.crt") else None)
+        ctx = _ssl.create_default_context(cafile=ca) if ca else _ssl.create_default_context()
+        req = _ureq.Request(cx, headers={"Accept": "application/json", "User-Agent": "Mozilla/5.0"})
+        d = json.load(_ureq.urlopen(req, timeout=20, context=ctx)).get("jobPostingInfo") or {}
+    except Exception:
+        return None, ""
+    locs = [d.get("location") or ""] + list(d.get("additionalLocations") or [])
+    txt = f"{'; '.join(l for l in locs if l)} (remoteType {d.get('remoteType')})"
+    rt = (d.get("remoteType") or "").lower()
+    if "remote" in rt or "virtual" in rt or any(re.search(r"remote|virtual|telecommut|work from home|home[- ]?based", l, re.I) for l in locs): return True, txt
+    if any(re.fullmatch(r"\s*(united states( of america)?|usa|us)\s*", l, re.I) for l in locs if l): return True, txt   # country-only location = remote-eligible
+    return False, txt
+
 exec(_seg("NEVER_APPLY=", "\n"), G)
 exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
 exec(_seg("NJ_LOC=", "\n    return None\n") + "\n    return None\n", G)   # applicant: no NJ hybrid/on-site roles, no investment-bank roles on site in New York
@@ -1325,6 +1347,10 @@ async def run_one(ctx, item, s):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
+        if (item.get("where") or "") == "remote":
+            _rem, _wt = wd_remote_check(job.url)
+            if _rem is False:
+                job.report["result"] = "NOT SUBMITTED: listed as remote but the posting is " + _wt; return job.report
         _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))
         if _lb:
             job.report["result"] = "NOT SUBMITTED: " + _lb; return job.report
