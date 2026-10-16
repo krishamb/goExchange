@@ -4880,9 +4880,13 @@
   "falconx": {
    "name": "FalconX",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Trading Systems Infrastructure Staff Engineer"
+   ]
   },
   "familyoffice": {
    "company": "familyoffice",
@@ -7396,6 +7400,16 @@
    ],
    "count": 1
   },
+  "klaviyo": {
+   "name": "Klaviyo",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Machine Learning Engineer"
+   ]
+  },
   "knit": {
    "company": "Knit",
    "first": "2026-10-07",
@@ -8164,7 +8178,14 @@
   "mavenrobotics": {
    "company": "Maven Robotics",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Lead Fleet Operations Software Engineer"
+   ],
+   "count": 1
   },
   "maximus": {
    "name": "Maximus",
@@ -9051,9 +9072,10 @@
     "2026-10-16"
    ],
    "roles": [
-    "Staff Software Engineer, Python"
+    "Staff Software Engineer, Python",
+    "Senior Software Engineer, Python"
    ],
-   "count": 1
+   "count": 2
   },
   "notable": {
    "name": "Notable",
@@ -10519,9 +10541,13 @@
   "quince": {
    "name": "Quince",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer, Machine Learning Infrastructure"
+   ]
   },
   "quinstreet": {
    "name": "QuinStreet",
