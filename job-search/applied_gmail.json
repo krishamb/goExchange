@@ -108,9 +108,10 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Principal AI/ML Engineer"
+    "Principal AI/ML Engineer",
+    "Senior AI/ML Engineer"
    ]
   },
   "abbycare": {
@@ -257,9 +258,13 @@
    "name": "Addepar",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Sr. Software Engineer - Customer Facing Applied AI "
+   ]
   },
   "addepar1": {
    "company": "addepar1",
@@ -681,6 +686,16 @@
    ],
    "count": 1
   },
+  "ambrygenetics": {
+   "name": "Ambry Genetics",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
   "amd": {
    "name": "AMD",
    "dates": [
@@ -821,6 +836,16 @@
    ],
    "count": 1
   },
+  "apptronik": {
+   "name": "Apptronik",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Perception Learning Engineer "
+   ]
+  },
   "aptask": {
    "name": "ApTask",
    "dates": [
@@ -870,6 +895,16 @@
    "count": 2,
    "roles": [
     "Software Engineer, ML Infrastructure"
+   ]
+  },
+  "arcxp": {
+   "name": "Arc XP",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff Software Engineer, Content Intelligence"
    ]
   },
   "argonai": {
@@ -1142,7 +1177,14 @@
   "autodesk": {
    "company": "Autodesk",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Senior Software Engineer, Agentic AI"
+   ],
+   "count": 1
   },
   "automationanywhere": {
    "name": "Automation Anywhere",
@@ -1169,6 +1211,17 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "avepoint": {
+   "name": "AvePoint",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 2,
+   "roles": [
+    "Chief Data and Analytics Officer",
+    "Forward Deployed Engineer - AI"
+   ]
   },
   "aviatrix": {
    "company": "aviatrix",
@@ -1472,6 +1525,16 @@
    ],
    "count": 1
   },
+  "beonemedicines": {
+   "name": "BeOne Medicines",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Associate Director, Enterprise Information Architecture"
+   ]
+  },
   "bernard": {
    "name": "Bernard",
    "dates": [
@@ -1721,6 +1784,16 @@
    ],
    "count": 1
   },
+  "bobsdiscountfurniture": {
+   "name": "Bob's Discount Furniture",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Retail AI Solutions Specialist"
+   ]
+  },
   "bombora": {
    "name": "Bombora",
    "dates": [
@@ -1754,9 +1827,13 @@
   "boulevard": {
    "name": "Boulevard",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Data Scientist"
+   ]
   },
   "box": {
    "company": "Box",
@@ -1839,6 +1916,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "broadridge": {
+   "name": "Broadridge",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Infrastructure Standards & Operational Management (Global Cloud & Infrastructure Services)"
+   ]
   },
   "brookhavennationallaboratory": {
    "name": "Brookhaven National Laboratory",
@@ -2407,6 +2494,16 @@
    ],
    "count": 1
   },
+  "cleanharbors": {
+   "name": "Clean Harbors",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director of Data & AI Governance"
+   ]
+  },
   "clearesult": {
    "name": "clearesult",
    "dates": [
@@ -2505,11 +2602,13 @@
    "name": "Cloudera",
    "dates": [
     "2026-10-08",
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer, Anywhere Cloud - AI Systems & Runtimes"
+    "Staff Software Engineer, Anywhere Cloud - AI Systems & Runtimes",
+    "Global AI Solutions Director - Financial Services"
    ]
   },
   "cloudflare": {
@@ -2615,6 +2714,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "cognitiv": {
+   "name": "Cognitiv",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "ML Data Infrastructure Engineer"
+   ]
   },
   "coherehealth": {
    "name": "Cohere Health",
@@ -2920,6 +3029,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "csl": {
+   "name": "CSL",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI & Data Science"
+   ]
+  },
   "curanahealth": {
    "name": "Curana Health",
    "dates": [
@@ -3008,9 +3127,10 @@
     "2026-10-01",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Manager, Software Development Engineering"
+    "Senior Manager, Software Development Engineering",
+    "Lead Director, Software Development Engineering (Member Eligibility Services)"
    ]
   },
   "cyderes": {
@@ -4174,9 +4294,13 @@
   "f5": {
    "name": "F5",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Product Management, AI Security"
+   ]
   },
   "fact": {
    "company": "fact",
@@ -4538,6 +4662,17 @@
     "Senior Software Engineer, Fullstack"
    ]
   },
+  "flodesk": {
+   "name": "Flodesk",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Applied AI Engineer, Agent Quality & Evaluations",
+    "Sr. Product Manager, AI"
+   ]
+  },
   "floqast": {
    "name": "FloQast",
    "dates": [
@@ -4893,6 +5028,16 @@
     "2026-10-03"
    ],
    "count": 1
+  },
+  "genentech": {
+   "name": "Genentech",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Data Management & Analytical Data Science Solutions"
+   ]
   },
   "generacpowersystems": {
    "name": "Generac Power Systems",
@@ -5527,6 +5672,16 @@
     "Director Commerce Cloud Engineering"
    ]
   },
+  "hewlettpackardenterprise": {
+   "name": "Hewlett Packard Enterprise",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Principal AI & Machine Learning Engineer"
+   ]
+  },
   "hex": {
    "name": "Hex",
    "dates": [
@@ -5708,7 +5863,14 @@
   "hudl": {
    "company": "hudl",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Engineering Manager"
+   ],
+   "count": 1
   },
   "hudsonrivertrading": {
    "name": "Hudson River Trading",
@@ -6118,6 +6280,16 @@
     "Senior Director, Global Infrastructure Technology & Operations"
    ]
   },
+  "ironmountain": {
+   "name": "Iron Mountain",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect, CX Analytics & Automation"
+   ]
+  },
   "irvinetechnologycorporationitc": {
    "company": "Irvine Technology Corporation (ITC)",
    "first": "2026-10-05",
@@ -6273,6 +6445,16 @@
    "company": "just",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "justfoodcompany": {
+   "name": "Just Food Company",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Research Engineer, Scientific AI"
+   ]
   },
   "justworks": {
    "name": "Justworks",
@@ -7781,6 +7963,16 @@
    "first": "2026-10-06",
    "via": "greenhouse-cloud"
   },
+  "neuraflash": {
+   "name": "NeuraFlash",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer, AI & Agentforce"
+   ]
+  },
   "newsbreak": {
    "name": "NewsBreak",
    "dates": [
@@ -8247,9 +8439,10 @@
     "2026-10-08",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Software Development Snr Manager"
+    "Software Development Snr Manager",
+    "Director, Core Infrastructure Engineering"
    ]
   },
   "orb": {
@@ -8372,10 +8565,14 @@
   "pacvue": {
    "name": "pacvue",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-15"
    ],
-   "count": 1,
-   "note": "cloud-applied today"
+   "count": 2,
+   "note": "cloud-applied today",
+   "roles": [
+    "VP, AI Strategy & Delivery"
+   ]
   },
   "palette": {
    "company": "palette",
@@ -8683,7 +8880,14 @@
   "pfizer": {
    "company": "Pfizer",
    "first": "2026-10-07",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Director, Enterprise Architect, Patient Services Platforms"
+   ],
+   "count": 1
   },
   "pge": {
    "name": "PG&E",
@@ -9522,6 +9726,17 @@
    ],
    "count": 1
   },
+  "riotgames": {
+   "name": "Riot Games",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer,  Riot Client - Publishing Platform",
+    "Staff Machine Learning Engineer - Game Tech Group, ML Platform"
+   ]
+  },
   "ripple": {
    "name": "Ripple",
    "dates": [
@@ -9542,6 +9757,16 @@
    "count": 2,
    "roles": [
     "Senior Director, Partner Data"
+   ]
+  },
+  "ritchiebros": {
+   "name": "Ritchie Bros.",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
    ]
   },
   "riverai": {
@@ -9778,7 +10003,14 @@
   "salesforce": {
    "company": "Salesforce",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "LMTS (Lead Member of Technical Staff)"
+   ],
+   "count": 1
   },
   "sambanova": {
    "name": "SambaNova",
@@ -10028,6 +10260,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "septerna": {
+   "name": "Septerna",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director/Senior Director, AI/ML for Drug Discovery"
+   ]
   },
   "serova": {
    "name": "Serova",
@@ -10531,9 +10773,13 @@
   "ss8networks": {
    "name": "SS8 Networks",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Manager, Cloud Engineering & Operations"
+   ]
   },
   "ssc": {
    "name": "SS&C Technologies",
@@ -11144,6 +11390,16 @@
    ],
    "count": 1
   },
+  "thecocacolacompany": {
+   "name": "The Coca-Cola Company",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Applied AI & Agentic Solutions"
+   ]
+  },
   "thecollegeboard": {
    "name": "The College Board",
    "dates": [
@@ -11528,6 +11784,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "understoodorg": {
+   "name": "Understood.org",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Data & Analytics Engineering Manager"
+   ]
+  },
   "unframe": {
    "company": "Unframe",
    "first": "2026-10-06",
@@ -11539,9 +11805,10 @@
     "2026-10-10",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Inference Engineer"
+    "Staff Inference Engineer",
+    "Senior Inference Engineer"
    ]
   },
   "unitedconcordiadental": {
@@ -11782,9 +12049,13 @@
   "vercel": {
    "name": "Vercel",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Forward-Deployed Engineer\u00a0"
+   ]
   },
   "veridiantech": {
    "name": "VeridianTech (Dice)",
@@ -11888,9 +12159,13 @@
   "visa": {
    "name": "Visa",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Manager, Data & AI Review Enablement"
+   ]
   },
   "visionaryinnovativetechnologysolutions": {
    "name": "Visionary Innovative Technology Solutions",
@@ -12185,7 +12460,14 @@
   "workday": {
    "company": "Workday",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Sr Director, Software Development Engineering"
+   ],
+   "count": 1
   },
   "workiva": {
    "name": "Workiva",
@@ -12462,9 +12744,10 @@
     "2026-10-03",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer \u2013 Integrations Platform"
+    "Staff Software Engineer \u2013 Integrations Platform",
+    "Senior Data Engineer - Data Platform"
    ]
   },
   "ziprecruiter": {
@@ -12501,6 +12784,16 @@
    "company": "zonecompanysoftwareconsultingllc",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "zoom": {
+   "name": "Zoom",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Audio AI Engineer"
+   ]
   },
   "zoominfo": {
    "name": "ZoomInfo",
