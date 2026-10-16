@@ -364,6 +364,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"have you personally done in a production data engineering", ["Implemented real-time data pipelines","Built AI/LLM/RAG data pipelines","Optimized Spark/PySpark workloads"]),   # AvidXchange (Oct 16): only items on his record (real-time market-data pipelines, LLM/RAG at Yahoo Finance and Hyperion, Spark); one tick satisfies the required list
  (r"are you fluent in english|(do you )?speak english fluently|english fluency\??$", ["Yes","yes","Fluent","Native or bilingual","Native"]),   # MariaDB (Oct 16)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*have you (ever )?been,? (at any time,? )?(employed|worked) (by|for)", ["No","no"]),   # Nutrafol / Unilever (Oct 16): never worked there (former employers excluded)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*are you (an? )?(active|current) (teammate|team member|employee|associate|colleague)\b", ["No","no"]),   # AvidXchange (Oct 16): not a current employee (former employers excluded)
@@ -2336,7 +2337,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not want or want==["__ASK__"]: continue   # no rule for this question: leave it for the applicant, never guess
                         if "wellfound" in report["ats"].lower() and re.search(r"hear|learn about|find out|source",q or lab,re.I): want=["Wellfound","AngelList","Wellfound (AngelList)","Other","Job board"]+want   # applying through Wellfound: say so, else Other
                         if re.search(r"hear|learn about|find out|source",q or lab,re.I): members=[b for b in members if not HEAR_BAD.search(b[1])] or members   # never claim a referral, an event or a recruiter as the source (LinkedIn is the real source)
-                        if re.search(r"select all that apply|check all that apply|environments|best describes?|which (of the following )?(technolog|tools|languages|frameworks|services|platforms|types of|kinds of|practices|people-leadership|leadership)",q,re.I) and not re.search(r"hear|learn|source|where have you seen|ethnic|race|gender|disab|veteran|pronoun|sanction|citizenship|countr",q,re.I):
+                        if re.search(r"select all that apply|check all that apply|environments|best describes?|which (of the following )?(technolog|tools|languages|frameworks|services|platforms|types of|kinds of|practices|people-leadership|leadership)",q,re.I) and not re.search(r"hear|learn|source|where have you seen|personally done|ethnic|race|gender|disab|veteran|pronoun|sanction|citizenship|countr",q,re.I):
                             # "which environments / technologies / practices (select all that apply)": tick every option true for the applicant
                             ticked=[]
                             for b in members:
