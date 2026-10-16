@@ -229,9 +229,13 @@
   "accordion": {
    "name": "Accordion",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "acquia": {
    "name": "Acquia",
@@ -502,6 +506,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "aircallioinc": {
+   "name": "Aircall.io, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Engineer (Evals and Voice Models)"
+   ]
   },
   "airlockdigital": {
    "name": "Airlock Digital",
@@ -2192,9 +2206,13 @@
   "butterflynetwork": {
    "name": "Butterfly Network",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer, Full Stack"
+   ]
   },
   "buzzsolutions": {
    "name": "Buzz Solutions",
@@ -2400,6 +2418,16 @@
    "company": "casca",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "castai": {
+   "name": "Cast AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Solutions Architect"
+   ]
   },
   "castlight": {
    "name": "Castlight",
@@ -3120,7 +3148,14 @@
   "convoso": {
    "company": "Convoso",
    "first": "2026-10-06",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "[Remote] Senior Platform Engineer"
+   ],
+   "count": 1
   },
   "coreweave": {
    "name": "CoreWeave",
@@ -3205,7 +3240,14 @@
   "cribl": {
    "company": "Cribl",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (24h board sweep)"
+   "via": "cloud_greenhouse (24h board sweep)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Sr Software Engineer, Stream Integrations"
+   ],
+   "count": 1
   },
   "crossriver": {
    "name": "Cross River",
@@ -3271,6 +3313,16 @@
    "count": 1,
    "roles": [
     "Director, AI & Data Science"
+   ]
+  },
+  "culturebiosciences": {
+   "name": "Culture Biosciences",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer "
    ]
   },
   "curanahealth": {
@@ -3783,9 +3835,13 @@
   "discord": {
    "name": "Discord",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer - Consumer Revenue"
+   ]
   },
   "discoverfinancial": {
    "name": "Discover Financial",
@@ -4201,9 +4257,13 @@
   "elend": {
    "name": "eLEND",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "elevancehealth": {
    "name": "elevancehealth",
@@ -4809,9 +4869,14 @@
   "fingerprint": {
    "name": "Fingerprint",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Engineering Manager, Automation Intelligence",
+    "Senior Data Warehouse Engineer"
+   ]
   },
   "finra": {
    "name": "FINRA",
@@ -5446,6 +5511,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "gigaenergy": {
+   "name": "Giga Energy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Product Engineer, Internal Tools & Automation"
+   ]
   },
   "gileadsciences": {
    "name": "Gilead Sciences",
@@ -9565,6 +9640,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "planet": {
+   "name": "Planet",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Mission Optimization"
+   ]
+  },
   "planted": {
    "name": "planted",
    "dates": [
@@ -9613,9 +9698,14 @@
   "podium": {
    "name": "Podium",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Staff AI Engineer - USA",
+    "Senior AI Engineer - Agentic"
+   ]
   },
   "point": {
    "name": "Point",
@@ -9909,6 +9999,16 @@
    "company": "QualiTest",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "qualtrics": {
+   "name": "Qualtrics",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Field CTO - North America"
+   ]
   },
   "quanata": {
    "name": "Quanata",
