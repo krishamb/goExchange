@@ -1070,8 +1070,8 @@ async def fill_language(page, job, panel):
         loc = panel.locator(f'[data-fkit-id="{f["fkit"]}"]').first
         if f["kind"] == "checkbox" and re.search(r"fluent|native", f["label"], re.I):
             done["fluent"] = await set_check(loc.locator('input[type="checkbox"]').first, True)
-        elif f["kind"] == "listbox" and f is not lang and re.search(r"level|proficien|reading|writing|speaking|overall|comprehension", f["label"], re.I) and not f["val"]:
-            v, _ = await listbox_choose(page, loc.locator('button[aria-haspopup="listbox"]').first, lambda t: level_rank(t, prefs))
+        elif f["kind"] == "listbox" and f is not lang and re.search(r"level|proficien|reading|writing|speaking|overall|comprehension|^\s*(read|speak|write|listen|understand)\w*\s*\*?\s*$", f["label"], re.I) and not f["val"]:   # Home Depot (Oct 16): bare Read / Speak / Write listboxes
+            v, _ = await listbox_choose(page, loc.locator('button[aria-haspopup="listbox"]').first, lambda t: level_rank(t, list(prefs) + ["Native or Bilingual", "Native", "Fluent", "Full Professional", "Expert", "Advanced", "Excellent", "Proficient", "High"]))
             done[f["label"]] = v
     job.ans("Language: English", done)
     return done

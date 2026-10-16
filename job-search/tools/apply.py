@@ -354,6 +354,10 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"did you answer .{0,4}no.{0,4} to question ?1|answer(ed)? .{0,4}no.{0,4} to (question|q) ?1 .{0,120}yes.{0,4} to (question|q) ?2", ["No","no"]),   # Snap (Oct 16): the follow-up to "authorized? Yes / need sponsorship? No"
+ (r"bilateral agreement|eligible for any visa classification|(e-3|h-1b1|\btn\b).{0,60}visas?\b.{0,40}\?", ["No","no"]),   # US citizen: no treaty-visa eligibility question applies (Snap Oct 16)
+ (r"^(?!.*\b(five|5)\s*days).*\b(at least|a minimum of|minimum of)\s*(two|three|four|2|3|4)\s*days\s*(per|a|each)\s*week.{0,300}\b(able|willing) to (meet|comply|work)", ["Yes","yes"]),   # hybrid in-office minimum (2-4 days) at a Bay Area / NYC / LA posting the screens already allowed; five-day on-site stays out
+
  (r"years of experience .{0,60}(formal )?people management|years .{0,40}direct reports", ["5+","10+","5+ years","10+ years","More than 5 years"]),   # Huron 2026-10-16: CTO / engineering leadership
  (r"years of experience .{0,40}designing solutions on microsoft azure", ["1","1 year","1-2","1-2 years"]),   # resume lists Azure among skills; no Azure-specific track record (conservative)
  (r"export control (laws|regulations).{0,60}(select|indicate) your (status|citizenship)|select your (status|citizenship status) from (one of )?the following", ["Citizen of the U.S.","U.S. Citizen","US Citizen","Citizen of the United States","United States citizen"]),   # Seekr 2026-10-16: US citizen
@@ -2327,12 +2331,17 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                             try: await btn.click(timeout=10000)
                             except Exception:
                                 b2=page.locator('button[type="submit"]:visible, button:has-text("Submit application"):visible').first; await b2.click(timeout=10000)
-                            for _w in range(15):   # the submit spinner can run for a while after the code: wait for a confirmation, an error or a rejected code
+                            _code_err=None
+                            for _w in range(20):   # the submit spinner can run for a while after the code: wait for a confirmation, the code step going away, or an error shown at the code field. Riot/Machinify (Oct 16): a break on words in the page's fine print read the form before the confirmation loaded, though both applications went through
                                 await page.wait_for_timeout(3000)
                                 body=await body_text(page)
-                                if re.search(r"thank you for|thanks for|application (has been |was |is )?(submitted|received|sent|in\b)|success|/confirmation",body+" "+page.url,re.I): break
-                                if re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I) and re.search(r"security code|verification code",body,re.I): break
-                            if re.search(r"security code|verification code",body,re.I) and re.search(r"invalid|incorrect|expired|doesn.t match|try again",body,re.I): report.setdefault("errors",[]).append("verification code rejected")
+                                if re.search(r"/confirmation\b",page.url) or re.search(r"thank you for (applying|your application|submitting|your interest)|thanks for applying|application (has been |was )?(submitted|received)|we('ve| have) received your application|successfully submitted",body,re.I): break
+                                try:
+                                    if not await page.locator(CODE_BOXES).count() and not re.search(r"enter the \d+-character code|verification code was sent",body,re.I): break
+                                    _code_err=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert], [aria-live]')].map(e=>(e.innerText||'').trim()).filter(t=>/code/i.test(t)&&/invalid|incorrect|expired|match|try again|wrong/i.test(t)&&t.length<300).slice(0,2).join(' | ')")
+                                except Exception: _code_err=None
+                                if _code_err: break
+                            if _code_err: report.setdefault("errors",[]).append("verification code rejected: "+_code_err[:160])
                     # Greenhouse's uploader occasionally drops the file ("Cannot read properties of undefined (reading 'uploadFile')"): re-attach and submit once more
                     errs0=await page.evaluate("()=>[...document.querySelectorAll('[class*=error], [role=alert]')].map(e=>e.innerText.trim()).filter(Boolean).slice(0,8)")
                     if attempt==0 and any(re.search(r"uploadFile|Resume/CV is required",e) for e in errs0):
@@ -2362,6 +2371,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 ok=bool(sm) and not still_code and not any(re.search(r"required|invalid|correct|missing",e,re.I) for e in errs)
                 if still_code and not ok: errs.append("still on the security-code step")
                 report["submitted"]=ok; report["result"]=((sm.group(0)+" … ") if sm else "")+body[-450:].replace("\n"," | "); report["errors"]=errs; report["final_url"]=page.url
+                if not ok and report.get("code_entered") and still_code and not any("verification code rejected" in e for e in errs):   # the code went in and the form was resubmitted but the page never moved on: Greenhouse often sends the confirmation anyway (Riot, Machinify Oct 16), so it is never retried and counts only after a confirmation email
+                    report["submitted"]=True; report["uncertain_code_step"]=True; report["result"]="UNCERTAIN: security code entered and resubmitted but the page still shows the code step; counted only after a confirmation email"
                 if report.get("confirmation_page_error") and not ok:   # redirected to /confirmation but the page never rendered: never retried (it may have gone through), never counted
                     report["submitted"]=True; report["result"]="UNCERTAIN: redirected to the Greenhouse confirmation URL but the confirmation page failed to load; counted only after a confirmation email"
                 if not ok and re.search(r"possible spam|flagged as (possible )?spam|pause browser extensions|pause ad ?blockers|different (network )?connection instead|could not verify|verify you are (a )?human",body,re.I):
