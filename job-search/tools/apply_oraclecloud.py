@@ -653,8 +653,8 @@ async def upload_resume(page, job):
     """The resume goes into the 'Upload Resume' file input (Supporting Documents); the cover letter only when required."""
     path = resume_for(job.item)
     stem = os.path.splitext(os.path.basename(path))[0]
-    if stem.lower() in (await page.content()).lower():   # attached already (a draft from an earlier run)
-        job.ans("Resume", os.path.basename(path) + " (already attached)"); return True
+    if stem.lower() in (await page.content()).lower() and re.search(r"remove resume|delete resume|replace resume", await text(page), re.I):   # attached already (a draft from an earlier run)
+        job.ans("Resume", os.path.basename(path) + " (already attached)"); return True   # the name alone may only be in the profile's 'Use' list
     # a second application on the same site: the profile lists earlier files with a 'Use' control instead of an upload box
     use = page.get_by_role("button", name=re.compile(r"^\s*use\s*$", re.I))
     if not await use.count(): use = page.get_by_role("link", name=re.compile(r"^\s*use\s*$", re.I))
