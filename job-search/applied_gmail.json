@@ -11386,11 +11386,13 @@
    "name": "StubHub",
    "dates": [
     "2026-10-08",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer - Core Platform"
+    "Staff Software Engineer - Core Platform",
+    "Senior Software Engineer (Los Angeles, CA)"
    ]
   },
   "summittechpartners": {
@@ -11553,6 +11555,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "talkdesk": {
+   "name": "Talkdesk",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Solution Architect"
+   ]
   },
   "talkspace": {
    "name": "Talkspace",
@@ -12990,9 +13002,13 @@
    "name": "X",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Technical Lead, Early Stage Supply Chain Project"
+   ]
   },
   "x9": {
    "company": "x9",
