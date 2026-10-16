@@ -620,6 +620,16 @@
    ],
    "count": 1
   },
+  "alloy": {
+   "name": "Alloy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Product"
+   ]
+  },
   "allspice": {
    "company": "allspice",
    "first": "2026-10-05",
@@ -1038,6 +1048,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "arizeai": {
+   "name": "Arize AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineer"
+   ]
   },
   "armada": {
    "name": "Armada",
@@ -1595,6 +1615,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "batonarydertechnologylab": {
+   "name": "Baton (A Ryder Technology Lab)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer, MLOps - Machine Learning"
+   ]
+  },
   "battlement": {
    "company": "battlement",
    "first": "2026-10-05",
@@ -1823,6 +1853,16 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer"
+   ]
+  },
+  "bitmovin": {
+   "name": "Bitmovin",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
    ]
   },
   "biztechfusion": {
@@ -6309,6 +6349,16 @@
    ],
    "count": 1
   },
+  "howdengroup": {
+   "name": "Howden Group",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Solution Architect"
+   ]
+  },
   "hp": {
    "name": "HP",
    "dates": [
@@ -6481,6 +6531,16 @@
     "2026-10-12"
    ],
    "count": 1
+  },
+  "idexxlaboratories": {
+   "name": "IDEXX Laboratories",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Data Engineer"
+   ]
   },
   "idme": {
    "name": "ID.me",
@@ -6826,6 +6886,16 @@
    "count": 2,
    "roles": [
     "Engineering Manager, Platform Engineering"
+   ]
+  },
+  "iterativehealth": {
+   "name": "Iterative Health",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineer"
    ]
   },
   "itradenetwork": {
@@ -7845,6 +7915,16 @@
     "2026-10-07"
    ],
    "count": 1
+  },
+  "marketaxess": {
+   "name": "MarketAxess",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
   },
   "marklo": {
    "name": "Marklo",
@@ -9189,9 +9269,13 @@
   "orcristtechnologies": {
    "name": "Orcrist Technologies",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Solution Architect (Prototyping)"
+   ]
   },
   "ordergroove": {
    "name": "Ordergroove",
@@ -9376,9 +9460,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer, Connectivity & API Transformation"
+    "Senior Software Engineer, Connectivity & API Transformation",
+    "Senior Engineering Manager, Customer Runtimes"
    ]
   },
   "paperlessparts": {
@@ -9507,7 +9592,14 @@
   "pave": {
    "company": "pave",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Senior Software Engineer, Agent"
+   ],
+   "count": 1
   },
   "pax8": {
    "name": "Pax8",
@@ -9721,6 +9813,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "pinwheel": {
+   "name": "Pinwheel",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Backend Engineer, AI Projects"
+   ]
   },
   "pipe": {
    "name": "Pipe",
@@ -10054,6 +10156,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "pulumi": {
+   "name": "Pulumi ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Agentic AI"
+   ]
+  },
   "punttai": {
    "company": "punttai",
    "first": "2026-10-05",
@@ -10136,9 +10248,13 @@
   "quanata": {
    "name": "Quanata",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Back End Engineer  [Remote-US]"
+   ]
   },
   "quantiphi": {
    "name": "Quantiphi",
@@ -11003,6 +11119,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "scopely": {
+   "name": "Scopely",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "scout": {
    "company": "scout",
    "first": "2026-10-05",
@@ -11196,6 +11322,16 @@
    "company": "shin",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "shipbobinc": {
+   "name": "ShipBob, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Product Builder, Inventory Experience"
+   ]
   },
   "shipt": {
    "company": "Shipt",
@@ -11932,6 +12068,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "swayable": {
+   "name": "Swayable",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer: AI"
+   ]
   },
   "swiftsolar": {
    "name": "Swift Solar",

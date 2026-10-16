@@ -364,6 +364,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"what is your english (level|proficiency)|english (proficiency )?level\??$", ["C2","Native","Native or bilingual","Fluent","C1"]),   # Sezzle (Oct 16): CEFR scale; 25 years working in English in the US
  (r"have you personally done in a production data engineering", ["Implemented real-time data pipelines","Built AI/LLM/RAG data pipelines","Optimized Spark/PySpark workloads"]),   # AvidXchange (Oct 16): only items on his record (real-time market-data pipelines, LLM/RAG at Yahoo Finance and Hyperion, Spark); one tick satisfies the required list
  (r"are you fluent in english|(do you )?speak english fluently|english fluency\??$", ["Yes","yes","Fluent","Native or bilingual","Native"]),   # MariaDB (Oct 16)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*have you (ever )?been,? (at any time,? )?(employed|worked) (by|for)", ["No","no"]),   # Nutrafol / Unilever (Oct 16): never worked there (former employers excluded)
