@@ -4722,6 +4722,16 @@
     "Senior Director of Engineering, New Subjects"
    ]
   },
+  "dynamiclifecycleinnovations": {
+   "name": "Dynamic Lifecycle Innovations",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Enterprise Architecture & Platforms"
+   ]
+  },
   "e": {
    "company": "e",
    "first": "2026-10-05",
@@ -6162,9 +6172,13 @@
   "gapinc": {
    "name": "Gap Inc.",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Director - AI & Agentic Platform Engineering"
+   ]
   },
   "garnerhealth": {
    "name": "Garner Health",
@@ -14381,6 +14395,16 @@
    ],
    "count": 1
   },
+  "therealreal": {
+   "name": "The RealReal",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "thermofisher": {
    "name": "Thermo Fisher Scientific",
    "dates": [
@@ -14561,6 +14585,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "tpreducationllc": {
+   "name": "TPR Education, LLC",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
    ]
   },
   "tradeify": {
@@ -14884,9 +14918,13 @@
   "uniteus": {
    "name": "Unite Us",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "unity": {
    "name": "Unity",
@@ -15577,11 +15615,13 @@
   "wellsky": {
    "name": "WellSky",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. Manager, Engineering"
+    "Sr. Manager, Engineering",
+    "Staff Software Engineer"
    ]
   },
   "wendys": {
@@ -15619,6 +15659,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "wheelhouse": {
+   "name": "Wheelhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "whirlai": {
    "name": "Whirlai",
@@ -16032,9 +16082,10 @@
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer, Provider Engagement"
+    "Senior Software Engineer, Provider Engagement",
+    "Senior Platform Engineering Manager"
    ]
   },
   "zone": {
