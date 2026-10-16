@@ -1124,9 +1124,13 @@
   "atoms": {
    "name": "Atoms",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager - Observability"
+   ]
   },
   "atomscareerspage": {
    "name": "ATOMS Careers page (Greenhouse alias)",
