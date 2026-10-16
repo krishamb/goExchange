@@ -450,6 +450,9 @@ CHOICE_RULES=[
  (r"declared ineligible to (contract|receive|import|export)|ineligible to contract with.{0,80}(government|agency)|debarred.{0,60}(defense|export|government)", ["No","no"]),   # Apptronik 2026-10-16 ITAR question
  (r"(would|will) (you )?be engaging in any of the above|engaging in any of the (above|listed) (listed )?(situations|activities)|advise if you (would|will) be engaging", ["No","no"]),   # HPE 2026-10-16 conflict-of-interest question (had answered Yes)
  (r"physician licensed to practice|licensed to practice medicine|sunshine act", ["No","no"]),   # BD 2026-10-16: not a physician
+ (r"which language\(?s?\)? (are|is) you(r)? (business |professionally )?fluent|in which language.{0,20}(business )?fluent|languages? .{0,20}business fluent", ["English"]),   # Riot 2026-10-16
+ (r"if yes,? (can you )?(please )?indicate the last (year|month) you worked for", ["n/a","N/A","Not applicable","Not Applicable"]),
+ (r"(worked|work) for tencent|affiliated with tencent|owned by tencent.{0,200}(worked|employed)", ["No","no"]),   # Riot 2026-10-16: never worked for Tencent
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
