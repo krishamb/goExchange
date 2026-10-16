@@ -717,7 +717,7 @@ async def date_field(page, box, lab):
         today = datetime.date(yr, mo, dy)
     except Exception:
         today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-7))).date()
-    if re.search(r"(desired|preferred|earliest|available|availability|possible) (start|starting) date|earliest date .{0,40}\bstart|start date|date (you are|you\'re) available|earliest availability|availability to (start|begin|join)|available to (start|begin|join)|when (can|could) you (start|begin|join)|what date would you be able to (start|begin|join)|date (would|could|can) you (be able to )?(start|begin|join)", (lab or "").lower()):
+    if re.search(r"anticipated eligibility (time|date)|eligib\w* (time|date) for employment|(desired|preferred|earliest|available|availability|possible) (start|starting) date|earliest date .{0,40}\bstart|start date|date (you are|you\'re) available|earliest availability|availability to (start|begin|join)|available to (start|begin|join)|when (can|could) you (start|begin|join)|what date would you be able to (start|begin|join)|date (would|could|can) you (be able to )?(start|begin|join)", (lab or "").lower()):
         d = today + datetime.timedelta(days=3)   # applicant (2026-10-01): available immediately; a few days out keeps the date valid
         return await set_date(page, box, d.month, d.day, d.year)
     if not TODAY_Q.search((lab or "").strip().lower()): return None
