@@ -365,6 +365,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"(would|wish|want) (like )?to be contacted about future .{0,60}(opportunit|roles|openings|positions)", ["Yes","yes"]),   # CodePath (Oct 16): open to future roles
  (r"(do you have )?(a )?(strong |deep |solid )?proficiency (in|with) (python|go|golang|rust|c\+\+|java|sql)\b|are you (highly )?proficient (in|with) (python|go|golang|rust|c\+\+|java|sql)\b", ["Yes","yes"]),   # Collibra (Oct 16): writes Python, Go, Rust and C++ daily; years of production Java and SQL
  (r"^are you (able|eligible|allowed|permitted) to work in the (united states|u\.?s\.?a?\.?|us)\b", ["Yes","yes"]),   # Zeta Global (Oct 16): US citizen
  (r"^did (an? )?ai( tool| agent| assistant)? (complete|fill( out)?|submit|prepare|write) (this|the|your) application", ["Yes","yes"]),   # Censys (Oct 16): truthful disclosure - an AI agent fills these forms (applicant: AI used = Yes)
