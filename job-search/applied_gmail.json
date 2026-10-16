@@ -666,9 +666,13 @@
   "amazon": {
    "name": "Amazon Web Services",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Software Dev Manager, Amazon EMR"
+   ]
   },
   "ambiencehealthcare": {
    "name": "Ambience Healthcare",
