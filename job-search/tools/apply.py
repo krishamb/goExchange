@@ -354,6 +354,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"export control (laws|regulations).{0,60}(select|indicate) your (status|citizenship)|select your (status|citizenship status) from (one of )?the following", ["Citizen of the U.S.","U.S. Citizen","US Citizen","Citizen of the United States","United States citizen"]),   # Seekr 2026-10-16: US citizen
  (r"^what is your desired annual compensation\??\*?$", ["$220,000 - $350,000","$220,000","Yes"]),   # eClinical 2026-10-16: the form offers only Yes/No here
  (r"currently based in any of (these|the following) countries|which of (these|the following) countries are you (currently )?based in", ["United States","United States of America","USA","US"]),   # Vercel 2026-10-16
  (r"base salary for this role is \$?(\d{3}),\d{3}\s*[-–]\s*\$?(2\d\d|3\d\d),\d{3}.{0,40}(align|match|meet)", ["Yes","yes"]),   # posted band reaches the applicant's $200K+ IC range
