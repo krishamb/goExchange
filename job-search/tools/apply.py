@@ -376,6 +376,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"which generative ai tools\s+have you integrated into your day-to-day", ["__MULTI__","Claude","ChatGPT","Cursor"]),   # Zocdoc: applicant's daily stack (2026-10-02): Claude, GPT, Cursor (no Copilot/Glean/Codex on record)
  (r"must be domiciled in the u\.?s\.?|live permanently and maintain (a )?home address in the us", ["Yes"]),   # lives in Santa Clara, CA; US citizen
  (r"largest engineering team you have directly managed", ["11–15+","11-15+","15+","More than 15","11+"]),   # led 50+ (JPMorgan) and 75+ (Yahoo Finance) organizations
  (r"(personally|professionally|personally/professionally) deployed an? (ai|ml|machine learning) model to production", ["Yes"]),   # Hyperion AI: open-weight model serving (llama.cpp / vLLM) in production
