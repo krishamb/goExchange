@@ -2922,6 +2922,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "cerence": {
+   "name": "Cerence",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Principal AI Engineer"
+   ]
+  },
   "ceribell": {
    "name": "Ceribell",
    "dates": [
@@ -5428,6 +5438,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "fervoenergy": {
+   "name": "Fervo Energy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Software Engineering"
+   ]
+  },
   "fico": {
    "name": "FICO",
    "dates": [
@@ -5606,9 +5626,13 @@
   "five9": {
    "name": "Five9",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Manager, Engineering - AI Agents"
+   ]
   },
   "fivetran": {
    "name": "Fivetran",
@@ -6828,6 +6852,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "hcsc": {
+   "name": "HCSC",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Application Architect - Hadoop"
+   ]
+  },
   "hdytechnologiesllc": {
    "name": "HDY Technologies LLC",
    "dates": [
@@ -7430,6 +7464,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "indiciumai": {
+   "name": "Indicium AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed AI Engineer"
+   ]
   },
   "inferact": {
    "name": "Inferact",
@@ -9302,9 +9346,13 @@
   "mitratech": {
    "name": "Mitratech",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal AI Engineer"
+   ]
   },
   "mixpanel": {
    "name": "Mixpanel",
@@ -9519,6 +9567,16 @@
    "via": "ashby browser run (part 1)",
    "roles": [
     "Engineering Manager, Wallet"
+   ]
+  },
+  "myto": {
+   "name": "Myto",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineer"
    ]
   },
   "naijaluxemart": {
@@ -10250,9 +10308,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Applied AI Engineer, Internal Automation"
+    "Applied AI Engineer, Internal Automation",
+    "Data Engineering Manager"
    ]
   },
   "openteams": {
@@ -12730,9 +12789,13 @@
   "signifyd": {
    "name": "Signifyd",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "signifyd95": {
    "company": "signifyd95",
@@ -12916,7 +12979,14 @@
   "snap": {
    "company": "Snap",
    "first": "2026-10-02",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Manager, Software Engineering, Maps"
+   ],
+   "count": 1
   },
   "sncloudsolutions": {
    "name": "SN Cloud Solutions",
@@ -13061,9 +13131,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer"
+    "Staff Software Engineer",
+    "Senior Software Engineer"
    ]
   },
   "spe": {
@@ -13956,9 +14027,13 @@
   "thenewyorktimes": {
    "name": "The New York Times",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Engineer, Developer Platforms and Generative AI"
+   ]
   },
   "thepublicinterestcompany": {
    "name": "The Public Interest Company",
@@ -14790,6 +14865,16 @@
    ],
    "count": 1
   },
+  "vestwell": {
+   "name": "Vestwell",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineer (AI)"
+   ]
+  },
   "via": {
    "name": "Via",
    "dates": [
@@ -14980,6 +15065,16 @@
    "company": "watney",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "wave": {
+   "name": "Wave",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
   },
   "waymark": {
    "name": "Waymark",
