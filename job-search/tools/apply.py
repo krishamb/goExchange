@@ -363,6 +363,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"which team are you most interested in|which (of these |of the )?teams? (are you|would you be) (most )?interested", ["All of the above","Any of the above","No preference","Open to any team"]),   # Flex (Oct 16): open to every listed team
  (r"best describes your working rights|your (current )?working rights", ["United States Citizen or Permanent Resident","US Citizen","U.S. Citizen","United States Citizen"]),   # Firmus (Oct 16): US citizen
  (r"are you authori[sz]ed to work in the country (in )?which (this|the) role is located", ["I am authorised to work in the country which this role is located (citizen, permanent resident etc)","I am authorized to work in the country which this role is located (citizen, permanent resident etc)","Yes","yes"]),   # Fin (Oct 16): US citizen, no sponsorship
  (r"experience leading backend-heavy teams or customer-facing feature teams", ["Both","Backend-heavy"]),   # Boulevard (Oct 16): backend-heavy trading / platform teams and the Yahoo Finance consumer product
