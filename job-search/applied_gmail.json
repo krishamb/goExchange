@@ -3095,11 +3095,13 @@
   "coherehealth": {
    "name": "Cohere Health",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior AI Engineer"
+    "Senior AI Engineer",
+    "Senior Manager, Data Platform Engineering"
    ]
   },
   "cohesity": {
@@ -5004,9 +5006,13 @@
   "figma": {
    "name": "Figma",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "finaleinventory": {
    "name": "Finale Inventory",
