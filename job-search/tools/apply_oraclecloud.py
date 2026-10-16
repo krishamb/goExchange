@@ -1031,6 +1031,8 @@ async def run_one(br, item):
             job.report["result"] = "ALREADY APPLIED on this company's Oracle site"; return job.report
         if not await page.locator("apply-flow-block, .apply-flow-block").count() and re.search(r"page has expired", await text(page), re.I):
             rb = page.get_by_role("button", name=re.compile(r"resume application", re.I))   # Pearson / Hertz: 'Your page has expired. RESUME APPLICATION'
+            if not await rb.count(): rb = page.get_by_role("link", name=re.compile(r"resume application", re.I))
+            if not await rb.count(): rb = page.get_by_text(re.compile(r"^\s*resume application\s*$", re.I))
             if await rb.count():
                 try:
                     await rb.first.click(timeout=5000)
@@ -1075,6 +1077,12 @@ async def run_one(br, item):
             btns = await page_buttons(page)
             names = [t for t, _ in btns]
             log(job.tag, f"page {pg + 1}: buttons {names}; unanswered {len(job.report['unanswered'])}")
+            if not btns and not job.report.get("tc_agreed"):
+                _b = await text(page)
+                ag = page.get_by_role("button", name=re.compile(r"^\s*(i )?agree\s*$", re.I))
+                if re.search(r"terms and conditions|privacy policy", _b, re.I) and not AI_CERT.search(_b) and await ag.count():
+                    await ag.first.click(timeout=5000); job.report["tc_agreed"] = True   # Mayo: a Terms and Conditions page with one AGREE button before the form
+                    job.ans("Terms and Conditions (AGREE page)", "agreed"); await page.wait_for_timeout(4000); continue
             if any(re.fullmatch(r"submit( application)?", t, re.I) for t in names) or not btns:
                 await at_end(page, job, item); return job.report
             nxt = next((b for t, b in btns if re.fullmatch(r"next|continue|save and continue", t, re.I)), None)
@@ -1086,7 +1094,12 @@ async def run_one(br, item):
             if job.report["unanswered"]:
                 await at_end(page, job, item); return job.report
             before = re.sub(r"\s+", " ", await text(page))[:400]
-            await nxt.click(timeout=5000); await page.wait_for_timeout(3500)
+            try: await nxt.click(timeout=5000)
+            except Exception:   # Stanford: Next covered by an overlay for a moment
+                await page.wait_for_timeout(2000)
+                try: await nxt.click(timeout=5000, force=True)
+                except Exception: await nxt.evaluate("(e)=>e.click()")
+            await page.wait_for_timeout(3500)
             if re.sub(r"\s+", " ", await text(page))[:400] == before:
                 errs = await page.evaluate(r"""()=>[...document.querySelectorAll('.input-row--invalid')].filter(e=>e.offsetParent).map(e=>e.innerText.replace(/\s+/g,' ').trim().slice(0,160)).slice(0,10)""")
                 if errs:
