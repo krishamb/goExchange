@@ -41,9 +41,13 @@
   "3cloud": {
    "name": "3Cloud",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Field CTO"
+   ]
   },
   "4consultingincdice": {
    "name": "4 Consulting Inc (Dice)",
@@ -317,9 +321,13 @@
   "adyen": {
    "name": "Adyen",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Machine Learning Engineering Manager, Credit & Underwriting"
+   ]
   },
   "aeratechnology": {
    "name": "Aera Technology",
@@ -11311,11 +11319,15 @@
    "name": "Step",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
   },
   "stitchfix": {
    "name": "Stitch Fix",
@@ -11765,9 +11777,13 @@
   "tenstorrent": {
    "name": "Tenstorrent",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Datacenter & Agentic AI Workload Performance Analysis Engineer"
+   ]
   },
   "tereina": {
    "name": "Tereina",
@@ -12124,9 +12140,13 @@
   "tubi": {
    "name": "Tubi",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Cobalt"
+   ]
   },
   "turbopuffer": {
    "name": "Turbopuffer",
