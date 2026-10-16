@@ -376,6 +376,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"current or former alphabet employee, intern, temporary worker, contractor, or vendor", ["Not Applicable","N/A","No"]),   # never worked for Google / Alphabet
+ (r"^if you require work authorization,? what kind", ["Not Applicable","N/A","None"]),   # US citizen
  (r"^years of backend development experience", ["6+ years","6+","10+ years","5+ years"]),   # 25+ years of backend systems
  (r"development experience of event-driven architecture|experience (with|in) event-driven architecture", ["Systems Design","Implementation (Hands-on)"]),   # designed JPMorgan journal/replay event streams; Kafka/Redpanda
  (r"what is your level of experience in ai development", ["Strong experience (built and shipped AI features or applications to production)"]),   # Yahoo Finance RAG assistants, Hyperion AI platform
