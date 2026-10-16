@@ -2728,9 +2728,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "AI Solutions Architect"
+    "AI Solutions Architect",
+    "Senior Software Engineer | Kubernetes Automation"
    ]
   },
   "castlight": {
@@ -4430,9 +4431,13 @@
   "dragos": {
    "name": "Dragos",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Data Engineer"
+   ]
   },
   "drata": {
    "name": "Drata",
@@ -6236,6 +6241,16 @@
    "company": "govstar",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "gp": {
+   "name": "G-P",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Director & Head of Architecture"
+   ]
   },
   "gpstrategies": {
    "name": "GP Strategies",
@@ -9782,6 +9797,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "opensesame": {
+   "name": "OpenSesame",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineer, Internal Automation"
+   ]
   },
   "openteams": {
    "name": "OpenTeams",
@@ -13677,6 +13702,16 @@
    "company": "two",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "twochairs": {
+   "name": "Two Chairs",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "typeform": {
    "name": "Typeform",
