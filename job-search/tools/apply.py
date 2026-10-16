@@ -376,6 +376,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"if you do not (have|hold) a (security )?clearance,? (are|would) you (be )?able to obtain", ["Yes.","Yes","Yes, I am able to obtain one"]),   # US citizen, eligible; never 'already have a clearance' (Defense Unicorns Oct 16)
  (r"^if yes,? what kind of sponsorship will you require", ["Not Applicable (No Sponsorship Required)","Not Applicable","N/A","None"]),   # US citizen
  (r"do you have prior brokerage experience", ["No"]),
  (r"^if yes,? in what role\??\*?$", ["N/A","Not Applicable","None"]),   # follow-up to a No
@@ -1522,6 +1523,13 @@ HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |in
 HEAR_BAD=re.compile(r"recruit|employee|referr|refer(ral|red)|event|fair|conference|meetup|friend|colleague|agency|university|campus|blog|podcast|hosted|inmail",re.I)   # LinkedIn IS the source (applicant, 2026-10-07); a LinkedIn recruiter / InMail is not
 LOC_Q=re.compile(r"location|city|where .{0,20}(based|live|located|reside)|residence",re.I)
 RACE_LBL=re.compile(r"\brace\b|\braces\b|racial|\bethn|\bethin",re.I)   # also misspelt labels ('State your Race/ Ethincity', Howden Oct 16)
+CLEAR_LBL=re.compile(r"clearance|polygraph|\bsecret\b|\bts/sci\b",re.I)
+def clearance_claim(t):
+    """An option that claims a security clearance the applicant never held (Oct 16 Defense Unicorns: 'Not applicable. I already
+    have a security clearance.' picked by an N/A follow-up preference)."""
+    s=(t or "").lower()
+    if re.search(r"\b(do not|don.?t|never|no longer|not currently)\b.{0,30}\b(have|hold|held|had)\b|^\s*no\b|never had|none\b|\bno (active|current|existing)\b|\beligible\b|\bclearable\b|\bwithout\b", s): return False
+    return bool(re.search(r"already (have|hold)|currently (have|hold)|i (have|hold) (a|an|my) |^\s*yes,? ?(confidential|secret|top secret|ts)|^\s*(active|inactive|expired) clearance|\b(active|current) (secret|top secret|ts/sci|clearance)\b", s))
 def race_bad(t):
     """A race/ethnicity option the applicant (Asian, not Hispanic or Latino) must never pick: another race, 'Two or more',
     'Other' or 'Hispanic or Latino'. Asian options and negated / decline options stay usable. (Oct 16 Howden: a 'State ...'
@@ -1538,6 +1546,7 @@ def mask_hear(texts,label):
         if t and HEAR_Q.search(label or "") and HEAR_BAD.search(t): t=""
         elif t and LOC_Q.search(label or "") and re.search(r"santa clara",t,re.I) and not re.search(r"california|\bca\b|united states|\busa?\b",t,re.I): t=""
         elif t and RACE_LBL.search(label or "") and race_bad(t): t=""
+        elif t and CLEAR_LBL.search(label or "") and clearance_claim(t): t=""
         out.append(t)
     return out
 PREF_ALIASES={"united states":["United States of America","USA","U.S.","US"],"united states of america":["United States","USA","US"],"united kingdom":["UK","Great Britain"]}   # fallback only: menus that abbreviate the answer
