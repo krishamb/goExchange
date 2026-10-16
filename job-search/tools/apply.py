@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"what are your expectations for pay in this role", "$200,000 - $300,000 base, depending on scope (negotiable)"),   # GHX (Oct 16): the applicant's IC range
  (r"which locations would you consider for relocation", "New York, NY or Los Angeles, CA for hybrid roles. I live in Santa Clara, CA, so San Francisco Bay Area roles need no relocation."),   # Clorox (Oct 16): the applicant relocates only for NYC / LA hybrid
  (r"were you referred (to this role )?by (a |an )?(current )?.{0,60}employee\?.{0,10}if so", "No"),   # Tower Research (Oct 16): not referred
  (r"^applicant.?s statement (&|and) acknowledge?ment", P["name"]),   # Iterative Health (Oct 16): typed full name agreeing to the truthful-answers / at-will statement (same as the Marvell certification rule)
@@ -366,6 +367,18 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"massachusetts to require or administer a lie detector", ["I am not located in Massachusetts"]),   # TransUnion (Oct 16): Santa Clara, CA
+ (r"how were you referred to", ["Other","Other (please specify)"]),   # DHI (Oct 16): found on LinkedIn, which the menu does not list
+ (r"will you now or in the future require sponsorship for employment visa", ["I am legally authorized to work in this country for any employer.","No","no"]),   # Agero (Oct 16): US citizen
+ (r"(relative|cohabitant).{0,40}(employed|employee).{0,80}(guidewell|florida blue|subsidiar)", ["No","no"]),   # Florida Blue (Oct 16)
+ (r"^current clearance level", ["Clearable","No clearance","None"]),   # Clarity Innovations (Oct 16): US citizen, never held a clearance (eligible to be cleared)
+ (r"production experience with python and a relational store", ["Both, in production"]),   # Syndio (Oct 16): Python and Postgres in production (his stack)
+ (r"what is your current work location status", ["Local to Emeryville, CA - no relocation needed","Local to","No relocation needed"]),   # Profluent (Oct 16): lives in Santa Clara, CA (Bay Area)
+ (r"can you verify your legal right to work in the united states", ["I am authorized to work in this country for any employer.","Yes","yes"]),   # SupplyHouse (Oct 16)
+ (r"hands-on experience with java and j2ee", ["D. I have 2+ years of experience developing, deploying, and maintaining Java/J2EE-based applications"]),   # GHX (Oct 16): years of production Java in financial services
+ (r"experience designing scalable and maintainable systems", ["D. I have actively designed scalable systems or components used in production"]),   # Chief Architect / CTO
+ (r"what level of experience do you have with ci/cd pipelines", ["D. Experience building, modifying, or optimizing CI/CD pipelines"]),   # CI/CD in his stack; led platform teams
+ (r"how have you worked within agile/scrum teams", ["D. Actively contributed to sprint planning, retrospectives, and process improvements"]),   # engineering manager / CTO
  (r"ideal salary for your next role", ["$250,001 +","$250,001+","$250,000+","$225,001 - $250,000"]),   # Teladoc (Oct 16): inside the applicant's $200K-$300K IC / $220K-$350K leadership range
  (r"current u\.?s\.? government security clearance status", ["Eligible but no active clearance","No active clearance","No clearance"]),   # Mattermost (Oct 16): US citizen who has never held a clearance - no active clearance claimed
  (r"(previously provided|currently providing|ever provided) (services|work) to .{0,60}as (a |an )?(contract|contractor|contingent)", ["No","no"]),   # Solventum (Oct 16): never a contractor there
