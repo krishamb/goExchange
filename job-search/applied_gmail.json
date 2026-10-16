@@ -180,6 +180,16 @@
    ],
    "count": 1
   },
+  "abinbevgrowthgroup": {
+   "name": "AB InBev  | Growth Group",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer"
+   ]
+  },
   "abridge": {
    "name": "Abridge (removed by applicant)",
    "dates": [
@@ -197,9 +207,13 @@
   "accela": {
    "name": "Accela",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Manager, Software Engineering"
+   ]
   },
   "accoengineeredsystems": {
    "name": "ACCO Engineered Systems",
@@ -258,6 +272,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "adaptivebiotechnologies": {
+   "name": "Adaptive Biotechnologies",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Information Technology"
+   ]
   },
   "adaptivefinancialconsulting": {
    "name": "Adaptive Financial Consulting",
@@ -1980,11 +2004,13 @@
    "name": "Boulevard",
    "dates": [
     "2026-10-12",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Data Scientist"
+    "Staff Data Scientist",
+    "Engineering Manager, Product Engineering"
    ]
   },
   "box": {
@@ -3534,6 +3560,16 @@
    "company": "deffai",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "definitivehealthcareus": {
+   "name": "Definitive Healthcare, US",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data and AI Governance Lead"
+   ]
   },
   "dell": {
    "name": "Dell",
