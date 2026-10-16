@@ -361,6 +361,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^(what is your )?desired compensation\??\*?$", ["$200,000+","$200,000 +","$150,000+","$150,000 +","Negotiable"]),   # Protiviti (Oct 16) buckets top out at $150,000+; standing range $200K-$350K
  (r"(can|will) you (be able to )?provide (proof|verification) of (your )?ident(ity|ify)\b.{0,30}(upon|at|on) hire", ["Yes","yes"]),   # Visa (Oct 16): I-9 identity documents at hire; no ID number is entered
  (r"if you are under (the )?age (of )?18, do you have or will you be able to obtain a work permit", ["I am 18 or older.","I am 18 or older","18 or older"]),   # Transamerica (Oct 16)
  (r"no transamerica company engages in the practice of polygraph", ["Yes","I acknowledge","yes"]),   # a notice to acknowledge
