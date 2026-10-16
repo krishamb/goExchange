@@ -354,6 +354,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"years of experience .{0,60}(formal )?people management|years .{0,40}direct reports", ["5+","10+","5+ years","10+ years","More than 5 years"]),   # Huron 2026-10-16: CTO / engineering leadership
+ (r"years of experience .{0,40}designing solutions on microsoft azure", ["1","1 year","1-2","1-2 years"]),   # resume lists Azure among skills; no Azure-specific track record (conservative)
  (r"export control (laws|regulations).{0,60}(select|indicate) your (status|citizenship)|select your (status|citizenship status) from (one of )?the following", ["Citizen of the U.S.","U.S. Citizen","US Citizen","Citizen of the United States","United States citizen"]),   # Seekr 2026-10-16: US citizen
  (r"^what is your desired annual compensation\??\*?$", ["$220,000 - $350,000","$220,000","Yes"]),   # eClinical 2026-10-16: the form offers only Yes/No here
  (r"currently based in any of (these|the following) countries|which of (these|the following) countries are you (currently )?based in", ["United States","United States of America","USA","US"]),   # Vercel 2026-10-16
