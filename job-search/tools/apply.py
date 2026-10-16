@@ -362,6 +362,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"country or countries you anticipate working in|countr(y|ies) (you )?(anticipate|expect|plan) (to )?work(ing)? in", ["US","United States","United States of America","USA"]),   # Stripe (Oct 16): lists "US"
  (r"subject to any obligations or restrictions that (might|could|would|may) (impact|affect|limit)", ["No","no"]),   # same standing answer as the non-compete rules (Nextiva, Oct 16)
  (r"are you a current or former [\w .&-]{2,40} employee\??$", ["Not Applicable","No","Neither","I have never worked"]),
  (r"located within \d+ miles of our .{0,80}(headquarters|office)", ["I live outside the 40-mile radius and can work remotely","I live outside"]),   # remote US role, lives in Santa Clara
