@@ -358,6 +358,11 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"if you are under (the )?age (of )?18, do you have or will you be able to obtain a work permit", ["I am 18 or older.","I am 18 or older","18 or older"]),   # Transamerica (Oct 16)
+ (r"no transamerica company engages in the practice of polygraph", ["Yes","I acknowledge","yes"]),   # a notice to acknowledge
+ (r"possess employment verification documentation that allows you to work in the united states", ["Yes","yes"]),   # RAND (Oct 16): US citizen
+ (r"under any contractual or other obligation which would limit your ability to accept employment", ["No","no"]),
+
  (r"tuberculosis|\btb (screening|test)|(unless|other than|except)[^?]{0,120}disabilit[^?]{0,200}\b(are you able|can you|will you be able) to (meet|comply|provide)", ["Yes","yes"]),   # SCAN (Oct 16): a requirement with a disability/medical exception clause is not disability self-ID
 
  (r"proficiency (of|in) the english language|english language proficiency|level of english", ["Fluent / Native Speaker","Fluent","Native","Native or bilingual","Advanced"]),   # J&J (Oct 16)
