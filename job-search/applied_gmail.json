@@ -1153,6 +1153,16 @@
    ],
    "count": 1
   },
+  "attainpartners": {
+   "name": "Attain Partners",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Technology Services Technical Lead"
+   ]
+  },
   "attentive": {
    "name": "Attentive",
    "dates": [
@@ -4126,6 +4136,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "endorlabs": {
+   "name": "Endor Labs",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect - West"
+   ]
+  },
   "energyhub": {
    "name": "EnergyHub",
    "dates": [
@@ -5605,6 +5625,16 @@
     "Forward Deployed Engineer"
    ]
   },
+  "hagerty": {
+   "name": "Hagerty",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager of Enterprise Data Architecture"
+   ]
+  },
   "hamiltonlane": {
    "name": "hamiltonlane",
    "dates": [
@@ -5936,6 +5966,16 @@
    ],
    "count": 1
   },
+  "hp": {
+   "name": "HP",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior System Software Engineer"
+   ]
+  },
   "hrpundits": {
    "name": "HR Pundits",
    "dates": [
@@ -6102,9 +6142,13 @@
   "imaginepediatrics": {
    "name": "Imagine Pediatrics",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Software Engineer"
+   ]
   },
   "imbue": {
    "name": "Imbue",
@@ -7573,9 +7617,13 @@
   "mercury": {
    "name": "Mercury",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer - Services Platform"
+   ]
   },
   "meredithoperationscorporation": {
    "name": "Meredith Operations Corporation",
@@ -9394,6 +9442,17 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "protiviti": {
+   "name": "Protiviti",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 2,
+   "roles": [
+    "Databricks Solutions Architect Associate Director",
+    "AWS EKS Lead - Cloud Platform Engineering Manager"
+   ]
+  },
   "providence": {
    "name": "Providence",
    "dates": [
@@ -10562,9 +10621,13 @@
   "sidecarhealth": {
    "name": "Sidecar Health",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Data Analytics Engineer"
+   ]
   },
   "sidekicklabs": {
    "name": "Sidekick Labs",
