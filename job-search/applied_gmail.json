@@ -125,6 +125,16 @@
    ],
    "count": 1
   },
+  "abakaai": {
+   "name": "Abaka AI",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Member of Technical Staff, Infra"
+   ]
+  },
   "abbott": {
    "name": "Abbott",
    "dates": [
@@ -5008,7 +5018,14 @@
   "flex": {
    "company": "flex",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Senior Staff Software Engineer, Partner Integrations"
+   ],
+   "count": 1
   },
   "flexontechnologiesinc": {
    "name": "Flexon Technologies Inc.",
@@ -6266,6 +6283,16 @@
    "count": 1,
    "roles": [
     "Senior System Software Engineer"
+   ]
+  },
+  "hpiq": {
+   "name": "HP IQ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer"
    ]
   },
   "hrpundits": {
@@ -8690,7 +8717,14 @@
   "northbeam": {
    "company": "northbeam",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Staff Software Engineer, Python"
+   ],
+   "count": 1
   },
   "notable": {
    "name": "Notable",
