@@ -2136,8 +2136,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
             global JOB_CHOICE_RULES, JOB_TEXT_RULES
             try: _prior=prior_company_apps(tag,company)
             except Exception: _prior=[]
-            _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+|participated in (a|any) (hiring|recruiting|interview) process|interviewed (with|at) .{0,40}(before|previously|in the (past|last))"
-            JOB_CHOICE_RULES=[(_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"])]
+            _PAT=r"(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|applied .{0,30}within the (past|last) \\d+|participated in (a|any) (hiring|recruiting) process"
+            # an earlier application is not an interview (NYT 10-16 got 'previously interviewed: Yes' from our application records);
+            # no interview is on record (Gmail), so interview questions are No
+            JOB_CHOICE_RULES=[(r"participated in (a|any|an) interview( process)?|(previously |ever )?interviewed (with|at|for) .{0,60}(before|previously|in the (past|last)|within the (past|last))|have you (ever )?(previously )?interviewed (with|at|for)",["No","no","No, I have not"])]
+            JOB_CHOICE_RULES.append((_PAT,["Yes","yes"] if _prior else ["No","no","No, I have not","I have not applied"]))
             # "have you ever worked with/for/at <this company> (before / in the past)?" is a former-employer question: never worked
             # for the hiring company unless it is on the resume (Ping Identity 10-16 and Figma 09-29 got the generic experience 'Yes')
             _co=re.sub(r"[,(].*$","",(company or "")).strip().lower()
