@@ -81,6 +81,7 @@ TEXT_RULES=[
  (r"specify details from your answer above|please specify .{0,30}\(?example: job board name", "Found the posting on the company's Greenhouse job board (careers page); no employee referral."),   # 10-15 Samsung Research America: follow-up to the source question (found by our Greenhouse board sweep)
  (r"state your name and (the )?current date|your name and today.?s date", "Ambarish Krishnamurthy, "+time.strftime("%m/%d/%Y")),
  (r"respond yes if you are an automated applicant|are you an automated applicant|ai agent, or equivalent", "Yes"),   # truthful: an AI agent submits on the applicant's behalf
+ (r"i have read the certification above and understand and agree to its terms\.? please type your name and the date", P["name"] + ", " + (datetime.datetime.utcnow() - datetime.timedelta(hours=7)).strftime("%m/%d/%Y")),   # Cohere Health: the attestations above (background check, eligibility); never a no-AI pledge
  (r"by typing my name below|type your full name to (sign|attest)|typing your name .{0,40}(signature|attest)", "Ambarish Krishnamurthy"),
  (r"desired bonus|bonus/commission", "Open to discussion"),
  (r"18 years of age or older|at least 18 years", "Yes"),
@@ -351,6 +352,7 @@ TEXT_RULES=[
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
  (NO_EXP_DOMAIN.pattern, ["0 - 1 year","0-1 year","0-1 years","0 – 1 year","Less than 1 year","< 1 year","None","0"]),   # 10-15 Guardant: no diagnostic / medical-device / pharma years on his record (truthful lowest band)
+ (r"range (for this (role|position) )?is \[?\$1\d\d,\d{3}\s*[–-]\s*\$1\d\d,\d{3}\]? annually\.? do you acknowledge and agree that this range aligns", ["No","no"]),   # a posted range under $200K does not match his $200K+ expectation (truthful No)
  (r"best describes your ability to meet .{0,40}(nyc|new york) office attendance|(nyc|new york) office attendance requirements", ["I live over 1 hour away from the NYC office","I live over 1 hour away"]),   # 10-15 DriveWealth: lives in Santa Clara (truthfully over an hour away) and will relocate for an NYC hybrid role, so not the "require remote / cannot meet" option
  (r"open to u\.?s\.?[- ]based candidates only", ["I am based in the U.S., and I am authorized to work in the U.S.","I am based in the U.S."]),   # 10-15 Spoiler Alert (U.S. citizen in California)
  (r"background check (that includes|with) (identity|identify) and work history verification", ["I am willing to participate in a background check","I am willing to participate"]),   # 10-15 Spoiler Alert: a later-stage check; nothing is entered now
@@ -521,6 +523,8 @@ CHOICE_RULES=[
  (r"permit .{0,80}to process your (personal )?data .{0,140}(artificial intelligence|\bai\b)|(uses|use|using) artificial intelligence \(ai\) to (help )?(match|evaluate|screen|review|assess)|consent to .{0,60}(use|using) (of )?(ai|artificial intelligence) (tools )?(to|in) (evaluat|screen|review|assess|match)", ["Yes","I agree","I consent","I acknowledge","I understand","Accept","Agree","Opt in"]),   # consent to the EMPLOYER's AI screening (applicant: consent -> Yes); not the 'did you use AI' certification, which stays __ASK__
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
+ (r"in which of the following locations do you live", ["United States","United States of America"]),
+ (r"at least \d+\+? years (of )?(directly )?managing (software )?engineers", ["Yes","yes"]),   # CTO with a 15+ team (2023-2026), directed 75+ engineers at Yahoo Finance
  (r"excluded from providing services or limited in participating|excluded from participat\w* in any federal health ?care program", ["No","no"]),   # OIG-exclusion question (as the 'excluded by the OIG' rule): never excluded
  (r"how would you like to receive communications\??$", ["Text Opt-Out","Email"]),   # email only (no SMS opt-in)
  (r"do you have the required education for this position", ["Yes","yes"]),   # B.E. Computer Science and Engineering
