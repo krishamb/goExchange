@@ -371,6 +371,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"have we met you at one of our events", ["__MULTI__","None","No"]),   # CZI: never met at their events
  (r"design and operate distributed systems and a deep understanding of network protocols", ["Yes"]),   # low-latency trading and exchange-connectivity systems (JPMorgan, Hyperion), Go/gRPC services
  (r"personally deployed an ai/llm/rag/agent-based feature to real users", ["Yes"]),   # Yahoo Finance RAG research assistants; Hyperion AI agent platform shipped to customers
  (r"which of the following have you done in a current/previous role\?? select all", ["__MULTI__","Defined or enforced engineering standards for a team","Mentored junior or senior engineers in a formal or informal capacity","Led technical interviews and contributed to hiring decisions","Driven resolution of significant technical debt across a platform","Collaborated directly with Product or Design on roadmap prioritization","Introduced a new tool, framework, or practice that the team adopted"]),   # Cordial: all true for the applicant (Chief Architect / CTO: standards, hiring, AWS modernization, product alignment, eval gates)
