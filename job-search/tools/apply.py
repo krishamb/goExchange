@@ -72,6 +72,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"^minimum pay desired", "200000"),   # KeyBank numeric field (IC band $200K-$300K)
+
  (r"i certify that the foregoing answers are true and correct.{0,120}signature( and date)?", P["name"] + ", " + time.strftime("%m/%d/%Y", time.gmtime(time.time() - 7 * 3600))),   # Marvell (Oct 16): typed signature + date under the export-compliance answers (an accuracy certification, not an AI one)
 
  (r"built or maintained low-latency,? high-throughput feature pipelines", "Yes. Low-latency, high-throughput streaming and batch pipelines in production for trading and market data at JPMorgan Chase and Morgan Stanley, on the Yahoo Finance platform, and behind Hyperion AI's agentic and model-evaluation platform."),   # Cognitiv 2026-10-16 (resume facts)
@@ -356,6 +358,18 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^for california applicants?:", ["I understand","I acknowledge","I confirm receipt","Yes"]),   # he lives in California
+ (r"^for (?!california)[a-z .]{3,30} applicants?:", ["Not Applicable - I am not a resident","Not Applicable","N/A","Not applicable"]),   # Bread Financial (Oct 16): other states' notices; he lives and works in California
+ (r"^in your government position, do/did you", ["No – My activities in my government position have no relation","No","Not applicable","N/A"]),   # KeyBank (Oct 16)
+ (r"^select yes if you: \(1\) are under investigation", ["No","no"]),
+ (r"^application acknowledgement:", ["I acknowledge","Yes"]),
+ (r"^if you worked for .{1,40}, was it as an associate", ["I have never worked","Never","N/A","Not applicable"]),   # Nationwide (Oct 16)
+ (r"recruiting operations to support the primary language", ["Fluent","Native","Advanced"]),   # Cardinal Health (Oct 16): English
+ (r"centers of medicare (&|and) medicaid services.{0,300}(on-?site|vaccinat)", ["I will only work from home and will not be required","Not applicable"]),   # Ensemble (Oct 16): remote role
+ (r"annual base salary expectation in usd", ["$200K – $250K","$200K - $250K","$200K-$250K","$250K – $300K"]),   # Alteryx buckets (IC band $200K-$300K)
+ (r"based out of the scout motors headquarters in charlotte", ["I do not live within 60 miles and CANNOT relocate","I do not live within 60 miles and cannot relocate"]),
+ (r"based out of the scout motors location in san ramon", ["I live within 60 miles of the San Ramon"]),   # Santa Clara is ~40 miles from San Ramon
+
  (r"^i believe that \(please select one\):?$", ["I AM NOT A VETERAN","I am not a veteran","I am not a protected veteran"]),   # S&P Global's veteran self-ID label (Oct 16)
  (r"^which of the following describes how you think of yourself\??$", ["Male","Man"]),   # S&P Global's gender label (options Female / Male / Prefer not)
  (r"are you an existing employee at life360", ["No","no"]),
