@@ -369,6 +369,16 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"okay to work in our san francisco,? (ca )?office \d days", ["Yes"]),   # Five9: SF hybrid 3 days; lives in Santa Clara
+ (r"been the hiring manager or played a primary role in the hiring process", ["Yes"]),   # built and led teams (CTO, Yahoo Finance 75+, JPMorgan 50+)
+ (r"^do you have a security clearance\?? if so,? which clearance level", ["No, I do not hold a clearance"]),
+ (r"^what is the status of your security clearance", ["I HAVE NEVER HAD A SECURITY CLEARANCE","I have never had a security clearance"]),
+ (r"^are you located in the (nyc|new york( city)?) area\??\*?$", ["No"]),   # lives in Santa Clara, CA
+ (r"^software expertise\*?$", ["Fullstack","Backend"]),
+ (r"base salary range for this role is listed in the job posting.{0,80}willing to accept within this posted range", ["I'd like to discuss","I’d like to discuss"]),
+ (r"experience leading architectural or technical roadmap decisions", ["I've set org-wide technical strategy and standards","I’ve set org-wide technical strategy and standards"]),   # Chief Architect, Yahoo Finance
+ (r"experience working with high-scale, high-performance systems", ["Extensive — scalability and performance have been core focuses throughout my career"]),   # sub-250us trading paths, ~40M daily users
+ (r"which of the preferred locations .{0,80}are you based", ["Not based in MA, MD, or Austin","Not based in"]),
  (r"^earliest start month", [time.strftime("%Y %B", time.gmtime()), time.strftime("%Y %B", time.gmtime(time.time() + 31 * 86400))]),   # starts immediately: this month (else next)
  (r"^are you an? .{0,50}\balum(na|nus|ni|nae)?\??\*?$", ["No"]),   # Success Academy: not a former student of the employer's schools
  (r"family member or close personal relationship with anyone", ["No"]),
