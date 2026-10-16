@@ -4998,6 +4998,16 @@
    ],
    "count": 1
   },
+  "fragomen": {
+   "name": "Fragomen",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
   "franklintempleton": {
    "name": "Franklin Templeton",
    "dates": [
@@ -10970,6 +10980,16 @@
    "count": 2,
    "roles": [
     "Vice President, Information Technology"
+   ]
+  },
+  "sonyinteractiveentertainment": {
+   "name": "Sony Interactive Entertainment",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer \u2013 Data"
    ]
   },
   "sorosfundmanagement": {
