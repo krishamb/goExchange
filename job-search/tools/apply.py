@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"were you referred (to this role )?by (a |an )?(current )?.{0,60}employee\?.{0,10}if so", "No"),   # Tower Research (Oct 16): not referred
  (r"^applicant.?s statement (&|and) acknowledge?ment", P["name"]),   # Iterative Health (Oct 16): typed full name agreeing to the truthful-answers / at-will statement (same as the Marvell certification rule)
  (r"^do you have \d{1,2}\+? years (of )?(software|engineering|software development|software engineering|professional|technical)( development| engineering)? experience(,? (with|and|including) \d{1,2}\+? years (of )?(experience )?in (a )?(leadership|management|people management|engineering leadership) roles?)?\??$", "Yes"),   # PQShield (Oct 16): 25 years, 10+ leading engineers
  (r"other names used|list any other names|maiden name|aliases?\b.{0,20}(used|names)", "None"),   # no other legal names
@@ -364,6 +365,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"do you live within (a |an )?(4[5-9]|[5-9]\d|1\d\d)[- ]?miles?( radius)? of the following locations.{0,200}(san francisco|san jose|santa clara|bay area|palo alto|mountain view|sunnyvale)", ["Yes","yes"]),   # Etsy (Oct 16): Santa Clara is ~40 miles from San Francisco
  (r"what is your english (level|proficiency)|english (proficiency )?level\??$", ["C2","Native","Native or bilingual","Fluent","C1"]),   # Sezzle (Oct 16): CEFR scale; 25 years working in English in the US
  (r"have you personally done in a production data engineering", ["Implemented real-time data pipelines","Built AI/LLM/RAG data pipelines","Optimized Spark/PySpark workloads"]),   # AvidXchange (Oct 16): only items on his record (real-time market-data pipelines, LLM/RAG at Yahoo Finance and Hyperion, Spark); one tick satisfies the required list
  (r"are you fluent in english|(do you )?speak english fluently|english fluency\??$", ["Yes","yes","Fluent","Native or bilingual","Native"]),   # MariaDB (Oct 16)
