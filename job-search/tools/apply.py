@@ -364,6 +364,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"are you fluent in english|(do you )?speak english fluently|english fluency\??$", ["Yes","yes","Fluent","Native or bilingual","Native"]),   # MariaDB (Oct 16)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*have you (ever )?been,? (at any time,? )?(employed|worked) (by|for)", ["No","no"]),   # Nutrafol / Unilever (Oct 16): never worked there (former employers excluded)
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr)).*are you (an? )?(active|current) (teammate|team member|employee|associate|colleague)\b", ["No","no"]),   # AvidXchange (Oct 16): not a current employee (former employers excluded)
  (r"will (that|your|this) (work )?authori[sz]ation expire|authori[sz]ation .{0,40}require renewal", ["No","no"]),   # IDEXX (Oct 16): US citizen - authorization never expires
