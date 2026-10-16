@@ -524,6 +524,9 @@ CHOICE_RULES=[
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
  (r"in which of the following locations do you live", ["United States","United States of America"]),
+ (r"based out of the scout motors headquarters in charlotte", ["I do not live within 60 miles and CANNOT relocate within 3-6 months of my start date."]),   # Bay Area only (he relocates only for NYC/LA hybrid)
+ (r"based out of the scout motors location in san ramon", ["I live within 60 miles of the San Ramon, CA location."]),   # Santa Clara -> San Ramon is about 40 miles
+ (r"which scout motors location are you closest to", ["Fremont, CA"]),   # Santa Clara -> Fremont about 15 miles
  (r"do you have a (legal )?middle name", ["No","no"]),   # none (the 'middle name' text rule answers N/A)
  (r"(license|registration|certification).{0,80}currently under investigation", ["No","no"]),   # holds no professional license; nothing under investigation
  (r"at least \d+\+? years (of )?(directly )?managing (software )?engineers", ["Yes","yes"]),   # CTO with a 15+ team (2023-2026), directed 75+ engineers at Yahoo Finance
