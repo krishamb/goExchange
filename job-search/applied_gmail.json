@@ -12393,6 +12393,17 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "zerohash": {
+   "name": "zerohash",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Blockchain Engineer"
+   ],
+   "via": "hand apply (breezy)"
   }
  }
 }
