@@ -890,9 +890,10 @@
     "2026-10-08",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Machine Learning Engineer"
+    "Senior Machine Learning Engineer",
+    "Director, AI & Machine Learning"
    ]
   },
   "ampaipoweredsortationforwasteandrecycling": {
@@ -1097,9 +1098,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer, Trading Infrastructure"
+    "Senior Software Engineer, Trading Infrastructure",
+    "Software Engineer, Payments Product Lead"
    ]
   },
   "arcade": {
@@ -1559,6 +1561,16 @@
    "company": "avoma",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "aweber": {
+   "name": "AWeber",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Team Lead"
+   ]
   },
   "axiado": {
    "name": "Axiado",
@@ -3674,6 +3686,16 @@
     "Sr.Director, Data Science & Data Engineering"
    ]
   },
+  "courtyardinc": {
+   "name": "Courtyard Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Full Stack Staff Software Engineer - Logistics, Operations & Tooling"
+   ]
+  },
   "coverahealth": {
    "name": "Covera Health",
    "dates": [
@@ -4739,6 +4761,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "edo": {
+   "name": "EDO",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer"
+   ]
+  },
   "edviro": {
    "name": "Edviro (YC)",
    "dates": [
@@ -5784,6 +5816,16 @@
    ],
    "via": "hand apply (teamtailor)"
   },
+  "foresitelabs": {
+   "name": "Foresite Labs",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer (5+ years)"
+   ]
+  },
   "formationbio": {
    "name": "Formation Bio",
    "dates": [
@@ -6182,6 +6224,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "gfiber": {
+   "name": "gFiber",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer - AI"
+   ]
   },
   "ghoststorygames": {
    "name": "Ghost Story Games",
@@ -6619,6 +6671,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "gyde": {
+   "name": "Gyde",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer"
+   ]
   },
   "hackerrank": {
    "name": "HackerRank",
@@ -8581,9 +8643,13 @@
   "lyft": {
    "name": "Lyft",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Lyft Business"
+   ]
   },
   "lyrahealth": {
    "name": "Lyra Health",
@@ -10203,6 +10269,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "otter": {
+   "name": "Otter",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - Menu Platform"
+   ]
+  },
   "otterai": {
    "name": "Otter.ai",
    "dates": [
@@ -10517,6 +10593,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "paynearmeinc": {
+   "name": "PayNearMe, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Engineering"
+   ]
+  },
   "payoneer": {
    "name": "Payoneer",
    "dates": [
@@ -10571,9 +10657,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "AI Product Engineer"
    ]
   },
   "peloton": {
@@ -10592,9 +10679,10 @@
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Software Engineer (AI)"
+    "Software Engineer (AI)",
+    "Staff Software Engineer (AI)"
    ]
   },
   "pepper": {
@@ -11010,6 +11098,16 @@
     "2026-09-30"
    ],
    "count": 1
+  },
+  "privateidentity": {
+   "name": "Private Identity",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full-Stack Engineer"
+   ]
   },
   "prizepicks": {
    "name": "PrizePicks",
@@ -12004,6 +12102,16 @@
    ],
    "count": 2
   },
+  "salesloft": {
+   "name": "Salesloft",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, AI"
+   ]
+  },
   "sambanova": {
    "name": "SambaNova",
    "dates": [
@@ -12083,6 +12191,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "sayari": {
+   "name": "Sayari",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer (Remote, US)"
+   ]
   },
   "sb": {
    "name": "sb",
@@ -12467,9 +12585,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Field CTO"
+    "Field CTO",
+    "Staff AI/ML Engineer"
    ]
   },
   "signifyd": {
@@ -13549,6 +13668,16 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "textnowinc": {
+   "name": "TextNow, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Developer, AI"
+   ]
+  },
   "thalmaar": {
    "company": "thalmaar",
    "first": "2026-10-05",
@@ -14093,7 +14222,14 @@
   "unconventionalinc": {
    "company": "unconventionalinc",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "AI Systems, Model Optimization"
+   ],
+   "count": 1
   },
   "understoodorg": {
    "name": "Understood.org",
@@ -14373,7 +14509,14 @@
   "veranahealth": {
    "company": "Verana Health",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop 40d feed)"
+   "via": "cloud_greenhouse (ventureloop 40d feed)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Senior Software Engineer"
+   ],
+   "count": 1
   },
   "verawholehealth": {
    "name": "Vera Whole Health",
