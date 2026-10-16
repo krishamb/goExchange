@@ -881,6 +881,16 @@
    ],
    "via": "gmail confirmation (Workday)"
   },
+  "apartmentiq": {
+   "name": "ApartmentIQ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - Data"
+   ]
+  },
   "apexon": {
    "name": "Apexon",
    "dates": [
@@ -898,9 +908,13 @@
   "apolloio": {
    "name": "Apollo.io",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer (Hybrid, San Francisco)"
+   ]
   },
   "appian": {
    "name": "Appian",
@@ -4768,11 +4782,13 @@
    "name": "Fastly",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer, Compute Platform"
+    "Staff Software Engineer, Compute Platform",
+    "Senior Backend Software Engineer (APIs)"
    ]
   },
   "feathr": {
@@ -5023,9 +5039,10 @@
     "2026-10-16"
    ],
    "roles": [
-    "Senior Staff Software Engineer, Partner Integrations"
+    "Senior Staff Software Engineer, Partner Integrations",
+    "Senior Software Engineer, Backend"
    ],
-   "count": 1
+   "count": 2
   },
   "flexontechnologiesinc": {
    "name": "Flexon Technologies Inc.",
@@ -6057,10 +6074,11 @@
     "2026-10-03",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "rejected": "2026-10-05/06",
    "roles": [
-    "Forward Deployed Engineer"
+    "Forward Deployed Engineer",
+    "Engineering Manager, Billing"
    ]
   },
   "heard": {
@@ -6393,6 +6411,16 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer- Agentic SOC"
+   ]
+  },
+  "huronconsultinggroup": {
+   "name": "Huron Consulting Group",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Lead Software Engineer, Analytics Products (REMOTE)"
    ]
   },
   "hyatt": {
@@ -7770,6 +7798,16 @@
    ],
    "count": 1
   },
+  "manifest": {
+   "name": "Manifest",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Infrastructure Engineer"
+   ]
+  },
   "marianaminerals": {
    "name": "Mariana Minerals",
    "dates": [
@@ -8944,6 +8982,16 @@
    "count": 2,
    "roles": [
     "Principal Software Engineer - AI"
+   ]
+  },
+  "ondofinance": {
+   "name": "Ondo Finance",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Blockchain Engineer"
    ]
   },
   "onechronos": {
