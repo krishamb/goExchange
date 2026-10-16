@@ -435,7 +435,8 @@ async def listbox_choose(page, button, ranker, typeahead=""):
         await opts.nth(k).scroll_into_view_if_needed(timeout=2000); await opts.nth(k).click(timeout=4000)
         for _ in range(8):   # some tenants re-render the form after each answer: the button shows the choice only after a moment
             await page.wait_for_timeout(400)
-            if norm((await button.inner_text()).strip()) == norm(texts[k]): return texts[k], texts
+            bt, ot = norm((await button.inner_text()).strip()), norm(texts[k])
+            if bt == ot or (len(bt) >= 6 and (ot.startswith(bt) or bt.startswith(ot))): return texts[k], texts   # CrowdStrike: the option adds a 'Region specific: ...' line the button does not show
         return None, texts
     except Exception as e:
         LB_ERR.append(f"{type(e).__name__}: {str(e).splitlines()[0][:120] if str(e) else ''}")
