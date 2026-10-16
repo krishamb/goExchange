@@ -8388,6 +8388,16 @@
    ],
    "count": 3
   },
+  "lattice": {
+   "name": "Lattice",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, AI"
+   ]
+  },
   "launchdarkly": {
    "name": "LaunchDarkly",
    "dates": [
@@ -8480,10 +8490,14 @@
   "legionintelligence": {
    "name": "Legion Intelligence",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1,
-   "rejected": "2026-10-06"
+   "count": 2,
+   "rejected": "2026-10-06",
+   "roles": [
+    "Senior Software Engineer - Machine Learning (Remote US)"
+   ]
   },
   "legora": {
    "name": "Legora (applied via filler)",
@@ -11477,9 +11491,13 @@
   "prologis": {
    "name": "Prologis",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead AI Engineer"
+   ]
   },
   "pronto": {
    "name": "Pronto",
@@ -12957,6 +12975,16 @@
    ],
    "count": 1
   },
+  "sifthealthcare": {
+   "name": "Sift Healthcare",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
   "siftstack": {
    "name": "SiftStack",
    "dates": [
@@ -13152,6 +13180,16 @@
    "company": "slipway",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "smartcat": {
+   "name": "Smartcat",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI-First Data Engineer"
+   ]
   },
   "smartsheet": {
    "name": "Smartsheet",
@@ -13600,6 +13638,16 @@
    ],
    "count": 1
   },
+  "streamnative": {
+   "name": "StreamNative",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Software Engineer, Platform"
+   ]
+  },
   "striim": {
    "name": "Striim",
    "dates": [
@@ -13646,6 +13694,16 @@
    "roles": [
     "Staff Software Engineer - Core Platform",
     "Senior Software Engineer (Los Angeles, CA)"
+   ]
+  },
+  "studiodesigner": {
+   "name": "Studio Designer",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Development"
    ]
   },
   "successacademycharterschools": {
