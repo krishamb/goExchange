@@ -449,6 +449,7 @@ CHOICE_RULES=[
  (r"possess a valid (work|residency|residence) permit", ["Not Applicable","Not applicable","N/A","Yes"]),   # HPE 2026-10-16: US citizen, no permit needed
  (r"declared ineligible to (contract|receive|import|export)|ineligible to contract with.{0,80}(government|agency)|debarred.{0,60}(defense|export|government)", ["No","no"]),   # Apptronik 2026-10-16 ITAR question
  (r"(would|will) (you )?be engaging in any of the above|engaging in any of the (above|listed) (listed )?(situations|activities)|advise if you (would|will) be engaging", ["No","no"]),   # HPE 2026-10-16 conflict-of-interest question (had answered Yes)
+ (r"physician licensed to practice|licensed to practice medicine|sunshine act", ["No","no"]),   # BD 2026-10-16: not a physician
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
