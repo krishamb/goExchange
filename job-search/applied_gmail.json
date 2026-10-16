@@ -2192,6 +2192,16 @@
    ],
    "count": 1
   },
+  "brighthire": {
+   "name": "BrightHire",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Full Stack AI Engineer"
+   ]
+  },
   "broadcastwell": {
    "company": "broadcastwell",
    "first": "2026-10-05",
@@ -14075,9 +14085,13 @@
   "zocdoc": {
    "name": "Zocdoc",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Provider Engagement"
+   ]
   },
   "zone": {
    "name": "Zone",
