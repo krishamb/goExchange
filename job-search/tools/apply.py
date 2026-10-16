@@ -371,6 +371,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"best describes your current level of hands-on software engineering involvement", ["I write and ship production code regularly while also leading engineers."]),   # resume: hands-on technical leadership, critical-path code (Hyperion AI)
+ (r"best describes your experience with ai-assisted or agentic software development", ["I have directly used agentic or AI-assisted development workflows in production software delivery."]),   # resume: Claude Code-assisted debugging, tests and reviews
  (r"^(?!.*(hyperion|yahoo|morgan|chase|bank of america|merrill|barclays|bloomberg|cadence|ankr|motocho)).*(are you or have you ever been|have you ever been) retained as a consultant to,? or employed by", ["No"]),   # ICONIQ: never a consultant to / employee of the hiring firm (former employers excluded)
  (r"are you currently or were you previously an? .{0,40}employee.{0,80}(temp|vendor|contractor)", ["__MULTI__","None","None of the above","No"]),   # GFiber multi-select (Former Employee / Temp / Vendor / None): never worked there
  (r"can be based in .{0,60}san francisco bay area.{0,120}which best describes your situation", ["I'm currently based in the San Francisco Bay Area.","I’m currently based in the San Francisco Bay Area."]),   # Frontera: lives in Santa Clara
