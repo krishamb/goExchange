@@ -7940,6 +7940,16 @@
     "Senior Infrastructure Engineer"
    ]
   },
+  "mariadbplc": {
+   "name": "MariaDB plc",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Cloud Platform Engineering"
+   ]
+  },
   "marianaminerals": {
    "name": "Mariana Minerals",
    "dates": [
@@ -10089,9 +10099,13 @@
    "name": "PrizePicks",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-16"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Software Engineer (Gamification)"
+   ]
   },
   "probook": {
    "name": "Probook",
