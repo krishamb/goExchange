@@ -524,6 +524,8 @@ CHOICE_RULES=[
  (r"^\s*i understand\s*:|^\s*i (acknowledge|understand) (and agree )?(that )?:?\s*[•\-\*]|employment .{0,40}contingent on my providing", ["Yes","I understand","I agree","I acknowledge","Yes, I understand"]),   # a bundled at-will / I-9 / agreements acknowledgement (mentions non-solicitation, so it must outrank the restrictive-covenant disclosure rule)
  (r"hold all (necessary|required) (professional )?licen[sc]es", ["Yes","yes"]),   # an engineering role requires no professional licence: he holds all that are necessary (none)
  (r"in which of the following locations do you live", ["United States","United States of America"]),
+ (r"years of relevant work experience related to this position", ["4+ years","5+ years","More than 5 years","10+ years"]),   # 25+ years (Cisco bands top out at 4+)
+ (r"appointed as a u\.?s\.? government official|employed by a u\.?s\.? government or foreign government entity", ["No","no"]),   # resume: never a government official or government employee
  (r"based out of the scout motors headquarters in charlotte", ["I do not live within 60 miles and CANNOT relocate within 3-6 months of my start date."]),   # Bay Area only (he relocates only for NYC/LA hybrid)
  (r"based out of the scout motors location in san ramon", ["I live within 60 miles of the San Ramon, CA location."]),   # Santa Clara -> San Ramon is about 40 miles
  (r"which scout motors location are you closest to", ["Fremont, CA"]),   # Santa Clara -> Fremont about 15 miles
