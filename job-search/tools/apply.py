@@ -467,6 +467,8 @@ CHOICE_RULES=[
  (r"fluency in modern software architecture|solid grasp of data science and ai", ["Yes","yes"]),   # Genentech 2026-10-16: Distinguished Architect, AI/ML platforms
  (r"double[- ]check all the information|please (review|verify|confirm) (that )?all (the )?information (provided )?(above )?is (accurate|correct)", ["I have double-checked","I have double checked","I confirm","Confirmed","Yes","I understand","Acknowledged","I acknowledge"]),   # Vercel 2026-10-16
  (r"are you currently (attending|enrolled in) (college|university|school)|currently a (college |university )?student", ["No","no"]),   # HackerRank 2026-10-16
+ (r"which cloud platforms have you (worked with|used) in (a )?production", ["AWS","Private Cloud"]),   # resume: Chief Architect for Yahoo Finance bare-metal-to-AWS modernization (SS8 2026-10-16)
+ (r"(implemented|managed) (or managed )?infrastructure as code.{0,80}ci/?cd", ["Extensive experience","Yes"]),   # resume: Terraform, CI/CD, AWS modernization
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
