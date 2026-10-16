@@ -72,6 +72,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"foresee any conflicts .{0,120}(school|other) commitments", "No"),   # full-time availability: no school or other commitments
+ (r"personal (email )?newsletter or blog", "No"),   # none on record
  (r"what language\(?s\)? are you fluent in", "English, Tamil, Hindi"),
  (r"share with us your location preferences", "San Francisco Bay Area (I live in Santa Clara, CA); remote within the US also works for me"),
  (r"what are your expectations for pay in this role", "$200,000 - $300,000 base, depending on scope (negotiable)"),   # GHX (Oct 16): the applicant's IC range
@@ -364,7 +366,7 @@ TEXT_RULES=[
  (r"work environment|thrive|attributes", ANS.get("environment","")),
  (r"pronoun", "He/him"),
  (r"gender identity|^gender$|\bgender\b", "Male"),
- (r"university|school|college|alma mater", "University of Madras"),
+ (r"^(?!.*\b(family|relatives?|relationship|conflicts?|commitments?|currently (enrolled|attending)|current(ly)? (a )?student|are you (a )?student|parents?|scholars?|teachers?|teaching|faculty|employees?|worked|work for|alum(na|nus|ni)?|partner|sponsor|volunteer)\b)(.*\b(name of (the |your )?(university|school|college|institution)|(university|school|college|institution|alma mater)( name)?\s*\*?$|which (university|school|college)|alma mater|(as|is|was) your (school|university|college)|(school|university|college) (attended|name)|where did you (study|graduate)))", "University of Madras"),   # only a field asking for the institution itself (Oct 16 Success Academy: a family-member name and a school-commitments question got "University of Madras")
  (r"^(?!.*disabilit)(?=.*(degree|field of study|\bmajor\b(?! life)))", "Bachelor of Engineering, Computer Science and Engineering"),   # not the disability question's "major life activities" (RadarFirst, Oct 16)
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
@@ -1256,7 +1258,7 @@ CHOICE_RULES=[
  (r"background check|drug|non-?compete|agreement|acknowledge|certify|consent|privacy|terms|policy|subscribe|agree|gdpr|disclosure|notice",["Yes","I agree","I acknowledge","I consent","Consent","Confirmed","Confirm","I have read","Acknowledge","Agree","Accept","yes"]),
  (r"how did you (first |initially )?(hear|learn|find out)|how did you find (this|the|our) (position|role|job|opportunity|posting)|hear about|learn about|find out about|source", ["LinkedIn","LinkedIn Job Posting","LinkedIn Jobs","LinkedIn job post","LinkedIn Job Board","Linkedin","Social Media - LinkedIn","LinkedIn (job posting)","Job Board","Job Boards","Online Job Board","Job board","Job Posting","Job Post Site","Online job posting","Social Media","Social Network","Other","Other/Not Listed"]),   # the real source (applicant, 2026-10-07): LinkedIn; else a generic job board / social / Other - never the company website
  (r"(undergrad\w*|bachelor\w*|degree).{0,80}(us|u\.s\.|united states|american) (university|college|school|institution)", ["No","no"]),   # degree is from the University of Madras (India)
- (r"school|university|college", ["University of Madras","Other","School Not Listed","Other Institution","Madras University","Other School","Not Listed"]),   # never a partial match on some other university's name
+ (r"^(?!.*\b(family|relatives?|relationship|conflicts?|commitments?|currently (enrolled|attending)|current(ly)? (a )?student|are you (a )?student|parents?|scholars?|teachers?|teaching|faculty|employees?|worked|work for|alum(na|nus|ni)?|partner|sponsor|volunteer)\b).*(school|university|college)", ["University of Madras","Other","School Not Listed","Other Institution","Madras University","Other School","Not Listed"]),   # never a partial match on some other university's name
  (r"discipline|major|field of study", ["Computer Science","Computer Engineering","Engineering","Other"]),
  (r"degree|education|highest level", ["Bachelor of Engineering","Bachelor's Degree","Undergraduate/Bachelor's degree","B.E.","BE","Bachelor of Technology","B.Tech","Bachelor of Science","Bachelor's","Bachelors","Bachelor","BS/BA","BA/BS","B.S./B.A.","BS","B.S.","Bachelor of Science","College Degree","4-year degree","Four-year degree","University degree","Bachelor degree","Bachelors degree","Bachelor\u2019s degree","Bachelor"]),
  (r"outside business|advisory|consulting|consultanc|freelance|board (role|membership)|side business|other business|own, operate|provide services to|conflict of interest|moonlight", ["No","no","None"]),
