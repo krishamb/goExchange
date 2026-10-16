@@ -935,7 +935,7 @@ CHOICE_RULES=[
  (r"more product-focused or systems-focused|product[- ]focused or systems[- ]focused", ["Systems-Focused","Systems focused","Systems"]),
  (r"do any of the following apply to you|which of the following (conflicts|disclosures|situations) apply", ["None of the above apply to me.","None of the above apply to me","None of the above","None of these apply to me","None of these","None"]),
  (r"(select|what is|which is|choose) your (current |primary )?time ?zone|^(current )?time ?zone\??:?\*?$", ["US/Pacific","Pacific Time","Pacific","PT","PST","Pacific Time (PT)","America/Los_Angeles"]),
- (r"^state\b|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
+ (r"^state\b(?!.{0,80}\b(race|racial|ethn\w*|ethin\w*|gender|sex|veteran|disab\w*|pronoun\w*)\b)|^state of residence|state \(if you do not live", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"require .{0,60}(file|submit) a petition|petition or application for employment|employment[- ]based (status|visa|immigration)", ["No","no"]),
  (r"(telephone calls?|phone calls?|text messages?|sms).{0,120}(consent|agree)|(consent|agree).{0,160}(text messages?|sms|telephone calls?)", ["Do not agree to receive recruitment notifications by call or text messages","Do not agree","I do not agree","I do not consent","No","Opt out","Opt-out","I disagree","Disagree","Decline","I decline"]),
  (r"(confirm|certify) that i (do not|don't) have (any )?relatives", ["True","Yes","I confirm","Confirmed","Confirm"]),
@@ -1223,7 +1223,7 @@ CHOICE_RULES=[
  (r"visa", ["No","no"]),
  (r"sanction|embargo|belarus|\bcuba\b|\biran\b|north korea|\bsyria\b|\brussia\b|following countries or regions|restricted (countr|region)", ["No","no"]),
  (r"country", ["United States","United States of America","USA"]),
- (r"\bstates?\b(?! of (the )?(art|mind))|province", ["California","CA","Another State in the US","Another state","Other US","Other"]),
+ (r"^(?!.*\b(race|racial|ethn\w*|ethin\w*|gender|veteran|disab\w*|pronoun\w*)\b).*(\bstates?\b(?! of (the )?(art|mind))|province)", ["California","CA","Another State in the US","Another state","Other US","Other"]),
  (r"experience with|familiar|proficien|(how many|number of|total|minimum of|at least) (\w+ )?years|years (of|in|with|working|leading|managing|building|hands)|years'? experience|how much (\w+ ){0,4}experience", ["25+ years","25+","20+ years","20+","More than 20 years","20 or more","15+ years","15+","15 +","16+","More than 15 years","15 or more","Over 15","15-20 years","15-20","13+","12+","11+","10+ years","10+","10 or more years","7 or more years","7+ years or more","More than 10 years","10 or more","Over 10","8+ years","8+","8 +","7+","6+","7+ years","6+ years","5+ years","5+","More than 5 years","5 or more","5-10 years","5 - 10 years","Expert","Yes","More than 13 years","More than 12 years","More than 10 years","10+ years","10+","10+ years","10+","8+ years","7+ years","5+ years","5+","4+ years","4+","3+ years","3+"]),
 ]
 # ---- technical questions with no specific rule (applicant: never leave a technical question blank; answer from his real work)
@@ -1433,6 +1433,15 @@ async def open_menu(control,inp):
 HEAR_Q=re.compile(r"hear about|learn about|find out about|how did you (first |initially )?(hear|learn|find)|\bsource\b|\breferred\b",re.I)   # \b: "preferred ..." questions are not source questions
 HEAR_BAD=re.compile(r"recruit|employee|referr|refer(ral|red)|event|fair|conference|meetup|friend|colleague|agency|university|campus|blog|podcast|hosted|inmail",re.I)   # LinkedIn IS the source (applicant, 2026-10-07); a LinkedIn recruiter / InMail is not
 LOC_Q=re.compile(r"location|city|where .{0,20}(based|live|located|reside)|residence",re.I)
+RACE_LBL=re.compile(r"\brace\b|\braces\b|racial|\bethn|\bethin",re.I)   # also misspelt labels ('State your Race/ Ethincity', Howden Oct 16)
+def race_bad(t):
+    """A race/ethnicity option the applicant (Asian, not Hispanic or Latino) must never pick: another race, 'Two or more',
+    'Other' or 'Hispanic or Latino'. Asian options and negated / decline options stay usable. (Oct 16 Howden: a 'State ...'
+    rule's fallback 'Other' picked 'Native Hawaiian or Other Pacific Islander'.)"""
+    s=re.sub(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)|\(united states( of america)?\)","",t or "",flags=re.I).lower()
+    if re.search(r"\basian\b",s): return False
+    if re.search(r"\bnot\b|^\s*no\b|decline|wish|prefer|choose|rather|n/a|undisclosed|self.?identify",s): return False
+    return bool(re.search(r"american indian|alaska|\bblack\b|african|hawaiian|pacific islander|\bwhite\b|caucasian|two or more|multi.?racial|\bmixed\b|middle eastern|north african|hispanic|latin[aoxe]|\bother\b",s))
 def mask_hear(texts,label):
     """'How did you hear about us?': never pick an option that claims a referral, an event, a recruiter or LinkedIn.
     Location questions: never a 'Santa Clara' outside the US (Santa Clara, Villa Clara, Cuba)."""
@@ -1440,6 +1449,7 @@ def mask_hear(texts,label):
     for t in texts:
         if t and HEAR_Q.search(label or "") and HEAR_BAD.search(t): t=""
         elif t and LOC_Q.search(label or "") and re.search(r"santa clara",t,re.I) and not re.search(r"california|\bca\b|united states|\busa?\b",t,re.I): t=""
+        elif t and RACE_LBL.search(label or "") and race_bad(t): t=""
         out.append(t)
     return out
 PREF_ALIASES={"united states":["United States of America","USA","U.S.","US"],"united states of america":["United States","USA","US"],"united kingdom":["UK","Great Britain"]}   # fallback only: menus that abbreviate the answer
