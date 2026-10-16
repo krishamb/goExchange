@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"were you referred to this role by a current .{0,60}employee\?? if so,? please provide their name", "No"),   # Tower Research: not referred
  (r"foresee any conflicts .{0,120}(school|other) commitments", "No"),   # full-time availability: no school or other commitments
  (r"personal (email )?newsletter or blog", "No"),   # none on record
  (r"what language\(?s\)? are you fluent in", "English, Tamil, Hindi"),
@@ -371,6 +372,10 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"which of the following industries have you worked in directly", ["__MULTI__","Core AI / AI-First Products & Platforms"]),   # Nextiva: Hyperion AI; the rest of the list (CX, CCaaS, UCaaS, telecom, marketplaces) is not on the resume
+ (r"^what is your primary work location\??\*?$", ["__MULTI__","USA","United States","United States of America","US"]),   # Smartcat multi-select
+ (r"select all examples of ai automation you have used", ["__MULTI__","Research, summarization, and information organization","Data analysis, reporting, and decision support","Functional workflow automation","Multi-step workflows, integrations, APIs, or AI agents","Team-level AI implementation, training, governance, or impact measurement"]),   # RAG assistants, benchmark scorecards, CI/eval gates, MCP servers + multi-agent loop, eval-gate governance as CTO
+ (r"best describes the current or most recent industry in which you work", ["Technology"]),   # Hyperion AI
  (r"have we met you at one of our events", ["__MULTI__","None","No"]),   # CZI: never met at their events
  (r"design and operate distributed systems and a deep understanding of network protocols", ["Yes"]),   # low-latency trading and exchange-connectivity systems (JPMorgan, Hyperion), Go/gRPC services
  (r"personally deployed an ai/llm/rag/agent-based feature to real users", ["Yes"]),   # Yahoo Finance RAG research assistants; Hyperion AI agent platform shipped to customers
