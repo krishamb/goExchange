@@ -1246,6 +1246,16 @@
     "Software Engineering Manager"
    ]
   },
+  "assailinc": {
+   "name": "Assail, Inc.",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer (US)"
+   ]
+  },
   "assemblyai": {
    "name": "AssemblyAI",
    "dates": [
@@ -1623,11 +1633,13 @@
    "name": "Backblaze External Website",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Sr. Observability Systems Engineer"
+    "Sr. Observability Systems Engineer",
+    "Lead Software Engineer"
    ]
   },
   "backopsai": {
@@ -2089,6 +2101,16 @@
    ],
    "count": 1
   },
+  "bloomerang": {
+   "name": " Bloomerang",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer (Tech Lead) - Typescript/React"
+   ]
+  },
   "bloomylearningcom": {
    "name": "bloomylearning.com",
    "dates": [
@@ -2501,6 +2523,16 @@
    "count": 1,
    "roles": [
     "Data Platform Solutions Lead"
+   ]
+  },
+  "cake": {
+   "name": "Cake",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Platform"
    ]
   },
   "calendly": {
@@ -3242,6 +3274,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Scanning Engine"
+   ]
+  },
+  "coast": {
+   "name": "Coast",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
    ]
   },
   "coastal": {
@@ -4534,6 +4576,16 @@
    "count": 1,
    "via": "ashby browser run (part 1)"
   },
+  "duolingo": {
+   "name": "Duolingo",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director of Engineering, New Subjects"
+   ]
+  },
   "e": {
    "company": "e",
    "first": "2026-10-05",
@@ -4584,11 +4636,13 @@
   "echoneurotechnologies": {
    "name": "Echo Neurotechnologies",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Full Stack Software Engineer"
+    "Senior Full Stack Software Engineer",
+    "Software Engineering Manager, Applications"
    ]
   },
   "eclinicalsolutions": {
@@ -5061,6 +5115,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "exiger": {
+   "name": "Exiger",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (L5)"
+   ]
   },
   "expel": {
    "name": "Expel",
@@ -5631,6 +5695,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "fora": {
+   "name": "Fora",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Backend Engineer, Applied AI"
+   ]
+  },
   "ford": {
    "name": "Ford",
    "dates": [
@@ -5833,9 +5907,13 @@
   "galaxy": {
    "name": "Galaxy",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "VP, Forward Deployed Lead"
+   ]
   },
   "gallop": {
    "company": "gallop",
@@ -6037,6 +6115,16 @@
    ],
    "count": 1
   },
+  "ghoststorygames": {
+   "name": "Ghost Story Games",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
   "ghx": {
    "name": "GHX",
    "dates": [
@@ -6181,6 +6269,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "glydways": {
+   "name": "Glydways",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Platform Engineering Lead"
+   ]
+  },
   "gnw": {
    "name": "gnw",
    "dates": [
@@ -6199,7 +6297,14 @@
   "gofundme": {
    "company": "GoFundMe",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop 40d feed)"
+   "via": "cloud_greenhouse (ventureloop 40d feed)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Manager, Machine Learning Engineering"
+   ],
+   "count": 1
   },
   "gomotive": {
    "company": "gomotive",
@@ -6530,6 +6635,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "hatch": {
+   "name": "Hatch",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Backend Engineer"
+   ]
+  },
   "haus": {
    "name": "haus",
    "dates": [
@@ -6799,6 +6914,16 @@
    ],
    "count": 1
   },
+  "horacemann": {
+   "name": "Horace Mann ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Domain Managing Architect - Cloud"
+   ]
+  },
   "horizonmedia": {
    "name": "Horizon Media",
    "dates": [
@@ -6956,6 +7081,16 @@
    "count": 1,
    "roles": [
     "Senior Lead Software Engineer, Analytics Products (REMOTE)"
+   ]
+  },
+  "hut8": {
+   "name": "Hut 8",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Infrastructure Engineer - Highrise AI"
    ]
   },
   "hyatt": {
@@ -7377,7 +7512,14 @@
   "itradenetworkinc": {
    "company": "itradenetworkinc",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "AI/ML Software Engineer"
+   ],
+   "count": 1
   },
   "ixllearning": {
    "name": "IXL Learning",
@@ -8326,6 +8468,16 @@
    ],
    "via": "gmail confirmation (Lever)"
   },
+  "lumimeds": {
+   "name": "Lumimeds",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager \u2014 AI-First Platform & Agent Teams"
+   ]
+  },
   "lumindigital": {
    "name": "Lumin Digital",
    "dates": [
@@ -8879,6 +9031,16 @@
    ],
    "count": 1
   },
+  "mithril": {
+   "name": "Mithril ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer - Member of Technical Staff (Consumption Team)"
+   ]
+  },
   "mithrl": {
    "name": "Mithrl",
    "dates": [
@@ -9013,6 +9175,16 @@
    "company": "Motorola Solutions",
    "first": "2026-10-06",
    "via": "workday-cloud"
+  },
+  "motus": {
+   "name": "Motus",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering"
+   ]
   },
   "mozilla": {
    "name": "Mozilla",
@@ -10635,6 +10807,16 @@
    "company": "Postscript",
    "first": "2026-10-06",
    "via": "cloud_greenhouse (vc-board a16z)"
+  },
+  "pqshield": {
+   "name": "PQShield",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Software Engineering"
+   ]
   },
   "prabhavservicesinc": {
    "company": "Prabhav Services Inc",
@@ -13395,9 +13577,13 @@
   "thorn": {
    "name": "Thorn",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Machine Learning Engineer"
+   ]
   },
   "thrivemarket": {
    "name": "Thrive Market",
@@ -14243,6 +14429,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "vulncheck": {
+   "name": "VulnCheck",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Cloud Infrastructure Engineer (Remote, US)"
+   ]
   },
   "vumedi": {
    "name": "Vumedi",
