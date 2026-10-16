@@ -44,6 +44,8 @@ exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 # applicant 2026-10-16: a row marked remote must be remote on the posting itself (Coca-Cola's 'remote' row was an Atlanta role)
 import ssl as _ssl, urllib.request as _ureq
+_REM_LOC = re.compile(r"remote|virtual|telecommut|work (from|at) home|home[- ]?based|\bwfh\b", re.I)
+_STATE_ONLY = re.compile(r"\b(alabama|alaska|arizona|arkansas|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b|\b(AL|AK|AZ|AR|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\b", re.I)
 def wd_remote_check(url):
     """-> (is_remote: bool|None, where_text). None when the posting data could not be read (do not block then)."""
     m = re.match(r"https://([^/]+)/(?:[a-z]{2}-[A-Z]{2}/)?([^/]+)/job/(.+?)(?:\?.*)?$", url or "")
@@ -60,7 +62,10 @@ def wd_remote_check(url):
     locs = [d.get("location") or ""] + list(d.get("additionalLocations") or [])
     txt = f"{'; '.join(l for l in locs if l)} (remoteType {d.get('remoteType')})"
     rt = (d.get("remoteType") or "").lower()
-    if "remote" in rt or "virtual" in rt or any(re.search(r"remote|virtual|telecommut|work from home|home[- ]?based", l, re.I) for l in locs): return True, txt
+    rem = [l for l in locs if l and _REM_LOC.search(l)]
+    if rem and all(_STATE_ONLY.search(l) and not re.search(r"california|\bCA\b|united states|\bUSA?\b|u\.s\.|nationwide|anywhere", l, re.I) for l in rem) and not any(l and not _REM_LOC.search(l) and re.search(r"california|\bCA\b", l) for l in locs):
+        return False, txt + " [remote limited to a state other than California]"   # 'WORK AT HOME - OHIO', 'Remote MA; Remote CT' (Bob's Oct 16)
+    if "remote" in rt or "virtual" in rt or rem: return True, txt   # 'Work at Home' with no state is remote (Evolent Oct 16)
     if any(re.fullmatch(r"\s*(united states( of america)?|usa|us)\s*", l, re.I) for l in locs if l): return True, txt   # country-only location = remote-eligible
     return False, txt
 
