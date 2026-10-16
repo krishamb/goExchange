@@ -5750,6 +5750,16 @@
     "Senior Software Engineer, AI"
    ]
   },
+  "flowcode": {
+   "name": "Flowcode",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Fullstack Software Engineer"
+   ]
+  },
   "flowengineering": {
    "name": "flowengineering",
    "dates": [
@@ -9550,6 +9560,16 @@
     "Manager, Engineering - Ads"
    ]
   },
+  "myome": {
+   "name": "MyOme",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Engineer"
+   ]
+  },
   "myriad360": {
    "name": "Myriad360",
    "dates": [
@@ -9897,6 +9917,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "noetik": {
+   "name": "Noetik",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "ML Engineer"
    ]
   },
   "nokia": {
@@ -14776,6 +14806,16 @@
     "Senior Software Engineer"
    ],
    "count": 1
+  },
+  "verantos": {
+   "name": "Verantos",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "verawholehealth": {
    "name": "Vera Whole Health",
