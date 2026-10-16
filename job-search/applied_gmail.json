@@ -3123,6 +3123,16 @@
    ],
    "count": 1
   },
+  "collibra": {
+   "name": "Collibra",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer, Unstructured AI"
+   ]
+  },
   "collinear": {
    "company": "collinear",
    "first": "2026-10-05",
@@ -3558,6 +3568,16 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "datacor": {
+   "name": "Datacor",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
   },
   "datadog": {
    "name": "Datadog",
