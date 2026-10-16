@@ -12877,9 +12877,13 @@
   "servicenow": {
    "name": "ServiceNow",
    "dates": [
-    "2026-09-09"
+    "2026-09-09",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Software Engineer"
+   ]
   },
   "servicetitan": {
    "name": "ServiceTitan",
