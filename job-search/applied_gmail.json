@@ -8966,6 +8966,16 @@
    ],
    "count": 1
   },
+  "materialbank": {
+   "name": "Material Bank",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineer"
+   ]
+  },
   "mattermost": {
    "name": "Mattermost",
    "dates": [
@@ -12269,6 +12279,16 @@
    ],
    "count": 1
   },
+  "rtslabs": {
+   "name": "RTS Labs",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
   "rubrik": {
    "name": "Rubrik",
    "dates": [
@@ -14537,11 +14557,13 @@
   "twinhealth": {
    "name": "Twin Health",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Platform Engineer, MarTech"
+    "Senior Platform Engineer, MarTech",
+    "Lead Software Engineer"
    ]
   },
   "twitch": {
@@ -14916,9 +14938,10 @@
     "2026-10-16"
    ],
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Senior Director, Data Development"
    ],
-   "count": 1
+   "count": 2
   },
   "verantos": {
    "name": "Verantos",
@@ -15049,9 +15072,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Director, Forward Deployed Engineering"
+    "Director, Forward Deployed Engineering",
+    "Lead Software Engineer, Data Platform"
    ]
   },
   "vibe": {
@@ -15120,6 +15144,16 @@
    "company": "vitalize",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "vivodyne": {
+   "name": "Vivodyne",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Software Engineer"
+   ]
   },
   "vl": {
    "company": "vl",
@@ -15452,6 +15486,16 @@
    ],
    "count": 1
   },
+  "workato": {
+   "name": "Workato",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Field Chief Technology Officer"
+   ]
+  },
   "workday": {
    "company": "Workday",
    "first": "2026-10-01",
@@ -15614,6 +15658,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "youcom": {
+   "name": "You.com",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer, Product Engineering"
+   ]
   },
   "yugabyte": {
    "name": "Yugabyte",
