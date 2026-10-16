@@ -7199,6 +7199,16 @@
     "Staff Engineer, Applied AI"
    ]
   },
+  "hopskipdrive": {
+   "name": "HopSkipDrive",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Quality Infrastructure"
+   ]
+  },
   "horacemann": {
    "name": "Horace Mann ",
    "dates": [
@@ -14613,6 +14623,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "towerresearchcapital": {
+   "name": "Tower Research Capital",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Research Platform Engineer"
    ]
   },
   "tpreducationllc": {
