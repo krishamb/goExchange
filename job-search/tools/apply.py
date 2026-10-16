@@ -454,6 +454,8 @@ CHOICE_RULES=[
  (r"if yes,? (can you )?(please )?indicate the last (year|month) you worked for", ["n/a","N/A","Not applicable","Not Applicable"]),
  (r"(worked|work) for tencent|affiliated with tencent|owned by tencent.{0,200}(worked|employed)", ["No","no"]),   # Riot 2026-10-16: never worked for Tencent
  (r"accountable for defining and executing an? (enterprise[- ]wide|company[- ]wide|organization[- ]wide) (data|ai|technology|engineering) strategy", ["Yes","yes"]),   # AvePoint 2026-10-16: CTO & Co-Founder, Hyperion AI (company-wide data/AI strategy)
+ (r"(states|locations) listed below.{0,60}do you live in one of them|do you live in one of (them|these states|the following states)|which of (these|the following) states do you live in", ["California","CA","Yes","yes"]),   # Flodesk 2026-10-16: lives in California
+ (r"(willing|able) (and able |and willing )?to adjust your (working )?hours|adjust your working hours|work (later|overlapping|extended) hours (into the evening|when needed)", ["Yes","yes"]),   # Flodesk 2026-10-16
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
