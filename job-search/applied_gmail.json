@@ -3487,9 +3487,13 @@
   "current": {
    "name": "Current",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Analytics Engineering"
+   ]
   },
   "curri": {
    "name": "Curri",
@@ -4214,6 +4218,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "druva": {
+   "name": "Druva",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Field CTO"
+   ]
   },
   "drw": {
    "name": "DRW",
@@ -4947,11 +4961,13 @@
    "name": "Federato",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Senior Software Engineer"
    ]
   },
   "ferguson": {
@@ -5602,7 +5618,14 @@
   "gemini": {
    "company": "Gemini",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Software Engineering Manager, Tooling (Product)"
+   ],
+   "count": 1
   },
   "genai": {
    "company": "genai",
@@ -6428,6 +6451,16 @@
    ],
    "count": 1
   },
+  "hmgamericadice": {
+   "name": "HMG America (Dice)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Google Cloud Platform Data Engineer/Looker"
+   ]
+  },
   "homebase": {
    "company": "homebase",
    "first": "2026-10-05",
@@ -6543,12 +6576,14 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Senior Software Engineer"
    ],
-   "count": 1
+   "count": 2
   },
   "hudsonrivertrading": {
    "name": "Hudson River Trading",
@@ -7535,9 +7570,13 @@
   "later": {
    "name": "Later",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer (Platform)"
+   ]
   },
   "latitude": {
    "company": "latitude",
@@ -9102,6 +9141,16 @@
    ],
    "count": 1
   },
+  "nyccriminaljusticeagency": {
+   "name": "NYC Criminal Justice Agency",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Software Engineering"
+   ]
+  },
   "oasishealthpartners": {
    "name": "Oasis Health Partners",
    "dates": [
@@ -10016,6 +10065,16 @@
     "Senior Software Engineer, Mission Optimization"
    ]
   },
+  "planful": {
+   "name": "Planful",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Forward Deployed Engineer"
+   ]
+  },
   "planted": {
    "name": "planted",
    "dates": [
@@ -10277,6 +10336,16 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer IS - Remote"
+   ]
+  },
+  "prudenttechnologiesandconsultingdice": {
+   "name": "Prudent Technologies and Consulting (Dice)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Scientist  GenAI / RAG"
    ]
   },
   "psiquantum": {
@@ -10853,6 +10922,16 @@
     "Staff Software Engineer"
    ]
   },
+  "rivagoinfotechincdice": {
+   "name": "Rivago infotech inc (Dice)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Enterprise Architect"
+   ]
+  },
   "riverai": {
    "company": "River AI",
    "first": "2026-10-07",
@@ -10985,6 +11064,16 @@
    "count": 2,
    "roles": [
     "Director, Platform Systems"
+   ]
+  },
+  "rootshellenterprisetechnologiesincdice": {
+   "name": "Rootshell Enterprise Technologies Inc. (Dice)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer AI - Finance"
    ]
   },
   "roseinternational": {
