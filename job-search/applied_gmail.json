@@ -71,9 +71,13 @@
   "8thlight": {
    "name": "8th Light",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead Software Engineer (Remote)"
+   ]
   },
   "8thlightrebuild": {
    "name": "8thlight",
@@ -386,7 +390,14 @@
   "agilityrobotics": {
    "company": "agilityrobotics",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Senior AI Software Engineer, Perception"
+   ],
+   "count": 1
   },
   "agtonomy": {
    "name": "Agtonomy",
@@ -1033,6 +1044,16 @@
    ],
    "count": 1
   },
+  "ascend": {
+   "name": "Ascend",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
+  },
   "ascension": {
    "name": "Ascension",
    "dates": [
@@ -1630,6 +1651,16 @@
    ],
    "count": 1
   },
+  "betatechnologies": {
+   "name": "BETA Technologies",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Systems Engineer - Advanced Concepts"
+   ]
+  },
   "betterhelp": {
    "name": "BetterHelp",
    "dates": [
@@ -1973,18 +2004,26 @@
   "braze": {
    "name": "Braze",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "VP, Product Engineering"
+   ]
   },
   "brex": {
    "name": "Brex",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer - Identity & Access Management"
+   ]
   },
   "bridgeway": {
    "company": "bridgeway",
@@ -2063,6 +2102,16 @@
    "count": 2,
    "roles": [
     "Principal Cloud Engineer - AI Platform"
+   ]
+  },
+  "buildkite": {
+   "name": "Buildkite",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineer - Platform"
    ]
   },
   "buildops": {
@@ -2340,9 +2389,13 @@
   "celonis": {
    "name": "Celonis",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Field CTO"
+   ]
   },
   "censys": {
    "name": "Censys",
@@ -2969,6 +3022,16 @@
    ],
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
+  },
+  "conga": {
+   "name": "Conga",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Associate Principal Solution Architect"
+   ]
   },
   "connecttechtalentdice": {
    "name": "Connect Tech+Talent (Dice)",
@@ -4246,7 +4309,14 @@
   "ensono": {
    "company": "Ensono",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (linkedin-resolved)"
+   "via": "cloud_greenhouse (linkedin-resolved)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Expert Database Architect"
+   ],
+   "count": 1
   },
   "entrustcorporation": {
    "name": "Entrust Corporation",
@@ -4767,11 +4837,13 @@
    "name": "Fivetran",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Manager Software Engineering"
    ]
   },
   "fivetrandbtlabs": {
@@ -5824,10 +5896,14 @@
   "healthie": {
    "name": "Healthie",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-16"
    ],
-   "count": 1,
-   "rejected": "2026-10-05/06"
+   "count": 2,
+   "rejected": "2026-10-05/06",
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
   },
   "heard": {
    "company": "heard",
@@ -6064,6 +6140,16 @@
     "2026-10-12"
    ],
    "count": 1
+  },
+  "hubblenetwork": {
+   "name": "Hubble Network",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Localization Engineer \u2013 Location Intelligence"
+   ]
   },
   "hubspot": {
    "name": "HubSpot",
@@ -6376,11 +6462,13 @@
    "name": "Instacart",
    "dates": [
     "2026-10-05",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer II, Ads Data Solutions Engineering"
+    "Senior Software Engineer II, Ads Data Solutions Engineering",
+    "Director, AI Solutions Strategy & Planning"
    ]
   },
   "instituteoffoundationmodels": {
@@ -6893,6 +6981,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "kodiak": {
+   "name": "Kodiak",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Autonomy Software Engineer, Mapping"
+   ]
   },
   "komodohealth": {
    "name": "Komodo Health",
@@ -7864,10 +7962,14 @@
   "minio": {
    "name": "minio",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-16"
    ],
-   "count": 1,
-   "note": "cloud-applied today"
+   "count": 2,
+   "note": "cloud-applied today",
+   "roles": [
+    "Field Architect"
+   ]
   },
   "ministrybrands": {
    "name": "Ministry Brands",
@@ -7936,6 +8038,16 @@
    "rejected": true,
    "roles": [
     "Software Engineer, Distributed Systems "
+   ]
+  },
+  "mobentertainment": {
+   "name": "Mob Entertainment",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Systems Engineer"
    ]
   },
   "mochi": {
@@ -8753,6 +8865,16 @@
     "2026-09-29"
    ],
    "count": 1
+  },
+  "oportun": {
+   "name": "Oportun",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (R14285)"
+   ]
   },
   "opusclip": {
    "name": "opusclip",
@@ -11383,9 +11505,13 @@
    "name": "Stripe",
    "dates": [
     "2026-10-01",
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-16"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Solutions Architect, AI"
+   ]
   },
   "strivehealth": {
    "name": "Strive Health",
@@ -12056,6 +12182,16 @@
    ],
    "count": 1
   },
+  "torcrobotics": {
+   "name": "Torc Robotics",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior, ML Engineer - Tracking"
+   ]
+  },
   "torotms": {
    "name": "Toro TMS",
    "dates": [
@@ -12118,6 +12254,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "trolley": {
+   "name": "Trolley",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Data Engineer"
+   ]
   },
   "trueaccord": {
    "name": "TrueAccord",
@@ -12824,6 +12970,16 @@
    "company": "wehrtyou",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "weka": {
+   "name": "WEKA ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Technical Alliance Engineer  \u2013 AI Platform"
+   ]
   },
   "welbehealth": {
    "name": "WelbeHealth",
