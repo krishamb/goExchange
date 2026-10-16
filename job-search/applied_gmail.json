@@ -103,6 +103,16 @@
    ],
    "count": 1
   },
+  "abbott": {
+   "name": "Abbott",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI/ML Engineer"
+   ]
+  },
   "abbycare": {
    "name": "Abby Care",
    "dates": [
@@ -200,9 +210,13 @@
   "acrisure": {
    "name": "acrisure",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead Integration Architect, Finance Systems Automation"
+   ]
   },
   "activisionblizzard": {
    "name": "Activision Blizzard",
@@ -523,9 +537,13 @@
   "allstate": {
    "name": "Allstate",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior AI Software Engineer"
+   ]
   },
   "alltechconsultingservicesincdice": {
    "name": "Alltech Consulting Services, Inc. (Dice)",
@@ -1961,6 +1979,16 @@
    ],
    "count": 1
   },
+  "capitalgroup": {
+   "name": "Capital Group",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise AI Strategy Principal"
+   ]
+  },
   "capitalone": {
    "company": "Capital One",
    "first": "2026-09-30",
@@ -2269,9 +2297,13 @@
   "circle": {
    "name": "Circle",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Identity & Access Platform"
+   ]
   },
   "circleci": {
    "name": "CircleCI",
@@ -3322,9 +3354,10 @@
    "dates": [
     "2026-10-15"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr Principal Software Engineer"
+    "Sr Principal Software Engineer",
+    "Sr Data Engineer"
    ]
   },
   "distantjob": {
@@ -3617,9 +3650,10 @@
     "2026-09-29",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Staff Software Engineer, Linux Runtime & Drivers"
+    "Senior Staff Software Engineer, Linux Runtime & Drivers",
+    "Senior Compiler Engineer"
    ]
   },
   "ekfrazotechnologiesllc": {
@@ -6945,6 +6979,16 @@
    ],
    "count": 1
   },
+  "mayoclinic": {
+   "name": "Mayo Clinic",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer - API Platform Engineer - CDH"
+   ]
+  },
   "mcghealth": {
    "name": "MCG Health",
    "dates": [
@@ -8019,9 +8063,13 @@
   "oracle": {
    "name": "Oracle",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Software Development Snr Manager"
+   ]
   },
   "orb": {
    "company": "orb",
@@ -9908,6 +9956,16 @@
    ],
    "count": 1
   },
+  "simpsonstrongtie": {
+   "name": "Simpson Strong-Tie",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering \u2013 Residential"
+   ]
+  },
   "simpsonthacherbartlettllp": {
    "name": "Simpson Thacher & Bartlett LLP",
    "dates": [
@@ -11212,9 +11270,13 @@
   "uber": {
    "name": "Uber",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr Software Engineer - Experimentation"
+   ]
   },
   "unconventional": {
    "name": "Unconventional",
@@ -11236,9 +11298,13 @@
   "uniphore": {
    "name": "Uniphore",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Inference Engineer"
+   ]
   },
   "unitedconcordiadental": {
    "company": "United Concordia Dental",
@@ -11765,9 +11831,14 @@
   "wexinc": {
    "name": "wexinc",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Database Architect",
+    "Senior Software Engineer"
+   ]
   },
   "wf2": {
    "company": "wf2",
@@ -12091,9 +12162,13 @@
   "zipco": {
    "name": "Zip Co Limited (Greenhouse board name for Zip)",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "zipcolimited": {
    "company": "zipcolimited",
