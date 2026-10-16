@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"pronounc|pronunc", ""),   # 'how to pronounce your name' (Etsy): no pronunciation on record, so left blank (never pronouns or the name itself)
  (r"do you have \d+\+? years of professional software engineering experience", "Yes"),
  (r"heavy daily use of ai coding assistants", "Yes - I use Claude Code daily for coding, debugging, tests and code review, with parallel subsystem reviews built into my workflow."),
  (r"^desired hours( \(per week\))?\s*\*?$|desired (work(ing)? )?hours per week", "40"),   # full-time
@@ -212,7 +213,7 @@ TEXT_RULES=[
  (r"^(?!.*\b(agent|project|workflow|system|product|tool|company|school|reference|referr)).*(first and last name|legal name|full legal name|^(full )?name\b(?!\s+(one|a|an|the|two|three|some|any|your|of)\b)|^your name|_systemfield_name)", P["name"]),
  (r"first ?name", first),(r"last ?name|surname|family name", last),
  (r"preferred mobile phone number for contact|what is your (preferred )?mobile (phone )?number", "({}) {}-{}".format(*[re.sub(r"\D", "", P["phone"])[-10:][i:j] for i, j in ((0, 3), (3, 6), (6, 10))])),   # 10-15 Elevance asks for (xxx) xxx-xxxx in a long label (the short-label phone rule below does not apply)
- (r"preferred name", first),(r"^(?=.{0,70}$).*e-?mail", P["email"]),(r"^(?=.{0,70}$).*(phone|mobile|contact number)|^tel\b|^telephone", P["phone"]),   # 10-14: short field labels only (Alt's long essay question mentions the "mobile app")
+ (r"preferred name", first),(r"^(?=.{0,70}$).*e-?mail", P["email"]),(r"^(?=.{0,70}$).*(phone(?!tic)|mobile|contact number)|^tel\b|^telephone", P["phone"]),   # 10-14: short field labels only (Alt's long essay question mentions the "mobile app")
  (r"zip|postal|post ?code", P.get("zip","95054")),
  (r"(what|which) (types?|kinds?) of (roles?|positions?|jobs?) (are|would) you (be )?interested in|roles? (are you|you are) (most )?interested in", "Engineering leadership and senior technical roles in AI/ML: CTO, VP / Head / Director of Engineering or AI, Engineering Manager for AI teams, and Principal / Staff / Distinguished Engineer or AI Architect roles building LLM, data-platform and distributed systems."),
  (r"(list|describe|what are) your (relevant )?(technical )?skills( and competencies)?|relevant technical skills|technical competencies", "AI/ML and LLM systems (RAG, agentic workflows, evaluation, inference optimization); Python, Go, Rust and C++; distributed and low-latency streaming systems (Kafka); cloud and infrastructure (AWS, Kubernetes, Terraform); data platforms (Spark, Postgres/MySQL, vector databases); and leading engineering organizations as CTO and co-founder of Hyperion AI and at Yahoo (75+ engineers) and JPMorgan (50+ engineers)."),
@@ -240,7 +241,7 @@ TEXT_RULES=[
  (r"if (you answered|yes,? please|applicable)|not applicable|type 'n/a'|government entity|please (list|specify|explain).*(if|when) (yes|applicable)", "N/A"),
  (r"^(street |home |mailing )?address", P["location"]),
  (r"(how|where) did you (first |initially )?(hear|learn|find out|come across)|hear about (us|this|the)|hear of (us|this)", "LinkedIn"),   # 'How did you hear about Hex? (eg LinkedIn, Friend, ...)': the source, not the profile URL
- (r"linkedin|linkedln", P["linkedin"]),(r"github|git (repo|repository|profile)|url to your git", P["github"]),(r"portfolio|website|personal site", P["github"]),
+ (r"linkedin|linkedln", P["linkedin"]),(r"github|git (repo|repository|profile)|url to your git", P["github"]),(r"^(?!.*(passcode|pass code|password|passphrase|access code)).*(portfolio|website|personal site)", P["github"]),
  (r"current (company|employer)|most recent (company|employer)|^company$|^employer$", P["org"]),
  (r"^(?!.*\b(how|describe|explain|tell us|ways?)\b).*(current (title|role)|job title|^title$)", "CTO & Technical Co-Founder / Principal Architect"),
  (r"^(current |your |home )?location\b|^city\b|where (are you|do you) (based|live|located)", P["location"]),
@@ -369,7 +370,7 @@ TEXT_RULES=[
  (r"^(?!.*(employment gap|gaps? in|incident|outage|\bgpu\b|camunda|bitcoin|lightning|referral|^if (yes|other|so)\b|if you are not sure))(?:.*)(experience (managing|leading|building|running|owning|with|in).*(explain|describe|elaborate|tell us)|please (explain|describe|elaborate)|describe your (experience|background|leadership)|tell us about your (experience|background|leadership)|walk us through|what is your experience (leading|managing|with|in|building|running|owning)|share (an example|your experience))", "As CTO & Technical Co-Founder at Hyperion AI (2023-2026) I built and led the engineering team and owned customer-facing deployments end to end, from architecture through production rollouts with customers. Earlier, as VP / Lead Architect at JP Morgan Chase and VP / Technical Lead at Morgan Stanley, I led technical leads and architects delivering trading and application platforms directly with client and trading-desk teams, and at Cadence and Ankr I was the architect embedded with customer-facing engineering. In total 25+ years of hands-on engineering and 10+ years leading engineers, architects, and solutions-oriented teams."),
  (r"greatest (impact|achievement)|proudest|accomplishment|most exceptional|exceptional thing|most impressive (thing|work|project)|biggest (achievement|win)|achieved or built|what have you built that|most proud", ANS.get("impact","")),
  (r"work environment|thrive|attributes", ANS.get("environment","")),
- (r"pronoun", "He/him"),
+ (r"\bpronouns?\b", "He/him"),
  (r"gender identity|^gender$|\bgender\b", "Male"),
  (r"^(?!.*\b(family|relatives?|relationship|conflicts?|commitments?|currently (enrolled|attending)|current(ly)? (a )?student|are you (a )?student|parents?|scholars?|teachers?|teaching|faculty|employees?|worked|work for|alum(na|nus|ni)?|partner|sponsor|volunteer)\b)(.*\b(name of (the |your )?(university|school|college|institution)|(university|school|college|institution|alma mater)( name)?\s*\*?$|which (university|school|college)|alma mater|(as|is|was) your (school|university|college)|(school|university|college) (attended|name)|where did you (study|graduate)))", "University of Madras"),   # only a field asking for the institution itself (Oct 16 Success Academy: a family-member name and a school-commitments question got "University of Madras")
  (r"^(?!.*disabilit)(?=.*(degree|field of study|\bmajor\b(?! life)))", "Bachelor of Engineering, Computer Science and Engineering"),   # not the disability question's "major life activities" (RadarFirst, Oct 16)
@@ -1272,7 +1273,7 @@ CHOICE_RULES=[
  (r"(require|need|requesting|request)\b.{0,30}relocation (assistance|package|support|benefits?|reimbursement)|relocation (assistance|package|support|reimbursement) (required|needed)", ["No","no"]),   # Bay Area resident; no relocation package needed
  (r"relocat", ["Yes","yes"]),
  (r"remote|hybrid|on-?site|in[- ]office|work from|commut", ["Yes","yes","Hybrid","Remote"]),
- (r"pronoun", ["He / Him","He/Him","He/him","He, him","He"]),
+ (r"\bpronouns?\b", ["He / Him","He/Him","He/him","He, him","He"]),
  (r"have you (ever )?used|are you a (current )?(user|customer)|used (our|the) (product|app|platform)", ["Yes","yes"]),
  (r"FHIR|HL7|CCDA|HIPAA|\bPHI\b|\bEHR\b|EMR\b|healthcare partner|ICD-?10|CPT codes|claims data|payer", ["Yes","yes"]),   # applicant: has healthcare experience
  (r"clinical|medical device|\bFDA\b|GxP|pharma", ["No","no"]),   # clinician / device / pharma work is not in his background
