@@ -72,6 +72,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"other names used|list any other names|maiden name|aliases?\b.{0,20}(used|names)", "None"),   # no other legal names
  (r"reasons? (for|of) leaving|why (did|are) you (leave|leaving)|why do you want to leave", "I'm looking for a role where I can apply my mix of hands-on architecture and engineering leadership at larger scale, on AI, fintech and data-intensive products with real users and a strong engineering team. Hyperion AI gave me end-to-end experience building an agentic platform from zero; the next step is bringing that to a company with an established product and customers."),   # reviewed answer (ash8/reviewed_answers.md); MUFG Oct 16 had matched the employer-name rule ("last employer")
  (r"variable pay|bonus expectation|incentive (pay |compensation )?expectation|target bonus|expected bonus", "Negotiable; in line with the company's standard variable-pay plan for the level"),   # MUFG Oct 16 had matched the base-pay rule
 
@@ -361,6 +362,16 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"do you have a master.?s degree|master.?s degree \(or (its )?foreign", ["No","no"]),   # B.E. only (Pinterest, Oct 16)
+ (r"are you willing to work in (santa monica|los angeles|culver city|san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|oakland|new york|manhattan|brooklyn)", ["Yes","yes"]),   # RAND (Oct 16): Bay Area home; LA / NYC hybrid allowed
+ (r"are you willing to work in (washington|pittsburgh|boston|arlington|chicago|seattle|austin|denver|atlanta|dallas)", ["No","no"]),   # other US cities only if remote
+ (r"scope a technical solution from an ambiguous opportunity", ["Yes","yes"]),   # Symmetry FDE (Oct 16): done as CTO / chief architect
+ (r"furnish proof of age|provide proof of age|proof of (your )?age", ["Yes","yes"]),   # Oct 16 retries: an adult applicant can show proof of age
+ (r"involved in the performance or negotiation of (a )?government contract", ["No","no"]),   # never negotiated or performed a government contract
+ (r"control (a|any) political action committee|\bpac\b\)?\??$", ["No","no"]),
+ (r"financial relationships? with (pwc|pricewaterhouse|deloitte|kpmg|ernst|ey\b)|financial relationship with .{0,40}(audit|accounting) firm", ["No","no"]),
+ (r"represented yourself and your experience truthfully", ["Yes","yes"]),
+ (r"do you have a ph\.?d|doctoral degree|doctorate", ["No","no"]),   # B.E. only
  (r"are you currently (directly )?employed (by|with|at) (?!hyperion)", ["No","no"]),   # Mazda (Oct 16): not employed by the hiring company (current employer is Hyperion AI)
  (r"proof of driving eligibility|driving eligibility", ["Yes","yes"]),   # same standing answer as the valid-driver's-license rule
  (r"^(what is your )?desired compensation\??\*?$", ["$200,000+","$200,000 +","$150,000+","$150,000 +","Negotiable"]),   # Protiviti (Oct 16) buckets top out at $150,000+; standing range $200K-$350K
