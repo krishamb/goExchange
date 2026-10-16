@@ -61,6 +61,7 @@ exec(_seg("EDU_START=", "\nasync def is_edu_date"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 exec(_seg("NEVER_APPLY=", "\n"), G)
+exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
 exec(_seg("NJ_LOC=", "\n    return None\n") + "\n    return None\n", G)
 TEXT_RULES, CHOICE_RULES, pick, best_index, _match, mask_hear, NEVER_APPLY, tech_answer, location_block = (G[k] for k in ("TEXT_RULES", "CHOICE_RULES", "pick", "best_index", "_match", "mask_hear", "NEVER_APPLY", "tech_answer", "location_block"))
 HEAR_Q, HEAR_BAD, EDU_START, EDU_END = G["HEAR_Q"], G["HEAR_BAD"], G["EDU_START"], G["EDU_END"]
@@ -949,6 +950,8 @@ async def run_one(br, item):
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
+        if JUNIOR_LEVEL.search(item.get("title", "") or ""):
+            job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
         _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))
         if _lb:
             job.report["result"] = "NOT SUBMITTED: " + _lb; return job.report

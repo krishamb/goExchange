@@ -35,6 +35,7 @@ exec(_src[_src.index("first,last="):_src.index("\n", _src.index("first,last="))]
 exec(_seg("TEXT_RULES=[", "\ndef pick("), G); exec(_seg("def pick(", "\nLABEL_JS"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G); exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 exec(_seg("NEVER_APPLY=", "\n"), G)
+exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
 TEXT_RULES, CHOICE_RULES, pick, best_index, mask_hear, NEVER_APPLY = (G[k] for k in ("TEXT_RULES", "CHOICE_RULES", "pick", "best_index", "mask_hear", "NEVER_APPLY"))
 
 async def refetch(route):
@@ -129,6 +130,8 @@ async def apply_one(ctx, item):
     try:
         if NEVER_APPLY.search(f'{item.get("company","")} {item.get("title","")}'):
             report["result"] = "NOT SUBMITTED: do-not-apply company"; return report
+        if JUNIOR_LEVEL.search(item.get("title", "") or ""):
+            report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return report
         await page.goto(item["url"], wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(6000)
         body = await text(page)
         if await page.locator(CAPTCHA).count(): report["result"] = "NOT SUBMITTED: captcha/bot check (not bypassed)"; return report
