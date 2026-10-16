@@ -1888,6 +1888,16 @@
    ],
    "count": 1
   },
+  "bluerivertechnology": {
+   "name": "Blue River Technology",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Platform Engineer, ML Infrastructure"
+   ]
+  },
   "blueshieldofcalifornia": {
    "name": "Blue Shield of California",
    "dates": [
@@ -1955,6 +1965,16 @@
     "2026-10-12"
    ],
    "count": 1
+  },
+  "botauto": {
+   "name": "Bot Auto",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Applied AI"
+   ]
   },
   "boulevard": {
    "name": "Boulevard",
@@ -5454,6 +5474,16 @@
    "count": 2,
    "roles": [
     "Tech Lead Manager, AI Evaluations"
+   ]
+  },
+  "glg": {
+   "name": "GLG",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Solutions Architect - AI Solutions"
    ]
   },
   "glimpse": {
