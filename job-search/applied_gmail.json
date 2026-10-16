@@ -1190,7 +1190,7 @@
    ],
    "count": 2,
    "roles": [
-    "Staff Backend Software Engineer – Platform Enablement"
+    "Staff Backend Software Engineer \u2013 Platform Enablement"
    ]
   },
   "audioeye": {
@@ -1643,7 +1643,7 @@
    ],
    "count": 2,
    "roles": [
-    "Sr Engineering Manager – API & Auth Platform"
+    "Sr Engineering Manager \u2013 API & Auth Platform"
    ]
   },
   "beyondfinance": {
@@ -3459,7 +3459,7 @@
    ]
   },
   "dept": {
-   "name": "DEPT®",
+   "name": "DEPT\u00ae",
    "dates": [
     "2026-10-03"
    ],
@@ -5007,7 +5007,7 @@
    "count": 3,
    "roles": [
     "Head of AI Community",
-    "Lead – AI Quant Engineer - Project Sandbox"
+    "Lead \u2013 AI Quant Engineer - Project Sandbox"
    ]
   },
   "freestar": {
@@ -5592,7 +5592,7 @@
    "count": 1
   },
   "gruns": {
-   "name": "Grüns",
+   "name": "Gr\u00fcns",
    "dates": [
     "2026-10-03"
    ],
@@ -6534,7 +6534,7 @@
    "count": 2,
    "roles": [
     "Senior Data Platform Engineer, Snowflake",
-    "Sr. Manager, Engineering – AI & Innovation"
+    "Sr. Manager, Engineering \u2013 AI & Innovation"
    ]
   },
   "jeeves": {
@@ -8028,8 +8028,8 @@
    ],
    "count": 2,
    "roles": [
-    "VP – Data Products and AI Enablement",
-    "AVP – Data Products and AI Enablement"
+    "VP \u2013 Data Products and AI Enablement",
+    "AVP \u2013 Data Products and AI Enablement"
    ]
   },
   "muonspace": {
@@ -10445,7 +10445,7 @@
    "via": "cloud_greenhouse"
   },
   "schrodinger": {
-   "name": "Schrödinger",
+   "name": "Schr\u00f6dinger",
    "dates": [
     "2026-10-01"
    ],
@@ -10758,7 +10758,7 @@
    ],
    "count": 1,
    "roles": [
-    "Director, Software Engineering – Residential"
+    "Director, Software Engineering \u2013 Residential"
    ]
   },
   "simpsonthacherbartlettllp": {
@@ -12225,7 +12225,7 @@
    "count": 3,
    "roles": [
     "Sr. Machine Learning Engineer",
-    "Principal Engineer, Enterprise AI — Technical Fellow Office"
+    "Principal Engineer, Enterprise AI \u2014 Technical Fellow Office"
    ]
   },
   "unitytechnologies": {
@@ -12427,7 +12427,7 @@
    ],
    "count": 2,
    "roles": [
-    "Forward-Deployed Engineer "
+    "Forward-Deployed Engineer\u00a0"
    ]
   },
   "veridiantech": {
@@ -12639,7 +12639,7 @@
    ],
    "count": 1,
    "roles": [
-    "Architect – Object Storage & Database Systems"
+    "Architect \u2013 Object Storage & Database Systems"
    ]
   },
   "watney": {
@@ -13128,7 +13128,7 @@
    ],
    "count": 3,
    "roles": [
-    "Staff Software Engineer – Integrations Platform",
+    "Staff Software Engineer \u2013 Integrations Platform",
     "Senior Data Engineer - Data Platform"
    ]
   },
