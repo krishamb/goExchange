@@ -2238,7 +2238,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                 try:
                     if not await h.is_visible(): continue
                     name=await h.get_attribute("name") or ""; lab=await label_of(h)
-                    if re.search(r"captcha|search",name+lab,re.I): continue
+                    if re.search(r"captcha|\bsearch",name+lab,re.I): continue   # \b: "Tower Research Capital" / "research experience" questions are not search boxes
                     if await is_edu_date(h):
                         if not (await h.input_value()).strip():
                             ev=edu_value(lab,h)
