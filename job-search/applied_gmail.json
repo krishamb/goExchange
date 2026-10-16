@@ -921,9 +921,10 @@
     "2026-09-30",
     "2026-10-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer (Hybrid, San Francisco)"
+    "Staff Software Engineer (Hybrid, San Francisco)",
+    "Senior Software Engineer (Hybrid, San Francisco)"
    ]
   },
   "appian": {
@@ -1153,6 +1154,16 @@
     "2026-10-11"
    ],
    "count": 1
+  },
+  "assemblyhealth": {
+   "name": "Assembly Health",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Product Engineering"
+   ]
   },
   "assorthealth": {
    "name": "assorthealth",
@@ -1630,9 +1641,10 @@
    "dates": [
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Software Engineer, MLOps - Machine Learning"
+    "Software Engineer, MLOps - Machine Learning",
+    "Staff Software Engineer - Infrastructure, Data Platform"
    ]
   },
   "battlement": {
@@ -3006,6 +3018,16 @@
     "2026-09-30"
    ],
    "count": 1
+  },
+  "codepath": {
+   "name": "CodePath",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "codepulgz": {
    "company": "codepulgz",
@@ -12350,6 +12372,16 @@
     "Vice President - AI, Data and Analytics"
    ]
   },
+  "teachstone": {
+   "name": "Teachstone",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Applied AI"
+   ]
+  },
   "tealiuminc": {
    "name": "Tealium Inc.",
    "dates": [
@@ -13258,6 +13290,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "veracyte": {
+   "name": "Veracyte",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Data Engineering "
+   ]
+  },
   "veranahealth": {
    "company": "Verana Health",
    "first": "2026-10-06",
@@ -13958,9 +14000,13 @@
   "zetaglobal": {
    "name": "Zeta Global",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Data Platform"
+   ]
   },
   "zip": {
    "name": "Zip",
