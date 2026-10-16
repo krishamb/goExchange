@@ -346,7 +346,7 @@ BAD_SAVED = re.compile(r"\bwith (company |employer |visa )?sponsorship|\b(will|w
 MULTI_ALL = re.compile(r"select all (the )?(days|shifts)|(days|shifts) (you are|you're) (able|available) to work", re.I)
 WEEKDAYS = re.compile(r"monday|tuesday|wednesday|thursday|friday|weekdays?|mon-fri|monday ?- ?friday", re.I)
 DAY_SHIFTS = re.compile(r"\bday\b|first|1st|morning|business hours|standard|regular|daytime|8 ?(am|a\.m\.)|9 ?(am|a\.m\.)", re.I)
-ETH_NOT = re.compile(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)", re.I)   # 'Asian (Not Hispanic or Latino)' names a race, it is not a negated answer (Home Depot, CrowdStrike, Thermo Fisher Oct 16)
+ETH_NOT = re.compile(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)|,\s*not\s+(hispanic|latin[aoxe]?)(\s+or\s+(latin[aoxe]?|hispanic))?\b", re.I)   # 'Asian (Not Hispanic or Latino)' names a race, it is not a negated answer (Home Depot, CrowdStrike, Thermo Fisher Oct 16)
 NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so

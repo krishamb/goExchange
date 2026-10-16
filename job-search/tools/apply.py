@@ -1438,7 +1438,7 @@ def race_bad(t):
     """A race/ethnicity option the applicant (Asian, not Hispanic or Latino) must never pick: another race, 'Two or more',
     'Other' or 'Hispanic or Latino'. Asian options and negated / decline options stay usable. (Oct 16 Howden: a 'State ...'
     rule's fallback 'Other' picked 'Native Hawaiian or Other Pacific Islander'.)"""
-    s=re.sub(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)|\(united states( of america)?\)","",t or "",flags=re.I).lower()
+    s=re.sub(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)|,?\s*\bnot\s+(hispanic|latin[aoxe]?)(\s+or\s+(latin[aoxe]?|hispanic))?\b|\(united states( of america)?\)","",t or "",flags=re.I).lower()   # 'Asian (Not Hispanic or Latino)' / 'Asian, not Hispanic or Latino' (Workday Inc.) name a race
     if re.search(r"\basian\b",s): return False
     if re.search(r"\bnot\b|^\s*no\b|decline|wish|prefer|choose|rather|n/a|undisclosed|self.?identify",s): return False
     return bool(re.search(r"american indian|alaska|\bblack\b|african|hawaiian|pacific islander|\bwhite\b|caucasian|two or more|multi.?racial|\bmixed\b|middle eastern|north african|hispanic|latin[aoxe]|\bother\b",s))
