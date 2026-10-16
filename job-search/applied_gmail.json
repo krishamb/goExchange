@@ -10190,12 +10190,14 @@
    "first": "2026-10-01",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
    ],
    "roles": [
-    "LMTS (Lead Member of Technical Staff)"
+    "LMTS (Lead Member of Technical Staff)",
+    "Senior Manager - Software Engineering"
    ],
-   "count": 1
+   "count": 2
   },
   "sambanova": {
    "name": "SambaNova",
