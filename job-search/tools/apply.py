@@ -354,6 +354,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"^what is your desired annual compensation\??\*?$", ["$220,000 - $350,000","$220,000","Yes"]),   # eClinical 2026-10-16: the form offers only Yes/No here
  (r"currently based in any of (these|the following) countries|which of (these|the following) countries are you (currently )?based in", ["United States","United States of America","USA","US"]),   # Vercel 2026-10-16
  (r"base salary for this role is \$?(\d{3}),\d{3}\s*[-–]\s*\$?(2\d\d|3\d\d),\d{3}.{0,40}(align|match|meet)", ["Yes","yes"]),   # posted band reaches the applicant's $200K+ IC range
  (NO_EXP_DOMAIN.pattern, ["0 - 1 year","0-1 year","0-1 years","0 – 1 year","Less than 1 year","< 1 year","None","0"]),   # 10-15 Guardant: no diagnostic / medical-device / pharma years on his record (truthful lowest band)
@@ -469,6 +470,7 @@ CHOICE_RULES=[
  (r"are you currently (attending|enrolled in) (college|university|school)|currently a (college |university )?student", ["No","no"]),   # HackerRank 2026-10-16
  (r"which cloud platforms have you (worked with|used) in (a )?production", ["AWS","Private Cloud"]),   # resume: Chief Architect for Yahoo Finance bare-metal-to-AWS modernization (SS8 2026-10-16)
  (r"(implemented|managed) (or managed )?infrastructure as code.{0,80}ci/?cd", ["Extensive experience","Yes"]),   # resume: Terraform, CI/CD, AWS modernization
+ (r"uses ai-based tools in the recruitment|consent to the use of ai in the recruitment", ["Yes","yes"]),   # Medtronic 2026-10-16: applicant consents to AI screening
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
