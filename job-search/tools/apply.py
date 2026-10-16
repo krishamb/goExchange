@@ -369,6 +369,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"right to request a non-automated, human-led review|preferred evaluation method", ["Standard Process: I consent to the use of AI-assisted screening to expedite my application."]),   # the applicant consents to AI screening (Workday autoreview rule)
  (r"okay to work in our san francisco,? (ca )?office \d days", ["Yes"]),   # Five9: SF hybrid 3 days; lives in Santa Clara
  (r"been the hiring manager or played a primary role in the hiring process", ["Yes"]),   # built and led teams (CTO, Yahoo Finance 75+, JPMorgan 50+)
  (r"^do you have a security clearance\?? if so,? which clearance level", ["No, I do not hold a clearance"]),
