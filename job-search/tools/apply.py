@@ -436,7 +436,7 @@ CHOICE_RULES=[
  (r"currently live in one of the following (locations|states)", ["No","no"]),
  (r"cpa license", ["No","no"]),
  (r"(related to|friends employed by) .{0,80}(blue cross|subsidiar)|related to a .{0,40}(partner or employee)|relatives have direct or indirect interests", ["No","no"]),
- (r"currently authorized for employment in the united states|legally (authorized|eligible) to work", ["Yes","yes"]),
+ (r"currently authorized for employment in the united states|legally (authorized|eligible) to work", ["Yes","yes","I am authorized to work in the United States for any employer","Authorized to work in the United States for any employer","Yes, I am authorized"]),
  (r"willing to travel", ["Yes","yes"]),
  (r"comply with federal law to provide proof of (your )?(ability|eligibility)", ["Yes","yes"]),
  (r"how many years of (work |professional |relevant )?experience do you have (related|relevant) to this (position|role|job)", ["More than 5 years","More than 10 years","10+ years","5+ years","Over 5 years"]),   # Mayo: 20+ years in software / data platforms
@@ -447,6 +447,7 @@ CHOICE_RULES=[
  (r"(citizen|national|resident)s?,? (national |or |and )*(or )?(resident )?of any of the following (countries|countries/regions|regions).{0,200}(iran|cuba|north korea|syria|crimea)|export control.{0,200}(iran|cuba|north korea|syria)", ["No","no","None of these","None of the above"]),   # applicant is a US citizen (Workday 2026-10-16)
  (r"(united states|u\.s\.) government or public institution employment experience|government or public (sector|institution) employment experience", ["No","no"]),   # HPE 2026-10-16: no government employers on the resume
  (r"possess a valid (work|residency|residence) permit", ["Not Applicable","Not applicable","N/A","Yes"]),   # HPE 2026-10-16: US citizen, no permit needed
+ (r"declared ineligible to (contract|receive|import|export)|ineligible to contract with.{0,80}(government|agency)|debarred.{0,60}(defense|export|government)", ["No","no"]),   # Apptronik 2026-10-16 ITAR question
  (r"would you like to be considered for other similar positions", ['Yes - By selecting "Yes" your application may be made available to hiring teams for positions to which you have not yet applied.',"Yes"]),   # full text: the option mentions "not yet applied", which a bare "Yes" never picks   # Stanford: open to other roles (same as 'open to other roles?' Yes)
  (r"desired salary is negotiable", ["Yes"]),   # the stated pay is a range
  (r"previously assigned a sunet id|email address ending in stanford\.edu", ["No"]),   # resume: no Stanford study or employment
