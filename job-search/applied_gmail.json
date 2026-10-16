@@ -4362,6 +4362,16 @@
     "Senior Compiler Engineer"
    ]
   },
+  "eikontherapeutics": {
+   "name": "Eikon Therapeutics",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Machine Learning and Computational Chemistry"
+   ]
+  },
   "ekfrazotechnologiesllc": {
    "name": "Ekfrazo Technologies LLC",
    "dates": [
@@ -5622,6 +5632,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "generallegal": {
+   "name": "General Legal ",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Engineer"
+   ]
   },
   "generalmotors": {
    "company": "General Motors",
@@ -10922,6 +10942,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "rocketmoney": {
+   "name": "Rocket Money",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Applied AI Engineer"
+   ]
   },
   "rocketsoftwareinc": {
    "name": "Rocket Software, Inc.",
