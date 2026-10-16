@@ -518,9 +518,10 @@
     "2026-10-15"
    ],
    "roles": [
-    "Staff Software Engineer (MANTL)"
+    "Staff Software Engineer (MANTL)",
+    "Technical Engineering Manager"
    ],
-   "count": 1
+   "count": 2
   },
   "allegion": {
    "name": "allegion",
@@ -1850,9 +1851,13 @@
   "buildertrend": {
    "name": "Buildertrend",
    "dates": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Cloud Engineer - AI Platform"
+   ]
   },
   "buildops": {
    "name": "BuildOps",
@@ -1992,7 +1997,14 @@
   "capitalone": {
    "company": "Capital One",
    "first": "2026-09-30",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-15"
+   ],
+   "roles": [
+    "Full- stack Engineer 5 - Capital One Shopping Tech (Categories Team) (Remote - Eligible)"
+   ],
+   "count": 1
   },
   "capy": {
    "name": "CAPY",
@@ -2212,6 +2224,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "chamberlaingroup": {
+   "name": "Chamberlain Group",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer, Software - GenAI"
+   ]
   },
   "chanel": {
    "name": "Chanel",
@@ -2903,9 +2925,13 @@
   "cushmanwakefield": {
    "name": "Cushman & Wakefield",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Lead Integrations Architect"
+   ]
   },
   "custom": {
    "company": "custom",
@@ -3006,6 +3032,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "datasite": {
+   "name": "Datasite",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Cloud & Infrastructure Architect"
+   ]
   },
   "datasnipper": {
    "name": "datasnipper",
@@ -3556,6 +3592,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "dt": {
+   "name": "DT",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Machine Learning Engineer"
+   ]
+  },
   "duckduckgo": {
    "name": "Duck Duck Go",
    "dates": [
@@ -3891,9 +3937,10 @@
     "2026-10-09",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Director, Product Software Architecture and Eng"
+    "Director, Product Software Architecture and Eng",
+    "Vice President, Product Architecture & Security Platforms"
    ]
   },
   "equipmentshare": {
@@ -4513,6 +4560,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "ford": {
+   "name": "Ford",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Cloud Platform Engineering"
+   ]
+  },
   "foremarklegal": {
    "name": "Foremark Legal",
    "dates": [
@@ -4596,9 +4653,14 @@
   "franklintempleton": {
    "name": "Franklin Templeton",
    "dates": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Head of AI Community",
+    "Lead \u2013 AI Quant Engineer - Project Sandbox"
+   ]
   },
   "freestar": {
    "company": "Freestar",
@@ -4661,6 +4723,16 @@
     "2026-10-02"
    ],
    "count": 1
+  },
+  "fuzehealth": {
+   "name": "Fuze Health",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer"
+   ]
   },
   "fynliq": {
    "company": "fynliq",
@@ -6785,6 +6857,16 @@
    ],
    "count": 1
   },
+  "ltk": {
+   "name": "LTK",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer, Brand"
+   ]
+  },
   "ludiaconsulting": {
    "name": "Ludia Consulting",
    "dates": [
@@ -7806,6 +7888,16 @@
    "count": 2,
    "roles": [
     "Member of Technical Staff 4- End User Computing (EUC)"
+   ]
+  },
+  "nuveen": {
+   "name": "Nuveen",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Engineering & Delivery Manager"
    ]
   },
   "nvidia": {
@@ -8906,9 +8998,13 @@
   "quantiphi": {
    "name": "Quantiphi",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-15"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Developer"
+   ]
   },
   "quantumhealth": {
    "name": "Quantum Health",
@@ -10316,9 +10412,10 @@
     "2026-10-09",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Full Stack Software Engineer"
+    "Staff Full Stack Software Engineer",
+    "Senior Software Engineer - SS&C EVOLV"
    ]
   },
   "ssctechnologies": {
@@ -11208,6 +11305,17 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "turo": {
+   "name": "Turo",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Platform Engineering",
+    "Staff Software Engineer, Search Platform - Backend"
+   ]
+  },
   "twelvelabs": {
    "company": "twelvelabs",
    "first": "2026-10-06",
@@ -11735,6 +11843,16 @@
    "company": "Walmart",
    "first": "2026-10-01",
    "via": "workday-cloud"
+  },
+  "wasabitechnologies": {
+   "name": "Wasabi Technologies",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Architect \u2013 Object Storage & Database Systems"
+   ]
   },
   "watney": {
    "company": "watney",
