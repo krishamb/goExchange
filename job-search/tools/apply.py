@@ -72,6 +72,8 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"do you have \d+\+? years of professional software engineering experience", "Yes"),
+ (r"heavy daily use of ai coding assistants", "Yes - I use Claude Code daily for coding, debugging, tests and code review, with parallel subsystem reviews built into my workflow."),
  (r"^desired hours( \(per week\))?\s*\*?$|desired (work(ing)? )?hours per week", "40"),   # full-time
  (r"(how many years|years of (professional |hands-on )?experience).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b", "3+ years (LLM, RAG and agentic systems since 2023: Yahoo Finance research assistants, then Hyperion AI); 25+ years of software and systems engineering overall"),
  (r"were you referred to this role by a current .{0,60}employee\?? if so,? please provide their name", "No"),   # Tower Research: not referred
@@ -374,6 +376,9 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"do you have \d+\+? years of professional software engineering experience", ["Yes"]),   # 25+ years, front end and back end
+ (r"heavy daily use of ai coding assistants", ["Yes"]),   # Claude Code daily (resume)
+ (r"describe your level of familiarity with ", ["Moderately familiar","Somewhat familiar","Familiar"]),   # general knowledge of the company; never 'extremely'
  (r"which office are you will+ing to work .{0,40}days? a week from", ["__MULTI__","Oakland","San Francisco","Palo Alto","San Jose","Mountain View","Sunnyvale","Santa Clara","Redwood City","Menlo Park","Bay Area","New York","New York City","Los Angeles"]),   # Fervo: only the Bay Area office (Oakland); the rest are other-city on-site
  (r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b.{0,60}\\byears\\b", ["3-5 years","3-5","3–5 years","3 - 5 years","3 to 5 years","3+ years","3+","3-4 years","3 years","3","2-5 years","2-4 years","2+ years","1-3 years","1-3"]),   # AI / LLM / agent work dates from 2023 (Yahoo Finance RAG, Hyperion AI): about 3 years, never the 25-year top band
  (r"which of the following industries have you worked in directly", ["__MULTI__","Core AI / AI-First Products & Platforms"]),   # Nextiva: Hyperion AI; the rest of the list (CX, CCaaS, UCaaS, telecom, marketplaces) is not on the resume
