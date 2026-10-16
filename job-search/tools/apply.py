@@ -376,6 +376,8 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"open to working (5|five) days onsite in one of our .{0,40}offices", ["Remote only","Remote"]),   # never 5 days in an office
+ (r"open to working [1-4] days onsite in one of our .{0,40}offices", ["SF","San Francisco","San Francisco, CA","Bay Area"]),   # Sigma: SF up to 4 days is in scope (Bay Area); NYC only hybrid below 4 days
  (r"^are you an expert in python for data engineering", ["Yes"]),
  (r"^are you an expert in sql for data modeling", ["Yes"]),
  (r"^are you an expert in (pyspark|dbt|medallion)", ["No"]),   # Spark is on the resume but not as 'expert'; dbt / medallion are not on it
