@@ -1646,7 +1646,14 @@
   "beyondtrust": {
    "company": "BeyondTrust",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (linkedin-resolved)"
+   "via": "cloud_greenhouse (linkedin-resolved)",
+   "dates": [
+    "2026-10-16"
+   ],
+   "roles": [
+    "Staff Software Development Engineer"
+   ],
+   "count": 1
   },
   "bigcommerce": {
    "name": "BigCommerce",
@@ -3788,6 +3795,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "drivetimeautomotivegroup": {
+   "name": "DriveTime Automotive Group",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering (Pega) - Remote"
+   ]
   },
   "drivewealth": {
    "name": "DriveWealth",
@@ -7535,6 +7552,16 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer - API Platform Engineer - CDH"
+   ]
+  },
+  "mazdanorthamericanoperations": {
+   "name": "Mazda North American Operations",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Application Domain Architecture"
    ]
   },
   "mcghealth": {
