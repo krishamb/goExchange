@@ -5183,6 +5183,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "etsy": {
+   "name": "Etsy",
+   "dates": [
+    "2026-10-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering, Machine Learning Recommendations"
+   ]
+  },
   "eudia": {
    "name": "Eudia",
    "dates": [
@@ -11501,9 +11511,13 @@
   "procore": {
    "name": "procore",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-16"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff ML Data Engineer (Datagrid)"
+   ]
   },
   "profluent": {
    "name": "Profluent",
