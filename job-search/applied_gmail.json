@@ -13049,7 +13049,10 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer (518291)"
+   ]
   },
   "sifthealthcare": {
    "name": "Sift Healthcare",
