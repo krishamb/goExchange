@@ -16324,6 +16324,72 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "coval": {
+   "name": "Coval",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Product Engineer"
+   ],
+   "via": "Work at a Startup (YC): server confirmed success, Applied badge"
+  },
+  "firstwork": {
+   "name": "FirstWork",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ],
+   "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
+  },
+  "naive": {
+   "name": "Na\u00efve",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Member of Technical Staff - Agents"
+   ],
+   "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
+  },
+  "waddlelabs": {
+   "name": "Waddle Labs",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Research Engineer"
+   ],
+   "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
+  },
+  "manufact": {
+   "name": "Manufact",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Software Engineer (Product / MCP)"
+   ],
+   "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
+  },
+  "docurahealth": {
+   "name": "Docura Health",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Engineer"
+   ],
+   "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
   }
  }
 }
