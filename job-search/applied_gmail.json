@@ -6208,7 +6208,14 @@
   "gatherai": {
    "company": "Gather AI",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "dates": [
+    "2026-10-17"
+   ],
+   "roles": [
+    "Director of Machine Learning"
+   ],
+   "count": 1
   },
   "gatikai": {
    "name": "Gatik AI",
