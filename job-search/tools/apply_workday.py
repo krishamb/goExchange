@@ -27,8 +27,8 @@ EXEC_RESUME = os.path.join(JOBS_DIR, "Ambarish_Krishnamurthy_Executive_Resume.pd
 SUBMIT = "--submit" in sys.argv
 HEADED = "--headed" in sys.argv
 PACE = (float(sys.argv[sys.argv.index("--pace") + 1]), float(sys.argv[sys.argv.index("--pace") + 2])) if "--pace" in sys.argv else (60, 150)
-REVIEW_WAIT = int(os.environ.get("WD_REVIEW_WAIT", "900"))
-VERIFY_WAIT = int(os.environ.get("WD_VERIFY_WAIT", "600"))
+REVIEW_WAIT = int(os.environ.get("WD_REVIEW_WAIT", "290"))   # applicant: never wait more than 5 minutes on a job
+VERIFY_WAIT = int(os.environ.get("WD_VERIFY_WAIT", "290"))
 JOB_TIMEOUT = int(os.environ.get("WD_JOB_TIMEOUT", str(REVIEW_WAIT + VERIFY_WAIT + 900)))   # hard cap per application (review + verify waits + 15 min of form work)
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 

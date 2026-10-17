@@ -1188,6 +1188,16 @@
     "Applied AI Engineer"
    ]
   },
+  "arkestro": {
+   "name": "Arkestro",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead AI/ML Engineer"
+   ]
+  },
   "armada": {
    "name": "Armada",
    "dates": [
@@ -1904,6 +1914,17 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "benihealth": {
+   "name": "Beni Health",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineering Lead"
+   ],
+   "via": "hand (company site, nightly sweep)"
   },
   "beonemedicines": {
    "name": "BeOne Medicines",
@@ -3522,9 +3543,13 @@
   "collegeboard": {
    "name": "College Board",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Engineer, Agentic Engineering Governance, Open Source"
+   ]
   },
   "collibra": {
    "name": "Collibra",
@@ -6856,6 +6881,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "happenbank": {
+   "name": "Happen Bank",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, Data Infrastructure"
+   ]
   },
   "happybank": {
    "name": "Happy Bank",
@@ -10430,6 +10465,16 @@
    ],
    "count": 1,
    "via": "ashby browser run (part 1)"
+  },
+  "ontoinnovation": {
+   "name": "Onto Innovation",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead AI Engineer"
+   ]
   },
   "onton": {
    "company": "onton",
@@ -15994,6 +16039,16 @@
     "Senior AI Engineer, Product Engineering"
    ]
   },
+  "yourgi": {
+   "name": "Yourgi",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Yourgi Principal Engineering"
+   ]
+  },
   "yugabyte": {
    "name": "Yugabyte",
    "dates": [
@@ -16102,6 +16157,16 @@
     "Senior Software Engineer, Data Platform"
    ]
   },
+  "zilliontechnologiesdice": {
+   "name": "Zillion Technologies (Dice)",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer - Full Stack"
+   ]
+  },
   "zip": {
    "name": "Zip",
    "dates": [
@@ -16180,11 +16245,13 @@
   "zoom": {
    "name": "Zoom",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-17"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Audio AI Engineer"
+    "Audio AI Engineer",
+    "Senior Data Engineering Manager"
    ]
   },
   "zoominfo": {
