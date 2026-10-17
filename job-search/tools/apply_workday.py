@@ -15,6 +15,7 @@ Accounts: one Workday candidate account per company tenant. One sign-in attempt 
 Passwords come from JOBS_DIR/wf_creds.json and are never printed or saved elsewhere. If a tenant asks to verify the
 email, the filler writes out/<tag>_verify_request.json and waits for the link in out/<tag>_verify.txt."""
 import asyncio, json, os, re, sys, time, random, secrets, string, datetime
+import rejected as REJ   # companies that rejected the applicant (private list in JOBS_DIR)
 from playwright.async_api import async_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -1364,6 +1365,9 @@ async def run_one(ctx, item, s):
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
+        _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""), job.url)
+        if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
+            job.report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
         if (item.get("where") or "") == "remote":

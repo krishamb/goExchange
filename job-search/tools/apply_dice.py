@@ -11,6 +11,7 @@ reported and left. Captchas and bot checks are never bypassed.
 The login (JOBS_DIR/wf_creds.json {"dice": {"email", "password"}}) and the saved session (JOBS_DIR/dice_state.json)
 stay outside the repository; a failed sign-in is never retried, so the account cannot lock."""
 import asyncio, json, os, re, sys, time, random
+import rejected as REJ   # companies that rejected the applicant (private list in JOBS_DIR)
 from playwright.async_api import async_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -130,6 +131,9 @@ async def apply_one(ctx, item):
     try:
         if NEVER_APPLY.search(f'{item.get("company","")} {item.get("title","")}'):
             report["result"] = "NOT SUBMITTED: do-not-apply company"; return report
+        _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""))
+        if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
+            report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return report
         await page.goto(item["url"], wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(6000)
