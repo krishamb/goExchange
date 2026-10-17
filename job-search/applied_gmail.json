@@ -1929,11 +1929,13 @@
   "beonemedicines": {
    "name": "BeOne Medicines",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-17"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Associate Director, Enterprise Information Architecture"
+    "Associate Director, Enterprise Information Architecture",
+    "Sr. Principal Software and AI Engineer"
    ]
   },
   "bernard": {
@@ -2148,11 +2150,13 @@
    "name": "Block",
    "dates": [
     "2026-10-01",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-17"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer, Payments Acquiring"
+    "Staff Software Engineer, Payments Acquiring",
+    "Engineering Manager - Finance & Supply Chain Engineering"
    ]
   },
   "bloom": {
@@ -3868,6 +3872,16 @@
     "Vice President, AI Architect (Remote)"
    ],
    "count": 2
+  },
+  "crowe": {
+   "name": "Crowe",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Architect - Associate Director"
+   ]
   },
   "cruitical": {
    "company": "cruitical",
@@ -6488,11 +6502,13 @@
    "name": "Glean",
    "dates": [
     "2026-10-08",
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-17"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Tech Lead Manager, AI Evaluations"
+    "Tech Lead Manager, AI Evaluations",
+    "Machine Learning Engineer, Enterprise Brain"
    ]
   },
   "glg": {
