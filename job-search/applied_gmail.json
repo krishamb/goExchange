@@ -2840,9 +2840,13 @@
   "carta": {
    "name": "Carta",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Investors"
+   ]
   },
   "casca": {
    "company": "casca",
@@ -5120,9 +5124,13 @@
   "engine": {
    "name": "Engine",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Manager, Software Engineering"
+   ]
   },
   "enova": {
    "name": "Enova",
