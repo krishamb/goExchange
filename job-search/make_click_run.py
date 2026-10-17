@@ -22,6 +22,10 @@ OUT = os.path.join(PRIV, os.environ.get("CLICK_RUN_OUT", "click_run.html"))
 def norm(s): return re.sub(r"[^a-z0-9]", "", str(s or "").lower())
 
 queue = json.load(open(os.environ.get("ASHBY_QUEUE") or os.path.join(HERE, "batches", "ashby_all.json")))
+_T = open(os.path.join(HERE, "tools", "apply.py")).read(); _i = _T.index("MIN_LEVEL_BELOW="); _g = {"re": re}; exec(_T[_i:_T.index("\n", _i)], _g)
+_below = [x for x in queue if _g["MIN_LEVEL_BELOW"].search(x.get("title") or "")]
+queue = [x for x in queue if x not in _below]   # applicant 2026-10-17: minimum Staff / Architect / Lead / Manager / Director / VP
+if _below: print(f"dropped {len(_below)} below-minimum-level roles:", "; ".join(f'{x.get("company")} | {x.get("title")}' for x in _below[:40]))
 
 done_tags, done_cos = set(), set()
 for f in glob.glob(os.path.join(PRIV, "out", "*_report.json")):
