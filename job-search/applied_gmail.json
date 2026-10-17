@@ -476,12 +476,14 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-17"
    ],
    "roles": [
-    "Senior AI Software Engineer, Perception"
+    "Senior AI Software Engineer, Perception",
+    "Staff Software Engineer, Data Platform"
    ],
-   "count": 1
+   "count": 2
   },
   "agtonomy": {
    "name": "Agtonomy",
@@ -8676,9 +8678,13 @@
   "lilasciences": {
    "name": "Lila Sciences",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Director, Data Platform Engineering"
+   ]
   },
   "limrun": {
    "name": "Limrun",
@@ -13577,9 +13583,13 @@
   "stackav": {
    "name": "Stack AV",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Core Infrastructure and Platforms"
+   ]
   },
   "stacklok": {
    "name": "Stacklok",
