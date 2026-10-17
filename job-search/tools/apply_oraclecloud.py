@@ -23,6 +23,7 @@ Contact details come from /root/jobs-private/me.json (email, phone) and JOBS_DIR
 Output: one JSON line per item on stdout {"tag","ats","url","submitted","result","unanswered","errors"}; CODE REQUEST
 lines also go to stdout; every other log line goes to stderr."""
 import asyncio, json, os, re, sys, time, random, datetime
+import rejected as REJ   # companies that rejected the applicant (private list in JOBS_DIR)
 from urllib.parse import urlparse
 from playwright.async_api import async_playwright
 
@@ -950,6 +951,9 @@ async def run_one(br, item):
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
+        _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""), job.url)
+        if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
+            job.report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
         _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))

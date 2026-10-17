@@ -11,6 +11,7 @@ JOBS_DIR=os.environ.get("JOBS_DIR","/tmp/claude-0/-home-user-goExchange/8d20ffb7
 OUT=os.path.join(JOBS_DIR,"out"); os.makedirs(OUT,exist_ok=True)
 HERE_REPO=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # repository root (job-search/tools/apply.py)
 JOBS_DIR=os.path.expanduser(JOBS_DIR)
+import rejected as REJ   # companies that rejected the applicant (private list in JOBS_DIR)
 P=json.load(open(os.path.join(JOBS_DIR,"profile.json")))
 for _k in ("resume","cover_letter"):
     if P.get(_k): P[_k]=os.path.expanduser(P[_k])
@@ -1986,6 +1987,10 @@ async def run():
                 print(json.dumps({"tag":job["tag"],"ats":job["ats"],"url":job["url"],"submitted":False,"result":"SKIPPED: the site's spam check blocked this earlier - apply by hand"}),flush=True); continue
             if NEVER_APPLY.search(" ".join(str(job.get(k) or "") for k in ("tag","company","title","url"))):
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: company on the applicant's do-not-apply list","unanswered":[],"errors":[]}
+                print(json.dumps(r),flush=True); continue
+            _rj=REJ.hit(REJ.load(JOBS_DIR),job.get("company"),job.get("url"))
+            if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
+                r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"SKIPPED: {_rj} rejected the applicant before (never apply again)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
             if JUNIOR_LEVEL.search(str(job.get("title") or "")):
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: explicit junior level in the title (I-IV / L1-L4); the applicant applies to level 5 and above","unanswered":[],"errors":[]}
