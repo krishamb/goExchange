@@ -36,7 +36,8 @@ exec(_src[_src.index("first,last="):_src.index("\n", _src.index("first,last="))]
 exec(_seg("TEXT_RULES=[", "\ndef pick("), G); exec(_seg("def pick(", "\nLABEL_JS"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G); exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 exec(_seg("NEVER_APPLY=", "\n"), G)
-exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
+exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]
+exec(_seg("MIN_LEVEL_BELOW=", "\n"), G); MIN_LEVEL_BELOW = G["MIN_LEVEL_BELOW"]   # applicant 2026-10-17: minimum level Staff / Architect / Lead / Manager / Director / VP   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
 TEXT_RULES, CHOICE_RULES, pick, best_index, mask_hear, NEVER_APPLY = (G[k] for k in ("TEXT_RULES", "CHOICE_RULES", "pick", "best_index", "mask_hear", "NEVER_APPLY"))
 
 async def refetch(route):
@@ -134,6 +135,8 @@ async def apply_one(ctx, item):
         _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""))
         if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
             report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return report
+        if MIN_LEVEL_BELOW.search(item.get("title", "") or ""):
+            report["result"] = "NOT SUBMITTED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above)"; return report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return report
         await page.goto(item["url"], wait_until="domcontentloaded", timeout=60000); await page.wait_for_timeout(6000)

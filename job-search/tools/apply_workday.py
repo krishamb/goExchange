@@ -71,7 +71,8 @@ def wd_remote_check(url):
     return False, txt
 
 exec(_seg("NEVER_APPLY=", "\n"), G)
-exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
+exec(_seg("JUNIOR_LEVEL=", "\n"), G); JUNIOR_LEVEL = G["JUNIOR_LEVEL"]
+exec(_seg("MIN_LEVEL_BELOW=", "\n"), G); MIN_LEVEL_BELOW = G["MIN_LEVEL_BELOW"]   # applicant 2026-10-17: minimum level Staff / Architect / Lead / Manager / Director / VP   # applicant 2026-10-16: explicit I-IV / L1-L4 levels are junior
 exec(_seg("NJ_LOC=", "\n    return None\n") + "\n    return None\n", G)   # applicant: no NJ hybrid/on-site roles, no investment-bank roles on site in New York
 location_block = G["location_block"]
 TEXT_RULES, CHOICE_RULES, pick, best_index, _match, mask_hear, NEVER_APPLY, tech_answer = (G[k] for k in ("TEXT_RULES", "CHOICE_RULES", "pick", "best_index", "_match", "mask_hear", "NEVER_APPLY", "tech_answer"))
@@ -1369,6 +1370,8 @@ async def run_one(ctx, item, s):
         _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""), job.url)
         if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
             job.report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return job.report
+        if MIN_LEVEL_BELOW.search(item.get("title", "") or ""):
+            job.report["result"] = "NOT SUBMITTED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above)"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
         if (item.get("where") or "") == "remote":

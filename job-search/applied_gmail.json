@@ -592,7 +592,10 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior Architect - Compute Virtualization"
+   ]
   },
   "akuity": {
    "name": "Akuity",
@@ -780,7 +783,10 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Payments"
+   ]
   },
   "altana": {
    "name": "Altana",
@@ -2376,14 +2382,16 @@
   "braze": {
    "name": "Braze",
    "dates": [
+    "2026-07-25",
     "2026-09-29",
     "2026-10-16"
    ],
-   "count": 2,
-   "note": "rejected (do not re-apply)",
+   "count": 3,
+   "note": "rejected (do not re-apply); gmail history (pre-Sep 2026)",
    "rejected": true,
    "roles": [
-    "VP, Product Engineering"
+    "VP, Product Engineering",
+    "Senior Lead Field Architect"
    ]
   },
   "brex": {
@@ -6488,7 +6496,10 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
   },
   "glacier": {
    "name": "Glacier",
@@ -6629,12 +6640,27 @@
   "google": {
    "name": "Google",
    "dates": [
+    "2026-01-29",
+    "2026-03-06",
+    "2026-03-11",
+    "2026-03-12",
+    "2026-04-15",
+    "2026-05-21",
+    "2026-06-04",
+    "2026-07-22",
+    "2026-08-04",
+    "2026-08-17",
+    "2026-09-01",
     "2026-09-11",
     "2026-09-29",
     "2026-10-01",
     "2026-10-12"
    ],
-   "count": 4
+   "count": 15,
+   "roles": [
+    "Solutions Architect, Financial Services"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "gopuff": {
    "name": "Gopuff",
@@ -9272,13 +9298,34 @@
   "mercor": {
    "name": "Mercor (applied; do-not-reapply)",
    "dates": [
+    "2025-11-07",
+    "2025-11-17",
+    "2025-11-18",
+    "2025-11-19",
+    "2026-05-20",
+    "2026-07-27",
     "2026-10-05",
     "2026-10-14"
    ],
-   "count": 2,
+   "count": 16,
    "roles": [
-    "MLOps Engineer, LLM Systems (Serving, GPU Kernels, Profiling)"
-   ]
+    "MLOps Engineer, LLM Systems (Serving, GPU Kernels, Profiling)",
+    "Top-Tiered Software Engineering Expert",
+    "Systems Engineering Tutor (Full Time)",
+    "Elite Product/Project Managers (Big Tech Experience)",
+    "Systems Software Engineer (C++/ Rust)",
+    "Exceptional Data Scientists",
+    "Exceptional Software Engineers (Experience Using Agents)",
+    "AI Quant Tutor (Full Time)",
+    "OSS Contributors (CTO/Founders)",
+    "Senior Software Engineer",
+    "Cross-Border Financial Services Expert (Brazil \u2194 USA)",
+    "Senior Software Engineer Expert",
+    "JSON-fluent & Rubrics Expert",
+    "Software Developer \u2014 O*NET Occupation Study",
+    "MCP & Plug In Connectors Expert"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "mercury": {
    "name": "Mercury",
@@ -10231,9 +10278,15 @@
   "nvidia": {
    "name": "NVIDIA",
    "dates": [
+    "2026-03-14",
     "2026-10-01"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
+    "Senior Developer Technology Engineer, High-Performance Databases"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "nxtlevel": {
    "name": "NxT Level",
@@ -10351,9 +10404,14 @@
   "okta": {
    "name": "Okta",
    "dates": [
+    "2026-07-20",
     "2026-09-29"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Software Architect (Auth0)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "okx": {
    "name": "OKX",
@@ -10748,9 +10806,14 @@
   "ownercom": {
    "name": "Owner.com",
    "dates": [
+    "2026-07-23",
     "2026-09-04"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Director of Data Platform Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "pacvue": {
    "name": "pacvue",
@@ -12875,9 +12938,13 @@
   "seatgeek": {
    "name": "SeatGeek",
    "dates": [
+    "2026-10-04",
     "2026-10-05"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Engineering Manager, SupportX"
+   ]
   },
   "secondnature": {
    "name": "Second Nature",
@@ -13472,11 +13539,14 @@
   "sonyinteractiveentertainment": {
    "name": "Sony Interactive Entertainment",
    "dates": [
+    "2026-10-04",
     "2026-10-16"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer \u2013 Data"
+    "Staff Software Engineer \u2013 Data",
+    "Staff Gameplay Engineer - Systems and Performance (teamLFG)",
+    "Manager, Software Engineering"
    ]
   },
   "sorosfundmanagement": {
@@ -14492,9 +14562,14 @@
   "thenewsliteracyproject": {
    "name": "The News Literacy Project",
    "dates": [
+    "2026-08-05",
     "2026-09-08"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "thenewyorktimes": {
    "name": "The New York Times",
@@ -15379,7 +15454,10 @@
    "dates": [
     "2026-10-11"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Technical Lead - Application Development - New York"
+   ]
   },
   "versaterm": {
    "name": "Versaterm",
@@ -16023,13 +16101,16 @@
   "yahoo": {
    "name": "Yahoo",
    "dates": [
+    "2026-04-13",
     "2026-09-29",
     "2026-10-15"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Principal Software Dev Engineer"
-   ]
+    "Principal Software Dev Engineer",
+    "Sr. Principal AI Architect, IT Workforce Experiences & Communication"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   },
   "yipitdata": {
    "name": "YipitData",
@@ -16390,6 +16471,913 @@
     "Founding Engineer"
    ],
    "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
+  },
+  "canonical": {
+   "name": "Canonical",
+   "dates": [
+    "2025-03-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineering Manager - Ubuntu Linux Kernel"
+   ],
+   "via": "gmail confirmation (Greenhouse); rejected 2025-03-08"
+  },
+  "baincompany": {
+   "name": "Bain & Company",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Expert Senior Manager, Engineering Excellence"
+   ],
+   "via": "gmail confirmation (Indeed)"
+  },
+  "tetrascience": {
+   "name": "TetraScience",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Platform Engineer"
+   ],
+   "via": "gmail confirmation (Indeed, Workable)",
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "escapevelocityentertainmentinc": {
+   "name": "Escape Velocity Entertainment Inc",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Director - Machine Learning"
+   ],
+   "via": "bot submitted (Greenhouse)"
+  },
+  "citizant": {
+   "name": "Citizant",
+   "dates": [
+    "2025-11-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Information Technology Project Manager, SME -100% Remote (REF1609C)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "particula": {
+   "name": "Particula",
+   "dates": [
+    "2025-12-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of DeFi"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "turnblockio": {
+   "name": "Turnblock.io",
+   "dates": [
+    "2026-02-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Lead Remote (Web3-DeFi)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "realtimesoftwaresolutionsllc": {
+   "name": "REALTIME SOFTWARE SOLUTIONS LLC",
+   "dates": [
+    "2026-02-13"
+   ],
+   "count": 1,
+   "roles": [],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "speridiantechnologies": {
+   "name": "Speridian Technologies",
+   "dates": [
+    "2026-02-25"
+   ],
+   "count": 1,
+   "roles": [],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "newyorklifeinsuranceco": {
+   "name": "New York Life Insurance Co",
+   "dates": [
+    "2026-03-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Corporate Vice President - AWS Cloud Platform Engineering Lead"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "evotekinc": {
+   "name": "EVOTEK, Inc.",
+   "dates": [
+    "2026-03-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Practice Director, Digital Platform Services"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "globalsettlement": {
+   "name": "Global Settlement",
+   "dates": [
+    "2026-03-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Blockchain Engineer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "bnsfrailway": {
+   "name": "BNSF Railway",
+   "dates": [
+    "2026-03-28",
+    "2026-03-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr/Staff AI Engineer (Remote - US)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "edetek": {
+   "name": "EDETEK",
+   "dates": [
+    "2026-04-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise Architect, AI and Platform Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "altiuslabs": {
+   "name": "Altius Labs",
+   "dates": [
+    "2026-05-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Blockchain Protocol Engineer (Rust Developer)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "mercorcincinnatus": {
+   "name": "Mercor (Cincinnatus)",
+   "dates": [
+    "2026-05-20",
+    "2026-07-27"
+   ],
+   "count": 5,
+   "roles": [
+    "Senior Full-Stack Engineer, Multi-Tenant SaaS Platforms",
+    "Data Engineer \u2014 Finance",
+    "QA/Test Engineer",
+    "Software Engineering Expert",
+    "Performance Engineer (C++, Python, Rust)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "clera": {
+   "name": "Clera",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "valiussciences": {
+   "name": "Valius Sciences",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Head/VP of Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "sizeupco": {
+   "name": "Size Up Co.",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Tech Lead Manager, Integration"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "ivoinc": {
+   "name": "Ivo Inc.",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Customer Success"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "swishlabs": {
+   "name": "Swish Labs",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "primecargopeoplelogistics": {
+   "name": "Prime Cargo People Logistics",
+   "dates": [
+    "2026-06-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "appjaxx": {
+   "name": "AppJaxx",
+   "dates": [
+    "2026-07-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "resourcefultalentgroup": {
+   "name": "Resourceful Talent Group",
+   "dates": [
+    "2026-07-06",
+    "2026-07-29"
+   ],
+   "count": 2,
+   "roles": [
+    "Full-Stack Software Engineer (Base Up to $225K + Equity)",
+    "Senior Software Engineer (Full Stack / Backend)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "pacmidtechnologygroupinc": {
+   "name": "Pac-Mid Technology Group, Inc.",
+   "dates": [
+    "2026-07-06"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO - Software Engineer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "aerolot": {
+   "name": "Aerolot",
+   "dates": [
+    "2026-07-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Co-Founder and Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "vaserjob": {
+   "name": "Vaserjob",
+   "dates": [
+    "2026-07-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer AI"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "shawnanicoleconsulting": {
+   "name": "Shawna Nicole Consulting",
+   "dates": [
+    "2026-07-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "careerxchangeinc": {
+   "name": "CAREERXCHANGE, Inc.",
+   "dates": [
+    "2026-07-09"
+   ],
+   "count": 2,
+   "roles": [
+    "VP of Technology"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "centralcaliforniaallianceforhealth": {
+   "name": "Central California Alliance for Health",
+   "dates": [
+    "2026-07-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Application Services Director"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "infocuspinnovationsinc": {
+   "name": "Infocusp Innovations Inc",
+   "dates": [
+    "2026-07-09"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer - Senior"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "noscen": {
+   "name": "Noscen",
+   "dates": [
+    "2026-07-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding AI Engineer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "netatwork": {
+   "name": "Net at Work",
+   "dates": [
+    "2026-07-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Virtual Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "arkpes": {
+   "name": "Ark PES",
+   "dates": [
+    "2026-07-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - Full Stack"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "silverthread": {
+   "name": "Silverthread",
+   "dates": [
+    "2026-07-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Product & Software Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "lateralllc": {
+   "name": "Lateral LLC",
+   "dates": [
+    "2026-07-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "harrisoceanictechnologies": {
+   "name": "Harris Oceanic Technologies",
+   "dates": [
+    "2026-07-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "glassdoor": {
+   "name": "Glassdoor",
+   "dates": [
+    "2026-07-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Software Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "aviontesoftware": {
+   "name": "Avionte Software",
+   "dates": [
+    "2026-07-14"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Development"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "bloominghealth": {
+   "name": "Blooming Health",
+   "dates": [
+    "2026-07-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "emergentstaffing": {
+   "name": "Emergent Staffing",
+   "dates": [
+    "2026-07-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Platform Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "engage60": {
+   "name": "Engage60",
+   "dates": [
+    "2026-07-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer for Civic Media & AI Startup"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "cppayrollllcdbaconnectpay": {
+   "name": "CP Payroll, LLC dba ConnectPay",
+   "dates": [
+    "2026-07-17"
+   ],
+   "count": 2,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "kody": {
+   "name": "Kody",
+   "dates": [
+    "2026-07-19"
+   ],
+   "count": 1,
+   "roles": [
+    "VP Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "nitinx": {
+   "name": "NitinX",
+   "dates": [
+    "2026-07-20",
+    "2026-07-25"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Blockchain Engineer",
+    "Senior Backend Engineer, Settlement & Ledger"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "kurv": {
+   "name": "KURV",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Architecture & Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "proactivelogicconsultinginc": {
+   "name": "Proactive Logic Consulting Inc",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Microsoft .NET Architect Consultant (AI-Forward)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "bainco": {
+   "name": "Bain & Co.",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Expert Senior Manager, Engineering Excellence"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "spg": {
+   "name": "SPG",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "nexttechinc": {
+   "name": "Nexttechinc",
+   "dates": [
+    "2026-07-22"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO Block Chain (USA & Canada)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "callondoc": {
+   "name": "Call On Doc",
+   "dates": [
+    "2026-07-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering - Technical Lead"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "trilongroup": {
+   "name": "Trilon Group",
+   "dates": [
+    "2026-07-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Product Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "sterlingcomputerscorporation": {
+   "name": "Sterling Computers Corporation",
+   "dates": [
+    "2026-07-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Services Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "plugtechnologiesinc": {
+   "name": "Plug Technologies Inc",
+   "dates": [
+    "2026-07-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "btcinc": {
+   "name": "BTC Inc.",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "ivai": {
+   "name": "IV.AI",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "wcg": {
+   "name": "WCG",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, AI Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "atria": {
+   "name": "Atria",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "tinyhealth": {
+   "name": "Tiny Health",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "binance": {
+   "name": "Binance",
+   "dates": [
+    "2026-07-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Brazil Head of Technology (Pix: Brazil Instant Payment System) - English Portuguese Speaker (Fully Remote)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "lawnstarter": {
+   "name": "LawnStarter",
+   "dates": [
+    "2026-07-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Product Management"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "sentact": {
+   "name": "Sentact",
+   "dates": [
+    "2026-07-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer - CTO"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "mercyships": {
+   "name": "Mercy Ships",
+   "dates": [
+    "2026-07-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "hardenberghgroup": {
+   "name": "Hardenbergh Group",
+   "dates": [
+    "2026-07-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer - CTO"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "kemperinsurance": {
+   "name": "Kemper Insurance",
+   "dates": [
+    "2026-08-01"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Chief Technology Officer (CTO)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "kemper": {
+   "name": "Kemper",
+   "dates": [
+    "2026-08-01"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Chief Technology Officer (CTO)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "codazen": {
+   "name": "Codazen",
+   "dates": [
+    "2026-08-02"
+   ],
+   "count": 2,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "axa": {
+   "name": "AXA",
+   "dates": [
+    "2026-08-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Tech & AI - Risk Advisory and Global Chief ..."
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "synopticdata": {
+   "name": "Synoptic Data",
+   "dates": [
+    "2026-08-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "thehiringmethodllc": {
+   "name": "The Hiring Method, LLC",
+   "dates": [
+    "2026-08-05"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "learntastic": {
+   "name": "Learntastic",
+   "dates": [
+    "2026-08-06"
+   ],
+   "count": 2,
+   "roles": [
+    "Fractional Chief Technology Officer (CTO)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "amerisavemortgagecorp": {
+   "name": "AmeriSave Mortgage Corp.",
+   "dates": [
+    "2026-08-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "phasimation": {
+   "name": "Phasimation",
+   "dates": [
+    "2026-08-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "ctrl": {
+   "name": "CTRL",
+   "dates": [
+    "2026-08-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "hamaspikchoiceinc": {
+   "name": "HAMASPIK CHOICE INC.",
+   "dates": [
+    "2026-08-26"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "kolek": {
+   "name": "Kolek",
+   "dates": [
+    "2026-08-26"
+   ],
+   "count": 1,
+   "roles": [
+    "Fractional Chief Technology Officer (CTO) \u2014 Founding Team"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "shrinerschildrens": {
+   "name": "Shriners Children's",
+   "dates": [
+    "2026-08-30"
+   ],
+   "count": 1,
+   "roles": [],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "shrinersinternational": {
+   "name": "Shriners International",
+   "dates": [
+    "2026-08-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Information & Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "moderngovernmentsolutions": {
+   "name": "Modern Government Solutions",
+   "dates": [
+    "2026-08-31"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Chief Technology Officer (CTO)"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "emoney": {
+   "name": "eMoney",
+   "dates": [
+    "2026-08-31"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Development and Enterprise Architecture"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "anttech": {
+   "name": "Ant-Tech",
+   "dates": [
+    "2026-09-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding CTO / Chief Risk Officer ( Co-Founder Level )"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
+  },
+  "medblocksinc": {
+   "name": "Medblocks Inc",
+   "dates": [
+    "2026-09-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ],
+   "note": "gmail history (pre-Sep 2026)"
   }
  }
 }
