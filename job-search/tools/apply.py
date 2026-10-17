@@ -38,7 +38,7 @@ def resume_for(title):
     return P["resume"]
 ANS=json.load(open(os.path.join(JOBS_DIR,"answers.json"))) if os.path.exists(os.path.join(JOBS_DIR,"answers.json")) else {}
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-CODE_WAIT=int(os.environ.get("CODE_WAIT","420"))   # seconds to wait for an emailed verification code handed over via out/<tag>_code.txt
+CODE_WAIT=int(os.environ.get("CODE_WAIT","290"))   # applicant: never wait more than 5 minutes on a job. Seconds to wait for an emailed verification code handed over via out/<tag>_code.txt
 LAST_OPTIONS={}                                     # label -> option texts seen in the last dropdown scan (for reports)
 def applicant_cover_text():
     """Body text of the applicant's own cover letter PDF (profile.json "cover_letter"), cached beside it; '' if unavailable."""
@@ -73,6 +73,7 @@ else:
 first,last=P["name"].split(" ",1)
 # label regex -> value ; order matters
 TEXT_RULES=[
+ (r"(currently |presently )?(located|based|living|residing|live) (in|near|around|within) (the )?(san francisco |sf )?bay area|located in (the )?(san francisco|sf|bay area)\b.{0,80}(relocat|if not)", "Yes. I live in Santa Clara, CA, in the San Francisco Bay Area, so no relocation is needed."),   # Skydio (Oct 17): "Are you currently located in the San Francisco Bay Area? If not, what are your relocation plans and why do you want to relocate?" had matched the catch-all why-rule
  (r"pronounc|pronunc", ""),   # 'how to pronounce your name' (Etsy): no pronunciation on record, so left blank (never pronouns or the name itself)
  (r"do you have \d+\+? years of professional software engineering experience", "Yes"),
  (r"heavy daily use of ai coding assistants", "Yes - I use Claude Code daily for coding, debugging, tests and code review, with parallel subsystem reviews built into my workflow."),
@@ -714,7 +715,7 @@ CHOICE_RULES=[
  (r"work permit is required for applicants under (age )?18", ["Not Applicable - I am not under 18 years of age or I have already graduated high school","Not Applicable","N/A"]),   # Stanford: an adult applicant
  (r"(like|want|wish) to be considered for (other|alternative|alternate|additional|similar|future) (positions|roles|opportunities|openings)|consider(ed)? (me|you) for (other|alternative|similar) (positions|roles)", ["Yes","yes"]),   # Coca-Cola 2026-10-16: alternative positions -> Yes
  (r"(citizen|national|resident)s?,? (national |or |and )*(or )?(resident )?of any of the following (countries|countries/regions|regions).{0,200}(iran|cuba|north korea|syria|crimea)|export control.{0,200}(iran|cuba|north korea|syria)", ["No","no","None of these","None of the above"]),   # applicant is a US citizen (Workday 2026-10-16)
- (r"(united states|u\.s\.) government or public institution employment experience|government or public (sector|institution) employment experience", ["No","no"]),   # HPE 2026-10-16: no government employers on the resume
+ (r"(united states|u\.s\.) government or public institution employment experience|government or public (sector|institution) employment experience|prior (us |u\.s\. )?government\W{0,3}employment|(worked|employed) (for|by) the (us|u\.s\.|united states) government|(have you|do you)( currently,? or have you)?.{0,40}worked for the (us|u\.s\.|united states) government", ["No","no"]),   # HPE 2026-10-16: no government employers on the resume
  (r"possess a valid (work|residency|residence) permit", ["Not Applicable","Not applicable","N/A","Yes"]),   # HPE 2026-10-16: US citizen, no permit needed
  (r"declared ineligible to (contract|receive|import|export)|ineligible to contract with.{0,80}(government|agency)|debarred.{0,60}(defense|export|government)", ["No","no"]),   # Apptronik 2026-10-16 ITAR question
  (r"(would|will) (you )?be engaging in any of the above|engaging in any of the (above|listed) (listed )?(situations|activities)|advise if you (would|will) be engaging", ["No","no"]),   # HPE 2026-10-16 conflict-of-interest question (had answered Yes)
