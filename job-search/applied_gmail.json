@@ -3585,7 +3585,8 @@
    "roles": [
     "Staff Software Engineer, Anywhere Cloud - AI Systems & Runtimes",
     "Global AI Solutions Director - Financial Services"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "cloudflare": {
    "name": "Cloudflare",
@@ -16044,7 +16045,8 @@
    "roles": [
     "Senior Software Engineer, Platform Engineering",
     "Staff Software Engineer, Search Platform - Backend"
-   ]
+   ],
+   "status": "rejected 2026-10-18 (both roles)"
   },
   "twelvelabs": {
    "company": "twelvelabs",
