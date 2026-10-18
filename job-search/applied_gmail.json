@@ -2416,11 +2416,13 @@
    "name": "BNSF Railway",
    "dates": [
     "2026-03-28",
-    "2026-03-30"
+    "2026-03-30",
+    "2026-10-18"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr/Staff AI Engineer (Remote - US)"
+    "Sr/Staff AI Engineer (Remote - US)",
+    "Staff Engineering Manager (Remote - US)"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
@@ -17578,11 +17580,83 @@
   "synopsys": {
    "name": "Synopsys",
    "dates": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "count": 2,
+   "roles": [
+    "R&D Engineering, Director",
+    "Staff Software Engineer"
+   ]
+  },
+  "gifthealth": {
+   "name": "Gifthealth",
+   "dates": [
     "2026-10-18"
    ],
    "count": 1,
    "roles": [
-    "R&D Engineering, Director"
+    "Engineering Manager"
+   ]
+  },
+  "fusionriskmanagement": {
+   "name": "Fusion Risk Management",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President Technical Architecture & AI Transformation"
+   ]
+  },
+  "thedoctorscompany": {
+   "name": "The Doctors Company",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Engineering & Sr Data Architect"
+   ]
+  },
+  "financeofamerica": {
+   "name": "Finance of America",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Emerging Technology"
+   ]
+  },
+  "cardioone": {
+   "name": "CardioOne",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Technology"
+   ]
+  },
+  "alteradigitalhealth": {
+   "name": "Altera Digital Health",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect"
+   ]
+  },
+  "topstep": {
+   "name": "Topstep",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Trading Platform"
    ]
   }
  }
