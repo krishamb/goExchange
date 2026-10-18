@@ -6713,12 +6713,17 @@
    "first": "2026-10-01",
    "via": "workday-cloud",
    "dates": [
+    "2026-10-08",
+    "2026-10-15",
     "2026-10-17"
    ],
    "roles": [
-    "Staff Software Engineer, AI-Accelerated Digital Commerce"
+    "Senior Software Engineer, Data Platform (Autonomous Vehicles)",
+    "Staff Software Engineer, AI-Accelerated Digital Commerce",
+    "Staff Engineer, Site Reliability Engineering"
    ],
-   "count": 1
+   "count": 3,
+   "note": "also filed as 'General Motors (GM)' (generalmotorsgm); Oct 18: one company"
   },
   "generalmotorsgm": {
    "name": "General Motors (GM)",
