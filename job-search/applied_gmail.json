@@ -7574,12 +7574,14 @@
    "name": "Hewlett Packard Enterprise",
    "dates": [
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-17"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Principal AI & Machine Learning Engineer",
-    "Senior Cloud Software Engineer"
+    "Senior Cloud Software Engineer",
+    "SVP, Engineering"
    ]
   },
   "hex": {
@@ -10330,6 +10332,16 @@
    ],
    "count": 1
   },
+  "momentivesoftware": {
+   "name": "Momentive Software",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI Governance & Enterprise Solutions"
+   ]
+  },
   "mongodb": {
    "name": "MongoDB",
    "dates": [
@@ -11728,6 +11740,16 @@
     "Head of DeFi"
    ],
    "note": "gmail history (pre-Sep 2026)"
+  },
+  "pathai": {
+   "name": "PathAI",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Associate Director, MLOps Engineering"
+   ]
   },
   "pathstone": {
    "name": "Pathstone",
