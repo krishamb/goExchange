@@ -17662,13 +17662,35 @@
   "novartis": {
    "name": "Novartis",
    "dates": [
-    "2026-06-18"
+    "2026-06-18",
+    "2026-10-18"
+   ],
+   "count": 2,
+   "roles": [
+    "Executive Director, AI Forward Deployed Engineering Lead",
+    "Associate Director, AI Foundations Engineering (3 Openings)"
+   ],
+   "note": "June 18 application (REQ-10080347) found in the Novartis Workday account on Oct 18"
+  },
+  "kldiscovery": {
+   "name": "KLDiscovery",
+   "dates": [
+    "2026-10-18"
    ],
    "count": 1,
    "roles": [
-    "Executive Director, AI Forward Deployed Engineering Lead"
+    "Director, Software Engineering"
+   ]
+  },
+  "claritev": {
+   "name": "Claritev",
+   "dates": [
+    "2026-10-18"
    ],
-   "note": "June 18 application (REQ-10080347) found in the Novartis Workday account on Oct 18"
+   "count": 1,
+   "roles": [
+    "Principal AI Engineer - Innovation"
+   ]
   }
  }
 }
