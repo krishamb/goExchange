@@ -5409,12 +5409,14 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-17"
    ],
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Principal Software Engineer"
    ],
-   "count": 1
+   "count": 2
   },
   "encharge": {
    "company": "encharge",
@@ -7918,6 +7920,16 @@
     "Director, Engineering - Platform"
    ]
   },
+  "huron": {
+   "name": "Huron",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Engineer, Analytics Platform & AI"
+   ]
+  },
   "huronconsultinggroup": {
    "name": "Huron Consulting Group",
    "dates": [
@@ -7982,6 +7994,16 @@
    "count": 1,
    "roles": [
     "Vice President, Technical Architect"
+   ]
+  },
+  "icwgroup": {
+   "name": "ICW Group",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Architect"
    ]
   },
   "ideo": {
@@ -17290,6 +17312,17 @@
     "Head of Engineering & Delivery"
    ],
    "via": "gmail confirmation (Lever)"
+  },
+  "zendesk": {
+   "name": "Zendesk",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 2,
+   "roles": [
+    "Director, Platform Architecture",
+    "Senior Platform Architect"
+   ]
   },
   "zenos": {
    "company": "zenos",
