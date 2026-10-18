@@ -1739,7 +1739,7 @@ async def outlook_page():
     cfg=outlook_cfg()
     if not cfg or BROWSER is None: return None
     state=os.path.join(JOBS_DIR,"outlook_state.json")
-    ctx=await BROWSER.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":900},storage_state=state if os.path.exists(state) else None)
+    ctx=await BROWSER.new_context(user_agent=UA,viewport={"width":1280,"height":900},storage_state=state if os.path.exists(state) else None)
     ctx.set_default_timeout(8000); page=await ctx.new_page()
     await page.goto("https://outlook.live.com/mail/0/",wait_until="domcontentloaded",timeout=60000); await page.wait_for_timeout(5000)
     for _ in range(6):
@@ -2011,7 +2011,7 @@ async def run():
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"NOT SUBMITTED: ALREADY APPLIED at this company today (cap reached; e.g. {prior})","unanswered":[],"errors":[]}
                 json.dump(r,open(f"{OUT}/{job['tag']}_report.json","w"),indent=1)
                 summary.append(r); print(json.dumps(r),flush=True); continue
-            ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
+            ctx=await b.new_context(user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
             CUR_JOB["src"]=job.get("src"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why"); CUR_JOB["manual_resume"]=bool(job.get("manual_resume"))
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
@@ -2020,7 +2020,7 @@ async def run():
                 print(f"RETRY {job['tag']}: resume uploader error, reloading the form and pasting the resume text (Enter manually)",flush=True)
                 await ctx.close(); await asyncio.sleep(20)
                 CUR_JOB["manual_resume"]=True
-                ctx=await b.new_context(ignore_https_errors=True,user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
+                ctx=await b.new_context(user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
                 ctx.set_default_timeout(8000)
                 r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             summary.append({k:r.get(k) for k in ("tag","ats","url","submitted","result","unanswered","captcha_present","errors","code_required","code_source")})

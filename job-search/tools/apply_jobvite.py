@@ -994,7 +994,7 @@ async def run_one(br, item):
         job_url, apply_url = urls(job.url)
         if not job_url:
             job.report["result"] = "ERROR: not a Jobvite job URL (expected https://jobs.jobvite.com/<company>/job/<id>)"; return job.report
-        ctx = await br.new_context(ignore_https_errors=True, user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
+        ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
         page = await ctx.new_page()
         if not SUBMIT:   # hard guard: a dry run can never send the application, whatever happens on the page
             async def _block(route):

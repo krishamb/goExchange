@@ -220,7 +220,7 @@ async def main():
     q = json.load(open(sys.argv[1]))
     async with async_playwright() as p:
         br = await p.chromium.launch(headless=False, args=["--disable-http2", "--disable-quic"])
-        ctx = await br.new_context(ignore_https_errors=True, user_agent=UA, viewport={"width": 1280, "height": 1500}, locale="en-US",
+        ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1500}, locale="en-US",
                                    timezone_id="America/Los_Angeles", storage_state=STATE if os.path.exists(STATE) else None)
         await ctx.route(re.compile(r"https://([a-z0-9-]+\.)*dice\.com/.*"), refetch)
         if not await ensure_login(ctx): print("stopping: not signed in to Dice", flush=True); return

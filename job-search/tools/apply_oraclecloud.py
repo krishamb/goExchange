@@ -962,7 +962,7 @@ async def run_one(br, item):
         _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))
         if _lb:
             job.report["result"] = "NOT SUBMITTED: " + _lb; return job.report
-        ctx = await br.new_context(ignore_https_errors=True, user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles",
+        ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles",
                                    storage_state=sp if os.path.exists(sp) else None)
         ssp = os.path.join(STATE_DIR, host + ".session.json")
         if os.path.exists(ssp):   # the CE keeps the verified candidate's session in sessionStorage: restore it so a rerun continues the draft
