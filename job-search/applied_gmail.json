@@ -1686,7 +1686,8 @@
    "count": 1,
    "roles": [
     "Engineering Team Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "axa": {
    "name": "AXA",
@@ -3822,7 +3823,8 @@
    "count": 1,
    "roles": [
     "Senior AI Engineer, Unstructured AI"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "collinear": {
    "company": "collinear",
@@ -7717,7 +7719,8 @@
    "count": 1,
    "roles": [
     "Data Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "honeycombio": {
    "name": "Honeycomb.io",
@@ -7860,7 +7863,8 @@
     "Engineering Manager",
     "Senior Software Engineer"
    ],
-   "count": 2
+   "count": 2,
+   "status": "rejected 2026-10-18 (Engineering Manager, Senior Software Engineer)"
   },
   "hudsonrivertrading": {
    "name": "Hudson River Trading",
@@ -9211,7 +9215,8 @@
    "count": 1,
    "roles": [
     "Senior Back End Engineer, Data and Cloud"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "learntastic": {
    "name": "Learntastic",
@@ -10488,7 +10493,8 @@
    "count": 2,
    "roles": [
     "Manager, Engineering - Ads"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "myome": {
    "name": "MyOme",
@@ -16497,7 +16503,8 @@
     "Senior Software Engineer",
     "Senior Director, Data Development"
    ],
-   "count": 2
+   "count": 2,
+   "status": "rejected 2026-10-18 (Senior Software Engineer, Senior Director, Data Development)"
   },
   "verantos": {
    "name": "Verantos",
