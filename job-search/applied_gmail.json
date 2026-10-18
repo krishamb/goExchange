@@ -13010,6 +13010,16 @@
    ],
    "count": 1
   },
+  "relationinsuranceservices": {
+   "name": "Relation Insurance Services",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Engineering & Analytics"
+   ]
+  },
   "relativity": {
    "company": "Relativity",
    "first": "2026-10-01",
@@ -16781,6 +16791,17 @@
    ],
    "via": "Work at a Startup (YC): WaaS lists it as already applied on Oct 17 (sent earlier; exact date unknown)"
   },
+  "walkerdunlop": {
+   "name": "Walker & Dunlop",
+   "dates": [
+    "2026-10-15"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Software Engineer"
+   ],
+   "via": "company Workday site reports already applied (bot check 2026-10-16)"
+  },
   "walmart": {
    "company": "Walmart",
    "first": "2026-10-01",
@@ -17542,17 +17563,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "walkerdunlop": {
-   "name": "Walker & Dunlop",
-   "dates": [
-    "2026-10-15"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal AI Software Engineer"
-   ],
-   "via": "company Workday site reports already applied (bot check 2026-10-16)"
   }
  }
 }
