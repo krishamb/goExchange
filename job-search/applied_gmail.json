@@ -3092,7 +3092,10 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer (Data & Integrations Engineering)"
+   ]
   },
   "celeco": {
    "company": "celeco",
@@ -11784,7 +11787,14 @@
   "paypal": {
    "company": "PayPal",
    "first": "2026-10-02",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [
+    "Director, Debit & Money Management Engineering"
+   ],
+   "count": 1,
+   "dates": [
+    "2026-10-02"
+   ]
   },
   "payrollintegrations": {
    "name": "Payroll Integrations Inc",
@@ -17386,6 +17396,61 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "latentdefense": {
+   "name": "Latent Defense",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ],
+   "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
+  },
+  "polymarket": {
+   "name": "Polymarket",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Backend Engineer"
+   ],
+   "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
+  },
+  "wpromote": {
+   "name": "Wpromote",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ],
+   "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
+  },
+  "moxie": {
+   "name": "Moxie",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering"
+   ],
+   "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
+  },
+  "realitydefender": {
+   "name": "Reality Defender",
+   "dates": [
+    "2026-10-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Platform Engineer"
+   ],
+   "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
   }
  }
 }
