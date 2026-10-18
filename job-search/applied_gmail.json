@@ -17658,6 +17658,17 @@
    "roles": [
     "Engineering Manager, Trading Platform"
    ]
+  },
+  "novartis": {
+   "name": "Novartis",
+   "dates": [
+    "2026-06-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Executive Director, AI Forward Deployed Engineering Lead"
+   ],
+   "note": "June 18 application (REQ-10080347) found in the Novartis Workday account on Oct 18"
   }
  }
 }
