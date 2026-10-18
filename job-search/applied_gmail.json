@@ -17695,6 +17695,16 @@
    "roles": [
     "Principal AI Engineer - Innovation"
    ]
+  },
+  "rafaysystems": {
+   "name": "Rafay Systems",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, AI Inference Platform"
+   ]
   }
  }
 }
