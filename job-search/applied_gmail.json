@@ -1534,7 +1534,8 @@
    "count": 2,
    "roles": [
     "Director, AI Developer Experience"
-   ]
+   ],
+   "status": "rejected 2026-10-18"
   },
   "auctiontechnologygroup": {
    "name": "Auction Technology Group",
@@ -4886,14 +4887,16 @@
   "doma": {
    "company": "doma",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "status": "rejected 2026-10-18"
   },
   "domatechnology": {
    "name": "Doma Technology",
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-18"
   },
   "domino": {
    "name": "Domino",
