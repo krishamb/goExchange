@@ -1369,23 +1369,8 @@ def pick(label,rules):
         # original label has them in capitals, so 'EAR' never matches 'hear' / 'year' / 'learn'
         if re.search(pat,l) or (re.search(r"[A-Z]",pat) and re.search(pat,label)):
             if JOB_WHY and isinstance(val,str) and val==ANS.get("why_us",""): return JOB_WHY   # company- and role-specific "why us"
-            return heard_fix(label,val)
+            return val
     return None
-# applicant 2026-10-19 (DAILY_BRIEF): "How did you hear" = LinkedIn only for roles found on LinkedIn, Indeed for roles found on
-# Indeed, a job board otherwise (Greenhouse / Ashby / VC board sweeps, Dice ...): the job's src decides
-JOB_BOARD_PREF=["Job Board","Job board","Job Boards","Online Job Board","Online job board","Job Posting","Job posting","Internet Search","Online Search","Company Website","Company website","Careers Page","Career Site","Other"]
-def heard_fix(label,val):
-    src=str(CUR_JOB.get("src") or "").lower()
-    if "linkedin" in src or not (HEAR_Q.search(label or "") or re.search(r"how you (heard|found)|what job board|where (was|did) (the|you) .{0,20}(posted|see|find)",label or "",re.I)): return val
-    li=lambda s: isinstance(s,str) and re.search(r"linked ?in",s,re.I)
-    site="Indeed" if "indeed" in src else "Dice" if "dice" in src else None
-    if isinstance(val,str):
-        if not li(val): return val
-        if val.lower().startswith("linkedin:"): return f"{site or 'Job board'}: I found the posting on {site or 'the company job board'} while searching for senior engineering and engineering-leadership roles."
-        return site or "Job board"
-    if isinstance(val,list) and any(li(v) for v in val[:2]):
-        return ([site,site+".com"] if site else [])+JOB_BOARD_PREF+[v for v in val if not li(v) and v not in JOB_BOARD_PREF]
-    return val
 JOB_WHY=""
 WHY_BY_CAT={
  "fintech":"it sits where I have spent most of my career: financial systems where correctness, latency and trust matter. I have built trading and market-infrastructure systems at JPMorgan Chase, Morgan Stanley and Bloomberg, and digital-asset systems at Hyperion AI, and this role lets me apply that directly while building modern, AI-enabled platforms",
@@ -2028,7 +2013,7 @@ async def run():
                 summary.append(r); print(json.dumps(r),flush=True); continue
             ctx=await b.new_context(user_agent=UA,viewport={"width":1280,"height":(860 if ASSIST else 2000)},locale="en-US",timezone_id="America/Los_Angeles")
             ctx.set_default_timeout(8000)
-            CUR_JOB["src"]=job.get("src") or job.get("source"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why"); CUR_JOB["manual_resume"]=bool(job.get("manual_resume"))
+            CUR_JOB["src"]=job.get("src"); CUR_JOB["resume"]=job.get("resume"); CUR_JOB["pitch"]=job.get("pitch"); CUR_JOB["why"]=job.get("why"); CUR_JOB["manual_resume"]=bool(job.get("manual_resume"))
             r=await run_one(ctx,job["ats"],job["url"],job["tag"],job.get("answers",{}),job.get("company"),job.get("title"))
             if not r.get("submitted") and any(("uploadFile" in (e or "")) or ("Resume/CV is required" in (e or "")) for e in (r.get("errors") or [])):
                 # Greenhouse's uploader sometimes fails to initialise: load the whole form again once
