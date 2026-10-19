@@ -4410,7 +4410,8 @@
    "rejected": true,
    "roles": [
     "Senior Software Engineer - Distributed Systems (Continuous Profiler)"
-   ]
+   ],
+   "status": "rejected 2026-10-18 (again, Continuous Profiler role)"
   },
   "dataminr": {
    "name": "Dataminr",
@@ -17771,6 +17772,28 @@
     "AI/ML Lead"
    ],
    "via": "applicant's own application (iCIMS confirmation email, req 2026-1698)"
+  },
+  "thoughtspot": {
+   "name": "ThoughtSpot",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Technical Architect"
+   ],
+   "via": "applicant's own application (Rippling confirmation email)"
+  },
+  "supio": {
+   "name": "Supio",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer, Ecosystem & Connectors"
+   ],
+   "via": "applicant's own application (Gem confirmation email)"
   }
  }
 }
