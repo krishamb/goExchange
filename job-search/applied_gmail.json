@@ -5943,7 +5943,10 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer - Backend"
+   ]
   },
   "farther": {
    "name": "Farther",
@@ -8977,6 +8980,17 @@
    ],
    "count": 1
   },
+  "kiralearning": {
+   "name": "Kira Learning",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
+  },
   "klaviyo": {
    "name": "Klaviyo",
    "dates": [
@@ -9529,6 +9543,17 @@
    "roles": [
     "Senior Director, Data Platform Engineering"
    ]
+  },
+  "lilt": {
+   "name": "LILT",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Engineering Manager"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
   },
   "limrun": {
    "name": "Limrun",
@@ -11163,6 +11188,14 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "nuna": {
+   "name": "Nuna",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1,
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
+  },
   "nuro": {
    "name": "Nuro",
    "dates": [
@@ -12436,6 +12469,17 @@
    "roles": [
     "Manager, Software Engineering"
    ]
+  },
+  "plenful": {
+   "name": "Plenful",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full-Stack Platform Engineer"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
   },
   "plugtechnologiesinc": {
    "name": "Plug Technologies Inc",
@@ -13933,6 +13977,17 @@
    "company": "scalyx",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "scancom": {
+   "name": "Scan.com",
+   "dates": [
+    "2026-10-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Integrations"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
   },
   "scanhealthplan": {
    "name": "SCAN Health Plan",
@@ -16008,6 +16063,17 @@
    ],
    "count": 1
   },
+  "thymecare": {
+   "name": "Thyme Care",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Analytics Engineering"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
+  },
   "tigeranalytics": {
    "name": "Tiger Analytics",
    "dates": [
@@ -16018,6 +16084,17 @@
     "Senior Data Engineer"
    ],
    "via": "gmail confirmation (Workable)"
+  },
+  "timelyschools": {
+   "name": "Timely Schools",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering (Product)"
+   ],
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
   },
   "tines": {
    "company": "tines",
@@ -16070,6 +16147,14 @@
    "roles": [
     "Senior Software Engineer \u2014 Infra Agent Systems"
    ]
+  },
+  "tonal": {
+   "name": "Tonal",
+   "dates": [
+    "2026-10-08"
+   ],
+   "count": 1,
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
   },
   "topstep": {
    "name": "Topstep",
@@ -17336,7 +17421,10 @@
     "2026-10-11"
    ],
    "count": 2,
-   "note": "prior Ashby queue (applied-before per user)"
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "System Architect, New Products"
+   ]
   },
   "withclutch": {
    "name": "withclutch",
