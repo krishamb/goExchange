@@ -17716,6 +17716,17 @@
    "roles": [
     "Director, Software Engineering - Platform Development"
    ]
+  },
+  "anthropic": {
+   "name": "Anthropic",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager of Applied AI Architecture, Startups"
+   ],
+   "via": "applicant's own application (Greenhouse confirmation email)"
   }
  }
 }
