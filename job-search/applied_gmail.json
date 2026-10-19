@@ -17738,6 +17738,17 @@
     "Engineering Manager"
    ],
    "via": "Wellfound (site confirmation: application sent)"
+  },
+  "sanctuarycomputer": {
+   "name": "Sanctuary Computer",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Technology"
+   ],
+   "via": "Wellfound (site confirmation: application sent)"
   }
  }
 }
