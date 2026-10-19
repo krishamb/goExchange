@@ -1130,7 +1130,8 @@
    "roles": [
     "Staff Software Engineer - Data",
     "Senior Software Engineer - Applications"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "apexon": {
    "name": "Apexon",
@@ -3179,7 +3180,8 @@
    "count": 2,
    "roles": [
     "Director, Engineering (AI Patient Engagement Platform)"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "caredx": {
    "name": "CareDx",
@@ -9032,6 +9034,16 @@
     "Applied AI Engineer"
    ]
   },
+  "ithaka": {
+   "name": "ITHAKA",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer, Platform Engineering"
+   ]
+  },
   "itradenetwork": {
    "name": "iTradeNetwork",
    "dates": [
@@ -13742,6 +13754,17 @@
     "Senior Back End Engineer  [Remote-US]"
    ]
   },
+  "quanta": {
+   "name": "Quanta",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Product Engineer"
+   ],
+   "via": "Gmail: recruiter scheduling an intro call for this role (Oct 19)"
+  },
   "quantifind": {
    "name": "Quantifind",
    "dates": [
@@ -15000,7 +15023,11 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Head of Data"
+   ],
+   "status": "rejected 2026-10-19"
   },
   "senecaholdings": {
    "name": "Seneca Holdings",
@@ -16398,9 +16425,11 @@
     "2026-10-16"
    ],
    "roles": [
-    "Forward Deployed Engineer"
+    "Forward Deployed Engineer",
+    "Engineering Manager, Control Plane"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "taketwointeractivesoftwareinc": {
    "name": "Take-Two Interactive Software, Inc.",
