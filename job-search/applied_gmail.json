@@ -7771,6 +7771,16 @@
     "Senior Software Engineer, Bioinformatics"
    ]
   },
+  "guardian": {
+   "name": "Guardian",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Enterprise API Platform"
+   ]
+  },
   "guardianlife": {
    "name": "Guardian Life",
    "dates": [
@@ -13363,6 +13373,16 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "priceline": {
+   "name": "Priceline",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Development Manager"
+   ]
   },
   "prime": {
    "company": "prime",
