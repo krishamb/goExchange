@@ -58,7 +58,8 @@
    "count": 2,
    "roles": [
     "Field CTO"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "4consultingincdice": {
    "name": "4 Consulting Inc (Dice)",
@@ -562,7 +563,8 @@
    "count": 2,
    "roles": [
     "Senior Machine Learning Engineer, Trust"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "aircall": {
    "name": "Aircall",
@@ -1375,7 +1377,8 @@
    "dates": [
     "2026-10-11"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "assemblyhealth": {
    "name": "Assembly Health",
@@ -1483,14 +1486,16 @@
    "count": 2,
    "roles": [
     "Engineering Manager - Observability"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "atomscareerspage": {
    "name": "ATOMS Careers page (Greenhouse alias)",
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "atpco": {
    "name": "ATPCO",
@@ -1876,7 +1881,8 @@
    "count": 2,
    "roles": [
     "VP of Technology"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "bamboohr": {
    "name": "BambooHR",
@@ -3067,7 +3073,8 @@
    "roles": [
     "AI Solutions Architect",
     "Senior Software Engineer | Kubernetes Automation"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "castlight": {
    "name": "Castlight",
@@ -3117,7 +3124,8 @@
    "count": 2,
    "roles": [
     "Senior Director, Artificial Intelligence"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "celonis": {
    "name": "Celonis",
@@ -5095,7 +5103,8 @@
    "count": 1,
    "roles": [
     "Director of Enterprise Architecture & Platforms"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "e": {
    "company": "e",
@@ -5870,7 +5879,8 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "faros": {
    "name": "Faros",
@@ -6176,7 +6186,8 @@
    "dates": [
     "2026-10-11"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "flatironhealth": {
    "name": "Flatiron Health",
@@ -8324,7 +8335,8 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "interpublic": {
    "name": "interpublic",
@@ -8484,7 +8496,8 @@
    "roles": [
     "Head of Customer Success"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-10-19"
   },
   "ixllearning": {
    "name": "IXL Learning",
@@ -10244,7 +10257,8 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "mithril": {
    "name": "Mithril ",
@@ -11128,7 +11142,8 @@
    "count": 1,
    "roles": [
     "Mortgage Forward Deployed Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "octane": {
    "name": "Octane",
@@ -11575,7 +11590,8 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "oway": {
    "name": "Oway (YC)",
@@ -14399,7 +14415,8 @@
    "count": 1,
    "roles": [
     "Senior AI-First Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "smartsheet": {
    "name": "Smartsheet",
@@ -14867,7 +14884,8 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-19"
   },
   "stonesearch": {
    "name": "Stone Search",
@@ -15010,7 +15028,8 @@
    "roles": [
     "Staff Software Engineer",
     "Senior Backend Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "suno": {
    "name": "suno",
@@ -16099,7 +16118,8 @@
    "roles": [
     "Senior Platform Engineer, MarTech",
     "Lead Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "twitch": {
    "name": "Twitch",
@@ -16462,7 +16482,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "veniceai": {
    "name": "Venice.ai",
@@ -17320,7 +17341,8 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "status": "rejected 2026-10-19"
   },
   "yugabytedb": {
    "name": "YugabyteDB",
@@ -17334,7 +17356,8 @@
    "rejected": true,
    "roles": [
     "Staff Engineer Distributed Storage and Transaction"
-   ]
+   ],
+   "status": "rejected 2026-10-19"
   },
   "yumbrands": {
    "name": "Yum! Brands",
