@@ -834,6 +834,16 @@
    ],
    "count": 1
   },
+  "alteradigitalhealth": {
+   "name": "Altera Digital Health",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect"
+   ]
+  },
   "alteryx": {
    "name": "Alteryx",
    "dates": [
@@ -1019,6 +1029,17 @@
     "Vice President, Reliability Engineering & Technology Operations"
    ],
    "via": "gmail confirmation (Workday)"
+  },
+  "anthropic": {
+   "name": "Anthropic",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager of Applied AI Architecture, Startups"
+   ],
+   "via": "applicant's own application (Greenhouse confirmation email)"
   },
   "anttech": {
    "name": "Ant-Tech",
@@ -2949,6 +2970,27 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "cardiff": {
+   "name": "Cardiff",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ],
+   "via": "Wellfound (site confirmation: application sent)"
+  },
+  "cardioone": {
+   "name": "CardioOne",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Technology"
+   ]
+  },
   "careaccess": {
    "name": "Care Access",
    "dates": [
@@ -3429,6 +3471,16 @@
    "company": "cityzeen",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "claritev": {
+   "name": "Claritev",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Engineer - Innovation"
+   ]
   },
   "clariticloudinc": {
    "name": "Clariti Cloud Inc.",
@@ -6030,6 +6082,16 @@
    ],
    "via": "gmail sent application (email)"
   },
+  "financeofamerica": {
+   "name": "Finance of America",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Emerging Technology"
+   ]
+  },
   "finch": {
    "name": "Finch",
    "dates": [
@@ -6551,6 +6613,16 @@
    ],
    "count": 1
   },
+  "fusionriskmanagement": {
+   "name": "Fusion Risk Management",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President Technical Architecture & AI Transformation"
+   ]
+  },
   "future": {
    "name": "Future",
    "dates": [
@@ -6863,6 +6935,16 @@
    "count": 1,
    "roles": [
     "Director, Software Engineering"
+   ]
+  },
+  "gifthealth": {
+   "name": "Gifthealth",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
    ]
   },
   "gigaenergy": {
@@ -8438,6 +8520,17 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "isaca": {
+   "name": "ISACA",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "AI/ML Lead"
+   ],
+   "via": "applicant's own application (iCIMS confirmation email, req 2026-1698)"
+  },
   "isolved": {
    "name": "isolved",
    "dates": [
@@ -8886,6 +8979,16 @@
    "count": 1,
    "roles": [
     "Senior Machine Learning Engineer"
+   ]
+  },
+  "kldiscovery": {
+   "name": "KLDiscovery",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
    ]
   },
   "knit": {
@@ -10413,9 +10516,13 @@
    "name": "Motional",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-19"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Principal Software Engineer, Team Lead - Perception Platforms"
+   ]
   },
   "motive": {
    "name": "Motive",
@@ -11023,6 +11130,19 @@
     "Engineering Manager, Provider Supply",
     "Staff Software Engineer"
    ]
+  },
+  "novartis": {
+   "name": "Novartis",
+   "dates": [
+    "2026-06-18",
+    "2026-10-18"
+   ],
+   "count": 2,
+   "roles": [
+    "Executive Director, AI Forward Deployed Engineering Lead",
+    "Associate Director, AI Foundations Engineering (3 Openings)"
+   ],
+   "note": "June 18 application (REQ-10080347) found in the Novartis Workday account on Oct 18"
   },
   "nscale": {
    "name": "Nscale",
@@ -12901,6 +13021,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "rafaysystems": {
+   "name": "Rafay Systems",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, AI Inference Platform"
+   ]
+  },
   "raksgroupllcdice": {
    "name": "RAKS Group LLC (Dice)",
    "dates": [
@@ -13676,6 +13806,17 @@
    "company": "san",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "sanctuarycomputer": {
+   "name": "Sanctuary Computer",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Technology"
+   ],
+   "via": "Wellfound (site confirmation: application sent)"
   },
   "sardine": {
    "company": "sardine",
@@ -15083,6 +15224,17 @@
    ],
    "count": 1
   },
+  "supio": {
+   "name": "Supio",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer, Ecosystem & Connectors"
+   ],
+   "via": "applicant's own application (Gem confirmation email)"
+  },
   "swayable": {
    "name": "Swayable",
    "dates": [
@@ -15176,6 +15328,18 @@
     "2026-09-30"
    ],
    "count": 2
+  },
+  "synopsys": {
+   "name": "Synopsys",
+   "dates": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "count": 2,
+   "roles": [
+    "R&D Engineering, Director",
+    "Staff Software Engineer"
+   ]
   },
   "synopticdata": {
    "name": "Synoptic Data",
@@ -15588,6 +15752,16 @@
    ],
    "count": 1
   },
+  "thedoctorscompany": {
+   "name": "The Doctors Company",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Engineering & Sr Data Architect"
+   ]
+  },
   "thefarmersdog": {
    "name": "The Farmer's Dog",
    "dates": [
@@ -15772,6 +15946,28 @@
     "Staff Machine Learning Engineer"
    ]
   },
+  "thoughtspot": {
+   "name": "ThoughtSpot",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Technical Architect"
+   ],
+   "via": "applicant's own application (Rippling confirmation email)"
+  },
+  "threshconsulting": {
+   "name": "Thresh Consulting",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Engineering Lead"
+   ],
+   "via": "Wellfound (site confirmation: application sent)"
+  },
   "thrivemarket": {
    "name": "Thrive Market",
    "dates": [
@@ -15856,6 +16052,16 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer \u2014 Infra Agent Systems"
+   ]
+  },
+  "topstep": {
+   "name": "Topstep",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Trading Platform"
    ]
   },
   "torcrobotics": {
@@ -16144,6 +16350,16 @@
     "Senior Software Engineer"
    ]
   },
+  "typeface": {
+   "name": "Typeface",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Infrastructure Engineer"
+   ]
+  },
   "typeform": {
    "name": "Typeform",
    "dates": [
@@ -16213,6 +16429,16 @@
    "roles": [
     "Staff Inference Engineer",
     "Senior Inference Engineer"
+   ]
+  },
+  "unitedbiosource": {
+   "name": "United Biosource Corporation",
+   "dates": [
+    "2026-10-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering - Platform Development"
    ]
   },
   "unitedconcordiadental": {
@@ -17607,218 +17833,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "synopsys": {
-   "name": "Synopsys",
-   "dates": [
-    "2026-10-18",
-    "2026-10-18"
-   ],
-   "count": 2,
-   "roles": [
-    "R&D Engineering, Director",
-    "Staff Software Engineer"
-   ]
-  },
-  "gifthealth": {
-   "name": "Gifthealth",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Engineering Manager"
-   ]
-  },
-  "fusionriskmanagement": {
-   "name": "Fusion Risk Management",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Vice President Technical Architecture & AI Transformation"
-   ]
-  },
-  "thedoctorscompany": {
-   "name": "The Doctors Company",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Manager Engineering & Sr Data Architect"
-   ]
-  },
-  "financeofamerica": {
-   "name": "Finance of America",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Director, Emerging Technology"
-   ]
-  },
-  "cardioone": {
-   "name": "CardioOne",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Vice President of Technology"
-   ]
-  },
-  "alteradigitalhealth": {
-   "name": "Altera Digital Health",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal Architect"
-   ]
-  },
-  "topstep": {
-   "name": "Topstep",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Engineering Manager, Trading Platform"
-   ]
-  },
-  "novartis": {
-   "name": "Novartis",
-   "dates": [
-    "2026-06-18",
-    "2026-10-18"
-   ],
-   "count": 2,
-   "roles": [
-    "Executive Director, AI Forward Deployed Engineering Lead",
-    "Associate Director, AI Foundations Engineering (3 Openings)"
-   ],
-   "note": "June 18 application (REQ-10080347) found in the Novartis Workday account on Oct 18"
-  },
-  "kldiscovery": {
-   "name": "KLDiscovery",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Director, Software Engineering"
-   ]
-  },
-  "claritev": {
-   "name": "Claritev",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal AI Engineer - Innovation"
-   ]
-  },
-  "rafaysystems": {
-   "name": "Rafay Systems",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal Software Engineer, AI Inference Platform"
-   ]
-  },
-  "unitedbiosource": {
-   "name": "United Biosource Corporation",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Director, Software Engineering - Platform Development"
-   ]
-  },
-  "anthropic": {
-   "name": "Anthropic",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Manager of Applied AI Architecture, Startups"
-   ],
-   "via": "applicant's own application (Greenhouse confirmation email)"
-  },
-  "cardiff": {
-   "name": "Cardiff",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Engineering Manager"
-   ],
-   "via": "Wellfound (site confirmation: application sent)"
-  },
-  "sanctuarycomputer": {
-   "name": "Sanctuary Computer",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Head of Technology"
-   ],
-   "via": "Wellfound (site confirmation: application sent)"
-  },
-  "threshconsulting": {
-   "name": "Thresh Consulting",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Applied AI Engineering Lead"
-   ],
-   "via": "Wellfound (site confirmation: application sent)"
-  },
-  "isaca": {
-   "name": "ISACA",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "AI/ML Lead"
-   ],
-   "via": "applicant's own application (iCIMS confirmation email, req 2026-1698)"
-  },
-  "thoughtspot": {
-   "name": "ThoughtSpot",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior Technical Architect"
-   ],
-   "via": "applicant's own application (Rippling confirmation email)"
-  },
-  "supio": {
-   "name": "Supio",
-   "dates": [
-    "2026-10-18"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior/Staff Software Engineer, Ecosystem & Connectors"
-   ],
-   "via": "applicant's own application (Gem confirmation email)"
   }
  }
 }
