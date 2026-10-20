@@ -12715,7 +12715,8 @@
    "count": 1,
    "roles": [
     "Associate Director, MLOps Engineering"
-   ]
+   ],
+   "status": "recruiter screen requested 2026-10-20 (Roche/Genentech TA; Associate Director, MLOps Engineering)"
   },
   "pathstone": {
    "name": "Pathstone",
@@ -15221,7 +15222,8 @@
    "count": 1,
    "roles": [
     "Software Engineer, AI/Agents"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Software Engineer, AI/Agents)"
   },
   "sezzle": {
    "name": "Sezzle",
@@ -15328,7 +15330,8 @@
    "roles": [
     "Senior Software Engineer"
    ],
-   "via": "gmail sent application (email)"
+   "via": "gmail sent application (email)",
+   "status": "founder replied 2026-10-20: wants to talk, asked the applicant to book a time (Senior Software Engineer)"
   },
   "siemens": {
    "name": "Siemens",
