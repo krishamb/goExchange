@@ -6347,7 +6347,8 @@
     "Technical Product Manager - Payouts"
    ],
    "count": 1,
-   "via": "applicant's own application (Gem confirmation email)"
+   "via": "applicant's own application (Gem confirmation email)",
+   "status": "rejected 2026-10-20 (Technical Product Manager - Payouts)"
   },
   "ferguson": {
    "company": "Ferguson",
@@ -7109,8 +7110,10 @@
    ],
    "count": 2,
    "roles": [
-    "Senior Software Engineer"
-   ]
+    "Senior Software Engineer",
+    "Staff Engineer \u2014 Product Engineering"
+   ],
+   "status": "interview: availability requested 2026-10-20 via Greenhouse link (Staff Engineer \u2014 Product Engineering)"
   },
   "gamechanger": {
    "name": "GameChanger",
@@ -12719,7 +12722,7 @@
    "roles": [
     "Associate Director, MLOps Engineering"
    ],
-   "status": "recruiter screen requested 2026-10-20 (Roche/Genentech TA; Associate Director, MLOps Engineering)"
+   "status": "recruiter screen: the applicant proposed Wed 2026-10-21 12:30 PM PT (Roche/Genentech TA; Associate Director, MLOps Engineering)"
   },
   "pathstone": {
    "name": "Pathstone",
@@ -15334,7 +15337,7 @@
     "Senior Software Engineer"
    ],
    "via": "gmail sent application (email)",
-   "status": "founder replied 2026-10-20: wants to talk, asked the applicant to book a time (Senior Software Engineer)"
+   "status": "preliminary interview booked by the applicant for Wed 2026-10-28 9:30 AM PT (Senior Software Engineer)"
   },
   "siemens": {
    "name": "Siemens",
