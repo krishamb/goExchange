@@ -953,9 +953,10 @@
   "amd": {
    "name": "AMD",
    "dates": [
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-20"
    ],
-   "count": 4,
+   "count": 5,
    "roles": [
     "Principal Software Development Engineer",
     "Principal AI Software Engineer",
@@ -963,7 +964,8 @@
     "Principal GenAI Inference Optimization Engineer"
    ],
    "via": "gmail confirmation (iCIMS)",
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19",
+   "note": "2026-10-20 20:08Z AMD confirmation for req 2026-91897 Principal Software Development Engineer: not from a bot (the applicant applied on AMD careers); AMD had rejected the applicant 2026-10-19"
   },
   "amerilife": {
    "name": "AmeriLife",
@@ -4346,7 +4348,8 @@
    "count": 1,
    "roles": [
     "Engineering Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Engineering Lead)"
   },
   "counterparthealth": {
    "name": "Counterpart Health",
@@ -8544,7 +8547,7 @@
    "roles": [
     "Lead Engineer, Analytics Platform & AI"
    ],
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19; again 2026-10-20 (Lead Engineer, Analytics Platform & AI)"
   },
   "huronconsultinggroup": {
    "name": "Huron Consulting Group",
@@ -12528,7 +12531,7 @@
     "Senior Data Engineer",
     "Engineering Director, Infrastructure"
    ],
-   "status": "rejected 2026-10-10"
+   "status": "rejected 2026-10-10; again 2026-10-20 (Data Engineer)"
   },
   "oura": {
    "company": "oura",
@@ -14101,7 +14104,8 @@
    "count": 2,
    "roles": [
     "Sr. Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Sr. Data Engineer)"
   },
   "recidiviz": {
    "company": "recidiviz",
@@ -16897,6 +16901,16 @@
     "Senior Data Platform Engineer"
    ]
   },
+  "testingxpertsincdbadamcosoftdice": {
+   "name": "TESTINGXPERTS, INC. DBA DAMCOSOFT (Dice)",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "AI/ML/Kiro AI Developer :: Remote"
+   ]
+  },
   "tetrascience": {
    "name": "TetraScience",
    "dates": [
@@ -19003,6 +19017,16 @@
    "company": "zenos",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "zenoxgloballlcdice": {
+   "name": "Zenox Global, LLC (Dice)",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Full Stack Developer with AI ML"
+   ]
   },
   "zerohash": {
    "name": "zerohash",
