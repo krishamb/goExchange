@@ -1883,17 +1883,31 @@ def _norm_role(t):
     t=re.sub(r"^(coe|remote|urgent|hiring|immediate)\s*[-:|]\s*","",t)
     return re.sub(r"[^a-z0-9]+"," ",t).strip()
 def _title_of(tag):
-    """Job title for a report tag, from the queue files (reports do not always store it)."""
+    """Job title for a report tag, from the queue files (reports do not always store it). The scan covers ~16 GB of JSON
+    (2026-10-20: a full parse held each bot ~20 minutes), so the tag -> title map is cached in JOBS_DIR/title_index.json
+    and a run parses only the files modified since the cache was written."""
     if not _META_TITLES:
         import glob as _g
+        idx_path=os.path.join(JOBS_DIR,"title_index.json")
+        try: idx=json.load(open(idx_path))
+        except Exception: idx={}
+        since=float(idx.get("scanned_until") or 0); titles=dict(idx.get("titles") or {}); start=time.time()
         for f in _g.glob(os.path.join(HERE_REPO,"job-search","batches","*.json"))+_g.glob(os.path.join(os.path.dirname(JOBS_DIR),"**","*.json"),recursive=True):
-            if "/out/" in f: continue
-            try: d=json.load(open(f))
+            if "/out/" in f or f==idx_path: continue
+            try:
+                st=os.stat(f)
+                if st.st_mtime<since or st.st_size>20_000_000: continue   # harvest dumps; no queue file is that big (full scan 2026-10-20: none over 15 MB had tags)
+                d=json.load(open(f))
             except Exception: continue
             if isinstance(d,list):
                 for j in d:
-                    if isinstance(j,dict) and j.get("tag") and j.get("title"): _META_TITLES.setdefault(j["tag"],j["title"])
-        _META_TITLES.setdefault("__loaded__","1")
+                    if isinstance(j,dict) and j.get("tag") and j.get("title"): titles.setdefault(j["tag"],j["title"])
+        _META_TITLES.update(titles); _META_TITLES.setdefault("__loaded__","1")
+        try:   # atomic replace: several bots may write it at once
+            tmp=f"{idx_path}.{os.getpid()}.tmp"
+            with open(tmp,"w") as fh: json.dump({"scanned_until":start-60,"titles":titles},fh)
+            os.replace(tmp,idx_path)
+        except Exception: pass
     return _META_TITLES.get(tag)
 def applied_elsewhere(tag,company=None,days=45,title=None):
     """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
