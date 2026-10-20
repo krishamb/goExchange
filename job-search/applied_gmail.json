@@ -3591,14 +3591,16 @@
    "count": 2,
    "roles": [
     "Staff AI/ML Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Staff AI/ML Engineer)"
   },
   "chimefinancial": {
    "name": "Chime Financial",
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-20 (Staff AI/ML Engineer)"
   },
   "chrobinson": {
    "name": "C.H. Robinson",
@@ -10490,7 +10492,8 @@
    "count": 1,
    "roles": [
     "Lead Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Lead Software Engineer)"
   },
   "marklo": {
    "name": "Marklo",
@@ -15568,7 +15571,11 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Devops"
+   ],
+   "status": "rejected 2026-10-20 (Staff Software Engineer, Devops)"
   },
   "sleeper": {
    "company": "sleeper",
