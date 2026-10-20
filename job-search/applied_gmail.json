@@ -697,6 +697,16 @@
    ],
    "count": 1
   },
+  "alight": {
+   "name": "Alight",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Platform Engineer- Virtual"
+   ]
+  },
   "alkami": {
    "name": "Alkami",
    "dates": [
@@ -5238,12 +5248,14 @@
    "name": "Domino",
    "dates": [
     "2026-10-08",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Forward Deployed Engineer"
-   ]
+   ],
+   "via": "2026-10-19: greenhouse (Gmail confirmation 05:12Z; role not named in the email)"
   },
   "dominodatalab": {
    "company": "Domino Data Lab",
@@ -11441,13 +11453,15 @@
    "dates": [
     "2026-10-10",
     "2026-10-13",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "Principal ML Solutions Architect - Token Factory",
     "Senior Customer AI Engineer - Token Factory"
-   ]
+   ],
+   "via": "2026-10-19: greenhouse (Gmail confirmation 05:02Z; role not named in the email)"
   },
   "neerinfosolutionsincdice": {
    "name": "NeerInfo Solutions Inc. (Dice)",
@@ -11730,12 +11744,15 @@
   "nimblegravity": {
    "name": "Nimble Gravity",
    "dates": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-19"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Engineer"
-   ]
+    "Senior Data Engineer",
+    "Director, Forward Deployed Engineering"
+   ],
+   "via": "2026-10-19: greenhouse (Gmail confirmation 05:25Z; not from a bot)"
   },
   "nimblerobotics": {
    "company": "Nimble Robotics",
@@ -15028,9 +15045,10 @@
    ],
    "roles": [
     "VP AI Engineering - Enterprise",
-    "Principal AI Engineer"
+    "Principal AI Engineer",
+    "Senior AI Engineer"
    ],
-   "count": 2,
+   "count": 3,
    "name": "Sedgwick"
   },
   "seekr": {
@@ -15791,6 +15809,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "speechify": {
+   "name": "Speechify",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer, AI Data"
    ]
   },
   "spellbook": {
@@ -19066,6 +19094,28 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "instinct": {
+   "name": "Instinct",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Lead"
+   ],
+   "via": "newton ats (hand, ai-jobsites lane)"
+  },
+  "sanas": {
+   "name": "Sanas",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Developer Platform & SDK"
+   ],
+   "via": "rippling (Gmail confirmation 05:39Z; not from a bot)"
   }
  }
 }
