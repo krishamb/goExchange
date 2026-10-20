@@ -706,7 +706,7 @@
    "roles": [
     "AI Platform Engineer- Virtual"
    ],
-   "status": "screening invite 2026-10-19 (AI Platform Engineer - Virtual)"
+   "status": "screening submitted by the applicant 2026-10-20 (AI Platform Engineer - Virtual)"
   },
   "alkami": {
    "name": "Alkami",
@@ -7130,7 +7130,8 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-20 (Principal Engineer, Agent Platform; Sr. Director - AI & Agentic Platform Engineering)"
   },
   "gapinc": {
    "name": "Gap Inc.",
@@ -7141,7 +7142,8 @@
    "count": 2,
    "roles": [
     "Sr. Director - AI & Agentic Platform Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Principal Engineer, Agent Platform; Sr. Director - AI & Agentic Platform Engineering)"
   },
   "garnerhealth": {
    "name": "Garner Health",
