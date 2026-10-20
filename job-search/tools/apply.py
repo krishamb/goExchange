@@ -745,7 +745,7 @@ CHOICE_RULES=[
  (r"do you have an? (master|ph\.?d|doctorate)\b.{0,20}(or|and)? ?(an? )?(master|ph\.?d|doctorate)?|(master'?s?|ph\.?d) (or|and) (master'?s?|ph\.?d) in an? (science|technology|stem|technical)", ["No","no"]),   # resume: B.E. Computer Science and Engineering only (Genentech 2026-10-16)
  (r"fluency in modern software architecture|solid grasp of data science and ai", ["Yes","yes"]),   # Genentech 2026-10-16: Distinguished Architect, AI/ML platforms
  (r"double[- ]check all the information|please (review|verify|confirm) (that )?all (the )?information (provided )?(above )?is (accurate|correct)", ["I have double-checked","I have double checked","I confirm","Confirmed","Yes","I understand","Acknowledged","I acknowledge"]),   # Vercel 2026-10-16
- (r"are you currently (attending|enrolled in) (college|university|school)|currently a (college |university )?student", ["No","no"]),   # HackerRank 2026-10-16
+ (r"are you currently (attending|enrolled in) (college|university|school)|currently a (college |university )?student|are you an? (current )?student,? or (an? )?(recent |new )grad", ["No","no"]),   # HackerRank 2026-10-16; Mercor 2026-10-20 "Are you a Student or New Grad?"
  (r"which cloud platforms have you (worked with|used) in (a )?production", ["AWS","Private Cloud"]),   # resume: Chief Architect for Yahoo Finance bare-metal-to-AWS modernization (SS8 2026-10-16)
  (r"(implemented|managed) (or managed )?infrastructure as code.{0,80}ci/?cd", ["Extensive experience","Yes"]),   # resume: Terraform, CI/CD, AWS modernization
  (r"uses ai-based tools in the recruitment|consent to the use of ai in the recruitment", ["Yes","yes"]),   # Medtronic 2026-10-16: applicant consents to AI screening
