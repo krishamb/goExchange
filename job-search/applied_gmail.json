@@ -7011,7 +7011,8 @@
    "count": 1,
    "roles": [
     "Head Of Data"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Head Of Data)"
   },
   "furiosaai": {
    "name": "FuriosaAI",
@@ -7118,7 +7119,7 @@
     "Senior Software Engineer",
     "Staff Engineer \u2014 Product Engineering"
    ],
-   "status": "interview: availability requested 2026-10-20 via Greenhouse link (Staff Engineer \u2014 Product Engineering)"
+   "status": "recruiter interview (Zoom, 1:1) Wed 2026-10-21 12:00 PM CT = 10:00 AM PT (Staff Engineer \u2014 Product Engineering)"
   },
   "gamechanger": {
    "name": "GameChanger",
@@ -10862,7 +10863,8 @@
    "count": 1,
    "roles": [
     "Senior/Staff Software Engineer, Tech Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Senior/Staff Software Engineer, Tech Lead)"
   },
   "mergenitllc": {
    "name": "Mergen IT LLC",
@@ -12365,7 +12367,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Engineering Architect"
+   ],
+   "status": "Technical Interview I (exercise review) scheduled Wed 2026-10-21 8:30-9:30 AM PT (Engineering Architect)"
   },
   "oportun": {
    "name": "Oportun",
