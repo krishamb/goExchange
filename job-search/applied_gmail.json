@@ -5230,7 +5230,8 @@
    "roles": [
     "Sr. AI Engineer"
    ],
-   "via": "gmail confirmation (iCIMS)"
+   "via": "gmail confirmation (iCIMS)",
+   "status": "rejected 2026-10-20 (Sr. AI Engineer)"
   },
   "dollargeneralcorporation": {
    "company": "Dollar General Corporation",
@@ -8793,7 +8794,11 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Member of Technical Staff, Backend"
+   ],
+   "status": "recruiter screening questions 2026-10-20; the applicant replied the same day (Member of Technical Staff, Backend)"
   },
   "influur": {
    "company": "influur",
@@ -11826,7 +11831,11 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer II, FCM"
+   ],
+   "status": "rejected 2026-10-20 (Sr. Software Engineer II, FCM)"
   },
   "niraenergy": {
    "name": "Nira Energy",
@@ -14617,7 +14626,8 @@
    "roles": [
     "Staff Software Engineer",
     "Senior Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Senior Data Engineer)"
   },
   "rubrik": {
    "name": "Rubrik",
@@ -15671,7 +15681,8 @@
    "roles": [
     "Engineering Manager, Dashboards",
     "Principal Software Engineer, Core Experiences (Remote Eligible)"
-   ]
+   ],
+   "status": "position filled 2026-10-20 (Principal Software Engineer; closure, not a rejection)"
   },
   "smartsynergies": {
    "company": "Smart  Synergies",
