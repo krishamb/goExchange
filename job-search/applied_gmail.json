@@ -4484,11 +4484,13 @@
   "crowe": {
    "name": "Crowe",
    "dates": [
-    "2026-10-17"
+    "2026-10-17",
+    "2026-10-19"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Architect - Associate Director"
+    "Senior Data Architect - Associate Director",
+    "AI Technical Lead"
    ]
   },
   "cruitical": {
@@ -10488,6 +10490,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "massmutual": {
+   "name": "MassMutual",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead AI Platform Engineer"
+   ]
+  },
   "mastercard": {
    "name": "Mastercard",
    "dates": [
@@ -15009,7 +15021,17 @@
   "sedgwick": {
    "company": "Sedgwick",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "dates": [
+    "2026-10-06",
+    "2026-10-19"
+   ],
+   "roles": [
+    "VP AI Engineering - Enterprise",
+    "Principal AI Engineer"
+   ],
+   "count": 2,
+   "name": "Sedgwick"
   },
   "seekr": {
    "name": "Seekr",
@@ -16536,6 +16558,16 @@
     "Senior SWE (Search) - Platform"
    ]
   },
+  "taxwell": {
+   "name": "Taxwell",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Software Engineer"
+   ]
+  },
   "tdbank": {
    "company": "TD Bank",
    "first": "2026-10-02",
@@ -17527,6 +17559,16 @@
     "Sr Software Engineer - Experimentation",
     "Sr Staff Engineer - U4B",
     "Sr Manager, Engineering - Engineer"
+   ]
+  },
+  "ulresearchinstitutes": {
+   "name": "UL Research Institutes",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer - Technical Track"
    ]
   },
   "unconventional": {
