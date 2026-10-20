@@ -7043,9 +7043,14 @@
   "future": {
    "name": "Future",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-20"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Backend Engineer",
+    "Applied AI Engineer"
+   ]
   },
   "futurefit": {
    "company": "futurefit",
@@ -8882,6 +8887,17 @@
     "Director, AI Solutions Strategy & Planning"
    ]
   },
+  "instinct": {
+   "name": "Instinct",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied AI Lead"
+   ],
+   "via": "newton ats (hand, ai-jobsites lane)"
+  },
   "instituteoffoundationmodels": {
    "name": "Institute of Foundation Models",
    "dates": [
@@ -10629,6 +10645,18 @@
    "roles": [
     "Lead Engineer, AI Software"
    ]
+  },
+  "maxta": {
+   "name": "Maxta",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 2,
+   "roles": [
+    "AI Infrastructure Architect",
+    "AI Platform Engineer"
+   ],
+   "via": "maxta.com careers form (hand, LinkedIn lane; LinkedIn lists it as Huayun North America); confirmation page 'Application Submitted!', no email"
   },
   "maxwell": {
    "name": "Maxwell",
@@ -12676,7 +12704,8 @@
    "count": 2,
    "roles": [
     "Senior ML Ops Engineer (Machine Learning Infrastructure)"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Senior ML Ops Engineer (Machine Learning Infrastructure))"
   },
   "paretohealth": {
    "name": "ParetoHealth",
@@ -14782,6 +14811,17 @@
    "company": "san",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "sanas": {
+   "name": "Sanas",
+   "dates": [
+    "2026-10-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Developer Platform & SDK"
+   ],
+   "via": "rippling (Gmail confirmation 05:39Z; not from a bot)"
   },
   "sanctuarycomputer": {
    "name": "Sanctuary Computer",
@@ -18438,12 +18478,14 @@
   "weightwatchers": {
    "name": "Weight Watchers",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-20"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Data Engineer",
-    "Staff Fullstack Engineer, Clinic"
+    "Staff Fullstack Engineer, Clinic",
+    "Senior Manager, Backend"
    ]
   },
   "weka": {
@@ -19114,39 +19156,16 @@
    ],
    "count": 1
   },
-  "instinct": {
-   "name": "Instinct",
+  "epamsystems": {
+   "name": "EPAM Systems",
    "dates": [
-    "2026-10-19"
+    "2026-10-20"
    ],
    "count": 1,
    "roles": [
-    "Applied AI Lead"
+    "Chief Technology Officer \u2014 Databricks Data & AI Platform"
    ],
-   "via": "newton ats (hand, ai-jobsites lane)"
-  },
-  "sanas": {
-   "name": "Sanas",
-   "dates": [
-    "2026-10-19"
-   ],
-   "count": 1,
-   "roles": [
-    "Head of Developer Platform & SDK"
-   ],
-   "via": "rippling (Gmail confirmation 05:39Z; not from a bot)"
-  },
-  "maxta": {
-   "name": "Maxta",
-   "dates": [
-    "2026-10-19"
-   ],
-   "count": 2,
-   "roles": [
-    "AI Infrastructure Architect",
-    "AI Platform Engineer"
-   ],
-   "via": "maxta.com careers form (hand, LinkedIn lane; LinkedIn lists it as Huayun North America); confirmation page 'Application Submitted!', no email"
+   "via": "EPAM careers site (hand, em-jobsites lane; Gmail confirmation 17:02Z). Note: EPAM is on the IT-services list in focus_gates AGG"
   }
  }
 }
