@@ -565,7 +565,8 @@
    "count": 1,
    "roles": [
     "Head of Engineering, AI Platform"
-   ]
+   ],
+   "note": "2026-10-20 23:31Z: another AiDASH \"Thank you for applying\" confirmation with no role named, not from any bot lane (the applicant's own application or a delayed confirmation)"
   },
   "aios": {
    "company": "aios",
@@ -3656,7 +3657,11 @@
     "2026-10-02"
    ],
    "count": 1,
-   "rejected": "2026-10-02/04"
+   "rejected": "2026-10-02/04",
+   "roles": [
+    "Full-Stack Software Engineering Manager(Remote) (Req. 2023177)"
+   ],
+   "status": "rejected 2026-10-20 (Full-Stack Software Engineering Manager (Remote), Req. 2023177)"
   },
   "cision": {
    "name": "Cision",
@@ -8450,7 +8455,8 @@
    "count": 1,
    "roles": [
     "Principal Localization Engineer \u2013 Location Intelligence"
-   ]
+   ],
+   "status": "rejected 2026-10-20 after interview (Principal Localization Engineer - Location Intelligence)"
   },
   "hubspot": {
    "name": "HubSpot",
@@ -8806,7 +8812,7 @@
    "roles": [
     "Member of Technical Staff, Backend"
    ],
-   "status": "recruiter screening questions 2026-10-20; the applicant replied the same day (Member of Technical Staff, Backend)"
+   "status": "recruiter screening questions 2026-10-20; the applicant sent full answers 2026-10-20 16:18 PT (Member of Technical Staff, Backend)"
   },
   "influur": {
    "company": "influur",
@@ -10834,7 +10840,7 @@
     "Software Developer \u2014 O*NET Occupation Study",
     "MCP & Plug In Connectors Expert"
    ],
-   "note": "gmail history (pre-Sep 2026); applicant 2026-10-20: \"Keep applying to Mercor for other roles\" - Mercor is exempt from the rejected list and the 3-role cap; its SF in-office roles are acceptable; one role per level per run; never the same role twice"
+   "note": "gmail history (pre-Sep 2026); applicant 2026-10-20: \"Keep applying to Mercor for other roles\" - Mercor is exempt from the rejected list and the 3-role cap; its SF in-office roles are acceptable; one role per level per run; never the same role twice; 2026-10-19/20: Mercor Growth outreach for short-term remote \"Project Odin\" - the applicant replied asking for $100-150/hr"
   },
   "mercorcincinnatus": {
    "name": "Mercor (Cincinnatus)",
@@ -12403,7 +12409,7 @@
    "roles": [
     "Engineering Architect"
    ],
-   "status": "Technical Interview I (exercise review) scheduled Wed 2026-10-21 8:30-9:30 AM PT (Engineering Architect)"
+   "status": "Technical Interview I (Engineering Architect): the applicant asked on 2026-10-20 to reschedule the Wed 2026-10-21 8:30 AM PT slot"
   },
   "oportun": {
    "name": "Oportun",
@@ -13613,7 +13619,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer | Remote | AI SaaS Software Role"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Senior Software Engineer)"
   },
   "procore": {
    "name": "procore",
@@ -14318,7 +14325,8 @@
    "roles": [
     "Scientific Computer Engineer, Staff Cloud Infrastructure"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-20 (Scientific Computer Engineer, Staff Cloud Infrastructure)"
   },
   "revvity": {
    "name": "revvity",
