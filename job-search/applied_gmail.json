@@ -19358,6 +19358,28 @@
     "Head of Trading Technology (Director), Asset Management (Director, PL), 2026-128582"
    ],
    "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)"
+  },
+  "theta": {
+   "name": "Theta",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering and Applied AI"
+   ],
+   "note": "Breezy, US remote; confirmation page 2026-10-21 06:31Z (startup2 lane, hand-applied); no email"
+  },
+  "dynanetcorporation": {
+   "name": "Dynanet Corporation",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Agent Developer"
+   ],
+   "note": "Paylocity, remote; Gmail confirmation 2026-10-21 07:15Z (startup2 lane, hand-applied)"
   }
  }
 }
