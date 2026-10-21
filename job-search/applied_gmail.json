@@ -6731,7 +6731,8 @@
    "count": 1,
    "roles": [
     "Senior Platform Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Senior Platform Engineer)"
   },
   "flex": {
    "company": "flex",
@@ -8792,7 +8793,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer (Remote)"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Senior Software Engineer (Remote))"
   },
   "imprint": {
    "name": "Imprint",
@@ -11594,9 +11596,11 @@
    "count": 4,
    "roles": [
     "Principal ML Solutions Architect - Token Factory",
-    "Senior Customer AI Engineer - Token Factory"
+    "Senior Customer AI Engineer - Token Factory",
+    "Senior SWE (Search) - Platform"
    ],
-   "via": "2026-10-19: greenhouse (Gmail confirmation 05:02Z; role not named in the email)"
+   "via": "2026-10-19: greenhouse (Gmail confirmation 05:02Z; role not named in the email)",
+   "status": "rejected 2026-10-21 (Senior SWE (Search) - Platform; role recorded from the rejection email)"
   },
   "neerinfosolutionsincdice": {
    "name": "NeerInfo Solutions Inc. (Dice)",
@@ -17423,7 +17427,11 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [
+    "Principal Software Engineer, Tech Lead, Retail"
+   ],
+   "status": "rejected 2026-10-21 (Principal Software Engineer, Tech Lead, Retail; role recorded from the rejection email)"
   },
   "togetherai": {
    "name": "Together AI",
