@@ -4113,8 +4113,11 @@
     "2026-09-30"
    ],
    "count": 2,
-   "note": "rejected (do not re-apply)",
-   "rejected": true
+   "note": "rejected (do not re-apply); second rejection 2026-10-21 (Senior Staff Software Engineer, Platform - IAM)",
+   "rejected": true,
+   "roles": [
+    "Senior Staff Software Engineer, Platform - IAM"
+   ]
   },
   "colab": {
    "company": "colab",
@@ -8406,7 +8409,8 @@
     "VP, Engineering",
     "Senior Engineering Manager - Tenant",
     "Staff AI Operations Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-21"
   },
   "honor": {
    "name": "Honor",
@@ -8605,7 +8609,8 @@
    "roles": [
     "Senior Software Engineer- Agentic SOC",
     "Director, Engineering - Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Director, Engineering - Platform: role filled)"
   },
   "huron": {
    "name": "Huron",
@@ -13413,7 +13418,8 @@
    "roles": [
     "Staff Cloud Engineer",
     "Senior Software Engineer, Ticketing"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Senior Software Engineer, Ticketing; Staff Cloud Engineer)"
   },
   "playstationglobal": {
    "name": "PlayStation Global",
@@ -18722,8 +18728,10 @@
    "count": 3,
    "roles": [
     "Database Architect",
-    "Senior Software Engineer"
-   ]
+    "Senior Software Engineer",
+    "Senior Full-Stack Engineer (Java / Spring Boot)"
+   ],
+   "status": "rejected 2026-10-21 (Senior Full-Stack Engineer (Java / Spring Boot))"
   },
   "wf2": {
    "company": "wf2",
