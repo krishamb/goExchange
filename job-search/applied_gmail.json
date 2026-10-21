@@ -2189,6 +2189,16 @@
    ],
    "via": "gmail confirmation (Rippling)"
   },
+  "becu": {
+   "name": "BECU",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Architect"
+   ]
+  },
   "bedrockoceanexploration": {
    "name": "Bedrock Ocean Exploration",
    "dates": [
@@ -3686,6 +3696,16 @@
     "Information Technology Project Manager, SME -100% Remote (REF1609C)"
    ],
    "note": "gmail history (pre-Sep 2026)"
+  },
+  "cityblockhealth": {
+   "name": "Cityblock Health",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Engineer"
+   ]
   },
   "cityzeen": {
    "company": "cityzeen",
@@ -14173,7 +14193,8 @@
    "roles": [
     "Senior Product Engineer, Policy Engine, AI Platform",
     "Staff Product Engineer, Agentic Identity & Governance, AI Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Senior Product Engineer, Policy Engine, AI Platform)"
   },
   "reducto": {
    "name": "Reducto",
@@ -16742,6 +16763,16 @@
     "Vice President - AI, Data and Analytics"
    ]
   },
+  "tdsynnex": {
+   "name": "TD SYNNEX",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Enterprise Data & AI"
+   ]
+  },
   "teachstone": {
    "name": "Teachstone",
    "dates": [
@@ -19253,6 +19284,40 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "zillow": {
+   "name": "Zillow",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 2,
+   "roles": [
+    "Principal Machine Learning Engineer, Agentic AI",
+    "Senior Fullstack Engineer, Mortgage Fulfillment AI"
+   ],
+   "note": "Workday confirmations 2026-10-21 00:20Z/00:22Z (wdats lane)"
+  },
+  "ptc": {
+   "name": "PTC",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Principal AI Solutions Architect"
+   ],
+   "note": "Workday confirmation 2026-10-21 00:17Z"
+  },
+  "ralliant": {
+   "name": "Ralliant",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Platform Engineer - 9970"
+   ],
+   "note": "Oracle confirmation 2026-10-21 00:26Z"
   }
  }
 }
