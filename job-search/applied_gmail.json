@@ -6564,8 +6564,10 @@
    "count": 3,
    "roles": [
     "Engineering Manager, Automation Intelligence",
-    "Senior Data Warehouse Engineer"
-   ]
+    "Senior Data Warehouse Engineer",
+    "Software Architect"
+   ],
+   "status": "rejected 2026-10-21 (Software Architect; role recorded from the rejection email)"
   },
   "finra": {
    "name": "FINRA",
@@ -7379,7 +7381,8 @@
    "roles": [
     "Senior Software Engineer, Infrastructure Platform",
     "Staff Software Engineer, Fan Engagement"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Staff Software Engineer, Fan Engagement)"
   },
   "genpact": {
    "name": "Genpact",
@@ -9339,7 +9342,8 @@
    "count": 1,
    "roles": [
     "Chief Technology Officer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Chief Technology Officer)"
   },
   "judihealth": {
    "name": "Judi Health",
