@@ -1845,9 +1845,11 @@ async def enter_email_code(page,report,baseline=()):
         report["code_entered"]=True; return True
     except Exception as e: report.setdefault("errors",[]).append(f"code entry failed: {e}"); return False
 GENERIC_TOKENS={"the","ai","san","new","open","one","first","next","big","blue","red","green","smart","data","cloud","tech","labs","lab","inc","co","company","team","global","digital","alpha","beta","meta","x","a","an","of","and",
- "wf","wf2","wd","dgh","dice2","gh","li","yc","batch"}   # batch/stream prefixes in tags are never company names
+ "wf","wf2","wd","dgh","dice2","gh","li","yc","batch","capital","united","general","national","american","pacific","north","south","west","east","city","health","bank","home","true","clear"}   # batch/stream prefixes in tags are never company names; common first words (capital_one / capital_group, general_motors / general_legal) key on their first two words only
+LANE_PREFIXES={"wd","wf","wf2","dgh","dice2","gh","li","yc","batch","orc","vl","nyc","nycai","jsf","wdats","emm","sw","dry","dryrun"}   # sweep-lane labels that lead some tags; the company slug follows
 def company_keys(tag,company=None):
     toks=[t for t in (tag or "").split("_") if t]
+    while len(toks)>2 and toks[0] in LANE_PREFIXES: toks=toks[1:]   # 2026-10-20: nyc_syllo_... matched nyc_criminal_justice_agency_... (cap check and "applied before?" answers); wd_jsf_lineage_... keys on lineage
     ks=set()
     if company: ks.add(re.sub(r"[^a-z0-9]","",str(company).lower()))
     if toks and len(toks[0])>=2 and toks[0] not in GENERIC_TOKENS and not toks[0].isdigit() and toks[0]!="dice": ks.add(toks[0])   # short board slugs count too (x9, okta, step)
