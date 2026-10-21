@@ -4106,9 +4106,13 @@
   "collectors": {
    "name": "Collectors",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-20"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Applied AI Engineer"
+   ]
   },
   "collegeboard": {
    "name": "College Board",
@@ -5720,9 +5724,13 @@
   "elilillyandcompany": {
    "name": "Eli Lilly and Company",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-20"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "ML Ops Engineer"
+   ]
   },
   "elitetechnology": {
    "name": "Elite Technology",
@@ -10214,6 +10222,16 @@
     "2026-10-03"
    ],
    "count": 1
+  },
+  "lineage": {
+   "name": "Lineage",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer - Finance"
+   ]
   },
   "linktree": {
    "name": "Linktree",
@@ -16485,9 +16503,14 @@
   "syllo": {
    "name": "Syllo",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-20"
    ],
-   "count": 1
+   "count": 3,
+   "roles": [
+    "Senior Engineering Manager",
+    "Staff Software Engineer, AI Inference"
+   ]
   },
   "symphonycorporation": {
    "name": "Symphony Corporation",
