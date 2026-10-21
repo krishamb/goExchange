@@ -872,7 +872,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "AI Architect, Agentic AI for Chip Design & EDA"
+   ],
+   "status": "rejected 2026-10-21 (R03269 AI Architect, Agentic AI for Chip Design & EDA, applied 2026-10-08; role recorded from the Workday rejection)"
   },
   "alteradigitalhealth": {
    "name": "Altera Digital Health",
@@ -2393,7 +2397,8 @@
    "count": 1,
    "roles": [
     "Forward Deployed Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Forward Deployed Engineer)"
   },
   "bitwarden": {
    "name": "Bitwarden",
