@@ -5066,7 +5066,16 @@
   "didi": {
    "company": "didi",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "name": "DiDi Autonomous Driving",
+   "roles": [
+    "Staff/Principal AI Transformation Engineer"
+   ],
+   "dates": [
+    "2026-10-05"
+   ],
+   "count": 1,
+   "status": "rejected 2026-10-20 (Staff/Principal AI Transformation Engineer)"
   },
   "didilabs": {
    "name": "DiDi Labs",
@@ -17096,7 +17105,8 @@
    "roles": [
     "Director Data and Analytics AI Engineering",
     "Solution Architect (Hybrid)"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Director Data and Analytics AI Engineering, R2626309)"
   },
   "thehiringmethodllc": {
    "name": "The Hiring Method, LLC",
