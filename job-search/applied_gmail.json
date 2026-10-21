@@ -13711,7 +13711,8 @@
    "count": 2,
    "roles": [
     "Lead AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Lead AI Engineer)"
   },
   "pronto": {
    "name": "Pronto",
@@ -17275,7 +17276,8 @@
     "Engineering Manager, Materia AI",
     "Staff Software Engineer - AI II"
    ],
-   "count": 2
+   "count": 2,
+   "status": "rejected 2026-10-21 (JREQ204309 Staff Software Engineer - AI II)"
   },
   "thorn": {
    "name": "Thorn",
@@ -18373,7 +18375,8 @@
    "roles": [
     "Manager, Data & AI Review Enablement",
     "Staff SW Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Staff SW Engineer)"
   },
   "visionaryinnovativetechnologysolutions": {
    "name": "Visionary Innovative Technology Solutions",
@@ -19380,6 +19383,26 @@
     "AI Agent Developer"
    ],
    "note": "Paylocity, remote; Gmail confirmation 2026-10-21 07:15Z (startup2 lane, hand-applied)"
+  },
+  "atlasbase": {
+   "name": "AtlasBase",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff System Software Engineer"
+   ],
+   "note": "Rippling confirmation 2026-10-21 07:18Z; not sent by any bot or lane (the applicant's own application)"
+  },
+  "skillable": {
+   "name": "Skillable",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [],
+   "note": "Rippling confirmation 2026-10-21 07:16Z, role not named; not sent by any bot or lane (the applicant's own application; the sweeps dropped Skillable's Principal SWE as a .NET vendor-platform role)"
   }
  }
 }
