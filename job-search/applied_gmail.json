@@ -1580,6 +1580,17 @@
     "Senior Engineering Manager, Platform"
    ]
   },
+  "atlasbase": {
+   "name": "AtlasBase",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff System Software Engineer"
+   ],
+   "note": "Rippling confirmation 2026-10-21 07:18Z; not sent by any bot or lane (the applicant's own application)"
+  },
   "atlasoncologypartners": {
    "name": "Atlas Oncology Partners",
    "dates": [
@@ -5514,6 +5525,17 @@
    ],
    "status": "rejected 2026-10-19"
   },
+  "dynanetcorporation": {
+   "name": "Dynanet Corporation",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Agent Developer"
+   ],
+   "note": "Paylocity, remote; Gmail confirmation 2026-10-21 07:15Z (startup2 lane, hand-applied)"
+  },
   "e": {
    "company": "e",
    "first": "2026-10-05",
@@ -6857,6 +6879,17 @@
    "company": "fluxx",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "flyingwire": {
+   "name": "Flying Wire",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Engineer, Data Platform"
+   ],
+   "note": "SV Angel (Getro) board form, submitted 2026-10-21 00:35Z by the wdats lane; page: 'We received your application' (no Gmail confirmation)"
   },
   "flyzipline": {
    "company": "flyzipline",
@@ -11901,12 +11934,14 @@
    "name": "Nimble Gravity",
    "dates": [
     "2026-10-13",
-    "2026-10-19"
+    "2026-10-19",
+    "2026-10-21"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Data Engineer",
-    "Director, Forward Deployed Engineering"
+    "Director, Forward Deployed Engineering",
+    "Manager, Forward Deployed Engineering"
    ],
    "via": "2026-10-19: greenhouse (Gmail confirmation 05:25Z; not from a bot)"
   },
@@ -13822,12 +13857,33 @@
     "Staff AI Product Engineer, FW/SW"
    ]
   },
+  "ptc": {
+   "name": "PTC",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Principal AI Solutions Architect"
+   ],
+   "note": "Workday confirmation 2026-10-21 00:17Z"
+  },
   "ptrglobal": {
    "name": "PTR Global",
    "dates": [
     "2026-10-08"
    ],
    "count": 1
+  },
+  "pubmatic": {
+   "name": "PubMatic",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer - PubMatic AgenticOS (Buy Side Bidding Platform)"
+   ]
   },
   "pulley": {
    "company": "pulley",
@@ -14129,6 +14185,17 @@
     "2026-10-10"
    ],
    "count": 1
+  },
+  "ralliant": {
+   "name": "Ralliant",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Platform Engineer - 9970"
+   ],
+   "note": "Oracle confirmation 2026-10-21 00:26Z"
   },
   "ramp": {
    "name": "Ramp",
@@ -15132,6 +15199,17 @@
    ],
    "count": 1
   },
+  "schwab": {
+   "name": "Charles Schwab",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Trading Technology (Director), Asset Management (Director, PL), 2026-128582"
+   ],
+   "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)"
+  },
   "scopelabs": {
    "name": "Scope Labs",
    "dates": [
@@ -15726,6 +15804,18 @@
    ],
    "count": 2
   },
+  "skillable": {
+   "name": "Skillable",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer"
+   ],
+   "note": "Rippling confirmation 2026-10-21 07:16Z, role not named; not sent by any bot or lane (the applicant's own application; the sweeps dropped Skillable's Principal SWE as a .NET vendor-platform role)",
+   "status": "rejected 2026-10-21 (Principal Software Engineer; role named in the rejection email)"
+  },
   "skygenusa": {
    "name": "SKYGEN USA",
    "dates": [
@@ -16102,6 +16192,16 @@
    "count": 1,
    "roles": [
     "Director, Data Engineering"
+   ]
+  },
+  "sritechsolutionsdice": {
+   "name": "SRI Tech Solutions (Dice)",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
    ]
   },
   "srsconsultingincdice": {
@@ -16672,6 +16772,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "tailorcare": {
+   "name": "TailorCare",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior ML/AI Engineer"
+   ]
   },
   "tailscale": {
    "company": "Tailscale",
@@ -17255,6 +17365,17 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "theta": {
+   "name": "Theta",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering and Applied AI"
+   ],
+   "note": "Breezy, US remote; confirmation page 2026-10-21 06:31Z (startup2 lane, hand-applied); no email"
   },
   "thetorocompany": {
    "name": "The Toro Company",
@@ -19205,6 +19326,18 @@
     "Software Engineer - Full Stack"
    ]
   },
+  "zillow": {
+   "name": "Zillow",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 2,
+   "roles": [
+    "Principal Machine Learning Engineer, Agentic AI",
+    "Senior Fullstack Engineer, Mortgage Fulfillment AI"
+   ],
+   "note": "Workday confirmations 2026-10-21 00:20Z/00:22Z (wdats lane)"
+  },
   "zip": {
    "name": "Zip",
    "dates": [
@@ -19346,107 +19479,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "zillow": {
-   "name": "Zillow",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 2,
-   "roles": [
-    "Principal Machine Learning Engineer, Agentic AI",
-    "Senior Fullstack Engineer, Mortgage Fulfillment AI"
-   ],
-   "note": "Workday confirmations 2026-10-21 00:20Z/00:22Z (wdats lane)"
-  },
-  "ptc": {
-   "name": "PTC",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior Principal AI Solutions Architect"
-   ],
-   "note": "Workday confirmation 2026-10-21 00:17Z"
-  },
-  "ralliant": {
-   "name": "Ralliant",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal Platform Engineer - 9970"
-   ],
-   "note": "Oracle confirmation 2026-10-21 00:26Z"
-  },
-  "flyingwire": {
-   "name": "Flying Wire",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 1,
-   "roles": [
-    "Founding Engineer, Data Platform"
-   ],
-   "note": "SV Angel (Getro) board form, submitted 2026-10-21 00:35Z by the wdats lane; page: 'We received your application' (no Gmail confirmation)"
-  },
-  "schwab": {
-   "name": "Charles Schwab",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 1,
-   "roles": [
-    "Head of Trading Technology (Director), Asset Management (Director, PL), 2026-128582"
-   ],
-   "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)"
-  },
-  "theta": {
-   "name": "Theta",
-   "dates": [
-    "2026-10-20"
-   ],
-   "count": 1,
-   "roles": [
-    "Head of Engineering and Applied AI"
-   ],
-   "note": "Breezy, US remote; confirmation page 2026-10-21 06:31Z (startup2 lane, hand-applied); no email"
-  },
-  "dynanetcorporation": {
-   "name": "Dynanet Corporation",
-   "dates": [
-    "2026-10-21"
-   ],
-   "count": 1,
-   "roles": [
-    "AI Agent Developer"
-   ],
-   "note": "Paylocity, remote; Gmail confirmation 2026-10-21 07:15Z (startup2 lane, hand-applied)"
-  },
-  "atlasbase": {
-   "name": "AtlasBase",
-   "dates": [
-    "2026-10-21"
-   ],
-   "count": 1,
-   "roles": [
-    "Senior Staff System Software Engineer"
-   ],
-   "note": "Rippling confirmation 2026-10-21 07:18Z; not sent by any bot or lane (the applicant's own application)"
-  },
-  "skillable": {
-   "name": "Skillable",
-   "dates": [
-    "2026-10-21"
-   ],
-   "count": 1,
-   "roles": [
-    "Principal Software Engineer"
-   ],
-   "note": "Rippling confirmation 2026-10-21 07:16Z, role not named; not sent by any bot or lane (the applicant's own application; the sweeps dropped Skillable's Principal SWE as a .NET vendor-platform role)",
-   "status": "rejected 2026-10-21 (Principal Software Engineer; role named in the rejection email)"
   }
  }
 }
