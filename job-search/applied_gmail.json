@@ -2353,10 +2353,11 @@
   "billiontoone": {
    "name": "billiontoone",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-10-20"
    ],
-   "count": 1,
-   "note": "cloud-applied today"
+   "count": 2,
+   "note": "2026-10-21 06:18Z Greenhouse confirmation, role not named; not sent by any bot or lane (the applicant's own application; the sweeps had dropped BillionToOne's roles as product management / marketing)"
   },
   "binance": {
    "name": "Binance",
@@ -18210,7 +18211,8 @@
     "Forward-Deployed Engineer\u00a0",
     "Director of Engineering"
    ],
-   "via": "2026-10-20 Director of Engineering: Greenhouse bot (EM push; first run stopped before the security code because it answered Yes to the AL/AK/DE... state-list question, rerun with the fixed rule)"
+   "via": "2026-10-20 Director of Engineering: Greenhouse bot (EM push; first run stopped before the security code because it answered Yes to the AL/AK/DE... state-list question, rerun with the fixed rule)",
+   "note": "2026-10-21 06:13Z: a second \"received your application for the Director of Engineering role\" email; the bot applied to that role (Greenhouse 6228758004) at 2026-10-20 18:04Z and no bot or lane applied again (likely the applicant re-applied themselves, or a duplicate email)"
   },
   "veridiantech": {
    "name": "VeridianTech (Dice)",
