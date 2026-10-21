@@ -2599,6 +2599,17 @@
     "Sr. Manager, Engineering"
    ]
   },
+  "bluesight": {
+   "name": "Bluesight",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - 340B Check"
+   ],
+   "note": "Lever confirmation 2026-10-21 19:42Z (applicant's Oct 21 page A run)"
+  },
   "bluespacetechnologies": {
    "name": "Blue Space Technologies",
    "dates": [
@@ -8287,7 +8298,8 @@
     "Senior Principal AI & Machine Learning Engineer",
     "Senior Cloud Software Engineer",
     "SVP, Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (SVP, Engineering)"
   },
   "hex": {
    "name": "Hex",
@@ -11943,7 +11955,8 @@
     "Director, Forward Deployed Engineering",
     "Manager, Forward Deployed Engineering"
    ],
-   "via": "2026-10-19: greenhouse (Gmail confirmation 05:25Z; not from a bot)"
+   "via": "2026-10-19: greenhouse (Gmail confirmation 05:25Z; not from a bot)",
+   "status": "rejected 2026-10-21 (Manager, Forward Deployed Engineering)"
   },
   "nimblerobotics": {
    "company": "Nimble Robotics",
@@ -14765,7 +14778,7 @@
     "Engineering Manager, Ad Serving",
     "Architect, Front-End/Client Engineering"
    ],
-   "status": "rejected 2026-10-08"
+   "status": "rejected 2026-10-08; again 2026-10-21 (Engineering Manager, Ad Serving)"
   },
   "rootinsurance": {
    "name": "Root Insurance",
@@ -17349,7 +17362,8 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-21 (Manager, Platform Integrations & Engineering)"
   },
   "thermofisherscientific": {
    "name": "Thermo Fisher Scientific",
@@ -17359,7 +17373,8 @@
    "count": 1,
    "roles": [
     "Manager, Platform Integrations & Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Manager, Platform Integrations & Engineering)"
   },
   "thesearchsolutions": {
    "name": "The Search Solutions",
@@ -18636,6 +18651,17 @@
    "company": "vyralnet",
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
+  },
+  "waabi": {
+   "name": "Waabi",
+   "dates": [
+    "2026-10-21"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior / Staff Software Engineer, AI Tooling"
+   ],
+   "note": "Lever confirmation 2026-10-21 19:45Z (applicant's Oct 21 page A run)"
   },
   "waddlelabs": {
    "name": "Waddle Labs",
