@@ -6445,7 +6445,8 @@
    "count": 1,
    "roles": [
     "Director of Software Engineering"
-   ]
+   ],
+   "note": "2026-10-21 05:55Z: another Greenhouse \"Thank you for applying to Fervo Energy\" with no role named; no bot ran for Fervo that day (the 2026-10-16 bot application was Director of Software Engineering) - likely the applicant's own application or a delayed confirmation"
   },
   "fico": {
    "name": "FICO",
@@ -18660,7 +18661,8 @@
    "roles": [
     "Sr. Manager, Engineering",
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-20 (Staff Software Engineer)"
   },
   "wendys": {
    "name": "Wendy's",
@@ -19343,6 +19345,17 @@
     "Founding Engineer, Data Platform"
    ],
    "note": "SV Angel (Getro) board form, submitted 2026-10-21 00:35Z by the wdats lane; page: 'We received your application' (no Gmail confirmation)"
+  },
+  "schwab": {
+   "name": "Charles Schwab",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Trading Technology (Director), Asset Management (Director, PL), 2026-128582"
+   ],
+   "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)"
   }
  }
 }
