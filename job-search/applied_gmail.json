@@ -4131,8 +4131,10 @@
    ],
    "count": 2,
    "roles": [
+    "Senior Data Engineer",
     "Staff Applied AI Engineer"
-   ]
+   ],
+   "note": "both Workday applications (2026-10-08 Senior Data Engineer, 2026-10-20 Staff Applied AI Engineer) answered Yes to \"Are you a customer or dealer associated with PSA, PCGS, WATA, or SGC?\" (rule bug, fixed 2026-10-20 in apply.py); the applicant may want to correct it with Collectors"
   },
   "collegeboard": {
    "name": "College Board",
@@ -19318,6 +19320,17 @@
     "Principal Platform Engineer - 9970"
    ],
    "note": "Oracle confirmation 2026-10-21 00:26Z"
+  },
+  "flyingwire": {
+   "name": "Flying Wire",
+   "dates": [
+    "2026-10-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Engineer, Data Platform"
+   ],
+   "note": "SV Angel (Getro) board form, submitted 2026-10-21 00:35Z by the wdats lane; page: 'We received your application' (no Gmail confirmation)"
   }
  }
 }

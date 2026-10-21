@@ -106,16 +106,33 @@ def secret():
     s["password"] = s["passwords"][0]
     save_secret(s)
     return s
+_SEEN = {}   # tenant -> its state as this process last read or wrote it (see save_secret)
 def _load_state():
     """Per-tenant state; parallel bots write it too, so an empty / half-written read is retried (10-15: 3 of 5 bots died on one)."""
     for _ in range(20):
-        try: return json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
+        try:
+            st = json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
+            _SEEN.clear(); _SEEN.update({k: json.dumps(v, sort_keys=True) for k, v in (st.get("tenants") or {}).items()})
+            return st
         except json.JSONDecodeError: time.sleep(0.25)
     return {"tenants": {}}
-def save_secret(s):   # atomic: write a temp file, then rename it over the state file
-    tmp = f"{SECRET}.{os.getpid()}.tmp"
-    json.dump({k: v for k, v in s.items() if k not in ("password", "passwords", "new_account_password", "new_account_password_strong")}, open(tmp, "w"), indent=1)
-    os.chmod(tmp, 0o600); os.replace(tmp, SECRET)
+def save_secret(s):
+    """Atomic and merge-safe. Parallel bots each hold their own copy of the state, so under a lock only the tenants this
+    process changed are written over the file's current contents (10-20: one bot's save dropped another's Zillow entry)."""
+    import fcntl
+    with open(SECRET + ".lock", "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try: cur = json.load(open(SECRET)) if os.path.exists(SECRET) else {"tenants": {}}
+        except json.JSONDecodeError: cur = {"tenants": {}}
+        tn = cur.setdefault("tenants", {})
+        for k, v in (s.get("tenants") or {}).items():
+            if _SEEN.get(k) != json.dumps(v, sort_keys=True): tn[k] = v
+        cur.update({k: v for k, v in s.items() if k != "tenants" and k not in ("password", "passwords", "new_account_password", "new_account_password_strong")})
+        tmp = f"{SECRET}.{os.getpid()}.tmp"
+        json.dump(cur, open(tmp, "w"), indent=1)
+        os.chmod(tmp, 0o600); os.replace(tmp, SECRET)
+    s["tenants"] = tn   # this process now also sees the other bots' entries
+    _SEEN.clear(); _SEEN.update({k: json.dumps(v, sort_keys=True) for k, v in tn.items()})
 def tenant_of(url):
     m = re.match(r"https?://([^/]+)/(?:recruiting/)?([^/]+)/(?:en-US/)?([^/]+)", url)
     host = m.group(1) if m else url
