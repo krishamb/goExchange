@@ -2434,7 +2434,11 @@
   "blackducksoftware": {
    "company": "Black Duck Software",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "roles": [
+    "Application Security Engineer (West Coast)"
+   ],
+   "status": "rejected 2026-10-21 (Application Security Engineer (West Coast); role recorded from the rejection email)"
   },
   "blacksky": {
    "name": "BlackSky",
@@ -14287,7 +14291,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Sr Full Stack Software Engineer II"
+   ],
+   "status": "rejected 2026-10-21 (Sr Full Stack Software Engineer II, RELX Workday; role recorded from the rejection email)"
   },
   "remitly": {
    "name": "Remitly",
@@ -19419,8 +19427,11 @@
     "2026-10-21"
    ],
    "count": 1,
-   "roles": [],
-   "note": "Rippling confirmation 2026-10-21 07:16Z, role not named; not sent by any bot or lane (the applicant's own application; the sweeps dropped Skillable's Principal SWE as a .NET vendor-platform role)"
+   "roles": [
+    "Principal Software Engineer"
+   ],
+   "note": "Rippling confirmation 2026-10-21 07:16Z, role not named; not sent by any bot or lane (the applicant's own application; the sweeps dropped Skillable's Principal SWE as a .NET vendor-platform role)",
+   "status": "rejected 2026-10-21 (Principal Software Engineer; role named in the rejection email)"
   }
  }
 }
