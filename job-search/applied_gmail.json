@@ -259,8 +259,10 @@
    ],
    "count": 2,
    "roles": [
-    "Manager, Software Engineering"
-   ]
+    "Manager, Software Engineering",
+    "Head of AI Strategy & Operations"
+   ],
+   "status": "rejected 2026-10-21 (Head of AI Strategy & Operations; role recorded from the rejection email)"
   },
   "accoengineeredsystems": {
    "name": "ACCO Engineered Systems",
@@ -1151,7 +1153,7 @@
     "Staff Software Engineer - Data",
     "Senior Software Engineer - Applications"
    ],
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19; second rejection 2026-10-21 (Senior Software Engineer - Applications)"
   },
   "apexon": {
    "name": "Apexon",
@@ -3606,7 +3608,8 @@
    "count": 2,
    "roles": [
     "Principal Enterprise Architect"
-   ]
+   ],
+   "status": "interview request 2026-10-21 (Principal Enterprise Architect): Mary Giles sent a link to book a 15-minute call"
   },
   "chime": {
    "name": "Chime",
@@ -11289,7 +11292,11 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Sr. Data Engineer (Remote)"
+   ],
+   "status": "rejected 2026-10-21 (Sr. Data Engineer (Remote); role recorded from the rejection email)"
   },
   "moderngovernmentsolutions": {
    "name": "Modern Government Solutions",
