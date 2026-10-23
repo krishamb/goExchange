@@ -5193,7 +5193,8 @@
    "count": 1,
    "roles": [
     "Manager Development"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Manager Development)"
   },
   "dialpad": {
    "company": "Dialpad",
@@ -5582,7 +5583,8 @@
    "count": 1,
    "roles": [
     "Field CTO"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Field CTO)"
   },
   "drw": {
    "name": "DRW",
@@ -10744,7 +10746,8 @@
    "roles": [
     "Staff Software Engineer, Lyft Business",
     "Engineering Manager, Lyft Business"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Engineering Manager, Lyft Business)"
   },
   "lyrahealth": {
    "name": "Lyra Health",
@@ -10768,7 +10771,8 @@
    "count": 2,
    "roles": [
     "Head of Engineering (Remote)"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Head of Engineering (Remote))"
   },
   "machinify": {
    "name": "Machinify",
@@ -15856,7 +15860,8 @@
    "count": 2,
    "roles": [
     "Staff Data Analytics Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Staff Data Analytics Engineer)"
   },
   "sidekicklabs": {
    "name": "Sidekick Labs",
