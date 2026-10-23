@@ -90,7 +90,8 @@
    "count": 2,
    "roles": [
     "Lead Software Engineer (Remote)"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Lead Software Engineer (Remote))"
   },
   "8thlightrebuild": {
    "name": "8thlight",
@@ -188,7 +189,8 @@
    "count": 1,
    "roles": [
     "Senior Principal Data Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Senior Principal Data Architect)"
   },
   "abclegalservices": {
    "name": "ABC Legal Services",
@@ -792,7 +794,8 @@
    "count": 1,
    "roles": [
     "Lead Engineer, Platform Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Lead Platform Engineer)"
   },
   "alpaca": {
    "name": "Alpaca",
@@ -898,7 +901,8 @@
    "count": 1,
    "roles": [
     "Staff Developer Platform Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Staff Developer Platform Engineer)"
   },
   "altitudeiq": {
    "company": "altitudeiq",
@@ -971,7 +975,7 @@
     "Principal GenAI Inference Optimization Engineer"
    ],
    "via": "gmail confirmation (iCIMS)",
-   "status": "rejected 2026-10-19",
+   "status": "rejected 2026-10-19; rejected 2026-10-19; rejected 2026-10-22 (Principal AI Software Engineer (2026-84943))",
    "note": "2026-10-20 20:08Z AMD confirmation for req 2026-91897 Principal Software Development Engineer: not from a bot (the applicant applied on AMD careers); AMD had rejected the applicant 2026-10-19"
   },
   "amerilife": {
@@ -1130,7 +1134,8 @@
    "roles": [
     "Manager of Applied AI Architecture, Startups"
    ],
-   "via": "applicant's own application (Greenhouse confirmation email)"
+   "via": "applicant's own application (Greenhouse confirmation email)",
+   "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
   },
   "anttech": {
    "name": "Ant-Tech",
@@ -1326,7 +1331,8 @@
    "count": 2,
    "roles": [
     "Software Engineer, ML Infrastructure"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Software Engineer, ML Infrastructure)"
   },
   "arcxp": {
    "name": "Arc XP",
@@ -2064,7 +2070,8 @@
    "count": 3,
    "roles": [
     "Sr. Agentic Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Sr. Agentic Engineer)"
   },
   "bamboohr17": {
    "company": "bamboohr17",
@@ -2339,7 +2346,8 @@
    "count": 1,
    "roles": [
     "Lead Software Engineer-Backend (PHP)"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Lead Software Engineer - AI; position filled)"
   },
   "bikky": {
    "name": "Bikky",
@@ -2422,7 +2430,8 @@
    "roles": [
     "Lead Software Engineer (Secrets Manager & AI Identity)",
     "Senior Software Engineer (Auth)"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Senior Software Engineer (Auth); position filled)"
   },
   "biztechfusion": {
    "name": "BizTech Fusion",
@@ -2608,7 +2617,7 @@
    "roles": [
     "Staff Software Engineer - 340B Check"
    ],
-   "note": "Lever confirmation 2026-10-21 19:42Z (applicant's Oct 21 page A run)"
+   "note": "Lever confirmation 2026-10-21 19:42Z (applicant's Oct 21 page A run); Lever confirmation 2026-10-21T19:42Z; already in ledger (role and date present)"
   },
   "bluespacetechnologies": {
    "name": "Blue Space Technologies",
@@ -2629,7 +2638,8 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Principal AI Engineer)"
   },
   "bnsfrailway": {
    "name": "BNSF Railway",
@@ -3004,7 +3014,7 @@
     "Lead Software Engineer - Generative AI",
     "Senior Software Engineer, Agentic AI Platform"
    ],
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19; rejected 2026-10-19; rejected 2026-10-22 (Senior Software Engineer, Agentic AI Platform)"
   },
   "cadencesolutions": {
    "name": "Cadence Solutions",
@@ -3047,7 +3057,8 @@
    "roles": [
     "Staff Platform Engineer"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Senior Full Stack Engineer, Notetaker; position filled)"
   },
   "calico": {
    "name": "Calico ",
@@ -3343,7 +3354,8 @@
    "count": 2,
    "roles": [
     "Staff Software Engineer, Investors"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Senior AI Engineer, Post-Training)"
   },
   "casca": {
    "company": "casca",
@@ -5073,7 +5085,8 @@
     "Director, Infrastructure Platform Services",
     "Sr Staff SW Development Engineer"
    ],
-   "count": 2
+   "count": 2,
+   "status": "rejected 2026-10-22 (Sr SW Development Engineer (JR117507)); rejected 2026-10-22 (Director, Infrastructure Platform Services (JR121586))"
   },
   "dhigroupinc": {
    "name": "DHI Group, Inc.",
@@ -5237,7 +5250,8 @@
    "roles": [
     "Sr Principal Software Engineer",
     "Sr Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Sr Principal Software Engineer, 10159602)"
   },
   "distantjob": {
    "name": "DistantJob",
@@ -5425,7 +5439,8 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Staff Data Engineer)"
   },
   "drivetimeautomotivegroup": {
    "name": "DriveTime Automotive Group",
@@ -5884,7 +5899,8 @@
    "roles": [
     "SVP, Development and Enterprise Architecture"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-09-01 (SVP, Development and Enterprise Architecture)"
   },
   "employerdirecthealthcare": {
    "company": "employerdirecthealthcare",
@@ -6345,7 +6361,8 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Staff Data Infrastructure Engineer)"
   },
   "falconx": {
    "name": "FalconX",
@@ -6610,7 +6627,7 @@
     "Senior Data Warehouse Engineer",
     "Software Architect"
    ],
-   "status": "rejected 2026-10-21 (Software Architect; role recorded from the rejection email)"
+   "status": "rejected 2026-10-21 (Software Architect; role recorded from the rejection email); rejected 2026-10-21 (Software Architect; role recorded from the rejection email); rejected 2026-10-21 (Senior Data Warehouse Engineer)"
   },
   "finra": {
    "name": "FINRA",
@@ -6675,7 +6692,8 @@
    "roles": [
     "Director of Engineering",
     "Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (role not named)"
   },
   "firstwork": {
    "name": "FirstWork",
@@ -7134,6 +7152,17 @@
     "Engineering Manager, Backend"
    ]
   },
+  "functionhealth": {
+   "name": "Function Health",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Infrastructure"
+   ],
+   "note": "Gem confirmation 2026-10-23T00:13Z"
+  },
   "fundraiseup": {
    "name": "Fundraise Up",
    "dates": [
@@ -7461,7 +7490,8 @@
    "count": 1,
    "roles": [
     "Team Lead, Software Development"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Team Lead, Software Development)"
   },
   "gersh": {
    "name": "The Gersh Agency",
@@ -7485,7 +7515,8 @@
    "count": 1,
    "roles": [
     "Senior Platform Engineer - AI"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Senior Platform Engineer - AI)"
   },
   "ghoststorygames": {
    "name": "Ghost Story Games",
@@ -7505,7 +7536,8 @@
    "count": 1,
    "roles": [
     "Director, Software Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Director, Software Engineering)"
   },
   "gifthealth": {
    "name": "Gifthealth",
@@ -8763,7 +8795,8 @@
    "count": 1,
    "roles": [
     "Principal Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Principal Data Engineer)"
   },
   "idme": {
    "name": "ID.me",
@@ -8868,7 +8901,8 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (role not named)"
   },
   "indiciumai": {
    "name": "Indicium AI",
@@ -8879,6 +8913,16 @@
    "roles": [
     "Forward Deployed AI Engineer"
    ]
+  },
+  "inductivebio": {
+   "name": "Inductive Bio",
+   "dates": [],
+   "count": 1,
+   "roles": [
+    "MTS, Machine Learning"
+   ],
+   "note": "not in the ledger before; the Ashby rejection (2026-10-22T13:01Z) proves the application; apply date unknown",
+   "status": "rejected 2026-10-22 (MTS, Machine Learning)"
   },
   "inferact": {
    "name": "Inferact",
@@ -9180,7 +9224,8 @@
    "count": 1,
    "roles": [
     "Principal Architect, CX Analytics & Automation"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Principal Architect, CX Analytics & Automation)"
   },
   "irvinetechnologycorporationitc": {
    "company": "Irvine Technology Corporation (ITC)",
@@ -9643,7 +9688,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer - Full Stack"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Senior Software Engineer - Full Stack)"
   },
   "kikoff": {
    "name": "Kikoff",
@@ -10756,7 +10802,8 @@
    "count": 1,
    "roles": [
     "Lead Software Engineer, Kernels"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Lead Software Engineer, Kernels)"
   },
   "maven": {
    "company": "maven",
@@ -11099,7 +11146,8 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Director, Applied AI)"
   },
   "metropolistechnologies": {
    "company": "metropolistechnologies",
@@ -11431,7 +11479,8 @@
    "count": 3,
    "roles": [
     "Principal Software Engineer, Team Lead - Perception Platforms"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Principal Software Engineer, Team Lead - Perception Platforms)"
   },
   "motive": {
    "name": "Motive",
@@ -11661,7 +11710,7 @@
     "Senior SWE (Search) - Platform"
    ],
    "via": "2026-10-19: greenhouse (Gmail confirmation 05:02Z; role not named in the email)",
-   "status": "rejected 2026-10-21 (Senior SWE (Search) - Platform; role recorded from the rejection email)"
+   "status": "rejected 2026-10-21 (Senior SWE (Search) - Platform; role recorded from the rejection email); rejected 2026-10-21 (Senior SWE (Search) - Platform; role recorded from the rejection email); rejected 2026-10-22 (Solutions Architect, Enterprise)"
   },
   "neerinfosolutionsincdice": {
    "name": "NeerInfo Solutions Inc. (Dice)",
@@ -11956,7 +12005,8 @@
     "Manager, Forward Deployed Engineering"
    ],
    "via": "2026-10-19: greenhouse (Gmail confirmation 05:25Z; not from a bot)",
-   "status": "rejected 2026-10-21 (Manager, Forward Deployed Engineering)"
+   "status": "rejected 2026-10-21 (Manager, Forward Deployed Engineering); rejected 2026-10-21 (Manager, Forward Deployed Engineering); rejected 2026-10-21 (Director, Forward Deployed Engineering)",
+   "note": "Greenhouse confirmation 2026-10-21T19:27Z; already in ledger (role and date present)"
   },
   "nimblerobotics": {
    "company": "Nimble Robotics",
@@ -13896,7 +13946,8 @@
    "count": 1,
    "roles": [
     "Principal Software Engineer - PubMatic AgenticOS (Buy Side Bidding Platform)"
-   ]
+   ],
+   "note": "Greenhouse confirmation 2026-10-21T19:23Z; already in ledger (role and date present)"
   },
   "pulley": {
    "company": "pulley",
@@ -13918,7 +13969,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Agentic AI"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Senior Software Engineer, Agentic AI)"
   },
   "punttai": {
    "company": "punttai",
@@ -14507,7 +14559,8 @@
    "roles": [
     "Director of Development, AI Native",
     "Principal DevOps Engineer/Lead (AI/ML Infrastructure) - Remote US"
-   ]
+   ],
+   "note": "Workday confirmation 2026-10-21T19:37Z; already in ledger (role and date present)"
   },
   "rewardsnetwork": {
    "name": "Rewards Network",
@@ -15764,7 +15817,8 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-22 (Staff Software Engineer)"
   },
   "sirenopt": {
    "name": "SirenOpt",
@@ -16497,7 +16551,8 @@
    "roles": [
     "Staff Software Engineer - Core Platform",
     "Senior Software Engineer (Los Angeles, CA)"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Staff Software Engineer - Core Platform)"
   },
   "studiodesigner": {
    "name": "Studio Designer",
@@ -16796,7 +16851,8 @@
    "count": 1,
    "roles": [
     "Senior ML/AI Engineer"
-   ]
+   ],
+   "note": "Greenhouse confirmation 2026-10-21T19:25Z; already in ledger (role and date present)"
   },
   "tailscale": {
    "company": "Tailscale",
@@ -17431,7 +17487,8 @@
    "count": 1,
    "roles": [
     "Lead Machine Learning Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Lead Machine Learning Engineer, 10154653)"
   },
   "thirdbase": {
    "company": "thirdbase",
@@ -17590,7 +17647,7 @@
    "roles": [
     "Principal Software Engineer, Tech Lead, Retail"
    ],
-   "status": "rejected 2026-10-21 (Principal Software Engineer, Tech Lead, Retail; role recorded from the rejection email)"
+   "status": "rejected 2026-10-21 (Principal Software Engineer, Tech Lead, Retail; role recorded from the rejection email); rejected 2026-10-21 (Principal Software Engineer, Tech Lead, Retail; role recorded from the rejection email); rejected 2026-10-22 (Senior Manager, Software Engineering - Toast IQ)"
   },
   "togetherai": {
    "name": "Together AI",
@@ -17807,7 +17864,7 @@
     "Senior Software Engineer, Cobalt",
     "Staff Software Engineer, Internal Tools"
    ],
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19; rejected 2026-10-19; rejected 2026-10-22 (Staff Software Engineer, Internal Tools)"
   },
   "turbopuffer": {
    "name": "Turbopuffer",
@@ -18661,7 +18718,7 @@
    "roles": [
     "Senior / Staff Software Engineer, AI Tooling"
    ],
-   "note": "Lever confirmation 2026-10-21 19:45Z (applicant's Oct 21 page A run)"
+   "note": "Lever confirmation 2026-10-21 19:45Z (applicant's Oct 21 page A run); Lever confirmation 2026-10-21T19:45Z; already in ledger (role and date present)"
   },
   "waddlelabs": {
    "name": "Waddle Labs",
@@ -18742,7 +18799,8 @@
    "rejected": true,
    "roles": [
     "Staff Systems Engineer, Depot & Offhail Automation"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Staff Tech Lead, ML Data Infrastructure and Inference Platform)"
   },
   "wayve": {
    "name": "Wayve",
@@ -19000,7 +19058,8 @@
    "count": 1,
    "roles": [
     "Field Chief Technology Officer"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Field Chief Technology Officer)"
   },
   "workday": {
    "company": "Workday",
@@ -19399,7 +19458,8 @@
    "roles": [
     "Staff Software Engineer \u2013 Integrations Platform",
     "Senior Data Engineer - Data Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-21 (Staff Software Engineer - Integrations Platform)"
   },
   "ziprecruiter": {
    "name": "ZipRecruiter",
