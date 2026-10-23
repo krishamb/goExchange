@@ -1980,9 +1980,14 @@
   "babelstreet": {
    "name": "Babel Street",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager - Secure Access",
+    "Sr. Director of Engineering - API"
+   ]
   },
   "babylist": {
    "name": "Babylist",
@@ -3734,7 +3739,11 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior/Principal Linux Engineer"
+   ],
+   "status": "rejected 2026-10-23 (Senior/Principal Linux Engineer)"
   },
   "circle": {
    "name": "Circle",
@@ -6438,7 +6447,11 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Distinguished Architect - Enterprise Data & Integration"
+   ],
+   "status": "rejected 2026-10-23 (Distinguished Architect - Enterprise Data & Integration)"
   },
   "fanaticscommerce": {
    "name": "Fanatics Commerce",
@@ -19743,6 +19756,14 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "safestay": {
+   "name": "SafeStay (SafeLease)",
+   "count": 1,
+   "roles": [
+    "Technical Lead"
+   ],
+   "status": "rejected 2026-10-23 (Technical Lead); no application confirmation found in Gmail, date unknown"
   }
  }
 }
