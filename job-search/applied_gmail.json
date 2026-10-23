@@ -3393,6 +3393,16 @@
     "Senior Forward Deployed Engineer"
    ]
   },
+  "cdw": {
+   "name": "cdw",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Consulting Engineer - HI"
+   ]
+  },
   "cedana": {
    "company": "cedana",
    "first": "2026-10-05",
@@ -13901,6 +13911,17 @@
    "count": 1,
    "roles": [
     "Sr. Research Engineer"
+   ]
+  },
+  "prophetx": {
+   "name": "ProphetX",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 2,
+   "roles": [
+    "Engineering Manager",
+    "Principal / Senior Staff Backend Engineer"
    ]
   },
   "proteus": {
