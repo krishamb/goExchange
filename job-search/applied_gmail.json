@@ -846,7 +846,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Payments"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Alt Platform Inc; Senior Software Engineer, Payments)"
   },
   "altana": {
    "name": "Altana",
@@ -4560,7 +4561,8 @@
    "roles": [
     "Vice President of Engineering, Architecture",
     "Director of Engineering, Agentic AI and Architecture"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Director of Engineering, Agentic AI and Architecture)"
   },
   "crediflow": {
    "company": "crediflow",
