@@ -2060,14 +2060,21 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Managing Director \u2013 Enterprise Architecture, Data & AI Governance"
+   ]
   },
   "bakertillycanada": {
    "name": "Baker Tilly Canada",
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Managing Director \u2013 Enterprise Architecture, Data & AI Governance"
+   ],
+   "status": "same application as bakertilly (Workday JR108292, US Chicago posting; Oct 8 attempt failed, submitted ~02:00Z Oct 9)"
   },
   "baldwin": {
    "name": "baldwin",
