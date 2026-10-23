@@ -11521,6 +11521,16 @@
    ],
    "count": 1
   },
+  "moloco": {
+   "name": "Moloco",
+   "dates": [
+    "2026-10-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - AI Applications"
+   ]
+  },
   "momentivesoftware": {
    "name": "Momentive Software",
    "dates": [
@@ -19139,11 +19149,13 @@
   "wing": {
    "name": "Wing",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Machine Learning Engineer, Simulation"
+    "Staff Machine Learning Engineer, Simulation",
+    "Senior Backend Software Engineer"
    ]
   },
   "wisp": {
