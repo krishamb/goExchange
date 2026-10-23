@@ -2065,9 +2065,13 @@
   "baldwin": {
    "name": "baldwin",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-22"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer- MSI"
+   ]
   },
   "balsambrands": {
    "name": "Balsam Brands",
