@@ -16956,11 +16956,13 @@
   "talkdesk": {
    "name": "Talkdesk",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Solution Architect"
+    "Senior Solution Architect",
+    "Forward Deployed AI Engineer"
    ]
   },
   "talkspace": {
@@ -17884,6 +17886,16 @@
    "count": 1,
    "roles": [
     "Lead Data Engineer"
+   ]
+  },
+  "trucordia": {
+   "name": "Trucordia",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Director - Enterprise Architecture (Integrations)"
    ]
   },
   "trueaccord": {
