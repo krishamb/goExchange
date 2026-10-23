@@ -7559,6 +7559,16 @@
     "Forward Deployed Product Engineer, Internal Tools & Automation"
    ]
   },
+  "gigs": {
+   "name": "Gigs",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
   "gileadsciences": {
    "name": "Gilead Sciences",
    "dates": [
@@ -9104,6 +9114,16 @@
     "2026-10-09"
    ],
    "count": 1
+  },
+  "integris": {
+   "name": "Integris",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Engineering, Data, and AI"
+   ]
   },
   "internationalsolutionsgroup": {
    "name": "International Solutions Group",
@@ -13468,6 +13488,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Mission Optimization"
+   ]
+  },
+  "planetscale": {
+   "name": "PlanetScale",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Developer Experience Engineer"
    ]
   },
   "planful": {
