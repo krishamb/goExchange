@@ -2061,11 +2061,13 @@
     "2026-10-09",
     "2026-10-23"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Managing Director \u2013 Enterprise Architecture, Data & AI Governance",
-    "Principal Platform Engineer - Integrations"
-   ]
+    "Principal Platform Engineer - Integrations",
+    "Head of Data & AI Platform"
+   ],
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 applications, one per level (director, staff, exec): cap reached"
   },
   "bakertillycanada": {
    "name": "Baker Tilly Canada",
@@ -2077,6 +2079,20 @@
     "Managing Director \u2013 Enterprise Architecture, Data & AI Governance"
    ],
    "status": "same application as bakertilly (Workday JR108292, US Chicago posting; Oct 8 attempt failed, submitted ~02:00Z Oct 9)"
+  },
+  "bakertillyus": {
+   "name": "Baker Tilly US",
+   "dates": [
+    "2026-10-09",
+    "2026-10-23"
+   ],
+   "count": 3,
+   "roles": [
+    "Managing Director \u2013 Enterprise Architecture, Data & AI Governance",
+    "Principal Platform Engineer - Integrations",
+    "Head of Data & AI Platform"
+   ],
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 applications, one per level (director, staff, exec): cap reached"
   },
   "baldwin": {
    "name": "baldwin",
