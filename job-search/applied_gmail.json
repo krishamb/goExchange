@@ -423,7 +423,8 @@
    "count": 2,
    "roles": [
     "Machine Learning Engineering Manager, Credit & Underwriting"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Machine Learning Engineering Manager, Credit & Underwriting)"
   },
   "aegisventures": {
    "name": "Aegis Ventures",
@@ -1837,7 +1838,8 @@
    "roles": [
     "Chief Data and Analytics Officer",
     "Forward Deployed Engineer - AI"
-   ]
+   ],
+   "status": "rejected 2026-10-23"
   },
   "aviatrix": {
    "company": "aviatrix",
@@ -5330,7 +5332,8 @@
    "count": 2,
    "roles": [
     "Staff Software Engineer - Consumer Revenue"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Staff Software Engineer - Consumer Revenue)"
   },
   "discoverfinancial": {
    "name": "Discover Financial",
@@ -8989,7 +8992,8 @@
    "roles": [
     "Principal Software Engineer",
     "Senior Fullstack Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Senior Fullstack Engineer)"
   },
   "imbue": {
    "name": "Imbue",
@@ -9208,8 +9212,10 @@
    "count": 3,
    "roles": [
     "Senior Software Engineer II, Ads Data Solutions Engineering",
-    "Director, AI Solutions Strategy & Planning"
-   ]
+    "Director, AI Solutions Strategy & Planning",
+    "Engineering Manager, Site Reliability"
+   ],
+   "status": "rejected 2026-10-23 (Engineering Manager, Site Reliability)"
   },
   "instinct": {
    "name": "Instinct",
@@ -9220,7 +9226,8 @@
    "roles": [
     "Applied AI Lead"
    ],
-   "via": "newton ats (hand, ai-jobsites lane)"
+   "via": "newton ats (hand, ai-jobsites lane)",
+   "status": "rejected 2026-10-23 (Applied AI Lead)"
   },
   "instituteoffoundationmodels": {
    "name": "Institute of Foundation Models",
@@ -15328,7 +15335,7 @@
     "2026-10-09"
    ],
    "count": 1,
-   "status": "interview with Rama booked Tue 2026-11-03 2:30-3:00 PM PST (applicant booked 2026-10-23; role listed as 'Software')"
+   "status": "interview with Rama, Tue 2026-11-03: Satlyt asked to move it; the applicant declined 1:30 PM and accepted 'an hour later' (about 3:30-4:00 PM PST); updated invite pending"
   },
   "satoriq": {
    "company": "satoriq",
