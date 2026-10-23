@@ -4294,11 +4294,13 @@
   "compass": {
    "name": "Compass",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Director of Engineering"
    ]
   },
   "complete": {
@@ -9211,11 +9213,13 @@
   "intuit": {
    "name": "Intuit",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager 2, Software Engineering"
+    "Manager 2, Software Engineering",
+    "Principal Software Engineer, AI-Powered Work"
    ]
   },
   "invesco": {
@@ -12209,7 +12213,8 @@
    "roles": [
     "Engineering Manager, Provider Supply",
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-22 (Engineering Manager, Provider Supply)"
   },
   "novartis": {
    "name": "Novartis",
