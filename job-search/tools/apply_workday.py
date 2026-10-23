@@ -45,7 +45,7 @@ exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 # applicant 2026-10-16: a row marked remote must be remote on the posting itself (Coca-Cola's 'remote' row was an Atlanta role)
 import ssl as _ssl, urllib.request as _ureq
-_REM_LOC = re.compile(r"remote|virtual|telecommut|work (from|at) home|home[- ]?based|\bwfh\b", re.I)
+_REM_LOC = re.compile(r"remote|virtual|telecommut|work (from|at) home|home[- ]?based|\bwfh\b|^\s*home\s*[-:]\s*(united states|usa?\b|u\.s\.)", re.I)   # 'Home-United States' (Flexera Oct 22) is a remote location
 _STATE_ONLY = re.compile(r"\b(alabama|alaska|arizona|arkansas|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b|\b(AL|AK|AZ|AR|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\b", re.I)
 def wd_remote_check(url):
     """-> (is_remote: bool|None, where_text). None when the posting data could not be read (do not block then)."""
