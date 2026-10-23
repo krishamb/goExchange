@@ -5043,7 +5043,7 @@
    "roles": [
     "Engineering Manager, Infrastructure and Agentic Platform"
    ],
-   "status": "recruiting screen: the applicant asked for Thu 2026-10-22 8:30 AM PT and followed up 2026-10-20; awaiting confirmation (Engineering Manager, Infrastructure and Agentic Platform)"
+   "status": "Hiring Manager interview (Misha Bosin) Mon 2026-10-26 4:15-5:00 PM PDT, confirmed (Engineering Manager, Infrastructure and Agentic Platform)"
   },
   "defenseunicorns": {
    "name": "Defense Unicorns",
@@ -12750,7 +12750,7 @@
    "roles": [
     "Engineering Architect"
    ],
-   "status": "Technical Interview I (Engineering Architect): the applicant asked on 2026-10-20 to reschedule the Wed 2026-10-21 8:30 AM PT slot"
+   "status": "Technical Interview I (Engineering Architect) scheduled Wed 2026-10-28 8:30-9:30 AM PDT (confirmed 2026-10-23)"
   },
   "oportun": {
    "name": "Oportun",
@@ -15318,7 +15318,8 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "status": "interview with Rama booked Tue 2026-11-03 2:30-3:00 PM PST (applicant booked 2026-10-23; role listed as 'Software')"
   },
   "satoriq": {
    "company": "satoriq",
