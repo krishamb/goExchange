@@ -6274,11 +6274,13 @@
   "exiger": {
    "name": "Exiger",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer (L5)"
+    "Senior Software Engineer (L5)",
+    "Lead Platform Engineer"
    ]
   },
   "expel": {
@@ -6837,6 +6839,16 @@
     "Senior Software Engineer, Backend"
    ],
    "count": 2
+  },
+  "flexera": {
+   "name": "Flexera",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer & AI-Native Engineering Lead"
+   ]
   },
   "flexontechnologiesinc": {
    "name": "Flexon Technologies Inc.",
@@ -10639,11 +10651,13 @@
    "name": "Lyft",
    "dates": [
     "2026-10-10",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer, Lyft Business"
+    "Staff Software Engineer, Lyft Business",
+    "Engineering Manager, Lyft Business"
    ]
   },
   "lyrahealth": {
