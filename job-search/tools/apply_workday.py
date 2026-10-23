@@ -826,7 +826,7 @@ async def fill_field(page, job, f):
     if re.search(r"(^|-|_)city$", fid, re.I): return await text_to("Santa Clara")
     if re.search(r"regionsubdivision1$", fid, re.I) or re.search(r"^county\b", low):   # County (Gap Inc. asks it): Santa Clara County
         return await text_to("Santa Clara") if kind in ("text", "textarea") else await choose(["Santa Clara", "Santa Clara County"], typeahead="Santa Clara")
-    if re.search(r"postalcode$", fid, re.I): return await text_to(P.get("zip") or "[profile:zip]")
+    if re.search(r"postalcode$", fid, re.I): return await text_to(P.get("zip") or "")
     if re.search(r"phonenumber$", fid, re.I): return await text_to(re.sub(r"\D", "", P["phone"])[-10:])
     if re.search(r"phone(device)?type$", fid, re.I) or re.search(r"phone device type", low):
         if re.search(r"mobile|cell", cur, re.I): return keep(cur)

@@ -5,7 +5,7 @@ browser fills them from the applicant's own one-time setup, so they never appear
 usage: python3 export_rules.py <profile.json> <answers.json> > rules.js"""
 import re, json, sys, os, datetime, time
 HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.join(os.path.dirname(HERE), "tools")
-SECRET = ("email", "phone", "street")
+SECRET = ("email", "phone", "street", "zip")
 prof = json.load(open(sys.argv[1])); ans = json.load(open(sys.argv[2]))
 P = {k: ("{{%s}}" % k if k in SECRET else v) for k, v in prof.items()}
 src = open(os.path.join(TOOLS, "apply.py")).read()

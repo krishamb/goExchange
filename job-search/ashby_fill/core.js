@@ -61,7 +61,7 @@ const S = {
 // bookmarklet setup: the helper page puts the applicant's details into the bookmarklet itself
 if (window.__AKF && typeof window.__AKF === 'object') {
   const cur = S.get('me', {});
-  for (const k of ['email', 'phone', 'street']) if (window.__AKF[k]) cur[k] = String(window.__AKF[k]);
+  for (const k of ['email', 'phone', 'street', 'zip']) if (window.__AKF[k]) cur[k] = String(window.__AKF[k]);
   S.set('me', cur);
 }
 const me = () => S.get('me', {});
@@ -74,9 +74,9 @@ function sub(v) {
   if (Array.isArray(v)) return v.map(sub);
   if (typeof v !== 'string') return v;
   const m = me();
-  return v.replace(/\{\{(email|phone|street|today)\}\}/g, (_, k) => k === 'today' ? today(0, true) : (m[k] || ''));
+  return v.replace(/\{\{(email|phone|street|zip|today)\}\}/g, (_, k) => k === 'today' ? today(0, true) : (m[k] || ''));
 }
-const P = new Proxy({}, { get: (_, k) => (['email', 'phone', 'street'].includes(k) ? me()[k] || '' : R.PROFILE[k] || '') });
+const P = new Proxy({}, { get: (_, k) => (['email', 'phone', 'street', 'zip'].includes(k) ? me()[k] || '' : R.PROFILE[k] || '') });
 
 // ---------------- rules (same order and matching as apply.py's pick) ----------------
 const compile = rules => rules.map(([p, v]) => [new RegExp(p), /[A-Z]/.test(p), v]);
@@ -810,6 +810,7 @@ function ui() {
     <label>Email <input id="akf-email" style="width:100%"></label>
     <label>Phone <input id="akf-phone" style="width:100%"></label>
     <label>Street address (optional) <input id="akf-street" style="width:100%"></label>
+    <label>ZIP code (optional) <input id="akf-zip" style="width:100%"></label>
     <label>Resume (architect / engineer roles) <input id="akf-r1" type="file" accept=".pdf,.doc,.docx"></label>
     <label>Executive resume (CTO / VP / Head / Director / Manager) <input id="akf-r2" type="file" accept=".pdf,.doc,.docx"></label>
     <label>Cover letter (optional) <input id="akf-cl" type="file" accept=".pdf,.doc,.docx"></label>
@@ -818,13 +819,13 @@ function ui() {
   panel.querySelectorAll('input:not([type]), input[id^="akf-e"], input[id^="akf-p"], input[id^="akf-s"]').forEach(i => i.style.cssText = 'width:100%;color:#0f172a;border-radius:6px;border:0;padding:4px 6px');
   document.body.appendChild(panel);
   const m = me();
-  panel.querySelector('#akf-email').value = m.email || ''; panel.querySelector('#akf-phone').value = m.phone || ''; panel.querySelector('#akf-street').value = m.street || '';
+  panel.querySelector('#akf-email').value = m.email || ''; panel.querySelector('#akf-phone').value = m.phone || ''; panel.querySelector('#akf-street').value = m.street || ''; panel.querySelector('#akf-zip').value = m.zip || '';
   panel.querySelector('#akf-auto').checked = !!S.get('autofill', HAS_GM);
   const files = () => ['resume_main', 'resume_exec', 'cover'].map(k => S.get(k)).map((f, i) => `${['Resume', 'Executive resume', 'Cover letter'][i]}: ${f ? f.name : '-'}`).join('\n');
   panel.querySelector('#akf-saved').textContent = files();
   const readFile = inp => new Promise(res => { const f = inp.files && inp.files[0]; if (!f) return res(null); const r = new FileReader(); r.onload = () => res({ name: f.name, type: f.type || 'application/pdf', b64: String(r.result).split(',')[1] }); r.readAsDataURL(f); });
   panel.querySelector('#akf-save').onclick = async () => {
-    S.set('me', { email: panel.querySelector('#akf-email').value.trim(), phone: panel.querySelector('#akf-phone').value.trim(), street: panel.querySelector('#akf-street').value.trim() });
+    S.set('me', { email: panel.querySelector('#akf-email').value.trim(), phone: panel.querySelector('#akf-phone').value.trim(), street: panel.querySelector('#akf-street').value.trim(), zip: panel.querySelector('#akf-zip').value.trim() });
     S.set('autofill', panel.querySelector('#akf-auto').checked);
     for (const [id, k] of [['akf-r1', 'resume_main'], ['akf-r2', 'resume_exec'], ['akf-cl', 'cover']]) { const f = await readFile(panel.querySelector('#' + id)); if (f) { if (!S.set(k, f)) alert('Could not save ' + f.name + ' (too large for this browser storage).'); } }
     panel.querySelector('#akf-saved').textContent = 'Saved.\n' + files();

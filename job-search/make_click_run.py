@@ -61,14 +61,15 @@ def appurl(u):
     if "jobs.lever.co" in (u or ""): return re.sub(r"/apply/?$", "", u.rstrip("/")) + "/apply"   # Lever: the apply form
     return re.sub(r"/application/?$", "", (u or "").rstrip("/")) + "/application"
 
-# applicant contact for autofill — read from the private jobs folder (me.json: {"email": ..., "phone": ...}) and
+# applicant contact for autofill — read from the private jobs folder (me.json: {"email": ..., "phone": ..., "zip": ...}) and
 # carried only in the LOCALLY generated page (its #akf hash); never written into this public repository. Without
 # me.json the filler uses the email/phone saved once in its own Setup panel.
 try: _me = json.load(open(os.path.join(PRIV, "me.json")))
 except Exception: _me = {}
 AUTOFILL_EMAIL = os.environ.get("AKF_EMAIL") or _me.get("email", "")
 AUTOFILL_PHONE = os.environ.get("AKF_PHONE") or _me.get("phone", "")
-ME = {k: v for k, v in (("email", AUTOFILL_EMAIL), ("phone", AUTOFILL_PHONE)) if v}
+AUTOFILL_ZIP = os.environ.get("AKF_ZIP") or str(_me.get("zip", "") or "")
+ME = {k: v for k, v in (("email", AUTOFILL_EMAIL), ("phone", AUTOFILL_PHONE), ("zip", AUTOFILL_ZIP)) if v}
 
 def akf_hash(items, auto):
     """URL-safe base64 of the queue, matching the userscript's decoder (no '=' padding, which
