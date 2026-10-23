@@ -11599,7 +11599,8 @@
    "count": 1,
    "roles": [
     "Manager, Software Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-23 (Manager, Software Engineering)"
   },
   "moxie": {
    "name": "Moxie",
@@ -16968,7 +16969,8 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-23 (Sr Backend Engineer)"
   },
   "tailorcare": {
    "name": "TailorCare",
