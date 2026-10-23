@@ -12448,11 +12448,14 @@
    "name": "Oddball",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-23"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "System Architect"
+    "Power Platform Developer",
+    "System Architect",
+    "VP of Engineering"
    ]
   },
   "odyssey": {
@@ -15110,6 +15113,14 @@
    "roles": [
     "API Architect"
    ]
+  },
+  "safestay": {
+   "name": "SafeStay (SafeLease)",
+   "count": 1,
+   "roles": [
+    "Technical Lead"
+   ],
+   "status": "rejected 2026-10-23 (Technical Lead); no application confirmation found in Gmail, date unknown"
   },
   "safetykit": {
    "company": "safetykit",
@@ -19756,14 +19767,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "safestay": {
-   "name": "SafeStay (SafeLease)",
-   "count": 1,
-   "roles": [
-    "Technical Lead"
-   ],
-   "status": "rejected 2026-10-23 (Technical Lead); no application confirmation found in Gmail, date unknown"
   }
  }
 }
