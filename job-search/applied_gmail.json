@@ -3648,6 +3648,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "checkbook": {
+   "name": "Checkbook",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Engineer"
+   ]
+  },
   "checkr": {
    "company": "checkr",
    "first": "2026-10-05",
