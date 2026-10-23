@@ -5557,7 +5557,10 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (C++ Algo)"
+   ]
   },
   "drweng": {
    "company": "drweng",
