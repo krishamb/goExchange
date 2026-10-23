@@ -6514,6 +6514,16 @@
    ],
    "note": "2026-10-21 05:55Z: another Greenhouse \"Thank you for applying to Fervo Energy\" with no role named; no bot ran for Fervo that day (the 2026-10-16 bot application was Director of Software Engineering) - likely the applicant's own application or a delayed confirmation"
   },
+  "fetch": {
+   "name": "Fetch",
+   "dates": [
+    "2026-10-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Audiences"
+   ]
+  },
   "fico": {
    "name": "FICO",
    "dates": [
