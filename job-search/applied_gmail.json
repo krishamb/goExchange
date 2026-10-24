@@ -13473,9 +13473,14 @@
   "phoenixecommercetechnologies": {
    "name": "Phoenix eCommerce Technologies",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Head of AI Developer Infrastructure"
+   ],
+   "status": "= Reign (Lever board 'reign'). Oct 11 application: role not named in the confirmation (Ladders alerts were for their remote CTO opening). Oct 23: Head of AI Developer Infrastructure (applicant's own browser run, Lever confirmation 23:11Z)"
   },
   "photon": {
    "name": "Photon",
@@ -19834,6 +19839,18 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "reign": {
+   "name": "Reign (Phoenix eCommerce Technologies)",
+   "dates": [
+    "2026-10-11",
+    "2026-10-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Head of AI Developer Infrastructure"
+   ],
+   "status": "same employer as phoenixecommercetechnologies; Oct 11 role not recorded"
   }
  }
 }
