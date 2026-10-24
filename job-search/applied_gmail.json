@@ -2068,7 +2068,8 @@
    "name": "Baker Tilly",
    "dates": [
     "2026-10-09",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-24"
    ],
    "count": 4,
    "roles": [
@@ -2077,7 +2078,7 @@
     "Head of Data & AI Platform",
     "Head of Agent Engineering (applicant via Indeed, 2026-10-23 22:47 PT)"
    ],
-   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached"
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached; Workday \"Thank You For Applying\" 2026-10-24 08:11Z (role not stated; most likely the Indeed Head of Agent Engineering application arriving in Workday)"
   },
   "bakertillycanada": {
    "name": "Baker Tilly Canada",
@@ -2094,7 +2095,8 @@
    "name": "Baker Tilly US",
    "dates": [
     "2026-10-09",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-24"
    ],
    "count": 4,
    "roles": [
@@ -2103,7 +2105,7 @@
     "Head of Data & AI Platform",
     "Head of Agent Engineering (applicant via Indeed, 2026-10-23 22:47 PT)"
    ],
-   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached"
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached; Workday \"Thank You For Applying\" 2026-10-24 08:11Z (role not stated; most likely the Indeed Head of Agent Engineering application arriving in Workday)"
   },
   "baldwin": {
    "name": "baldwin",
@@ -11750,12 +11752,14 @@
    "name": "Muon Space",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-24"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "Software Engineering Manager, Information Systems",
-    "Senior Software Engineer, Information Systems"
+    "Senior Software Engineer, Information Systems",
+    "(applicant via Greenhouse 2026-10-24 00:12 PT; role not stated in the email)"
    ]
   },
   "mutualofomaha": {
@@ -15312,7 +15316,8 @@
    "roles": [
     "Staff Software Engineer, Maps Services",
     "ML/AI - Supply Chain"
-   ]
+   ],
+   "status": "REJECTED 2026-10-24 (ML/AI - Supply Chain); on the rejected list"
   },
   "samsungresearchamerica": {
    "name": "Samsung Research America",
@@ -18642,9 +18647,13 @@
   "velaura": {
    "name": "Velaura",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-24"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Edge AI SDK Lead (applicant via Lever one-click page, 2026-10-24 00:09 PT)"
+   ]
   },
   "velora": {
    "name": "Velora",
