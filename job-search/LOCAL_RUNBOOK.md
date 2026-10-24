@@ -10,6 +10,8 @@ has a submitted report in `~/jobs-private/out/`, so re-running the whole list ne
 Every local batch entry carries `"email": "[profile:email_alt]"` (the filler uses it instead of the profile
 email), so Ashby/Lever confirmations arrive in that Hotmail inbox; Greenhouse stays on Gmail (security codes)
 and Wellfound on [profile:email_wellfound] (the account email).
+`[profile:<key>]` stands for that entry in the private `JOBS_DIR/profile.json` (`apply.py` resolves batch values),
+so the addresses themselves never live in this repo.
 Re-tested on 2026-09-29 19:05 UTC: Ashby still returns "Your application submission was flagged as possible
 spam" for any submission from the cloud IP, so these batches only work from the applicant's own computer.
 

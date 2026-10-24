@@ -1500,6 +1500,13 @@ async def choose_select(page,h,options_pref,label=""):
                         return o
                     except Exception: pass
     return None
+def profile_ref(v):
+    """Resolve a batch value written as "[profile:<key>]" (e.g. "[profile:email_alt]") from JOBS_DIR/profile.json, so contact details stay out of this repo; None if the key is missing."""
+    m=re.fullmatch(r"\[profile:(\w+)\]",v or "")
+    if not m: return v
+    val=json.load(open(os.path.join(JOBS_DIR,"profile.json"))).get(m.group(1))
+    if not val: print(f"profile.json has no {m.group(1)!r}; using the default",flush=True)
+    return val
 def set_email(em):
     """Switch the applicant email for the next application (profile value + the e-mail text rule)."""
     P["email"]=em
@@ -2026,7 +2033,7 @@ async def run():
         jobs = JOBS if BATCH else [{"ats":ats,"url":url,"tag":tag,"answers":extra}]
         summary=[]; default_email=P["email"]
         for job in jobs:
-            set_email(job.get("email") or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses)
+            set_email(profile_ref(job.get("email")) or default_email)   # a batch entry may name the applicant email to use (rotation across the applicant's addresses), as "[profile:<key>]"
             try:
                 _prev=json.load(open(f"{OUT}/{job['tag']}_report.json"))
             except Exception: _prev={}
