@@ -56,6 +56,11 @@ _MULTI = os.environ.get("MULTIROLE") == "1"
 for j in _ordered:
     if j.get("tag") in done_tags or (not _MULTI and _known(j.get("company"))): continue
     rows.append(j)
+# a row whose form asks bots NOT to answer a question (Apollo GraphQL: "if you're a human, please answer - if you're a bot,
+# don't") carries "you": [{"q", "text", "why"}]: it never joins the hands-free batch; it gets a fill-only link (the filler
+# fills everything else and waits) and the answer written for the applicant to paste
+you_rows = [j for j in rows if j.get("you")]
+rows = [j for j in rows if not j.get("you")]
 
 def appurl(u):
     if "jobs.lever.co" in (u or ""): return re.sub(r"/apply/?$", "", u.rstrip("/")) + "/apply"   # Lever: the apply form
@@ -90,6 +95,18 @@ start_href = (appurl(rows[0]["url"]) + "#akf=" + akf_hash(rows, True)) if rows e
 def one_href(j):
     """A single-job auto link: opening it fills AND submits that one job, no chain to break."""
     return appurl(j["url"]) + "#akf=" + akf_hash([j], True)
+
+def you_box(j):
+    k = H.escape(j.get("tag") or j["url"])
+    qa = "".join(f'<div style="margin:10px 0 4px"><b>{H.escape(p.get("q") or "")}</b></div>'
+                 f'<textarea readonly rows="8" style="width:100%;box-sizing:border-box;font:inherit;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px">{H.escape(p.get("text") or "")}</textarea>'
+                 f'<button type="button" class="cp">Copy answer</button>' for p in j["you"])
+    why = j["you"][0].get("why") or "The form asks bots not to answer one question, so the filler fills everything else and leaves that one to you."
+    return (f'<div class="box"><b>{H.escape(j["company"])} — {H.escape(j["title"])}</b> <span class="l">{H.escape((j.get("loc") or "")[:40])}</span><br>{H.escape(why)}<br>'
+            f'1) <a class="go1" href="{H.escape(appurl(j["url"]) + "#akf=" + akf_hash([j], False))}" target="_blank" rel="noopener" data-k="{k}">Open and fill ▸</a> '
+            f'(fills every other answer and does not submit) · 2) paste the answer below into that question · 3) click Submit Application. '
+            f'The filler logs it once the site confirms.{qa}</div>')
+you_html = (f'<h2 style="font-size:17px;margin:18px 0 4px">You finish these — {len(you_rows)}</h2>' + "".join(you_box(j) for j in you_rows)) if you_rows else ""
 
 def age(j):
     ts = j.get("posted_ts")
@@ -132,7 +149,7 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 .start{{display:inline-block;background:var(--go);color:#fff;font-size:17px;font-weight:700;padding:14px 26px;border-radius:12px;text-decoration:none;margin:6px 0}}
 .start:hover{{filter:brightness(1.07)}}
 </style></head><body>
-<h1>Click Run (Ashby + Lever) — {len(rows)} live, never-applied roles</h1>
+<h1>Click Run (Ashby + Lever) — {len(rows)} live, never-applied roles{f" + {len(you_rows)} you finish" if you_rows else ""}</h1>
 <div id="prog"></div>
 <div class="box"><b>One-time setup (2 minutes):</b> install the <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a> Chrome extension → Tampermonkey menu → <i>Utilities</i> → <i>Import from file</i> → pick <code>{H.escape(us_path)}</code> → Install. Done forever (it auto-updates from the repo). Or on your Mac: <code>bash ~/ashby.sh setup</code> then <code>bash ~/ashby.sh fill</code>.</div>
 <div class="box"><b>Apply to all — one click, hands-free and paced:</b><br>
@@ -140,6 +157,7 @@ code{{background:var(--line);padding:1px 6px;border-radius:5px;font-size:13px}}
 It opens <b>one tab</b>, confirms once, then fills and submits each role on its own, <b>waiting a random {PACE[0]//1000} to {PACE[1]//1000} seconds before each submission</b> so Ashby does not rate-limit you ("application submission unavailable"). It keeps running with the tab in the background (keep it the front tab of its own window). <b>Run it in ONE window only</b>: a second window now waits for the first (they share one lock), and a job this browser already submitted is skipped automatically. Rows you tick as done below are left out of the queue when you press Start. A captcha (mostly Lever) pops up a desktop notification: tick it and click Submit; after 10 minutes the run moves on without it. It stops after three Ashby blocks in a row (wait an hour, then press Start again).</div>
 <div class="box"><b>Run log:</b> every job is logged by the filler: <i>SUBMITTED (confirmation seen)</i>, <i>CLICKED SUBMIT - NO CONFIRMATION</i>, <i>NOT SUBMITTED - needs an answer</i>, <i>BLOCKED</i>, <i>STUCK</i>, <i>CLOSED</i>. On any Ashby page, the filler panel (bottom right) has <b>Run log</b> and <b>Download log</b> (CSV). After clicking Submit it waits up to 90 s for Ashby's own thank-you screen before moving on.</div>
 <div class="box"><b>Prefer to pick a few by hand?</b> Click any row's <b>Apply ▸</b> below — it opens one tab that fills and submits that single role. (Do them a minute or two apart, not all at once.)</div>
+{you_html}
 <table><thead><tr><th></th><th>Age</th><th>Company</th><th>Role</th><th>Location</th><th></th></tr></thead><tbody>{tr}</tbody></table>
 <script>
 const K='akf_clickrun_{GEN}_{H.escape(os.path.basename(OUT))}';let st=null;try{{st=JSON.parse(localStorage.getItem(K)||'null')}}catch(e){{}}
@@ -155,9 +173,10 @@ links.forEach(a=>a.addEventListener('click',()=>{{setTimeout(()=>mark(a.dataset.
 const ITEMS={ITEMS_JS};
 const ME={json.dumps(ME)};const PACE={json.dumps(PACE)};
 function akfHash(items){{let pad='';for(;;){{const js=JSON.stringify({{name:'Ashby queue',auto:true,pad:pad,pace:PACE,me:ME,items:items.map(x=>(x.a?{{u:x.u,t:x.t,c:x.c,a:x.a}}:{{u:x.u,t:x.t,c:x.c}}))}});const b=btoa(unescape(encodeURIComponent(js)));if(!b.includes('='))return b.replace(/\+/g,'-').replace(/\//g,'_');pad+=' ';}}}}
+document.querySelectorAll('button.cp').forEach(b=>b.addEventListener('click',()=>{{const t=b.previousElementSibling;t.select();try{{navigator.clipboard.writeText(t.value)}}catch(e){{document.execCommand('copy')}}b.textContent='Copied ✓';}}));
 document.getElementById('start').addEventListener('click',function(){{const left=ITEMS.filter(x=>!st[x.k]);if(!left.length){{alert('Every row is ticked as done.');return;}}this.href=left[0].u+'#akf='+akfHash(left);this.textContent='▶ Start — apply to '+left.length+' not yet done';}});
 paint();
 </script></body></html>"""
 os.makedirs(PRIV, exist_ok=True)
 open(OUT, "w").write(page)
-print(f"{OUT}: {len(rows)} roles, one-click launcher built (skipped {len(queue)-len(rows)} already submitted/ledgered)")
+print(f"{OUT}: {len(rows)} roles, one-click launcher built (skipped {len(queue)-len(rows)-len(you_rows)} already submitted/ledgered)" + (f"; {len(you_rows)} for the applicant to finish" if you_rows else ""))

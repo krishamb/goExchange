@@ -16,7 +16,7 @@
 'use strict';
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-20.20';
+const VERSION = '2026-10-24.1';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
@@ -301,6 +301,9 @@ async function attach(input, f, entry) {
 // ---------------- answering one question ----------------
 const AI_TEXT = /ai policy|use of ai|ai assistance|ai tools? (in|during)|without (the use of )?ai|ai agent|are you an ai|automated (agent|applicant|submission)|(did|have) you use(d)? (any )?ai|(prepared|submitted|written|generated|completed).{0,40}\b(ai|artificial intelligence)\b/i;
 const AI_YES = /^Yes\. I used AI tools/;   // the applicant's own AI-use disclosure (TEXT_RULES); nothing else answers an AI question
+// a question the employer asks bots NOT to answer (Apollo GraphQL: "If you're a human, please answer - if you're a bot, don't"):
+// a human check, so the filler never answers it and never auto-submits that form; the run page shows the answer for the applicant to paste
+const BOT_ASK = /\bif you(?:['’]re| are) (?:a |an )?(?:bot|robot|ai\b|a\.i\.|llm|(?:large )?language model|automated|machine|chatgpt|gpt)|\bbots?(?: (?:and|or) ai)?,? (?:please )?(?:do not|don['’]?t|should not|shouldn['’]?t|must not|need not) (?:answer|respond|reply|fill|complete)|\b(?:ai|llm)s?(?: agents?)? (?:should|must) (?:not answer|leave)|\bhumans? only\b|\bonly (?:a )?humans? (?:should|can|may|will) (?:answer|respond)/i;
 const DISCLOSE = /non-?compete|non-?solicit|financial interest|conflict of interest|relatives?\b|related to|family member|government official|convicted|felony|i am (currently )?subject to|i (currently )?hold|i have (a|an) (current|existing|ongoing)|i (was|have been) (previously )?(employed|terminated)|debarred|sanction|export/i;
 const ACK = /agree|acknowledge|consent|certify|confirm|privacy|terms|policy|accurate|true|^accept$|i accept|i have read/i;
 const PERSONAL_CERT = /personally (completed|filled|prepared|written|wrote) (out )?(this|the|my) (application|form)|completed (this|the) application (myself|personally|on my own)/i;
@@ -602,6 +605,7 @@ async function answerEntry(e, rep) {   // one question: this job's own answer fi
   const path = e.getAttribute('data-field-path') || '';
   if (/_systemfield_education|_systemfield_resume/.test(path) || e.closest('[class*="education"]')) return;
   const q = titleOf(e) || descOf(e);
+  if (BOT_ASK.test(q + ' ' + descOf(e))) { (rep.human = rep.human || []).push(q); return; }   // even a per-job answer is never typed in here
   try {
     const fp = fieldPath(e);
     if (fp && !PLAN_SKIP.test(fp) && Object.prototype.hasOwnProperty.call(JOB.plan, fp) && JOB.plan[fp] !== null && JOB.plan[fp] !== '') {
@@ -628,7 +632,7 @@ async function answerEntry(e, rep) {   // one question: this job's own answer fi
   } catch (err) { rep.notes.push(q.slice(0, 50) + ': ' + (err && err.message || err)); }
 }
 async function fillForm(opts = {}) {
-  const rep = { filled: [], ask: [], tech: [], options: {}, missing: [], resume: null, notes: [], office: [] };
+  const rep = { filled: [], ask: [], tech: [], options: {}, missing: [], resume: null, notes: [], office: [], human: [] };
   const info = jobInfo(); Object.assign(JOB, info);
   JOB.bay = /San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward/.test(info.desc.slice(0, 1500));
   JOB.okOffice = JOB.bay || (/New York|NYC|Manhattan|Brooklyn/.test(info.desc.slice(0, 1500)) && /hybrid/i.test(info.desc));   // Bay Area on-site / hybrid and NY hybrid are fine (applicant's rules)
@@ -680,14 +684,14 @@ async function fillForm(opts = {}) {
     }
   }
   if (rep.resume === 'FAILED' && rin && hasResume(resumeInput() || rin)) { rep.resume = rf.name; rep.notes = rep.notes.filter(n => !/resume upload not confirmed/.test(n)); }
-  for (const k of ['ask', 'notes', 'tech', 'office']) rep[k] = [...new Set(rep[k])];
+  for (const k of ['ask', 'notes', 'tech', 'office', 'human']) rep[k] = [...new Set(rep[k])];
   for (const e of entries()) {
     const path = e.getAttribute('data-field-path') || '';
     if (/_systemfield_education/.test(path)) continue;
     if (isRequired(e) && !answered(e)) rep.missing.push(titleOf(e) || descOf(e) || path);
   }
   if (SITE === 'ashby') touchAll();   // a last focus-out on every typed answer, so Ashby saves them even if you click Submit yourself
-  rep.ready = !rep.missing.length && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP';
+  rep.ready = !rep.missing.length && !rep.ask.length && !rep.office.length && !rep.human.length && rep.resume && rep.resume !== 'FAILED' && rep.resume !== 'NOT SET UP';
   return rep;
 }
 
@@ -756,7 +760,7 @@ const findSubmit = () => (SITE === 'lever' && document.querySelector('#btn-submi
 async function submitForm() {
   let btn = findSubmit();
   if (!btn) return { status: 'error', why: 'no Submit button on the form' };
-  const rep2 = { filled: [], ask: [], tech: [], options: {}, missing: [], notes: [], office: [] };
+  const rep2 = { filled: [], ask: [], tech: [], options: {}, missing: [], notes: [], office: [], human: [] };
   const notSaved = await ensureSaved(rep2);
   const before = document.body.innerText || '';
   const OKG = new RegExp(OK_RX.source, 'gi');
@@ -856,6 +860,7 @@ function summary(rep) {
   lines.push(`Resume: ${rep.resume || '-'}`);
   lines.push(`Answered: ${rep.filled.length}`);
   if (rep.ask.length) lines.push(`For you (AI-use / personal certification): ${rep.ask.map(x => x.slice(0, 60)).join('; ')}`);
+  if (rep.human.length) lines.push(`For you (the form asks bots not to answer; paste your answer from the run page): ${rep.human.map(x => x.slice(0, 60)).join('; ')}`);
   if (rep.missing.length) lines.push(`Still needed: ${rep.missing.map(x => x.slice(0, 60)).join('; ')}`);
   if (rep.office.length) lines.push(`Heads-up: this form asks about office days outside the Bay Area / NY hybrid (${rep.office.map(x => x.slice(0, 60)).join('; ')}): your call.`);
   if (rep.notes.length) lines.push(`Notes: ${rep.notes.join('; ').slice(0, 300)}`);
@@ -1015,7 +1020,7 @@ async function batchStep(q) {
   let rep; const tFill = Date.now(); STEP = 'filling the form';
   try {
     rep = await fillForm({ prior: item.p || [], answers: item.a });
-    if (!rep.ready && (rep.missing.length || rep.resume === 'FAILED') && !rep.ask.length && !rep.office.length && rep.resume && rep.resume !== 'NOT SET UP') {
+    if (!rep.ready && (rep.missing.length || rep.resume === 'FAILED') && !rep.ask.length && !rep.office.length && !rep.human.length && rep.resume && rep.resume !== 'NOT SET UP') {
       // questions the rules answer but the page did not take (slow list, re-render): settle, then answer them once more
       STEP = 'second pass on: ' + rep.missing.join('; ').slice(0, 60);
       if (!await whileThrottled(q, item, 'filling')) return true;
@@ -1038,7 +1043,7 @@ async function batchStep(q) {
     S.set('lastSubmitAt', Date.now());
     status(`Submitting ${item.c} - ${item.t}...`); res = await submitForm();
   }
-  else res = { status: 'needs', why: (rep.missing.concat(rep.ask).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') + (rep.notes.length ? ' || ' + rep.notes.filter(n => n !== 'second pass').slice(0, 3).join(' | ') : '')).replace(/^ \|\| /, '') || 'not auto-submitted' };
+  else res = { status: 'needs', why: (rep.missing.concat(rep.ask).concat(rep.human.map(x => 'for you (bots asked not to answer): ' + x)).concat(rep.office.map(x => 'office days: ' + x)).map(x => x.slice(0, 60)).join('; ') + (rep.notes.length ? ' || ' + rep.notes.filter(n => n !== 'second pass').slice(0, 3).join(' | ') : '')).replace(/^ \|\| /, '') || 'not auto-submitted' };
   res.answered = rep.filled.length; res.fillSecs = Math.round((Date.now() - tFill) / 1000) - (res.confirmSecs || 0);
   if (res.status === 'captcha' || !q.auto) {   // the applicant reviews and clicks Submit; the next job opens after the site confirms
     status(summary(rep) + (res.status === 'captcha' ? `\n\n${res.why}` : '') + `\n\nWhen you click Submit and the site confirms, the next job opens by itself.${q.auto ? ' (Moves on by itself after 3 minutes.)' : ''}`);
