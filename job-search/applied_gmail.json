@@ -5037,7 +5037,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (role named in the 2026-10-24 rejection email)"
+   ],
+   "status": "REJECTED 2026-10-24 (Senior Software Engineer); DebtBook is now Monetary (same sender, debtbook.com); both names on the rejected list"
   },
   "decagon": {
    "name": "Decagon",
