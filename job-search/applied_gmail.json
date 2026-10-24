@@ -18091,13 +18091,15 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse",
    "dates": [
+    "2026-10-05",
     "2026-10-23"
    ],
    "roles": [
     "Head of Outcome Engineering",
     "Senior AI/ML Engineer \u2014 LLM & Agent Stack (Customer Facing)"
    ],
-   "count": 2
+   "count": 3,
+   "status": "3 applications (Oct 5 via cloud_greenhouse + 2 on Oct 23): 3-per-company cap reached"
   },
   "trumid": {
    "name": "Trumid",
