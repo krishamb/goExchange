@@ -4728,6 +4728,16 @@
    "count": 1,
    "note": "prior Ashby queue (applied-before per user)"
   },
+  "csaainsurancegroup": {
+   "name": "CSAA Insurance Group",
+   "dates": [
+    "2026-10-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer - Emerging Technology & AI - Remote"
+   ]
+  },
   "csl": {
    "name": "CSL",
    "dates": [
@@ -13112,11 +13122,13 @@
   "paretohealth": {
    "name": "ParetoHealth",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Principal Data Architect"
    ]
   },
   "pariveda": {
@@ -16815,6 +16827,16 @@
     "Member of the Technical Staff \u2014 Applied AI, Fullstack"
    ],
    "status": "rejected 2026-10-09"
+  },
+  "submittable": {
+   "name": "Submittable",
+   "dates": [
+    "2026-10-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Engineering"
+   ]
   },
   "successacademycharterschools": {
    "name": "Success Academy Charter Schools",
