@@ -14626,6 +14626,18 @@
    ],
    "count": 1
   },
+  "reign": {
+   "name": "Reign (Phoenix eCommerce Technologies)",
+   "dates": [
+    "2026-10-11",
+    "2026-10-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Head of AI Developer Infrastructure"
+   ],
+   "status": "same employer as phoenixecommercetechnologies; Oct 11 role not recorded"
+  },
   "relationinsuranceservices": {
    "name": "Relation Insurance Services",
    "dates": [
@@ -18077,7 +18089,15 @@
   "truefoundry": {
    "company": "truefoundry",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "dates": [
+    "2026-10-23"
+   ],
+   "roles": [
+    "Head of Outcome Engineering",
+    "Senior AI/ML Engineer \u2014 LLM & Agent Stack (Customer Facing)"
+   ],
+   "count": 2
   },
   "trumid": {
    "name": "Trumid",
@@ -19842,18 +19862,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "reign": {
-   "name": "Reign (Phoenix eCommerce Technologies)",
-   "dates": [
-    "2026-10-11",
-    "2026-10-23"
-   ],
-   "count": 2,
-   "roles": [
-    "Head of AI Developer Infrastructure"
-   ],
-   "status": "same employer as phoenixecommercetechnologies; Oct 11 role not recorded"
   }
  }
 }
