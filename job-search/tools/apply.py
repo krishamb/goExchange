@@ -784,6 +784,7 @@ CHOICE_RULES=[
  (r"may use artificial intelligence or other automated tools", ["I acknowledge","I Acknowledge","Acknowledge","I understand","I agree","Yes"]),
  (r"at any time worked for|ever worked for .{0,60}(brands|subsidiar|affiliates)", ["No","no"]),
  (r"^what is your identity\??$", ["Male","Man","Prefer not to answer","I prefer not to answer"]),
+ (r"^how do you identify\??\*?$", ["Male","Man","I choose not to respond","Prefer not to answer","I prefer not to answer","Decline to self-identify"]),   # CSAA (10-23) gender checkboxes (Female / Male / Nonbinary / ... / I choose not to respond): the applicant's gender is Male; any other list (e.g. race) gets the decline
  (r"serve as a director, officer, adviser|currently serve as an officer, director", ["Yes","yes"]),
  (r"related to,? or (do you )?have a close personal relationship with an employee", ["No","no"]),
  (r"type of employment desired", ["Full-Time","Full-time","Full Time","Regular Full-Time","Regular"]),
@@ -1309,7 +1310,7 @@ CHOICE_RULES=[
  (r"(experience|worked|work(ing)? with|proficien\w*|familiar\w*|expertise|hands-on|used|built|developed|certified).{0,80}(?<![a-z0-9])(salesforce|apex|sap|abap|servicenow|workday (hcm|financials|integrations?)|netsuite|dynamics 365|unity|unreal|game engine|swiftui|ios development|android development|kotlin|php|laravel|ruby on rails|epic (ehr|systems)|cerner|hl7|verilog|vhdl|systemverilog|rtl design|plc|autocad|solidworks|cobol|mainframe|sharepoint|power bi|tableau developer|figma|neo4j|graph database|cypher|mongodb|dynamodb|snowflake|dbt|looker|react native|angular(js)?|vue(\.?js)?|next\.?js|svelte)(?![a-z0-9])", ["Yes","yes"]),   # not on the resume: answer honestly   # applicant (2026-10-08): Yes to all technical questions
  (r"^(?!.*(veteran|military|armed forces))(have you (ever )?(worked|built|owned|operated|led|designed|managed|shipped|deployed|architected|scaled|mentored|hired|delivered|run|written)|.*experience (with|in|building|leading|managing|designing)|.*are you (comfortable|experienced|familiar|proficient)|.*do you have (hands-on )?experience|.*have you (previously )?(held|been in|served as))", ["Yes","yes"]),
  (r"transgender", ["No","no","I don't wish to answer","Decline"]),
- (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","Heterosexual","Straight"]),
+ (r"sexual orientation|lgbtq", ["I don't wish to answer","Decline To Self Identify","Decline","Prefer not to say","Prefer not to answer","I choose not to respond","I choose not to answer","Heterosexual","Straight"]),   # CSAA (10-23) words its decline "I choose not to respond"
  (r"first.generation", ["I don't wish to answer","Decline","Prefer not","No","no"]),
  (r"gender|sex\b|\bmale\b|female|\bman\b|woman", ["Male","Man","Cisgender man","Cis man","Cis-gender man"]),
  (r"programming language|language\(s\)|which language|coding language", ["Either","Both","Python","Go"]),
@@ -2042,7 +2043,7 @@ async def run():
             if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"SKIPPED: {_rj} rejected the applicant before (never apply again)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
-            if MIN_LEVEL_BELOW.search(str(job.get("title") or "")):
+            if str(job.get("title") or "").strip() and MIN_LEVEL_BELOW.search(str(job.get("title") or "")):   # a single-job run carries no title: the level gate has nothing to judge (it matched "" and skipped every hand retry)
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above; 2026-10-17)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
             if JUNIOR_LEVEL.search(str(job.get("title") or "")):

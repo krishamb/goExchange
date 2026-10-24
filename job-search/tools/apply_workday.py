@@ -996,7 +996,7 @@ async def fill_page(page, job):
                     try:   # probe the stubborn field's DOM so a precise fix is possible (e.g. a role=checkbox, not an <input>)
                         box = page.locator(f'[data-fkit-id="{f["fkit"]}"]' if f.get("fkit") else A(f'formField-{f["id"]}')).first
                         probe = await box.evaluate("""(el)=>{const i=el.querySelector('input[type=checkbox]'); const lab=el.querySelector('label'); let after=null;
-                          if(i){try{i.click(); after=i.checked;}catch(e){after='err:'+e.message}}
+                          if(i){try{const was=i.checked; i.click(); after=i.checked; if(after!==was) i.click();}catch(e){after='err:'+e.message}}   // undo the test click: it must never leave a box ticked in the draft (CSAA 10-23: 'Female' stayed ticked)
                           return {inputCbx: el.querySelectorAll('input[type=checkbox]').length, inpId: i&&i.id, disabled: i&&(i.disabled||i.getAttribute('aria-disabled')), labFor: lab&&lab.getAttribute('for'), checkedAfterClick: after, html: el.outerHTML.replace(/\\s+/g,' ').slice(0,300)};}""")
                         job.report.setdefault("debug", {})[k[:80]] = {"kind": f["kind"], "id": f["id"], **probe}
                     except Exception as e:
