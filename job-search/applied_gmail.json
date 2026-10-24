@@ -545,11 +545,13 @@
   "ahead": {
    "name": "AHEAD",
    "dates": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-10-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Principal Engineer, Software Engineering"
+    "Principal Engineer, Software Engineering",
+    "Senior Software Developer"
    ],
    "via": "gmail confirmation (Lever)"
   },
@@ -2068,13 +2070,14 @@
     "2026-10-09",
     "2026-10-23"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "Managing Director \u2013 Enterprise Architecture, Data & AI Governance",
     "Principal Platform Engineer - Integrations",
-    "Head of Data & AI Platform"
+    "Head of Data & AI Platform",
+    "Head of Agent Engineering (applicant via Indeed, 2026-10-23 22:47 PT)"
    ],
-   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 applications, one per level (director, staff, exec): cap reached"
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached"
   },
   "bakertillycanada": {
    "name": "Baker Tilly Canada",
@@ -2093,13 +2096,14 @@
     "2026-10-09",
     "2026-10-23"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "Managing Director \u2013 Enterprise Architecture, Data & AI Governance",
     "Principal Platform Engineer - Integrations",
-    "Head of Data & AI Platform"
+    "Head of Data & AI Platform",
+    "Head of Agent Engineering (applicant via Indeed, 2026-10-23 22:47 PT)"
    ],
-   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 applications, one per level (director, staff, exec): cap reached"
+   "status": "Baker Tilly US = Baker Tilly (same employer, bakertilly.wd5 Workday); 3 bot applications (director, staff, exec) + the applicant's own Indeed application (Head of Agent Engineering, Oct 23): cap reached"
   },
   "baldwin": {
    "name": "baldwin",
