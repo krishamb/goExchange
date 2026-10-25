@@ -11663,7 +11663,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Principal Orchestration Engineer"
+   ],
+   "status": "rejected 2026-10-25 (Principal Orchestration Engineer; Genuine Parts Company / Motion Industries, genpt Workday)"
   },
   "motional": {
    "name": "Motional",
