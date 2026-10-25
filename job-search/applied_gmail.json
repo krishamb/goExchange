@@ -18072,6 +18072,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "trellix": {
+   "name": "Trellix",
+   "dates": [
+    "2026-10-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
   "trepp": {
    "name": "Trepp ",
    "dates": [
