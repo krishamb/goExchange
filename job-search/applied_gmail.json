@@ -19923,6 +19923,16 @@
     "2026-10-08"
    ],
    "count": 1
+  },
+  "blackrock": {
+   "name": "BlackRock",
+   "dates": [
+    "2026-10-25"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Platform & Application Engineer - Vice President"
+   ]
   }
  }
 }
