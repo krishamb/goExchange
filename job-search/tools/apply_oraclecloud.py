@@ -952,15 +952,19 @@ async def run_one(br, item):
     try:
         if NEVER_APPLY.search(job.tag + " " + item.get("company", "") + " " + job.url):
             job.report["result"] = "NOT SUBMITTED: do-not-apply company"; return job.report
+        # the applicant's explicit instruction for this job (e.g. 2026-10-24 "apply to executive director JPMC Digital assets"),
+        # recorded on the queue item: "override": ["rejected", "location"] lifts only those gates, never NEVER_APPLY or the level gates
+        _ov = set(item.get("override") or [])
+        if _ov: print(f"[{job.tag}] override {sorted(_ov)}: {item.get('override_reason', '')}", file=sys.stderr, flush=True)
         _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""), job.url)
-        if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
+        if _rj and "rejected" not in _ov:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
             job.report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return job.report
         if MIN_LEVEL_BELOW.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above)"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report
         _lb = location_block(item.get("company", ""), job.url, item.get("loc", ""), item.get("where", ""))
-        if _lb:
+        if _lb and "location" not in _ov:
             job.report["result"] = "NOT SUBMITTED: " + _lb; return job.report
         ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles",
                                    storage_state=sp if os.path.exists(sp) else None)
