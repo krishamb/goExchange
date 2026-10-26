@@ -2305,7 +2305,8 @@
    "count": 1,
    "roles": [
     "Staff Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-26 (Staff Architect)"
   },
   "bedrockoceanexploration": {
    "name": "Bedrock Ocean Exploration",
@@ -7484,7 +7485,7 @@
     "Senior Software Engineer",
     "Staff Engineer \u2014 Product Engineering"
    ],
-   "status": "next round: Zoom interview with Sean Medcalf (Head of Engineering), availability requested 2026-10-24, none of the first times worked and more options were requested 2026-10-26 (Staff Engineer \u2014 Product Engineering); recruiter interview was Wed 2026-10-21"
+   "status": "next round CONFIRMED: Zoom interview with Sean Medcalf (Head of Engineering, hiring manager; discussion-based, no live coding expected) Fri 2026-10-30 11:45 AM-12:30 PM PDT (Staff Engineer \u2014 Product Engineering); recruiter interview was Wed 2026-10-21"
   },
   "gamechanger": {
    "name": "GameChanger",
