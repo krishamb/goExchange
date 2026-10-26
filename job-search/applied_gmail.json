@@ -10005,11 +10005,13 @@
   "klaviyo": {
    "name": "Klaviyo",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-26"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Machine Learning Engineer"
+    "Senior Machine Learning Engineer",
+    "Senior Lead AI Engineer - G&A Systems"
    ]
   },
   "kldiscovery": {
@@ -13682,12 +13684,14 @@
   "pingidentity": {
    "name": "Ping Identity",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-26"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Software Engineer",
-    "Staff Software Engineer, Machine Learning"
+    "Staff Software Engineer, Machine Learning",
+    "Senior Engineering Manager - Developer Platform (DevEx)"
    ]
   },
   "pinterest": {
