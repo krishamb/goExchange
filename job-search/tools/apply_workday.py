@@ -1377,7 +1377,7 @@ async def run_one(ctx, item, s):
     _nyla = item.get("where") in ("ny-hybrid", "ny-remote", "la-hybrid") or bool(re.search(r"new york|\bnyc\b|los angeles", item.get("loc", "") or "", re.I))
     _bayj = item.get("where") in ("bay", "bay-hybrid", "bay-onsite") or bool(re.search(r"san francisco|bay area|palo alto|menlo park|mountain view|sunnyvale|san jose|santa clara|redwood city|san mateo|oakland|fremont|cupertino|milpitas|foster city|burlingame|emeryville|berkeley|pleasanton|san ramon", item.get("loc", "") or "", re.I))
     if not _nyla and not _bayj:   # applicant lives in the SF Bay Area and relocates only for NYC / LA hybrid roles (Coca-Cola 2026-10-16: generic "willing to relocate?" had answered Yes)
-        G["JOB_CHOICE_RULES"].append((r"relocat(?!ion (assistance|package|support|reimbursement))", ["No", "no", "No, I am not willing to relocate", "I am not willing to relocate", "Not interested in relocating"]))
+        G["JOB_CHOICE_RULES"].append((r"^(?!.*\b(able to|can|could) work (in|from|at) the location (listed|for this role|in (this|the) (job )?posting)).*relocat(?!ion (assistance|package|support|reimbursement))", ["No", "no", "No, I am not willing to relocate", "I am not willing to relocate", "Not interested in relocating"]))   # Exol 10-26: "able to work from the location listed ..., or willing to relocate?" on a remote role is Yes (CHOICE_RULES), not a relocation No
     elif _nyla and not _bayj:   # an NYC / LA hybrid role he would relocate for (T-Mobile 10-16 options: Local / Statewide / Nationwide / Anywhere / Not interested)
         G["JOB_CHOICE_RULES"].append((r"^are you interested in relocating\??( if so,? where\??)?$", ["Nationwide", "Yes"]))
     G["JOB_TEXT_RULES"] = []
