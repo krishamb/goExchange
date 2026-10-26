@@ -2051,7 +2051,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-26 (Sr Software Engineer)",
+   "roles": [
+    "Sr Software Engineer"
+   ]
   },
   "bainco": {
    "name": "Bain & Co.",
