@@ -17482,6 +17482,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "telnyx": {
+   "name": "Telnyx",
+   "dates": [
+    "2026-10-26"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Python"
+   ]
+  },
   "telusdigital": {
    "name": "TELUS Digital",
    "dates": [
