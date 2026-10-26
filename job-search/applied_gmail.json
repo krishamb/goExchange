@@ -7858,7 +7858,8 @@
    "count": 1,
    "roles": [
     "Founding Solutions Architect - AI Solutions"
-   ]
+   ],
+   "status": "rejected 2026-10-26 (Founding Solutions Architect - AI Solutions)"
   },
   "glimpse": {
    "name": "Glimpse",
@@ -8078,7 +8079,8 @@
    "count": 1,
    "roles": [
     "Product Engineering Director"
-   ]
+   ],
+   "status": "rejected 2026-10-26 (Product Engineering Director)"
   },
   "granum": {
    "name": "Granum",
@@ -17863,7 +17865,8 @@
    "roles": [
     "Senior Technical Architect"
    ],
-   "via": "applicant's own application (Rippling confirmation email)"
+   "via": "applicant's own application (Rippling confirmation email)",
+   "status": "moving forward: video assessment (Rippling) due Wed 2026-10-28 11:29 AM PDT, invite 2026-10-26; the applicant completes it (Senior Technical Architect)"
   },
   "threshconsulting": {
    "name": "Thresh Consulting",
@@ -18299,7 +18302,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Software Architect - Enterprise AI"
+   ],
+   "status": "rejected 2026-10-26 (Software Architect - Enterprise AI)"
   },
   "twin": {
    "company": "twin",
