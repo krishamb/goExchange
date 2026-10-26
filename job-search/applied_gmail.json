@@ -7483,7 +7483,7 @@
     "Senior Software Engineer",
     "Staff Engineer \u2014 Product Engineering"
    ],
-   "status": "next round: Zoom interview with Sean Medcalf (Head of Engineering), availability requested 2026-10-24 (Staff Engineer \u2014 Product Engineering); recruiter interview was Wed 2026-10-21"
+   "status": "next round: Zoom interview with Sean Medcalf (Head of Engineering), availability requested 2026-10-24, none of the first times worked and more options were requested 2026-10-26 (Staff Engineer \u2014 Product Engineering); recruiter interview was Wed 2026-10-21"
   },
   "gamechanger": {
    "name": "GameChanger",
@@ -8604,7 +8604,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Deployment Architect - Email & SMS / Messaging"
+   ],
+   "status": "rejected 2026-10-26 (Deployment Architect - Email & SMS / Messaging)"
   },
   "hilberts": {
    "name": "hilberts",
