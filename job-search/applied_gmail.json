@@ -2550,6 +2550,16 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse"
   },
+  "blackberry": {
+   "name": "BlackBerry",
+   "dates": [
+    "2026-10-26"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Systems Engineer"
+   ]
+  },
   "blackducksoftware": {
    "company": "Black Duck Software",
    "first": "2026-10-05",
