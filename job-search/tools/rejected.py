@@ -29,6 +29,8 @@ def hit(rej, company, url=""):
     if k in rej:
         return k
     for s in _SUFFIX:
+        if s == "co" and not re.search(r"\bco\.?\s*$", (company or "").lower()):
+            continue   # 'co' only as its own word: 'Sofico' is not 'SoFi Co'
         if k.endswith(s) and k[: -len(s)] in rej:
             return k[: -len(s)]
     b = board(url)
