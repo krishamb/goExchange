@@ -4819,7 +4819,8 @@
    "role": "Director, Data Engineering",
    "roles": [
     "Director, Data Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-26 (Director, Data Engineering: 'the position has been filled')"
   },
   "current": {
    "name": "Current",
@@ -5877,7 +5878,7 @@
     "Senior Compiler Engineer",
     "Engineering Manager - Architecture"
    ],
-   "status": "rejected 2026-10-16"
+   "status": "rejected 2026-10-16; rejected 2026-10-26 (Senior Compiler Engineer)"
   },
   "eikontherapeutics": {
    "name": "Eikon Therapeutics",
