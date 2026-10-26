@@ -5794,7 +5794,8 @@
    "roles": [
     "Senior Full Stack Software Engineer",
     "Software Engineering Manager, Applications"
-   ]
+   ],
+   "status": "rejected 2026-10-26 (the email names no role; applied: Senior Full Stack Software Engineer, Software Engineering Manager, Applications)"
   },
   "eclinicalsolutions": {
    "name": "eClinical Solutions",
@@ -14681,7 +14682,7 @@
     "Senior Product Engineer, Policy Engine, AI Platform",
     "Staff Product Engineer, Agentic Identity & Governance, AI Platform"
    ],
-   "status": "rejected 2026-10-20 (Senior Product Engineer, Policy Engine, AI Platform)"
+   "status": "rejected 2026-10-20 (Senior Product Engineer, Policy Engine, AI Platform); rejected 2026-10-26 (Staff Product Engineer, Agentic Identity & Governance, AI Platform)"
   },
   "reducto": {
    "name": "Reducto",
@@ -14972,7 +14973,7 @@
     "Manager, Software Engineering (Services Lead) - Unpublished R&D Product",
     "Senior Software Engineer, Riot Client - Publishing Platform"
    ],
-   "status": "rejected 2026-10-19"
+   "status": "rejected 2026-10-19; rejected 2026-10-26 (Staff Machine Learning Engineer - Game Tech Group, ML Platform)"
   },
   "ripple": {
    "name": "Ripple",
