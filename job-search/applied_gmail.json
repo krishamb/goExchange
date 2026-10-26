@@ -780,11 +780,13 @@
    "name": "Allstate",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-26"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior AI Software Engineer"
+    "Senior AI Software Engineer",
+    "Principal Software Engineer"
    ]
   },
   "alltechconsultingservicesincdice": {
@@ -18680,7 +18682,8 @@
    "roles": [
     "Director, Data Analytics & Engineering, Operations NA, CO11"
    ],
-   "via": "gmail confirmation (Workday)"
+   "via": "gmail confirmation (Workday)",
+   "status": "rejected 2026-10-15 (Director, Data Analytics & Engineering, Operations NA, CO11; recorded 2026-10-26)"
   },
   "vantagescore": {
    "name": "VantageScore",
