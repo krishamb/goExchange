@@ -9679,11 +9679,13 @@
    "name": "Judi Health",
    "dates": [
     "2026-10-08",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-26"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "SVP, Platform"
    ]
   },
   "jumio": {
