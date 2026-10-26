@@ -11869,7 +11869,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Principal Architect (Remote)"
+   ],
+   "status": "rejected 2026-10-26 (Principal Architect (Remote))"
   },
   "mystenlabs": {
    "name": "Mysten Labs",
