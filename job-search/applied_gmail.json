@@ -3982,7 +3982,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Sr. DevOps Engineering Manager"
+   ],
+   "status": "rejected 2026-10-26 (Sr. DevOps Engineering Manager)"
   },
   "clera": {
    "name": "Clera",
