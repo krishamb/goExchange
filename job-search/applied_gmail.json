@@ -723,6 +723,16 @@
    ],
    "status": "screening submitted by the applicant 2026-10-20 (AI Platform Engineer - Virtual)"
   },
+  "alignmenthealth": {
+   "name": "Alignment Health",
+   "dates": [
+    "2026-10-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Automation Engineer"
+   ]
+  },
   "alkami": {
    "name": "Alkami",
    "dates": [
@@ -2541,6 +2551,16 @@
     "Application Security Engineer (West Coast)"
    ],
    "status": "rejected 2026-10-21 (Application Security Engineer (West Coast); role recorded from the rejection email)"
+  },
+  "blackrock": {
+   "name": "BlackRock",
+   "dates": [
+    "2026-10-25"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Platform & Application Engineer - Vice President"
+   ]
   },
   "blacksky": {
    "name": "BlackSky",
@@ -19926,16 +19946,6 @@
     "2026-10-08"
    ],
    "count": 1
-  },
-  "blackrock": {
-   "name": "BlackRock",
-   "dates": [
-    "2026-10-25"
-   ],
-   "count": 1,
-   "roles": [
-    "AI Platform & Application Engineer - Vice President"
-   ]
   }
  }
 }
