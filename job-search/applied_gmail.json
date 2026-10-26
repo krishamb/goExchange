@@ -10991,7 +10991,11 @@
     "2026-10-11"
    ],
    "count": 2,
-   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)",
+   "roles": [
+    "Principal, Legal AI Engineering"
+   ],
+   "status": "rejected 2026-10-26 (Principal, Legal AI Engineering)"
   },
   "material": {
    "name": "Material",
