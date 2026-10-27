@@ -44,9 +44,10 @@ exec(_seg("EDU_START=", "\nasync def is_edu_date"), G)
 exec(_seg("def _match(", "\nasync def open_menu"), G)
 exec(_seg("HEAR_Q=", "\nasync def choose_react_select"), G)
 # applicant 2026-10-16: a row marked remote must be remote on the posting itself (Coca-Cola's 'remote' row was an Atlanta role)
-import ssl as _ssl, urllib.request as _ureq
+import ssl as _ssl, urllib.request as _ureq, html as _html
 _REM_LOC = re.compile(r"remote|virtual|telecommut|telework|work (from|at) home|home[- ]?based|\bwfh\b|^\s*home\s*[-:]\s*(united states|usa?\b|u\.s\.)", re.I)   # 'Home-United States' (Flexera Oct 22) and '<State> - Home Teleworkers' (CSAA Oct 23) are remote locations
 _STATE_ONLY = re.compile(r"\b(alabama|alaska|arizona|arkansas|colorado|connecticut|delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming)\b|\b(AL|AK|AZ|AR|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\b", re.I)
+_JD_REMOTE = re.compile(r"(?<!not )(?<!n't )\b(eligible to be (performed|worked|done) remotely|(this|the) (position|role|job) (is|can be) (performed |worked |done )?(fully[- ]|100% )?remote(ly)?\b)", re.I)   # Sony 10-26: 'This position is eligible to be performed remotely' on a San Diego / Culver City posting with remoteType None
 def wd_remote_check(url):
     """-> (is_remote: bool|None, where_text). None when the posting data could not be read (do not block then)."""
     m = re.match(r"https://([^/]+)/(?:[a-z]{2}-[A-Z]{2}/)?([^/]+)/job/(.+?)(?:\?.*)?$", url or "")
@@ -68,6 +69,13 @@ def wd_remote_check(url):
         return False, txt + " [remote limited to a state other than California]"   # 'WORK AT HOME - OHIO', 'Remote MA; Remote CT' (Bob's Oct 16)
     if "remote" in rt or "virtual" in rt or rem: return True, txt   # 'Work at Home' with no state is remote (Evolent Oct 16)
     if any(re.fullmatch(r"\s*(united states( of america)?|usa|us)\s*", l, re.I) for l in locs if l): return True, txt   # country-only location = remote-eligible
+    jd = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", _html.unescape(d.get("jobDescription") or "")))
+    for m in _JD_REMOTE.finditer(jd):   # employer-stated remote in the description (not limited to a state other than California)
+        tail = jd[m.end():m.end() + 60]
+        st = re.match(r"\s*(only\s+)?(in|within|from)\s+(the\s+state\s+of\s+)?([A-Za-z .]{2,30})", tail)
+        if st and _STATE_ONLY.search(st.group(4)) and not re.search(r"california|\bCA\b|united states|\bUSA?\b|u\.s\.", st.group(4), re.I):
+            continue
+        return True, txt + " [description: " + m.group(0) + "]"
     return False, txt
 
 exec(_seg("NEVER_APPLY=", "\n"), G)
