@@ -64,7 +64,8 @@ def wd_remote_check(url):
     locs = [d.get("location") or ""] + list(d.get("additionalLocations") or [])
     txt = f"{'; '.join(l for l in locs if l)} (remoteType {d.get('remoteType')})"
     rt = (d.get("remoteType") or "").lower()
-    rem = [l for l in locs if l and _REM_LOC.search(l)]
+    if re.search(r"\bnon[- ]?remote\b|\bnot remote\b|\bno remote\b", rt): rt = ""   # Nike 10-26: remoteType 'Non-Remote Posting' is no remote signal ('remote' matched inside it)
+    rem = [l for l in locs if l and _REM_LOC.search(l) and not re.search(r"\bnon[- ]?remote\b", l, re.I)]
     if rem and all(_STATE_ONLY.search(l) and not re.search(r"california|\bCA\b|united states|\bUSA?\b|u\.s\.|nationwide|anywhere", l, re.I) for l in rem) and not any(l and not _REM_LOC.search(l) and re.search(r"california|\bCA\b", l) for l in locs):
         return False, txt + " [remote limited to a state other than California]"   # 'WORK AT HOME - OHIO', 'Remote MA; Remote CT' (Bob's Oct 16)
     if "remote" in rt or "virtual" in rt or rem: return True, txt   # 'Work at Home' with no state is remote (Evolent Oct 16)
@@ -1483,8 +1484,7 @@ async def run_one(ctx, item, s):
                     job.report["result"] = "NOT SUBMITTED: form errors"; return job.report
                 repaired.add(raw)
                 for e in errs:   # 'Error-What is your desired Annual Salary? The number entered is too large.' -> refill that field with a plain number
-                    m = re.match(r"\s*Error[-:]\s*(.+?)\s+(The number entered|must be a (whole )?number|enter a (valid )?number|is not a valid number|must be numeric)", e, re.I)
-                    if m:
+                    for m in re.finditer(r"(?:^|\s)Error[-:]\s*(.+?)\s+(The number entered|must be a (whole )?number|enter a (valid )?number|is not a valid number|must be numeric)", e, re.I):   # Sony 10-26: one error string can name several fields
                         if not hasattr(job, "numeric_keys"): job.numeric_keys = set()
                         job.numeric_keys.add(m.group(1).strip())
                 log(job, f"Workday errors on '{step}': {errs[:4]}; filling the step once more" + (f" (numeric: {sorted(getattr(job, 'numeric_keys', []))})" if getattr(job, "numeric_keys", None) else ""))
