@@ -16216,12 +16216,15 @@
   "sitime": {
    "name": "SiTime",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-26"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. AI Engineer"
-   ]
+    "Sr. AI Engineer",
+    "Head of Enterprise AI Applications"
+   ],
+   "status": "2026-10-26: applied by the applicant (Greenhouse confirmation 06:42Z Oct 27): Head of Enterprise AI Applications"
   },
   "sitimecorporation": {
    "name": "SiTime Corporation",
