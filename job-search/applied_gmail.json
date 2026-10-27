@@ -2492,7 +2492,11 @@
     "2026-10-20"
    ],
    "count": 2,
-   "note": "2026-10-21 06:18Z Greenhouse confirmation, role not named; not sent by any bot or lane (the applicant's own application; the sweeps had dropped BillionToOne's roles as product management / marketing)"
+   "note": "2026-10-21 06:18Z Greenhouse confirmation, role not named; not sent by any bot or lane (the applicant's own application; the sweeps had dropped BillionToOne's roles as product management / marketing)",
+   "roles": [
+    "Senior Director, Software Product Management and Product Engineering"
+   ],
+   "status": "rejected 2026-10-27 (Senior Director, Software Product Management and Product Engineering)"
   },
   "binance": {
    "name": "Binance",
@@ -3524,7 +3528,8 @@
     "Principal Architect",
     "AI/ML Engineering Manager",
     "Senior Forward Deployed Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (AI/ML Engineering Manager)"
   },
   "cdw": {
    "name": "cdw",
@@ -3796,7 +3801,7 @@
    "roles": [
     "Principal Enterprise Architect"
    ],
-   "status": "interview request 2026-10-21 (Principal Enterprise Architect): Mary Giles sent a link to book a 15-minute call"
+   "status": "interview request 2026-10-21 (Principal Enterprise Architect): Mary Giles sent a link to book a 15-minute call; rejected 2026-10-27 (Principal Enterprise Architect)"
   },
   "chime": {
    "name": "Chime",
@@ -11571,7 +11576,8 @@
    "count": 1,
    "roles": [
     "Backend Engineer (Senior+)"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (Backend Engineer (Senior+))"
   },
   "missionlane": {
    "name": "Mission Lane",
@@ -15990,7 +15996,8 @@
    "count": 1,
    "roles": [
     "Senior AI Product Builder, Inventory Experience"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (Senior AI Product Builder, Inventory Experience)"
   },
   "shipt": {
    "company": "Shipt",
@@ -16812,7 +16819,11 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, C++/Rust"
+   ],
+   "status": "rejected 2026-10-27 (Staff Software Engineer, C++/Rust)"
   },
   "stellarhealth": {
    "name": "Stellar Health",
