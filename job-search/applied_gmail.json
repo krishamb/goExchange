@@ -101,9 +101,10 @@
    ],
    "count": 2,
    "roles": [
-    "Lead Software Engineer (Remote)"
+    "Lead Software Engineer (Remote)",
+    "Field Chief Technology Officer (CTO)"
    ],
-   "status": "rejected 2026-10-22 (Lead Software Engineer (Remote))"
+   "status": "rejected 2026-10-22 (Lead Software Engineer (Remote)); rejected 2026-10-27 (Field Chief Technology Officer (CTO))"
   },
   "8thlightrebuild": {
    "name": "8thlight",
@@ -13706,7 +13707,8 @@
     "Senior Software Engineer",
     "Staff Software Engineer, Machine Learning",
     "Senior Engineering Manager - Developer Platform (DevEx)"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (role not named in the email)"
   },
   "pinterest": {
    "name": "Pinterest",
@@ -15747,7 +15749,11 @@
     "2026-09-30"
    ],
    "count": 2,
-   "note": "applied"
+   "note": "applied",
+   "roles": [
+    "Principal Software Architect - Data Platform"
+   ],
+   "status": "rejected 2026-10-27 (Principal Software Architect - Data Platform)"
   },
   "sedgwick": {
    "company": "Sedgwick",
