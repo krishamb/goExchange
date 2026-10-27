@@ -18686,7 +18686,11 @@
    ],
    "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Senior Engineering Manager, Servicing"
+   ],
+   "status": "rejected 2026-10-27 (Senior Engineering Manager, Servicing): the role went to a candidate already in final rounds"
   },
   "upwave": {
    "name": "Upwave",
@@ -19071,7 +19075,8 @@
    "roles": [
     "Director, Forward Deployed Engineering",
     "Lead Software Engineer, Data Platform"
-   ]
+   ],
+   "status": "recruiter screen requested 2026-10-27 by Matt Leva (Director, Forward Deployed Engineering); the applicant replied the same day offering Fri 2026-10-30 at 12:00 or 1:30 PM PT"
   },
   "vibe": {
    "name": "Vibe",
