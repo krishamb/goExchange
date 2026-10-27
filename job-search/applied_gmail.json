@@ -17565,7 +17565,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Technical Lead - Five9"
-   ]
+   ],
+   "status": "position cancelled 2026-10-27 (Technical Lead - Five9: the team stopped hiring for it; not a rejection, other roles welcome)"
   },
   "temporal": {
    "company": "temporal",
@@ -20107,6 +20108,16 @@
    ],
    "count": 1,
    "note": "applied by the applicant (Greenhouse confirmation 2026-10-27T07:29Z); role not stated in the email -> unknown role, company blocked for every role"
+  },
+  "thundercompute": {
+   "name": "Thunder Compute",
+   "dates": [],
+   "count": 1,
+   "roles": [
+    "Software Engineer (Infrastructure)"
+   ],
+   "note": "the applicant's own application (not on any handed page; Ashby sent no confirmation): known only from the 2026-10-27 rejection email, application date unknown",
+   "status": "rejected 2026-10-27 (Software Engineer (Infrastructure))"
   }
  }
 }
