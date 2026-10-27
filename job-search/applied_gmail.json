@@ -20123,6 +20123,16 @@
    ],
    "note": "the applicant's own application (not on any handed page; Ashby sent no confirmation): known only from the 2026-10-27 rejection email, application date unknown",
    "status": "rejected 2026-10-27 (Software Engineer (Infrastructure))"
+  },
+  "mapbox": {
+   "name": "Mapbox",
+   "dates": [],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer, MapGPT"
+   ],
+   "note": "applied from the Oct 10-11 Ashby one-click page (ash8/oct10b_queue.json); no confirmation email was recorded, so the date is unknown; known from the 2026-10-27 rejection email",
+   "status": "rejected 2026-10-27 (Senior AI Engineer, MapGPT)"
   }
  }
 }
