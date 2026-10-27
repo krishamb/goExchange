@@ -10035,7 +10035,9 @@
    "roles": [
     "Senior Machine Learning Engineer",
     "Senior Lead AI Engineer - G&A Systems"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (Senior Lead AI Engineer - G&A Systems)",
+   "rejected": true
   },
   "kldiscovery": {
    "name": "KLDiscovery",
@@ -13302,7 +13304,7 @@
    "roles": [
     "Associate Director, MLOps Engineering"
    ],
-   "status": "recruiter screen (Google Meet) Tue 2026-10-27 1:00-1:25 PM PDT, Roche/Genentech TA invite confirmed by the applicant 2026-10-25 (Associate Director, MLOps Engineering)"
+   "status": "the applicant missed the recruiter screen Tue 2026-10-27 1:00 PM PDT (the Roche/Genentech recruiter waited ~10 min); the applicant replied the same day offering Thu 2026-10-29 1-2 PM PT or later, or Fri 2026-10-30 12:30 PM PT or later; awaiting the recruiter (Associate Director, MLOps Engineering)"
   },
   "pathstone": {
    "name": "Pathstone",
@@ -19304,7 +19306,12 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior/Principal Data Engineer"
+   ],
+   "status": "rejected 2026-10-27 (Senior/Principal Data Engineer)",
+   "rejected": true
   },
   "waymo": {
    "name": "Waymo",
