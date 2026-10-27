@@ -1396,7 +1396,7 @@ async def run_one(ctx, item, s):
         _rj = REJ.hit(REJ.load(JOBS_DIR), item.get("company", ""), job.url)
         if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
             job.report["result"] = f"NOT SUBMITTED: {_rj} rejected the applicant before (never apply again)"; return job.report
-        if MIN_LEVEL_BELOW.search(item.get("title", "") or ""):
+        if MIN_LEVEL_BELOW.search(item.get("title", "") or "") and not str(item.get("level_rule") or "").startswith("relaxed"):   # relaxed rows: applicant 2026-10-27
             job.report["result"] = "NOT SUBMITTED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above)"; return job.report
         if JUNIOR_LEVEL.search(item.get("title", "") or ""):
             job.report["result"] = "NOT SUBMITTED: explicit junior level in the title (I-IV / L1-L4)"; return job.report

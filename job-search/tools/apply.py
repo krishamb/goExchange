@@ -2052,7 +2052,7 @@ async def run():
             if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"SKIPPED: {_rj} rejected the applicant before (never apply again)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
-            if str(job.get("title") or "").strip() and MIN_LEVEL_BELOW.search(str(job.get("title") or "")):   # a single-job run carries no title: the level gate has nothing to judge (it matched "" and skipped every hand retry)
+            if str(job.get("title") or "").strip() and MIN_LEVEL_BELOW.search(str(job.get("title") or "")) and not str(job.get("level_rule") or "").startswith("relaxed"):   # a single-job run carries no title: the level gate has nothing to judge (it matched "" and skipped every hand retry)
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: below the applicant's minimum level (Staff / Architect / Lead / Manager / Director / VP and above; 2026-10-17)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
             if JUNIOR_LEVEL.search(str(job.get("title") or "")):
