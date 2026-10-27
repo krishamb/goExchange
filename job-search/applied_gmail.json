@@ -1963,7 +1963,11 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Senior Director, Engineering"
+   ],
+   "status": "role closed 2026-10-27 (Senior Director, Engineering): closed before any interview; not a rejection of the applicant"
   },
   "axon": {
    "name": "Axon",
@@ -17921,7 +17925,8 @@
    "count": 1,
    "roles": [
     "Senior Director, Engineering & Applied Science - VenturaOS"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (Senior Director, Engineering & Applied Science - VenturaOS)"
   },
   "thevoleongroup": {
    "name": "The Voleon Group",
