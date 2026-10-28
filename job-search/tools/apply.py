@@ -80,6 +80,8 @@ TEXT_RULES=[
  (r"do you have \d+\+? years of professional software engineering experience", "Yes"),
  (r"heavy daily use of ai coding assistants", "Yes - I use Claude Code daily for coding, debugging, tests and code review, with parallel subsystem reviews built into my workflow."),
  (r"^desired hours( \(per week\))?\s*\*?$|desired (work(ing)? )?hours per week", "40"),   # full-time
+ (r"(seeking|looking for) a full[- ]time,? (or )?part[- ]time,? or (temporary|contract)|full[- ]time, part[- ]time,? or temporary(/contract)? (role|position|employment)", "Full-time"),   # Valeris (Oct 28, Workday): full-time only
+ (r"(do you )?(hold|have) (an )?active licen[cs]e\(?s?\)?.{0,30}certification", "No"),   # Valeris (Oct 28): standing.md - certifications, clearance, PE license -> No
  (r"(how many years|years of (professional |hands-on )?experience).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b", "3+ years (LLM, RAG and agentic systems since 2023: Yahoo Finance research assistants, then Hyperion AI); 25+ years of software and systems engineering overall"),
  (r"were you referred to this role by a current .{0,60}employee\?? if so,? please provide their name", "No"),   # Tower Research: not referred
  (r"foresee any conflicts .{0,120}(school|other) commitments", "No"),   # full-time availability: no school or other commitments
@@ -789,6 +791,8 @@ CHOICE_RULES=[
  (r"serve as a director, officer, adviser|currently serve as an officer, director", ["Yes","yes"]),
  (r"related to,? or (do you )?have a close personal relationship with an employee", ["No","no"]),
  (r"type of employment desired", ["Full-Time","Full-time","Full Time","Regular Full-Time","Regular"]),
+ (r"(seeking|looking for) a full[- ]time,? (or )?part[- ]time,? or (temporary|contract)|full[- ]time, part[- ]time,? or temporary(/contract)? (role|position|employment)", ["Full-time","Full-Time","Full Time","Full time","Regular Full-Time"]),   # Valeris (Oct 28): full-time only
+ (r"(do you )?(hold|have) (an )?active licen[cs]e\(?s?\)?.{0,30}certification", ["No","no"]),   # Valeris (Oct 28): no active licenses or certifications (standing.md)
  (r"can you work any shift|can you work overtime", ["Yes","yes"]),
  (r"experience working for northwestern mutual", ["I have never worked for Northwestern Mutual","Never worked","No prior"]),
  (r"participating with any of these partnership programs", ["None","No","None of the above","I am not participating"]),
