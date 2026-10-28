@@ -2890,7 +2890,7 @@
     "Engineering Manager II, Agent Runtime"
    ],
    "count": 2,
-   "status": "2026-10-20: Box says it is still reviewing applications (Senior Software Engineer, Finops); rejected 2026-10-26 (Senior Software Engineer, FinOps)"
+   "status": "2026-10-20: Box says it is still reviewing applications (Senior Software Engineer, Finops); rejected 2026-10-26 (Senior Software Engineer, FinOps); position filled 2026-10-28 (Engineering Manager II, Agent Runtime: filled, no longer considering applications)"
   },
   "brainco": {
    "name": "Brainco",
@@ -12607,7 +12607,11 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
+   ],
+   "status": "rejected 2026-10-28 (Director, Software Engineering)"
   },
   "oatfi": {
    "name": "OatFi",
@@ -19522,7 +19526,7 @@
     "Senior Software Engineer",
     "Senior Full-Stack Engineer (Java / Spring Boot)"
    ],
-   "status": "rejected 2026-10-21 (Senior Full-Stack Engineer (Java / Spring Boot))"
+   "status": "rejected 2026-10-21 (Senior Full-Stack Engineer (Java / Spring Boot)); rejected 2026-10-27 (Database Architect)"
   },
   "wf2": {
    "company": "wf2",
