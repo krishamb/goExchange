@@ -692,6 +692,7 @@ CHOICE_RULES=[
  (r"personally supported or contributed to taking .{0,40}(solution|product)|provided architectural leadership and technical oversight", ["Yes","yes"]),
  (r"\bOMOP\b", ["Yes","yes"]),
  (r"may we contact you about future opportunities|contact you about (other|future) (roles|opportunities)", ["Yes","yes"]),
+ (r"expected compensation range (for|of) (this|the) (position|role)", ["$250,000 - $259,999","$240,000 - $249,999","$230,000 - $239,999","$220,000 - $229,999","$250,000+","$200,000+","$200,000 +","$200,000 and above"]),   # Dutchie 2026-10-29: $10K bands; a mid band inside the applicant's $220K-$350K range
  (r"salary range you.?re targeting|targeting for your next opportunity|salary range (are you|you are) targeting", ["$300,001","$250,001 - $300,000","$240,001 - $260,000","$240,001","$220,001 - $240,000","$220,001","$200,001 - $220,000"]),   # highest band inside his $220K-$350K range (OnBoard tops out at $220,001-$240,000)
  (r"paid (work )?trial|mutual trial", ["Yes","yes"]),   # applicant 2026-10-12: willing to do a paid trial
  (r"experience in the credit industry|credit industry experience", ["Yes","yes"]),   # applicant 2026-10-12: 10+ years

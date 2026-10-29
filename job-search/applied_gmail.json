@@ -5195,11 +5195,13 @@
   "definitivehealthcareus": {
    "name": "Definitive Healthcare, US",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Data and AI Governance Lead"
+    "Data and AI Governance Lead",
+    "Senior Data Scientist, Applied AI"
    ]
   },
   "delinea": {
@@ -20436,7 +20438,9 @@
     "2026-10-29"
    ],
    "count": 1,
-   "roles": []
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "treasuryprime": {
    "name": "Treasury Prime",
@@ -20446,6 +20450,166 @@
    "count": 1,
    "roles": [
     "Vice President of Engineering"
+   ]
+  },
+  "auxoai": {
+   "name": "AuxoAI",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Forward Deployed Architect, GCP"
+   ]
+  },
+  "dreamlabs": {
+   "name": "Dream Labs",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software / Backend Engineer"
+   ]
+  },
+  "tinyfish": {
+   "name": "TinyFish",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer"
+   ]
+  },
+  "fragment": {
+   "name": "Fragment",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer"
+   ]
+  },
+  "ultrasecurity": {
+   "name": "Ultra Security",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer"
+   ]
+  },
+  "marc": {
+   "name": "MARC",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "luminary": {
+   "name": "Luminary",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer - Applied AI"
+   ]
+  },
+  "cigna": {
+   "name": "Cigna",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Business Partner Senior Principal"
+   ]
+  },
+  "stabilityai": {
+   "name": "Stability AI",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Data"
+   ]
+  },
+  "ghosteye": {
+   "name": "GhostEye",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer - Backend / Platform"
+   ]
+  },
+  "sap": {
+   "name": "SAP",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Expert Development Architect, SAP Office of the CTO"
+   ]
+  },
+  "mabl": {
+   "name": "MABL",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer/Co-Founder (PropTech)"
+   ]
+  },
+  "topdoglaw": {
+   "name": "TopDog Law",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Applied AI"
+   ]
+  },
+  "foreflight": {
+   "name": "ForeFlight",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer, Engineering Core Services"
+   ]
+  },
+  "datahub": {
+   "name": "DataHub",
+   "dates": [
+    "2026-10-28"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff, Backend Engineer - Catalog"
+   ]
+  },
+  "xphealth": {
+   "name": "XP Health",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Engineer"
    ]
   }
  }
