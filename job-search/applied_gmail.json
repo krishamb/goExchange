@@ -1808,7 +1808,8 @@
    "count": 1,
    "roles": [
     "Sr. Software Engineer - Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Sr. Software Engineer - Platform): Greenhouse notice: moving forward with other candidates whose experience more closely aligns."
   },
   "authorhealth": {
    "name": "Author Health",
@@ -3141,7 +3142,8 @@
    "count": 2,
    "roles": [
     "Staff Engineer, Full Stack"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Staff Engineer, Full Stack): Recruiting team will not be moving forward with the application for this role."
   },
   "buzzsolutions": {
    "name": "Buzz Solutions",
@@ -3553,7 +3555,8 @@
    "count": 1,
    "roles": [
     "Principal Consulting Engineer - HI"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Principal Consulting Engineer - HI): Workday notice from CDW Talent Acquisition: not moving forward with the candidacy at this time."
   },
   "cedana": {
    "company": "cedana",
@@ -6043,7 +6046,8 @@
    "count": 2,
    "roles": [
     "ML Ops Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (ML Ops Engineer): Workday notice: decided to pursue other candidates for the ML Ops Engineer opening."
   },
   "elitetechnology": {
    "name": "Elite Technology",
@@ -6055,12 +6059,15 @@
   "ellipsishealth": {
    "name": "Ellipsis Health",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Backend Engineer, Core Services"
-   ]
+    "Senior Backend Engineer, Core Services",
+    "Senior Backend Engineer, AI Evaluations"
+   ],
+   "status": "rejected 2026-10-29 (Senior Backend Engineer, AI Evaluations): Ashby notice: not an ideal fit at this time, not moving forward with the candidacy (application was submitted earlier th"
   },
   "ellkay": {
    "name": "ELLKAY",
@@ -6081,7 +6088,8 @@
    "count": 1,
    "roles": [
     "Lead Growth Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Lead Growth Engineer): Ashby notice: not advancing in the process at this time; pursuing candidates who more closely align."
   },
   "embedding": {
    "company": "embedding",
@@ -7596,7 +7604,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "closed 2026-10-29 (Staff Software Engineer (Developer Experience)): Greenhouse notice: the position has been filled, so not moving forward for this role; encouraged to apply to other openi"
   },
   "gather": {
    "company": "gather",
@@ -7922,7 +7932,8 @@
    "roles": [
     "Tech Lead Manager, AI Evaluations",
     "Machine Learning Engineer, Enterprise Brain"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Machine Learning Engineer, Enterprise Brain): Gem notice: moving forward with other candidates whose experience more closely aligns."
   },
   "glg": {
    "name": "GLG",
@@ -8177,7 +8188,8 @@
    "roles": [
     "Principal Storage Architect"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-29 (Principal Storage Architect): Talent Acquisition decided not to proceed; other candidates more closely matched the requirements."
   },
   "gray": {
    "company": "gray",
@@ -8240,7 +8252,8 @@
    "count": 1,
    "roles": [
     "Senior Platform Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Senior Platform Engineer): Greenhouse notice: strong response to the role; moving forward with other candidates."
   },
   "grpscangroup": {
    "name": "GRP SCAN Group",
@@ -11597,7 +11610,8 @@
    "count": 1,
    "roles": [
     "Senior Director, Platform"
-   ]
+   ],
+   "status": "closed 2026-10-29 (Senior Director, Platform): Ashby notice: an offer was accepted for the position and the role is now closed."
   },
   "mirendil": {
    "name": "mirendil",
@@ -12565,7 +12579,8 @@
    "count": 1,
    "roles": [
     "Sr. Backend Developer - e-commerce"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Sr. Backend Developer - e-commerce): Moving ahead with a candidate best suited to the team's needs."
   },
   "nuveen": {
    "name": "Nuveen",
@@ -12733,7 +12748,8 @@
    "count": 2,
    "roles": [
     "Senior AI Full-Stack / Applications Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Senior AI Full-Stack / Applications Engineer): Greenhouse notice: moving forward with other candidates who more closely fit current needs."
   },
   "olema": {
    "company": "olema",
@@ -12995,7 +13011,8 @@
     "Software Development Snr Manager",
     "Director, Core Infrastructure Engineering",
     "Senior Principal Software Developer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Software Development Snr Manager): Requisition 347599: hiring manager chose to move forward with another candidate; will be considered for similar roles."
   },
   "orb": {
    "company": "orb",
@@ -13739,7 +13756,9 @@
    ],
    "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-29 (Staff Software Engineer (Authentication)): Talent team moving forward with another applicant whose experience more closely aligns."
   },
   "pindropsecurity": {
    "company": "pindropsecurity",
@@ -14462,7 +14481,8 @@
    "count": 1,
    "roles": [
     "Field CTO - North America"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Field CTO - North America): Recruiting team decided to pursue other candidates for this role."
   },
   "quanata": {
    "name": "Quanata",
@@ -17613,7 +17633,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Python"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Senior Software Engineer, Python): Talent Acquisition: not moving forward in the interview process; information kept on file."
   },
   "telusdigital": {
    "name": "TELUS Digital",
@@ -17869,7 +17890,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-29 (Data Architect, Enterprise Data Platform): Workday notice: after careful consideration, not moving forward with the application."
   },
   "thejupitergroup": {
    "name": "The Jupiter Group",
@@ -18993,7 +19016,8 @@
    "count": 1,
    "roles": [
     "Sr. Manager, Data Engineering "
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Sr. Manager, Data Engineering): Moving forward with candidates closer in line with current business needs."
   },
   "veranahealth": {
    "company": "Verana Health",
@@ -19878,9 +19902,10 @@
   "yourgi": {
    "name": "Yourgi",
    "dates": [
-    "2026-10-17"
+    "2026-10-17",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
     "Yourgi Principal Engineering"
    ]
@@ -20231,6 +20256,77 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-10-28 (Director, Cloud Platform Engineering): Req #71631; moving forward with another candidate."
+  },
+  "etdox": {
+   "name": "ETDOX",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
+  },
+  "mangoglobaltechnologies": {
+   "name": "Mango Global Technologies",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineer - Backend"
+   ]
+  },
+  "boolientinc": {
+   "name": "Boolient, Inc",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff Software Engineer"
+   ]
+  },
+  "curafi": {
+   "name": "CuraFi",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
+  "talenthire": {
+   "name": "TalentHire",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Product Engineering"
+   ]
+  },
+  "allstateinsurancecompany": {
+   "name": "Allstate Insurance Company",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-29 (Principal Software Engineer): Workday notice (req R36272): another candidate was selected for the position."
+  },
+  "kilocode": {
+   "name": "Kilo Code",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-29: Rippling ATS notice (account 'Anaconda & Kilo'): after completing the interview process, decided not to move forward. Ro"
+  },
+  "hcschealthcareservicecorporation": {
+   "name": "HCSC (Health Care Service Corporation)",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-29 (Sr Application Architect - Hadoop Administrator): Workday notice (req R0055729): continuing discussions with candidates who more closely match the qualifications; resume "
   }
  }
 }
