@@ -1109,7 +1109,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-28 (Engineer V): Moving forward with candidates who match the role more closely."
   },
   "ancestry": {
    "name": "ancestry",
@@ -2890,7 +2892,7 @@
     "Engineering Manager II, Agent Runtime"
    ],
    "count": 2,
-   "status": "2026-10-20: Box says it is still reviewing applications (Senior Software Engineer, Finops); rejected 2026-10-26 (Senior Software Engineer, FinOps); position filled 2026-10-28 (Engineering Manager II, Agent Runtime: filled, no longer considering applications)"
+   "status": "2026-10-20: Box says it is still reviewing applications (Senior Software Engineer, Finops); rejected 2026-10-26 (Senior Software Engineer, FinOps); position filled 2026-10-28 (Engineering Manager II, Agent Runtime: filled, no longer considering applications); closed 2026-10-28 (Engineering Manager II, Agent Runtime): Position has been filled; no longer considering applications."
   },
   "brainco": {
    "name": "Brainco",
@@ -4457,7 +4459,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Engineering Manager"
-   ]
+   ],
+   "status": "closed 2026-10-28 (Engineering Manager): Role will not be filled because of internal realignment."
   },
   "compass": {
    "name": "Compass",
@@ -5156,7 +5159,7 @@
    "roles": [
     "Engineering Manager, Infrastructure and Agentic Platform"
    ],
-   "status": "Hiring Manager interview (Misha Bosin) Mon 2026-10-26 4:15-5:00 PM PDT, confirmed (Engineering Manager, Infrastructure and Agentic Platform)"
+   "status": "Hiring Manager interview (Misha Bosin) Mon 2026-10-26 4:15-5:00 PM PDT, confirmed (Engineering Manager, Infrastructure and Agentic Platform); rejected 2026-10-28 (Engineering Manager, Infrastructure and Agentic Platform): Rejected after the recruiter and hiring manager interviews."
   },
   "defenseunicorns": {
    "name": "Defense Unicorns",
@@ -6548,7 +6551,8 @@
    "roles": [
     "Manager, Analytics Engineering",
     "Senior Data Platform Engineer, Enterprise Merchant Integrations"
-   ]
+   ],
+   "status": "closed 2026-10-28 (Manager, Analytics Engineering): After interviews, candidacy ended because the role was just filled by a new hire. They will keep the applicant in mind f"
   },
   "extrahop": {
    "name": "ExtraHop",
@@ -9403,7 +9407,8 @@
    "count": 1,
    "roles": [
     "Director, Engineering, Data, and AI"
-   ]
+   ],
+   "status": "rejected 2026-10-28 (Director, Engineering, Data, and AI): Declined because salary expectations are above the budgeted range. They would reconsider if the applicant accepts their "
   },
   "internationalsolutionsgroup": {
    "name": "International Solutions Group",
@@ -12716,7 +12721,8 @@
    "roles": [
     "Software Architect (Auth0)"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-10-28 (Technical Architect, Auth0): Moving forward with another candidate.; rejected 2026-10-28 (Technical Architect): Moving forward with another candidate."
   },
   "okx": {
    "name": "OKX",
@@ -15459,9 +15465,10 @@
    "name": "SambaNova",
    "dates": [
     "2026-09-30",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-28"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Director of Engineering - Inference Platform"
    ]
@@ -15541,7 +15548,8 @@
     "2026-10-09"
    ],
    "count": 1,
-   "status": "interview with Rama, Tue 2026-11-03: Satlyt asked to move it; the applicant declined 1:30 PM and accepted 'an hour later' (about 3:30-4:00 PM PST); updated invite pending"
+   "status": "interview with Rama, Tue 2026-11-03: Satlyt asked to move it; the applicant declined 1:30 PM and accepted 'an hour later' (about 3:30-4:00 PM PST); updated invite pending; rejected 2026-10-28: Recruiter decided not to go ahead with the initial interview that had been booked for Nov 3 (booking listed the job as '",
+   "roles": []
   },
   "satoriq": {
    "company": "satoriq",
@@ -16904,7 +16912,8 @@
    "rejected": true,
    "roles": [
     "Senior Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-28 (Senior Engineering Manager): Not proceeding with candidacy."
   },
   "sterlingcomputerscorporation": {
    "name": "Sterling Computers Corporation",
@@ -17074,7 +17083,8 @@
    "count": 1,
    "roles": [
     "Head, AI Engineering"
-   ]
+   ],
+   "status": "closed 2026-10-28 (Head, AI Engineering): Position has been filled."
   },
   "summittechpartners": {
    "name": "Summit Tech Partners",
@@ -17343,7 +17353,8 @@
    "roles": [
     "Senior ML/AI Engineer"
    ],
-   "note": "Greenhouse confirmation 2026-10-21T19:25Z; already in ledger (role and date present)"
+   "note": "Greenhouse confirmation 2026-10-21T19:25Z; already in ledger (role and date present)",
+   "status": "rejected 2026-10-28 (Senior ML/AI Engineer): Not proceeding with candidacy."
   },
   "tailscale": {
    "company": "Tailscale",
@@ -18485,7 +18496,7 @@
    "roles": [
     "Software Architect - Enterprise AI"
    ],
-   "status": "rejected 2026-10-26 (Software Architect - Enterprise AI)"
+   "status": "rejected 2026-10-26 (Software Architect - Enterprise AI); rejected 2026-10-28 (Software Architect - Enterprise AI): Not moving forward after interviews; includes a candidate experience survey."
   },
   "twin": {
    "company": "twin",
@@ -18796,9 +18807,10 @@
   "valeris": {
    "name": "Valeris",
    "dates": [
-    "2026-10-27"
+    "2026-10-27",
+    "2026-10-28"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
     "Senior Director, Software Engineering"
    ]
