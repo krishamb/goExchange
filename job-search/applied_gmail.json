@@ -20191,6 +20191,34 @@
    ],
    "via": "applicant (ADP Workforce Now)",
    "note": "the applicant said 2026-10-28 ~02:40Z (Oct 27 PT): already applied (ADP req 9201798938275_1, Palo Alto)"
+  },
+  "rootinc": {
+   "name": "Root Inc",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-28 (Director, Platform Systems): Moving forward with other candidates."
+  },
+  "baton": {
+   "name": "Baton",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-28: Baton (A Ryder Technology Lab): not moving forward with candidacy for the selected role or similar openings."
+  },
+  "grainger": {
+   "name": "Grainger",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-28 (Full Stack Tech Lead): Pursuing other candidates."
+  },
+  "fordmotorcompany": {
+   "name": "Ford Motor Company",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-28 (Director, Cloud Platform Engineering): Req #71631; moving forward with another candidate."
   }
  }
 }
