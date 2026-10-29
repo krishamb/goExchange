@@ -3363,9 +3363,10 @@
    ],
    "roles": [
     "Full- stack Engineer 5 - Capital One Shopping Tech (Categories Team) (Remote - Eligible)",
-    "Machine Learning Engineer 5 (Senior Manager, IC)"
+    "Machine Learning Engineer 5 (Senior Manager, IC)",
+    "Director AI Engineer"
    ],
-   "count": 2
+   "count": 3
   },
   "capy": {
    "name": "CAPY",
@@ -4780,13 +4781,15 @@
    "first": "2026-10-02",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
    "roles": [
     "Director, Engineering - Cloud Detection Platform (Remote)",
-    "Vice President, AI Architect (Remote)"
+    "Vice President, AI Architect (Remote)",
+    "Sr Software Engineer, Cloud - Fusion (Hybrid, Sunnyvale)"
    ],
-   "count": 2
+   "count": 3
   },
   "crowe": {
    "name": "Crowe",
@@ -8861,11 +8864,14 @@
   "hp": {
    "name": "HP",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Senior System Software Engineer"
+    "Senior System Software Engineer",
+    "VP - PS Agentic AI PC Architecture & Development",
+    "Director - Agentic AI Computing Foundation"
    ]
   },
   "hpiq": {
@@ -19376,13 +19382,15 @@
    "first": "2026-10-01",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
    "roles": [
     "(USA) Senior Manager, Software Engineering",
-    "(USA) Senior, Machine Learning Engineer"
+    "(USA) Senior, Machine Learning Engineer",
+    "(USA) Staff, Software Engineer"
    ],
-   "count": 2
+   "count": 3
   },
   "wasabitechnologies": {
    "name": "Wasabi Technologies",
@@ -20403,6 +20411,16 @@
    "count": 1,
    "roles": [
     "Senior/Staff Software Engineer"
+   ]
+  },
+  "openspace": {
+   "name": "OpenSpace",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. AI Researcher, Agentic Systems"
    ]
   }
  }
