@@ -11,18 +11,24 @@
  * - Batch mode (userscript only): the applicant confirms a category once; each form is submitted only when every
  *   required question was answered by the rules and no captcha challenge is shown. Anything else is left for the
  *   applicant. A spam rejection is recorded and never retried; two in a row stop the batch.
+ * - v.21: every other ATS (SmartRecruiters, iCIMS, Workable, BambooHR, Greenhouse, Jobvite, Oracle ...) is filled by generic.js
+ *   (AKF_GENERIC, called at the end of this file with these helpers): fill only, the applicant reviews and submits.
  * Requires AKF_RULES (rules.js). Optional: GM_getValue/GM_setValue (Tampermonkey), window.__AKF (bookmarklet setup). */
 (function () {
 'use strict';
+const CORE_SITE = /(^|\.)jobs\.(ashbyhq\.com|lever\.co)$/.test(location.hostname);
+let IN_FRAME = false; try { IN_FRAME = window.top !== window.self; } catch (e) { IN_FRAME = true; }
+if (CORE_SITE && IN_FRAME) return;   // Ashby / Lever: the top window only, as before (embedded iCIMS / Greenhouse forms need frames)
 if (window.__AKF_LOADED) { try { window.__AKF_LOADED.run({ manual: true }); } catch (e) {} return; }
 const R = AKF_RULES;
-const VERSION = '2026-10-24.2';
+const VERSION = '2026-10-29.1';
 const SITE = /(^|\.)jobs\.lever\.co$/.test(location.hostname) ? 'lever' : 'ashby';
 // Timers run in a Web Worker: Chrome throttles a background tab's own timers (to once a minute after 5 minutes hidden),
 // a worker's timers keep their pace, so a run in a background tab / behind other windows keeps going at full speed.
 const sleep = (() => {
   let w = null, seq = 0; const cbs = {};
   try {
+    if (!CORE_SITE) throw 0;   // other sites: plain timers (no blob worker for their content-security policy to report)
     w = new Worker(URL.createObjectURL(new Blob(['onmessage=e=>setTimeout(()=>postMessage(e.data.id),e.data.ms)'], { type: 'text/javascript' })));
     w.onmessage = e => { const f = cbs[e.data]; delete cbs[e.data]; if (f) f(); };
     w.onerror = () => { w = null; };
@@ -631,17 +637,20 @@ async function answerEntry(e, rep) {   // one question: this job's own answer fi
     else { const sel = e.querySelector('select'); if (sel) await answerSelect(e, q, sel, rep); }
   } catch (err) { rep.notes.push(q.slice(0, 50) + ': ' + (err && err.message || err)); }
 }
+function setJobRules(prior) {   // per-job rules: 'applied here before' (the run page's records) and relocation for a non-local candidate (uses JOB.bay)
+  JOB.choiceRules = compile([
+    ["(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|participated in (a|any) (hiring|recruiting|interview) process|interviewed (with|at) .{0,40}(before|previously|in the (past|last))", prior.length ? ['Yes', 'yes'] : ['No', 'no', 'No, I have not', 'I have not applied']],
+    ['if you are not (a )?local( candidate)?,? (do|would) you (require|need) relocation|not (a )?local candidate.{0,40}relocation', JOB.bay ? ['No', 'no', 'N/A'] : ['Yes', 'yes']],
+  ]);
+  JOB.textRules = compile([["^if (yes|so).{0,80}\\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", prior.length ? 'Yes: ' + prior.slice(0, 3).join('; ') + ' (2026)' : 'N/A']]);
+}
 async function fillForm(opts = {}) {
   const rep = { filled: [], ask: [], tech: [], options: {}, missing: [], resume: null, notes: [], office: [], human: [] };
   const info = jobInfo(); Object.assign(JOB, info);
   JOB.bay = /San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward/.test(info.desc.slice(0, 1500));
   JOB.okOffice = JOB.bay || (/New York|NYC|Manhattan|Brooklyn/.test(info.desc.slice(0, 1500)) && /hybrid/i.test(info.desc));   // Bay Area on-site / hybrid and NY hybrid are fine (applicant's rules)
   const prior = (opts.prior || []).filter(Boolean);
-  JOB.choiceRules = compile([
-    ["(previously|ever|already|recently) applied|applied (for|to) (another|other|a different|any other|an?other|any) (role|position|job|opening)|applied (to|with|at) .{0,40}(before|previously|in the (past|last)|within the (past|last))|participated in (a|any) (hiring|recruiting|interview) process|interviewed (with|at) .{0,40}(before|previously|in the (past|last))", prior.length ? ['Yes', 'yes'] : ['No', 'no', 'No, I have not', 'I have not applied']],
-    ['if you are not (a )?local( candidate)?,? (do|would) you (require|need) relocation|not (a )?local candidate.{0,40}relocation', JOB.bay ? ['No', 'no', 'N/A'] : ['Yes', 'yes']],
-  ]);
-  JOB.textRules = compile([["^if (yes|so).{0,80}\\bappl(ied|y|ication)|(which|what) (role|position)s? did you (previously )?apply|when did you (previously )?apply", prior.length ? 'Yes: ' + prior.slice(0, 3).join('; ') + ' (2026)' : 'N/A']]);
+  setJobRules(prior);
   JOB.why = whyFor(info.company, info.title, info.desc);
   JOB.plan = (opts.answers && typeof opts.answers === 'object') ? opts.answers : {};
   if (EDITS_FOR !== location.pathname) { for (const k of Object.keys(EDITS)) delete EDITS[k]; EDITS_FOR = location.pathname; }
@@ -905,6 +914,7 @@ const PACE_MIN = 5000, PACE_MAX = 50000;            // random wait AFTER the for
 const CAPTCHA_WAIT = 3 * 60000;                      // a captcha waits 3 min for the applicant (desktop notification), then the run moves on
 const BLOCK_WAIT = [240000, 360000];                 // after Ashby's "submission unavailable" / spam block: 4-6 min before the next job
 const TAB_ID = (() => {   // one id per browser tab: window.name survives every page load in the tab (also Ashby <-> Lever)
+  if (!CORE_SITE) return 'akf-' + Math.random().toString(36).slice(2, 10);   // other sites: never rename the page's window (iCIMS targets its frame by name)
   try { const n = String(W.name || ''); if (/^akf-[a-z0-9]{6,}$/.test(n)) return n; const id = 'akf-' + Math.random().toString(36).slice(2, 10); W.name = id; return id; }
   catch (e) { return 'akf-' + Math.random().toString(36).slice(2, 10); }
 })();
@@ -1172,5 +1182,12 @@ async function boot() {
   ui(); status('Open an application, then click Fill.'); buttons([['Fill this application', () => run({ manual: true }), true], ['Run log', showLog], ['Download log', downloadLog]]);
 }
 window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, ensureSaved, savesNow, unsaved, touchAll, edits: EDITS, version: VERSION };
-if (!window.__AKF_TEST) boot();
+// helpers for generic.js (every ATS that is not Ashby or Lever): the same rules, storage and matching as above
+const LIB = { R, S, me, P, sub, pick, techAnswer, bestIndex, match, clean, esc, sleep, waitFor, visible, hover, press, touch, leave, setValue, b64ToFile, resumeFor, whyFor, coverText, category, today, notify, banner, JOB, compile, setJobRules,
+  TEXT, CHOICE, PERSONAL_Q, TECH_Q, HEAR_BAD, HEAR_Q, OPTION_TRUE, STACK_TRUE, ENV_TRUE, AI_TEXT, AI_YES, BOT_ASK, DISCLOSE, ACK, PERSONAL_CERT, BAY_OFFICE, OFFICE3_Q, HAS_GM, W, VERSION };
+window.__AKF_LOADED.lib = LIB;
+if (!window.__AKF_TEST) {
+  if (!CORE_SITE && typeof AKF_GENERIC === 'function') { try { AKF_GENERIC(LIB); } catch (e) { try { console.warn('job filler:', e); } catch (x) {} } }
+  else boot();
+}
 })();

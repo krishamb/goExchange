@@ -148,7 +148,7 @@ function prevText(el, stopAtControl = true) {   // the nearest text before the c
     const s = clean(n.nodeValue); if (!s) continue;
     const pe = n.parentElement;
     if (!pe || pe.closest('option, select, script, style, button, [role="listbox"], [role="option"], [role="alert"], [class*="error" i]')) continue;
-    if (/^(this field is required|required|optional|\*|error.*)$/i.test(s)) continue;
+    if (/^(this field is required|required|optional|\*|error.*)$/i.test(s) || WEAK.test(s)) continue;
     const blk = pe.querySelector('input, select, textarea') ? null : pe.closest('label, legend, h1, h2, h3, h4, h5, h6, p, li, dt, th, td, span, div');
     const t = blk && !blk.querySelector('input, select, textarea') ? strip(blk) : s;
     return t.length <= 400 ? t : s;
@@ -307,9 +307,9 @@ function choicePrefs(el, q, rep) {   // the preference list for a menu / radio /
   if (L.HEAR_Q.test(q)) p = p.filter(x => !L.HEAR_BAD.test(x));
   return p.length ? p : null;
 }
-const NEVER_FILL = /leave (this |it )?(field |box )?(blank|empty)|do not (fill|enter|type|complete)|don'?t (fill|enter|type)|if you are (a )?human|password|passcode|pass code|verification code|one[- ]time|\botp\b|security (code|answer|question)|\bpin\b|\bssn\b|social security|date of birth|\bdob\b|birth ?date|driver'?s licen[cs]e|passport (number|no)|tax (id|identification)|national (id|insurance)|bank|routing|account number|credit card|card number|\bcvv\b/i;
+const NEVER_FILL = /leave (this |it )?(field |box )?(blank|empty)|do not (fill|enter|type|complete)|don'?t (fill|enter|type)|if you are (a )?human|password|passcode|pass code|verification code|one[- ]time|\botp\b|security (code|answer|question)|\bpin\b|\bssn\b|social security|date of birth|\bdob\b|birth ?date|driver'?s licen[cs]e|passport (number|no)|tax (id|identification)|national (id|insurance)|bank (account|routing|name)|routing number|account number|credit card|card number|\bcvv\b/i;
 const NO_AI_CERT = /\b(no|not|without|never|did ?n[o']?t|have ?n[o']?t|has ?n[o']?t|was ?n[o']?t|were ?n[o']?t|free (of|from))\b.{0,60}\b(ai|a\.i\.|artificial intelligence|chat ?gpt|gpt|llms?|generative|gen ?ai|automated tools?|bots?)\b|\b(ai|artificial intelligence|chat ?gpt|llms?|generative ai|gen ?ai)\b.{0,60}\b(was|were|has|have)? ?(not|never) (been )?(used|utili[sz]ed|involved)|\b(solely|entirely|completely|only) (by )?(me|myself)\b|my own (work|words),? without/i;
-const OPTIONAL_FLUFF = /^middle name|pronunciation|favou?rite|like (most|best) about|fun fact|hobb(y|ies)|nickname|^\s*if\s*['"“‘]?other\b|^\s*if you (selected|chose|answered|picked)\s*['"“‘]?(other|yes)\b|something you built with|twitter|\bx\.com\b|instagram|facebook|tiktok|other (links?|websites?|profiles?)|additional (links?|urls?)/i;
+const OPTIONAL_FLUFF = /^middle name|pronunciation|favou?rite|like (most|best) about|fun fact|hobb(y|ies)|nickname|^\s*if\s*['"“‘]?other\b|^\s*if you (selected|chose|answered|picked)\s*['"“‘]?(other|yes)\b|something you built with/i;   // core.js: optional and personal
 
 // ---------------- the job (company / title, for the rules' "why us" answer) ----------------
 function slugCompany() {
@@ -368,6 +368,8 @@ function kindOf(el) {
   return '';
 }
 function comboBox(el) {   // the visible box around a combobox input (react-select's input is 2 px wide)
+  const c = el.parentElement && el.parentElement.closest('[class*="__control"], [class*="-control"], [class*="Select-control"]');
+  if (c && c.querySelectorAll('input:not([type="hidden"]), select, textarea').length <= 2) return c;
   let b = el;
   for (let i = 0; i < 5 && b.parentElement; i++) { b = b.parentElement; if (b.getBoundingClientRect().width >= 60) break; }
   return b;
@@ -390,11 +392,11 @@ function collect(rs) {
 }
 const isOn = el => !!(el.checked || el.getAttribute('aria-checked') === 'true');
 function optionLabel(inp) {   // the text of one radio / checkbox option
+  if (inp.tagName !== 'INPUT') return tidy(labelOf(inp) || strip(inp));
   let t = labelOf(inp);
   if (!t && inp.nextElementSibling && !inp.nextElementSibling.querySelector('input')) t = strip(inp.nextElementSibling);
   if (!t && inp.nextSibling && inp.nextSibling.nodeType === 3) t = clean(inp.nextSibling.nodeValue);
   if (!t && inp.parentElement && inp.parentElement.querySelectorAll('input').length === 1) t = strip(inp.parentElement);
-  if (!t && inp.getAttribute('role')) t = strip(inp);
   return tidy(t || inp.value || '');
 }
 function groups(fields) {   // radios / checkboxes -> one entry per question
@@ -512,9 +514,11 @@ async function doSelect(f, rep) {
   return 'filled';
 }
 function comboValue(el) {   // what a combobox shows as chosen ('' when nothing / a placeholder)
-  const box = comboBox(el);
-  const sv = box && box.querySelector('[class*="single-value" i], [class*="singlevalue" i], [class*="multi-value" i], [class*="multivalue" i], [class*="selected-value" i]');
-  if (sv && clean(sv.textContent)) return clean(sv.textContent);
+  for (let p = el.parentElement, i = 0; p && i < 5; p = p.parentElement, i++) {
+    if (p.querySelectorAll('[role="combobox"]').length > 1) break;
+    const sv = p.querySelector('[class*="single-value" i], [class*="singlevalue" i], [class*="multi-value" i], [class*="multivalue" i], [class*="selected-value" i]');
+    if (sv && clean(sv.textContent)) return clean(sv.textContent);
+  }
   if (el.tagName === 'INPUT') { const v = clean(el.value); return v && !WEAK.test(v) ? v : ''; }
   const t = strip(el) || clean(el.getAttribute('aria-label') || '').replace(clean(labelOf(el) || ''), '');
   return t && !WEAK.test(t) ? t : '';
@@ -827,14 +831,18 @@ function report(rep) {
 }
 
 // ---------------- watching the page (multi-step forms, late fields, single-page apps) ----------------
+let dueAt = 0;
 function schedule(ms) {
-  clearTimeout(timer);
+  ms = ms || 1200;
+  if (timer && dueAt <= Date.now() + ms) return;   // a run is already due sooner
+  clearTimeout(timer); dueAt = Date.now() + ms;
   timer = setTimeout(async () => {
+    timer = 0;
     const a = deepActive();
     const typing = Date.now() - lastKey < 1500 || (a && a !== document.body && a.matches && a.matches('input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea, [contenteditable="true"]') && !(P_ && P_.contains(a)) && !st(a).done);
     if (typing) return schedule(2000);   // the applicant is typing: wait
     await fill({ auto: true });
-  }, ms || 1200);
+  }, ms);
 }
 function sig() { try { return location.href + '|' + collect(roots()).length; } catch (e) { return location.href; } }
 function start() {
@@ -847,11 +855,12 @@ function start() {
     return;
   }
   schedule(1200);
-  const mo = new MutationObserver(muts => {
+  const mo = new MutationObserver(muts => {   // new or newly shown questions -> fill them (our own panel does not count)
     for (const m of muts) {
       const t = m.target;
-      if (t && t.nodeType === 1 && t.closest && t.closest('#' + PANEL_ID)) continue;
-      if (m.addedNodes.length || m.type === 'attributes') { schedule(); return; }
+      if (!t || t.nodeType !== 1 || (t.closest && t.closest('#' + PANEL_ID))) continue;
+      if (m.type === 'childList') { for (const n of m.addedNodes) if (n.nodeType === 1 && (n.matches(FIELD_SEL) || n.querySelector(FIELD_SEL))) { schedule(); return; } }
+      else if (t.matches(FIELD_SEL) || t.querySelector('input, select, textarea')) { schedule(); return; }
     }
   });
   try { mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden', 'aria-hidden', 'style', 'class'] }); } catch (e) {}
