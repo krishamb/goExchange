@@ -6428,11 +6428,13 @@
   "everlaw": {
    "name": "Everlaw",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff AI Engineer"
+    "Staff AI Engineer",
+    "Senior Software Engineer, AI Platform"
    ]
   },
   "everpure": {
@@ -20610,6 +20612,36 @@
    "count": 1,
    "roles": [
     "Senior Full Stack Engineer"
+   ]
+  },
+  "palmetto": {
+   "name": "Palmetto",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Data Engineering"
+   ]
+  },
+  "testlio": {
+   "name": "Testlio",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Architect"
+   ]
+  },
+  "theweathercompany": {
+   "name": "The Weather Company",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, AI Software"
    ]
   }
  }
