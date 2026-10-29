@@ -29,6 +29,7 @@ function pageOk() {
   if (/^app\.(teamtailor|pinpointhq)\.com$/.test(h)) return false;   // the recruiters' own app, not a careers site
   if (/(^|\.)clearcompany\.com$/.test(h)) return /career|job|apply|candidate|opening/.test(all);
   if (/(^|\.)dover\.com$/.test(h)) return /^\/(apply|jobs|careers)\b/.test(path);
+  if (/^app\.jobvite\.com$/.test(h)) return /^\/companyjobs\//.test(path);   // the legacy apply pages, not the recruiters' app
   return true;
 }
 
@@ -685,7 +686,7 @@ async function doFile(f, rep) {
 
 // ---------------- one pass over the page ----------------
 let busy = false, again = false, timer = 0, lastKey = 0, lastRep = null, runs = 0, lastSig = '';
-const allLeft = new Map(), allAsk = new Set();
+const allLeft = new Map(), allAsk = new Set(), allFilled = [];
 function looksLikeForm(fields) {
   let score = 0;
   for (const f of fields) {
@@ -747,6 +748,7 @@ async function fill(opts = {}) {
       if (r !== 'filled' && r !== 'had' && g.req && g.q) allLeft.set(g.q, g.members[0]); else allLeft.delete(g.q);
     }
     for (const q of rep.ask) allAsk.add(q.slice(0, 90));
+    for (const x of rep.filled) allFilled.push(x);
     lastRep = rep; runs++;
     report(rep);
     return rep;
@@ -827,7 +829,7 @@ function report(rep) {
   if (left.length) lines.push('Still empty (required): ' + left.slice(0, 6).map(x => x.slice(0, 60)).join('; ') + (left.length > 6 ? ` (+${left.length - 6} more)` : ''));
   lines.push('Never submitted for you: CAPTCHA, sign-in and Submit stay with you.');
   status(lines.join('\n'));
-  try { window.__AKF_GLAST = { rep, filledTotal, left, ask: [...allAsk], runs, version: L.VERSION }; } catch (e) {}
+  try { window.__AKF_GLAST = { filled: allFilled.slice(), filledTotal, left, ask: [...allAsk], tech: rep.tech, options: rep.options, resume: rep.resume, runs, version: L.VERSION }; } catch (e) {}
 }
 
 // ---------------- watching the page (multi-step forms, late fields, single-page apps) ----------------

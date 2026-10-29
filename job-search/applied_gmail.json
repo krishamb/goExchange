@@ -20643,6 +20643,46 @@
    "roles": [
     "Senior Manager, AI Software"
    ]
+  },
+  "cobalt": {
+   "name": "Cobalt",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff AI Engineer"
+   ]
+  },
+  "supplyhousecom": {
+   "name": "SupplyHouse.com",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Data Architect"
+   ]
+  },
+  "appliedmaterials": {
+   "name": "Applied Materials",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Architect"
+   ]
+  },
+  "redapt": {
+   "name": "Redapt",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "AWS AI / IoT Architect"
+   ]
   }
  }
 }
