@@ -6867,7 +6867,8 @@
    "roles": [
     "Helix AI Engineer, Training Performance",
     "Staff AI Inference and Acceleration Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Staff AI Inference and Acceleration Engineer): moving forward with other candidates"
   },
   "finaleinventory": {
    "name": "Finale Inventory",
@@ -8531,7 +8532,8 @@
    "count": 1,
    "roles": [
     "Sr Application Architect - Hadoop"
-   ]
+   ],
+   "status": "rejected 2026-10-29 (Sr Application Architect - Hadoop Administrator): decided to continue with candidates who more closely match"
   },
   "hdytechnologiesllc": {
    "name": "HDY Technologies LLC",
@@ -17385,11 +17387,13 @@
   "tailorcare": {
    "name": "TailorCare",
    "dates": [
-    "2026-10-21"
+    "2026-10-21",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior ML/AI Engineer"
+    "Senior ML/AI Engineer",
+    "VP, Engineering"
    ],
    "note": "Greenhouse confirmation 2026-10-21T19:25Z; already in ledger (role and date present)",
    "status": "rejected 2026-10-28 (Senior ML/AI Engineer): Not proceeding with candidacy."
@@ -19723,12 +19727,15 @@
    "first": "2026-10-01",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
    "roles": [
-    "Sr Director, Software Development Engineering"
+    "Sr Director, Software Development Engineering",
+    "Senior Manager, Software Development Engineering, Agent Trust & Security",
+    "Principal, Machine Learning Software Engineer, Admin Central"
    ],
-   "count": 1
+   "count": 3
   },
   "workiva": {
    "name": "Workiva",
@@ -20421,6 +20428,24 @@
    "count": 1,
    "roles": [
     "Sr. AI Researcher, Agentic Systems"
+   ]
+  },
+  "weave": {
+   "name": "Weave",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": []
+  },
+  "treasuryprime": {
+   "name": "Treasury Prime",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Engineering"
    ]
   }
  }
