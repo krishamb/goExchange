@@ -4211,11 +4211,13 @@
   "coast": {
    "name": "Coast",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Full-Stack Engineer / Senior Full-Stack Engineer"
    ]
   },
   "coastal": {
@@ -9928,12 +9930,14 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (ventureloop 40d feed)",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
    "roles": [
-    "Senior Software Engineer, AI Platform Integration"
+    "Senior Software Engineer, AI Platform Integration",
+    "Senior Software Architect, Security Platform"
    ],
-   "count": 1
+   "count": 2
   },
   "kemper": {
    "name": "Kemper",
@@ -14330,11 +14334,13 @@
   "psiquantum": {
    "name": "PsiQuantum",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff AI Product Engineer, FW/SW"
+    "Staff AI Product Engineer, FW/SW",
+    "Sr. HPC Engineer - Platforms"
    ]
   },
   "ptc": {
@@ -20193,12 +20199,15 @@
    "first": "2026-10-07",
    "via": "greenhouse-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
    "roles": [
-    "Sr Director, Payments Engineering"
+    "Sr Director, Payments Engineering",
+    "Manager, SW Engineering",
+    "Sr Forward Deployed Engineer"
    ],
-   "count": 1
+   "count": 3
   },
   "zwift": {
    "name": "Zwift",
@@ -20327,6 +20336,56 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-10-29 (Sr Application Architect - Hadoop Administrator): Workday notice (req R0055729): continuing discussions with candidates who more closely match the qualifications; resume "
+  },
+  "backblaze": {
+   "name": "Backblaze",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Software Engineering - Computer Backup"
+   ]
+  },
+  "gong": {
+   "name": "Gong",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Enterprise Architect"
+   ]
+  },
+  "vectara": {
+   "name": "Vectara",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Platform Engineer"
+   ]
+  },
+  "thesiscare": {
+   "name": "Thesis Care",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Product Engineer, Full-Stack"
+   ]
+  },
+  "definitivehealthcare": {
+   "name": "Definitive Healthcare",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Scientist, Applied AI"
+   ]
   }
  }
 }
