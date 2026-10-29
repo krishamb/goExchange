@@ -809,7 +809,7 @@ async def fill_field(page, job, f):
             v = await checkbox_choose(page, box, r)
             if not v:   # record what the boxes say, for a rule fix
                 cbs = box.locator('input[type="checkbox"]')
-                job.report.setdefault("options", {})[key[:120]] = [f"{'[x] ' if await cbs.nth(i).is_checked() else ''}{await input_label(cbs.nth(i))}" for i in range(min(await cbs.count(), 12))]
+                job.report.setdefault("options", {})[key[:120]] = [f"{'[x] ' if await cbs.nth(i).is_checked() else ''}{await input_label(cbs.nth(i))}" for i in range(min(await cbs.count(), 40))]
         elif kind == "prompt":
             await prompt_clear(page, box)
             v = await prompt_choose(page, box, prefs, key)
