@@ -86,11 +86,26 @@ function canClick(el) {
   if (b.tagName === 'A') return /^\s*(#|javascript:)/i.test(b.getAttribute('href') || '');
   return true;
 }
+function realClick(el) {   // a mouse click as a person makes it: some widgets ignore el.click() (detail 0 = a keyboard click)
+  const r = el.getBoundingClientRect();
+  const base = { bubbles: true, cancelable: true, composed: true, clientX: r.left + r.width / 2, clientY: r.top + r.height / 2, button: 0 };
+  const PE = typeof PointerEvent === 'function' ? PointerEvent : MouseEvent;
+  const ev = (C, t, extra) => { try { el.dispatchEvent(new C(t, Object.assign({}, base, extra))); } catch (e) {} };
+  L.hover(el);
+  ev(PE, 'pointerdown', { pointerType: 'mouse', isPrimary: true, buttons: 1, detail: 1 });
+  ev(MouseEvent, 'mousedown', { buttons: 1, detail: 1 });
+  try { if (el.matches('button, input, select, textarea, [tabindex]')) focusIt(el); } catch (e) {}
+  ev(PE, 'pointerup', { pointerType: 'mouse', isPrimary: true, buttons: 0, detail: 1 });
+  ev(MouseEvent, 'mouseup', { buttons: 0, detail: 1 });
+  ev(PE, 'click', { pointerType: 'mouse', isPrimary: true, detail: 1 });
+}
 function key(el, k) { for (const t of ['keydown', 'keyup']) { try { el.dispatchEvent(new KeyboardEvent(t, { key: k, code: k, bubbles: true, cancelable: true, composed: true })); } catch (e) {} } }
+let lastFocused = null;   // the last element the filler itself focused (blurred again at the end of a run)
+function focusIt(el) { try { el.focus({ preventScroll: true }); lastFocused = el; } catch (e) {} }
 function setText(el, v, keepFocus) {   // the native setter + input / change (+ blur): React, Angular and Vue all take it
   const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
   const d = Object.getOwnPropertyDescriptor(proto, 'value');
-  try { el.focus({ preventScroll: true }); } catch (e) {}
+  focusIt(el);
   if (d && d.set) d.set.call(el, v); else el.value = v;
   el.dispatchEvent(new Event('input', { bubbles: true, composed: true }));
   if (keepFocus) return;
@@ -98,7 +113,7 @@ function setText(el, v, keepFocus) {   // the native setter + input / change (+ 
   L.leave(el, false);
 }
 function setSelect(sel, i) {
-  try { sel.focus({ preventScroll: true }); } catch (e) {}
+  focusIt(sel);
   sel.selectedIndex = i;
   sel.dispatchEvent(new Event('input', { bubbles: true, composed: true }));
   sel.dispatchEvent(new Event('change', { bubbles: true, composed: true }));
@@ -114,7 +129,7 @@ function strip(el) {   // an element's own words, without form controls and opti
   return clean(c.textContent || '');
 }
 function tidy(t) {
-  return clean(String(t || '').replace(/\(\s*(required|optional)\s*\)/ig, ' ').replace(/\s+(required|optional)\s*$/i, '').replace(/[ ​]/g, ' ').replace(/\s*[:]\s*$/, '')).slice(0, 500);
+  return clean(String(t || '').replace(/\(\s*(required|optional)\s*\)/ig, ' ').replace(/\s+(required|optional)\s*$/i, '').replace(/[\u2009\u200b]/g, ' ').replace(/\s*[:]\s*$/, '')).slice(0, 500);
 }
 function ariaText(el, attr) {
   const ids = (el.getAttribute(attr) || '').split(/\s+/).filter(Boolean);
@@ -150,6 +165,8 @@ function prevText(el, stopAtControl = true) {   // the nearest text before the c
     const s = clean(n.nodeValue); if (!s) continue;
     const pe = n.parentElement;
     if (!pe || pe.closest('option, select, script, style, button, [role="listbox"], [role="option"], [role="alert"], [class*="error" i]')) continue;
+    const ol = pe.closest('label');
+    if (stopAtControl && ol && !ol.contains(el) && ol.querySelector('input:not([type="hidden"]), select, textarea')) return '';   // another control's own label
     if (/^(this field is required|required|optional|\*|error.*)$/i.test(s) || WEAK.test(s)) continue;
     const blk = pe.querySelector('input, select, textarea') ? null : pe.closest('label, legend, h1, h2, h3, h4, h5, h6, p, li, dt, th, td, span, div');
     const t = blk && !blk.querySelector('input, select, textarea') ? strip(blk) : s;
@@ -159,6 +176,13 @@ function prevText(el, stopAtControl = true) {   // the nearest text before the c
 }
 function humanize(s) { return clean(String(s || '').replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[\[\]._\-]+/g, ' ').replace(/\d{3,}/g, ' ')); }
 function questionOf(el) {
+  const s = ST.get(el);
+  if (s && s.q != null) return s.q;
+  const q = questionOf_(el);
+  st(el).q = q;
+  return q;
+}
+function questionOf_(el) {
   let q = labelOf(el);
   if (!q || WEAK.test(q)) q = groupLabel(el) || q;
   if (!q || WEAK.test(q)) { const t = prevText(el); if (t && !WEAK.test(t)) q = t; }
@@ -171,7 +195,14 @@ function requiredOf(el, extra) {
   const g = el.closest && el.closest('[aria-required="true"], fieldset[required]'); if (g) return true;
   let t = '';
   try { t = (el.labels && el.labels[0] ? el.labels[0].textContent : '') || (byId(el, (el.getAttribute('aria-labelledby') || '').split(/\s+/)[0]) || {}).textContent || ''; } catch (e) {}
-  return /[*✱]|\brequired\b/i.test(t + ' ' + (extra || ''));
+  if (/[*✱]|\brequired\b/i.test(t + ' ' + (extra || ''))) return true;
+  for (let p = el.parentElement, i = 0; p && i < 4; p = p.parentElement, i++) {   // an asterisk in the field's own block (labels not tied to the control)
+    const ctl = [...p.querySelectorAll('input:not([type="hidden"]), select, textarea')];
+    if (ctl.length > 1 && (!/^(radio|checkbox)$/.test(el.type || '') || ctl.some(c => c.name !== el.name || !el.name))) break;
+    if (p.querySelectorAll('fieldset, [role="radiogroup"], [role="group"]').length > 1) break;
+    if (/[*✱]/.test(strip(p).slice(0, 400) + (p.textContent || '').slice(0, 400))) return true;
+  }
+  return false;
 }
 
 // ---------------- the applicant's profile (Setup in this browser + the exported profile; nothing personal in the repo) ----------------
@@ -224,7 +255,7 @@ const AC_KEY = { 'given-name': 'first', 'family-name': 'last', 'name': 'name', '
 const NAME_KEY = [['first', /\b(first ?name|fname|given ?name|firstname)\b/], ['last', /\b(last ?name|lname|surname|family ?name|lastname)\b/], ['email', /\be ?mail( ?address)?\b|\bemailaddress\b/],
   ['phone', /\b(phone|mobile|cell ?phone|telephone|phone ?number)\b/], ['linkedin', /\blinked ?in\b/], ['github', /\bgithub\b/], ['zip', /\b(zip|zip ?code|postal ?code|postcode)\b/], ['city', /\bcity\b/]];
 function labelKey(q) {   // a contact / profile field named by its label
-  const l = (q || '').toLowerCase().replace(/[ ​]/g, ' ').replace(/\s+/g, ' ').trim();
+  const l = (q || '').toLowerCase().replace(/[\u2009\u200b]/g, ' ').replace(/\s+/g, ' ').trim();
   if (!l || l.length > 70 || NOT_SELF.test(l)) return '';
   for (const [k, re] of KEY_LABEL) if (re.test(l)) return k;
   return '';
@@ -292,8 +323,13 @@ function mask(texts, q) {   // options the applicant's rules never pick (apply.p
     return t;
   });
 }
+function officeAsk(q, rep) {   // office days outside the Bay Area / NY hybrid are the applicant's call (core.js OFFICE3_Q): left for them
+  if (!L.OFFICE3_Q.test(q) || JOB.okOffice) return false;
+  rep.ask.push('Office days (your call): ' + q.slice(0, 60)); return true;
+}
 function choicePrefs(el, q, rep) {   // the preference list for a menu / radio / checkbox question, null when no rule answers it
   if (L.BOT_ASK.test(q)) { rep.ask.push(q + ' (the form asks bots not to answer)'); return null; }
+  if (officeAsk(q, rep)) return null;
   let p = pickRule(q, 'choice');
   if (p === undefined || p === null) { const k = labelKey(q) || (el ? attrKey(el, q) : ''); p = profilePrefs(k); }
   if (p === undefined || p === null) {   // no menu rule: a short text-rule answer ('LinkedIn', 'California', 'No') is the same answer
@@ -315,7 +351,7 @@ const OPTIONAL_FLUFF = /^middle name|pronunciation|favou?rite|like (most|best) a
 
 // ---------------- the job (company / title, for the rules' "why us" answer) ----------------
 function slugCompany() {
-  const seg = location.pathname.split('/').filter(Boolean), nice = s => decodeURIComponent(s).replace(/[-_+]+/g, ' ').replace(/\s+\d+$/, '').trim();
+  const seg = location.pathname.split('/').filter(Boolean), nice = s => { const t = decodeURIComponent(s).replace(/[-_+]+/g, ' ').replace(/\s+\d+$/, '').trim(); return t === t.toLowerCase() ? t.replace(/\b[a-z]/g, c => c.toUpperCase()) : t; };
   if (/greenhouse\.io$|smartrecruiters\.com$|workable\.com$|rippling\.com$|jobs\.gem\.com$|jobvite\.com$|comeet\.com$/.test(HOST)) {
     const s = seg.find(x => !/^(j|jobs?|embed|job_app|oneclick-ui|company|careers|publication|apply|en|en-us)$/i.test(x));
     return s ? nice(s) : '';
@@ -340,8 +376,9 @@ function jobInfo() {
 function setupJob() {
   const info = jobInfo();
   JOB.company = info.company; JOB.title = info.title; JOB.desc = info.desc;
-  JOB.bay = /San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward/.test(info.desc.slice(0, 1500));
-  JOB.okOffice = JOB.bay || (/New York|NYC|Manhattan|Brooklyn/.test(info.desc.slice(0, 1500)) && /hybrid/i.test(info.desc));
+  const head = document.title + ' ' + info.desc.slice(0, 4000);
+  JOB.bay = /San Francisco|Bay Area|Palo Alto|Menlo Park|Mountain View|Sunnyvale|San Jose|Santa Clara|Redwood City|San Mateo|Oakland|Berkeley|Cupertino|Foster City|Burlingame|Fremont|Milpitas|Emeryville|Los Gatos|Campbell|Pleasanton|San Ramon|Walnut Creek|Hayward/.test(head);
+  JOB.okOffice = JOB.bay || (/New York|NYC|Manhattan|Brooklyn/.test(head) && /hybrid/i.test(info.desc));
   L.setJobRules([]);   // the same per-job rules as an Ashby form with no earlier application on record
   JOB.why = info.company && info.title ? L.whyFor(info.company, info.title, info.desc) : '';
   JOB.plan = {};
@@ -390,11 +427,13 @@ function collect(rs) {
     if (el.disabled || el.getAttribute('aria-disabled') === 'true' || offLimits(el)) continue;
     if (k === 'text' && el.readOnly) continue;
     if (k === 'radio' || k === 'checkbox') { const lab = (el.labels && el.labels[0]) || el.closest('label'); if (!shown(el) && !(lab && shown(lab))) continue; }
-    else if (k === 'file') { if (!shown(el) && !shown(el.parentElement)) continue; }
+    else if (k === 'file') { if (!shown(el) && !shown(el.parentElement) && !(el.labels && [...el.labels].some(shown)) && !shown(el.closest('.form-group, [class*="upload" i], [class*="dropzone" i]'))) continue; }
     else if (k === 'select') { if (!shown(el) && !(el.parentElement && shown(el.parentElement) && labelOf(el))) continue; }
     else if (k === 'combo') { if (!shown(el) && !shown(comboBox(el))) continue; }
     else if (k === 'toggle') { if (!shown(el)) continue; }
     else if (!shown(el) || !realBox(el)) continue;
+    const sg = (el.getAttribute('name') || '') + '|' + (el.id || '') + '|' + labelOf(el).slice(0, 80);   // a re-used element (next step) is a new question
+    const s = st(el); if (s.sig !== sg) { if (s.sig != null) { s.done = false; s.tries = 0; s.q = null; } s.sig = sg; }
     out.push({ el, kind: k });
   }
   return out;
@@ -460,19 +499,24 @@ function textAnswer(el, q, req, rep) {
   if (k) { const v = profileValue(k); if (v) return v; if (/^(email|phone|street|zip)$/.test(k)) { rep.setup = true; return null; } }
   if (L.AI_TEXT.test(q)) { const v = pickText(q); if (v && L.AI_YES.test(v)) return v; rep.ask.push(q); return null; }
   if (!req && OPTIONAL_FLUFF.test(q)) return null;
+  if (officeAsk(q, rep)) return null;
   if (/^\s*if you (selected|chose|answered|picked)\s*['"“‘]?other\b/i.test(q)) return 'N/A';
   let v = null;
   if (isArea && /cover letter/i.test(q)) v = L.coverText(JOB.company || 'your team', JOB.title || 'this', JOB.desc);
   if (v == null) { v = pickText(q); if (v === '') return null; }
   if (v == null) { const ph = clean(el.getAttribute('placeholder') || ''); if (ph && !WEAK.test(ph) && ph !== q) { v = pickText(ph); if (v === '') return null; } }
   if (v == null && !isArea) { const k2 = attrKey(el, q); if (k2) v = profileValue(k2) || null; }
-  if (v == null && isArea && techOk(q, req)) { v = L.techAnswer(q); if (v) rep.tech.push(q); }
+  if (v == null && isArea && techOk(q, req)) { v = L.techAnswer(q); if (v && v !== R.TECH_DEFAULT) rep.tech.push(q); else v = null; }
   return v;
 }
+const BANK = (R.TECH_BANK || []).map(([p]) => new RegExp(p));
 function techOk(q, req) {   // a technical question with no rule: the applicant's technical answers (core.js / apply.py tech_answer)
   const l = q.toLowerCase();
   if (!req && /\b(link|url|website|github|portfolio|profile|handle|twitter|linkedin)\b|^\s*if (yes|so|applicable|other)\b|anything else|additional (info|comments?|notes?|details)|cover letter|message (to|for)|note (to|for)/.test(l)) return false;
-  return !/\b(education|degree|diploma|school|university|college|gpa|graduat\w*|certification|contact|reach you|e-?mail|phone|address|name|pronoun|salary|pay|start|available|availability|zip|postal|references?)\b/.test(l);
+  if (/\b(education|degree|diploma|school|university|college|gpa|graduat\w*|certification|contact|reach you|e-?mail|phone|address|name|pronoun|salary|pay|start|available|availability|zip|postal|references?)\b/.test(l)) return false;
+  // what the applicant wants, feels or values needs their own words (generic forms are stricter than core.js here)
+  if (/looking for|excite|motivat|passion|important (to you|thing)|\bideal\b|dream|\bvalues?\b|why (do|did|are|would|should) (you|we)|what (do|would|did) you (want|like|enjoy|love|hope|expect)|your (goals?|plans?|aspirations?)|career (goals?|plans?|path)|about yourself|tell us about you|outside (of )?work|hobb|fun\b|proud/.test(l)) return false;
+  return BANK.some(re => re.test(l));   // a named technical topic, never the catch-all paragraph
 }
 const DATE_PH = /^(mm|dd|yyyy|m|d)[\/.\- ](mm|dd|yyyy|m|d)[\/.\- ](mm|dd|yyyy|yy)$/i;
 function dateFor(q, fmt) {   // core.js answerDate: a start / availability date is two weeks out, a signature date is today
@@ -536,12 +580,13 @@ async function doToggle(tg, sel, q, rep) {
   const prefs = choicePrefs(sel || tg, q, rep); if (!prefs) return 'left';
   if (!canClick(tg)) return 'left';
   dbg('toggle', q, prefs[0]);
-  L.press(tg);
-  const opts = await waitOpts(tg, 2500);
+  const before = optsBefore();
+  realClick(tg);
+  const opts = await waitOpts(tg, 2500, null, before);
   const texts = mask(opts.map(o => clean(o.textContent)), q), i = bestIndex(texts, prefs);
   dbg('toggle-opened', q, opts.length, i, texts.slice(0, 4).join(' | '));
   if (i < 0 || !canClick(opts[i])) { key(tg, 'Escape'); if (opts.length) rep.options[q] = texts.filter(Boolean).slice(0, 12); return opts.length ? 'left' : 'fail'; }
-  L.press(opts[i]); await sleep(450);
+  realClick(opts[i]); await sleep(450);
   const now = strip(tg);
   dbg('toggle-now', q, now);
   if (!now || WEAK.test(now) || /^[-–—\s]*$/.test(now)) return 'fail';
@@ -577,24 +622,25 @@ function listFor(el) {
   for (const a of ['aria-controls', 'aria-owns', 'data-menu-id']) { const lb = byId(el, el.getAttribute(a)); if (lb) return lb; }
   return null;
 }
-function optionsNow(el) {
+function optionsNow(el, before) {   // the open option list of this control (one that was already on the page does not count)
   const lb = listFor(el);
   let opts = lb ? [...lb.querySelectorAll('[role="option"], [role="menuitem"], [role="menuitemradio"]')] : [];
-  if (!opts.length) opts = qsa('[role="option"], [class*="select__option"]').filter(o => !o.closest('nav, header, [role="navigation"], [role="menubar"]'));
+  if (!opts.length) opts = qsa('[role="option"], [class*="select__option"]').filter(o => !o.closest('nav, header, [role="navigation"], [role="menubar"]') && !(before && before.has(o)));
   return opts.filter(o => shown(o) && !o.closest('#' + PANEL_ID) && o.getAttribute('aria-disabled') !== 'true' && !o.closest(CAPTCHA_SEL));
 }
-async function waitOpts(el, ms, ok) {
+async function waitOpts(el, ms, ok, before) {
   const t0 = Date.now(); let o = [];
-  while (Date.now() - t0 < ms) { o = optionsNow(el); if (o.length && (!ok || ok(o))) return o; await sleep(150); }
+  while (Date.now() - t0 < ms) { o = optionsNow(el, before); if (o.length && (!ok || ok(o))) return o; await sleep(150); }
   return o;
 }
-async function openList(el) {
-  try { el.focus({ preventScroll: true }); } catch (e) {}
+const optsBefore = () => new Set(qsa('[role="option"], [class*="select__option"]').filter(shown));
+async function openList(el, before) {
+  focusIt(el);
   const box = comboBox(el);
   const toggle = box && [...box.querySelectorAll('button')].find(b => /toggle|open|show|expand|arrow|caret|chevron|flyout/i.test((b.getAttribute('aria-label') || '') + ' ' + (b.className || '')) && canClick(b));
-  if (canClick(el)) L.press(el); else if (toggle) L.press(toggle);
-  let o = await waitOpts(el, 1500);
-  if (!o.length) { key(el, 'ArrowDown'); o = await waitOpts(el, 1200); }
+  if (canClick(el)) realClick(el); else if (toggle) realClick(toggle);
+  let o = await waitOpts(el, 1500, null, before);
+  if (!o.length) { key(el, 'ArrowDown'); o = await waitOpts(el, 1200, null, before); }
   return o;
 }
 function closeList(el) { key(el, 'Escape'); L.leave(el, false); }
@@ -609,12 +655,14 @@ async function doCombo(f, rep) {
   if (!prefs) return 'left';
   const pickIn = texts => want ? texts.findIndex(t => t && want.test(t)) : bestIndex(texts, prefs);
   dbg('combo', q, prefs[0]);
-  let opts = await openList(el);
+  const before = optsBefore();
+  let opts = await openList(el, before);
   let texts = mask(opts.map(o => clean(o.textContent)), q), i = pickIn(texts);
   dbg('opened', q, opts.length, i, texts.slice(0, 5).join(' | '));
   if (i < 0 && el.tagName === 'INPUT' && !el.readOnly) {   // long or searched lists: type the answer to narrow it
     setText(el, loc ? 'Santa Clara' : prefs[0].slice(0, 30), true);
-    opts = await waitOpts(el, loc ? 7000 : 3500, o => pickIn(mask(o.map(x => clean(x.textContent)), q)) >= 0);
+    for (const t of ['keydown', 'keypress', 'keyup']) { try { el.dispatchEvent(new KeyboardEvent(t, { key: 'a', bubbles: true, composed: true })); } catch (e) {} }   // some look-ups start on key events
+    opts = await waitOpts(el, loc ? 7000 : 3500, o => pickIn(mask(o.map(x => clean(x.textContent)), q)) >= 0, before);
     texts = mask(opts.map(o => clean(o.textContent)), q); i = pickIn(texts);
   }
   if (i < 0 || !canClick(opts[i])) {
@@ -624,7 +672,7 @@ async function doCombo(f, rep) {
     return opts.length ? 'left' : 'fail';
   }
   dbg('press', q, texts[i]);
-  L.press(opts[i]); await sleep(450);
+  realClick(opts[i]); await sleep(450);
   if (deepActive() === el) L.leave(el, false);
   await sleep(100);
   const shownNow = comboValue(el);
@@ -638,7 +686,7 @@ async function tick(el) {
   const lab = el.tagName === 'INPUT' ? ((el.labels && el.labels[0]) || el.closest('label')) : null;
   const target = lab && canClick(lab) ? lab : el;
   if (!canClick(target)) return false;
-  L.hover(target); target.click(); await sleep(150);
+  realClick(target); await sleep(150);
   if (!isOn(el) && target !== el && canClick(el)) { el.click(); await sleep(150); }
   if (isOn(el)) L.leave(el, false);
   return isOn(el);
@@ -650,6 +698,7 @@ async function doRadios(g, rep) {
   const opts = g.opts;
   const p1raw = pickRule(q, 'choice');
   if (Array.isArray(p1raw) && p1raw[0] === '__ASK__') { rep.ask.push(q); return 'left'; }
+  if (officeAsk(q, rep)) return 'left';
   const cands = [];
   const p1 = choicePrefs(ins[0], q, { ask: [] }); if (p1) cands.push(p1);
   const p2 = pickRule(opts.join(' '), 'choice'); if (Array.isArray(p2) && p2[0] !== '__ASK__') cands.push(p2.filter(x => typeof x === 'string' && x !== '__MULTI__'));
@@ -674,6 +723,7 @@ async function doChecks(g, rep) {
     if (/not a robot|i am (a )?human|captcha/i.test(both)) return 'left';
     if (!g.req && /marketing|newsletter|future (job )?opportunit|talent (community|pool|network)|keep me|stay in touch|text message|\bsms\b|job alerts|subscribe|promotional|similar (jobs|roles|positions)/i.test(both)) return 'left';
     if (/i understand.{0,100}((5|five) days?|fully on-?site|100% (in[- ]?office|on-?site)|every (week)?day in (the )?office)/i.test(both)) return 'left';
+    if (officeAsk(both, rep)) return 'left';
     if (L.DISCLOSE.test(t) && !L.ACK.test(q)) return 'left';
     let ok = L.ACK.test(t) || L.ACK.test(q);
     if (!ok && q && q !== t) { const p = choicePrefs(boxes[0], q, { ask: [] }); ok = !!(p && bestIndex([t], p) === 0); }
@@ -741,7 +791,7 @@ async function doFile(f, rep) {
 }
 
 // ---------------- one pass over the page ----------------
-let busy = false, again = false, timer = 0, lastKey = 0, lastRep = null, runs = 0, lastSig = '';
+let busy = false, again = false, timer = 0, lastKey = 0, lastRep = null, runs = 0, lastSig = '', ownFocus = null, lastPath = '';
 const allLeft = new Map(), allAsk = new Set(), allFilled = [];
 let resumeNote = '';
 function looksLikeForm(fields) {
@@ -763,6 +813,7 @@ async function fill(opts = {}) {
     const rs = roots();
     let fields = collect(rs);
     if (!looksLikeForm(fields)) { busy = false; if (manual) status('No application form found on this page yet.'); return null; }
+    if (lastPath !== location.pathname) { lastPath = location.pathname; allLeft.clear(); allAsk.clear(); allFilled.length = 0; filledTotal = 0; resumeNote = ''; }
     setupJob();
     if (manual) for (const f of fields) { const s = st(f.el); s.done = false; s.tries = 0; }
     const active = deepActive();
@@ -783,7 +834,9 @@ async function fill(opts = {}) {
     }
     if (attached) { await sleep(2500); fields = collect(roots()); }
     // 2) every other question, in page order
+    const typing = () => !manual && Date.now() - lastKey < 1500;
     for (const f of fields) {
+      if (typing()) { again = true; break; }
       if (!/^(text|date|select|combo|toggle)$/.test(f.kind) || skip(f.el)) continue;
       if (!f.el.isConnected) continue;
       if (f.kind === 'toggle') { f.q = toggleQuestion(f.el); const sv = toggleSelect(f.el); f.req = requiredOf(sv || f.el) || /[*✱]/.test((sv && sv.labels && sv.labels[0] && sv.labels[0].textContent) || ''); }
@@ -799,6 +852,7 @@ async function fill(opts = {}) {
       record(f.el, r, f.q, f.req);
     }
     for (const g of groups(collect(roots()))) {
+      if (typing()) { again = true; break; }
       if (skip(g.members[0])) continue;
       const gq = groupQuestion(g); g.q = gq.q; g.opts = gq.opts; g.req = g.members.some(m => requiredOf(m, g.q));
       let r = 'left';
@@ -806,6 +860,8 @@ async function fill(opts = {}) {
       for (const m of g.members) record(m, r, '', false);
       if (r !== 'filled' && r !== 'had' && g.req && g.q) allLeft.set(g.q, g.members[0]); else allLeft.delete(g.q);
     }
+    const nowActive = deepActive();
+    if (nowActive && nowActive === lastFocused && nowActive !== active) { try { nowActive.blur(); } catch (e) {} ownFocus = deepActive() === nowActive ? nowActive : null; }
     for (const q of rep.ask) allAsk.add(q.slice(0, 90));
     for (const x of rep.filled) allFilled.push(x);
     filledTotal = new Set(allFilled.map(x => x[0])).size;
@@ -902,7 +958,7 @@ function schedule(ms) {
   timer = setTimeout(async () => {
     timer = 0;
     const a = deepActive();
-    const typing = Date.now() - lastKey < 1500 || (a && a !== document.body && a.matches && a.matches('input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea, [contenteditable="true"]') && !(P_ && P_.contains(a)) && !st(a).done);
+    const typing = Date.now() - lastKey < 1500 || (a && a !== document.body && a !== ownFocus && a.matches && a.matches('input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea, select, [contenteditable="true"]') && !(P_ && P_.contains(a)));
     if (typing) return schedule(2000);   // the applicant is typing: wait
     await fill({ auto: true });
   }, ms);

@@ -1185,7 +1185,6 @@ window.__AKF_LOADED = { run, fillForm, submitForm, pick, techAnswer, bestIndex, 
 // helpers for generic.js (every ATS that is not Ashby or Lever): the same rules, storage and matching as above
 const LIB = { R, S, me, P, sub, pick, techAnswer, bestIndex, match, clean, esc, sleep, waitFor, visible, hover, press, touch, leave, setValue, b64ToFile, resumeFor, whyFor, coverText, category, today, notify, banner, JOB, compile, setJobRules,
   TEXT, CHOICE, PERSONAL_Q, TECH_Q, HEAR_BAD, HEAR_Q, OPTION_TRUE, STACK_TRUE, ENV_TRUE, AI_TEXT, AI_YES, BOT_ASK, DISCLOSE, ACK, PERSONAL_CERT, BAY_OFFICE, OFFICE3_Q, HAS_GM, W, VERSION };
-window.__AKF_LOADED.lib = LIB;
 if (!window.__AKF_TEST) {
   if (!CORE_SITE && typeof AKF_GENERIC === 'function') { try { AKF_GENERIC(LIB); } catch (e) { try { console.warn('job filler:', e); } catch (x) {} } }
   else boot();

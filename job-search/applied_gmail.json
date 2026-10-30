@@ -20741,6 +20741,16 @@
    "roles": [
     "AI/ML Software Engineer"
    ]
+  },
+  "gametime": {
+   "name": "Gametime",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering, Fan Experience"
+   ]
   }
  }
 }
