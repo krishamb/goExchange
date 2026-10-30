@@ -16,6 +16,7 @@ const R = L.R, S = L.S, clean = L.clean, sleep = L.sleep, bestIndex = L.bestInde
 const PANEL_ID = 'akf-gpanel';
 let IN_FRAME = false; try { IN_FRAME = window.top !== window.self; } catch (e) { IN_FRAME = true; }
 const HOST = location.hostname.toLowerCase();
+const dbg = (...a) => { try { if (Array.isArray(window.__AKF_DEBUG)) window.__AKF_DEBUG.push([Date.now() % 100000].concat(a.map(x => typeof x === 'string' ? x.slice(0, 80) : x))); } catch (e) {} };   // tests only
 
 // ---------------- where it may act (only career / application pages of these domains) ----------------
 function pageOk() {
@@ -441,6 +442,7 @@ function groupQuestion(g) {
 
 // ---------------- answering ----------------
 const ST = new WeakMap();   // per element: { tries, done }
+const ATTACHED = {};          // 'resume|<path>' -> how many times a file was attached on this page
 const st = el => { let s = ST.get(el); if (!s) { s = { tries: 0, done: false }; ST.set(el, s); } return s; };
 let filledTotal = 0;
 function textAnswer(el, q, req, rep) {
@@ -501,8 +503,35 @@ async function doDate(f, rep) {
   rep.filled.push([f.q, v]); return 'filled';
 }
 const placeholderOpt = o => !o || !clean(o.text) || /^(-+|—|–|select|choose|please (select|choose)|pick|\(?select|none selected|--)/i.test(clean(o.text)) || (o.value === '' && /select|choose|please/i.test(o.text));
+function toggleFor(sel) {   // the visible button that opens the custom menu behind a hidden one-option select
+  let p = sel.parentElement;
+  for (let i = 0; i < 4 && p; i++, p = p.parentElement) {
+    if (p.querySelectorAll('select').length > 1) return null;
+    const t = [...p.querySelectorAll('button[aria-haspopup], [role="button"][aria-haspopup], [role="combobox"]:not(input)')].find(x => shown(x) && !x.querySelector('select, input'));
+    if (t) return t;
+  }
+  return null;
+}
+async function doToggle(tg, sel, q, rep) {
+  const cur = strip(tg);
+  if (cur && !WEAK.test(cur) && !/^[-–—\s]*$/.test(cur)) return 'had';
+  const prefs = choicePrefs(sel, q, rep); if (!prefs) return 'left';
+  if (!canClick(tg)) return 'left';
+  dbg('toggle', q, prefs[0]);
+  L.press(tg);
+  const opts = await waitOpts(tg, 2500);
+  const texts = mask(opts.map(o => clean(o.textContent)), q), i = bestIndex(texts, prefs);
+  if (i < 0 || !canClick(opts[i])) { key(tg, 'Escape'); if (opts.length) rep.options[q] = texts.filter(Boolean).slice(0, 12); return opts.length ? 'left' : 'fail'; }
+  L.press(opts[i]); await sleep(450);
+  const now = strip(tg);
+  if (!now || WEAK.test(now) || /^[-–—\s]*$/.test(now)) return 'fail';
+  rep.filled.push([q, texts[i].slice(0, 70)]);
+  return 'filled';
+}
 async function doSelect(f, rep) {
   const sel = f.el, q = f.q;
+  const tg = sel.options.length <= 1 ? toggleFor(sel) : null;
+  if (tg) return doToggle(tg, sel, q, rep);
   if (sel.selectedIndex >= 0 && !placeholderOpt(sel.options[sel.selectedIndex]) && !sel.multiple) return 'had';
   if (sel.multiple && [...sel.options].some(o => o.selected)) return 'had';
   const prefs = choicePrefs(sel, q, rep); if (!prefs) return 'left';
@@ -525,13 +554,13 @@ function comboValue(el) {   // what a combobox shows as chosen ('' when nothing 
   return t && !WEAK.test(t) ? t : '';
 }
 function listFor(el) {
-  for (const a of ['aria-controls', 'aria-owns']) { const lb = byId(el, el.getAttribute(a)); if (lb) return lb; }
+  for (const a of ['aria-controls', 'aria-owns', 'data-menu-id']) { const lb = byId(el, el.getAttribute(a)); if (lb) return lb; }
   return null;
 }
 function optionsNow(el) {
   const lb = listFor(el);
-  let opts = lb ? [...lb.querySelectorAll('[role="option"]')] : [];
-  if (!opts.length) opts = qsa('[role="option"], [class*="select__option"]');
+  let opts = lb ? [...lb.querySelectorAll('[role="option"], [role="menuitem"], [role="menuitemradio"]')] : [];
+  if (!opts.length) opts = qsa('[role="option"], [class*="select__option"]').filter(o => !o.closest('nav, header, [role="navigation"], [role="menubar"]'));
   return opts.filter(o => shown(o) && !o.closest('#' + PANEL_ID) && o.getAttribute('aria-disabled') !== 'true' && !o.closest(CAPTCHA_SEL));
 }
 async function waitOpts(el, ms, ok) {
@@ -559,8 +588,10 @@ async function doCombo(f, rep) {
   const prefs = loc ? ['Santa Clara, California, United States', 'Santa Clara, CA, USA', 'Santa Clara, California', 'Santa Clara, CA'] : choicePrefs(el, q, rep);
   if (!prefs) return 'left';
   const pickIn = texts => want ? texts.findIndex(t => t && want.test(t)) : bestIndex(texts, prefs);
+  dbg('combo', q, prefs[0]);
   let opts = await openList(el);
   let texts = mask(opts.map(o => clean(o.textContent)), q), i = pickIn(texts);
+  dbg('opened', q, opts.length, i, texts.slice(0, 5).join(' | '));
   if (i < 0 && el.tagName === 'INPUT' && !el.readOnly) {   // long or searched lists: type the answer to narrow it
     setText(el, loc ? 'Santa Clara' : prefs[0].slice(0, 30), true);
     opts = await waitOpts(el, loc ? 7000 : 3500, o => pickIn(mask(o.map(x => clean(x.textContent)), q)) >= 0);
@@ -572,10 +603,12 @@ async function doCombo(f, rep) {
     if (opts.length) rep.options[q] = texts.filter(Boolean).slice(0, 12);
     return opts.length ? 'left' : 'fail';
   }
+  dbg('press', q, texts[i]);
   L.press(opts[i]); await sleep(450);
   if (deepActive() === el) L.leave(el, false);
   await sleep(100);
   const shownNow = comboValue(el);
+  dbg('shown', q, shownNow);
   if (!shownNow) { closeList(el); return 'fail'; }
   rep.filled.push([q, texts[i].slice(0, 70)]);
   return 'filled';
@@ -670,6 +703,8 @@ async function doFile(f, rep) {
   const s = f.q + ' ' + (el.id || '') + ' ' + (el.getAttribute('name') || '') + ' ' + (el.getAttribute('aria-label') || '') + ' ' + (el.getAttribute('data-testid') || '');
   const cover = /cover/i.test(s), resume = !cover && /resume|r[ée]sum[ée]|\bcv\b|curriculum/i.test(s);
   if (!cover && !resume) return 'left';
+  const ak = (cover ? 'cover|' : 'resume|') + location.pathname;
+  if ((ATTACHED[ak] || 0) >= 2) { if (resume) rep.resume = 'attached twice but the page did not keep it: attach it yourself'; return 'left'; }
   const file = cover ? S.get('cover') : L.resumeFor(JOB.title);
   if (!file) { if (resume) rep.resume = 'not set up (open Setup in this panel and choose your resume once)'; return 'left'; }
   try {
@@ -678,6 +713,7 @@ async function doFile(f, rep) {
     el.dispatchEvent(new Event('input', { bubbles: true, composed: true }));
     el.dispatchEvent(new Event('change', { bubbles: true, composed: true }));
   } catch (e) { return 'fail'; }
+  ATTACHED[ak] = (ATTACHED[ak] || 0) + 1;
   await sleep(1500);
   if (resume) rep.resume = file.name;
   rep.filled.push([cover ? 'Cover letter' : 'Resume', file.name]);
@@ -687,6 +723,7 @@ async function doFile(f, rep) {
 // ---------------- one pass over the page ----------------
 let busy = false, again = false, timer = 0, lastKey = 0, lastRep = null, runs = 0, lastSig = '';
 const allLeft = new Map(), allAsk = new Set(), allFilled = [];
+let resumeNote = '';
 function looksLikeForm(fields) {
   let score = 0;
   for (const f of fields) {
@@ -763,7 +800,7 @@ function el(tag, css, text) { const e = document.createElement(tag); if (css) e.
 let P_ = null;
 function panel() {
   if (P_ && P_.isConnected) return P_;
-  const p = el('div', 'all:initial;position:fixed;right:14px;bottom:14px;z-index:2147483646;width:300px;max-height:60vh;overflow:auto;background:#0f172a;color:#e2e8f0;font:12.5px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.35);padding:10px 12px;box-sizing:border-box');
+  const p = el('div', 'all:initial;position:fixed;left:14px;bottom:14px;z-index:2147483646;width:300px;max-height:60vh;overflow:auto;background:#0f172a;color:#e2e8f0;font:12.5px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.35);padding:10px 12px;box-sizing:border-box');
   p.id = PANEL_ID;
   const head = el('div', 'display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px');
   head.appendChild(el('b', 'font:600 13px system-ui,sans-serif;color:#e2e8f0', 'Job form filler'));
@@ -823,13 +860,14 @@ function stillEmpty() {   // required questions on the page that are still unans
 function report(rep) {
   const left = stillEmpty();
   const lines = [`Filled ${filledTotal} field${filledTotal === 1 ? '' : 's'} - review, answer the rest, then submit.`];
-  if (rep.resume) lines.push('Resume: ' + rep.resume);
+  if (rep.resume) resumeNote = rep.resume;
+  if (resumeNote) lines.push('Resume: ' + resumeNote);
   if (rep.setup) lines.push('Email / phone not set up yet: open Setup below.');
   if (allAsk.size) lines.push('For you: ' + [...allAsk].slice(0, 4).map(x => x.slice(0, 70)).join('; '));
   if (left.length) lines.push('Still empty (required): ' + left.slice(0, 6).map(x => x.slice(0, 60)).join('; ') + (left.length > 6 ? ` (+${left.length - 6} more)` : ''));
   lines.push('Never submitted for you: CAPTCHA, sign-in and Submit stay with you.');
   status(lines.join('\n'));
-  try { window.__AKF_GLAST = { filled: allFilled.slice(), filledTotal, left, ask: [...allAsk], tech: rep.tech, options: rep.options, resume: rep.resume, runs, version: L.VERSION }; } catch (e) {}
+  try { window.__AKF_GLAST = { filled: allFilled.slice(), filledTotal, left, ask: [...allAsk], tech: rep.tech, options: rep.options, resume: resumeNote, runs, version: L.VERSION }; } catch (e) {}
 }
 
 // ---------------- watching the page (multi-step forms, late fields, single-page apps) ----------------
