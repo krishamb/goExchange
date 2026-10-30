@@ -498,7 +498,8 @@
    "count": 2,
    "roles": [
     "Senior Forward Deployed Engineer"
-   ]
+   ],
+   "status": "closed 2026-10-30 (Staff Data Engineer, Analytics): position filled (not a rejection of the applicant)"
   },
   "agent": {
    "company": "agent",
@@ -13010,7 +13011,7 @@
    "roles": [
     "Engineering Architect"
    ],
-   "status": "Technical Interview I (Engineering Architect) scheduled Wed 2026-10-28 8:30-9:30 AM PDT (confirmed 2026-10-23)"
+   "status": "Technical Interview I (Engineering Architect) scheduled Wed 2026-10-28 8:30-9:30 AM PDT (confirmed 2026-10-23); rejected 2026-10-30: not moving forward after the second technical interview"
   },
   "oportun": {
    "name": "Oportun",
