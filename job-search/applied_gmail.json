@@ -20395,11 +20395,13 @@
   "vectara": {
    "name": "Vectara",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-10-30"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Platform Engineer"
+    "Platform Engineer",
+    "2026-11 Senior/Staff Software Engineer"
    ]
   },
   "thesiscare": {
@@ -20625,11 +20627,13 @@
   "palmetto": {
    "name": "Palmetto",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-10-30"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Manager, Data Engineering"
+    "Senior Manager, Data Engineering",
+    "Staff Data Engineer"
    ]
   },
   "testlio": {
