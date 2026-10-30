@@ -18284,11 +18284,13 @@
   "torcrobotics": {
    "name": "Torc Robotics",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-30"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior, ML Engineer - Tracking"
+    "Senior, ML Engineer - Tracking",
+    "Engineering Manager, Active Sensors (LiDAR)"
    ]
   },
   "torotms": {
