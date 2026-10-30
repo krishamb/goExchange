@@ -348,7 +348,12 @@ function setupJob() {
 }
 
 // ---------------- the fields on the page ----------------
-const FIELD_SEL = 'input, select, textarea, [role="combobox"], [role="radio"], [role="checkbox"], button[aria-haspopup="listbox"]';
+const FIELD_SEL = 'input, select, textarea, [role="combobox"], [role="radio"], [role="checkbox"], button[aria-haspopup], [role="button"][aria-haspopup]';
+function selectLike(b) {   // a button that is really a drop-down field (BambooHR's Fabric select), not a menu of actions
+  if (/select|dropdown|combo|picker|listbox/i.test(typeof b.className === 'string' ? b.className : '')) return true;
+  const w = b.parentElement && b.parentElement.parentElement;
+  return !!(w && w.querySelector('select') && w.querySelectorAll('[aria-haspopup]').length === 1);
+}
 function kindOf(el) {
   const tag = el.tagName;
   if (tag === 'SELECT') return 'select';
@@ -365,6 +370,7 @@ function kindOf(el) {
   }
   const role = el.getAttribute('role');
   if (role === 'combobox' || (tag === 'BUTTON' && el.getAttribute('aria-haspopup') === 'listbox')) return el.querySelector('input') ? '' : 'combo';
+  if ((tag === 'BUTTON' || role === 'button') && /^(true|menu)$/.test(el.getAttribute('aria-haspopup') || '') && selectLike(el)) return 'toggle';
   if (role === 'radio') return 'aradio';
   if (role === 'checkbox') return 'acheck';
   return '';
@@ -387,6 +393,7 @@ function collect(rs) {
     else if (k === 'file') { if (!shown(el) && !shown(el.parentElement)) continue; }
     else if (k === 'select') { if (!shown(el) && !(el.parentElement && shown(el.parentElement) && labelOf(el))) continue; }
     else if (k === 'combo') { if (!shown(el) && !shown(comboBox(el))) continue; }
+    else if (k === 'toggle') { if (!shown(el)) continue; }
     else if (!shown(el) || !realBox(el)) continue;
     out.push({ el, kind: k });
   }
@@ -512,18 +519,31 @@ function toggleFor(sel) {   // the visible button that opens the custom menu beh
   }
   return null;
 }
+function toggleSelect(tg) {   // the hidden select a toggle button stands for (its label is the question)
+  for (let p = tg.parentElement, i = 0; p && i < 4; p = p.parentElement, i++) { const ss = p.querySelectorAll('select'); if (ss.length === 1) return ss[0]; if (ss.length > 1) return null; }
+  return null;
+}
+function toggleQuestion(tg) {
+  const sel = toggleSelect(tg);
+  const q = sel ? labelOf(sel) : '';
+  if (q && !WEAK.test(q)) return tidy(q);
+  const cur = strip(tg), own = labelOf(tg);
+  return tidy(own && cur && own !== cur ? own.replace(cur, ' ') : (own || prevText(tg)));
+}
 async function doToggle(tg, sel, q, rep) {
   const cur = strip(tg);
   if (cur && !WEAK.test(cur) && !/^[-–—\s]*$/.test(cur)) return 'had';
-  const prefs = choicePrefs(sel, q, rep); if (!prefs) return 'left';
+  const prefs = choicePrefs(sel || tg, q, rep); if (!prefs) return 'left';
   if (!canClick(tg)) return 'left';
   dbg('toggle', q, prefs[0]);
   L.press(tg);
   const opts = await waitOpts(tg, 2500);
   const texts = mask(opts.map(o => clean(o.textContent)), q), i = bestIndex(texts, prefs);
+  dbg('toggle-opened', q, opts.length, i, texts.slice(0, 4).join(' | '));
   if (i < 0 || !canClick(opts[i])) { key(tg, 'Escape'); if (opts.length) rep.options[q] = texts.filter(Boolean).slice(0, 12); return opts.length ? 'left' : 'fail'; }
   L.press(opts[i]); await sleep(450);
   const now = strip(tg);
+  dbg('toggle-now', q, now);
   if (!now || WEAK.test(now) || /^[-–—\s]*$/.test(now)) return 'fail';
   rep.filled.push([q, texts[i].slice(0, 70)]);
   return 'filled';
@@ -749,7 +769,7 @@ async function fill(opts = {}) {
     const skip = el => { const s = st(el); return !manual && (s.done || s.tries >= 2 || el === active); };
     const record = (el, r, q, req) => {
       const s = st(el); s.tries++;
-      if (r === 'filled') { s.done = true; filledTotal++; allLeft.delete(q); }
+      if (r === 'filled') { s.done = true; allLeft.delete(q); }
       else if (r === 'had' || r === 'left') { s.done = true; if (r === 'left' && req && q) allLeft.set(q, el); else if (r === 'had') allLeft.delete(q); }
       else if (req && q) allLeft.set(q, el);
     };
@@ -764,14 +784,16 @@ async function fill(opts = {}) {
     if (attached) { await sleep(2500); fields = collect(roots()); }
     // 2) every other question, in page order
     for (const f of fields) {
-      if (!/^(text|date|select|combo)$/.test(f.kind) || skip(f.el)) continue;
+      if (!/^(text|date|select|combo|toggle)$/.test(f.kind) || skip(f.el)) continue;
       if (!f.el.isConnected) continue;
-      f.q = f.q != null ? f.q : questionOf(f.el); f.req = requiredOf(f.el);
+      if (f.kind === 'toggle') { f.q = toggleQuestion(f.el); const sv = toggleSelect(f.el); f.req = requiredOf(sv || f.el) || /[*✱]/.test((sv && sv.labels && sv.labels[0] && sv.labels[0].textContent) || ''); }
+      f.q = f.q != null ? f.q : questionOf(f.el); f.req = f.req != null ? f.req : requiredOf(f.el);
       let r = 'left';
       try {
         if (f.kind === 'text') r = await doText(f, rep);
         else if (f.kind === 'date') r = await doDate(f, rep);
         else if (f.kind === 'select') r = await doSelect(f, rep);
+        else if (f.kind === 'toggle') r = await doToggle(f.el, toggleSelect(f.el), f.q, rep);
         else r = await doCombo(f, rep);
       } catch (e) { r = 'fail'; }
       record(f.el, r, f.q, f.req);
@@ -786,6 +808,7 @@ async function fill(opts = {}) {
     }
     for (const q of rep.ask) allAsk.add(q.slice(0, 90));
     for (const x of rep.filled) allFilled.push(x);
+    filledTotal = new Set(allFilled.map(x => x[0])).size;
     lastRep = rep; runs++;
     report(rep);
     return rep;

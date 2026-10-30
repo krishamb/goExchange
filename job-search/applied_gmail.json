@@ -20711,6 +20711,36 @@
    "roles": [
     "Staff Software Engineer"
    ]
+  },
+  "flickr": {
+   "name": "Flickr",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager- Flickr (Manager, Engineering, M2)"
+   ]
+  },
+  "porchgroup": {
+   "name": "Porch Group",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering, Insurance Division (Director of Engineering)"
+   ]
+  },
+  "asgalpinesoftwaregroup": {
+   "name": "ASG (Alpine Software Group)",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "AI/ML Software Engineer"
+   ]
   }
  }
 }
