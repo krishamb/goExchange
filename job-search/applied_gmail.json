@@ -982,11 +982,14 @@
   "ambiencehealthcare": {
    "name": "Ambience Healthcare",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer, Product"
+    "Senior Software Engineer, Product",
+    "Engineering Manager, Product",
+    "Staff ML Engineer, Frontier AI"
    ]
   },
   "ambrygenetics": {
@@ -7866,11 +7869,13 @@
   "gigs": {
    "name": "Gigs",
    "dates": [
-    "2026-10-22"
+    "2026-10-22",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Senior Backend Engineer, US Activation & Retention"
    ]
   },
   "gileadsciences": {
@@ -11670,12 +11675,15 @@
   "mistral": {
    "name": "Mistral",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 3,
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
-    "Engineering Manager, Partnerships"
+    "Engineering Manager, Partnerships",
+    "Compute Solution Architect",
+    "Research Engineer, Data Infrastructure"
    ]
   },
   "miter": {
@@ -13420,11 +13428,13 @@
   "patlytics": {
    "name": "Patlytics",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Data Engineering Lead"
+    "Data Engineering Lead",
+    "AI Engineer"
    ]
   },
   "patreon": {
@@ -14713,11 +14723,13 @@
   "ramp": {
    "name": "Ramp",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Tech Lead and Manager (TLM), Production Engineering"
+    "Tech Lead and Manager (TLM), Production Engineering",
+    "Software Engineer, Forward Deployed"
    ]
   },
   "rapidfortinc": {
@@ -17193,12 +17205,14 @@
   "superhuman": {
    "name": "Superhuman",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
-    "Engineering Manager, Calc Engine \u2014 Superhuman Docs"
+    "Engineering Manager, Calc Engine \u2014 Superhuman Docs",
+    "Software Engineer, Back-End"
    ]
   },
   "supermicro": {
@@ -20833,6 +20847,269 @@
    "count": 1,
    "roles": [
     "Chief Technology Officer"
+   ]
+  },
+  "fireworksai": {
+   "name": "Fireworks AI",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of AI Enabled Business Systems"
+   ]
+  },
+  "elevenlabs": {
+   "name": "ElevenLabs",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Research Engineer - Inference"
+   ]
+  },
+  "higgsfield": {
+   "name": "Higgsfield",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Engineer, Ads"
+   ]
+  },
+  "vinci": {
+   "name": "Vinci",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Physics Applications - Software Engineer"
+   ]
+  },
+  "pinecone": {
+   "name": "Pinecone",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior/Staff Software Engineer, Search & Retrieval Infrastructure",
+    "Applied AI Engineer (Full-Stack)"
+   ]
+  },
+  "surveymonkey": {
+   "name": "SurveyMonkey",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "plaud": {
+   "name": "Plaud",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Backend Engineer - Palo Alto"
+   ]
+  },
+  "horizon3ai": {
+   "name": "Horizon3.ai",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 2,
+   "roles": [
+    "Director of Engineering, Webapp & AI Attack",
+    "Staff Software Engineer, Data Platform"
+   ]
+  },
+  "runlayer": {
+   "name": "Runlayer",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "aledade": {
+   "name": "Aledade",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer- AI Platform"
+   ]
+  },
+  "cohere": {
+   "name": "Cohere",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff/Senior Staff Software Engineer, Agent Infrastructure"
+   ]
+  },
+  "radar": {
+   "name": "Radar",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer, Search"
+   ]
+  },
+  "traba": {
+   "name": "Traba",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer (AI Agents)",
+    "Senior Software Engineer (Applied AI)"
+   ]
+  },
+  "treeswift": {
+   "name": "Treeswift",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Engineering Team Lead"
+   ]
+  },
+  "backerkit": {
+   "name": "BackerKit",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Developer"
+   ]
+  },
+  "biorender": {
+   "name": "BioRender",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Lead, AI Figure Agent"
+   ]
+  },
+  "headway": {
+   "name": "Headway",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "mainstay": {
+   "name": "Mainstay",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "nerdwallet": {
+   "name": "NerdWallet",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Consumer Facing Web Products"
+   ]
+  },
+  "sodalis": {
+   "name": "Sodalis",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer, Application Platform"
+   ]
+  },
+  "trmlabs": {
+   "name": "TRM Labs",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Machine Learning Engineer, Knowledge Layer"
+   ]
+  },
+  "thimble": {
+   "name": "Thimble",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, AI-Driven Systems"
+   ]
+  },
+  "doppler": {
+   "name": "Doppler",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Engineer, Core"
+   ]
+  },
+  "flossy": {
+   "name": "Flossy",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
+  },
+  "phantom": {
+   "name": "Phantom",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Engineer"
+   ]
+  },
+  "quadric": {
+   "name": "Quadric",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
    ]
   }
  }
