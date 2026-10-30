@@ -21242,6 +21242,16 @@
    "roles": [
     "Director, Applied AI and Machine Learning"
    ]
+  },
+  "phreesia": {
+   "name": "Phreesia",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff/Principal Engineer"
+   ]
   }
  }
 }
