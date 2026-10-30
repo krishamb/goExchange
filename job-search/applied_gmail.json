@@ -20783,6 +20783,46 @@
    "roles": [
     "Forward Deployed Engineer, AI"
    ]
+  },
+  "boomi": {
+   "name": "Boomi",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Enterprise AI"
+   ]
+  },
+  "dscout": {
+   "name": "Dscout",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Forward Deployed Engineer (Full-Stack)"
+   ]
+  },
+  "kla": {
+   "name": "KLA",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer"
+   ]
+  },
+  "availity": {
+   "name": "Availity",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Cloud Database Architect V"
+   ]
   }
  }
 }
