@@ -129,7 +129,7 @@ function strip(el) {   // an element's own words, without form controls and opti
   return clean(c.textContent || '');
 }
 function tidy(t) {
-  return clean(String(t || '').replace(/\(\s*(required|optional)\s*\)/ig, ' ').replace(/\s+(required|optional)\s*$/i, '').replace(/[\u2009\u200b]/g, ' ').replace(/\s*[:]\s*$/, '')).slice(0, 500);
+  return clean(String(t || '').replace(/\(\s*(required|optional)\s*\)/ig, ' ').replace(/\s*(required|optional)\s*$/i, '').replace(/[\u2009\u200b]/g, ' ').replace(/\s*[:]\s*$/, '')).slice(0, 500);
 }
 function ariaText(el, attr) {
   const ids = (el.getAttribute(attr) || '').split(/\s+/).filter(Boolean);
@@ -167,7 +167,7 @@ function prevText(el, stopAtControl = true) {   // the nearest text before the c
     if (!pe || pe.closest('option, select, script, style, button, [role="listbox"], [role="option"], [role="alert"], [class*="error" i]')) continue;
     const ol = pe.closest('label');
     if (stopAtControl && ol && !ol.contains(el) && ol.querySelector('input:not([type="hidden"]), select, textarea')) return '';   // another control's own label
-    if (/^(this field is required|required|optional|\*|error.*)$/i.test(s) || WEAK.test(s)) continue;
+    if (/^(this field is required|required|optional|\*|error.*)$|^(type|reference|network)?error\b|failed to (fetch|load|upload)|upload failed|something went wrong|try again/i.test(s) || WEAK.test(s)) continue;
     const blk = pe.querySelector('input, select, textarea') ? null : pe.closest('label, legend, h1, h2, h3, h4, h5, h6, p, li, dt, th, td, span, div');
     const t = blk && !blk.querySelector('input, select, textarea') ? strip(blk) : s;
     return t.length <= 400 ? t : s;
@@ -543,6 +543,10 @@ async function doText(f, rep) {
   setText(el, val);
   await sleep(60);
   if (!clean(el.value)) return 'fail';
+  const isPhone = type === 'tel' || labelKey(q) === 'phone';
+  if (isPhone && !/^\s*\+/.test(val) && /^\+(?!1\b|1\d{10}$)\d/.test(el.value.replace(/[\s()-]/g, '')) && (L.me() || {}).phone === val) {   // the applicant's number is a US one
+    setText(el, '+1 ' + val); await sleep(60);
+  }
   rep.filled.push([q, val.slice(0, 70)]);
   return 'filled';
 }
@@ -721,7 +725,7 @@ async function doChecks(g, rep) {
     const t = labs[0] || q, both = t + ' ' + q;
     if (NO_AI_CERT.test(both) || L.PERSONAL_CERT.test(both)) { rep.ask.push(t.slice(0, 90)); return 'left'; }
     if (/not a robot|i am (a )?human|captcha/i.test(both)) return 'left';
-    if (!g.req && /marketing|newsletter|future (job )?opportunit|talent (community|pool|network)|keep me|stay in touch|text message|\bsms\b|job alerts|subscribe|promotional|similar (jobs|roles|positions)/i.test(both)) return 'left';
+    if (!g.req && /marketing|newsletter|future (job )?(opportunit|vacanc|roles?|positions?|openings?)|other (roles|positions|vacancies|openings|opportunities)|talent (community|pool|network)|keep me|stay in touch|text message|\bsms\b|job alerts|subscribe|promotional|similar (jobs|roles|positions)/i.test(both)) return 'left';
     if (/i understand.{0,100}((5|five) days?|fully on-?site|100% (in[- ]?office|on-?site)|every (week)?day in (the )?office)/i.test(both)) return 'left';
     if (officeAsk(both, rep)) return 'left';
     if (L.DISCLOSE.test(t) && !L.ACK.test(q)) return 'left';
@@ -729,7 +733,7 @@ async function doChecks(g, rep) {
     if (!ok && q && q !== t) { const p = choicePrefs(boxes[0], q, { ask: [] }); ok = !!(p && bestIndex([t], p) === 0); }
     if (!ok) return 'left';
     if (!await tick(boxes[0])) return 'fail';
-    rep.filled.push([q || t, 'checked']); return 'filled';
+    rep.filled.push([t || q, 'checked']); return 'filled';
   }
   if (NO_AI_CERT.test(q) || L.PERSONAL_CERT.test(q)) { rep.ask.push(q.slice(0, 90)); return 'left'; }
   const isSrc = L.HEAR_Q.test(q);
