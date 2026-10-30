@@ -17930,11 +17930,13 @@
   "thehomedepot": {
    "name": "The Home Depot",
    "dates": [
-    "2026-10-19"
+    "2026-10-19",
+    "2026-10-30"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Software Engineer Manager - Cloud Platform Products (Agentic Workloads)"
+    "Software Engineer Manager - Cloud Platform Products (Agentic Workloads)",
+    "Senior AI Engineer (Remote)"
    ],
    "via": "Workday (hand application from the LinkedIn rerun)"
   },
@@ -21228,6 +21230,16 @@
    "count": 1,
    "roles": [
     "Sr. Engineering Manager - Core Platform"
+   ]
+  },
+  "duckcreektechnologies": {
+   "name": "Duck Creek Technologies",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Applied AI and Machine Learning"
    ]
   }
  }
