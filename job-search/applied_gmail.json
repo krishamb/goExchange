@@ -5988,7 +5988,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "rejected 2026-10-30 (Sr. Director, Enterprise Data): not moving forward"
   },
   "elasticdash": {
    "company": "elasticdash",
@@ -9022,7 +9024,7 @@
     "Senior Software Engineer- Agentic SOC",
     "Director, Engineering - Platform"
    ],
-   "status": "rejected 2026-10-21 (Director, Engineering - Platform: role filled)"
+   "status": "rejected 2026-10-21 (Director, Engineering - Platform: role filled); closed 2026-10-30 (Staff Platform Engineer): Job Filled (not a rejection of the applicant)"
   },
   "huron": {
    "name": "Huron",
@@ -21184,6 +21186,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "parallelwireless": {
+   "name": "Parallel Wireless",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer, Stack"
    ]
   }
  }
