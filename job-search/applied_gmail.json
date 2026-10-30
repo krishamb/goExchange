@@ -560,12 +560,14 @@
    "name": "AHEAD",
    "dates": [
     "2026-10-13",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-30"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Principal Engineer, Software Engineering",
-    "Senior Software Developer"
+    "Senior Software Developer",
+    "Software Engineering Manager \u2013 Foundry"
    ],
    "via": "gmail confirmation (Lever)"
   },
@@ -20750,6 +20752,26 @@
    "count": 1,
    "roles": [
     "Director of Engineering, Fan Experience"
+   ]
+  },
+  "snaplogic": {
+   "name": "SnapLogic",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
+   ]
+  },
+  "realself": {
+   "name": "RealSelf",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
    ]
   }
  }
