@@ -12570,9 +12570,11 @@
    "name": "Nscale",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-29"
    ],
-   "count": 2
+   "count": 3,
+   "roles": []
   },
   "nscaleoperationsukltd": {
    "company": "nscaleoperationsukltd",
@@ -21121,6 +21123,46 @@
    "roles": [
     "Senior AI Engineer",
     "AI Engineer"
+   ]
+  },
+  "egen": {
+   "name": "Egen",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Architect"
+   ]
+  },
+  "brightmachines": {
+   "name": "Bright Machines",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Robot Perception Engineer - Visual Inspection/MLOps"
+   ]
+  },
+  "agiloft": {
+   "name": "Agiloft",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Software Engineering - Contract Intelligence"
+   ]
+  },
+  "payjoy": {
+   "name": "PayJoy",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Machine Learning Director"
    ]
   }
  }
