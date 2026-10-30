@@ -6740,13 +6740,15 @@
    "dates": [
     "2026-09-29",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-29"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
     "Engineering Manager",
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "closed 2026-10-29 (Senior Software Engineer): opening filled; not moving forward (role filled, not a rejection of the applicant)"
   },
   "felixtechnologies": {
    "name": "F\u00e9lix Technologies",
@@ -8627,11 +8629,13 @@
   "henryschein": {
    "name": "henryschein",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-29"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Director Commerce Cloud Engineering"
+    "Director Commerce Cloud Engineering",
+    "Staff Software Engineer"
    ]
   },
   "hewlettpackardenterprise": {
@@ -15487,13 +15491,15 @@
    "via": "workday-cloud",
    "dates": [
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-30"
    ],
    "roles": [
     "LMTS (Lead Member of Technical Staff)",
-    "Senior Manager - Software Engineering"
+    "Senior Manager - Software Engineering",
+    "Senior Software Engineer- Infrastructure & Distributed Systems"
    ],
-   "count": 2
+   "count": 3
   },
   "salesloft": {
    "name": "Salesloft",
@@ -20667,11 +20673,13 @@
   "appliedmaterials": {
    "name": "Applied Materials",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-10-30"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Software Architect"
+    "Software Architect",
+    "AI/ML Engineer"
    ]
   },
   "redapt": {
@@ -20682,6 +20690,26 @@
    "count": 1,
    "roles": [
     "AWS AI / IoT Architect"
+   ]
+  },
+  "antoraenergy": {
+   "name": "Antora Energy",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff Software Engineer"
+   ]
+  },
+  "datarobot": {
+   "name": "DataRobot",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
    ]
   }
  }
