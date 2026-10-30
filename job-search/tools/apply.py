@@ -465,6 +465,7 @@ CHOICE_RULES=[
  (r"been the hiring manager or played a primary role in the hiring process", ["Yes"]),   # built and led teams (CTO, Yahoo Finance 75+, JPMorgan 50+)
  (r"^do you have a security clearance\?? if so,? which clearance level", ["No, I do not hold a clearance"]),
  (r"^what is the status of your security clearance", ["I HAVE NEVER HAD A SECURITY CLEARANCE","I have never had a security clearance"]),
+ (r"^have you (ever )?held,? or (do you )?(currently )?hold,? an? (active )?security clearance", ["Never held a clearance","I have never held a clearance"]),   # Vannevar Labs (Oct 30): US citizen, never held a clearance
  (r"^are you located in the (nyc|new york( city)?) area\??\*?$", ["No"]),   # lives in Santa Clara, CA
  (r"^software expertise\*?$", ["Fullstack","Backend"]),
  (r"base salary range for this role is listed in the job posting.{0,80}willing to accept within this posted range", ["I'd like to discuss","I’d like to discuss"]),
