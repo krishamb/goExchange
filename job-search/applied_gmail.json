@@ -1092,7 +1092,7 @@
    "roles": [
     "Staff Software Engineer - Kilo Code"
    ],
-   "status": "passed the hiring-manager interview 2026-10-20; technical interview (45 min, no AI coding tools, full-screen share) being scheduled (Staff Software Engineer - Kilo Code)"
+   "status": "passed the hiring-manager interview 2026-10-20; technical interview (45 min, no AI coding tools, full-screen share) being scheduled (Staff Software Engineer - Kilo Code); rejected 2026-10-29 (Staff Software Engineer - Kilo Code): Rippling notice for 'Anaconda & Kilo': after completing the interview process, decided not to move forward"
   },
   "analogdevices": {
    "name": "Analog Devices",
@@ -20822,6 +20822,16 @@
    "count": 1,
    "roles": [
     "Cloud Database Architect V"
+   ]
+  },
+  "innovativecomputersolutionsjonassoftware": {
+   "name": "Innovative Computer Solutions (Jonas Software)",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
    ]
   }
  }
