@@ -21111,6 +21111,17 @@
    "roles": [
     "Forward Deployed Engineer"
    ]
+  },
+  "cccintelligentsolutions": {
+   "name": "CCC Intelligent Solutions",
+   "dates": [
+    "2026-10-29"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior AI Engineer",
+    "AI Engineer"
+   ]
   }
  }
 }
