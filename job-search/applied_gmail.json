@@ -192,7 +192,8 @@
    "roles": [
     "Senior Applied AI Engineer 9/10/26"
    ],
-   "via": "gmail confirmation (Ashby)"
+   "via": "gmail confirmation (Ashby)",
+   "status": "rejected 2026-10-15 (Senior Applied AI Engineer): after review, moving forward with other candidates"
   },
   "abcfitnesssolutions": {
    "name": "ABC Fitness Solutions",
@@ -312,7 +313,8 @@
    "count": 2,
    "roles": [
     "Staff AI Engineer (Data & Intelligence function)"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Staff AI Engineer (Data & Intelligence function)): decided not to proceed with the application"
   },
   "acrisure": {
    "name": "acrisure",
@@ -352,7 +354,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-17: decided not to proceed with candidacy for current opening"
   },
   "adaptivebiotechnologies": {
    "name": "Adaptive Biotechnologies",
@@ -407,7 +411,10 @@
   "aderant": {
    "company": "Aderant",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-11 (Chief Architect, Product Engineering): regret to inform, not moving forward"
   },
   "adobe": {
    "name": "Adobe",
@@ -487,7 +494,9 @@
    ],
    "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02 (Staff Security Engineer, Enterprise AI): thanked for interest; not moving forward"
   },
   "afresh": {
    "name": "Afresh",
@@ -581,7 +590,8 @@
    "count": 2,
    "roles": [
     "Staff MLOps Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Staff MLOps Engineer): after resume review, regret to inform"
   },
   "aidashinc": {
    "name": "AiDASH, Inc.",
@@ -845,7 +855,8 @@
    "count": 3,
    "roles": [
     "Staff Software Engineer - Margin & Risk"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Staff Software Engineer - Margin & Risk): not selected to advance in the process"
   },
   "alphasense": {
    "name": "AlphaSense",
@@ -874,7 +885,8 @@
    "roles": [
     "Software Development Director"
    ],
-   "via": "gmail confirmation (Workday)"
+   "via": "gmail confirmation (Workday)",
+   "status": "rejected 2026-10-14 (Software Development Director): proceeding with applicants who more closely match"
   },
   "alt": {
    "name": "Alt",
@@ -897,7 +909,8 @@
    "roles": [
     "Principal Platform Engineer",
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-17 (Senior Software Engineer): reviewed application, decided not to move forward"
   },
   "altanaai": {
    "company": "altanaai",
@@ -909,7 +922,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-11 (Full Stack Developer): strong candidate pool; not moving forward with application"
   },
   "altera": {
    "name": "Altera",
@@ -966,7 +981,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-09-30 (Staff Back End Engineer): after careful consideration, not moving forward; rejected 2026-10-01 (Staff Software Engineer, Cloud Infrastructure): after careful consideration, not moving forward"
   },
   "amazon": {
    "name": "Amazon Web Services",
@@ -991,7 +1008,8 @@
     "Senior Software Engineer, Product",
     "Engineering Manager, Product",
     "Staff ML Engineer, Frontier AI"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Senior Backend Software Engineer, Product): after reviewing application, decided not to move forward"
   },
   "ambrygenetics": {
    "name": "Ambry Genetics",
@@ -1077,7 +1095,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Staff Software Engineer): recruiter follow-up: decided not to move forward"
   },
   "amtexenterprisesdice": {
    "name": "Amtex Enterprises (Dice)",
@@ -1167,7 +1186,8 @@
    "roles": [
     "Vice President, Reliability Engineering & Technology Operations"
    ],
-   "via": "gmail confirmation (Workday)"
+   "via": "gmail confirmation (Workday)",
+   "status": "rejected 2026-10-13 (Vice President, Reliability Engineering & Technology Operations): impressed with qualifications but moving forward with others"
   },
   "anthropic": {
    "name": "Anthropic",
@@ -1343,7 +1363,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-06: reviewed resume; unable to offer a position"
   },
   "arcesiumllc": {
    "company": "arcesiumllc",
@@ -1513,14 +1535,18 @@
     "2026-09-08",
     "2026-09-29"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Staff Software Engineer, AI Teammates): after careful review, decided not to move forward"
   },
   "asapp": {
    "name": "ASAPP",
    "dates": [
     "2026-10-11"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-13: experience does not align with role requirements"
   },
   "ascend": {
    "name": "Ascend",
@@ -1541,7 +1567,8 @@
    "count": 2,
    "roles": [
     "Software Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Software Engineering Manager): many qualified applicants; moving forward with others"
   },
   "ascertain": {
    "name": "Ascertain",
@@ -1610,7 +1637,9 @@
    ],
    "count": 1,
    "note": "cloud-applied today",
-   "rejected": "2026-10-05/06"
+   "rejected": "2026-10-05/06",
+   "roles": [],
+   "status": "rejected 2026-10-05 (Principal Engineer - Validation Engineering): after careful review, decided not to proceed"
   },
   "astoria": {
    "company": "astoria",
@@ -1689,7 +1718,10 @@
   "atomicmachines": {
    "company": "Atomic Machines",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-09: after careful consideration, not moving forward"
   },
   "atoms": {
    "name": "Atoms",
@@ -1954,7 +1986,8 @@
    "roles": [
     "Head of Tech & AI - Risk Advisory and Global Chief ..."
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-10-08 (Head of Tech & AI - Risk Advisory and Global Chief Underwriting Office): after careful review, not moving forward"
   },
   "axiado": {
    "name": "Axiado",
@@ -1997,7 +2030,8 @@
    "count": 2,
    "roles": [
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-15: hiring team reviewed application; pursuing other candidates"
   },
   "axonius": {
    "name": "Axonius",
@@ -2008,7 +2042,8 @@
    "count": 2,
    "roles": [
     "Principal Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Principal Data Engineer): after careful review, moving forward with others"
   },
   "axs": {
    "name": "AXS",
@@ -2052,7 +2087,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-12 (Staff Machine Learning Engineer): moving forward with other candidates"
   },
   "backblazeexternalwebsite": {
    "name": "Backblaze External Website",
@@ -2077,7 +2114,8 @@
    "roles": [
     "Engineering Manager, Core Product Engineering",
     "AI/ML Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Engineering Manager, Core Product Engineering): after review, moving forward with other candidates"
   },
   "backpack": {
    "company": "backpack",
@@ -2280,7 +2318,9 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Senior Director, Data Engineering and Architecture): does not meet requirements for this position"
   },
   "bd": {
    "name": "BD",
@@ -2434,7 +2474,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "rejected 2026-10-03 (Staff Machine Learning Engineer): thanked for patience; decided to move forward with others"
   },
   "betterhelpcom": {
    "company": "betterhelpcom",
@@ -2450,7 +2492,8 @@
    "count": 2,
    "roles": [
     "Sr Engineering Manager \u2013 API & Auth Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Sr Engineering Manager \u2013 API & Auth Platform): decided to pursue other candidates at this time"
   },
   "beyondfinance": {
    "name": "Beyond Finance",
@@ -2490,7 +2533,8 @@
    "count": 2,
    "roles": [
     "Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Engineering Manager): made the decision not to move forward"
   },
   "bill": {
    "name": "BILL",
@@ -2626,7 +2670,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-08 (Principal DevSecOps Architect): many applicants; pursuing other candidates"
   },
   "blackstrawllcdice": {
    "name": "Blackstraw LLC (Dice)",
@@ -2740,7 +2786,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Software Development Engineer - AI and Automation): decided not to proceed with application"
   },
   "bluerivertechnology": {
    "name": "Blue River Technology",
@@ -2820,7 +2868,8 @@
    "count": 1,
    "roles": [
     "Senior Retail AI Solutions Specialist"
-   ]
+   ],
+   "status": "rejected 2026-10-17: informed they are moving forward with other candidates"
   },
   "boloai": {
    "name": "Bolo AI",
@@ -2942,7 +2991,8 @@
    "roles": [
     "VP, Product Engineering",
     "Senior Lead Field Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-05 (Staff Machine Learning Engineer, ML Platform): decided not to move forward with application"
   },
   "brellium": {
    "name": "Brellium",
@@ -3050,7 +3100,8 @@
    "count": 2,
    "roles": [
     "Principal Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Principal Architect): after careful review, application no longer under consideration"
   },
   "bsnsports": {
    "name": "BSN Sports",
@@ -3061,7 +3112,8 @@
    "roles": [
     "Director, Software Engineering - Team Art Locker Platform"
    ],
-   "via": "gmail confirmation (Workday)"
+   "via": "gmail confirmation (Workday)",
+   "status": "rejected 2026-10-14 (Director, Software Engineering - Team Art Locker Platform): application status update: not moving forward"
   },
   "bstock": {
    "name": "B-Stock",
@@ -3119,7 +3171,9 @@
     "2026-09-30"
    ],
    "count": 2,
-   "rejected": "2026-10-05/06"
+   "rejected": "2026-10-05/06",
+   "roles": [],
+   "status": "closed 2026-10-05 (Senior Engineering Manager, Financial Platform): no longer hiring for this position (closed); closed 2026-10-09 (Staff Software Engineer, Integration Platform): no longer hiring for this position (closed)"
   },
   "bullhorn": {
    "name": "Bullhorn",
@@ -3128,7 +3182,9 @@
    ],
    "count": 1,
    "note": "applied",
-   "rejected": "2026-10-05/06"
+   "rejected": "2026-10-05/06",
+   "roles": [],
+   "status": "rejected 2026-10-05 (Principal Applied AI Engineer): chose other candidates who better match"
   },
   "buoyant": {
    "name": "Buoyant",
@@ -3283,7 +3339,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-16 (Senior AI Engineer): many talented applicants; decided not to proceed"
   },
   "cancernavigator": {
    "name": "CancerNavigator",
@@ -3337,7 +3395,9 @@
     "2026-09-29"
    ],
    "count": 1,
-   "rejected": "2026-10-05/06"
+   "rejected": "2026-10-05/06",
+   "roles": [],
+   "status": "rejected 2026-10-05 (Principal Consultant \u2013 AI Transformation & Adoption): moving forward with more closely aligned candidates"
   },
   "cape": {
    "name": "Cape",
@@ -3347,7 +3407,8 @@
    "count": 1,
    "roles": [
     "Lead Distributed Systems Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Lead Distributed Systems Engineer): after careful consideration, not a fit"
   },
   "capitalgroup": {
    "name": "Capital Group",
@@ -3429,7 +3490,8 @@
    "roles": [
     "Senior Data & AI Engineer"
    ],
-   "via": "gmail confirmation (caredx.com)"
+   "via": "gmail confirmation (caredx.com)",
+   "status": "rejected 2026-10-16 (Senior Data & AI Engineer): after careful consideration, moving forward with others"
   },
   "careerxchangeinc": {
    "name": "CAREERXCHANGE, Inc.",
@@ -3447,7 +3509,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (AI Platform Enablement Engineer III): after careful consideration, not moving forward"
   },
   "cargomatic": {
    "name": "Cargomatic",
@@ -3464,7 +3528,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Senior Principal Software Development Engineer): won't be proceeding with the application"
   },
   "cariad": {
    "name": "Cariad",
@@ -3473,7 +3539,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-03 (Staff Engineer, Autonomous Driving Data Platform & Curation): moving forward with other candidates"
   },
   "cariadinc": {
    "company": "cariadinc",
@@ -3610,7 +3678,8 @@
    "count": 2,
    "roles": [
     "Field CTO"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Senior Software Engineer): after reviewing applications, will not be moving forward"
   },
   "censys": {
    "name": "Censys",
@@ -3768,7 +3837,8 @@
    "count": 2,
    "roles": [
     "Senior Manager, Enterprise Data Platform & Integration Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior Manager, Enterprise Data Platform & Integration Architect): reviewed application and regret to decline"
   },
   "chanzuckerberginitiative": {
    "name": "Chan Zuckerberg Initiative",
@@ -3807,7 +3877,8 @@
    "count": 1,
    "roles": [
     "Tech Lead Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Tech Lead Manager): not an ideal fit; not moving forward"
   },
   "check": {
    "company": "check",
@@ -3907,7 +3978,9 @@
     "2026-09-29"
    ],
    "count": 1,
-   "rejected": "2026-10-05/06"
+   "rejected": "2026-10-05/06",
+   "roles": [],
+   "status": "rejected 2026-10-06 (Staff Software Engineer): experience impressive but not the best fit now"
   },
   "cisco": {
    "name": "Cisco",
@@ -3927,7 +4000,9 @@
     "2026-10-05"
    ],
    "count": 1,
-   "note": "applied"
+   "note": "applied",
+   "roles": [],
+   "status": "rejected 2026-10-06: regret to inform, not moving forward"
   },
   "citi": {
    "company": "Citi",
@@ -4026,7 +4101,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Principal Cloud Engineer): regret to inform, not moving forward"
   },
   "clearstreet": {
    "name": "Clear Street",
@@ -4044,7 +4121,8 @@
    "count": 2,
    "roles": [
     "Solutions Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Solutions Architect): decided not to proceed with candidacy"
   },
   "cleerly": {
    "name": "Cleerly",
@@ -4077,7 +4155,8 @@
    "count": 2,
    "roles": [
     "Staff/Senior Machine Learning Scientist"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Staff/Senior Machine Learning Scientist): thanked for application; not moving forward"
   },
   "clever": {
    "company": "clever",
@@ -4193,14 +4272,17 @@
    "count": 1,
    "roles": [
     "Staff Agentic Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Staff Agentic Software Engineer): impressive background, but not a match for role"
   },
   "cnainsurance": {
    "name": "CNA Insurance",
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-16 (Principal AI Engineer): after further review, pursuing other candidates"
   },
   "coalition": {
    "name": "Coalition",
@@ -4257,7 +4339,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-07 (Staff Data Engineer): will not be moving forward with application"
   },
   "codepath": {
    "name": "CodePath",
@@ -4336,7 +4420,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Sr Staff Software Engineer): strong pipeline; moving forward with other candidates"
   },
   "cohuinc": {
    "name": "Cohu, Inc.",
@@ -4359,7 +4445,8 @@
    "rejected": true,
    "roles": [
     "Senior Staff Software Engineer, Platform - IAM"
-   ]
+   ],
+   "status": "rejected 2026-10-05 (Staff Software Engineer, Enterprise Apps): decided not to move forward; reapplication timeline; rejected 2026-10-21 (Senior Staff Software Engineer, Platform - IAM): not moving forward with application"
   },
   "colab": {
    "company": "colab",
@@ -4373,7 +4460,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-04 (Engineering Manager - AutoReview): many applicants; moving forward with other candidates"
   },
   "collasysllc": {
    "name": "Collasys LLC",
@@ -4829,7 +4918,8 @@
    "count": 3,
    "roles": [
     "Principal Engineer, Engineering Practices"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Principal Engineer, Engineering Practices): recruiting update: moving forward with other candidates"
   },
   "crunchyrollllc": {
    "name": "Crunchyroll, LLC",
@@ -4855,7 +4945,8 @@
    "count": 1,
    "roles": [
     "Principal Software Engineer - Emerging Technology & AI - Remote"
-   ]
+   ],
+   "status": "rejected 2026-10-27 (Principal Software Engineer - Emerging Technology & AI - Remote): moving forward with applicants whose experience fits better"
   },
   "csl": {
    "name": "CSL",
@@ -4963,7 +5054,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-06 (Staff Software Engineer, Backend): application update: not moving forward; rejected 2026-10-06 (Staff Software Engineer, Product): application update: not moving forward"
   },
   "cvent": {
    "name": "Cvent",
@@ -4997,7 +5090,8 @@
    "count": 2,
    "roles": [
     "Manager, Software Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Manager, Software Engineering): many applications; moving forward with other candidates"
   },
   "cyera": {
    "name": "Cyera",
@@ -5031,7 +5125,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "rejected 2026-09-30 (Staff Software Engineer): after review, decided not to move forward with application"
   },
   "datacor": {
    "name": "Datacor",
@@ -5090,7 +5186,9 @@
    ],
    "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Staff ML Platform Engineer): reviewed applications; decided not to proceed; rejected 2026-10-04 (Staff ML Platform Engineer): reviewed applications; decided not to proceed (second notice)"
   },
   "datavant2": {
    "company": "datavant2",
@@ -5351,7 +5449,8 @@
    "count": 2,
    "roles": [
     "Lead Software Engineer - Merchandising Technology (REMOTE)"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Lead Software Engineer - Merchandising Technology (REMOTE)): decided to move forward with other candidates"
   },
   "didi": {
    "company": "didi",
@@ -5385,7 +5484,8 @@
    "count": 3,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-02 (Principal Software Engineer): selection made; not moving forward (sent twice); rejected 2026-10-17 (Senior Software Engineer): selection made; not moving forward"
   },
   "digicomplishinc": {
    "name": "Digicomplish Inc",
@@ -5425,7 +5525,10 @@
   "digitalturbine": {
    "company": "Digital Turbine",
    "first": "2026-10-07",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-08 (Principal Software Engineer): after careful review, moving forward with other candidates"
   },
   "diligentetechnologies": {
    "name": "Diligente Technologies",
@@ -5506,7 +5609,9 @@
     "2026-10-08"
    ],
    "count": 1,
-   "via": "ashby browser run (part 1)"
+   "via": "ashby browser run (part 1)",
+   "roles": [],
+   "status": "rejected 2026-10-09 (Enterprise AI Architect): after review, decided not to move forward"
   },
   "distylai": {
    "name": "Distyl AI",
@@ -5658,7 +5763,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Software Architect): moving forward with other candidates"
   },
   "dragos": {
    "name": "Dragos",
@@ -5819,7 +5926,8 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Senior Data Engineer): not an ideal fit; will not move forward"
   },
   "earlywarning": {
    "company": "Early Warning",
@@ -5898,7 +6006,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-16 (Developer Principal): moving forward with more closely qualified candidates"
   },
   "edetek": {
    "name": "EDETEK",
@@ -6247,7 +6357,8 @@
    "roles": [
     "Senior Software Engineer - SMB (Hyrbid)"
    ],
-   "via": "gmail confirmation (enova.com)"
+   "via": "gmail confirmation (enova.com)",
+   "status": "rejected 2026-10-14 (Senior Software Engineer - SMB (Hybrid)): impressed with background but not moving forward"
   },
   "enovainternational": {
    "name": "Enova International",
@@ -6326,7 +6437,8 @@
    "roles": [
     "Director, Product Software Architecture and Eng",
     "Vice President, Product Architecture & Security Platforms"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Director, Product Software Architecture and Eng): application update: decided not to move forward; rejected 2026-10-16 (Vice President, Product Architecture & Security Platforms): application update: decided not to move forward"
   },
   "equipmentshare": {
    "name": "EquipmentShare",
@@ -6369,7 +6481,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-12 (AI Solutions Architect (US H&M)): after careful consideration, not moving forward"
   },
   "etched": {
    "name": "etched",
@@ -6401,7 +6515,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-16 (Senior Data Engineer): moving forward with candidates who more closely match"
   },
   "eventual": {
    "name": "Eventual",
@@ -6589,7 +6705,7 @@
     "Manager, Analytics Engineering",
     "Senior Data Platform Engineer, Enterprise Merchant Integrations"
    ],
-   "status": "closed 2026-10-28 (Manager, Analytics Engineering): After interviews, candidacy ended because the role was just filled by a new hire. They will keep the applicant in mind f"
+   "status": "closed 2026-10-28 (Manager, Analytics Engineering): After interviews, candidacy ended because the role was just filled by a new hire. They will keep the applicant in mind f; rejected 2026-09-30: decided not to move forward with candidacy; rejected 2026-10-28 (Manager, Analytics Engineering): after interviews, no longer able to proceed"
   },
   "extrahop": {
    "name": "ExtraHop",
@@ -6698,7 +6814,8 @@
    "rejected": "2026-10-05/06",
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-06 (Infrastructure Engineering Director): regret to inform, not moving forward with candidacy"
   },
   "farai": {
    "name": "FAR.AI",
@@ -6849,7 +6966,10 @@
   "fieldwire": {
    "company": "Fieldwire",
    "first": "2026-10-06",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-15 (Senior Platform Engineer): moving forward with another candidate"
   },
   "fig": {
    "company": "fig",
@@ -6948,7 +7068,8 @@
    "count": 1,
    "roles": [
     "AI Enablement Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (AI Enablement Lead): reviewed carefully and decided not to move forward"
   },
   "firework": {
    "name": "Firework",
@@ -7060,7 +7181,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-07 (Resident Solution Architect): application update: decided not to move forward"
   },
   "fixitytechnologies": {
    "name": "Fixity Technologies",
@@ -7153,7 +7276,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer, Fullstack"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior Software Engineer, Fullstack): after thoughtful consideration, no ideal fit right now"
   },
   "flodesk": {
    "name": "Flodesk",
@@ -7175,7 +7299,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer, AI"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Senior Software Engineer, AI): after review, decided not to move forward"
   },
   "flowcode": {
    "name": "Flowcode",
@@ -7209,7 +7334,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, C++ (Market Data)"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Senior Software Engineer, C++ (Market Data)): decided to move forward with other candidates"
   },
   "fluidstack": {
    "name": "FluidStack",
@@ -7420,7 +7546,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Senior Software Engineer): many applications; decided not to proceed"
   },
   "franklintempleton": {
    "name": "Franklin Templeton",
@@ -7464,7 +7591,8 @@
    "count": 2,
    "roles": [
     "Engineering Manager, Backend"
-   ]
+   ],
+   "status": "rejected 2026-10-14: not the best fit; decided not to proceed"
   },
   "functionhealth": {
    "name": "Function Health",
@@ -7608,7 +7736,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Sr. AI Engineer, CX): after careful consideration, not moving forward"
   },
   "gap": {
    "name": "Gap Inc.",
@@ -7689,7 +7819,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-06 (Director, Financial Systems): after careful review, decided not to move forward"
   },
   "genentech": {
    "name": "Genentech",
@@ -7765,7 +7897,8 @@
     "AI CX Agent Principal Software Engineer, Go",
     "Lead Software Engineer \u2013 Media Services Group"
    ],
-   "count": 2
+   "count": 2,
+   "status": "rejected 2026-10-16 (AI CX Agent Principal Software Engineer, Go): reviewed background; moving forward with other candidates"
   },
   "gengis": {
    "company": "gengis",
@@ -7814,7 +7947,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Senior Software Engineer): decided not to proceed with candidacy"
   },
   "gevernova": {
    "name": "gevernova",
@@ -7842,7 +7977,8 @@
    "count": 1,
    "roles": [
     "Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Engineering Manager): other candidates' credentials a better fit"
   },
   "ghx": {
    "name": "GHX",
@@ -7909,7 +8045,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Staff Enterprise Architect): reviewed application; decided not to move forward"
   },
   "givebutter": {
    "name": "Givebutter",
@@ -8122,7 +8260,8 @@
    "roles": [
     "Solutions Architect, Financial Services"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-08-20: recruiter synced with team; not moving forward"
   },
   "gopuff": {
    "name": "Gopuff",
@@ -8166,7 +8305,10 @@
   "grafana": {
    "company": "Grafana Labs",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (linkedin-resolved)"
+   "via": "cloud_greenhouse (linkedin-resolved)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-14 (Senior FullStack Engineer - Grafana Cloud Observability): decided not to move forward with candidacy"
   },
   "grafanalabs": {
    "company": "Grafana Labs",
@@ -8210,7 +8352,8 @@
    "count": 2,
    "roles": [
     "Principal Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Principal Architect): after recruiter conversation, decided not to proceed"
   },
   "graphcore": {
    "company": "graphcore",
@@ -8429,7 +8572,8 @@
    "count": 1,
    "roles": [
     "Member of Technical Staff, Evals"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Member of Technical Staff, Evals): after careful consideration, not moving forward"
   },
   "happenbank": {
    "name": "Happen Bank",
@@ -8595,7 +8739,8 @@
    "roles": [
     "Forward Deployed Engineer",
     "Engineering Manager, Billing"
-   ]
+   ],
+   "status": "rejected 2026-10-05 (Staff Full Stack Engineer, New Billing): after careful consideration, not moving forward"
   },
   "heard": {
    "company": "heard",
@@ -8700,7 +8845,8 @@
    "roles": [
     "Sr. Engineering Manager - Data Platform"
    ],
-   "via": "gmail confirmation (Lever)"
+   "via": "gmail confirmation (Lever)",
+   "status": "rejected 2026-10-14 (Sr. Engineering Manager - Data Platform): after reviewing experience, decided not to proceed"
   },
   "highmarkhealth": {
    "company": "Highmark Health",
@@ -8947,7 +9093,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02 (Principal Machine Learning Engineer): carefully reviewed; decided not to move forward; rejected 2026-10-03 (Principal Software Engineer): carefully reviewed; decided not to move forward"
   },
   "hubspotjobs": {
    "company": "hubspotjobs",
@@ -8978,7 +9126,8 @@
    "count": 2,
    "roles": [
     "Applied AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Applied AI Engineer): after careful consideration, decided not to move forward"
   },
   "huggingface": {
    "name": "Hugging Face",
@@ -9016,7 +9165,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Sr. Principal Platform Engineer): after thoughtful review, moving forward with others"
   },
   "huntress": {
    "name": "Huntress",
@@ -9147,7 +9298,9 @@
     "2026-09-29"
    ],
    "count": 1,
-   "note": "applied"
+   "note": "applied",
+   "roles": [],
+   "status": "rejected 2026-10-01 (Staff Software Engineer, Full Stack \u2013 Commerce & Loyalty (Shop)): many applications; moving forward with other candidates"
   },
   "ifit": {
    "name": "iFIT",
@@ -9202,7 +9355,9 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10: not enough alignment between background and needs"
   },
   "impactcom": {
    "name": "impact.com",
@@ -9216,7 +9371,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-03 (AI Solutions Architect): moving forward with a better-suited candidate"
   },
   "imply": {
    "name": "Imply",
@@ -9238,7 +9395,8 @@
    "count": 1,
    "roles": [
     "Senior Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-08 (Senior Engineering Manager): proceeding with candidates who better align"
   },
   "independencepetholdings": {
    "name": "Independence Pet Holdings",
@@ -9378,7 +9536,8 @@
    "count": 1,
    "roles": [
     "Manager, AI Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Manager, AI Engineering): moving forward with other candidates at this time"
   },
   "insightrx": {
    "name": "InsightRX",
@@ -9535,7 +9694,8 @@
    "count": 2,
    "roles": [
     "Senior Solutions Architect - Data Labs"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Senior Solutions Architect - Data Labs): after reviewing experience, not moving forward"
   },
   "ionq": {
    "name": "IonQ",
@@ -9563,7 +9723,8 @@
    "note": "Workday reports an earlier application",
    "roles": [
     "Vice President, Software Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Vice President, Software Engineering): regrettably not moving forward with application"
   },
   "irhythmtechnologies": {
    "name": "iRhythm Technologies",
@@ -9638,7 +9799,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10: decided not to proceed with candidacy"
   },
   "itradenetworkinc": {
    "company": "itradenetworkinc",
@@ -9827,7 +9990,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-08: after review, decided not to proceed"
   },
   "junipersquare": {
    "name": "Juniper Square",
@@ -9837,7 +10002,8 @@
    "count": 1,
    "roles": [
     "Director, Engineering (Platform)"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Director, Engineering (Platform)): not moving forward at this time"
   },
   "just": {
    "company": "just",
@@ -9986,7 +10152,8 @@
    "roles": [
     "SVP, Chief Technology Officer (CTO)"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-10-08 (SVP, Chief Technology Officer (CTO)): regret to inform, not moving forward"
   },
   "kemperinsurance": {
    "name": "Kemper Insurance",
@@ -10090,7 +10257,8 @@
    "count": 1,
    "roles": [
     "Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-16: application update: not moving forward"
   },
   "kiralearning": {
    "name": "Kira Learning",
@@ -10341,12 +10509,16 @@
    "count": 1,
    "roles": [
     "Software Engineering Manager, Database (SmithDB)"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Software Engineering Manager, Database (SmithDB)): after careful consideration, moving forward with others"
   },
   "lantern": {
    "company": "Lantern",
    "first": "2026-10-03",
-   "via": "gmail confirmation (Oct 2-4 scan)"
+   "via": "gmail confirmation (Oct 2-4 scan)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-05 (Director of Engineering): after conversations, moving forward with other candidates"
   },
   "laresitsolutionsincdice": {
    "name": "Lares IT Solutions Inc (Dice)",
@@ -10491,7 +10663,9 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-07 (Head of Engineering): after careful consideration, not moving forward"
   },
   "leantechniques": {
    "name": "Lean TECHniques",
@@ -10502,7 +10676,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Senior Software Engineer): not moving forward with next steps"
   },
   "leap": {
    "name": "Leap",
@@ -10571,7 +10746,8 @@
    "rejected": "2026-10-06",
    "roles": [
     "Senior Software Engineer - Machine Learning (Remote US)"
-   ]
+   ],
+   "status": "rejected 2026-10-06: decided not to proceed; moved ahead with another; rejected 2026-10-31: decided not to proceed; moved ahead with another"
   },
   "legora": {
    "name": "Legora (applied via filler)",
@@ -10616,7 +10792,8 @@
    "count": 2,
    "roles": [
     "Research Manager, AI Infrastructure"
-   ]
+   ],
+   "status": "rejected 2026-10-30 (Research Manager, AI Infrastructure): moving forward with other candidates"
   },
   "liberate": {
    "company": "Liberate",
@@ -10712,7 +10889,8 @@
    "count": 2,
    "roles": [
     "Senior Director, Data Platform Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-31 (ML Engineer, Applied AI): after careful consideration, not moving forward"
   },
   "lilt": {
    "name": "LILT",
@@ -10785,7 +10963,8 @@
    "roles": [
     "Solutions Architect"
    ],
-   "via": "user (own application, Workday confirmation email)"
+   "via": "user (own application, Workday confirmation email)",
+   "status": "rejected 2026-10-16 (Solutions Architect): after careful consideration, not moving forward (name blank)"
   },
   "lithic": {
    "name": "Lithic",
@@ -10809,7 +10988,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02: only considering candidates already located in job country"
   },
   "lively": {
    "name": "Lively",
@@ -10888,7 +11069,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Head of Analytics Engineering): regret to inform, not progressing candidacy"
   },
   "ltk": {
    "name": "LTK",
@@ -10917,7 +11100,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-07 (Director of AI): after careful consideration, not moving forward"
   },
   "luma": {
    "company": "luma",
@@ -10933,7 +11118,8 @@
    "roles": [
     "Head of Software"
    ],
-   "via": "gmail confirmation (Lever)"
+   "via": "gmail confirmation (Lever)",
+   "status": "rejected 2026-10-14 (Head of Software): moving forward with other candidates"
   },
   "lumimeds": {
    "name": "Lumimeds",
@@ -11209,7 +11395,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-07 (Senior Software Engineer, Backend Engineering): other candidates more closely match the role"
   },
   "mavenrobotics": {
    "company": "Maven Robotics",
@@ -11290,7 +11478,8 @@
    "count": 2,
    "roles": [
     "Senior Database Engineer"
-   ]
+   ],
+   "status": "closed 2026-10-17 (Senior Database Engineer): position filled and role closing (closed)"
   },
   "mckesson": {
    "name": "McKesson",
@@ -11336,7 +11525,8 @@
    "roles": [
     "Vice President of Engineering",
     "Director of Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Vice President of Engineering): after interviews, moving forward with other candidates"
   },
   "medtronic": {
    "name": "Medtronic",
@@ -11393,7 +11583,8 @@
     "Software Developer \u2014 O*NET Occupation Study",
     "MCP & Plug In Connectors Expert"
    ],
-   "note": "gmail history (pre-Sep 2026); applicant 2026-10-20: \"Keep applying to Mercor for other roles\" - Mercor is exempt from the rejected list and the 3-role cap; its SF in-office roles are acceptable; one role per level per run; never the same role twice; 2026-10-19/20: Mercor Growth outreach for short-term remote \"Project Odin\" - the applicant replied asking for $100-150/hr"
+   "note": "gmail history (pre-Sep 2026); applicant 2026-10-20: \"Keep applying to Mercor for other roles\" - Mercor is exempt from the rejected list and the 3-role cap; its SF in-office roles are acceptable; one role per level per run; never the same role twice; 2026-10-19/20: Mercor Growth outreach for short-term remote \"Project Odin\" - the applicant replied asking for $100-150/hr",
+   "status": "rejected 2026-08-24 (Software Engineering Expert): hiring manager decided not to move forward"
   },
   "mercorcincinnatus": {
    "name": "Mercor (Cincinnatus)",
@@ -11432,7 +11623,8 @@
    "roles": [
     "Chief Technology Officer"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-10-16: after lengthy process, moving forward with other candidates"
   },
   "meredithoperationscorporation": {
    "name": "Meredith Operations Corporation",
@@ -11487,7 +11679,9 @@
     "2026-09-10",
     "2026-09-29"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "rejected 2026-09-10 (Director, AI Core Software): after reviewing experience, decided not to move forward; rejected 2026-09-29 (Director, AI Core Software): after reviewing experience, decided not to move forward; rejected 2026-10-08 (Engineering Manager, Autonomy Planning & Behaviors): after reviewing experience, decided not to move forward"
   },
   "mesh": {
    "name": "Mesh",
@@ -11510,7 +11704,10 @@
   "metamask": {
    "company": "MetaMask",
    "first": "2026-10-06",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-09 (Senior Software Engineer - Predict): after careful consideration, decided not to move forward"
   },
   "metlife": {
    "name": "MetLife",
@@ -11589,7 +11786,8 @@
    "roles": [
     "Full Stack Tech Lead - Senior"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-17: decided not to proceed with candidacy"
   },
   "millimanintelliscript": {
    "name": "Milliman IntelliScript",
@@ -11630,7 +11828,8 @@
    "note": "cloud-applied today",
    "roles": [
     "Field Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-10: pursuing other candidates whose skills fit better"
   },
   "ministrybrands": {
    "name": "Ministry Brands",
@@ -11749,7 +11948,8 @@
    "rejected": true,
    "roles": [
     "Software Engineer, Distributed Systems "
-   ]
+   ],
+   "status": "rejected 2026-10-02 (Engineering Manager, Query Service): after review, moving forward with other candidates"
   },
   "mobentertainment": {
    "name": "Mob Entertainment",
@@ -11896,7 +12096,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02 (Senior GTM AI Engineer -Deal Desk): regret to inform, not moving forward"
   },
   "motorolasolutions": {
    "company": "Motorola Solutions",
@@ -12030,7 +12232,8 @@
    "via": "ashby browser run (part 1)",
    "roles": [
     "Engineering Manager, Wallet"
-   ]
+   ],
+   "status": "closed 2026-10-13 (Engineering Manager, Wallet): role recently filled; not moving forward (closed)"
   },
   "myto": {
    "name": "Myto",
@@ -12067,7 +12270,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Engineering Lead, US"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Engineering Lead, US): will not be moving forward with application"
   },
   "nametag": {
    "company": "nametag",
@@ -12315,7 +12519,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Senior Software Engineer): competitive pool; not moving forward after review"
   },
   "nexorantllc": {
    "name": "Nexorant LLC",
@@ -12432,7 +12637,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-11 (Senior Manager, Data Engineering): many applicants; moving forward with other candidates"
   },
   "ninjatrader": {
    "name": "NinjaTrader",
@@ -12605,7 +12812,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01: decided to pursue other candidates for the role"
   },
   "nutanix": {
    "name": "Nutanix",
@@ -12616,7 +12825,8 @@
    "count": 2,
    "roles": [
     "Member of Technical Staff 4- End User Computing (EUC)"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Member of Technical Staff 4- End User Computing (EUC)): decided to move forward with other candidates"
   },
   "nutrafol": {
    "name": "Nutrafol",
@@ -12729,7 +12939,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-03 (Head of Data Platform & AI): application update: moving forward with other candidates"
   },
   "octozi": {
    "company": "octozi",
@@ -12809,7 +13021,9 @@
     "2026-10-03"
    ],
    "count": 1,
-   "note": "applied"
+   "note": "applied",
+   "roles": [],
+   "status": "rejected 2026-10-09 (Vice President of Information Technology): background does not align closely enough with needs"
   },
   "omada": {
    "company": "omada",
@@ -12826,7 +13040,8 @@
    "count": 3,
    "roles": [
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Engineering Manager, Infrastructure): thanked for consideration; not moving forward"
   },
   "omnicom": {
    "name": "Omnicom",
@@ -12858,7 +13073,8 @@
    "count": 2,
    "roles": [
     "Principal Software Engineer - AI"
-   ]
+   ],
+   "status": "rejected 2026-10-13: qualifications reviewed; decided not to move forward"
   },
   "ondofinance": {
    "name": "Ondo Finance",
@@ -12887,7 +13103,8 @@
    "note": "cloud-applied today",
    "roles": [
     "Senior AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Senior AI Engineer): decided not to proceed with candidacy"
   },
   "onepassword": {
    "name": "1Password (applied; do-not-reapply)",
@@ -12915,7 +13132,8 @@
    "count": 2,
    "roles": [
     "Senior Staff Software Engineer - AI Governance"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Senior Staff Software Engineer - AI Governance): not moving forward with application"
   },
   "onoshealth": {
    "name": "Onoshealth",
@@ -13218,7 +13436,8 @@
    "roles": [
     "Director of Data Platform Engineering"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-09-04: delayed response; moving forward with other candidates"
   },
   "pacmidtechnologygroupinc": {
    "name": "Pac-Mid Technology Group, Inc.",
@@ -13266,7 +13485,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-03: decided not to proceed with candidacy"
   },
   "pally": {
    "name": "Pally",
@@ -13296,7 +13517,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Principal Software Engineer, Collaborative Web Platform): many applications; moving forward with other candidates"
   },
   "pantheonsystems": {
    "name": "Pantheon Systems",
@@ -13326,7 +13549,10 @@
   "parachutehealth": {
    "company": "Parachute Health",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop 40d feed)"
+   "via": "cloud_greenhouse (ventureloop 40d feed)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-17: decided not to proceed; moved ahead with others"
   },
   "paraform": {
    "name": "Paraform",
@@ -13434,7 +13660,8 @@
    "count": 2,
    "roles": [
     "Staff Platform Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Staff Platform Engineer): after careful consideration, moving forward with others"
   },
   "patlytics": {
    "name": "Patlytics",
@@ -13607,7 +13834,8 @@
    "count": 1,
    "roles": [
     "Senior Backend Software Engineer (E-Commerce)"
-   ]
+   ],
+   "status": "rejected 2026-10-17 (Senior Backend Software Engineer (E-Commerce)): not moving forward with application"
   },
   "pendo": {
    "name": "Pendo",
@@ -13706,7 +13934,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02: decided not to proceed; moved ahead with another"
   },
   "philo": {
    "name": "Philo",
@@ -13774,7 +14004,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Chief Principal Software Engineer- Cloud"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Chief Principal Software Engineer- Cloud): decided to move forward with other candidates"
   },
   "pilotbase": {
    "name": "Pilotbase",
@@ -13871,7 +14102,9 @@
     "2026-10-08"
    ],
    "count": 1,
-   "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)"
+   "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
+   "roles": [],
+   "status": "rejected 2026-10-12: reviewed application; decided not to move forward"
   },
   "place": {
    "name": "PLACE",
@@ -14016,7 +14249,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02: after careful consideration, moving forward with others"
   },
   "podium": {
    "name": "Podium",
@@ -14427,7 +14662,8 @@
    "roles": [
     "Staff AI Engineer"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-10-08: reviewed carefully; not the right fit"
   },
   "pulumi": {
    "name": "Pulumi ",
@@ -14611,7 +14847,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior Software Engineer): after interviews, decided to move forward with others"
   },
   "quince": {
    "name": "Quince",
@@ -14671,7 +14908,8 @@
    "count": 2,
    "roles": [
     "Data Engineer V - US"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Data Engineer V - US): after careful consideration, moving forward with others"
   },
   "radai": {
    "name": "Radai",
@@ -14830,7 +15068,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-05 (Senior Director, Data Science): reviewed background; decided not to move forward"
   },
   "redhat": {
    "name": "Red Hat",
@@ -14870,7 +15110,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-08 (Engineering Manager): after careful consideration, pursuing other candidates"
   },
   "redwagon": {
    "company": "redwagon",
@@ -14883,14 +15125,18 @@
     "2026-10-05"
    ],
    "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [],
+   "status": "rejected 2026-10-12: after careful review, moving forward with other candidates"
   },
   "regal": {
    "name": "Regal",
    "dates": [
     "2026-10-11"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-14: reviewed work experience; decided not to move forward"
   },
   "reign": {
    "name": "Reign (Phoenix eCommerce Technologies)",
@@ -14940,7 +15186,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Senior Engineering Manager, Remitly Global Card (Hands-On)): impressed but not moving forward with candidacy"
   },
   "replit": {
    "name": "Replit (applied; do-not-reapply)",
@@ -15104,7 +15352,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Staff Engineer - Portfolio Management (Order Generation)): after discussion, decided to pursue other candidates"
   },
   "rightway": {
    "name": "Rightway",
@@ -15155,7 +15405,8 @@
    "count": 2,
    "roles": [
     "Senior Staff Software Engineer, Financial Crimes"
-   ]
+   ],
+   "status": "rejected 2026-10-08 (Staff Software Engineer): after careful consideration, moving forward with others; rejected 2026-10-15 (Senior Staff Software Engineer, Financial Crimes): after careful consideration, moving forward with others"
   },
   "risepoint": {
    "name": "risepoint",
@@ -15202,7 +15453,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer (Research)"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior Software Engineer (Research)): after reviewing application, decided not to proceed"
   },
   "riversideinsights": {
    "name": "Riverside Insights",
@@ -15583,7 +15835,9 @@
     "2026-10-03"
    ],
    "count": 2,
-   "rejected": "2026-10-06"
+   "rejected": "2026-10-06",
+   "roles": [],
+   "status": "rejected 2026-10-06 (Technical Director, Large-Scale AI Model Inferencing): team decided to move forward with other candidates; rejected 2026-10-12 (Staff Engineer, ML Profiling Tools): team decided to move forward with other candidates"
   },
   "san": {
    "company": "san",
@@ -15927,7 +16181,8 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-30 (Senior Data Engineer): strong pool; decided to move forward with others"
   },
   "sentact": {
    "name": "Sentact",
@@ -16001,7 +16256,8 @@
    "count": 1,
    "roles": [
     "Founding product engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Founding product engineer): not an ideal fit at this time"
   },
   "serval": {
    "company": "Serval",
@@ -16032,7 +16288,8 @@
    "count": 2,
    "roles": [
     "Principal Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-09-18 (Director, Software Engineering Management): decided to move forward with other candidates"
   },
   "servicetitan": {
    "name": "ServiceTitan",
@@ -16053,7 +16310,8 @@
    "count": 2,
    "roles": [
     "Senior Software Engineer, Accounting Integrations"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Senior Software Engineer, Accounting Integrations): appreciated application but moving forward with others"
   },
   "sesoinc": {
    "name": "Seso Inc.,",
@@ -16074,7 +16332,8 @@
    "count": 1,
    "roles": [
     "Principal Infrastructure Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-30: after careful consideration, moving forward with others"
   },
   "sharecare": {
    "name": "Sharecare",
@@ -16240,7 +16499,8 @@
    "count": 2,
    "roles": [
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-07 (Engineering Manager): decided not to move forward with application"
   },
   "signifyd95": {
    "company": "signifyd95",
@@ -16291,7 +16551,8 @@
    "count": 2,
    "roles": [
     "Senior Full Stack Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-13 (Senior Full Stack Engineer): many qualified applicants; decided not to proceed"
   },
   "simpro": {
    "name": "simpro",
@@ -16325,7 +16586,8 @@
    "count": 1,
    "roles": [
     "Staff Software Engineer, Greyspace"
-   ]
+   ],
+   "status": "rejected 2026-10-16: advanced stage; another candidate chosen"
   },
   "simspacecorporation": {
    "name": "Simspace Corporation",
@@ -16518,7 +16780,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Senior / Staff Software Engineer - AI / ML): after careful consideration, not moving forward; rejected 2026-10-07 (VP, Head of Forward Deployed Engineering): after careful consideration, not moving forward"
   },
   "snout": {
    "company": "snout",
@@ -16675,7 +16939,8 @@
    "count": 2,
    "roles": [
     "Tech Lead - Code Plane [IC5]"
-   ]
+   ],
+   "status": "rejected 2026-10-14: reviewed application; will not be moving forward"
   },
   "sparkadvisors": {
    "name": "Spark Advisors",
@@ -16763,7 +17028,8 @@
    "count": 2,
    "roles": [
     "Software Engineering Lead"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Software Engineering Lead): not selected for this position"
   },
   "spinmasterinc": {
    "name": "Spin Master, Inc.",
@@ -16790,7 +17056,8 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-17 (Senior Data Engineer): chose to go in another direction for the role"
   },
   "spotify": {
    "name": "Spotify",
@@ -16881,7 +17148,8 @@
    "count": 1,
    "roles": [
     "Sr. Software Engineer - Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-17 (Sr. Software Engineer - Platform): after review, decided not to move forward"
   },
   "stackpointstudio": {
    "name": "Stackpoint Studio",
@@ -16963,7 +17231,8 @@
    "roles": [
     "Partner Data Architect"
    ],
-   "via": "gmail confirmation (Ashby)"
+   "via": "gmail confirmation (Ashby)",
+   "status": "rejected 2026-10-14 (Partner Data Architect): competitive selection; not moving forward"
   },
   "steno": {
    "name": "Steno",
@@ -16973,7 +17242,8 @@
    "count": 2,
    "roles": [
     "Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Engineering Manager): offer extended to another applicant for the role"
   },
   "step": {
    "name": "Step",
@@ -16999,7 +17269,8 @@
    "roles": [
     "Director of Services Engineering"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-09-23 (Director of Services Engineering): team did not select for further consideration"
   },
   "stitchfix": {
    "name": "Stitch Fix",
@@ -17058,7 +17329,8 @@
    "count": 2,
    "roles": [
     "Principal Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Principal Software Engineer): decided not to move forward with interviewing"
   },
   "striiminc": {
    "company": "striiminc",
@@ -17092,7 +17364,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "closed 2026-10-10 (VP, Data Platform): position filled before application review (closed)"
   },
   "stryker": {
    "name": "Stryker",
@@ -17234,7 +17508,8 @@
    "count": 1,
    "roles": [
     "Principal AI Safety Architect"
-   ]
+   ],
+   "status": "rejected 2026-10-09 (Principal AI Safety Architect): after interview, not moving forward"
   },
   "supermicrocomputerinc": {
    "name": "Super Micro Computer Inc",
@@ -17290,7 +17565,8 @@
    "count": 2,
    "roles": [
     "Staff/Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-15 (Staff/Senior Software Engineer): application status: not moving forward"
   },
   "swishanalytics": {
    "name": "Swish Analytics",
@@ -17490,7 +17766,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Senior Software Engineer, Tech Lead): moving forward with candidates who more closely align"
   },
   "tandavixllc": {
    "name": "Tandavix llc",
@@ -17507,14 +17785,18 @@
    ],
    "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01 (Corporate AI Engineer): after careful review, not moving forward with next steps; rejected 2026-10-07 (Engineering Manager): after careful review, not moving forward with next steps"
   },
   "target": {
    "name": "Target",
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10 (Lead Full Stack Engineer - AI Platform Team): hiring team did not select for further consideration"
   },
   "taskclan": {
    "company": "taskclan",
@@ -17603,7 +17885,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-12 (Sr. Engineer, AI Developer Tools (Remote)): after careful consideration, moving forward with others"
   },
   "teamlfg": {
    "name": "teamLFG",
@@ -17665,7 +17949,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-03 (Chief Technology Officer): after reviewing application, decided not to move forward"
   },
   "tekmetric": {
    "company": "tekmetric",
@@ -17979,7 +18265,8 @@
    "roles": [
     "Chief Technology Officer"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-09-08 (Chief Technology Officer): after careful consideration, decided not to move forward"
   },
   "thenewyorktimes": {
    "name": "The New York Times",
@@ -17990,7 +18277,8 @@
    "count": 2,
    "roles": [
     "Senior Engineer, Developer Platforms and Generative AI"
-   ]
+   ],
+   "status": "rejected 2026-10-01 (Engineering Manager, Privacy & Governance Services): after careful consideration, will not be moving forward"
   },
   "thepublicinterestcompany": {
    "name": "The Public Interest Company",
@@ -18150,7 +18438,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-01: after thorough review, moving forward with other candidates"
   },
   "thriventfinancialforlutherans": {
    "name": "Thrivent Financial for Lutherans",
@@ -18215,7 +18505,10 @@
   "tines": {
    "company": "tines",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-06 (Senior Forward Deployed Engineer - Public Sector): location requirements not met; not moving forward"
   },
   "tinyhealth": {
    "name": "Tiny Health",
@@ -18436,7 +18729,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-12 (Software Engineering Manager): reviewed application; will not be moving forward"
   },
   "trolley": {
    "name": "Trolley",
@@ -18446,7 +18741,8 @@
    "count": 1,
    "roles": [
     "Lead Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-17 (Lead Data Engineer): hiring team reviewed application; not able to proceed"
   },
   "trucordia": {
    "name": "Trucordia",
@@ -18644,7 +18940,8 @@
    "count": 3,
    "roles": [
     "Senior AI Engineer - US"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior AI Engineer - US): after thorough review, regret to inform"
   },
   "uber": {
    "name": "Uber",
@@ -18658,7 +18955,8 @@
     "Sr Software Engineer - Experimentation",
     "Sr Staff Engineer - U4B",
     "Sr Manager, Engineering - Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-10 (Sr Manager, Engineering - Engineer): after careful consideration, won't be moving forward"
   },
   "ulresearchinstitutes": {
    "name": "UL Research Institutes",
@@ -18738,7 +19036,9 @@
     "2026-10-01"
    ],
    "count": 1,
-   "rejected": "2026-10-02/04"
+   "rejected": "2026-10-02/04",
+   "roles": [],
+   "status": "rejected 2026-10-03 (VP, Engineering): regret to say application will not progress"
   },
   "unitedmasterstranslation": {
    "company": "unitedmasterstranslation",
@@ -18888,7 +19188,8 @@
    "count": 1,
    "roles": [
     "Director of Agent Deployment"
-   ]
+   ],
+   "status": "rejected 2026-10-12 (Director of Agent Operations): not an ideal fit; not moving forward"
   },
   "valeris": {
    "name": "Valeris",
@@ -19002,7 +19303,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-05 (Director, Graph Databases): after careful consideration, moving forward with others"
   },
   "vegaintellisoftinc": {
    "name": "Vega Intellisoft Inc.",
@@ -19042,7 +19345,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Staff AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Staff AI Engineer): after reviewing application, not moving forward"
   },
   "veniceai": {
    "name": "Venice.ai",
@@ -19222,7 +19526,8 @@
    "count": 2,
    "roles": [
     "Director of AI Engineering, Internal Products"
-   ]
+   ],
+   "status": "rejected 2026-10-04: skills impressive, but decided not to progress application"
   },
   "viaduct": {
    "company": "viaduct",
@@ -19239,14 +19544,16 @@
     "Director, Forward Deployed Engineering",
     "Lead Software Engineer, Data Platform"
    ],
-   "status": "recruiter screen requested 2026-10-27 by Matt Leva (Director, Forward Deployed Engineering); the applicant replied the same day offering Fri 2026-10-30 at 12:00 or 1:30 PM PT"
+   "status": "recruiter screen requested 2026-10-27 by Matt Leva (Director, Forward Deployed Engineering); the applicant replied the same day offering Fri 2026-10-30 at 12:00 or 1:30 PM PT; rejected 2026-10-30 (Director, Forward Deployed Engineering): role requires NYC; recruiter cancelled screening call"
   },
   "vibe": {
    "name": "Vibe",
    "dates": [
     "2026-10-05"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-08 (Senior Machine Learning Engineer - Identity & Audience): role requires Paris location; not moving forward"
   },
   "vignasolutionsinc": {
    "name": "Vigna Solutions Inc.",
@@ -19344,7 +19651,10 @@
   "vsco": {
    "company": "VSCO",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (ventureloop 40d feed)"
+   "via": "cloud_greenhouse (ventureloop 40d feed)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-10-08 (Senior Staff Software Engineer, Graphics): moving forward with other candidates"
   },
   "vts": {
    "name": "VTS",
@@ -19361,7 +19671,8 @@
    "count": 1,
    "roles": [
     "Senior Cloud Infrastructure Engineer (Remote, US)"
-   ]
+   ],
+   "status": "rejected 2026-10-31: decided not to proceed; moved ahead with others"
   },
   "vumedi": {
    "name": "Vumedi",
@@ -19371,7 +19682,8 @@
    "count": 2,
    "roles": [
     "Director of Engineering"
-   ]
+   ],
+   "status": "rejected 2026-10-16 (Director of Engineering): after careful consideration, not moving forward"
   },
   "vynca": {
    "name": "Vynca",
@@ -19382,7 +19694,8 @@
    "count": 2,
    "roles": [
     "Senior Full Stack Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-14 (Senior Full Stack Engineer): application update: moving forward with other candidates"
   },
   "vyralnet": {
    "company": "vyralnet",
@@ -19506,7 +19819,8 @@
    "roles": [
     "Senior Director, AI Engineering"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-08-27 (Senior Director, AI Engineering (Remote)): moving forward with candidates who more closely match"
   },
   "wd": {
    "company": "wd",
@@ -19521,7 +19835,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-09: after careful consideration, decided not to move forward"
   },
   "webai": {
    "name": "Webai",
@@ -19541,7 +19856,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-10: after careful consideration, moving forward with others"
   },
   "wehrtyou": {
    "company": "wehrtyou",
@@ -19941,7 +20258,8 @@
     "Principal Software Dev Engineer",
     "Sr. Principal AI Architect, IT Workforce Experiences & Communication"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-09-29 (Sr. Principal AI Architect, IT Workforce Experiences & Communication): hiring team moving forward with other candidates; rejected 2026-10-27 (Principal Software Dev Engineer): hiring team moving forward with another candidate"
   },
   "yipitdata": {
    "name": "YipitData",
@@ -20138,7 +20456,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-09 (Staff Engineer): thanked for application; not moving forward"
   },
   "zipco": {
    "name": "Zip Co Limited (Greenhouse board name for Zip)",
@@ -20213,7 +20533,9 @@
    ],
    "count": 1,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [],
+   "status": "rejected 2026-10-02 (Director, Engineering (The Americas)): after careful consideration, decided not to move forward"
   },
   "zonecompanysoftwareconsultingllc": {
    "company": "zonecompanysoftwareconsultingllc",
@@ -20271,7 +20593,8 @@
     "Manager, SW Engineering",
     "Sr Forward Deployed Engineer"
    ],
-   "count": 3
+   "count": 3,
+   "status": "rejected 2026-10-09: pursuing candidates whose experience more closely aligns"
   },
   "zwift": {
    "name": "Zwift",
@@ -20440,7 +20763,8 @@
    "count": 1,
    "roles": [
     "Product Engineer, Full-Stack"
-   ]
+   ],
+   "status": "rejected 2026-10-30 (Product Engineer, Full-Stack): moving forward with other candidates"
   },
   "definitivehealthcare": {
    "name": "Definitive Healthcare",
@@ -20460,7 +20784,8 @@
    "count": 1,
    "roles": [
     "Senior/Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-10-31 (Senior/Staff Software Engineer): pursuing other candidates more aligned with requirements"
   },
   "openspace": {
    "name": "OpenSpace",
@@ -20852,7 +21177,8 @@
    "count": 1,
    "roles": [
     "Cloud Database Architect V"
-   ]
+   ],
+   "status": "rejected 2026-10-30 (Cloud Database Architect V): many applicants; not selected to move forward"
   },
   "innovativecomputersolutionsjonassoftware": {
    "name": "Innovative Computer Solutions (Jonas Software)",
@@ -21236,7 +21562,8 @@
    "count": 1,
    "roles": [
     "Sr. Engineering Manager - Core Platform"
-   ]
+   ],
+   "status": "rejected 2026-10-31 (Sr. Engineering Manager - Core Platform): pursuing other candidates for this role"
   },
   "duckcreektechnologies": {
    "name": "Duck Creek Technologies",
@@ -21277,6 +21604,97 @@
    "roles": [
     "Staff Software Engineer - R37 (Platform Engineering)"
    ]
+  },
+  "payolisolar": {
+   "name": "Payoli Solar",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "closed 2026-09-09 (Chief Technology Officer): Indeed removed the posting via moderation; use caution"
+  },
+  "indeed": {
+   "name": "Indeed",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-09-11 (Staff ML Software Engineer): outcome update: not moving forward with application; rejected 2026-09-22 (Principal Software Engineer V): outcome update: not moving forward with application; rejected 2026-10-09 (Senior Manager, Software Engineering): outcome update: not moving forward with application"
+  },
+  "ace": {
+   "name": "ACE",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-09-18 (Founding Chief Technology Officer (CTO)): via Indeed: application not selected for next step"
+  },
+  "sidegateinc": {
+   "name": "Sidegate Inc.",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-09-28 (Chief Technology Officer): via Indeed: application not selected for next step"
+  },
+  "tapestry": {
+   "name": "Tapestry",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-09-30 (Staff Full Stack Software Engineer, Tapestry): reviewed application; not moving forward; rejected 2026-10-01 (Head of Data Science, Tapestry): reviewed application; not moving forward; rejected 2026-10-09 (Engineering Manager, Grid Model Management (Tapestry)): after interviews, not moving forward with candidacy"
+  },
+  "wordware": {
+   "name": "Wordware",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-11: moving forward with candidates more closely aligned"
+  },
+  "colorhealth": {
+   "name": "Color Health",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-13 (Senior Software Engineer, AI Platform): moving forward with other candidates"
+  },
+  "skygen": {
+   "name": "SKYGEN",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-15 (Senior EDI Engineer): after careful consideration, not moving forward"
+  },
+  "vclusterlabs": {
+   "name": "vCluster Labs",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-16 (Staff Software Engineer (Backend) - North America): after reviewing application, not moving forward"
+  },
+  "hso": {
+   "name": "HSO",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-17 (Data Solution Architect): after reviewing profile, will not be progressing"
+  },
+  "altplatforminc": {
+   "name": "Alt Platform Inc",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-23: after careful consideration, decided not to move forward"
+  },
+  "genuinepartscompany": {
+   "name": "Genuine Parts Company",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-25 (Principal Orchestration Engineer): decided not to move forward with application"
+  },
+  "elililly": {
+   "name": "Eli Lilly",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-10-29 (ML Ops Engineer): decided to pursue other candidates at this time"
   }
  }
 }
