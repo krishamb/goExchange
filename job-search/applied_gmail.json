@@ -4614,11 +4614,13 @@
   "cortex": {
    "name": "Cortex",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-31"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Lead Software Engineer, Backend"
    ]
   },
   "costargroup": {
@@ -4765,12 +4767,14 @@
    "first": "2026-10-06",
    "via": "cloud_greenhouse (24h board sweep)",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-31"
    ],
    "roles": [
-    "Sr Software Engineer, Stream Integrations"
+    "Sr Software Engineer, Stream Integrations",
+    "Staff Software Engineer, Agentic Tools"
    ],
-   "count": 1
+   "count": 2
   },
   "crossriver": {
    "name": "Cross River",
