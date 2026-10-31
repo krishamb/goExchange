@@ -21253,6 +21253,26 @@
    "roles": [
     "Staff/Principal Engineer"
    ]
+  },
+  "optimaldynamics": {
+   "name": "Optimal Dynamics",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ]
+  },
+  "r1rcm": {
+   "name": "R1 RCM",
+   "dates": [
+    "2026-10-30"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - R37 (Platform Engineering)"
+   ]
   }
  }
 }

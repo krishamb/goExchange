@@ -410,7 +410,7 @@ def company_tokens(company, url=""):
     return {x for x in toks if len(x) >= 3}
 SITE = re.compile(r"\.com\b|\.co\b|web ?site|\bcareers?\b( (site|page|portal|web ?site|home ?page))?\s*$|\bcareers? (site|page|portal|web ?site)\b|\bjobs? (site|page|portal)\b|\bsite\b|\bportal\b|\bweb\b|\bhome ?page\b", re.I)
 LINKEDIN_SRC = re.compile(r"\blinked ?in\b", re.I)   # the applicant's real source (his answer, 2026-10-07): LinkedIn, never a LinkedIn recruiter / InMail
-SOURCE_SITE = "linkedin"   # per job (run_one): 'indeed' for roles found on Indeed, else 'linkedin'
+SOURCE_SITE = "linkedin"   # per job (run_one): 'indeed' / 'dice' for roles found on Indeed / Dice, else 'linkedin'
 def hear_score(t, toks, cat=""):
     """The real source first: LinkedIn (or Indeed for Indeed-found roles) 120; a generic job-board item 60; a generic
     social-media item 50 (LinkedIn roles); 'Other' 20; anything else 0 - never the company website / careers page
@@ -419,7 +419,7 @@ def hear_score(t, toks, cat=""):
     if not tl: return 0
     if SOURCE_SITE == "company":   # found on the company's own careers site: that item is the true source
         return 0 if LINKEDIN_SRC.search(tl) else _old_hear_score(t, toks, cat)
-    src = re.compile(r"\bindeed\b", re.I) if SOURCE_SITE == "indeed" else LINKEDIN_SRC
+    src = re.compile(r"\bindeed\b", re.I) if SOURCE_SITE == "indeed" else (re.compile(r"\bdice\b", re.I) if SOURCE_SITE == "dice" else LINKEDIN_SRC)
     bad = re.search(r"recruit|inmail|message|referr|employee|learning|event|fair", tl)
     if src.search(tl) and not bad: return 120
     if src.search(cat or "") and not bad and re.search(r"^(job (board|posting|post|ad)s?|posting|other|website)$", tl): return 110   # 'LinkedIn > Job Posting'
@@ -692,7 +692,7 @@ async def hear_choose(page, box, job):
             best = max(cands, default=(0, None), key=lambda x: x[0])
             if best[0] >= 120: break
     if best[0] < 120:   # a long or oddly grouped tree: search for the real source by name
-        for q in (["Indeed"] if SOURCE_SITE == "indeed" else ["LinkedIn"]):
+        for q in (["Indeed"] if SOURCE_SITE == "indeed" else ["Dice"] if SOURCE_SITE == "dice" else ["LinkedIn"]):
             auto = await prompt_open(page, box, q)
             if auto: await prompt_clear(page, box)   # a lone result Workday selected by itself: scored like the others
             _, res, rsub = await menu_items(page)
@@ -1370,7 +1370,7 @@ async def open_apply(page):
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
     global SOURCE_SITE; _src = str(item.get("src") or ""); CUR_RESUME["v"] = item.get("resume")
-    SOURCE_SITE = "indeed" if re.search(r"indeed", _src, re.I) else ("company" if re.search(r"site-careers|company-site|careers", _src, re.I) else "linkedin")
+    SOURCE_SITE = "indeed" if re.search(r"indeed", _src, re.I) else ("dice" if re.search(r"\bdice\b", _src, re.I) else ("company" if re.search(r"site-careers|company-site|careers", _src, re.I) else "linkedin"))   # dice: R1 RCM 2026-10-30 (its list: Recruiting Boards > Dice, no LinkedIn)
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
     # Santa Clara); elsewhere the rule says No and the COMMUTE_Q guard leaves it for the applicant
     # a radius question that names a Bay Area place answers itself (Etsy: 'within a 60 miles radius of ... San Francisco, CA'):

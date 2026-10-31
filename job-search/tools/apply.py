@@ -2448,6 +2448,7 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if pref and company and re.search(r"hear|learn about|find out|source",lab,re.I):
                             cn=re.sub(r"(usa|inc|llc|corp)$","",company,flags=re.I).strip()   # the company's own careers page first, if listed
                             if re.search(r"indeed",str(CUR_JOB.get("src") or ""),re.I): pref=["Indeed","Indeed.com","Indeed Job Board","Job Board - Indeed","Job Board","Job Boards","Online Job Board","Job Posting","Other"]   # found on Indeed: say so
+                            if re.search(r"\bdice\b",str(CUR_JOB.get("src") or ""),re.I): pref=["Dice","Dice.com","Job Board - Dice","Job Board","Job Boards","Online Job Board","Job Posting","Other"]   # found on Dice: say so
                             if "wellfound" in report["ats"].lower(): pref=["Wellfound","AngelList","Wellfound (AngelList)","Job board","Job Board","Online job board","Job posting"]+pref   # applying through Wellfound: say so
                         if not pref:
                             # unknown question: accept a decline/acknowledge option if the menu offers one, otherwise leave it for the user
