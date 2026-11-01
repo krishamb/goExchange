@@ -21698,6 +21698,16 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-10-29 (ML Ops Engineer): decided to pursue other candidates at this time"
+  },
+  "goguardian": {
+   "name": "GoGuardian",
+   "dates": [
+    "2026-10-31"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer - Beacon"
+   ]
   }
  }
 }
