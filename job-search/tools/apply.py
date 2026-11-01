@@ -593,6 +593,7 @@ CHOICE_RULES=[
  (r"proficiency (of|in) the english language|english language proficiency|level of english", ["Fluent / Native Speaker","Fluent","Native","Native or bilingual","Advanced"]),   # J&J (Oct 16)
 
  (r"^are you (currently )?a california resident\??$|^do you (currently )?(live|reside) in (the state of )?california\??$", ["Yes","yes"]),   # lives in Santa Clara, CA (KeyBank Oct 16)
+ (r"^\s*are you (currently )?(a|an) (united states|u\.?s\.?|us) resident\s*\??\s*\*?\s*$|^\s*do you (currently )?(live|reside) in the (united states|u\.?s\.?|us)\s*\??\s*\*?\s*$", ["Yes","yes"]),   # US citizen living in California (GoGuardian Oct 31)
 
  (r"^for california applicants?:", ["I understand","I acknowledge","I confirm receipt","Yes"]),   # he lives in California
  (r"^for (?!california)[a-z .]{3,30} applicants?:", ["Not Applicable - I am not a resident","Not Applicable","N/A","Not applicable"]),   # Bread Financial (Oct 16): other states' notices; he lives and works in California
