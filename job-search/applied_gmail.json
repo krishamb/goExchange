@@ -21710,6 +21710,13 @@
    "roles": [
     "Staff Software Engineer - Beacon"
    ]
+  },
+  "supplyhouse": {
+   "name": "SupplyHouse",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-11-01 (Principal Data Architect): not selected for further consideration"
   }
  }
 }
