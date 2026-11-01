@@ -4446,7 +4446,7 @@
    "roles": [
     "Senior Staff Software Engineer, Platform - IAM"
    ],
-   "status": "rejected 2026-10-05 (Staff Software Engineer, Enterprise Apps): decided not to move forward; reapplication timeline; rejected 2026-10-21 (Senior Staff Software Engineer, Platform - IAM): not moving forward with application"
+   "status": "rejected 2026-10-05 (Staff Software Engineer, Enterprise Apps): decided not to move forward; reapplication timeline; rejected 2026-10-21 (Senior Staff Software Engineer, Platform - IAM): not moving forward with application; rejected 2026-10-31 (Senior Staff Software Engineer, Institutional Exchange): identified a candidate and closing the position; not moving forward"
   },
   "colab": {
    "company": "colab",
@@ -10916,7 +10916,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-10-31 (Staff Software Engineer, Simulation): not selected for further consideration"
   },
   "lineage": {
    "name": "Lineage",
