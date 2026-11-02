@@ -21800,6 +21800,16 @@
    "roles": [
     "Senior Manager - Analytics Engineering"
    ]
+  },
+  "chargepoint": {
+   "name": "ChargePoint",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Platform & AI Architecture"
+   ]
   }
  }
 }
