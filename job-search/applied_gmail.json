@@ -21717,6 +21717,26 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-11-01 (Principal Data Architect): not selected for further consideration"
+  },
+  "conviva": {
+   "name": "Conviva",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "AI/ML Engineer"
+   ]
+  },
+  "yext": {
+   "name": "Yext",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineering Manager"
+   ]
   }
  }
 }
