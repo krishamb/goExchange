@@ -21737,6 +21737,66 @@
    "roles": [
     "Software Engineering Manager"
    ]
+  },
+  "voxmedia": {
+   "name": "Vox Media",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, New York Magazine"
+   ]
+  },
+  "skylight": {
+   "name": "Skylight",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff/Principal Software Engineer, Legacy Modernization (U.S. Air Force)"
+   ]
+  },
+  "qualys": {
+   "name": "Qualys",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Platform Architect"
+   ]
+  },
+  "kyndryl": {
+   "name": "Kyndryl",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Leader in OSS"
+   ]
+  },
+  "atomicindustries": {
+   "name": "Atomic Industries",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
+  "nextdoor": {
+   "name": "Nextdoor",
+   "dates": [
+    "2026-11-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager - Analytics Engineering"
+   ]
   }
  }
 }
