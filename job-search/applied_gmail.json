@@ -21810,6 +21810,39 @@
    "roles": [
     "Director, Platform & AI Architecture"
    ]
+  },
+  "tala": {
+   "name": "Tala",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Machine Learning Engineering"
+   ]
+  },
+  "abnormalai": {
+   "name": "Abnormal AI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Tech Lead Manager - Product Engineering (Identity Security)"
+   ],
+   "aliases": [
+    "Abnormal Security"
+   ]
+  },
+  "shieldai": {
+   "name": "Shield AI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Enterprise Data (R6103)"
+   ]
   }
  }
 }

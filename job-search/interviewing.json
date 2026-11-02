@@ -1,6 +1,6 @@
 {
  "note": "Companies the applicant is interviewing with (or interviewed with): never apply to them again. Applicant 2026-10-31: 'Do not apply to payjoy, openteams, any other company I am interviewing.' Read by the scratchpad gates (gates.allow) that every sweep, bot queue and applicant file passes through. Built from the applicant's Gmail calendar invitations, reminders and interview-scheduling emails (last 60 days); add new interviews at every check-in.",
- "updated": "2026-10-31",
+ "updated": "2026-11-02",
  "companies": [
   {"company": "PayJoy", "aliases": [], "since": "2026-10-31", "evidence": "applicant said they are interviewing"},
   {"company": "OpenTeams", "aliases": ["OpenTeams Incubator", "OT Incubator"], "since": "2026-10-23", "evidence": "technical interviews Oct 27-30 (Engineering Architect); rejected Oct 30"},
@@ -31,6 +31,7 @@
   {"company": "Gallup", "aliases": [], "since": "2026-10-19", "evidence": "video interviews (Staff Engineer - Product Engineering)"},
   {"company": "Cleveland Clinic", "aliases": ["Cleveland Clinic Health System"], "since": "2026-10-12", "evidence": "first-step interview (Staff/Senior Machine Learning Scientist)"},
   {"company": "Hubble Network", "aliases": [], "since": "2026-10-20", "evidence": "interviewed (Principal Localization Engineer)"},
-  {"company": "Hewlett Packard Enterprise", "aliases": ["HPE"], "since": "2026-10-21", "evidence": "recruiter conversation (Senior Principal AI & ML Engineer)"}
+  {"company": "Hewlett Packard Enterprise", "aliases": ["HPE"], "since": "2026-10-21", "evidence": "recruiter conversation (Senior Principal AI & ML Engineer)"},
+  {"company": "PathAI", "aliases": ["PathAI (Roche)", "Roche"], "since": "2026-11-02", "evidence": "recruiter call Nov 2 (Assoc Director MLE Ops; Roche/Genentech recruiting); applied Oct 17"}
  ]
 }
