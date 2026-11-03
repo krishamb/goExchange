@@ -23069,6 +23069,26 @@
    "roles": [
     "Senior Infrastructure Engineer"
    ]
+  },
+  "pontera": {
+   "name": "Pontera",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "hook": {
+   "name": "Hook",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer -- Full-Stack TypeScript (Node.js, React, Cloud)"
+   ]
   }
  }
 }
