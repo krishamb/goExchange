@@ -1537,9 +1537,9 @@ def profile_ref(v):
     return val
 def set_email(em):
     """Switch the applicant email for the next application (profile value + the e-mail text rule)."""
-    P["email"]=em
-    for i,(pat,val) in enumerate(TEXT_RULES):
-        if pat==r"e-?mail": TEXT_RULES[i]=(pat,em)
+    old=P.get("email"); P["email"]=em
+    for i,(pat,val) in enumerate(TEXT_RULES):   # 2026-11-03: every rule answering with the previous address (the e-mail rule's pattern changed on 10-14, so matching the pattern text missed it)
+        if pat==r"e-?mail" or (old and val==old): TEXT_RULES[i]=(pat,em)
 CUR_ATS=None   # set per job by run_one: some behaviours depend on the host site
 CUR_JOB={"src":None}   # set per job by the batch: where the role was found ('indeed...' -> the source answer is Indeed)
 # work environments the applicant has managed in (startups Hyperion AI/Motocho/Ankr, product companies Yahoo Finance/Bloomberg, banks JPMC/Morgan Stanley/Barclays, Cadence)

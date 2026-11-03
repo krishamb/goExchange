@@ -332,6 +332,21 @@ REVIEW_JS = r"""(root)=>{
   return out;}"""
 
 # ---- answers
+def profile_ref(v):
+    """A queue row's "[profile:<key>]" value -> JOBS_DIR/profile.json[key], so contact details stay out of this repository
+    (2026-11-03: a per-job applicant email, as apply.py's batch rows already allow); other values are returned unchanged."""
+    m = re.fullmatch(r"\[profile:(\w+)\]", v or "")
+    if not m: return v
+    return json.load(open(os.path.join(JOBS_DIR, "profile.json"))).get(m.group(1))
+DEFAULT_EMAIL = P["email"]
+def set_email(em):
+    """Use this applicant email for the current job: the profile value and every text rule that answered with the previous one."""
+    old = P["email"]; P["email"] = em
+    for i, (pat, val) in enumerate(TEXT_RULES):
+        if val == old: TEXT_RULES[i] = (pat, em)
+def job_email(job):
+    """The job's own applicant email (queue row "email", usually "[profile:<key>]"), or None for the default."""
+    return profile_ref(job.item.get("email")) if job.item.get("email") else None
 def choice_for(label):
     v = pick(label, CHOICE_RULES)
     if v is None: return None
@@ -1235,6 +1250,11 @@ async def auth(page, job, s):
         s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}; save_secret(s)
     creds = {"login": (s["email"], s["passwords"][0]), "new": (s.get("new_account_email") or P["email"], s.get("new_account_password") or s["passwords"][0])}
     if s.get("new_account_password_strong"): creds["strong"] = (s.get("new_account_email") or P["email"], s["new_account_password_strong"])
+    _alt = job_email(job)
+    if _alt:   # 2026-11-03 applicant: apply with a given address (Himalayas lane): the tenant account uses that address, never the usual login
+        creds = {"new": (_alt, s.get("new_account_password") or s["passwords"][0])}
+        if s.get("new_account_password_strong"): creds["strong"] = (_alt, s["new_account_password_strong"])
+        if known.get("email") != _alt: known = {}   # a remembered account under another address is not used for this job
     if known.get("pw_key") in creds:
         if known.get("failed"):   # the remembered login failed on an earlier run: never retried (lockouts); fix wf_creds, then remove "failed"
             job.report["errors"].append(f"sign-in with the remembered {known['pw_key']} login failed on an earlier run; not retried"); return "fail"
@@ -1245,7 +1265,7 @@ async def auth(page, job, s):
         if r is False: known["failed"] = int(time.time()); s["tenants"][ten] = known; save_secret(s)
         return "ok" if r else ("blocked" if r is None else "fail")
     # 1) one attempt with the applicant's Workday login (never again on this tenant once it has failed)
-    r = "noform" if known.get("login_failed") else await sign_in(*creds["login"])
+    r = "noform" if (known.get("login_failed") or _alt) else await sign_in(*creds["login"])
     if r is None: return "blocked"
     if r is True: remember(creds["login"][0], "login"); return "ok"
     if r is False: s["tenants"][ten] = {"login_failed": int(time.time())}; save_secret(s)
@@ -1370,6 +1390,7 @@ async def open_apply(page):
 
 async def run_one(ctx, item, s):
     job = Job(item); page = await ctx.new_page(); rp = f"{OUT}/{job.tag}_wd_report.json"
+    set_email(job_email(job) or DEFAULT_EMAIL)   # 2026-11-03: a row may name its own applicant email ("[profile:<key>]"); others use the default
     global SOURCE_SITE; _src = str(item.get("src") or ""); CUR_RESUME["v"] = item.get("resume")
     SOURCE_SITE = "indeed" if re.search(r"indeed", _src, re.I) else ("dice" if re.search(r"\bdice\b", _src, re.I) else ("company" if re.search(r"site-careers|company-site|careers", _src, re.I) else "linkedin"))   # dice: R1 RCM 2026-10-30 (its list: Recruiting Boards > Dice, no LinkedIn)
     # per-job rules for the shared pick(): commutable distance / living near the office is Yes for Bay Area roles (he lives in
