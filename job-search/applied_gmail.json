@@ -7842,6 +7842,9 @@
    "count": 1,
    "roles": [
     "Senior Director, Data Management & Analytical Data Science Solutions"
+   ],
+   "aliases": [
+    "Genentech (Roche)"
    ]
   },
   "generacpowersystems": {
@@ -14416,6 +14419,10 @@
    "count": 1,
    "roles": [
     "Development Manager"
+   ],
+   "aliases": [
+    "Booking Holdings",
+    "Booking Holdings (Priceline)"
    ]
   },
   "prime": {
@@ -15188,7 +15195,11 @@
   "relativity": {
    "company": "Relativity",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "aliases": [
+    "kcura",
+    "Relativity (kCura)"
+   ]
   },
   "relic": {
    "company": "relic",
