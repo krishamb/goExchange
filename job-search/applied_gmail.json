@@ -3374,11 +3374,15 @@
    "via": "gmail confirmation (Greenhouse); rejected 2025-03-08"
   },
   "canopy": {
-   "name": "Canopy",
+   "name": "Canopy Works",
    "dates": [
     "2026-10-12"
    ],
-   "count": 1
+   "count": 1,
+   "aliases": [
+    "Canopy"
+   ],
+   "status": "Greenhouse confirmation 2026-10-12 names Canopy Works (role not stated)"
   },
   "canopyconnect": {
    "name": "Canopy Connect",
