@@ -1246,8 +1246,10 @@ async def auth(page, job, s):
             ft = (await form.first.inner_text()) if await form.count() else ""
             if re.search(r"wrong|invalid|incorrect|not recogni[sz]ed|locked|could not|unable to sign|verify your|not (been )?verified|doesn.t match", ft, re.I): return False
         return False
-    def remember(email, pw_key):
-        s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}; save_secret(s)
+    def remember(email, pw_key, unverified=False):
+        s["tenants"][ten] = {"email": email, "pw_key": pw_key, "ts": int(time.time())}
+        if unverified: s["tenants"][ten]["unverified"] = True   # created, email link not yet followed (2026-11-03)
+        save_secret(s)
     creds = {"login": (s["email"], s["passwords"][0]), "new": (s.get("new_account_email") or P["email"], s.get("new_account_password") or s["passwords"][0])}
     if s.get("new_account_password_strong"): creds["strong"] = (s.get("new_account_email") or P["email"], s["new_account_password_strong"])
     _alt = job_email(job)
@@ -1262,6 +1264,10 @@ async def auth(page, job, s):
         e = known.get("email") or e   # the tenant account was created with this email, which may differ from today's wf_creds email
         r = await sign_in(e, pw)
         if r == "noform": return "ok" if await auth_state(page, 10) == "in" else "fail"
+        if r is False and known.get("unverified") is True:   # 2026-11-03: an earlier run created this account and never followed its email link - ask the relay for it once more (no lockout risk: nothing else is tried); a second refusal marks the login failed
+            known["unverified"] = "asked"; s["tenants"][ten] = known; save_secret(s)
+            log(job, "sign-in refused for an account still awaiting email verification: asking for the link"); return "verify"
+        if r is True and known.get("unverified"): known.pop("unverified", None); s["tenants"][ten] = known; save_secret(s)
         if r is False: known["failed"] = int(time.time()); s["tenants"][ten] = known; save_secret(s)
         return "ok" if r else ("blocked" if r is None else "fail")
     # 1) one attempt with the applicant's Workday login (never again on this tenant once it has failed)
@@ -1312,7 +1318,7 @@ async def auth(page, job, s):
             if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
             return "blocked" if r is None else "fail"
         if re.search(r"email has been sent|verify (your )?(email|account)|verification (email|link)|check your email|resend account verification", body, re.I):
-            remember(e, _key); return "verify"
+            remember(e, _key, unverified=True); return "verify"
         if APPLIED.search(body) or await signed_in_now(page): remember(e, _key); return "ok"
         if time.time() > end - 32 and not await page.locator(f'input{A("verifyPassword")}').count() and await page.locator(f'{A("SignInWithEmailButton")}:visible, {A("signInSubmitButton")}:visible').count():
             # the tenant created the account and returned to its Sign In page (Thomson Reuters): sign in once with the new account
@@ -1322,8 +1328,9 @@ async def auth(page, job, s):
             if r is True: remember(e, _key); return "ok"
             if r is None: return "blocked"
             if re.search(r"verify your (account|email)|request a verification email|account verification", await text(page), re.I):
-                remember(e, _key); log(job, "create account: the tenant wants the email verified first"); return "verify"   # the link is read from Gmail and written to out/<tag>_verify.txt
-            if r is False: s["tenants"].setdefault(ten, {})["new_failed"] = int(time.time()); save_secret(s)
+                remember(e, _key, unverified=True); log(job, "create account: the tenant wants the email verified first"); return "verify"   # the link is read from Gmail and written to out/<tag>_verify.txt
+            if r is False:   # 2026-11-03 (Guidehouse, Levi's): a brand-new account refused at once is almost always unverified - Workday shows only "wrong email or password or locked"; ask the relay for the link instead of giving up
+                remember(e, _key, unverified=True); log(job, "create account: the new account is refused at sign-in - treating it as awaiting email verification"); return "verify"
             log(job, f"create account: sign-in with the new account -> {r}"); return "fail"
         errs = await form_errors(page)
         if errs:   # e.g. Visa: 'Password must include: A minimum of 12 characters' (wf_creds new_account_password)
