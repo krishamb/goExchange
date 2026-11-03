@@ -22900,6 +22900,16 @@
    "roles": [
     "Director, Data Architecture (AI Enablement)"
    ]
+  },
+  "codeandtheory": {
+   "name": "Code and Theory",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Engineering (US)"
+   ]
   }
  }
 }
