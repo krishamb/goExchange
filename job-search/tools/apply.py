@@ -881,6 +881,7 @@ CHOICE_RULES=[
  (r"if you worked for nationwide, was it as", ["N/A","Not applicable","I have not worked for Nationwide","None of the above"]),   # never worked there
  (r"which (us )?state or province do you (currently )?live in|which state do you (currently )?(live|reside) in", ["(US) California","California","CA"]),   # Santa Clara, CA
  (r"meet the minimum (education|qualifications?)( and (years of )?experience)? required", ["Yes","yes"]),   # B.E. Computer Science + 25 years (Chamberlain Staff Engineer)
+ (r"meet the minimum (education|qualifications?) ?(and|&) ?(years of )?experience requirements? (listed|stated|outlined|described|specified|in)", ["Yes","yes"]),   # B.E. Computer Science + 25 years, 10+ years managing teams (Aqua Finance Director SWE 2026-11-02)
  (r"confirm your current work authori[sz]ation status", ["Yes, I am authorized to work in the country in which this job is listed","Yes, I am authorized","Yes"]),   # DT: US citizen, no sponsorship
  (r"hands-on experience running ai or machine learning( \(ml\))? workloads in production", ["I have run model serving or inference workloads in production."]),   # resume: Yahoo Finance LLM inference / TFX models in production (agent runtimes in production not claimed)
  (r"experience with ai agent development frameworks or agent runtime platforms", ["I have built prototypes."]),   # resume: native agent loop + LangGraph/CrewAI/AutoGen evaluation; production agents not claimed

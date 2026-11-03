@@ -3911,7 +3911,7 @@
    "roles": [
     "Principal Enterprise Architect"
    ],
-   "status": "interview request 2026-10-21 (Principal Enterprise Architect): Mary Giles sent a link to book a 15-minute call; rejected 2026-10-27 (Principal Enterprise Architect)"
+   "status": "interview request 2026-10-21 (Principal Enterprise Architect): Mary Giles sent a link to book a 15-minute call; rejected 2026-10-27 (Principal Enterprise Architect); rejected 2026-11-02 (Sr Software Engineer): Workday email: decided to move forward with other candidates"
   },
   "chime": {
    "name": "Chime",
@@ -8414,7 +8414,8 @@
    "count": 1,
    "roles": [
     "Senior Data Engineer, Analytics"
-   ]
+   ],
+   "status": "rejected 2026-11-02 (Senior Data Engineer, Analytics): Ashby email: pursuing other candidates"
   },
   "gritingaipartnerclient": {
    "name": "Griting.ai (partner client)",
@@ -13125,11 +13126,15 @@
   "onestream": {
    "name": "OneStream",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-11-02"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
     "Director, Software Engineering"
+   ],
+   "aliases": [
+    "OneStream Software"
    ]
   },
   "onetrust": {
@@ -21498,7 +21503,8 @@
    "count": 1,
    "roles": [
     "Senior Robot Perception Engineer - Visual Inspection/MLOps"
-   ]
+   ],
+   "status": "rejected 2026-11-02 (Senior Robot Perception Engineer - Visual Inspection/MLOps): Lever email: moving forward with candidates whose experience more closely aligns"
   },
   "agiloft": {
    "name": "Agiloft",
@@ -21851,6 +21857,49 @@
    "count": 1,
    "roles": [
     "Sr. Manager, Enterprise Data (R6103)"
+   ]
+  },
+  "nuitee": {
+   "name": "Nuit\u00e9e",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Agentic AI"
+   ]
+  },
+  "verramobility": {
+   "name": "Verra Mobility",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Development"
+   ]
+  },
+  "ellevationeducation": {
+   "name": "Ellevation Education",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
+   ],
+   "aliases": [
+    "Ellevation"
+   ]
+  },
+  "mews": {
+   "name": "Mews",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Product & Engineering - Back of House"
    ]
   }
  }
