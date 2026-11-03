@@ -22940,6 +22940,16 @@
    "roles": [
     "Senior AI Architect (US)"
    ]
+  },
+  "yubico": {
+   "name": "Yubico",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering"
+   ]
   }
  }
 }
