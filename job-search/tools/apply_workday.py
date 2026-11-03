@@ -1333,14 +1333,14 @@ async def at_review(page, job, item):
     rv = page.locator(A("applyFlowReviewPage"))
     qa = await rv.first.evaluate(REVIEW_JS) if await rv.count() else []
     body = await text(page)
+    ap = f"{OUT}/{job.tag}_wd_approve.txt"
+    if os.path.exists(ap): os.remove(ap)   # 2026-11-02: clear a stale approval BEFORE the review is published - removing it afterwards deleted a reviewer's OK written within the same second (Aqua Finance timed out)
     review = {"tag": job.tag, "url": job.url, "title": job.title, "company": item.get("company"), "ts": time.time(), "step": await active_step(page), "answers": job.report["answers"], "review": qa, "review_text": body[:15000]}
     json.dump(review, open(f"{OUT}/{job.tag}_wd_review.json", "w"), indent=1)
     await page.screenshot(path=f"{OUT}/{job.tag}_wd_review.png", full_page=True)
     job.report["review"] = qa
     if not SUBMIT:
         job.report["result"] = "DRY RUN: stopped at Review"; return job.report
-    ap = f"{OUT}/{job.tag}_wd_approve.txt"
-    if os.path.exists(ap): os.remove(ap)
     print(f"WD REVIEW {job.tag}", flush=True)
     v = await wait_file(ap, REVIEW_WAIT)
     if not v or not v.upper().startswith("OK"):
