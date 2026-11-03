@@ -23013,6 +23013,26 @@
    "roles": [
     "VP, Software Engineering (NwPS)"
    ]
+  },
+  "blueroseresearch": {
+   "name": "Blue Rose Research",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer (LLM Products)"
+   ]
+  },
+  "freenome": {
+   "name": "Freenome",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff Software Engineer"
+   ]
   }
  }
 }
