@@ -4,7 +4,7 @@
  "companies": [
   {"company": "PayJoy", "aliases": [], "since": "2026-10-31", "evidence": "applicant said they are interviewing"},
   {"company": "OpenTeams", "aliases": ["OpenTeams Incubator", "OT Incubator"], "since": "2026-10-23", "evidence": "technical interviews Oct 27-30 (Engineering Architect); rejected Oct 30"},
-  {"company": "Sidekick Labs", "aliases": ["Sidekick"], "since": "2026-10-29", "evidence": "interviews Oct 29 and Nov 3"},
+  {"company": "Sidekick Labs", "aliases": ["Sidekick"], "since": "2026-10-29", "evidence": "interviews Oct 29 and Nov 3; Nov 3: not moving forward (Product Engineer)"},
   {"company": "Alloy", "aliases": [], "since": "2026-10-28", "evidence": "recruiter call booked (Lead Full Stack Engineer, Partner Ecosystem)"},
   {"company": "Viam", "aliases": [], "since": "2026-10-30", "evidence": "recruiter conversation (NYC 4 days; applicant declined)"},
   {"company": "Charles Schwab", "aliases": ["Schwab"], "since": "2026-10-30", "evidence": "video interview invitation"},
