@@ -22890,6 +22890,16 @@
    "roles": [
     "Solutions Architect, Digital Platforms"
    ]
+  },
+  "digitalasset": {
+   "name": "Digital Asset",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Architecture (AI Enablement)"
+   ]
   }
  }
 }
