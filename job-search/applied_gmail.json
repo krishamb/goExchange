@@ -22977,6 +22977,26 @@
    "roles": [
     "Software Development Director"
    ]
+  },
+  "pixar": {
+   "name": "Pixar",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer, Storage Metadata and Context"
+   ]
+  },
+  "collectorsuniverse": {
+   "name": "Collectors Universe",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, PSA CX"
+   ]
   }
  }
 }
