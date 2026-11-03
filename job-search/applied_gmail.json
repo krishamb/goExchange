@@ -22880,6 +22880,16 @@
    "roles": [
     "Director, Production and Infrastructure Engineering"
    ]
+  },
+  "gehealthcare": {
+   "name": "GE HealthCare",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect, Digital Platforms"
+   ]
   }
  }
 }
