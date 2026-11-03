@@ -23039,6 +23039,36 @@
    "roles": [
     "Senior Staff Software Engineer"
    ]
+  },
+  "pagerhealth": {
+   "name": "Pager Health",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer"
+   ]
+  },
+  "copilotiq": {
+   "name": "CopilotIQ",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Product Engineer (Full Stack)"
+   ]
+  },
+  "candidly": {
+   "name": "Candidly",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Infrastructure Engineer"
+   ]
   }
  }
 }
