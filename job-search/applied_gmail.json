@@ -8494,7 +8494,9 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-03 (Lead, Software Engineer): moved forward with other candidates"
   },
   "guildmortgage": {
    "name": "Guild Mortgage",
@@ -20618,7 +20620,7 @@
     "Sr Forward Deployed Engineer"
    ],
    "count": 3,
-   "status": "rejected 2026-10-09: pursuing candidates whose experience more closely aligns"
+   "status": "rejected 2026-10-09: pursuing candidates whose experience more closely aligns; rejected 2026-11-03: pursuing candidates whose experience more closely aligns"
   },
   "zwift": {
    "name": "Zwift",
@@ -21759,7 +21761,8 @@
    "count": 1,
    "roles": [
     "Software Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-11-03 (Software Engineering Manager): moving forward with other candidates"
   },
   "voxmedia": {
    "name": "Vox Media",
@@ -22909,6 +22912,33 @@
    "count": 1,
    "roles": [
     "Director, Data Engineering (US)"
+   ]
+  },
+  "statarasolutions": {
+   "name": "Statara Solutions",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Solutions & Engineering"
+   ]
+  },
+  "innovateanimalag": {
+   "name": "Innovate Animal Ag",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-11-03 (Chief Technology Officer): via Food Impact Partners: moved forward with another candidate, position filled"
+  },
+  "pointclickcare": {
+   "name": "PointClickCare",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Architect (US)"
    ]
   }
  }
