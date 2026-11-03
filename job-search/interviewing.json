@@ -33,6 +33,7 @@
   {"company": "Hubble Network", "aliases": [], "since": "2026-10-20", "evidence": "interviewed (Principal Localization Engineer)"},
   {"company": "Hewlett Packard Enterprise", "aliases": ["HPE"], "since": "2026-10-21", "evidence": "recruiter conversation (Senior Principal AI & ML Engineer)"},
   {"company": "PathAI", "aliases": ["PathAI (Roche)", "Roche"], "since": "2026-11-02", "evidence": "recruiter call Nov 2 (Assoc Director MLE Ops; Roche/Genentech recruiting); applied Oct 17"},
-  {"company": "DoubleVerify", "aliases": ["DV"], "since": "2026-11-03", "evidence": "virtual interview invitation (Staff Enterprise Architect), Nov 3"}
+  {"company": "DoubleVerify", "aliases": ["DV"], "since": "2026-11-03", "evidence": "virtual interview invitation (Staff Enterprise Architect), Nov 3"},
+  {"company": "SambaNova Systems", "aliases": ["SambaNova"], "since": "2026-11-03", "evidence": "recruiter asked to schedule a phone screen, Nov 3"}
  ]
 }
