@@ -22956,6 +22956,16 @@
    "roles": [
     "Manager, Software Engineering"
    ]
+  },
+  "clearwateranalytics": {
+   "name": "Clearwater Analytics",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Development Director"
+   ]
   }
  }
 }
