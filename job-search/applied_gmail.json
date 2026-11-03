@@ -11103,7 +11103,11 @@
     "Staff Engineer, Brand",
     "Sr Manager, Engineering, Data Engineering"
    ],
-   "status": "rejected 2026-10-20 (Sr Manager, Engineering, Data Engineering)"
+   "status": "rejected 2026-10-20 (Sr Manager, Engineering, Data Engineering)",
+   "aliases": [
+    "shopltk",
+    "LTK (rewardStyle)"
+   ]
   },
   "lts": {
    "name": "LTS",
