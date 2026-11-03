@@ -21901,6 +21901,19 @@
    "roles": [
     "VP of Product & Engineering - Back of House"
    ]
+  },
+  "aquafinanceinc": {
+   "name": "Aqua Finance, Inc.",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering (Credit & Funding)"
+   ],
+   "aliases": [
+    "Aqua Finance"
+   ]
   }
  }
 }
