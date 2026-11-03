@@ -22997,6 +22997,16 @@
    "roles": [
     "Principal Software Engineer, PSA CX"
    ]
+  },
+  "vonage": {
+   "name": "Vonage",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Software Engineering (NwPS)"
+   ]
   }
  }
 }
