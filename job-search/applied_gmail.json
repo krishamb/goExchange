@@ -21918,6 +21918,966 @@
    "aliases": [
     "Aqua Finance"
    ]
+  },
+  "homebound": {
+   "name": "Homebound",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Lead Manager"
+   ]
+  },
+  "wealthfront": {
+   "name": "Wealthfront",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "tremendous": {
+   "name": "Tremendous",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "runpod": {
+   "name": "Runpod",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Infrastructure Engineering"
+   ]
+  },
+  "haydenai": {
+   "name": "Hayden AI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Cloud Infrastructure"
+   ]
+  },
+  "metabase": {
+   "name": "Metabase",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "gravie": {
+   "name": "Gravie",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
+  "gendigital": {
+   "name": "Gen Digital",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead, Forward Deployed Engineer"
+   ]
+  },
+  "zania": {
+   "name": "Zania",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "stepful": {
+   "name": "Stepful",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Data"
+   ]
+  },
+  "leadbank": {
+   "name": "Lead Bank",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "commure": {
+   "name": "Commure",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager, AI Accounting & Ledger Systems"
+   ]
+  },
+  "rain": {
+   "name": "Rain",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ]
+  },
+  "maintainx": {
+   "name": "MaintainX",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Director, MaintainX AI"
+   ]
+  },
+  "magnalegalservices": {
+   "name": "Magna Legal Services",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Software Engineering"
+   ]
+  },
+  "welltheory": {
+   "name": "WellTheory",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "authorium": {
+   "name": "Authorium",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "protegrity": {
+   "name": "Protegrity",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Engineering (821)"
+   ]
+  },
+  "anyscale": {
+   "name": "Anyscale",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Ray Data"
+   ]
+  },
+  "ashby": {
+   "name": "Ashby",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager - Americas"
+   ]
+  },
+  "anrok": {
+   "name": "Anrok",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Product and Agentic Platform"
+   ]
+  },
+  "ro": {
+   "name": "Ro",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Infrastructure"
+   ]
+  },
+  "mach9": {
+   "name": "Mach9",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of ML"
+   ]
+  },
+  "taktile": {
+   "name": "Taktile",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Forward Deployed Engineering, NORAM"
+   ]
+  },
+  "cinder": {
+   "name": "Cinder",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager - Core Infra"
+   ]
+  },
+  "classdojo": {
+   "name": "ClassDojo",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Leader, Platform Engineering"
+   ]
+  },
+  "vetcove": {
+   "name": "Vetcove",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
+  "giga": {
+   "name": "Giga",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Engineering Manager"
+   ]
+  },
+  "overview": {
+   "name": "Overview",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager,  Core Platform"
+   ]
+  },
+  "copiaautomation": {
+   "name": "Copia Automation",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager: Applied AI"
+   ]
+  },
+  "runway": {
+   "name": "Runway",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "\u2699\ufe0f Engineering Manager"
+   ]
+  },
+  "modal": {
+   "name": "Modal",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Systems Engineering Manager"
+   ]
+  },
+  "origin": {
+   "name": "Origin",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Engineering Manager"
+   ]
+  },
+  "benepass": {
+   "name": "Benepass",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "greatquestion": {
+   "name": "Great Question",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "ironclad": {
+   "name": "Ironclad",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Lead Manager, AI"
+   ]
+  },
+  "eloquentai": {
+   "name": "Eloquent AI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
+  },
+  "talkiatry": {
+   "name": "Talkiatry",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
+  "enigmafunds": {
+   "name": "ENIGMA Funds",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Engineering"
+   ]
+  },
+  "paradigm": {
+   "name": "Paradigm",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering - Omni"
+   ]
+  },
+  "caterpillar": {
+   "name": "Caterpillar",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
+  },
+  "otava": {
+   "name": "Otava",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ]
+  },
+  "bancofcalifornia": {
+   "name": "Banc of California",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Head of AI"
+   ]
+  },
+  "jpmorganchase": {
+   "name": "JPMorganChase",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President - Senior Lead Architect | Card Present"
+   ]
+  },
+  "stand": {
+   "name": "Stand",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Applied Science Platform Lead"
+   ]
+  },
+  "jazzpharmaceuticals": {
+   "name": "Jazz Pharmaceuticals",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, CX Advanced Analytics & AI Technical Suite Lead"
+   ]
+  },
+  "ipsen": {
+   "name": "Ipsen",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Applied AI Solutions, N.A. Commercial"
+   ]
+  },
+  "xona": {
+   "name": "Xona",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Flight Software Engineering"
+   ]
+  },
+  "eyparthenon": {
+   "name": "EY-Parthenon",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "EY-Parthenon - Strategy and Execution - Growth Platforms - AI ML Engineering - Director"
+   ]
+  },
+  "optimum": {
+   "name": "Optimum",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Software Engineering"
+   ]
+  },
+  "petco": {
+   "name": "Petco",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Manager, Software Engineering"
+   ]
+  },
+  "pepsico": {
+   "name": "PepsiCo",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead AI Engineer"
+   ]
+  },
+  "codexisinc": {
+   "name": "Codexis, Inc.",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Data Science & Machine Learning"
+   ]
+  },
+  "clear": {
+   "name": "CLEAR",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "biomarin": {
+   "name": "BioMarin",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Product & Analytics Engineering \u2013 Pathway AI"
+   ]
+  },
+  "allara": {
+   "name": "Allara",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering, Data"
+   ]
+  },
+  "charteroakfederalcreditunion": {
+   "name": "Charter Oak Federal Credit Union",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP Chief Technology Officer"
+   ]
+  },
+  "southeasternpennsylvaniatransportationauthoritysepta": {
+   "name": "Southeastern Pennsylvania Transportation Authority (SEPTA)",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer (E043)"
+   ]
+  },
+  "quicken": {
+   "name": "Quicken",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
+  "msci": {
+   "name": "MSCI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director/VP, AI Research \u2014 Private Assets R&D"
+   ]
+  },
+  "found": {
+   "name": "FOUND",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
+  },
+  "nychealthhospitals": {
+   "name": "NYC Health + Hospitals",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI Platform Engineering"
+   ]
+  },
+  "publicisgroupe": {
+   "name": "Publicis Groupe",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Executive Vice President, Data Engineering"
+   ]
+  },
+  "brownbrownarrowheadintermediaries": {
+   "name": "Brown & Brown (Arrowhead Intermediaries)",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Software Engineering"
+   ]
+  },
+  "sisu": {
+   "name": "Sisu",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer (CTO) \u2014 Venture Studio Role"
+   ]
+  },
+  "leidos": {
+   "name": "Leidos",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Chief Technology Officer, Homeland Sector"
+   ]
+  },
+  "siriusxm": {
+   "name": "SiriusXM",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Platform Engineering and Delivery"
+   ]
+  },
+  "boi": {
+   "name": "BOI",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "newyorkcityofficeoftechnologyinnovation": {
+   "name": "New York City Office of Technology & Innovation",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "PIT Crew Executive Director of Engineering"
+   ]
+  },
+  "ey": {
+   "name": "EY",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "AI and Distributed Systems Fullstack Engineer - Manager - Consulting - Location OPEN"
+   ]
+  },
+  "pwc": {
+   "name": "PwC",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "AML and Sanctions- AI Modeling- Director"
+   ]
+  },
+  "ispot": {
+   "name": "iSpot",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI"
+   ]
+  },
+  "virtusa": {
+   "name": "Virtusa",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
+  },
+  "simsmetal": {
+   "name": "Sims Metal",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of AI, Data and Data Science"
+   ]
+  },
+  "deloitte": {
+   "name": "Deloitte",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Cyber Full-Stack Technical Architect/Manager"
+   ]
+  },
+  "vizient": {
+   "name": "Vizient",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "AI/ML Engineer Team Lead"
+   ]
+  },
+  "camunda": {
+   "name": "Camunda",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Engineering - Identity"
+   ]
+  },
+  "immunovant": {
+   "name": "Immunovant",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Infrastructure & Data Platforms"
+   ]
+  },
+  "evenup": {
+   "name": "EvenUp",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "emergentholdings": {
+   "name": "Emergent Holdings",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI and Emerging Technology"
+   ]
+  },
+  "chainalysis": {
+   "name": "Chainalysis",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Engineering, Compliance Core"
+   ]
+  },
+  "ntop": {
+   "name": "nTop",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering, Product Platform (Modeling & Rendering; Simulation; Distributed Computing; QA)"
+   ]
+  },
+  "neoholdingsstealth": {
+   "name": "NEO Holdings (stealth)",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ]
+  },
+  "thrivent": {
+   "name": "Thrivent",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager Engineering"
+   ]
+  },
+  "pawlicyadvisor": {
+   "name": "Pawlicy Advisor",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering"
+   ]
+  },
+  "trcym": {
+   "name": "Trcym",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO"
+   ]
+  },
+  "bluesarah": {
+   "name": "Blue Sarah",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "centene": {
+   "name": "Centene",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Application Development Engineering"
+   ]
+  },
+  "keysight": {
+   "name": "Keysight",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "R&D Software Manager"
+   ]
+  },
+  "github": {
+   "name": "GitHub",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineering Manager, Copilot agent platform"
+   ]
+  },
+  "linkedin": {
+   "name": "LinkedIn",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering - Enterprise Infrastructure"
+   ]
+  },
+  "cohnreznick": {
+   "name": "CohnReznick",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director/Managing Director, AI Software Development"
+   ]
+  },
+  "retool": {
+   "name": "Retool",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Automations"
+   ]
+  },
+  "wolterskluwer": {
+   "name": "Wolters Kluwer",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Product Software Engineering - AI"
+   ]
+  },
+  "sony": {
+   "name": "Sony",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Engineering (Sony Engagement Platform Services)"
+   ]
+  },
+  "redcellpartnerstrasesystems": {
+   "name": "Red Cell Partners (Trase Systems)",
+   "dates": [
+    "2026-11-02"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Production and Infrastructure Engineering"
+   ]
   }
  }
 }
