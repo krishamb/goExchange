@@ -583,6 +583,7 @@ CHOICE_RULES=[
  (r"proof of driving eligibility|driving eligibility", ["Yes","yes"]),   # same standing answer as the valid-driver's-license rule
  (r"^(what is your )?desired compensation\??\*?$", ["$200,000+","$200,000 +","$150,000+","$150,000 +","Negotiable"]),   # Protiviti (Oct 16) buckets top out at $150,000+; standing range $200K-$350K
  (r"(can|will) you (be able to )?provide (proof|verification) of (your )?ident(ity|ify)\b.{0,30}(upon|at|on) hire", ["Yes","yes"]),   # Visa (Oct 16): I-9 identity documents at hire; no ID number is entered
+ (r"(can|will|could) you (be able to )?(provide|furnish|show) (proof|verification|documentation) of (your )?(e\w{0,2}ligib\w*|employment eligibility|work authori[sz]ation|(legal )?right to work)", ["Yes","yes"]),   # Clearwater Analytics (Nov 3): 'If hired, can you provide proof of eiligibility?' (sic) - US citizen, I-9 documents at hire
  (r"if you are under (the )?age (of )?18, do you have or will you be able to obtain a work permit", ["I am 18 or older.","I am 18 or older","18 or older"]),   # Transamerica (Oct 16)
  (r"no transamerica company engages in the practice of polygraph", ["Yes","I acknowledge","yes"]),   # a notice to acknowledge
  (r"possess employment verification documentation that allows you to work in the united states", ["Yes","yes"]),   # RAND (Oct 16): US citizen
