@@ -23091,6 +23091,16 @@
    "roles": [
     "Principal Engineer -- Full-Stack TypeScript (Node.js, React, Cloud)"
    ]
+  },
+  "blackline": {
+   "name": "BlackLine",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer"
+   ]
   }
  }
 }
