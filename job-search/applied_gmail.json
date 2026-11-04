@@ -18642,7 +18642,11 @@
    "roles": [
     "Engineering Manager, Trading Platform"
    ],
-   "status": "rejected 2026-11-01 (Engineering Manager, Trading Platform): decided to move forward with other candidates"
+   "status": "rejected 2026-11-01 (Engineering Manager, Trading Platform): decided to move forward with other candidates",
+   "aliases": [
+    "topsteptrader",
+    "Topstep Trader"
+   ]
   },
   "torcrobotics": {
    "name": "Torc Robotics",
