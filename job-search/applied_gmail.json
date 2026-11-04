@@ -15817,14 +15817,16 @@
    "dates": [
     "2026-10-15",
     "2026-10-16",
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-03"
    ],
    "roles": [
     "LMTS (Lead Member of Technical Staff)",
     "Senior Manager - Software Engineering",
-    "Senior Software Engineer- Infrastructure & Distributed Systems"
+    "Senior Software Engineer- Infrastructure & Distributed Systems",
+    "Director, Software Engineering"
    ],
-   "count": 3,
+   "count": 4,
    "aliases": [
     "MuleSoft",
     "MuleSoft (Salesforce)",
