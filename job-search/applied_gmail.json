@@ -23121,6 +23121,46 @@
    "roles": [
     "Senior GenAI Engineering Lead \u2014 Planning & Execution (Python)"
    ]
+  },
+  "tutorintelligence": {
+   "name": "Tutor Intelligence",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Software Engineer, Platform"
+   ]
+  },
+  "enablecomp": {
+   "name": "EnableComp",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer (REMOTE)"
+   ]
+  },
+  "petdesk": {
+   "name": "PetDesk",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer, New Products"
+   ]
+  },
+  "avivesolutions": {
+   "name": "Avive Solutions",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Backend Architect"
+   ]
   }
  }
 }
