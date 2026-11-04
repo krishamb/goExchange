@@ -7674,7 +7674,8 @@
    "roles": [
     "Staff Backend Engineer",
     "Applied AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-04: Greenhouse email: hiring process very competitive, not moving forward"
   },
   "futurefit": {
    "company": "futurefit",
@@ -23491,6 +23492,16 @@
    "count": 1,
    "roles": [
     "Director of Engineering"
+   ]
+  },
+  "atomcomputing": {
+   "name": "Atom Computing",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Quantum Software Manager"
    ]
   }
  }
