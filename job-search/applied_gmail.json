@@ -23462,6 +23462,16 @@
    "roles": [
     "Chief Technology Officer"
    ]
+  },
+  "ethos": {
+   "name": "Ethos",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Machine Learning Engineer"
+   ]
   }
  }
 }
