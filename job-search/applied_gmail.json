@@ -20161,7 +20161,8 @@
     "Senior Manager, Software Development Engineering, Agent Trust & Security",
     "Principal, Machine Learning Software Engineer, Admin Central"
    ],
-   "count": 3
+   "count": 3,
+   "status": "rejected 2026-11-04 (Principal ML Engineer, Admin Central): the hiring team has decided not to move forward"
   },
   "workiva": {
    "name": "Workiva",
@@ -23407,6 +23408,16 @@
    "count": 1,
    "roles": [
     "Member of Technical Staff | Data Engineering, Finance"
+   ]
+  },
+  "fasanaracapital": {
+   "name": "Fasanara Capital",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
    ]
   }
  }
