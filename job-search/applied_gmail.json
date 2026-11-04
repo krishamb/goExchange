@@ -23472,6 +23472,26 @@
    "roles": [
     "Staff Machine Learning Engineer"
    ]
+  },
+  "feanixbiotechnologies": {
+   "name": "Feanix Biotechnologies",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Software Engineering"
+   ]
+  },
+  "pennantservicesthepennantgroup": {
+   "name": "Pennant Services (The Pennant Group)",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering"
+   ]
   }
  }
 }
