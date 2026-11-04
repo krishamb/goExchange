@@ -23419,6 +23419,16 @@
    "roles": [
     "Chief Technology Officer"
    ]
+  },
+  "skildai": {
+   "name": "Skild AI",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Infrastructure"
+   ]
   }
  }
 }
