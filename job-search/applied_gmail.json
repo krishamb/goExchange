@@ -16945,6 +16945,11 @@
     "Staff Software Engineer \u2013 Data",
     "Staff Gameplay Engineer - Systems and Performance (teamLFG)",
     "Manager, Software Engineering"
+   ],
+   "aliases": [
+    "PlayStation",
+    "sonyinteractiveentertainmentglobal",
+    "Sony Interactive Entertainment"
    ]
   },
   "sorosfundmanagement": {
@@ -23100,6 +23105,16 @@
    "count": 1,
    "roles": [
     "Staff Engineer"
+   ]
+  },
+  "evolver": {
+   "name": "Evolver",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior GenAI Engineering Lead \u2014 Planning & Execution (Python)"
    ]
   }
  }
