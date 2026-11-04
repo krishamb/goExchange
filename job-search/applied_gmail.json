@@ -23161,6 +23161,16 @@
    "roles": [
     "Lead Backend Architect"
    ]
+  },
+  "corcepttherapeutics": {
+   "name": "Corcept Therapeutics",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Associate Director, AWS Cloud Engineering"
+   ]
   }
  }
 }
