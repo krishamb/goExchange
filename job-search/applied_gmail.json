@@ -23188,6 +23188,226 @@
     "NTT Data Services",
     "NTT DATA, Inc."
    ]
+  },
+  "formularyfinancial": {
+   "name": "Formulary Financial",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Full Stack"
+   ]
+  },
+  "provectus": {
+   "name": "Provectus",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer"
+   ]
+  },
+  "midjourney": {
+   "name": "Midjourney",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Cloud / Data Engineer (Data / Reconstruction / HIPAA)"
+   ]
+  },
+  "kastle": {
+   "name": "Kastle",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Lead, SWE"
+   ]
+  },
+  "hellyeahai": {
+   "name": "Hellyeah AI",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Infrastructure Engineer"
+   ]
+  },
+  "spoton": {
+   "name": "SpotOn",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Platform Engineering Manager"
+   ]
+  },
+  "akur8": {
+   "name": "Akur8",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Solution Architect"
+   ]
+  },
+  "ontra": {
+   "name": "Ontra",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "quilter": {
+   "name": "Quilter",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Platform Engineer, Enterprise Deployments"
+   ]
+  },
+  "agave": {
+   "name": "Agave",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "aiuc": {
+   "name": "AIUC",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Member of Technical Staff - Engineering Lead"
+   ]
+  },
+  "triumph": {
+   "name": "Triumph",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Developer Tooling"
+   ]
+  },
+  "trellis": {
+   "name": "Trellis",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Engineering"
+   ]
+  },
+  "cruxai": {
+   "name": "Crux AI",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Ops Engineer"
+   ]
+  },
+  "kraken": {
+   "name": "Kraken",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Exchange Infrastructure"
+   ]
+  },
+  "honeydew": {
+   "name": "Honeydew",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "partiful": {
+   "name": "Partiful",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "sealed": {
+   "name": "Sealed",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Product & Engineering"
+   ]
+  },
+  "virtahealth": {
+   "name": "Virta Health",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineer, Machine Learning"
+   ]
+  },
+  "sycamore": {
+   "name": "Sycamore",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Forward Deployed Engineering"
+   ]
+  },
+  "appliedintuition": {
+   "name": "Applied Intuition",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer \u2013 Developer Studio"
+   ]
+  },
+  "poesis": {
+   "name": "Poesis",
+   "dates": [
+    "2026-11-03"
+   ],
+   "count": 1,
+   "roles": [
+    "Member of Technical Staff | Data Engineering, Finance"
+   ]
   }
  }
 }
