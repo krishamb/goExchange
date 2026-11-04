@@ -23513,6 +23513,16 @@
    "roles": [
     "Senior Software Engineer"
    ]
+  },
+  "navan": {
+   "name": "Navan",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Architect"
+   ]
   }
  }
 }
