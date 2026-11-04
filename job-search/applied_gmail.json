@@ -11511,7 +11511,7 @@
    "roles": [
     "Senior Database Engineer"
    ],
-   "status": "closed 2026-10-17 (Senior Database Engineer): position filled and role closing (closed)"
+   "status": "closed 2026-10-17 (Senior Database Engineer): position filled and role closing (closed); rejected 2026-11-03 (Associate Director, Data Engineering): not moving forward with candidacy"
   },
   "mckesson": {
    "name": "McKesson",
@@ -17938,7 +17938,8 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Applied AI"
-   ]
+   ],
+   "status": "rejected 2026-11-03 (Senior Software Engineer, Applied AI): decided to pursue other candidates"
   },
   "tealiuminc": {
    "name": "Tealium Inc.",
@@ -20548,7 +20549,7 @@
     "Staff Software Engineer \u2013 Integrations Platform",
     "Senior Data Engineer - Data Platform"
    ],
-   "status": "rejected 2026-10-21 (Staff Software Engineer - Integrations Platform)"
+   "status": "rejected 2026-10-21 (Staff Software Engineer - Integrations Platform); rejected 2026-11-03 (Senior/Staff Linux Kernel Engineer - Avionics SW): not moving forward with candidacy"
   },
   "ziprecruiter": {
    "name": "ZipRecruiter",
