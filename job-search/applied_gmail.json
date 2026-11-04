@@ -23503,6 +23503,16 @@
    "roles": [
     "Quantum Software Manager"
    ]
+  },
+  "omnissa": {
+   "name": "Omnissa",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   }
  }
 }
