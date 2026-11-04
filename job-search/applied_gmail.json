@@ -23442,6 +23442,16 @@
    "roles": [
     "Senior Software Engineer \u2013 Identity Resolution"
    ]
+  },
+  "johnsoncontrols": {
+   "name": "Johnson Controls",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Director of Cloud Engineering"
+   ]
   }
  }
 }
