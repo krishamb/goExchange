@@ -421,11 +421,13 @@
    "name": "Adobe",
    "dates": [
     "2026-10-01",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Core Agent Engineer"
+    "Core Agent Engineer",
+    "Senior Software Development Engineer"
    ]
   },
   "adonis": {
@@ -14143,9 +14145,13 @@
   "pinterest": {
    "name": "Pinterest",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Machine Learning Engineer, Shopping Ads"
+   ]
   },
   "pinwheel": {
    "name": "Pinwheel",
@@ -21924,11 +21930,13 @@
   "nextdoor": {
    "name": "Nextdoor",
    "dates": [
-    "2026-11-01"
+    "2026-11-01",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Manager - Analytics Engineering"
+    "Senior Manager - Analytics Engineering",
+    "Senior Staff Software Engineer - Monetization"
    ]
   },
   "chargepoint": {
