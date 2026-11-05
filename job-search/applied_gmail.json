@@ -15153,6 +15153,10 @@
    "count": 1,
    "roles": [
     "Senior/Staff Software Engineer (Platform and Execution Model)"
+   ],
+   "aliases": [
+    "Trase",
+    "Trase Systems"
    ]
   },
   "reddit": {
@@ -18806,12 +18810,20 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "aliases": [
+    "Trase Systems",
+    "Red Cell Partners (Trase Systems)"
+   ]
   },
   "trasesystems": {
    "company": "Trase Systems",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "aliases": [
+    "Trase",
+    "Red Cell Partners (Trase Systems)"
+   ]
   },
   "trashlab": {
    "company": "trashlab",
@@ -22999,6 +23011,10 @@
    "count": 1,
    "roles": [
     "Director, Production and Infrastructure Engineering"
+   ],
+   "aliases": [
+    "Trase",
+    "Trase Systems"
    ]
   },
   "gehealthcare": {
@@ -23523,6 +23539,10 @@
    "count": 1,
    "roles": [
     "Sr. Director of Cloud Engineering"
+   ],
+   "aliases": [
+    "JCI",
+    "Johnson Controls International"
    ]
   },
   "innovativecomputersolutionsics": {
