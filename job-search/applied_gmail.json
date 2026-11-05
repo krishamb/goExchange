@@ -3152,7 +3152,8 @@
    "roles": [
     "Chief Technology Officer"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-11-05 (Chief Technology Officer): Rippling email: decided to move on with other candidates (decline)"
   },
   "bubble": {
    "company": "bubble",
@@ -4740,7 +4741,8 @@
    ],
    "roles": [
     "Senior Engineer, Kubernetes Infrastructure"
-   ]
+   ],
+   "status": "rejected 2026-11-05 (Senior Engineer, Kubernetes Infrastructure): Greenhouse email: not moving forward (decline)"
   },
   "cortex": {
    "name": "Cortex",
@@ -14309,7 +14311,10 @@
   "playlist": {
    "company": "Playlist",
    "first": "2026-10-03",
-   "via": "gmail confirmation (Oct 2-4 scan)"
+   "via": "gmail confirmation (Oct 2-4 scan)",
+   "roles": [],
+   "dates": [],
+   "status": "closed 2026-11-05 (Engineering Manager - Platform): Mindbody / Playlist email: position filled (role closed; the applicant was not turned down)"
   },
   "playonsports": {
    "name": "PlayOn! Sports",
@@ -23716,6 +23721,16 @@
   },
   "firy": {
    "name": "FIRY",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of AI"
+   ]
+  },
+  "skillz": {
+   "name": "Skillz",
    "dates": [
     "2026-11-05"
    ],
