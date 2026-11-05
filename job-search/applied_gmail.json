@@ -10269,11 +10269,13 @@
   "keyfactorinc": {
    "name": "Keyfactor, Inc.",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Forward Deployed Engineer"
+    "Senior Forward Deployed Engineer",
+    "Product Architect"
    ]
   },
   "kforce": {
