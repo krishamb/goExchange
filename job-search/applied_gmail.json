@@ -767,7 +767,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "closed 2026-11-05 (Sr. Software Engineer, Data Platform (MANTL)): Alkami Workday email: position filled (role closed; the applicant was not turned down)"
   },
   "alkamitechnology": {
    "company": "Alkami Technology",
@@ -21354,7 +21356,8 @@
    "roles": [
     "Sr. Software Engineer",
     "Senior Software Architect (Machine Control & Architecture)"
-   ]
+   ],
+   "status": "rejected 2026-11-05 (Senior Software Architect (Machine Control & Architecture)): KLA Workday email: moved forward with other candidates (decline)"
   },
   "availity": {
    "name": "Availity",
@@ -22081,7 +22084,8 @@
    "count": 1,
    "roles": [
     "VP of Product & Engineering - Back of House"
-   ]
+   ],
+   "status": "rejected 2026-11-05 (VP of Product & Engineering - Back of House): Mews email: this role requires a different mix of experience (decline)"
   },
   "aquafinanceinc": {
    "name": "Aqua Finance, Inc.",
