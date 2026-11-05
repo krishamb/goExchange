@@ -2629,7 +2629,11 @@
     "2026-10-05"
    ],
    "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "note": "prior Ashby queue (applied-before per user)",
+   "aliases": [
+    "BJAK",
+    "bjak"
+   ]
   },
   "black": {
    "company": "black",
