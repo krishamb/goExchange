@@ -4708,11 +4708,15 @@
   "coreweave": {
    "name": "CoreWeave",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "aliases": [
     "Monolith AI"
+   ],
+   "roles": [
+    "Senior Engineer, Kubernetes Infrastructure"
    ]
   },
   "cortex": {
@@ -15579,9 +15583,13 @@
   "robotspencils": {
    "name": "Robots & Pencils",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Engineer / AI Builder - Mountain View"
+   ]
   },
   "robustwaredice": {
    "name": "Robustware (Dice)",
@@ -21844,11 +21852,13 @@
   "kyndryl": {
    "name": "Kyndryl",
    "dates": [
-    "2026-11-01"
+    "2026-11-01",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Technical Leader in OSS"
+    "Technical Leader in OSS",
+    "Senior Software Developer / Technical Lead with an AI Focus"
    ]
   },
   "atomicindustries": {
