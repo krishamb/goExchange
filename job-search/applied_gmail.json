@@ -1714,11 +1714,13 @@
   "atlassian": {
    "name": "Atlassian",
    "dates": [
-    "2026-10-14"
+    "2026-10-14",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Principal Software Engineer"
+    "Senior Principal Software Engineer",
+    "Senior Machine Learning Engineer"
    ],
    "via": "gmail confirmation (iCIMS)"
   },
@@ -20329,9 +20331,13 @@
   "worthai": {
    "name": "Worth AI",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-11-05"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Platform & Developer Experience"
+   ]
   },
   "wovenbytoyota": {
    "name": "Woven by Toyota",
@@ -23769,6 +23775,36 @@
    "count": 1,
    "roles": [
     "Vice President, Data Science"
+   ]
+  },
+  "albertinvent": {
+   "name": "Albert Invent",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering, Core Application"
+   ]
+  },
+  "innovaccer": {
+   "name": "Innovaccer",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Director Forward-Deployed Engineering"
+   ]
+  },
+  "coretekservices": {
+   "name": "Coretek Services",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "AI and Data Consultant Team Lead"
    ]
   }
  }
