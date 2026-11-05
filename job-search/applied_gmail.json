@@ -20047,12 +20047,14 @@
    "first": "2026-10-02",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-04"
    ],
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Software Engineering Senior Manager"
    ],
-   "count": 1
+   "count": 2
   },
   "wellsky": {
    "name": "WellSky",
@@ -20573,11 +20575,13 @@
    "name": "Zeta Global",
    "dates": [
     "2026-10-01",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer, Data Platform"
+    "Senior Software Engineer, Data Platform",
+    "Staff Software Engineer - Performance Advisor"
    ]
   },
   "zilliontechnologiesdice": {
