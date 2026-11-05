@@ -6236,9 +6236,13 @@
   "elitetechnology": {
    "name": "Elite Technology",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Tech Lead Engineer"
+   ]
   },
   "ellipsishealth": {
    "name": "Ellipsis Health",
@@ -8321,7 +8325,11 @@
     "Solutions Architect, Financial Services"
    ],
    "note": "gmail history (pre-Sep 2026)",
-   "status": "rejected 2026-08-20: recruiter synced with team; not moving forward"
+   "status": "rejected 2026-08-20: recruiter synced with team; not moving forward",
+   "aliases": [
+    "Google DeepMind",
+    "DeepMind"
+   ]
   },
   "gopuff": {
    "name": "Gopuff",
@@ -23157,11 +23165,13 @@
   "copilotiq": {
    "name": "CopilotIQ",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Product Engineer (Full Stack)"
+    "Staff Product Engineer (Full Stack)",
+    "Senior Product Engineer (Full Stack)"
    ]
   },
   "candidly": {
@@ -23623,6 +23633,16 @@
    "count": 1,
    "roles": [
     "Engineering Manager, Privacy"
+   ]
+  },
+  "valtech": {
+   "name": "Valtech",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Data & AI Director"
    ]
   }
  }
