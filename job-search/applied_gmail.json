@@ -13476,7 +13476,14 @@
   "oura": {
    "company": "oura",
    "first": "2026-10-05",
-   "via": "cloud"
+   "via": "cloud",
+   "roles": [
+    "Senior Director of Engineering"
+   ],
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1
   },
   "outside": {
    "name": "Outside",
@@ -23705,6 +23712,16 @@
    "count": 1,
    "roles": [
     "Staff Software Engineer - Web"
+   ]
+  },
+  "firy": {
+   "name": "FIRY",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of AI"
    ]
   }
  }
