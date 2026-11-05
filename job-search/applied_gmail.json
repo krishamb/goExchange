@@ -23644,6 +23644,16 @@
    "roles": [
     "Data & AI Director"
    ]
+  },
+  "ninjaone": {
+   "name": "NinjaOne",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Performance | Scalability and Systems Engineering"
+   ]
   }
  }
 }
