@@ -2220,11 +2220,13 @@
    "name": "baldwin",
    "dates": [
     "2026-10-08",
-    "2026-10-22"
+    "2026-10-22",
+    "2026-11-05"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Data Engineer- MSI"
+    "Senior Data Engineer- MSI",
+    "Data Architect - MSI"
    ]
   },
   "balsambrands": {
