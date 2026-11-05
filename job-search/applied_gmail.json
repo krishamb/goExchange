@@ -23742,6 +23742,16 @@
    "roles": [
     "Head of AI"
    ]
+  },
+  "classpassplaylist": {
+   "name": "ClassPass (Playlist)",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Software Engineer - Machine Learning & Data"
+   ]
   }
  }
 }
