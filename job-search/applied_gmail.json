@@ -21659,11 +21659,13 @@
   "agiloft": {
    "name": "Agiloft",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Director, Software Engineering - Contract Intelligence"
+    "Senior Director, Software Engineering - Contract Intelligence",
+    "Staff Software Engineer - Cloud Services"
    ]
   },
   "payjoy": {
@@ -21985,11 +21987,13 @@
   "tala": {
    "name": "Tala",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager, Machine Learning Engineering"
+    "Manager, Machine Learning Engineering",
+    "Senior Data Engineer"
    ]
   },
   "abnormalai": {
