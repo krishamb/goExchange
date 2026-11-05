@@ -1663,9 +1663,13 @@
   "asurion": {
    "name": "Asurion",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Director, Data Science and AI Agents"
+   ]
   },
   "athena": {
    "name": "Athena",
@@ -1887,9 +1891,13 @@
   "automationanywhere": {
    "name": "Automation Anywhere",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Manager, Enterprise Data & Analytics"
+   ]
   },
   "automatisor": {
    "company": "automatisor",
@@ -4770,11 +4778,13 @@
    "name": "Coupang",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Sr.Director, Data Science & Data Engineering"
+    "Sr.Director, Data Science & Data Engineering",
+    "Sr. Staff ML Infra Engineer - Offline Infra & Training"
    ]
   },
   "courtyardinc": {
@@ -5138,9 +5148,13 @@
   "danaher": {
    "name": "danaher",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Engineer - ML Operations"
+   ]
   },
   "databricks": {
    "name": "Databricks",
@@ -7020,11 +7034,13 @@
    "name": "Figma",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Forward Deployed Engineer"
+    "Forward Deployed Engineer",
+    "Manager, Software Engineering - Design Systems Adherence"
    ]
   },
   "figure": {
@@ -7163,9 +7179,13 @@
   "fiserv": {
    "name": "Fiserv",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Clover Engineering \u2013 Merchant Onboarding & Growth"
+   ]
   },
   "fitch": {
    "name": "Fitch Ratings / Fitch Group",
@@ -10856,12 +10876,14 @@
    "name": "Life360",
    "dates": [
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Director, AI Platforms",
-    "Staff Data Engineer, Data Platform Core (AI Native)"
+    "Staff Data Engineer, Data Platform Core (AI Native)",
+    "VP, Infrastructure Engineering"
    ]
   },
   "lifebonder": {
@@ -13238,9 +13260,13 @@
   "openlane": {
    "name": "OPENLANE",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior BI Engineer"
+   ]
   },
   "openloophealth": {
    "name": "OpenLoop Health",
@@ -14863,11 +14889,13 @@
    "name": "Quantiphi",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Developer"
+    "Senior Software Developer",
+    "AWS Cloud Migration Architect"
    ]
   },
   "quantumhealth": {
@@ -15811,9 +15839,13 @@
   "sailpoint": {
    "name": "SailPoint",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Product Architecture"
+   ]
   },
   "sakurahealth": {
    "name": "Sakura Health",
@@ -20183,9 +20215,13 @@
   "workiva": {
    "name": "Workiva",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager - GRC"
+   ]
   },
   "workos": {
    "name": "Workos",
@@ -20577,9 +20613,13 @@
   "ziprecruiter": {
    "name": "ZipRecruiter",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-04"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Machine Learning, Ranking"
+   ]
   },
   "zocdoc": {
    "name": "Zocdoc",
@@ -21248,11 +21288,13 @@
   "kla": {
    "name": "KLA",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. Software Engineer"
+    "Sr. Software Engineer",
+    "Senior Software Architect (Machine Control & Architecture)"
    ]
   },
   "availity": {
@@ -23137,11 +23179,13 @@
   "evolver": {
    "name": "Evolver",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior GenAI Engineering Lead \u2014 Planning & Execution (Python)"
+    "Senior GenAI Engineering Lead \u2014 Planning & Execution (Python)",
+    "Senior Graph Engineer (Python)"
    ]
   },
   "tutorintelligence": {
@@ -23537,6 +23581,16 @@
    "count": 1,
    "roles": [
     "AI Architect"
+   ]
+  },
+  "privacylithic": {
+   "name": "Privacy (Lithic)",
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, Privacy"
    ]
   }
  }
