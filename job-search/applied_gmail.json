@@ -12150,7 +12150,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-05 (Associate Director, Engineering): Workday email (Mosaic Health / Vera Whole Health): moved forward with other candidates (decline)"
   },
   "motion": {
    "name": "Motion",
@@ -19576,7 +19578,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-05 (Associate Director, Engineering): Same decline as Mosaic Health (Vera Whole Health is now Mosaic Health; Workday tenant verawholehealth)"
   },
   "vercel": {
    "name": "Vercel",
