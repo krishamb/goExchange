@@ -16699,7 +16699,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-05 (VP of Engineering): Workday email (Simpro): decided to move forward with candidates that better match the current needs (decline)"
   },
   "simpsonstrongtie": {
    "name": "Simpson Strong-Tie",
