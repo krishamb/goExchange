@@ -3924,7 +3924,14 @@
   "checkr": {
    "company": "checkr",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Senior Machine Learning Engineer"
+   ],
+   "dates": [
+    "2026-11-04"
+   ],
+   "count": 1
   },
   "chghealthcare": {
    "name": "CHG Healthcare",
@@ -15655,12 +15662,14 @@
   "rocketmoney": {
    "name": "Rocket Money",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-04"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff Applied AI Engineer",
-    "Senior Full Stack Engineer, Account Linking"
+    "Senior Full Stack Engineer, Account Linking",
+    "Team Leader, Engineering - Financial Connections"
    ]
   },
   "rocketsoftwareinc": {
