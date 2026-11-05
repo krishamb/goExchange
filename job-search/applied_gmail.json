@@ -13824,11 +13824,13 @@
   "pattersoncompanies": {
    "name": "pattersoncompanies",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Enterprise Data and AI Architect"
+    "Enterprise Data and AI Architect",
+    "Sr. Manager - Application Engineering"
    ]
   },
   "paulhastings": {
@@ -23751,6 +23753,16 @@
    "count": 1,
    "roles": [
     "Sr Software Engineer - Machine Learning & Data"
+   ]
+  },
+  "clarivate": {
+   "name": "Clarivate",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Data Science"
    ]
   }
  }
