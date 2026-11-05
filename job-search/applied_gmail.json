@@ -750,7 +750,10 @@
    "roles": [
     "AI Platform Engineer- Virtual"
    ],
-   "status": "screening submitted by the applicant 2026-10-20 (AI Platform Engineer - Virtual)"
+   "status": "screening submitted by the applicant 2026-10-20 (AI Platform Engineer - Virtual); rejected 2026-11-05 (AI Platform Engineer - Virtual): Alight Solutions email: chose to pursue other candidates (decline)",
+   "aliases": [
+    "Alight Solutions"
+   ]
   },
   "alignmenthealth": {
    "name": "Alignment Health",
@@ -9549,7 +9552,7 @@
    "roles": [
     "Member of Technical Staff, Backend"
    ],
-   "status": "recruiter screening questions 2026-10-20; the applicant sent full answers 2026-10-20 16:18 PT (Member of Technical Staff, Backend)"
+   "status": "recruiter screening questions 2026-10-20; the applicant sent full answers 2026-10-20 16:18 PT (Member of Technical Staff, Backend); rejected 2026-11-05 (Member of Technical Staff, Backend): Greenhouse email: not moving forward (decline)"
   },
   "influur": {
    "company": "influur",
@@ -19660,7 +19663,8 @@
    "count": 1,
    "roles": [
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-05 (Staff Software Engineer): Greenhouse email: decided to pursue other candidates (decline)"
   },
   "verse": {
    "name": "Verse",
