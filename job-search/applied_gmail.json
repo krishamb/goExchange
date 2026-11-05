@@ -7608,9 +7608,13 @@
   "fractal": {
    "name": "Fractal",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-11-05"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Leader, Google COE"
+   ]
   },
   "fragomen": {
    "name": "Fragomen",
