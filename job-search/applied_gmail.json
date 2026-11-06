@@ -12602,11 +12602,13 @@
    "name": "Netskope",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-06"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Sr. Software Engineer, Client Backend"
+    "Sr. Software Engineer, Client Backend",
+    "Principal Engineer, Secure AI Gateway"
    ]
   },
   "neubergerberman": {
@@ -24295,6 +24297,16 @@
    "count": 1,
    "roles": [
     "Vice President of Technology (US, Remote)"
+   ]
+  },
+  "zetachain": {
+   "name": "ZetaChain",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Platform Engineer"
    ]
   }
  }
