@@ -19906,11 +19906,13 @@
   "waabi": {
    "name": "Waabi",
    "dates": [
-    "2026-10-21"
+    "2026-10-21",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior / Staff Software Engineer, AI Tooling"
+    "Senior / Staff Software Engineer, AI Tooling",
+    "Technical Lead Manager, ML Dataset Platform"
    ],
    "note": "Lever confirmation 2026-10-21 19:45Z (applicant's Oct 21 page A run); Lever confirmation 2026-10-21T19:45Z; already in ledger (role and date present)"
   },
@@ -23823,6 +23825,26 @@
    "count": 1,
    "roles": [
     "Lead .NET Developer / Architect"
+   ]
+  },
+  "raya": {
+   "name": "Raya",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager, Recommender Systems"
+   ]
+  },
+  "prosper": {
+   "name": "Prosper",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Engineering"
    ]
   }
  }
