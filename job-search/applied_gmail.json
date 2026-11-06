@@ -18778,22 +18778,26 @@
    "name": "Torc Robotics",
    "dates": [
     "2026-10-16",
-    "2026-10-30"
+    "2026-10-30",
+    "2026-11-05"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior, ML Engineer - Tracking",
-    "Engineering Manager, Active Sensors (LiDAR)"
+    "Engineering Manager, Active Sensors (LiDAR)",
+    "Staff, Machine Learning Engineer - BEV/Multi-Modal Perception"
    ]
   },
   "torotms": {
    "name": "Toro TMS",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Software Engineering Manager"
    ]
   },
   "towerresearchcapital": {
@@ -23859,6 +23863,36 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer - Fullstack with Rust"
+   ]
+  },
+  "xentegra": {
+   "name": "XenTegra",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect, Modern Applications"
+   ]
+  },
+  "virtru": {
+   "name": "Virtru",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Warehouse & Analytics Architect"
+   ]
+  },
+  "sunrun": {
+   "name": "Sunrun",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Manager, Data Science & Analytics"
    ]
   }
  }
