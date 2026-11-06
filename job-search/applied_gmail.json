@@ -15969,11 +15969,13 @@
   "sagesure": {
    "name": "SageSure",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-06"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Software Engineer"
+    "Staff Software Engineer",
+    "Director Data Science"
    ]
   },
   "sahisofttech": {
@@ -23876,11 +23878,13 @@
   "ninjaone": {
    "name": "NinjaOne",
    "dates": [
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-06"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer, Performance | Scalability and Systems Engineering"
+    "Senior Software Engineer, Performance | Scalability and Systems Engineering",
+    "Sr. / Staff Software Engineer, C++ | Endpoint State & Control"
    ]
   },
   "renewedvision": {
@@ -24342,6 +24346,16 @@
    "count": 1,
    "roles": [
     "Director of Data (P&C Insurance)"
+   ]
+  },
+  "rtx": {
+   "name": "RTX",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Solutions Architect - Data, Analytics & AI/ML Platforms (Remote)"
    ]
   }
  }

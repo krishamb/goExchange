@@ -1914,6 +1914,7 @@ NJ_LOC=re.compile(r"\bNJ\b|new[ -]jersey|jersey[ -]city|hoboken|newark|iselin|pr
 NY_LOC=re.compile(r"new[ -]york|\bnyc\b|\bny\b|manhattan|brooklyn|white plains|rye brook",re.I)
 IB_CO=re.compile(r"\bciti(group|bank)?\b|j\.?\s?p\.?\s?morgan|jpmc|\bchase\b|goldman|bank of america|\bbofa\b|merrill|barclays|deutsche|\bubs\b|credit suisse|jefferies|evercore|lazard|moelis|\bpjt\b|houlihan|\brbc\b|\bbmo\b|td securities|wells[ _-]?fargo|\bbny\b|bank of new york|nomura|mizuho|\bhsbc\b|soci[eé]t[eé] g[eé]n[eé]rale|\bbnp\b|macquarie|piper sandler|raymond james|stifel|cowen|guggenheim|perella|centerview|state street|northern trust",re.I)
 def location_block(company, url="", loc="", where=""):
+    if re.match(r"\s*(remote|bay)\b", where or "", re.I): return None   # 2026-11-06: the screen's location class ('remote - ...', 'bay - ...') wins over state lists quoted in its evidence (NinjaOne: remote in 19 states incl. CA and NJ, 'hybrid option' in Austin / Tampa)
     m=re.search(r"/job/([^/]+)/",url or "")
     txt=(loc or where or "").strip()
     first=re.split(r"\s*(?:/|;|\||\bor\b)\s*",txt)[0] if txt else ""
