@@ -658,6 +658,13 @@ async def upload_resume(page, job):
     stem = os.path.splitext(os.path.basename(path))[0]
     if stem.lower() in (await page.content()).lower() and re.search(r"remove resume|delete resume|replace resume", await text(page), re.I):   # attached already (a draft from an earlier run)
         job.ans("Resume", os.path.basename(path) + " (already attached)"); return True   # the name alone may only be in the profile's 'Use' list
+    # 2026-11-06 (Fortive / ServiceChannel): the candidate profile already holds ANOTHER of the applicant's resume files (main instead of exec);
+    # the tile shows it with 'Remove resume' and offers no file input - that attached file is the applicant's own resume, so keep it
+    if re.search(r"remove resume|delete resume|replace resume", await text(page), re.I):
+        content = (await page.content()).lower()
+        for v in RESUME_VARIANTS.values():
+            if os.path.splitext(os.path.basename(v))[0].lower() in content:
+                job.ans("Resume", os.path.basename(v) + " (already attached on the profile)"); return True
     # a second application on the same site: the profile lists earlier files with a 'Use' control instead of an upload box
     use = page.get_by_role("button", name=re.compile(r"^\s*use\s*$", re.I))
     if not await use.count(): use = page.get_by_role("link", name=re.compile(r"^\s*use\s*$", re.I))

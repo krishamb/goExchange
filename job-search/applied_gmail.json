@@ -24378,6 +24378,36 @@
    "roles": [
     "Senior Cloud Platform & Infrastructure Engineer"
    ]
+  },
+  "cummins": {
+   "name": "Cummins",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Solution Architect - Senior"
+   ]
+  },
+  "staples": {
+   "name": "Staples",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Solution Architect"
+   ]
+  },
+  "servicechannelfortive": {
+   "name": "ServiceChannel (Fortive)",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Application Architecture"
+   ]
   }
  }
 }
