@@ -1254,7 +1254,9 @@
    "dates": [
     "2026-09-30"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-05 (Senior Director of Engineering, Native Data): moving forward with other candidates"
   },
   "apolloio": {
    "name": "Apollo.io",
@@ -10935,7 +10937,9 @@
     "2026-09-29",
     "2026-09-30"
    ],
-   "count": 2
+   "count": 2,
+   "roles": [],
+   "status": "closed 2026-11-05 (Machine Learning Engineer): position filled"
   },
   "lightfield": {
    "company": "lightfield",
