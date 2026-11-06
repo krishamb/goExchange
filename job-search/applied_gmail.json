@@ -24408,6 +24408,16 @@
    "roles": [
     "Manager, Application Architecture"
    ]
+  },
+  "ebay": {
+   "name": "eBay",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Business Intelligence Engineer"
+   ]
   }
  }
 }
