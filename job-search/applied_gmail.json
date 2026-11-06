@@ -24428,6 +24428,16 @@
    "roles": [
     "Engineering Manager"
    ]
+  },
+  "saic": {
+   "name": "SAIC",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect"
+   ]
   }
  }
 }
