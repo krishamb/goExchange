@@ -14478,7 +14478,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-06 (Technical Lead Manager): careers.point.com: decided not to move forward with your candidacy for this role"
   },
   "pointc": {
    "name": "Point C",
@@ -24330,6 +24332,16 @@
    "count": 1,
    "roles": [
     "Sr. AI Engineer"
+   ]
+  },
+  "suttonnationalinsurance": {
+   "name": "Sutton National Insurance",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Data (P&C Insurance)"
    ]
   }
  }
