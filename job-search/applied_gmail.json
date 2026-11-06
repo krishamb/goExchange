@@ -23157,11 +23157,13 @@
   "pointclickcare": {
    "name": "PointClickCare",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior AI Architect (US)"
+    "Senior AI Architect (US)",
+    "Director, Software Engineering"
    ]
   },
   "yubico": {
@@ -23845,6 +23847,16 @@
    "count": 1,
    "roles": [
     "Manager, Engineering"
+   ]
+  },
+  "veevasystems": {
+   "name": "Veeva Systems",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Fullstack with Rust"
    ]
   }
  }
