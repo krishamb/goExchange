@@ -16252,11 +16252,13 @@
   "scoutmotorsinc": {
    "name": "Scout Motors Inc.",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. Director, Software Engineering - Digital Product Engineering"
+    "Sr. Director, Software Engineering - Digital Product Engineering",
+    "Lead, AI Engineering"
    ]
   },
   "scowtt": {
