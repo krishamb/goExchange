@@ -8427,9 +8427,13 @@
   "gradyhealthsystem": {
    "name": "Grady Health System",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-06"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Data Architect (Research)"
+   ]
   },
   "grafana": {
    "company": "Grafana Labs",
@@ -9691,7 +9695,9 @@
    "dates": [
     "2026-10-01"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-06 (Vice President, Engineering, EPM): decided to proceed with other candidates"
   },
   "inspyrsolutions": {
    "name": "INSPYR Solutions",
@@ -10862,9 +10868,10 @@
   "ledgebrook": {
    "name": "Ledgebrook",
    "dates": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-11-06"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Engineering Manager"
    ]
@@ -22137,7 +22144,8 @@
    "roles": [
     "Technical Leader in OSS",
     "Senior Software Developer / Technical Lead with an AI Focus"
-   ]
+   ],
+   "status": "rejected 2026-11-06 (Senior Software Developer / Technical Lead with an AI Focus): not selected for further consideration"
   },
   "atomicindustries": {
    "name": "Atomic Industries",
@@ -23373,7 +23381,8 @@
    "count": 1,
    "roles": [
     "Staff Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-06 (Staff Engineer): moving forward with other candidates"
   },
   "copilotiq": {
    "name": "CopilotIQ",
