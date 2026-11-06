@@ -24418,6 +24418,16 @@
    "roles": [
     "Senior Business Intelligence Engineer"
    ]
+  },
+  "servicechannel": {
+   "name": "ServiceChannel",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
   }
  }
 }
