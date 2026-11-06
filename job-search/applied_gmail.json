@@ -4304,9 +4304,13 @@
   "cloudflare": {
    "name": "Cloudflare",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-06"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Stablecoins"
+   ]
   },
   "cloudsoftwaregroup": {
    "name": "Cloud Software Group",
@@ -5653,7 +5657,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-06 (Principal, System Engineer 2, Multi-Agent AI, AdTech): R260311: not an ideal fit for this role"
   },
   "discord": {
    "name": "Discord",
@@ -23002,11 +23008,13 @@
   "deloitte": {
    "name": "Deloitte",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-06"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Cyber Full-Stack Technical Architect/Manager"
+    "Cyber Full-Stack Technical Architect/Manager",
+    "Digital Assets Technical Architect"
    ]
   },
   "vizient": {
