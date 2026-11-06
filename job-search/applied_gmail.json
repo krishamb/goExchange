@@ -1343,11 +1343,13 @@
   "apptronik": {
    "name": "Apptronik",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-06"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Perception Learning Engineer "
+    "Senior Perception Learning Engineer ",
+    "Staff Software Engineer, ML"
    ]
   },
   "aptask": {
@@ -24318,6 +24320,16 @@
    "count": 1,
    "roles": [
     "Senior Platform Engineer"
+   ]
+  },
+  "centific": {
+   "name": "Centific",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. AI Engineer"
    ]
   }
  }
