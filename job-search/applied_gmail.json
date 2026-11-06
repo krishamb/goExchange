@@ -20226,7 +20226,7 @@
     "Sr. Manager, Engineering",
     "Staff Software Engineer"
    ],
-   "status": "rejected 2026-10-20 (Staff Software Engineer)"
+   "status": "rejected 2026-10-20 (Staff Software Engineer); rejected 2026-11-05 (Sr. Manager, Engineering): WellSky Workday: decided not to move forward"
   },
   "wendys": {
    "name": "Wendy's",
@@ -24270,6 +24270,16 @@
    "count": 1,
    "roles": [
     "Senior Ground Software Engineer"
+   ]
+  },
+  "paleovalleywildpastures": {
+   "name": "Paleovalley & Wild Pastures",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President of Technology (US, Remote)"
    ]
   }
  }
