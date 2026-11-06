@@ -1477,9 +1477,13 @@
   "armada": {
    "name": "Armada",
    "dates": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-11-06"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Distinguished Engineer / Technical Fellow"
+   ]
   },
   "armadin": {
    "name": "Armadin",
@@ -9453,7 +9457,8 @@
    "count": 1,
    "roles": [
     "Staff Data Engineer"
-   ]
+   ],
+   "status": "closed 2026-11-06 (Staff Data Engineer): timelines shifted; no longer filling the role immediately"
   },
   "illumio": {
    "name": "illumio",
@@ -21810,11 +21815,13 @@
   "egen": {
    "name": "Egen",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-05"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Data Architect"
+    "Data Architect",
+    "Senior AI Engineer"
    ]
   },
   "brightmachines": {
