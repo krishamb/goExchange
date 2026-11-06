@@ -23814,6 +23814,16 @@
    "roles": [
     "AI and Data Consultant Team Lead"
    ]
+  },
+  "clearlyagile": {
+   "name": "ClearlyAgile",
+   "dates": [
+    "2026-11-05"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead .NET Developer / Architect"
+   ]
   }
  }
 }
