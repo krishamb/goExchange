@@ -12182,7 +12182,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-06 (MDM Architect): Workday email: decided to move forward with other candidates (decline)"
   },
   "modmed": {
    "name": "ModMed",
