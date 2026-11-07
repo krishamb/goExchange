@@ -4676,12 +4676,14 @@
    "first": "2026-10-05",
    "via": "cloud_greenhouse",
    "roles": [
-    "Senior Software Engineer - Full Stack [NYC or SF]"
+    "Senior Software Engineer - Full Stack [NYC or SF]",
+    "Staff Software Engineer - Backend/Infra [NYC or SF]"
    ],
    "dates": [
-    "2026-11-05"
+    "2026-11-05",
+    "2026-09-29"
    ],
-   "count": 1
+   "count": 2
   },
   "confiant": {
    "name": "Confiant",
