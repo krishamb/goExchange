@@ -24476,6 +24476,26 @@
    "roles": [
     "Senior Analytics Engineer"
    ]
+  },
+  "relae": {
+   "name": "Relae",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior ML Engineer"
+   ]
+  },
+  "spycloud": {
+   "name": "SpyCloud",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager, Platform Engineering"
+   ]
   }
  }
 }
