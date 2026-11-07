@@ -21397,12 +21397,14 @@
   "appliedmaterials": {
    "name": "Applied Materials",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-06"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Software Architect",
-    "AI/ML Engineer"
+    "AI/ML Engineer",
+    "Senior Software Engineer"
    ]
   },
   "redapt": {
