@@ -3253,7 +3253,7 @@
    "roles": [
     "Staff Engineer, Full Stack"
    ],
-   "status": "rejected 2026-10-29 (Staff Engineer, Full Stack): Recruiting team will not be moving forward with the application for this role."
+   "status": "rejected 2026-10-29 (Staff Engineer, Full Stack): Recruiting team will not be moving forward with the application for this role.; rejected 2026-11-07 (Director, Full Stack Engineering): Butterfly Network email: not moving forward (decline)"
   },
   "buzzsolutions": {
    "name": "Buzz Solutions",
@@ -6927,7 +6927,7 @@
    "roles": [
     "Senior Software Engineer"
    ],
-   "status": "rejected 2026-10-06 (Infrastructure Engineering Director): regret to inform, not moving forward with candidacy"
+   "status": "rejected 2026-10-06 (Infrastructure Engineering Director): regret to inform, not moving forward with candidacy; rejected 2026-11-07 (Senior Software Engineer): FanDuel email: not moving forward (decline)"
   },
   "farai": {
    "name": "FAR.AI",
@@ -10983,7 +10983,8 @@
     "Director, AI Platforms",
     "Staff Data Engineer, Data Platform Core (AI Native)",
     "VP, Infrastructure Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-07 (VP, Infrastructure Engineering): Greenhouse email: not the right match (decline; applies only to this role)"
   },
   "lifebonder": {
    "company": "lifebonder",
@@ -12485,7 +12486,8 @@
    "count": 3,
    "roles": [
     "Principal AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-07 (Director, Data Product Engineering): Natera email: moving forward with other candidates (decline)"
   },
   "nayya": {
    "name": "Nayya",
@@ -14959,7 +14961,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-07 (Engineering Manager): Greenhouse email: not able to move forward (decline; role title truncated in the email preview)"
   },
   "qualifiedhealthpbc": {
    "name": "Qualified Health Pbc",
@@ -18501,7 +18505,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-07 (Staff Software Engineer): Greenhouse email: decided to move forward with other candidates (decline)"
   },
   "thegalluporganization": {
    "name": "The Gallup Organization",
