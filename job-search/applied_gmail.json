@@ -10069,9 +10069,13 @@
   "jll": {
    "name": "jll",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-06"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   },
   "jobber": {
    "name": "Jobber",
@@ -23139,6 +23143,9 @@
    "count": 1,
    "roles": [
     "Manager Engineering"
+   ],
+   "aliases": [
+    "Thrivent Financial"
    ]
   },
   "pawlicyadvisor": {
