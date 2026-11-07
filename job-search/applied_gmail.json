@@ -2845,7 +2845,7 @@
     "Sr Platform Engineer, ML Infrastructure",
     "Director of Engineering, See & Scout"
    ],
-   "status": "rejected 2026-10-20 (Director of Engineering, See & Scout)"
+   "status": "rejected 2026-10-20 (Director of Engineering, See & Scout); rejected 2026-11-06 (Sr Platform Engineer, ML Infrastructure): Greenhouse email: not moving forward (decline)"
   },
   "blueshieldofcalifornia": {
    "name": "Blue Shield of California",
@@ -8531,9 +8531,13 @@
   "gridware": {
    "name": "Gridware",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-11-06"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Full Stack"
+   ]
   },
   "grindr": {
    "name": "Grindr",
@@ -14267,7 +14271,8 @@
    "count": 2,
    "roles": [
     "Staff Machine Learning Engineer, Shopping Ads"
-   ]
+   ],
+   "status": "rejected 2026-11-06 (Staff Machine Learning Engineer, Shopping Ads): Pinterest email: won't be moving forward (decline)"
   },
   "pinwheel": {
    "name": "Pinwheel",
@@ -22177,7 +22182,8 @@
    "roles": [
     "Senior Manager - Analytics Engineering",
     "Senior Staff Software Engineer - Monetization"
-   ]
+   ],
+   "status": "rejected 2026-11-06 (Senior Staff Software Engineer - Monetization): Gem email: moving forward with other candidates (decline)"
   },
   "chargepoint": {
    "name": "ChargePoint",
@@ -24449,6 +24455,16 @@
    "count": 1,
    "roles": [
     "Director - Software Engineering"
+   ]
+  },
+  "firemon": {
+   "name": "FireMon",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Device Engineer"
    ]
   }
  }
