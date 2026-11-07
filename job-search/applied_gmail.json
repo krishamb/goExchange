@@ -20063,11 +20063,13 @@
   "walkerdunlop": {
    "name": "Walker & Dunlop",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-06"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Principal AI Software Engineer"
+    "Principal AI Software Engineer",
+    "VP, Analytics, Data Science & AI Data Enablement"
    ],
    "via": "company Workday site reports already applied (bot check 2026-10-16)"
   },
@@ -24507,6 +24509,16 @@
    "count": 1,
    "roles": [
     "Engineering Manager, Homeowner and Partner Experiences"
+   ]
+  },
+  "brownbrown": {
+   "name": "Brown & Brown",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Data and Integration Architect"
    ]
   }
  }
