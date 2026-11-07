@@ -24466,6 +24466,16 @@
    "roles": [
     "Senior Device Engineer"
    ]
+  },
+  "empowerpharmacy": {
+   "name": "Empower Pharmacy",
+   "dates": [
+    "2026-11-06"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Analytics Engineer"
+   ]
   }
  }
 }
