@@ -3913,9 +3913,13 @@
   "chaosindustries": {
    "name": "CHAOS Industries",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-08"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Backend Software Engineer (Python / FastAPI)"
+   ]
   },
   "charliehealth": {
    "name": "Charlie Health",
