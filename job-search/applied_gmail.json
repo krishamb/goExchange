@@ -24554,6 +24554,16 @@
    "roles": [
     "Solution Architect"
    ]
+  },
+  "muckrack": {
+   "name": "Muck Rack",
+   "dates": [
+    "2026-11-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Search & AI"
+   ]
   }
  }
 }
