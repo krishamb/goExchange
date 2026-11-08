@@ -24540,6 +24540,16 @@
    "roles": [
     "Data and Integration Architect"
    ]
+  },
+  "lovelytics": {
+   "name": "Lovelytics",
+   "dates": [
+    "2026-11-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Solution Architect"
+   ]
   }
  }
 }
