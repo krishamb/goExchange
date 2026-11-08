@@ -8160,7 +8160,8 @@
    "count": 1,
    "roles": [
     "Director, Enterprise Architecture - Research and Development"
-   ]
+   ],
+   "status": "rejected 2026-11-08 (Director, Enterprise Architecture - Research and Development (R0055395)): Workday email: will not be moving forward with your application (decline)"
   },
   "gilgamesh": {
    "company": "gilgamesh",
@@ -20456,7 +20457,7 @@
     "Principal, Machine Learning Software Engineer, Admin Central"
    ],
    "count": 3,
-   "status": "rejected 2026-11-04 (Principal ML Engineer, Admin Central): the hiring team has decided not to move forward"
+   "status": "rejected 2026-11-04 (Principal ML Engineer, Admin Central): the hiring team has decided not to move forward; rejected 2026-11-08 (Sr Director, Software Development Engineering): Workday email: hiring team decided to move forward with other candidates (decline)"
   },
   "workiva": {
    "name": "Workiva",
