@@ -21873,12 +21873,14 @@
   "cccintelligentsolutions": {
    "name": "CCC Intelligent Solutions",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-09"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior AI Engineer",
-    "AI Engineer"
+    "AI Engineer",
+    "Senior Manager \u2013 Engineering"
    ],
    "aliases": [
     "EvolutionIQ",
@@ -24643,6 +24645,16 @@
    "count": 0,
    "roles": [],
    "status": "closed 2026-11-09 (Chief Technology Officer): Indeed removed the posting in moderation (missing or unverifiable information) and advises caution if contacted about it"
+  },
+  "wmewilliammorrisendeavor": {
+   "name": "WME (William Morris Endeavor)",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   }
  }
 }
