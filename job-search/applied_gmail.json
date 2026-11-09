@@ -4878,7 +4878,8 @@
    "count": 2,
    "roles": [
     "SVP, Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-09 (SVP, Engineering): Ashby email 'Update on your Application with Covera Health': moving forward with other candidates"
   },
   "cppayrollllcdbaconnectpay": {
    "name": "CP Payroll, LLC dba ConnectPay",
@@ -11403,7 +11404,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-09 (Staff Software Engineer, DTC): Greenhouse email: moving forward with other candidates"
   },
   "manifest": {
    "name": "Manifest",
@@ -16320,7 +16323,8 @@
    "roles": [
     "Head of Trading Technology (Director), Asset Management (Director, PL), 2026-128582"
    ],
-   "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)"
+   "note": "iCIMS confirmation 2026-10-21 05:43Z; not sent by any bot or lane (the applicant's own application)",
+   "status": "rejected 2026-11-09 (video interview process (recruiter thread)): Recruiter: seeking a candidate in the office four days a week, and the compensation ask is above budget - process ended"
   },
   "scopelabs": {
    "name": "Scope Labs",
