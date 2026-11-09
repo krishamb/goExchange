@@ -24567,6 +24567,16 @@
    "roles": [
     "Senior Software Engineer, Search & AI"
    ]
+  },
+  "monks": {
+   "name": "Monks",
+   "dates": [
+    "2026-11-08"
+   ],
+   "count": 1,
+   "roles": [
+    "SVP, Data Science & AI Product Enablement"
+   ]
   }
  }
 }
