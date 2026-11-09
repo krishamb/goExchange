@@ -24655,6 +24655,16 @@
    "roles": [
     "Staff Software Engineer"
    ]
+  },
+  "bmobankofmontreal": {
+   "name": "BMO (Bank of Montreal)",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect AI Platform"
+   ]
   }
  }
 }
