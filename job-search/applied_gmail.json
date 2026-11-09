@@ -14211,7 +14211,8 @@
    "roles": [
     "Forward Deployed Software Engineer",
     "Field CTO"
-   ]
+   ],
+   "status": "rejected 2026-11-09 (Forward Deployed Software Engineer): email: decided not to move forward"
   },
   "picarroinc": {
    "name": "Picarro, Inc",
@@ -17827,7 +17828,8 @@
    "roles": [
     "Engineering Manager, Calc Engine \u2014 Superhuman Docs",
     "Software Engineer, Back-End"
-   ]
+   ],
+   "status": "rejected 2026-11-09 (Engineering Manager, Calc Engine \u2014 Superhuman Docs): Ashby email: decided not to move forward"
   },
   "supermicro": {
    "name": "Supermicro",
@@ -24628,6 +24630,13 @@
    "roles": [
     "Senior Azure API Developer/Technical Lead"
    ]
+  },
+  "coinigy": {
+   "name": "Coinigy",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "closed 2026-11-09 (Chief Technology Officer): Indeed removed the posting in moderation (missing or unverifiable information) and advises caution if contacted about it"
   }
  }
 }
