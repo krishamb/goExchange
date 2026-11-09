@@ -12237,11 +12237,13 @@
    "name": "MongoDB",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-09"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Manager, AI and People Transformation"
+    "Senior Manager, AI and People Transformation",
+    "Senior Software Engineer, Atlas Agent Engine"
    ]
   },
   "montecarlo": {
