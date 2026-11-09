@@ -24577,6 +24577,16 @@
    "roles": [
     "SVP, Data Science & AI Product Enablement"
    ]
+  },
+  "nttglobaldatacenters": {
+   "name": "NTT Global Data Centers",
+   "dates": [
+    "2026-11-08"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Telemetry Engineering and Operations"
+   ]
   }
  }
 }
