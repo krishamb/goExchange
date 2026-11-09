@@ -24591,6 +24591,16 @@
    "roles": [
     "Director, Telemetry Engineering and Operations"
    ]
+  },
+  "consumeredge": {
+   "name": "Consumer Edge",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Engineer"
+   ]
   }
  }
 }
