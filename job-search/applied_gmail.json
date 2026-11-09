@@ -10984,7 +10984,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "closed 2026-11-09 (Principal System Architect): LI-COR email: a business decision was made to close this role"
   },
   "life360": {
    "name": "Life360",
