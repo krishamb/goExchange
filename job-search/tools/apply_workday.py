@@ -67,6 +67,12 @@ def wd_remote_check(url):
     if re.search(r"\bnon[- ]?remote\b|\bnot remote\b|\bno remote\b", rt): rt = ""   # Nike 10-26: remoteType 'Non-Remote Posting' is no remote signal ('remote' matched inside it)
     rem = [l for l in locs if l and _REM_LOC.search(l) and not re.search(r"\bnon[- ]?remote\b", l, re.I)]
     if rem and all(_STATE_ONLY.search(l) and not re.search(r"california|\bCA\b|united states|\bUSA?\b|u\.s\.|nationwide|anywhere", l, re.I) for l in rem) and not any(l and not _REM_LOC.search(l) and re.search(r"california|\bCA\b", l) for l in locs):
+        # 2026-11-09 Banner Health: the location reads 'Remote Arizona' but the description lists the states a remote hire may live in,
+        # California among them ('can be a remote position if you live in the following states only: AL, AK, ..., CA, ...')
+        _jd0 = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", _html.unescape(d.get("jobDescription") or "")))
+        _elig = re.search(r"(remote|work from home|telework|telecommut)[^.]{0,160}\b(following|these|eligible|approved|select(ed)?)\s+(states|locations)\b[^.]{0,30}?:?([^.]{0,500})", _jd0, re.I)
+        if _elig and re.search(r"\bCA\b|california", _elig.group(5) or "", re.I):
+            return True, txt + " [JD: remote open to residents of listed states, California included]"
         return False, txt + " [remote limited to a state other than California]"   # 'WORK AT HOME - OHIO', 'Remote MA; Remote CT' (Bob's Oct 16)
     if "remote" in rt or "virtual" in rt or rem: return True, txt   # 'Work at Home' with no state is remote (Evolent Oct 16)
     if any(re.fullmatch(r"\s*(united states( of america)?|usa|us)\s*", l, re.I) for l in locs if l): return True, txt   # country-only location = remote-eligible
