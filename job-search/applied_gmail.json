@@ -24615,6 +24615,16 @@
    "roles": [
     "Senior Applications Architect"
    ]
+  },
+  "accenturefederalservices": {
+   "name": "Accenture Federal Services",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Azure API Developer/Technical Lead"
+   ]
   }
  }
 }
