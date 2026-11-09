@@ -269,6 +269,8 @@ async def cx_choose(page, row, prefs, label, queries=(), ranker=None, inp=None):
                 await inp.fill(""); await inp.type(q, delay=50)
             await page.wait_for_timeout(1300 if q else 700)
             cells, texts = await cx_options(page, inp)
+            if q is not None and not texts:   # 2026-11-09: a searched list (e.g. geo ZIP lookup) can take a few seconds to load
+                await page.wait_for_timeout(2500); cells, texts = await cx_options(page, inp)
             if texts: seen = texts
             k = ranker(texts) if ranker else rank(texts, prefs, label)
             if k is None:
@@ -333,6 +335,8 @@ class Job:
         if why: u["why"] = why
         if not any(x["label"] == u["label"] for x in self.report["unanswered"]): self.report["unanswered"].append(u)
 
+ESIG = re.compile(r"^(full name|legal full name|full legal name|signature|e-?signature|electronic signature|your (full |legal )?name|signed name|type your (full )?name.*)\s*\*?$", re.I)   # 2026-11-09
+ESIG_BLOCK = re.compile(r"e-?signature|electronic signature|signature", re.I)
 def contact_value(f):
     """The fixed contact / address / signature fields, by label (None: not one of them)."""
     low = (f["label"] or "").lower().strip()
@@ -348,7 +352,7 @@ def contact_value(f):
     if re.fullmatch(r"county", low): return "Santa Clara"
     if re.fullmatch(r"state|state/province|province|region", low): return "California"
     if re.fullmatch(r"country|country/region|country of residence", low): return "United States"
-    if re.fullmatch(r"full name|legal full name|signature|e-?signature|your (full )?name", low): return P["name"]
+    # 2026-11-09: full name / signature fields are e-signatures: answer_field leaves them for the applicant (ESIG)
     if re.fullmatch(r"link [2-9]\d*", low): return ""   # one link is enough: the LinkedIn profile goes in Link 1
     if re.search(r"linkedin", low) or re.fullmatch(r"link 1|link|url|website|web site", low): return P["linkedin"]
     return None
@@ -367,6 +371,16 @@ async def answer_field(page, job, f):
         job.report.setdefault("left_for_applicant", []).append(key[:200])
         if cur:   # a value from an earlier run or the site's draft: never vouched for by the filler
             job.miss(f, why=f"left for the applicant; the form already shows {cur[:80]!r} (from a draft or earlier run): check it")
+        return None
+    # 2026-11-09: an e-signature (the 'E-Signature' block's Full Name, or any signature field) signs the agreement printed
+    # above it - at Sherwin-Williams an employment agreement with arbitration and class-action waivers. It is the
+    # applicant's own legal act: never typed by the filler; a value left in the draft is cleared so the applicant signs it.
+    if kind in ("text", "textarea") and (ESIG.search(low.strip()) or ESIG_BLOCK.search(f.get("block") or "")):
+        job.report.setdefault("left_for_applicant", []).append("e-signature: " + key[:150])
+        job.report["esignature"] = True
+        if cur:
+            try: await fill_text(page, row.locator("input.input-row__control, textarea.input-row__control, input").first, "")
+            except Exception: pass
         return None
     # ---- a per-item "answers" override from the queue file ({"label substring": answer}): the applicant's own answer to
     # a question the rules leave open (never used for the AI-use certifications above)
@@ -418,7 +432,18 @@ async def answer_field(page, job, f):
         elif kind == "select":
             if low.startswith("zip") or low.startswith("postal"):
                 if cur and norm(cv) in norm(cur): return keep(cur)
-                v, seen = await cx_choose(page, row, [cv], label, queries=[cv], ranker=lambda t: next((i for i, x in enumerate(t) if norm(x).startswith(norm(cv)) and re.search(r"santa clara", x, re.I)), next((i for i, x in enumerate(t) if norm(x).startswith(norm(cv))), None)))
+                # 2026-11-09: some tenants (geo-hierarchy ZIP list) show the ZIP inside a longer label or load the list slowly:
+                # accept an option that contains the ZIP, and search twice before giving up
+                def _zip(t):
+                    for test in (lambda x: norm(x).startswith(norm(cv)) and re.search(r"santa clara", x, re.I),
+                                 lambda x: norm(x).startswith(norm(cv)),
+                                 lambda x: re.search(r"(?<!\d)" + re.escape(cv) + r"(?!\d)", x) and re.search(r"santa clara", x, re.I),
+                                 lambda x: re.search(r"(?<!\d)" + re.escape(cv) + r"(?!\d)", x)):
+                        k = next((i for i, x in enumerate(t) if x and test(x)), None)
+                        if k is not None: return k
+                    return None
+                v, seen = await cx_choose(page, row, [cv], label, queries=[cv, cv], ranker=_zip)
+                if not v: job.report.setdefault("select_seen", {})[label] = {"n": len(seen), "first": seen[:12]}   # local report only (out/ is outside the repository)
                 return keep(v) if v else None
             if low == "state" or low.startswith("state/") or low in ("province", "region"):
                 if cur and re.fullmatch(r"(ca|california)", cur.strip(), re.I): return keep(cur)

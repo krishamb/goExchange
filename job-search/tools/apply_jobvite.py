@@ -432,8 +432,8 @@ def contact_value(f):
     if re.fullmatch(r"county", low): return "Santa Clara"
     if re.fullmatch(r"state|state/province|province|region|state of residence", low): return "California"
     if re.fullmatch(r"country|country/region|country of residence", low): return "United States"
-    if re.fullmatch(r"full name|legal full name|signature|e-?signature|electronic signature|your (full |legal )?name|name", low): return P["name"]
-    if re.fullmatch(r"(applicant'?s? )?initials|your initials|initial here", low): return FIRST[0].upper() + LAST[0].upper()   # apply.py TEXT_RULES 'your initials' -> AK
+    if re.fullmatch(r"full name|legal full name|your (full |legal )?name|name", low): return P["name"]   # 2026-11-09: signature labels removed (decide() leaves e-signatures)
+    # 2026-11-09: typed initials sign an acknowledgement: the applicant's own (decide() leaves them; see ESIG there)
     if re.search(r"linkedin", low) and not re.search(r"\?|recruiter|status", low): return P["linkedin"]
     if re.fullmatch(r"(personal )?(web ?site|url|portfolio)( url)?", low): return P["linkedin"]
     return None
@@ -484,6 +484,11 @@ def decide(job, f):
         return {"act": "leave", "why": "human-verification question: never answered by the bot (answer it by hand)"}
     if (AI_CERT.search(gtxt) and not AI_CONSENT.search(gtxt)) or AI_CERT_STRONG.search(gtxt):
         return {"act": "leave", "why": "AI-use / 'I completed this application myself' certification: always the applicant's"}
+    # 2026-11-09: e-signatures (a signature field, or a name typed under a certification / agreement) are the applicant's own legal act
+    _sctx = (f.get("head") or "") + " " + (f.get("ctx") or "")[-600:]
+    if kind not in ("checkbox", "radio", "select") and (re.fullmatch(r"(e-?|electronic |digital )?signature|signed name|type your (full )?name.*|(applicant'?s? )?initials|your initials|initial here", low)
+            or (re.fullmatch(r"(full |legal |your |your full |full legal |legal full )?name", low) and re.search(r"signature|e-?sign|certif|attest|by typing", _sctx, re.I))):
+        return {"act": "leave", "why": "e-signature: the applicant's own signature (never typed by the bot)"}
     # ---- a per-item "answers" override from the queue file ({"label substring": answer}): the applicant's own answer
     # (never used for the human checks and AI-use certifications above)
     ov = next((v for k, v in (job.item.get("answers") or {}).items() if k and k.lower() in q.lower()), None)

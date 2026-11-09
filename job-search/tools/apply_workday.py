@@ -966,8 +966,8 @@ async def fill_field(page, job, f):
             # authorization, at-will): tick it only when nothing on the page certifies a personally completed / no-AI application
             try: body = await page.inner_text("body")
             except Exception: body = ""
-            if body and not NO_AI_CERT.search(body) and not DISC.search(t): return keep(t) if await set_check(cb, True) else None
-            job.report.setdefault("rule_conflicts", []).append(f"{t[:120]} -> signature box left for the applicant"); return cur or None
+            # 2026-11-09: an e-signature box is the applicant's own legal act: never ticked by the filler (left and reported)
+            job.report.setdefault("rule_conflicts", []).append(f"{t[:120]} -> signature box left for the applicant"); job.report["esignature"] = True; return None
         if DISC.search(t) or not (ACK.search(t) or ACK.search(lab)): return cur or None
         return keep(t) if await set_check(cb, True) else None
     if kind in ("text", "textarea"):
