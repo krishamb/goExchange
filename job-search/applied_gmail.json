@@ -8284,9 +8284,13 @@
   "globality": {
    "name": "Globality",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-09"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineer, Agents"
+   ]
   },
   "globalityinc": {
    "company": "globalityinc",
@@ -11365,12 +11369,14 @@
   "machinify": {
    "name": "Machinify",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-09"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff Data Engineer, Core Migrations",
-    "Senior Data Engineer - Analytics"
+    "Senior Data Engineer - Analytics",
+    "Engineering Manager, Enterprise Data Warehouse & Analytics"
    ]
   },
   "macroscope": {
