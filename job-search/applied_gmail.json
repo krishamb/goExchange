@@ -20271,13 +20271,15 @@
    "via": "workday-cloud",
    "dates": [
     "2026-10-15",
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-09"
    ],
    "roles": [
     "Senior Data Engineer",
-    "Software Engineering Senior Manager"
+    "Software Engineering Senior Manager",
+    "Lead Authentication Software Engineer"
    ],
-   "count": 2
+   "count": 3
   },
   "wellsky": {
    "name": "WellSky",
@@ -23159,11 +23161,13 @@
   "thrivent": {
    "name": "Thrivent",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-09"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager Engineering"
+    "Manager Engineering",
+    "Principal Engineer"
    ],
    "aliases": [
     "Thrivent Financial"
@@ -24600,6 +24604,16 @@
    "count": 1,
    "roles": [
     "Staff Data Engineer"
+   ]
+  },
+  "americaninstitutesforresearch": {
+   "name": "American Institutes for Research",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Applications Architect"
    ]
   }
  }
