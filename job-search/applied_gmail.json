@@ -15797,7 +15797,14 @@
   "roboforce": {
    "company": "roboforce",
    "first": "2026-10-05",
-   "via": "cloud"
+   "via": "cloud",
+   "roles": [
+    "Senior / Staff Software Engineer, Robotics Platform"
+   ],
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1
   },
   "robotsandpencils": {
    "name": "Robots and Pencils",
