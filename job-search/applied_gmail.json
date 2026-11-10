@@ -6878,9 +6878,13 @@
   "factset": {
    "name": "Factset",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-11-09"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "OMS Principal Software Engineer (Full Stack, Design and Develop Financial Trading Applications)"
+   ]
   },
   "faire": {
    "name": "Faire",
@@ -16971,9 +16975,13 @@
    "name": "SK hynix America",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-09"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "AI Solution Architecture Director"
+   ]
   },
   "skillable": {
    "name": "Skillable",
@@ -24692,6 +24700,26 @@
    "count": 1,
    "roles": [
     "Director, Architecture and Data"
+   ]
+  },
+  "foxcorporation": {
+   "name": "Fox Corporation",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Media Technology Engineering"
+   ]
+  },
+  "marshmclennanagency": {
+   "name": "Marsh McLennan Agency",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Enterprise Architect"
    ]
   }
  }
