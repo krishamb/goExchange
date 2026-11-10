@@ -17092,12 +17092,15 @@
    "first": "2026-10-02",
    "via": "workday-cloud",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-10"
    ],
    "roles": [
-    "Manager, Software Engineering, Maps"
+    "Manager, Software Engineering, Maps",
+    "Staff Software Engineer, Ads Signals and Measurement",
+    "Director, Software Engineering, Product Eng"
    ],
-   "count": 1
+   "count": 3
   },
   "sncloudsolutions": {
    "name": "SN Cloud Solutions",
