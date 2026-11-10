@@ -1,0 +1,15 @@
+# Local PostgreSQL for running the server and the tests.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: tictactoe
+      POSTGRES_PASSWORD: tictactoe
+      POSTGRES_DB: tictactoe
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tictactoe -d tictactoe"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
