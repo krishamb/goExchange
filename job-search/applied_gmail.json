@@ -24749,6 +24749,26 @@
    "roles": [
     "Senior Staff Software Engineer"
    ]
+  },
+  "everforthviacybercoders": {
+   "name": "Everforth (via CyberCoders)",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal AI Inference Systems Software Architect"
+   ]
+  },
+  "infopay": {
+   "name": "Infopay",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
   }
  }
 }
