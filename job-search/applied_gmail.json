@@ -14234,11 +14234,13 @@
   "picarroinc": {
    "name": "Picarro, Inc",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-10"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Software Engineering Manager - Cloud Software, Data Platform & AI-Agentic Product Engineering"
+    "Software Engineering Manager - Cloud Software, Data Platform & AI-Agentic Product Engineering",
+    "Vice President, Software Engineering"
    ]
   },
   "piercemanufacturing": {
