@@ -24769,6 +24769,36 @@
    "roles": [
     "Chief Technology Officer"
    ]
+  },
+  "pditechnologies": {
+   "name": "PDI Technologies",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Architect"
+   ]
+  },
+  "helmhealth": {
+   "name": "Helm Health",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Platform Engineer, Health Plan Data"
+   ]
+  },
+  "jitterbit": {
+   "name": "Jitterbit",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager - Backend"
+   ]
   }
  }
 }
