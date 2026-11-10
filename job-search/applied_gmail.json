@@ -19684,11 +19684,15 @@
   "veeam": {
    "name": "Veeam",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-09"
    ],
-   "count": 1,
+   "count": 2,
    "note": "rejected (do not re-apply)",
-   "rejected": true
+   "rejected": true,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "veeamsoftware": {
    "name": "Veeam Software",
@@ -24728,6 +24732,13 @@
    "roles": [
     "Senior Enterprise Architect"
    ]
+  },
+  "thewashingtonpost": {
+   "name": "The Washington Post",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-11-09 (Senior Staff Software Engineer, Content Intelligence): Workday email 'Application Update': decided to continue the search with other candidates"
   }
  }
 }
