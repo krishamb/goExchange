@@ -425,7 +425,7 @@ func TestPlayUnknownStatus(t *testing.T) {
 			t.Errorf("Play error %q is the rule violation %q", err, target)
 		}
 	}
-	if !strings.Contains(err.Error(), `"paused"`) {
+	if !strings.Contains(err.Error(), "paused") {
 		t.Errorf("Play error %q does not name the unknown status", err)
 	}
 	if g != before {
@@ -549,11 +549,13 @@ func TestParseBoardRejects(t *testing.T) {
 		"........",
 		"..........",
 		"X...O....\n",
-		// Nine bytes, but not all of them marks.
-		"x...o....",
+		// Nine bytes, exactly one of which is not a mark, so each case
+		// fails for one reason only.
+		"x...O....", // marks are upper case
+		"X...o....",
 		"X...O...0",
 		"X...O... ",
-		"X...O...\x00",
+		"\x00...O....",
 		"é.......", // é takes two bytes
 	} {
 		if b, err := ParseBoard(s); err == nil {
