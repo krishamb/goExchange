@@ -20781,9 +20781,13 @@
   "zenbusiness": {
    "name": "ZenBusiness",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-10"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Sr. Software Engineering Manager"
+   ]
   },
   "zencore": {
    "name": "Zencore",
