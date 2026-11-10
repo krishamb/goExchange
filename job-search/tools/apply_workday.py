@@ -1263,6 +1263,11 @@ async def auth(page, job, s):
         creds = {"new": (_alt, s.get("new_account_password") or s["passwords"][0])}
         if s.get("new_account_password_strong"): creds["strong"] = (_alt, s["new_account_password_strong"])
         if known.get("email") != _alt: known = {}   # a remembered account under another address is not used for this job
+    elif known.get("email") and known.get("email") not in (creds["login"][0], creds["new"][0]):
+        # 2026-11-10 (Cigna): this site's remembered account was created under the applicant's other address (a Himalayas-lane row);
+        # a default-email row never applies under it, and a second account would duplicate the candidate profile: stop, list the role
+        job.report["errors"].append("this site's existing account uses the applicant's other email address; not used for this application")
+        return "fail"
     if known.get("pw_key") in creds:
         if known.get("failed"):   # the remembered login failed on an earlier run: never retried (lockouts); fix wf_creds, then remove "failed"
             job.report["errors"].append(f"sign-in with the remembered {known['pw_key']} login failed on an earlier run; not retried"); return "fail"
@@ -1472,7 +1477,8 @@ async def run_one(ctx, item, s):
         elif a == "fail":
             await page.screenshot(path=f"{OUT}/{job.tag}_wd_auth.png", full_page=True)
             pw = any(re.search(r"password", x, re.I) for x in job.report["errors"])
-            job.report["result"] = "NOT SUBMITTED: " + ("the tenant rejected the new-account password (see errors)" if pw else "could not create an account or sign in"); return job.report
+            other = any("other email address" in x for x in job.report["errors"])   # 2026-11-10: the site's account is under the other address
+            job.report["result"] = "NOT SUBMITTED: " + ("this site's account uses the applicant's other email address (list the role)" if other else "the tenant rejected the new-account password (see errors)" if pw else "could not create an account or sign in"); return job.report
         await settle(page)
         if APPLIED.search(await text(page)):
             job.report["result"] = "ALREADY APPLIED on this company's Workday site"; return job.report
