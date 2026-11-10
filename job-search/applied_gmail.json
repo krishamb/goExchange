@@ -5263,11 +5263,13 @@
   "datasite": {
    "name": "Datasite",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-09"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Cloud & Infrastructure Architect"
+    "Staff Cloud & Infrastructure Architect",
+    "Senior Software Engineer, Grata Data"
    ]
   },
   "datasnipper": {
