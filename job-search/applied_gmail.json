@@ -24810,6 +24810,16 @@
    "roles": [
     "Engineering Manager - Backend"
    ]
+  },
+  "pathstream": {
+   "name": "Pathstream",
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
   }
  }
 }
