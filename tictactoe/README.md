@@ -111,11 +111,13 @@ Errors look like `{"error": {"code": "NOT_YOUR_TURN", "message": "it is not your
 | Status | Codes |
 |---|---|
 | 400 | `INVALID_JSON`, `INVALID_REQUEST`, `INVALID_USERNAME`, `INVALID_PASSWORD`, `OUT_OF_BOUNDS` |
-| 401 | `UNAUTHORIZED` (missing or bad token), `INVALID_CREDENTIALS` (failed login) |
+| 401 | `UNAUTHORIZED`: missing, invalid or expired token, or a token whose user no longer exists. `INVALID_CREDENTIALS`: failed login |
 | 403 | `NOT_A_PLAYER`: you're not seated in this game |
-| 404 | `NOT_FOUND` |
+| 404 | `NOT_FOUND`: no such game or endpoint |
+| 405 | `METHOD_NOT_ALLOWED`, with an `Allow` header |
 | 409 | `NOT_YOUR_TURN`, `CELL_OCCUPIED`, `GAME_NOT_IN_PROGRESS`, `VERSION_MISMATCH`, `GAME_FULL`, `CANNOT_JOIN_OWN_GAME`, `USERNAME_TAKEN`, `CONFLICT` |
 | 413 | `BODY_TOO_LARGE` |
+| 500 | `INTERNAL`: details go to the server log, never to the client |
 
 ## How it works
 

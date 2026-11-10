@@ -30,6 +30,10 @@ var (
 	ErrNotFound = errors.New("not found")
 	// ErrUsernameTaken means another user already has that username.
 	ErrUsernameTaken = errors.New("username is already taken")
+	// ErrUnknownPlayer means the acting player's ID names no user, e.g. a
+	// still-valid token issued before the database was reset. It is kept
+	// apart from ErrNotFound so that callers don't report it as a missing game.
+	ErrUnknownPlayer = errors.New("the player does not exist")
 	// ErrConflict means a database constraint rejected a write that the rule
 	// checks let through. It should be unreachable while the row lock is
 	// held; it exists so the constraint backstop surfaces as a clean error.
@@ -193,11 +197,12 @@ func (s *Store) GetUserByUsername(ctx context.Context, username string) (User, e
 	return u, nil
 }
 
-// CreateGame creates a waiting game with playerXID as X.
+// CreateGame creates a waiting game with playerXID as X. Returns
+// ErrUnknownPlayer if there is no such user.
 func (s *Store) CreateGame(ctx context.Context, playerXID string) (GameView, error) {
 	playerX, ok := canonicalUUID(playerXID)
 	if !ok {
-		return GameView{}, ErrNotFound
+		return GameView{}, ErrUnknownPlayer
 	}
 	v, err := scanGameView(s.pool.QueryRow(ctx, `
 		WITH g AS (
@@ -208,7 +213,7 @@ func (s *Store) CreateGame(ctx context.Context, playerXID string) (GameView, err
 	))
 	switch {
 	case pgErrorCode(err) == foreignKeyViolation:
-		return GameView{}, ErrNotFound // there is no such player
+		return GameView{}, ErrUnknownPlayer
 	case err != nil:
 		return GameView{}, fmt.Errorf("store: create game: %w", err)
 	}
@@ -230,13 +235,16 @@ func (s *Store) GetGame(ctx context.Context, gameID string) (GameView, error) {
 
 // JoinGame seats playerID as O with one conditional UPDATE, so when several
 // players race for the seat exactly one gets it. Errors: ErrNotFound,
-// game.ErrOwnGame, game.ErrGameFull. Joining again as the current O succeeds
-// without changes.
+// ErrUnknownPlayer, game.ErrOwnGame, game.ErrGameFull. Joining again as the
+// current O succeeds without changes.
 func (s *Store) JoinGame(ctx context.Context, gameID, playerID string) (GameView, error) {
-	id, okGame := canonicalUUID(gameID)
-	player, okPlayer := canonicalUUID(playerID)
-	if !okGame || !okPlayer {
+	id, ok := canonicalUUID(gameID)
+	if !ok {
 		return GameView{}, ErrNotFound
+	}
+	player, ok := canonicalUUID(playerID)
+	if !ok {
+		return GameView{}, ErrUnknownPlayer
 	}
 
 	// Under READ COMMITTED (Postgres's default) a racing UPDATE waits for the
@@ -255,7 +263,7 @@ func (s *Store) JoinGame(ctx context.Context, gameID, playerID string) (GameView
 	case err == nil:
 		return v, nil
 	case pgErrorCode(err) == foreignKeyViolation:
-		return GameView{}, ErrNotFound // there is no such player
+		return GameView{}, ErrUnknownPlayer
 	case !errors.Is(err, pgx.ErrNoRows):
 		return GameView{}, fmt.Errorf("store: join game: %w", err)
 	}
@@ -286,12 +294,16 @@ func (s *Store) JoinGame(ctx context.Context, gameID, playerID string) (GameView
 // PlayMove applies a move in one transaction that holds the game's row lock,
 // so concurrent moves on the same game are serialized. Rule violations are
 // returned as the game.Err* values from game.Game.Play; a missing game is
-// ErrNotFound.
+// ErrNotFound. A well-formed player ID that names no user is simply not
+// seated, so it gets game.ErrNotAPlayer like any other stranger.
 func (s *Store) PlayMove(ctx context.Context, gameID, playerID string, row, col int, expectedVersion *int) (GameView, MoveView, error) {
-	id, okGame := canonicalUUID(gameID)
-	player, okPlayer := canonicalUUID(playerID)
-	if !okGame || !okPlayer {
+	id, ok := canonicalUUID(gameID)
+	if !ok {
 		return GameView{}, MoveView{}, ErrNotFound
+	}
+	player, ok := canonicalUUID(playerID)
+	if !ok {
+		return GameView{}, MoveView{}, ErrUnknownPlayer
 	}
 
 	tx, err := s.pool.BeginTx(ctx, readCommitted)

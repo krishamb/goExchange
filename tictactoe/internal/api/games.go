@@ -1,7 +1,6 @@
 package api
 
 import (
-	"errors"
 	"net/http"
 	"time"
 
@@ -79,12 +78,6 @@ func markJSON(m game.Mark) *string {
 
 func (s *server) createGame(w http.ResponseWriter, r *http.Request) {
 	g, err := s.store.CreateGame(r.Context(), caller(r).UserID)
-	if errors.Is(err, store.ErrNotFound) {
-		// The token is genuine but names a user the database doesn't have
-		// (say, it was reset). No game was looked up, so a 404 would mislead.
-		unauthorized(w, "the token's user does not exist")
-		return
-	}
 	if err != nil {
 		s.respondError(w, r, err)
 		return

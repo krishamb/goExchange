@@ -187,9 +187,15 @@ func TestGameRoutesRequireBearerToken(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	res := c.do(t, http.MethodPost, "/v1/games", ghost, nil)
-	wantError(t, res, http.StatusUnauthorized, "UNAUTHORIZED")
-	if got := res.header.Get("WWW-Authenticate"); got != "Bearer" {
-		t.Errorf("WWW-Authenticate %q, want Bearer", got)
+	for _, path := range []string{"/v1/games", "/v1/games/" + id + "/join"} {
+		res := c.do(t, http.MethodPost, path, ghost, nil)
+		wantError(t, res, http.StatusUnauthorized, "UNAUTHORIZED")
+		if got := res.header.Get("WWW-Authenticate"); got != "Bearer" {
+			t.Errorf("POST %s: WWW-Authenticate %q, want Bearer", path, got)
+		}
+	}
+	// The failed join left the game open for a real player.
+	if g := decode[gameView](t, c.do(t, http.MethodGet, "/v1/games/"+id, alice.token, nil), http.StatusOK); g.Status != "waiting" {
+		t.Errorf("after the ghost's join, status %q, want waiting", g.Status)
 	}
 }

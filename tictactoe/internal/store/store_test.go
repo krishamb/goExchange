@@ -145,8 +145,8 @@ func TestCreateAndGetGame(t *testing.T) {
 		}
 	}
 	for _, id := range []string{randomUUID(), "not-a-uuid"} {
-		if _, err := s.CreateGame(ctx, id); !errors.Is(err, store.ErrNotFound) {
-			t.Errorf("CreateGame(player %q) error = %v, want ErrNotFound", id, err)
+		if _, err := s.CreateGame(ctx, id); !errors.Is(err, store.ErrUnknownPlayer) {
+			t.Errorf("CreateGame(player %q) error = %v, want ErrUnknownPlayer", id, err)
 		}
 	}
 }
@@ -190,14 +190,17 @@ func TestJoinGame(t *testing.T) {
 	assertSameGame(t, again, joined)
 
 	open := createGame(t, s, x)
-	for _, tc := range []struct{ name, gameID, playerID string }{
-		{"missing game", randomUUID(), third.ID},
-		{"malformed game ID", "not-a-uuid", third.ID},
-		{"malformed player ID", open.ID, "not-a-uuid"},
-		{"missing player", open.ID, randomUUID()},
+	for _, tc := range []struct {
+		name, gameID, playerID string
+		want                   error
+	}{
+		{"missing game", randomUUID(), third.ID, store.ErrNotFound},
+		{"malformed game ID", "not-a-uuid", third.ID, store.ErrNotFound},
+		{"malformed player ID", open.ID, "not-a-uuid", store.ErrUnknownPlayer},
+		{"missing player", open.ID, randomUUID(), store.ErrUnknownPlayer},
 	} {
-		if _, err := s.JoinGame(ctx, tc.gameID, tc.playerID); !errors.Is(err, store.ErrNotFound) {
-			t.Errorf("%s: error = %v, want ErrNotFound", tc.name, err)
+		if _, err := s.JoinGame(ctx, tc.gameID, tc.playerID); !errors.Is(err, tc.want) {
+			t.Errorf("%s: error = %v, want %v", tc.name, err, tc.want)
 		}
 	}
 	if stillOpen, err := s.GetGame(ctx, open.ID); err != nil || stillOpen.Status != game.StatusWaiting {
@@ -382,13 +385,18 @@ func TestPlayMoveMissingGame(t *testing.T) {
 	ctx := t.Context()
 	x, _, g := startGame(t, s)
 
-	for _, tc := range []struct{ name, gameID, playerID string }{
-		{"missing game", randomUUID(), x.ID},
-		{"malformed game ID", "not-a-uuid", x.ID},
-		{"malformed player ID", g.ID, "not-a-uuid"},
+	for _, tc := range []struct {
+		name, gameID, playerID string
+		want                   error
+	}{
+		{"missing game", randomUUID(), x.ID, store.ErrNotFound},
+		{"malformed game ID", "not-a-uuid", x.ID, store.ErrNotFound},
+		{"malformed player ID", g.ID, "not-a-uuid", store.ErrUnknownPlayer},
+		// Well-formed but no such user: just another stranger to this game.
+		{"missing player", g.ID, randomUUID(), game.ErrNotAPlayer},
 	} {
-		if _, _, err := s.PlayMove(ctx, tc.gameID, tc.playerID, 0, 0, nil); !errors.Is(err, store.ErrNotFound) {
-			t.Errorf("%s: error = %v, want ErrNotFound", tc.name, err)
+		if _, _, err := s.PlayMove(ctx, tc.gameID, tc.playerID, 0, 0, nil); !errors.Is(err, tc.want) {
+			t.Errorf("%s: error = %v, want %v", tc.name, err, tc.want)
 		}
 	}
 }

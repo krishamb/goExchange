@@ -54,6 +54,12 @@ func writeError(w http.ResponseWriter, status int, code, message string) {
 // or auth. Errors that aren't a client's fault become a generic 500, and
 // only the log sees what went wrong.
 func (s *server) respondError(w http.ResponseWriter, r *http.Request, err error) {
+	if errors.Is(err, store.ErrUnknownPlayer) {
+		// The token is genuine but names a user the database doesn't have
+		// (say, it was reset). That's a credentials problem, not a missing game.
+		unauthorized(w, "the token's user does not exist")
+		return
+	}
 	if status, code, message, ok := clientError(err); ok {
 		writeError(w, status, code, message)
 		return
