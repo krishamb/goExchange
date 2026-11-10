@@ -56,7 +56,7 @@ func (s *server) register(w http.ResponseWriter, r *http.Request) {
 	}
 	hash, err := auth.HashPassword(req.Password, s.bcryptCost)
 	if errors.Is(err, auth.ErrPasswordLength) {
-		writeError(w, http.StatusBadRequest, "INVALID_PASSWORD", err.Error())
+		writeError(w, http.StatusBadRequest, "INVALID_PASSWORD", auth.ErrPasswordLength.Error())
 		return
 	}
 	if err != nil {

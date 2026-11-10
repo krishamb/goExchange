@@ -74,7 +74,7 @@ func startServer(t *testing.T, pool *pgxpool.Pool) *client {
 
 	hc := srv.Client()
 	hc.Timeout = 30 * time.Second
-	return &client{url: srv.URL, http: hc, logs: logs}
+	return &client{url: srv.URL, http: hc, logs: logs, pool: pool}
 }
 
 // syncBuffer is a bytes.Buffer that server goroutines can log to while the
@@ -100,7 +100,29 @@ func (b *syncBuffer) String() string {
 type client struct {
 	url  string
 	http *http.Client
-	logs *syncBuffer // the server's log
+	logs *syncBuffer   // the server's log
+	pool *pgxpool.Pool // the server's database pool
+}
+
+// warmUp opens n database connections for the server ahead of a race.
+// Without it, racing requests queue for new connections that each take
+// milliseconds to open, which spreads them out until most no longer
+// overlap, and the race being tested hardly happens.
+func (c *client) warmUp(t *testing.T, n int) {
+	t.Helper()
+	conns := make([]*pgxpool.Conn, 0, n)
+	defer func() {
+		for _, conn := range conns {
+			conn.Release() // back to the pool, open and idle
+		}
+	}()
+	for range n {
+		conn, err := c.pool.Acquire(t.Context())
+		if err != nil {
+			t.Fatalf("warm up pool: %v", err)
+		}
+		conns = append(conns, conn)
+	}
 }
 
 // response is a received response with its body read.

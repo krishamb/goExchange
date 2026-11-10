@@ -247,6 +247,12 @@ func TestUnknownGame(t *testing.T) {
 			}
 		}
 	}
+
+	// A move that can't be valid anywhere is refused before the game is
+	// even looked up.
+	path := "/v1/games/6f1c1c35-8e8e-4b8e-9a6e-3c9b7e7a5d10/moves"
+	wantError(t, c.do(t, http.MethodPost, path, alice.token, moveAt(3, 0)), http.StatusBadRequest, "OUT_OF_BOUNDS")
+	wantError(t, c.do(t, http.MethodPost, path, alice.token, `{"row":0}`), http.StatusBadRequest, "INVALID_REQUEST")
 }
 
 func TestUnroutedRequestsGetJSON(t *testing.T) {
@@ -296,12 +302,23 @@ func TestDatabaseDown(t *testing.T) {
 		t.Errorf("health status %q, want unavailable", h.Status)
 	}
 
-	res = c.do(t, http.MethodPost, "/v1/games", alice.token, nil)
-	if msg := wantError(t, res, http.StatusInternalServerError, "INTERNAL"); msg != "internal server error" {
-		t.Errorf("500 message %q, want the generic one", msg)
+	// Requests that need the database get a generic 500. In particular, an
+	// outage must not pass for bad credentials or a taken username.
+	for _, r := range []struct {
+		path, token string
+		body        any
+	}{
+		{"/v1/games", alice.token, nil},
+		{"/v1/auth/login", "", credentials("alice", password)},
+		{"/v1/auth/register", "", credentials("bob", password)},
+	} {
+		res = c.do(t, http.MethodPost, r.path, r.token, r.body)
+		if msg := wantError(t, res, http.StatusInternalServerError, "INTERNAL"); msg != "internal server error" {
+			t.Errorf("POST %s: 500 message %q, want the generic one", r.path, msg)
+		}
 	}
 	if logs := c.logs.String(); !strings.Contains(logs, `level=ERROR msg="request failed"`) {
-		t.Errorf("the failure was not logged:\n%s", logs)
+		t.Errorf("the failures were not logged:\n%s", logs)
 	}
 }
 

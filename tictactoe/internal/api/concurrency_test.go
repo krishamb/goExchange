@@ -48,6 +48,7 @@ func TestConcurrentMovesOnlyOneWins(t *testing.T) {
 	// It is X's turn and X tries 20 moves at once, some of them for the
 	// same cell.
 	const n = 20
+	c.warmUp(t, n)
 	responses := concurrently(t, n, func(i int) (response, error) {
 		return c.send(http.MethodPost, "/v1/games/"+id+"/moves", bearer(alice.token), moveAt(i%3, i/3%3))
 	})
@@ -72,6 +73,7 @@ func TestConcurrentJoinsOnlyOneWins(t *testing.T) {
 		joiners[i] = c.signUp(t, fmt.Sprintf("joiner_%d", i))
 	}
 
+	c.warmUp(t, n)
 	responses := concurrently(t, n, func(i int) (response, error) {
 		return c.send(http.MethodPost, "/v1/games/"+id+"/join", bearer(joiners[i].token), nil)
 	})
