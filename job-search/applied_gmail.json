@@ -8640,7 +8640,14 @@
   "guidewire": {
    "company": "Guidewire",
    "first": "2026-10-02",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [
+    "Senior Machine Learning Platform Engineer"
+   ],
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1
   },
   "guild": {
    "name": "Guild Mortgage",
