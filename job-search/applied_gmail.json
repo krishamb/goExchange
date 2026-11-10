@@ -17291,12 +17291,14 @@
   "sparkadvisors": {
    "name": "Spark Advisors",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-10"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff Software Engineer",
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Director, Software Engineering"
    ]
   },
   "spe": {
@@ -18926,11 +18928,13 @@
    "name": "Together AI",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-10"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer \u2014 Infra Agent Systems"
+    "Senior Software Engineer \u2014 Infra Agent Systems",
+    "Engineering Manager, Kubernetes Bare Metal Infrastructure"
    ]
   },
   "tonal": {
