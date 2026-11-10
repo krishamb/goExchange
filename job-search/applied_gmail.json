@@ -24739,6 +24739,16 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-11-09 (Senior Staff Software Engineer, Content Intelligence): Workday email 'Application Update': decided to continue the search with other candidates"
+  },
+  "impinj": {
+   "name": "Impinj",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Staff Software Engineer"
+   ]
   }
  }
 }
