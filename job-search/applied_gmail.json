@@ -24825,6 +24825,16 @@
    "roles": [
     "Staff Software Engineer"
    ]
+  },
+  "actian": {
+   "name": "Actian",
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Platform Engineering, Data Intelligence Platform"
+   ]
   }
  }
 }
