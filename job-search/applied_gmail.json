@@ -24840,6 +24840,26 @@
    "roles": [
     "Director of Platform Engineering, Data Intelligence Platform"
    ]
+  },
+  "eisneramper": {
+   "name": "EisnerAmper",
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Solution Architect"
+   ]
+  },
+  "trellahealth": {
+   "name": "Trella Health",
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Engineering Manager"
+   ]
   }
  }
 }
