@@ -19182,9 +19182,13 @@
   "turing": {
    "name": "Turing",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-09"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Research Engineering Manager, STEM"
+   ]
   },
   "turnblockio": {
    "name": "Turnblock.io",
