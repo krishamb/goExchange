@@ -24683,6 +24683,16 @@
    "roles": [
     "EverHealth - Lead Forward Deployed Engineer (Remote, US)"
    ]
+  },
+  "geaerospace": {
+   "name": "GE Aerospace",
+   "dates": [
+    "2026-11-09"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Architecture and Data"
+   ]
   }
  }
 }
