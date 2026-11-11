@@ -6307,7 +6307,10 @@
    "roles": [
     "ML Ops Engineer"
    ],
-   "status": "rejected 2026-10-29 (ML Ops Engineer): Workday notice: decided to pursue other candidates for the ML Ops Engineer opening."
+   "status": "rejected 2026-10-29 (ML Ops Engineer): Workday notice: decided to pursue other candidates for the ML Ops Engineer opening.",
+   "aliases": [
+    "Lilly"
+   ]
   },
   "elitetechnology": {
    "name": "Elite Technology",
@@ -22194,7 +22197,10 @@
    "dates": [],
    "count": 0,
    "roles": [],
-   "status": "rejected 2026-10-29 (ML Ops Engineer): decided to pursue other candidates at this time"
+   "status": "rejected 2026-10-29 (ML Ops Engineer): decided to pursue other candidates at this time",
+   "aliases": [
+    "Lilly"
+   ]
   },
   "goguardian": {
    "name": "GoGuardian",
