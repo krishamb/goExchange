@@ -24946,6 +24946,16 @@
    "roles": [
     "Executive Director Enterprise Architect"
    ]
+  },
+  "springfertility": {
+   "name": "Spring Fertility",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of AI Transformation & Digital Patient Experience"
+   ]
   }
  }
 }
