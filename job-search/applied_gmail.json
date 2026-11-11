@@ -9325,7 +9325,14 @@
   "humaninterest": {
    "company": "Human Interest",
    "first": "2026-10-06",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "roles": [
+    "Sr Software Engineer - Builder Tools"
+   ],
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1
   },
   "humansignal": {
    "company": "HumanSignal",
