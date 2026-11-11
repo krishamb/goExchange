@@ -24936,6 +24936,16 @@
    "roles": [
     "Senior Software Engineer"
    ]
+  },
+  "regeneron": {
+   "name": "Regeneron",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Executive Director Enterprise Architect"
+   ]
   }
  }
 }
