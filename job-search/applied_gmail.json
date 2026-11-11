@@ -2773,11 +2773,13 @@
   "bloomerang": {
    "name": " Bloomerang",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-11"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. Software Engineer (Tech Lead) - Typescript/React"
+    "Sr. Software Engineer (Tech Lead) - Typescript/React",
+    "Sr. Software Engineer (Payments)"
    ]
   },
   "bloominghealth": {
