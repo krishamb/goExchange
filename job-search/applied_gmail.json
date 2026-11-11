@@ -6124,7 +6124,8 @@
    "count": 1,
    "roles": [
     "Principal Software Architect"
-   ]
+   ],
+   "status": "rejected 2026-11-11 (Principal Software Architect): Email 2026-11-11: decided not to proceed with the candidacy"
   },
   "ecmcgroup": {
    "name": "ECMC Group",
@@ -14574,7 +14575,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-11 (Databricks Architect): Email 2026-11-11: moving forward with other candidates"
   },
   "pointdigitalfinance": {
    "name": "Point Digital Finance, Inc.",
@@ -19028,7 +19031,8 @@
    "roles": [
     "Senior Software Engineer",
     "Software Engineering Manager"
-   ]
+   ],
+   "status": "rejected 2026-11-11 (Software Engineering Manager): Greenhouse email 2026-11-11: moving forward with other applicants"
   },
   "towerresearchcapital": {
    "name": "Tower Research Capital",
