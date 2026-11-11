@@ -24918,6 +24918,16 @@
    "roles": [
     "Lead Analytics Engineer"
    ]
+  },
+  "comscore": {
+   "name": "Comscore",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   }
  }
 }
