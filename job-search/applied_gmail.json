@@ -24869,6 +24869,16 @@
    "roles": [
     "Data Engineering Manager"
    ]
+  },
+  "zelis": {
+   "name": "Zelis",
+   "dates": [
+    "2026-11-10"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Cloud Engineering - Hands On Technical Leader"
+   ]
   }
  }
 }
