@@ -10256,9 +10256,13 @@
   "kalepa": {
    "name": "Kalepa",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-11"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Applied AI Engineer - Kalepa for Underwriting"
+   ]
   },
   "kapitus": {
    "name": "Kapitus",
