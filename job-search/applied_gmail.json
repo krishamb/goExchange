@@ -546,9 +546,13 @@
   "agilenttechnologies": {
    "name": "Agilent Technologies",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-10"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director of Software Engineering"
+   ]
   },
   "agilityrobotics": {
    "company": "agilityrobotics",
