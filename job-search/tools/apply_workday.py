@@ -396,6 +396,13 @@ MULTI_ALL = re.compile(r"select all (the )?(days|shifts)|(days|shifts) (you are|
 WEEKDAYS = re.compile(r"monday|tuesday|wednesday|thursday|friday|weekdays?|mon-fri|monday ?- ?friday", re.I)
 DAY_SHIFTS = re.compile(r"\bday\b|first|1st|morning|business hours|standard|regular|daytime|8 ?(am|a\.m\.)|9 ?(am|a\.m\.)", re.I)
 ETH_NOT = re.compile(r"\(\s*not\s+(hispanic|latin[aoxe]?)[^)]*\)|,\s*not\s+(hispanic|latin[aoxe]?)(\s+or\s+(latin[aoxe]?|hispanic))?\b", re.I)   # 'Asian (Not Hispanic or Latino)' names a race, it is not a negated answer (Home Depot, CrowdStrike, Thermo Fisher Oct 16)
+def relabel_demo(f):
+    """2026-11-10 (Zelis): a race / ethnicity listbox labelled only 'Please check the appropriate box below.' is recognised by its
+    field id (personalInfoUS--ethnicity), so the ethnicity rules answer it."""
+    ids = (f.get("fkit") or "") + " " + (f.get("id") or "")
+    if re.search(r"ethnicity|\brace\b|personalInfoUS--race", ids, re.I) and not re.search(r"ethnic|\brace\b|racial", f.get("label") or "", re.I):
+        return dict(f, label="Ethnicity")
+    return f
 NEG_OPT = re.compile(r"^\s*no\b|\bnot\b|\bdon'?t\b|\bdo not\b|\bdisagree|\bdecline|\bnever\b", re.I)   # not "without": 'Yes, without sponsorship' is a positive answer
 def rank(texts, prefs, label, strict=None, exact=False):
     """Index of the first option matching the earliest preference (veteran options: exact or leading matches only, so
@@ -1007,6 +1014,7 @@ async def fill_page(page, job):
         for f in fields:
             seen.add((f["id"], f["label"]))
             if f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or ENTRY_FKIT.match(f.get("fkit") or "") or not f["id"]: continue
+            f = relabel_demo(f)
             try: v = await fill_field(page, job, f)
             except Exception as e:
                 v = None; job.report["errors"].append(f"{(f['label'] or f['id'])[:60]}: {type(e).__name__}")
@@ -1018,6 +1026,7 @@ async def fill_page(page, job):
         await page.wait_for_timeout(2000)
         again = {k for k in missing}; missing = []
         for f in await page.evaluate(FIELD_JS):
+            f = relabel_demo(f)
             k = f["label"] or f["id"]
             if k not in again or f["sec"] in ("Work-Experience", "Education", "Websites", "Certifications", "Languages") or ENTRY_FKIT.match(f.get("fkit") or "") or not f["id"]: continue
             again.discard(k)
