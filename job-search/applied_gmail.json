@@ -8653,12 +8653,14 @@
    "first": "2026-10-02",
    "via": "workday-cloud",
    "roles": [
-    "Senior Machine Learning Platform Engineer"
+    "Senior Machine Learning Platform Engineer",
+    "Staff Software Engineer"
    ],
    "dates": [
-    "2026-11-10"
+    "2026-11-10",
+    "2026-11-11"
    ],
-   "count": 1
+   "count": 2
   },
   "guild": {
    "name": "Guild Mortgage",
