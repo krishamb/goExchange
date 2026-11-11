@@ -3868,7 +3868,9 @@
     "2026-09-30",
     "2026-10-03"
    ],
-   "count": 3
+   "count": 3,
+   "roles": [],
+   "status": "rejected 2026-11-11 (Staff Platform Database Engineer): Greenhouse email 2026-11-11: position filled"
   },
   "chamber": {
    "name": "Chamber",
@@ -4495,7 +4497,8 @@
     "Senior AI Engineer",
     "Senior Manager, Data Platform Engineering",
     "Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-11 (Sr. AI Engineer): Email 2026-11-11: position filled before the application was reviewed"
   },
   "cohesity": {
    "name": "Cohesity",
@@ -9341,7 +9344,8 @@
    "dates": [
     "2026-11-10"
    ],
-   "count": 1
+   "count": 1,
+   "status": "rejected 2026-11-11 (Senior Software Engineer, Data Platform): Email 2026-11-11: moving forward with other candidates (Data Platform role; the Builder Tools application is separate)"
   },
   "humansignal": {
    "company": "HumanSignal",
@@ -19019,7 +19023,8 @@
     "Senior, ML Engineer - Tracking",
     "Engineering Manager, Active Sensors (LiDAR)",
     "Staff, Machine Learning Engineer - BEV/Multi-Modal Perception"
-   ]
+   ],
+   "status": "rejected 2026-11-11 (Senior, ML Engineer - Tracking): Email 2026-11-11: not moving the application forward"
   },
   "torotms": {
    "name": "Toro TMS",
