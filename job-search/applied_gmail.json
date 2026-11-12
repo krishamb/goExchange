@@ -24013,11 +24013,13 @@
   "navan": {
    "name": "Navan",
    "dates": [
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-12"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "AI Architect"
+    "AI Architect",
+    "Sr. Software Engineer, Core AI"
    ]
   },
   "privacylithic": {
