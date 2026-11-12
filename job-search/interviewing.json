@@ -1,6 +1,6 @@
 {
  "note": "Companies the applicant is interviewing with (or interviewed with): never apply to them again. Applicant 2026-10-31: 'Do not apply to payjoy, openteams, any other company I am interviewing.' Read by the scratchpad gates (gates.allow) that every sweep, bot queue and applicant file passes through. Built from the applicant's Gmail calendar invitations, reminders and interview-scheduling emails (last 60 days); add new interviews at every check-in.",
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "companies": [
   {"company": "PayJoy", "aliases": [], "since": "2026-10-31", "evidence": "applicant said they are interviewing"},
   {"company": "OpenTeams", "aliases": ["OpenTeams Incubator", "OT Incubator"], "since": "2026-10-23", "evidence": "technical interviews Oct 27-30 (Engineering Architect); rejected Oct 30"},
@@ -38,6 +38,7 @@
   {"company": "Sayari", "aliases": ["Sayari Labs", "Sayari Analytics"], "since": "2026-11-05", "evidence": "recruiter invited interview scheduling for Forward Deployed Engineer II (Remote, US); the applicant sent availability, Nov 5"},
   {"company": "Dealpath", "aliases": [], "since": "2026-11-05", "evidence": "initial recruiter call for Staff Full Stack Engineer booked for Mon Nov 9, 11:15-11:45 AM PT (confirmed Nov 5)"},
   {"company": "Intuit", "aliases": ["Intuit Inc."], "since": "2026-11-10", "evidence": "recruiter invited the applicant to book an intro call (Principal Software Engineer, AI-Powered Work, Mountain View), Nov 10"},
-  {"company": "Kargo", "aliases": ["kargo22"], "since": "2026-11-11", "evidence": "recruiter asked for interview availability (30-45 min video interview) for Staff Engineer, Karlo Platform via a Greenhouse availability link; the applicant booked time slots, Nov 11; Kargo confirmed the interview for Nov 12, 3:00-3:30 PM PT"}
+  {"company": "Kargo", "aliases": ["kargo22"], "since": "2026-11-11", "evidence": "recruiter asked for interview availability (30-45 min video interview) for Staff Engineer, Karlo Platform via a Greenhouse availability link; the applicant booked time slots, Nov 11; Kargo confirmed the interview for Nov 12, 3:00-3:30 PM PT"},
+  {"company": "Liberate", "aliases": ["liberateinc", "Liberate Innovations"], "since": "2026-11-12", "evidence": "after the interview process for Senior AI Agent Engineer, Liberate wrote that the role is on hold and invited the applicant to its Ready to Hire program (first contact when the role or a similar one reopens, no repeat interviews), Nov 12"}
  ]
 }
