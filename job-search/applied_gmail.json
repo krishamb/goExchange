@@ -25031,6 +25031,16 @@
    "roles": [
     "Associate Principal Software Engineer"
    ]
+  },
+  "credible": {
+   "name": "Credible",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Architecture and Infrastructure"
+   ]
   }
  }
 }
