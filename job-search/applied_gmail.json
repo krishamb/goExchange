@@ -5484,7 +5484,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-12 (Adobe Principal Software Engineer): DEPT email: decided not to move forward with the interview process"
   },
   "descript": {
    "name": "Descript",
@@ -13433,7 +13435,8 @@
    "count": 1,
    "roles": [
     "Director, Infrastructure Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Director, Infrastructure Engineering): Ooma (Greenhouse) email: moving forward with other candidates"
   },
   "opaxa": {
    "name": "Opaxa",
@@ -24075,7 +24078,8 @@
    "count": 1,
    "roles": [
     "Head of AI"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Head of AI): FIRY Recruiting Team email (sent from talent.skillz.com): won't continue with the candidacy"
   },
   "skillz": {
    "name": "Skillz",
@@ -24085,7 +24089,8 @@
    "count": 1,
    "roles": [
     "Head of AI"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Head of AI): same Head of AI application as FIRY - the FIRY rejection came from the talent.skillz.com address"
   },
   "classpassplaylist": {
    "name": "ClassPass (Playlist)",
@@ -24904,7 +24909,8 @@
    "count": 1,
    "roles": [
     "Director of Platform Engineering, Data Intelligence Platform"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Director of Platform Engineering, Data Intelligence Platform): Actian (Lever) email: will not proceed with the application"
   },
   "eisneramper": {
    "name": "EisnerAmper",
