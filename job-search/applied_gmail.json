@@ -23489,7 +23489,8 @@
    "count": 1,
    "roles": [
     "Manager, Software Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Manager, Software Engineering): Yubico (Greenhouse) email: moving forward with another candidate"
   },
   "clearwateranalytics": {
    "name": "Clearwater Analytics",
@@ -25061,6 +25062,26 @@
    "count": 1,
    "roles": [
     "Senior AWS Data Architect (REMOTE)"
+   ]
+  },
+  "zynga": {
+   "name": "Zynga",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer (BE focused/full-stack)- Words With Friends"
+   ]
+  },
+  "emergenceai": {
+   "name": "Emergence AI",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Engineering"
    ]
   }
  }
