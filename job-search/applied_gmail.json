@@ -24962,6 +24962,16 @@
    "roles": [
     "Director of AI Transformation & Digital Patient Experience"
    ]
+  },
+  "verizon": {
+   "name": "Verizon",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager - AI Engineering & Enterprise Strategy"
+   ]
   }
  }
 }
