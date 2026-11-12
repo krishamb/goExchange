@@ -25052,6 +25052,16 @@
    "roles": [
     "Director of Architecture and Infrastructure"
    ]
+  },
+  "signetjewelers": {
+   "name": "Signet Jewelers",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AWS Data Architect (REMOTE)"
+   ]
   }
  }
 }
