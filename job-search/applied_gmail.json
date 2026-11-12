@@ -10449,7 +10449,8 @@
    "count": 3,
    "roles": [
     "Senior Fullstack Engineer - User Retention & App Ecosystem"
-   ]
+   ],
+   "status": "rejected 2026-11-12: Kikoff email: decided not to move forward (role not named)"
   },
   "kin": {
    "name": "Kin",
@@ -16526,7 +16527,8 @@
    "count": 1,
    "roles": [
     "Forward Deployed Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-12 (Forward Deployed Engineer - DevOps): Seekr email: moving forward with candidates whose experience more closely aligns"
   },
   "seenhealth": {
    "name": "Seen Health",
