@@ -24974,6 +24974,56 @@
    "roles": [
     "Senior Manager - AI Engineering & Enterprise Strategy"
    ]
+  },
+  "schneidergeospatial": {
+   "name": "Schneider Geospatial",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Architect"
+   ]
+  },
+  "bighealth": {
+   "name": "Big Health",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Product Engineer"
+   ]
+  },
+  "klearnowai": {
+   "name": "KlearNow.ai",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Technical Lead, Customs Platform"
+   ]
+  },
+  "merklescience": {
+   "name": "Merkle Science",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "saviynt": {
+   "name": "Saviynt",
+   "dates": [
+    "2026-11-11"
+   ],
+   "count": 1,
+   "roles": [
+    "Associate Principal Software Engineer"
+   ]
   }
  }
 }
