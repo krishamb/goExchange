@@ -12713,7 +12713,9 @@
    "dates": [
     "2026-10-10"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-12 (Senior Developer I - Private Markets, Fund Finance): Neuberger Workday email: not moving forward with the application"
   },
   "neuehealth": {
    "company": "NeueHealth",
@@ -16133,7 +16135,8 @@
     "MuleSoft (Salesforce)",
     "Slack",
     "Slack Technologies"
-   ]
+   ],
+   "status": "closed 2026-11-12 (Director, Software Engineering): Salesforce Workday email: position filled and closed (the applicant was not turned down)"
   },
   "salesloft": {
    "name": "Salesloft",
@@ -21174,7 +21177,8 @@
    "count": 1,
    "roles": [
     "Senior Engineer - Backend"
-   ]
+   ],
+   "status": "closed 2026-11-12 (Senior Engineer - Backend): Indeed: a job the applicant applied for was closed by the employer"
   },
   "boolientinc": {
    "name": "Boolient, Inc",
