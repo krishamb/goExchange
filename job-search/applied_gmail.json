@@ -25252,6 +25252,26 @@
    "roles": [
     "Enterprise Architect"
    ]
+  },
+  "veradigm": {
+   "name": "Veradigm",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer"
+   ]
+  },
+  "civicplus": {
+   "name": "CivicPlus",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Platform Engineer"
+   ]
   }
  }
 }
