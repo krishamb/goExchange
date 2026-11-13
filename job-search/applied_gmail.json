@@ -2100,7 +2100,8 @@
     "Lead Software Engineer - Fullstack",
     "VP, Data Engineering",
     "Sr. Director, Software Engineering - B2B"
-   ]
+   ],
+   "status": "rejected 2026-11-13 (Lead Software Engineer - Fullstack): Moving forward with other candidates"
   },
   "azx": {
    "company": "azx",
@@ -16844,7 +16845,7 @@
    "roles": [
     "Staff Data Analytics Engineer"
    ],
-   "status": "rejected 2026-10-23 (Staff Data Analytics Engineer)"
+   "status": "rejected 2026-10-23 (Staff Data Analytics Engineer); rejected 2026-11-13 (Staff Software Engineer, Full Stack (Member Benefits)): Moved ahead with another candidate"
   },
   "sidekicklabs": {
    "name": "Sidekick Labs",
@@ -16928,7 +16929,8 @@
    "count": 1,
    "roles": [
     "Forward Deployed Application Developer"
-   ]
+   ],
+   "status": "rejected 2026-11-13 (Forward Deployed Application Developer): Not proceeding"
   },
   "silverthread": {
    "name": "Silverthread",
