@@ -2388,9 +2388,13 @@
    "name": "Beacon Biosignals",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-13"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Senior Algorithm Engineer"
+   ]
   },
   "beaconsoftware": {
    "name": "Beacon Software",
@@ -25181,6 +25185,26 @@
    "count": 1,
    "roles": [
     "Enterprise Architect"
+   ]
+  },
+  "thekrazycouponlady": {
+   "name": "The Krazy Coupon Lady",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Analytics Engineer"
+   ]
+  },
+  "simplepractice": {
+   "name": "SimplePractice",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager, New Product Initiatives"
    ]
   }
  }
