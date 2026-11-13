@@ -14052,11 +14052,13 @@
    "name": "Pax8",
    "dates": [
     "2026-10-08",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-13"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Data Engineer II (Data Platforms)"
+    "Senior Data Engineer II (Data Platforms)",
+    "Staff Software Engineer"
    ]
   },
   "payle": {
