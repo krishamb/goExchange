@@ -4564,7 +4564,10 @@
   },
   "collectors": {
    "name": "Collectors",
-   "aliases": ["Collectors Universe", "Collectors Holdings"],
+   "aliases": [
+    "Collectors Universe",
+    "Collectors Holdings"
+   ],
    "dates": [
     "2026-10-08",
     "2026-10-20"
@@ -23523,7 +23526,9 @@
   },
   "collectorsuniverse": {
    "name": "Collectors Universe",
-   "aliases": ["Collectors"],
+   "aliases": [
+    "Collectors"
+   ],
    "dates": [
     "2026-11-03"
    ],
@@ -25092,6 +25097,16 @@
    "count": 1,
    "roles": [
     "VP, Engineering"
+   ]
+  },
+  "pacaso": {
+   "name": "Pacaso",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Product Architect, Growth"
    ]
   }
  }
