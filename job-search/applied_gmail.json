@@ -17434,7 +17434,8 @@
    "roles": [
     "Chief Technology Officer"
    ],
-   "note": "gmail history (pre-Sep 2026)"
+   "note": "gmail history (pre-Sep 2026)",
+   "status": "rejected 2026-11-13 (Chief Technology Officer): Indeed email: SPG moved to the next step; application not selected"
   },
   "spglobal": {
    "name": "S&P Global",
@@ -18722,7 +18723,8 @@
    "count": 1,
    "roles": [
     "Senior/Staff Software Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-13 (Senior/Staff Software Engineer): The Public Interest Company (Ashby) email: not an ideal fit"
   },
   "therealreal": {
    "name": "The RealReal",
