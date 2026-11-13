@@ -21005,11 +21005,13 @@
    "name": "ZipRecruiter",
    "dates": [
     "2026-09-29",
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-12"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Engineering Manager, Machine Learning, Ranking"
+    "Engineering Manager, Machine Learning, Ranking",
+    "Staff Software Engineer, Job Seeker Apps"
    ]
   },
   "zocdoc": {
