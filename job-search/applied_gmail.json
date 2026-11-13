@@ -1747,7 +1747,8 @@
     "Senior Principal Software Engineer",
     "Senior Machine Learning Engineer"
    ],
-   "via": "gmail confirmation (iCIMS)"
+   "via": "gmail confirmation (iCIMS)",
+   "status": "rejected 2026-11-13 (Senior Machine Learning Engineer): not moving forward"
   },
   "atomic": {
    "company": "atomic",
@@ -21038,7 +21039,8 @@
    "roles": [
     "Engineering Manager, Machine Learning, Ranking",
     "Staff Software Engineer, Job Seeker Apps"
-   ]
+   ],
+   "status": "rejected 2026-11-13 (Engineering Manager, Machine Learning, Ranking): not moving forward"
   },
   "zocdoc": {
    "name": "Zocdoc",
