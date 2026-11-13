@@ -25142,6 +25142,16 @@
    "roles": [
     "Founding Chief Technology Officer (CTO)"
    ]
+  },
+  "flockhomes": {
+   "name": "Flock Homes",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
   }
  }
 }
