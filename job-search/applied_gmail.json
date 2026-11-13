@@ -3265,9 +3265,13 @@
   "buzzsolutions": {
    "name": "Buzz Solutions",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-12"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Backend Engineer, Data & Integrations"
+   ]
   },
   "byteport": {
    "company": "byteport",
