@@ -25208,6 +25208,16 @@
    "roles": [
     "Engineering Manager, New Product Initiatives"
    ]
+  },
+  "microblink": {
+   "name": "Microblink",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Solutions Architect, Implementation"
+   ]
   }
  }
 }
