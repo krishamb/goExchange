@@ -25121,7 +25121,9 @@
   },
   "broccoliai": {
    "name": "Broccoli AI",
-   "aliases": ["Broccoli"],
+   "aliases": [
+    "Broccoli"
+   ],
    "dates": [
     "2026-10-01"
    ],
@@ -25130,6 +25132,16 @@
     "Head of Engineering"
    ],
    "note": "applicant said 2026-11-12 ~7:35 PM PT that they already applied (date unknown, before Nov 12; listed in the 2026-09-29 leadership sweep) - recorded so Broccoli is never listed again; not a Nov 12 application"
+  },
+  "suma": {
+   "name": "SUMA",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Founding Chief Technology Officer (CTO)"
+   ]
   }
  }
 }
