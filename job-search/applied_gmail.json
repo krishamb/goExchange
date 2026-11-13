@@ -25118,6 +25118,18 @@
    "roles": [
     "Lead Analytics Engineer"
    ]
+  },
+  "broccoliai": {
+   "name": "Broccoli AI",
+   "aliases": ["Broccoli"],
+   "dates": [
+    "2026-10-01"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ],
+   "note": "applicant said 2026-11-12 ~7:35 PM PT that they already applied (date unknown, before Nov 12; listed in the 2026-09-29 leadership sweep) - recorded so Broccoli is never listed again; not a Nov 12 application"
   }
  }
 }
