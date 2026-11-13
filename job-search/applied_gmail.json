@@ -4273,9 +4273,13 @@
   "clio": {
    "name": "Clio",
    "dates": [
-    "2026-10-12"
+    "2026-10-12",
+    "2026-11-13"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Development Manager, Forward Deployed Engineering"
+   ]
   },
   "clipster": {
    "name": "Clipster",
