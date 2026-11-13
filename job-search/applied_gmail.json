@@ -7969,9 +7969,13 @@
   "gatikai": {
    "name": "Gatik AI",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-13"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, ML Infrastructure"
+   ]
   },
   "gemini": {
    "company": "Gemini",
@@ -25225,6 +25229,26 @@
    "count": 1,
    "roles": [
     "Solutions Architect, Implementation"
+   ]
+  },
+  "archeraviation": {
+   "name": "Archer Aviation",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Backend"
+   ]
+  },
+  "kinders": {
+   "name": "Kinder's",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise Architect"
    ]
   }
  }
