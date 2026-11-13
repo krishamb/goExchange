@@ -7691,7 +7691,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-13 (Senior AI Engineer): Greenhouse follow-up: not moving forward"
   },
   "fractal": {
    "name": "Fractal",
@@ -15152,7 +15154,9 @@
    "dates": [
     "2026-10-07"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-13 (Senior Software Engineer (Fullstack CirrusMD)): Lever update: not moving forward"
   },
   "quantumtechnologiesllc": {
    "name": "QUANTUM TECHNOLOGIES LLC",
