@@ -25108,6 +25108,16 @@
    "roles": [
     "Principal Product Architect, Growth"
    ]
+  },
+  "fi": {
+   "name": "Fi",
+   "dates": [
+    "2026-11-12"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Analytics Engineer"
+   ]
   }
  }
 }
