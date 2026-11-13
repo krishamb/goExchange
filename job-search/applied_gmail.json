@@ -11040,10 +11040,13 @@
   "licor": {
    "name": "LI-COR",
    "dates": [
-    "2026-10-10"
+    "2026-10-10",
+    "2026-11-13"
    ],
-   "count": 1,
-   "roles": [],
+   "count": 2,
+   "roles": [
+    "Principal Engineer, Cloud Software"
+   ],
    "status": "closed 2026-11-09 (Principal System Architect): LI-COR email: a business decision was made to close this role"
   },
   "life360": {
@@ -25153,6 +25156,26 @@
    "count": 1,
    "roles": [
     "Head of Engineering"
+   ]
+  },
+  "aleragroup": {
+   "name": "Alera Group",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Vice President of Technology - Data Analytics and Population Health Consulting"
+   ]
+  },
+  "perficient": {
+   "name": "Perficient",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Enterprise Architect"
    ]
   }
  }
