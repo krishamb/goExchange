@@ -3113,7 +3113,8 @@
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Senior Engineering Manager, Product"
-   ]
+   ],
+   "status": "rejected 2026-11-13 (Senior Engineering Manager, Product): Selected another candidate"
   },
   "brigit": {
    "name": "Brigit",
@@ -25272,6 +25273,16 @@
    "count": 1,
    "roles": [
     "Principal Platform Engineer"
+   ]
+  },
+  "rocketlawyer": {
+   "name": "Rocket Lawyer",
+   "dates": [
+    "2026-11-13"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Data (Remote)"
    ]
   }
  }
