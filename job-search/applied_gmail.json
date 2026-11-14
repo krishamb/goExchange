@@ -2957,7 +2957,7 @@
     "Director, Engineering - Corporate Giving",
     "EA - Senior Software Engineer"
    ],
-   "status": "rejected 2026-10-23 (EA - Senior Software Engineer)"
+   "status": "rejected 2026-10-23 (EA - Senior Software Engineer); closed 2026-11-14 (Director, Engineering - Corporate Giving): Hiring for this role delayed (shifting priorities)"
   },
   "boockar": {
    "company": "boockar",
@@ -24864,7 +24864,8 @@
    "count": 1,
    "roles": [
     "VP, Media Technology Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-14 (VP, Media Technology Engineering): Moving forward with other candidates"
   },
   "marshmclennanagency": {
    "name": "Marsh McLennan Agency",
