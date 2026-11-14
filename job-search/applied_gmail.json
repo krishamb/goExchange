@@ -6466,11 +6466,13 @@
   "endorlabs": {
    "name": "Endor Labs",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-13"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Solutions Architect - West"
+    "Solutions Architect - West",
+    "Director of Engineering"
    ]
   },
   "energyhub": {
