@@ -25369,6 +25369,16 @@
    "roles": [
     "Principal Architect"
    ]
+  },
+  "twistbioscience": {
+   "name": "Twist Bioscience",
+   "dates": [
+    "2026-11-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff API Solutions Architect - B2B & Platform Integrations"
+   ]
   }
  }
 }
