@@ -16483,12 +16483,14 @@
    "name": "Scout Motors Inc.",
    "dates": [
     "2026-10-15",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-16"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Sr. Director, Software Engineering - Digital Product Engineering",
-    "Lead, AI Engineering"
+    "Lead, AI Engineering",
+    "Senior DataOps Engineer"
    ]
   },
   "scowtt": {
@@ -25305,6 +25307,16 @@
    "count": 1,
    "roles": [
     "Senior Manager, Engineering(Platform)"
+   ]
+  },
+  "iovancebiotherapeutics": {
+   "name": "Iovance Biotherapeutics",
+   "dates": [
+    "2026-11-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, AI Product Engineering"
    ]
   }
  }
