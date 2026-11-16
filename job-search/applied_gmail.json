@@ -25349,6 +25349,26 @@
    "roles": [
     "Engineering Manager"
    ]
+  },
+  "datagrail": {
+   "name": "DataGrail",
+   "dates": [
+    "2026-11-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "firstdatabankhearst": {
+   "name": "First Databank (Hearst)",
+   "dates": [
+    "2026-11-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Architect"
+   ]
   }
  }
 }
