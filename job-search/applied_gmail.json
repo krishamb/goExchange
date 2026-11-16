@@ -11097,10 +11097,13 @@
    "name": "Liftoff",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-16"
    ],
-   "count": 2,
-   "roles": [],
+   "count": 3,
+   "roles": [
+    "Staff Software Engineer, eCommerce"
+   ],
    "status": "closed 2026-11-05 (Machine Learning Engineer): position filled"
   },
   "lightfield": {
@@ -25321,6 +25324,16 @@
    "count": 1,
    "roles": [
     "Director, AI Product Engineering"
+   ]
+  },
+  "tabapay": {
+   "name": "TabaPay",
+   "dates": [
+    "2026-11-16"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
    ]
   }
  }
