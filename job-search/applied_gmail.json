@@ -24114,6 +24114,9 @@
   },
   "ninjaone": {
    "name": "NinjaOne",
+   "aliases": [
+    "directlink"
+   ],
    "dates": [
     "2026-11-04",
     "2026-11-06"
