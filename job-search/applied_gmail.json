@@ -11095,6 +11095,9 @@
   },
   "liftoff": {
    "name": "Liftoff",
+   "aliases": [
+    "Liftoff Mobile"
+   ],
    "dates": [
     "2026-09-29",
     "2026-09-30",
