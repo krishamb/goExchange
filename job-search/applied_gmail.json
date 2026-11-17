@@ -13672,9 +13672,13 @@
   "oscarhealth": {
    "name": "Oscar Health",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Data Science"
+   ]
   },
   "oscartechnology": {
    "name": "Oscar Technology",
