@@ -7134,9 +7134,13 @@
   "fictiv": {
    "name": "Fictiv",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-17"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Full Stack & Platform Engineer"
+   ]
   },
   "fiekondice": {
    "name": "Fiekon (Dice)",
