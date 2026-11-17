@@ -4961,11 +4961,13 @@
   "cresta": {
    "name": "Cresta",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-11-16"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Machine Learning Engineer"
+    "Staff Machine Learning Engineer",
+    "Senior Software Engineer, Backend (AI Agent)"
    ]
   },
   "crexi": {
