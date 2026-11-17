@@ -18543,11 +18543,13 @@
    "name": "Tenstorrent",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-17"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Datacenter & Agentic AI Workload Performance Analysis Engineer"
+    "Datacenter & Agentic AI Workload Performance Analysis Engineer",
+    "RISC-V AI / HPC & Agentic Software Engineering Lead"
    ]
   },
   "tereina": {
