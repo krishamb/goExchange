@@ -25448,6 +25448,16 @@
    "roles": [
     "Senior Software Engineer, Agentic"
    ]
+  },
+  "rcxsports": {
+   "name": "RCX Sports",
+   "dates": [
+    "2026-11-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Data Architect"
+   ]
   }
  }
 }
