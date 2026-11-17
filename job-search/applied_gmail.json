@@ -4371,7 +4371,10 @@
     "Director of Engineering, Data Products",
     "Senior Software Engineer, Interoperability"
    ],
-   "status": "rejected 2026-10-11"
+   "status": "rejected 2026-10-11",
+   "aliases": [
+    "Counterpart Health"
+   ]
   },
   "cmegroup": {
    "name": "CME Group",
