@@ -25430,6 +25430,16 @@
    "roles": [
     "Director of Technology & Innovation"
    ]
+  },
+  "prove": {
+   "name": "Prove",
+   "dates": [
+    "2026-11-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Agentic"
+   ]
   }
  }
 }
