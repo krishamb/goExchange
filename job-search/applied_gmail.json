@@ -5001,13 +5001,15 @@
    "via": "cloud_greenhouse (24h board sweep)",
    "dates": [
     "2026-10-16",
-    "2026-10-31"
+    "2026-10-31",
+    "2026-11-17"
    ],
    "roles": [
     "Sr Software Engineer, Stream Integrations",
-    "Staff Software Engineer, Agentic Tools"
+    "Staff Software Engineer, Agentic Tools",
+    "Sr Mgr, Software Engineering (Cribl Detect)"
    ],
-   "count": 2
+   "count": 3
   },
   "crossriver": {
    "name": "Cross River",
