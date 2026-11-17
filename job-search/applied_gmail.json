@@ -17634,11 +17634,13 @@
    "name": "Stack AV",
    "dates": [
     "2026-10-01",
-    "2026-10-17"
+    "2026-10-17",
+    "2026-11-17"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Software Engineer, Core Infrastructure and Platforms"
+    "Senior Software Engineer, Core Infrastructure and Platforms",
+    "Senior Staff Software Engineer, ML Training Infrastructure"
    ]
   },
   "stacklok": {
