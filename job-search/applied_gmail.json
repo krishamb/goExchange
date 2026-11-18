@@ -20575,7 +20575,10 @@
   "whitecap": {
    "company": "White Cap",
    "first": "2026-10-06",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-11-18 (Principal ML/AI Engineer): Workday 'Application Update' email: not moving forward"
   },
   "whoop": {
    "name": "WHOOP",
