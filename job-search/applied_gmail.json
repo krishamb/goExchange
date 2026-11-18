@@ -25571,6 +25571,16 @@
    "roles": [
     "Principal Engineering Manager, AI Care"
    ]
+  },
+  "netlify": {
+   "name": "Netlify",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer (Interfaces)"
+   ]
   }
  }
 }
