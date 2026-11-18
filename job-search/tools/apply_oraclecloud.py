@@ -1103,6 +1103,20 @@ async def run_one(br, item):
                         if await page.locator("apply-flow-block, .apply-flow-block").count(): break
                     job.report.setdefault("notes", []).append("clicked RESUME APPLICATION on an expired page")
                 except Exception: pass
+        if not await page.locator("apply-flow-block, .apply-flow-block").count() and re.search(r"choose how you.d like to fill out your application|you can also manually fill out", await text(page), re.I):
+            # 2026-11-18 Digital Realty: a chooser page ("Let's make this quick": upload a resume / Apply With LinkedIn / Apply with Indeed /
+            # "You can also manually fill out your application") before the form. Take the manual path (never the LinkedIn / Indeed sign-ins).
+            mb = page.get_by_role("link", name=re.compile(r"^\s*manually\s*$", re.I))
+            if not await mb.count(): mb = page.get_by_role("button", name=re.compile(r"^\s*manually\s*$|fill out (your application )?manually", re.I))
+            if not await mb.count(): mb = page.get_by_text(re.compile(r"^\s*manually\s*$", re.I))
+            if await mb.count():
+                try:
+                    await mb.first.click(timeout=5000)
+                    for _ in range(25):
+                        await page.wait_for_timeout(1000)
+                        if await page.locator("apply-flow-block, .apply-flow-block").count(): break
+                    job.report.setdefault("notes", []).append("chose 'manually fill out your application' on the chooser page")
+                except Exception: pass
         if not await page.locator("apply-flow-block, .apply-flow-block").count():
             await page.screenshot(path=f"{OUT}/{job.tag}_{ATS}_error.png", full_page=True)
             job.report["result"] = "NOT SUBMITTED: the application form did not open"; job.report["errors"].append(re.sub(r"\s+", " ", await text(page))[:300]); return job.report
