@@ -25535,9 +25535,20 @@
    "dates": [
     "2026-11-18"
    ],
+   "count": 2,
+   "roles": [
+    "Lead Software Engineer, Applied AI",
+    "Senior Software Engineer, Applied AI"
+   ]
+  },
+  "constantcontact": {
+   "name": "Constant Contact",
+   "dates": [
+    "2026-11-18"
+   ],
    "count": 1,
    "roles": [
-    "Lead Software Engineer, Applied AI"
+    "Software Engineer Manager - Billing & Payments"
    ]
   }
  }
