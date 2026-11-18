@@ -25528,6 +25528,16 @@
    "roles": [
     "Senior Software Engineer"
    ]
+  },
+  "aura": {
+   "name": "Aura",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer, Applied AI"
+   ]
   }
  }
 }
