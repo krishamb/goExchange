@@ -6384,7 +6384,7 @@
     "Senior Backend Engineer, Core Services",
     "Senior Backend Engineer, AI Evaluations"
    ],
-   "status": "rejected 2026-10-29 (Senior Backend Engineer, AI Evaluations): Ashby notice: not an ideal fit at this time, not moving forward with the candidacy (application was submitted earlier th"
+   "status": "rejected 2026-10-29 (Senior Backend Engineer, AI Evaluations): Ashby notice: not an ideal fit at this time, not moving forward with the candidacy (application was submitted earlier th; rejected 2026-11-18 (Backend Engineer, Core Services): not an ideal fit at this time"
   },
   "ellkay": {
    "name": "ELLKAY",
@@ -7814,7 +7814,8 @@
    "roles": [
     "Head of Infrastructure"
    ],
-   "note": "Gem confirmation 2026-10-23T00:13Z"
+   "note": "Gem confirmation 2026-10-23T00:13Z",
+   "status": "rejected 2026-11-18 (Head of Infrastructure): not moving forward; background doesn't align"
   },
   "fundraiseup": {
    "name": "Fundraise Up",
@@ -19629,7 +19630,8 @@
    "count": 2,
    "roles": [
     "Senior Data Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-18 (Lead Software Engineer): not moving forward"
   },
   "unity": {
    "name": "Unity",
