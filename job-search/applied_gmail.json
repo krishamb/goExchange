@@ -6370,7 +6370,8 @@
    "count": 2,
    "roles": [
     "Tech Lead Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-18 (Tech Lead Engineer): not proceeding (Greenhouse email Nov 17 4:25 PM PT)"
   },
   "ellipsishealth": {
    "name": "Ellipsis Health",
@@ -9542,7 +9543,9 @@
    "dates": [
     "2026-10-12"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-17 (Senior Software Design Lead): moving forward with other candidates (IDEO email Nov 17 3:50 PM PT)"
   },
   "idexxlaboratories": {
    "name": "IDEXX Laboratories",
