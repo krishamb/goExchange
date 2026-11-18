@@ -25550,6 +25550,16 @@
    "roles": [
     "Software Engineer Manager - Billing & Payments"
    ]
+  },
+  "pairteam": {
+   "name": "Pair Team",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineering Manager, AI Care"
+   ]
   }
  }
 }
