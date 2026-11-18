@@ -503,6 +503,7 @@ CHOICE_RULES=[
  (r"experience managing offshore engineering organizations", ["C. Directly managed offshore teams and leaders across multiple locations/time zones"]),   # JPMorgan Chase org across US, UK and India
  (r"^(i have )?(experience )?(working )?(on|with|in) (globally |geographically )?distributed teams\??$|^i have experience working on globally distributed teams", ["Yes","yes"]),   # 2026-11-18 Jamf: led US / UK / India teams at JPMorgan Chase; 75+ engineers incl. offshore at Yahoo Finance
  (r"2 year ?/ ?associates? degree|associate.?s degree and/or a combination of relevant experience", ["Yes","yes"]),   # 2026-11-18 Jamf: B.E. Computer Science (bachelor's) + 25 years experience
+ (r"(previously )?been a full[- ]time employee of a (software|technology|tech)( or (software|technology|tech))? company", ["Yes","yes"]),   # 2026-11-18 Aura: full-time at Yahoo (Yahoo Finance) and Hyperion AI
  (r"describe your deepest level of aws experience", ["D. Personally led modernization and scaling of mission-critical AWS platforms, including resiliency, scalability, availability, security, and cost management"]),   # Yahoo Finance bare-metal-to-AWS
  (r"which best describes your experience leading data platforms", ["C. Led engineering teams responsible for data platforms and pipelines"]),
  (r"which best describes your experience with healthcare data", ["C. Built or operated systems using healthcare data"]),   # applicant instruction 2026-09-30: healthcare experience Yes
@@ -1520,7 +1521,8 @@ async def autocomplete_fill(page,h,text,prefer,strict=False,retry_texts=()):
 async def choose_select(page,h,options_pref,label=""):
     opts=await h.evaluate("(s)=>[...s.options].map(o=>o.text.trim())")
     usable=mask_hear(opts,label)
-    for pref in options_pref:
+    _exact=[p2 for p2 in options_pref if p2 and any(o and o.lower()==p2.lower() for o in usable)]   # 2026-11-18: an exact option for any preference first ('United States of America' over 'United States Minor Outlying Islands')
+    for pref in _exact+[p2 for p2 in options_pref if p2 not in _exact]:
         # exact option first, then a leading / whole-word match, then a plain substring for longer preferences
         cand=[o for o in usable if o and o.lower()==pref.lower()] or [o for o in usable if o and _match(o,pref)] or [o for o in usable if o and len(pref)>=4 and pref.lower() in o.lower()]
         for o in cand[:1]:
@@ -1692,6 +1694,8 @@ async def choose_react_select(page,control,options_pref,label):
                 await page.wait_for_timeout(500); opts,texts=await visible_options(page)
             texts=mask_hear(texts,label)
             hit=best_index(texts,pref)
+            _ex=next((i for p2 in options_pref for i,t in enumerate(texts) if t and p2 and t.lower().strip()==p2.lower().strip()),None)   # 2026-11-18 Aura: an exact option for ANY preference beats a leading match ('United States of America' over 'United States Minor Outlying Islands')
+            if _ex is not None: hit=_ex
             if hit is None and texts:
                 # no textual match: maybe options are unfiltered (async search); pick none
                 pass
@@ -1709,7 +1713,8 @@ async def choose_react_select(page,control,options_pref,label):
         if not texts:
             await inp.press("ArrowDown"); await page.wait_for_timeout(700); opts,texts=await visible_options(page)
         LAST_OPTIONS[label[:160]]=[t for t in texts if t][:25]; texts=mask_hear(texts,label)
-        for pref in options_pref:
+        _exact=[p2 for p2 in options_pref if p2 and any(t and t.lower().strip()==p2.lower().strip() for t in texts)]   # 2026-11-18: exact options first, across all preferences
+        for pref in _exact+[p2 for p2 in options_pref if p2 not in _exact]:
             i=best_index(texts,pref)
             if i is not None:
                 await opts.nth(i).click(timeout=3000); await page.wait_for_timeout(500)
