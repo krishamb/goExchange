@@ -15662,9 +15662,13 @@
   "revance": {
    "name": "Revance",
    "dates": [
-    "2026-10-02"
+    "2026-10-02",
+    "2026-11-18"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Technical Lead, Data Engineering"
+   ]
   },
   "revancetherapeutics": {
    "name": "Revance Therapeutics",
@@ -21620,12 +21624,14 @@
   "palmetto": {
    "name": "Palmetto",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-18"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Manager, Data Engineering",
-    "Staff Data Engineer"
+    "Staff Data Engineer",
+    "Director, Data & AI"
    ],
    "aliases": [
     "palmettocleantech",
