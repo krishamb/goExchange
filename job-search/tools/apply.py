@@ -501,6 +501,8 @@ CHOICE_RULES=[
  (r"identifying and coordinating data sourcing and labeling", ["I have contributed to data or labeling requirements, but have not owned them or coordinated their prioritization across teams."]),
  (r"largest engineering organization you have directly led", ["D. 60–70+ people, including a significant offshore/contractor organization","D. 60-70+ people, including a significant offshore/contractor organization"]),   # resume: directed 75+ engineers, senior managers and partners (Yahoo Finance)
  (r"experience managing offshore engineering organizations", ["C. Directly managed offshore teams and leaders across multiple locations/time zones"]),   # JPMorgan Chase org across US, UK and India
+ (r"^(i have )?(experience )?(working )?(on|with|in) (globally |geographically )?distributed teams\??$|^i have experience working on globally distributed teams", ["Yes","yes"]),   # 2026-11-18 Jamf: led US / UK / India teams at JPMorgan Chase; 75+ engineers incl. offshore at Yahoo Finance
+ (r"2 year ?/ ?associates? degree|associate.?s degree and/or a combination of relevant experience", ["Yes","yes"]),   # 2026-11-18 Jamf: B.E. Computer Science (bachelor's) + 25 years experience
  (r"describe your deepest level of aws experience", ["D. Personally led modernization and scaling of mission-critical AWS platforms, including resiliency, scalability, availability, security, and cost management"]),   # Yahoo Finance bare-metal-to-AWS
  (r"which best describes your experience leading data platforms", ["C. Led engineering teams responsible for data platforms and pipelines"]),
  (r"which best describes your experience with healthcare data", ["C. Built or operated systems using healthcare data"]),   # applicant instruction 2026-09-30: healthcare experience Yes
