@@ -25504,6 +25504,26 @@
    "roles": [
     "Manager, Software Engineering"
    ]
+  },
+  "m0": {
+   "name": "M0",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "jamf": {
+   "name": "Jamf",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   }
  }
 }
