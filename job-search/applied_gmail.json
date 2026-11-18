@@ -17572,11 +17572,13 @@
   "spotify": {
    "name": "Spotify",
    "dates": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-11-17"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Staff Machine Learning Engineer, Home Surfaces"
+    "Staff Machine Learning Engineer, Home Surfaces",
+    "VP, Head of Engineering - Advertising"
    ]
   },
   "squire": {
@@ -25466,6 +25468,36 @@
    "count": 1,
    "roles": [
     "Data Architect"
+   ]
+  },
+  "istaridigital": {
+   "name": "Istari Digital",
+   "dates": [
+    "2026-11-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "bluebeam": {
+   "name": "Bluebeam",
+   "dates": [
+    "2026-11-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "unanet": {
+   "name": "Unanet",
+   "dates": [
+    "2026-11-17"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, Software Engineering"
    ]
   }
  }
