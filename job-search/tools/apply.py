@@ -393,6 +393,7 @@ TEXT_RULES=[
 ]
 NO_EXP_DOMAIN=re.compile(r"(years?|how long).{0,90}\b(ai|a\.i\.|ai/ml|ml|machine learning|llms?|large language models?|genai|gen ai|generative( ai)?|agentic|ai agents?|agents|rag|retrieval[- ]augmented|deep learning|nlp|mlops|llmops|model (training|serving|deployment)|prompt engineering)\b|years? of (professional )?experience (do you have )?(working )?in (the )?(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|healthcare|health care|hospital)|(diagnostic|medical device|pharma|pharmaceutical|biotech|life sciences?|clinical|hospital) industry experience",re.I)   # industries with no years on his record: never the highest band
 CHOICE_RULES=[
+ (r"to qualify for green card sponsorship", ["N/A","NA","Not applicable","Not Applicable"]),   # 2026-11-19 Prove: acknowledgement for sponsored hires; the applicant needs no sponsorship (was answered No)
  (r"in which languages (are you able to|can you|do you) (communicate|speak)", ["English"]),   # Boomi 2026-10-29: professional languages -> English only (never claim others)
  (r"may use artificial intelligence to match your (candidate )?information", ["I consent","I Consent","I agree","I acknowledge","Acknowledge","Accept","Agree","Opt in","Opt-in","I do not wish to opt out","I do not want to opt out","Do not opt out","No, I do not want to opt out"]),   # KLA 2026-10-29: consent to AI matching (never a bare Yes/No: either could mean opting out)
  (r"do you (have|meet|possess) at least the (basic|minimum) (job )?(requirements|qualifications)", ["Yes","yes"]),   # KLA 2026-10-29 (screened roles meet the basic requirements)
@@ -2377,6 +2378,11 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         if not _aiv or _aiv==["__ASK__"]:
                             report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"AI-use question left for user"}); continue
                         # the applicant's reviewed AI-disclosure rules (2026-10-02) answer this: fall through to the normal fill
+                    # 2026-11-19: attention checks ("To confirm you are reading this carefully, please start the answer to the next question with the
+                    # word SUBWAY. Share an example from the animal kingdom ...") ask for a creative answer that is not in the applicant's facts (Prove got
+                    # the generic experience paragraph and failed the check) -> leave them for the applicant unless a per-row override answers them.
+                    if re.search(r"reading (this|these|the (question|instructions?|posting|description|application))? ?carefully|(start|begin) (the|your) (answer|response)|(answer|response) (must|should) (start|begin) with|include the (word|phrase)|attention check", lab, re.I) and not any(k.lower() in (name+" "+lab).lower() for k in extra):
+                        report["unanswered"].append({"type":"text","label":lab[:160],"name":name,"note":"attention check left for the applicant"}); continue
                     key=lab or name
                     val=None
                     for k,v in extra.items():
@@ -2403,7 +2409,8 @@ async def run_one(ctx,ats,url,tag,extra,company=None,jtitle=None):
                         _k=key.lower()
                         _hc=re.search(r"type\s+[\"']?([A-Za-z0-9]{2,20})[\"']?\s*(?:below|here|in the box|to (?:confirm|verify|proceed)|$)",key,re.I)
                         if _hc and re.search(r"real person|not a robot|prove you|human|verify you are|type the word",_k):
-                            val=_hc.group(1)                       # anti-bot check: type the exact required word (e.g. "Real")
+                            val=None   # 2026-11-19: a 'type X to prove you are a real person' box is human verification - never answered by the bot (applicant rule)
+                            report["unanswered"].append({"type":"text","label":key[:160],"name":name,"note":"human-verification word left for the applicant"}); continue
                         elif re.search(r"start date|availability|available to start|when (can|could) you start|notice period|earliest",_k): val="Within two weeks of an offer"
                         elif re.search(r"years? of (relevant |professional |work |industry )?experience|how many years",_k): val="25"
                         elif re.search(r"(current |your |home )?(location|city|where (are you|do you) (located|based|live|reside))|city and state|time ?zone",_k): val="Santa Clara, California, United States (Pacific time)"

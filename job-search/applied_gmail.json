@@ -7985,10 +7985,13 @@
    "name": "Garner Health",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-19"
    ],
-   "count": 2,
-   "roles": [],
+   "count": 3,
+   "roles": [
+    "Staff Data Engineer"
+   ],
    "status": "closed 2026-10-29 (Staff Software Engineer (Developer Experience)): Greenhouse notice: the position has been filled, so not moving forward for this role; encouraged to apply to other openi"
   },
   "gather": {
@@ -25487,11 +25490,13 @@
   "prove": {
    "name": "Prove",
    "dates": [
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-19"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Software Engineer, Agentic"
+    "Senior Software Engineer, Agentic",
+    "Lead Data Engineer"
    ]
   },
   "rcxsports": {
@@ -25663,6 +25668,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Data Solutions"
+   ]
+  },
+  "triplewhale": {
+   "name": "Triple Whale",
+   "dates": [
+    "2026-11-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Cloud/Backend Engineer"
    ]
   }
  }
