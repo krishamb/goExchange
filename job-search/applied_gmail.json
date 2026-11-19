@@ -217,7 +217,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-19 (Sr. Database Engineer, PostgreSQL/AWS Aurora): rejection email 11:49 AM PT"
   },
   "abhyanthsolutions": {
    "name": "Abhyanth Solutions",
@@ -12133,7 +12135,7 @@
     "Full Stack Tech Lead - Senior"
    ],
    "count": 1,
-   "status": "rejected 2026-10-17: decided not to proceed with candidacy"
+   "status": "rejected 2026-10-17: decided not to proceed with candidacy; rejected 2026-11-19: rejection email 11:31 AM PT (role not named)"
   },
   "millimanintelliscript": {
    "name": "Milliman IntelliScript",
@@ -24678,7 +24680,8 @@
    "count": 1,
    "roles": [
     "Sr. AI Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-19 (Sr. AI Engineer): rejection email 11:11 AM PT (Workday)"
   },
   "suttonnationalinsurance": {
    "name": "Sutton National Insurance",
