@@ -11029,9 +11029,13 @@
   "legion": {
    "name": "Legion",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-19"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Principal Software Engineer, DevOps"
+   ]
   },
   "legionintelligence": {
    "name": "Legion Intelligence",
