@@ -1,6 +1,6 @@
 {
  "note": "Companies the applicant is interviewing with (or interviewed with): never apply to them again. Applicant 2026-10-31: 'Do not apply to payjoy, openteams, any other company I am interviewing.' Read by the scratchpad gates (gates.allow) that every sweep, bot queue and applicant file passes through. Built from the applicant's Gmail calendar invitations, reminders and interview-scheduling emails (last 60 days); add new interviews at every check-in.",
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "companies": [
   {
    "company": "PayJoy",
@@ -300,7 +300,7 @@
     "butterflynetinc"
    ],
    "since": "2026-11-18",
-   "evidence": "Nov 18 (10:35 AM PT): recruiter email 'Next Steps with Butterfly Network' - after reviewing the resume they want to schedule a recruiter phone interview; the applicant submits availability via the Greenhouse availability link in that email. Earlier application: Staff Engineer, Full Stack (rejected Oct 29); the email does not name the role."
+   "evidence": "Nov 18 (10:35 AM PT): recruiter email 'Next Steps with Butterfly Network' - after reviewing the resume they want to schedule a recruiter phone interview; the applicant submits availability via the Greenhouse availability link in that email. Earlier application: Staff Engineer, Full Stack (rejected Oct 29); the email does not name the role. Nov 19 (6:39 AM PT): confirmation - Zoom video interview Mon Nov 23, 1:30-2:00 PM PT with an engineer from the team."
   }
  ]
 }
