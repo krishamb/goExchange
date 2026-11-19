@@ -25589,6 +25589,66 @@
    "roles": [
     "Staff Software Engineer (Interfaces)"
    ]
+  },
+  "lucidworks": {
+   "name": "Lucidworks",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager, Search Intelligence & Data Science"
+   ]
+  },
+  "quvia": {
+   "name": "Quvia",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data Plane Engineering - Grid"
+   ]
+  },
+  "rvohealth": {
+   "name": "RVO Health",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff AI Engineer, Internal Tools"
+   ]
+  },
+  "arine": {
+   "name": "Arine",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Data Scientist"
+   ]
+  },
+  "source": {
+   "name": "Source",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Engineer, Product"
+   ]
+  },
+  "dispel": {
+   "name": "Dispel",
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
   }
  }
 }
