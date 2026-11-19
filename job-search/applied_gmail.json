@@ -7775,7 +7775,14 @@
   "freestar": {
    "company": "Freestar",
    "first": "2026-10-07",
-   "via": "greenhouse-cloud"
+   "via": "greenhouse-cloud",
+   "roles": [
+    "Engineering Manager (Player-Coach)"
+   ],
+   "dates": [
+    "2026-11-18"
+   ],
+   "count": 1
   },
   "freshfields": {
    "name": "Freshfields",
