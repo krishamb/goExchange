@@ -12097,7 +12097,9 @@
     "2026-10-11"
    ],
    "count": 1,
-   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)",
+   "roles": [],
+   "status": "rejected 2026-11-19 (Principal Software Engineer | Xbox Media (San Francisco, CA)): Xbox Workday email: not moving forward"
   },
   "midihealth": {
    "name": "Midi Health",
@@ -16266,11 +16268,13 @@
    "dates": [
     "2026-09-30",
     "2026-10-16",
-    "2026-10-28"
+    "2026-10-28",
+    "2026-11-19"
    ],
-   "count": 3,
+   "count": 4,
    "roles": [
-    "Director of Engineering - Inference Platform"
+    "Director of Engineering - Inference Platform",
+    "(role not named in the confirmation)"
    ]
   },
   "sambanovasystems": {
@@ -21018,7 +21022,8 @@
     "Director, Platform Architecture",
     "Senior Platform Architect",
     "Senior Manager, Security Platform & AI Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-19 (Senior Manager, Security Platform & AI Engineering): Zendesk Workday email: courtesy rejection"
   },
   "zenos": {
    "company": "zenos",
