@@ -14793,7 +14793,9 @@
    "dates": [
     "2026-09-29"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-19 (Senior Forward Deployed Engineer): rejection email 12:53 PM PT"
   },
   "pressganey": {
    "company": "Press Ganey",
