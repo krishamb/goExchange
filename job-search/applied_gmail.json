@@ -13666,7 +13666,14 @@
   "orb": {
    "company": "orb",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Staff Software Engineer, Infrastructure"
+   ],
+   "dates": [
+    "2026-11-19"
+   ],
+   "count": 1
   },
   "orcristtechnologies": {
    "name": "Orcrist Technologies",
