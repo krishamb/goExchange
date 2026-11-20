@@ -11175,11 +11175,13 @@
   "lightningai": {
    "name": "Lightning AI",
    "dates": [
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-20"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Infrastructure Software Engineer"
+    "Senior Infrastructure Software Engineer",
+    "Engineering Manager, Infrastructure Software"
    ]
   },
   "lightsage": {
