@@ -1,6 +1,6 @@
 {
  "note": "Companies the applicant is interviewing with (or interviewed with): never apply to them again. Applicant 2026-10-31: 'Do not apply to payjoy, openteams, any other company I am interviewing.' Read by the scratchpad gates (gates.allow) that every sweep, bot queue and applicant file passes through. Built from the applicant's Gmail calendar invitations, reminders and interview-scheduling emails (last 60 days); add new interviews at every check-in.",
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "companies": [
   {
    "company": "PayJoy",
@@ -281,7 +281,7 @@
     "Kyndryl Inc."
    ],
    "since": "2026-11-13",
-   "evidence": "Workday update Nov 13 (7:47 AM PT): after a recent discussion and a hiring-team review, selected to interview for Technical Leader in OSS (R-70718, applied Nov 1); scheduling to follow. Nov 13 1:21 PM PT: invited to a 30-min virtual interview with a VP (window Thu Nov 19, 3-4 PM ET); applicant replied that 3:30-4:00 PM ET works; Nov 16 (6:40 AM PT): CONFIRMED - Thu Nov 19, 3:30-4:00 PM ET, virtual video interview (Microsoft Teams) with the hiring manager (VP, Partner); camera on; the coordinator asks the applicant to reply / accept the invitation to confirm"
+   "evidence": "Workday update Nov 13 (7:47 AM PT): after a recent discussion and a hiring-team review, selected to interview for Technical Leader in OSS (R-70718, applied Nov 1); scheduling to follow. Nov 13 1:21 PM PT: invited to a 30-min virtual interview with a VP (window Thu Nov 19, 3-4 PM ET); applicant replied that 3:30-4:00 PM ET works; Nov 16 (6:40 AM PT): CONFIRMED - Thu Nov 19, 3:30-4:00 PM ET, virtual video interview (Microsoft Teams) with the hiring manager (VP, Partner); camera on; the coordinator asks the applicant to reply / accept the invitation to confirm; Nov 20 (9:30 AM PT): after the Nov 19 interview the applicant offered times for further interviews (Mon Nov 23 9 AM PT, Tue Nov 24 11:30 AM or 12 PM PT, Wed Nov 25 12 PM PT) and forwarded the thread to another Kyndryl contact"
   },
   {
    "company": "Zeta Global",
