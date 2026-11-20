@@ -25762,6 +25762,16 @@
    "roles": [
     "Senior Manager, Data Engineering"
    ]
+  },
+  "moxxi": {
+   "name": "Moxxi",
+   "dates": [
+    "2026-11-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Leader, Machine Learning & Ad Platform"
+   ]
   }
  }
 }
