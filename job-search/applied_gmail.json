@@ -4302,7 +4302,8 @@
    "count": 2,
    "roles": [
     "Development Manager, Forward Deployed Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-20 (Manager, Machine Learning Engineer (US)): Gem email (Clio Recruiting): moving forward with other candidates"
   },
   "clipster": {
    "name": "Clipster",
@@ -5016,7 +5017,8 @@
     "Staff Software Engineer, Agentic Tools",
     "Sr Mgr, Software Engineering (Cribl Detect)"
    ],
-   "count": 3
+   "count": 3,
+   "status": "rejected 2026-11-20 (Sr Mgr, Software Engineering (Cribl Detect)): Talent partner email: decided not to move forward"
   },
   "crossriver": {
    "name": "Cross River",
@@ -12454,7 +12456,7 @@
    "roles": [
     "Principal Software Engineer, Team Lead - Perception Platforms"
    ],
-   "status": "rejected 2026-10-21 (Principal Software Engineer, Team Lead - Perception Platforms)"
+   "status": "rejected 2026-10-21 (Principal Software Engineer, Team Lead - Perception Platforms); rejected 2026-11-20 (Director of Data Science): Recruiting email after a conversation: not proceeding at this time"
   },
   "motive": {
    "name": "Motive",
@@ -13733,7 +13735,8 @@
    "count": 2,
    "roles": [
     "Director, Data Science"
-   ]
+   ],
+   "status": "rejected 2026-11-20 (Director, Data Science): Talent Acquisition email: proceeding with other candidates"
   },
   "oscartechnology": {
    "name": "Oscar Technology",
