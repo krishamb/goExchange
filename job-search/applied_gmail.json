@@ -12915,7 +12915,9 @@
    "dates": [
     "2026-10-09"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-20 (Prin Software Development Eng (97855)): SuccessFactors email: not selected"
   },
   "nextiva": {
    "name": "Nextiva",
@@ -21851,7 +21853,8 @@
    "count": 1,
    "roles": [
     "Director of Enterprise AI"
-   ]
+   ],
+   "status": "rejected 2026-11-20 (Director of Enterprise AI): Boomi Global Talent Acquisition email: moving forward with other candidates"
   },
   "dscout": {
    "name": "Dscout",
@@ -25665,7 +25668,8 @@
    "count": 1,
    "roles": [
     "Staff AI Engineer, Internal Tools"
-   ]
+   ],
+   "status": "rejected 2026-11-20 (Staff AI Engineer, Internal Tools): RVO Health Recruiting email: moving forward with other candidates"
   },
   "arine": {
    "name": "Arine",
