@@ -1816,9 +1816,13 @@
   "attain": {
    "name": "Attain",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-19"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Data"
+   ]
   },
   "attainpartners": {
    "name": "Attain Partners",
@@ -18384,11 +18388,13 @@
   "tatari": {
    "name": "Tatari",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-19"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Backend Engineer"
+    "Senior Backend Engineer",
+    "Staff Backend Engineer"
    ]
   },
   "tavily": {
