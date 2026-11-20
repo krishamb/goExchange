@@ -25752,6 +25752,16 @@
    "roles": [
     "Senior Software Engineer, Data Infrastructure"
    ]
+  },
+  "lolablankets": {
+   "name": "Lola Blankets",
+   "dates": [
+    "2026-11-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Data Engineering"
+   ]
   }
  }
 }
