@@ -25711,6 +25711,17 @@
    "roles": [
     "Staff Software Engineer, AI Automation and Workflows"
    ]
+  },
+  "ernesta": {
+   "name": "Ernesta",
+   "dates": [
+    "2026-11-19"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Backend Engineer, Business Technology",
+    "Senior Backend Engineer"
+   ]
   }
  }
 }
