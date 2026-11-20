@@ -24341,11 +24341,13 @@
   "raya": {
    "name": "Raya",
    "dates": [
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-19"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Engineering Manager, Recommender Systems"
+    "Senior Engineering Manager, Recommender Systems",
+    "Senior Server Engineer, Foundations"
    ]
   },
   "prosper": {
@@ -25723,6 +25725,16 @@
    "roles": [
     "Staff Backend Engineer, Business Technology",
     "Senior Backend Engineer"
+   ]
+  },
+  "prolificmachines": {
+   "name": "Prolific Machines",
+   "dates": [
+    "2026-11-19"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Data Infrastructure"
    ]
   }
  }
