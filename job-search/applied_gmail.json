@@ -25785,6 +25785,26 @@
    "roles": [
     "Director of Product Engineering"
    ]
+  },
+  "q2impact": {
+   "name": "Q2Impact",
+   "dates": [
+    "2026-11-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer (CTO)"
+   ]
+  },
+  "aroma360": {
+   "name": "Aroma360",
+   "dates": [
+    "2026-11-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer"
+   ]
   }
  }
 }
