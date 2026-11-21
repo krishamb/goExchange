@@ -4852,12 +4852,14 @@
    "name": "Cortex",
    "dates": [
     "2026-10-16",
-    "2026-10-31"
+    "2026-10-31",
+    "2026-11-20"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Data Engineer",
-    "Lead Software Engineer, Backend"
+    "Lead Software Engineer, Backend",
+    "Engineering Manager"
    ]
   },
   "costargroup": {
@@ -25771,6 +25773,16 @@
    "count": 1,
    "roles": [
     "Engineering Leader, Machine Learning & Ad Platform"
+   ]
+  },
+  "trustwill": {
+   "name": "Trust & Will",
+   "dates": [
+    "2026-11-20"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Product Engineering"
    ]
   }
  }
