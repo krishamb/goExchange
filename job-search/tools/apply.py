@@ -2099,6 +2099,7 @@ async def run():
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":"SKIPPED: company on the applicant's do-not-apply list","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
             _rj=REJ.hit(REJ.load(JOBS_DIR),job.get("company"),job.get("url"))
+            if _rj and NO_LIMIT_CO.search(f"{job.get('tag') or ''} {job.get('company') or ''}"): _rj=None   # applicant 2026-11-22: no-limit labs (Anthropic etc.) - an earlier rejection does not block
             if _rj:   # applicant 2026-10-02 / 10-05: never apply again to a company that rejected him
                 r={"ats":job["ats"],"url":job["url"],"tag":job["tag"],"submitted":False,"result":f"SKIPPED: {_rj} rejected the applicant before (never apply again)","unanswered":[],"errors":[]}
                 print(json.dumps(r),flush=True); continue
