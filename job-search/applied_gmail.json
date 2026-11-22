@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 30,
+   "count": 34,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1256,7 +1256,11 @@
     "Staff+ Software Engineer, Enterprise Connectivity",
     "Cyber Evaluations Engineer",
     "Research Engineer, Beneficial Deployments",
-    "Staff+ Software Engineer, Capacity Engineering"
+    "Staff+ Software Engineer, Capacity Engineering",
+    "Infrastructure Capacity Planner, Demand Planning",
+    "Staff+ Software Engineer, Observability",
+    "Model Performance Software Engineer, Claude Code",
+    "Engineering Manager, Scheduler and Fleet Efficiency"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
