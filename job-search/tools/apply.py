@@ -1978,12 +1978,14 @@ def _title_of(tag):
             os.replace(tmp,idx_path)
         except Exception: pass
     return _META_TITLES.get(tag)
+NO_LIMIT_CO=re.compile(r"nvidia|anthropic|openai|open[ _-]?ai|(^|[^a-z])xai([^a-z]|$)|x\.ai|meta[ _-]?platforms|(^|[^a-z])meta( inc\.?)?([^a-z]|$)|meta superintelligence|mistral|cohere|thinking[ _-]?machines|safe[ _-]?superintelligence|deepmind|reflection[ _-]?ai",re.I)   # applicant 2026-11-22 ~1 AM PST: "Nvidia, Anthropic, Open AI, AI Frontier model companies have no limits"
 def applied_elsewhere(tag,company=None,days=45,title=None):
     """Return the tag of an earlier submitted application at the same company once the per-company cap is reached
     (MAX_PER_COMPANY, default 3: the applicant allows 2-3 different roles per company when they match the resume; the
     same position is never submitted twice, which the per-tag report check in the batch runner enforces), else None."""
     import glob as _glob
     cap=int(os.environ.get("MAX_PER_COMPANY","1"))   # applicant (2026-10-04): one application per company, full stop
+    _NL=bool(NO_LIMIT_CO.search(f"{tag or ''} {company or ''}"))   # applicant 2026-11-22: NVIDIA / Anthropic / OpenAI / frontier labs have no limits (only the same role twice is blocked)
     ks=company_keys(tag,company)
     if not ks: return None
     cutoff=time.time()-days*86400
@@ -2012,12 +2014,12 @@ def applied_elsewhere(tag,company=None,days=45,title=None):
             hits.append(r.get("tag"))
             t2=r.get("title") or _title_of(r.get("tag"))
             if title and t2 and _norm_role(t2)==_norm_role(title): return f"{r.get('tag')} (same role)"   # never the same role twice, reposts included
-            if cap>1 and title and t2 and _level(t2)==_level(title): return f"{r.get('tag')} (same level: {_level(title)})"   # applicant 2026-10-14: up to 3 DIFFERENT roles per company, e.g. Director, EM and Staff architect
+            if cap>1 and not _NL and title and t2 and _level(t2)==_level(title): return f"{r.get('tag')} (same level: {_level(title)})"   # applicant 2026-10-14: up to 3 DIFFERENT roles per company, e.g. Director, EM and Staff architect
     # applications the applicant sent himself (not in these reports) count toward the cap too
     for k,n in APPLIED_BY_APPLICANT.items():
         if k in ks: hits += [f"{k} (applied by the applicant)"]*n
     if ledger_hit and not hits: hits.append(ledger_hit)   # mailbox evidence with no local report: one earlier application
-    return hits[0] if len(hits)>=cap else None
+    return None if _NL else (hits[0] if len(hits)>=cap else None)
 def _level(t):
     """Level bucket of a title (multirole.py): exec / director / manager / staff / ic. One application per bucket per company."""
     t=t or ""
