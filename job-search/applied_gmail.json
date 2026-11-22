@@ -13288,12 +13288,22 @@
    "name": "NVIDIA",
    "dates": [
     "2026-03-14",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-11-22"
    ],
-   "count": 3,
+   "count": 11,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
-    "Senior Developer Technology Engineer, High-Performance Databases"
+    "Senior Developer Technology Engineer, High-Performance Databases",
+    "Manager, Systems Software",
+    "Manager, CUDA Systems Software",
+    "Manager, Data and AI Engineering",
+    "Director, AI Enablement",
+    "Manager, Software Engineering - Networking",
+    "Senior Manager, Software Engineering",
+    "Principal Software Engineer and System Architect",
+    "Senior System Software Engineer - AI Factory Automation",
+    "Senior AI Engineer"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
