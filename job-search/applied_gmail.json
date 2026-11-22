@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 40,
+   "count": 47,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1266,7 +1266,14 @@
     "Staff+ Software Engineer, Developer Productivity",
     "Staff+ Software Engineer, Deployment",
     "Staff+ Software Engineer, Infrastructure (Distributed Systems)",
-    "Engineering Manager, Billing Platform"
+    "Engineering Manager, Billing Platform",
+    "Staff+ Software Engineer, Enterprise AI Products",
+    "Staff + Sr. Software Engineer, Cloud Inference Launch Engineering",
+    "Staff+ Software Engineer, Storage + Transfer",
+    "Staff Software Engineer, Code RL",
+    "Staff Research Engineer, Multi-Agent Scaling",
+    "Staff Software Engineer, Growth",
+    "Software Engineer, Research Productivity"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -13297,7 +13304,7 @@
     "2026-10-01",
     "2026-11-22"
    ],
-   "count": 11,
+   "count": 41,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
     "Senior Developer Technology Engineer, High-Performance Databases",
@@ -13309,7 +13316,37 @@
     "Senior Manager, Software Engineering",
     "Principal Software Engineer and System Architect",
     "Senior System Software Engineer - AI Factory Automation",
-    "Senior AI Engineer"
+    "Senior AI Engineer",
+    "Senior Engineering Manager, Object Storage - DGX Cloud",
+    "Principal Software Engineer, Cloud Infrastructure",
+    "Manager, Software Engineering",
+    "Senior Networking Architect",
+    "Senior SoC Architect, RAS",
+    "Senior Director, Graphics Systems Software",
+    "Software Engineer, Technical Lead \u2013 Performance Data Platform",
+    "Principal Data and Platform Engineer, DGX Cloud",
+    "Manager, Systems Software Engineering - GPU",
+    "Senior Software Engineer, Release Management Platform",
+    "Manager, DSX Software Engineering and Controls",
+    "Senior Engineering Manager, Graphics APIs and Platforms",
+    "Senior Manager, AI and HPC Cluster Engineering Enablement",
+    "Engineering Manager, Graphics System Software",
+    "Principal Software Engineer",
+    "Senior System and Scheduling Architect \u2013 GPU",
+    "Principal Software Engineer - DGX Cloud",
+    "Senior Networking Software Architect",
+    "Manager, Linux GPU System Software Engineering",
+    "Principal Architect, Accelerated Computing",
+    "Senior Architect - Data Processing Systems, Analytics and Data Intelligence",
+    "Senior System Software Engineer - Networking",
+    "Senior GPU Compiler Engineer",
+    "Senior Architect, Model Performance and Post-Training",
+    "Director, Software Engineering \u2013 Cloud Compute and Infrastructure",
+    "Senior Manager, Developer Infrastructure and Build Engineering",
+    "Principal System Software Engineer - CUDA Driver",
+    "Senior Manager, Network Automation and Intelligence Platforms",
+    "Senior System Software Engineer, GPU Server",
+    "Senior Scale-Up Network System Architect"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
