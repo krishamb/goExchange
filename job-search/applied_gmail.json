@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 8,
+   "count": 11,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1234,7 +1234,10 @@
     "Staff+ Software Engineer, GRC Platform",
     "Data Engineer, Product",
     "Staff+ Research Engineer, RL Data Platform",
-    "Staff+ Software Engineer, VectorDB"
+    "Staff+ Software Engineer, VectorDB",
+    "Staff+ Software Engineer, Enterprise (Full Stack)",
+    "Staff+ Software Engineer, Claude Science",
+    "Staff+ Software Engineer, Platform"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -15380,9 +15383,13 @@
   "qventus": {
    "name": "Qventus",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-22"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Data Engineer"
+   ]
   },
   "rackspacetechnology": {
    "name": "Rackspace Technology",
@@ -25836,7 +25843,7 @@
    "dates": [
     "2026-11-22"
    ],
-   "count": 21,
+   "count": 43,
    "roles": [
     "Sr. Machine Learning Engineer, Ads",
     "Sr. Analytics Engineer (X)",
@@ -25858,7 +25865,29 @@
     "Software Engineer, Super Intelligence",
     "Software Engineer, Training/Inference (C++)",
     "Model Engineer, Mid-Training",
-    "Model Engineer, Post-Training & RL"
+    "Model Engineer, Post-Training & RL",
+    "Model Engineer, Voice",
+    "Software Engineer, Ads Product ",
+    "Software Engineer, Ads Serving",
+    "Software Engineer, Consumer Subscriptions",
+    "Software Engineer, Kernels/CUDA (C++)",
+    "Sr. Machine Learning Engineer, Search Ranking",
+    "Sr. Model Engineer, Mid-Training",
+    "Sr. Model Engineer, Post-Training & RL",
+    "Sr. Model Engineer, Voice",
+    "Sr. Software Engineer, Ads Product ",
+    "Sr. Software Engineer, Ads Serving",
+    "Sr. Software Engineer, Consumer Subscriptions",
+    "Sr. Software Engineer, Kernels/CUDA (C++)",
+    "Sr. Software Engineer, Media",
+    "Sr. Software Engineer, Network Software & Services",
+    "Sr. Software Engineer, Observability",
+    "Sr. Software Engineer, Real-Time Storage",
+    "Sr. Software Engineer, Safety",
+    "Sr. Software Engineer, Super Intelligence",
+    "Sr. Software Engineer, Training/Inference (C++)",
+    "Sr. Software Engineer, X Developer Platform",
+    "Sr. Software Engineer, X Money"
    ]
   },
   "echo": {
