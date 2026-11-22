@@ -1565,10 +1565,32 @@ async def run_one(ctx, item, s):
 
 async def main():
     q = json.load(open(sys.argv[1])); s = secret()
+    _RF = os.path.join(OUT, "wd_refused.json")   # 2026-11-22: a Workday host refused (429 / 503, or 403 / 406 on a page) -> the batch stops and Workday pauses 48 h (never hammer a refusing host)
+    try:
+        _r = json.load(open(_RF))
+        if _r.get("until", "") > datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"):
+            print(json.dumps({"result": f"WORKDAY PAUSED until {_r['until']} ({_r.get('host')} answered {_r.get('status')}) - nothing run"}), flush=True); return
+    except Exception: pass
+    REFUSED = {}
+    def _refused_stop():
+        if not REFUSED: return False
+        until = (datetime.datetime.utcnow() + datetime.timedelta(hours=48)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        json.dump(dict(REFUSED, until=until), open(_RF, "w"))
+        print(json.dumps({"result": f"WORKDAY REFUSED: {REFUSED['host']} answered {REFUSED['status']} -> batch stopped, Workday paused until {until}"}), flush=True)
+        return True
     async with async_playwright() as p:
         br = await p.chromium.launch(headless=not HEADED)
         ctx = await br.new_context(user_agent=UA, viewport={"width": 1280, "height": 1800}, locale="en-US", timezone_id="America/Los_Angeles")
+        def _on_resp(resp):
+            try:
+                st = resp.status
+                if st in (429, 503) or (st in (403, 406) and resp.request.resource_type == "document"):
+                    h = resp.url.split("/")[2] if "://" in resp.url else ""
+                    if re.search(r"myworkday(jobs|site)?\.com$", h) and not REFUSED: REFUSED.update(host=h, status=st, url=resp.url[:160])
+            except Exception: pass
+        ctx.on("response", _on_resp)
         for n, item in enumerate(q):
+            if _refused_stop(): break
             rp = f"{OUT}/{item['tag']}_wd_report.json"
             if os.path.exists(rp):
                 try:
@@ -1581,6 +1603,7 @@ async def main():
                 try:
                     for pg in list(ctx.pages): await pg.close()
                 except Exception: pass
+            if _refused_stop(): break
             if n < len(q) - 1:
                 g = random.uniform(*PACE); print(f"PACE waiting {int(g)}s before the next application", flush=True); await asyncio.sleep(g)
         await br.close()
