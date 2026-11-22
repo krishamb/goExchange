@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 11,
+   "count": 13,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1237,7 +1237,9 @@
     "Staff+ Software Engineer, VectorDB",
     "Staff+ Software Engineer, Enterprise (Full Stack)",
     "Staff+ Software Engineer, Claude Science",
-    "Staff+ Software Engineer, Platform"
+    "Staff+ Software Engineer, Platform",
+    "Staff+ Software Engineer, STEM",
+    "Senior Software Engineer, Full-stack"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -25843,7 +25845,7 @@
    "dates": [
     "2026-11-22"
    ],
-   "count": 43,
+   "count": 44,
    "roles": [
     "Sr. Machine Learning Engineer, Ads",
     "Sr. Analytics Engineer (X)",
@@ -25887,7 +25889,8 @@
     "Sr. Software Engineer, Super Intelligence",
     "Sr. Software Engineer, Training/Inference (C++)",
     "Sr. Software Engineer, X Developer Platform",
-    "Sr. Software Engineer, X Money"
+    "Sr. Software Engineer, X Money",
+    "Sr. Web Engineer (X)"
    ]
   },
   "echo": {
