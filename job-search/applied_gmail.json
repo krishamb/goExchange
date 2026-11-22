@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 24,
+   "count": 30,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1250,7 +1250,13 @@
     "Tech Lead Manager, Growth Data Science",
     "Research Engineer, Visual Knowledge Work",
     "Staff+ Software Engineer, Developer Acceleration",
-    "Engineering Manager, Privacy Infrastructure"
+    "Engineering Manager, Privacy Infrastructure",
+    "Staff Forward Deployed Engineer",
+    "Software Engineer, Sandboxing",
+    "Staff+ Software Engineer, Enterprise Connectivity",
+    "Cyber Evaluations Engineer",
+    "Research Engineer, Beneficial Deployments",
+    "Staff+ Software Engineer, Capacity Engineering"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
