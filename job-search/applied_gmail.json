@@ -1225,10 +1225,16 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 2,
+   "count": 8,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
-    "Engineering Manager, Agent Runtime Platform"
+    "Engineering Manager, Agent Runtime Platform",
+    "Staff+ Software Engineer, Data Infrastructure",
+    "Pre-training Data Infrastructure Engineer",
+    "Staff+ Software Engineer, GRC Platform",
+    "Data Engineer, Product",
+    "Staff+ Research Engineer, RL Data Platform",
+    "Staff+ Software Engineer, VectorDB"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -25830,7 +25836,7 @@
    "dates": [
     "2026-11-22"
    ],
-   "count": 9,
+   "count": 21,
    "roles": [
     "Sr. Machine Learning Engineer, Ads",
     "Sr. Analytics Engineer (X)",
@@ -25840,7 +25846,19 @@
     "Sr. Model Engineer, RL Training Framework",
     "Sr. Software Engineer, Data Engineering (X)",
     "Sr. Software Engineer, Data Platform",
-    "Data Visualization Engineer"
+    "Data Visualization Engineer",
+    "Model Engineer, RL Training Framework",
+    "Analytics Engineer (X)",
+    "Software Engineer, Data Engineering (X)",
+    "Software Engineer, Evals",
+    "Software Engineer, Evaluation Infrastructure",
+    "Software Engineer, Linux Kernel",
+    "Software Engineer, Network (C++)",
+    "Software Engineer, Safety",
+    "Software Engineer, Super Intelligence",
+    "Software Engineer, Training/Inference (C++)",
+    "Model Engineer, Mid-Training",
+    "Model Engineer, Post-Training & RL"
    ]
   },
   "echo": {

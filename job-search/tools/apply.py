@@ -371,7 +371,7 @@ TEXT_RULES=[
  (r"from where do you (intend|plan|expect) to work|where (will|would|do) you (be )?work(ing)? from|intended (work )?location|where would you (be )?(based|located)", "Santa Clara, CA (San Francisco Bay Area); open to hybrid in the SF Bay Area or New York City"),
  (r"willing to (work|come|be)|open to working|days? (a|per) week|days (from|in|at) (one of )?our office|office hub|in.office|on.?site|hybrid", "Yes"),
  (r"(ever|currently|previously) (work|employ|been employed)|worked (at|for) .* before|former .{0,30}(employee|contractor)|current or former", "No"),
- (r"programming language|language\(s\) do you prefer|preferred language|which languages?", "Python and Go (also Rust and C++)"),
+ (r"programming language|coding language|language\(s\) do you prefer|preferred language|which languages?", "Python and Go (also Rust and C++)"),
  (r"legal address|full address|home address|\baddress\b", P["location"]),
  (r"state/region|state or province|\bstate\b.*(reside|live|located|residence)|\bregion\b|province", "California"),
  (r"(how|where) did you (first |initially )?(hear|learn|find out)|hear about|learn about|find out about|referral source|source", "LinkedIn"),
