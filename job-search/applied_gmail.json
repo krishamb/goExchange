@@ -1222,11 +1222,13 @@
   "anthropic": {
    "name": "Anthropic",
    "dates": [
-    "2026-10-18"
+    "2026-10-18",
+    "2026-11-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager of Applied AI Architecture, Startups"
+    "Manager of Applied AI Architecture, Startups",
+    "Engineering Manager, Agent Runtime Platform"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -4339,7 +4341,14 @@
   "clockworksystems": {
    "company": "Clockwork Systems",
    "first": "2026-10-06",
-   "via": "cloud_greenhouse (linkedin-resolved)"
+   "via": "cloud_greenhouse (linkedin-resolved)",
+   "roles": [
+    "Senior Software Engineer, TorchPass Product Engineering"
+   ],
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1
   },
   "cloudera": {
    "name": "Cloudera",
@@ -10646,7 +10655,14 @@
   "koboldmetals": {
    "company": "KoBold Metals",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "roles": [
+    "Senior Software Engineer, Decision Science"
+   ],
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1
   },
   "kochindustries": {
    "name": "Koch Industries",
@@ -25807,6 +25823,44 @@
    "count": 1,
    "roles": [
     "Chief Technology Officer"
+   ]
+  },
+  "xai": {
+   "name": "xAI",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 9,
+   "roles": [
+    "Sr. Machine Learning Engineer, Ads",
+    "Sr. Analytics Engineer (X)",
+    "Sr. ML Infrastructure Engineer",
+    "Sr. Machine Learning Engineer, Recommendation Systems",
+    "Sr. Model Engineer, RL Inference",
+    "Sr. Model Engineer, RL Training Framework",
+    "Sr. Software Engineer, Data Engineering (X)",
+    "Sr. Software Engineer, Data Platform",
+    "Data Visualization Engineer"
+   ]
+  },
+  "echo": {
+   "name": "echo",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full Stack Software Engineer"
+   ]
+  },
+  "kaicyberinc": {
+   "name": "kaicyberinc",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr/Staff ML Engineer "
    ]
   }
  }
