@@ -26396,6 +26396,26 @@
    "roles": [
     "Chief Technology Officer - US-Based"
    ]
+  },
+  "lgelectronics": {
+   "name": "lgelectronics",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, MS Ad Tech & Platform Engineering"
+   ]
+  },
+  "ayahealthcare": {
+   "name": "ayahealthcare",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Lead"
+   ]
   }
  }
 }
