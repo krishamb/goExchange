@@ -13620,6 +13620,10 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer - Infrastructure "
+   ],
+   "status": "rejected 2026-11-23 (Senior Software Engineer - Infrastructure): Octane email: not as close a fit; not moving forward",
+   "aliases": [
+    "Octane Lending"
    ]
   },
   "octave": {
@@ -26379,13 +26383,6 @@
    "roles": [
     "Senior Software Engineer"
    ]
-  },
-  "octanelending": {
-   "name": "Octane Lending",
-   "dates": [],
-   "count": 0,
-   "roles": [],
-   "status": "rejected 2026-11-23 (Senior Software Engineer - Infrastructure): Octane email: not as close a fit; not moving forward"
   }
  }
 }
