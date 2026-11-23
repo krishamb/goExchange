@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 66,
+   "count": 70,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1292,7 +1292,11 @@
     "Staff+ Software Engineer, Inference Velocity",
     "Software Engineer, Tokens and Prompt Structures",
     "Staff+ Software Engineer, Platform Acceleration",
-    "Software Engineer, Research Tools"
+    "Software Engineer, Research Tools",
+    "Staff+ Software Engineer, Memory & Search",
+    "Staff+ Software Engineer, Backend",
+    "Staff+ Software Engineer, Platform Intelligence",
+    "Staff Software Engineer, Product"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -7377,10 +7381,14 @@
   "firework": {
    "name": "Firework",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-11-22"
    ],
-   "count": 1,
-   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)"
+   "count": 2,
+   "note": "applied by the applicant from the Apply-Yourself list (Oct 11)",
+   "roles": [
+    "Sr./Staff Data Engineer"
+   ]
   },
   "firmustechnologies": {
    "name": "Firmus Technologies ",
@@ -13347,7 +13355,7 @@
     "2026-10-01",
     "2026-11-22"
    ],
-   "count": 72,
+   "count": 103,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
     "Senior Developer Technology Engineer, High-Performance Databases",
@@ -13420,7 +13428,38 @@
     "Distinguished Engineer, Scaled Out Inferencing",
     "Manager, Chip Software",
     "Senior Memory System Architect",
-    "Software and System Architect"
+    "Software and System Architect",
+    "Principal Software Engineer, At-Scale Reliability and Fleet Intelligence \u2014 CSP Engagements",
+    "Principal System Engineer, Operations",
+    "Senior Switch Software Architect",
+    "Senior Performance Engineer - DGX Cloud",
+    "Principal System Power Management and Performance Architect",
+    "Senior AI Training Performance Architect",
+    "Distinguished Engineer, End-to-End Scaling Performance Architecture",
+    "Principal Software Engineer - Employee Productivity",
+    "Senior Compiler Optimization Engineer - MLIR",
+    "Engineering Manager, Deep Learning Inference",
+    "Senior Staff Engineer - Enterprise Messaging and Exchange",
+    "Principal Systems Software Engineer",
+    "Senior Architect, Camera ISP",
+    "Principal Architect, SoC and Systems Modelling",
+    "Network Software Architect",
+    "Principal Systems Software Engineer, LPU",
+    "Senior SoC Subsystem and I/O Architect - LPU",
+    "Principal Software Engineer, E2E Performance and Goodput \u2014 CSP Engagements",
+    "Principal Software Engineer, Rack-Scale System Software \u2014 CSP Engagements",
+    "Senior AI Application Developer - GPU and SOC Architecture Modeling",
+    "Principal Graphics Developer Tools Engineer",
+    "Principal CPU Software Architect",
+    "Systems Architect",
+    "Principal Developer, AI Networking",
+    "Senior Systems Architect - Datacenter",
+    "Principal Architect, System Software - Orbital Data Center",
+    "Senior GPU Memory Architect",
+    "Manager, Software Engineering - Cumulus Linux",
+    "Manager, Molecular Simulation Engineering",
+    "Senior Systems Prototyping and Emulation Engineer",
+    "Principal Software Engineer - Rack Scale Systems Infrastructure"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
@@ -26203,6 +26242,36 @@
    "count": 1,
    "roles": [
     "Senior/Staff Forward Deployed Architect"
+   ]
+  },
+  "cryptocom": {
+   "name": "Crypto.com",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Product Analytics"
+   ]
+  },
+  "moonpay": {
+   "name": "MoonPay",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Director, Data & Analytics"
+   ]
+  },
+  "certik": {
+   "name": "CertiK",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Director of Product, AML & Digital Asset Compliance"
    ]
   }
  }
