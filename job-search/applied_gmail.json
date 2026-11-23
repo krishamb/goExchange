@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 47,
+   "count": 54,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1273,7 +1273,14 @@
     "Staff Software Engineer, Code RL",
     "Staff Research Engineer, Multi-Agent Scaling",
     "Staff Software Engineer, Growth",
-    "Software Engineer, Research Productivity"
+    "Software Engineer, Research Productivity",
+    "Staff+ Software Engineer, Databases",
+    "Software Engineer, Beneficial Deployments",
+    "Staff+ Software Engineer, Experimentation",
+    "Staff+ Software Engineer, Distributed Systems",
+    "Research Engineer, Finetuning",
+    "Staff+ Software Engineer, Enterprise Knowledge Work",
+    "Manager, Forward Deployed Engineering"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -13304,7 +13311,7 @@
     "2026-10-01",
     "2026-11-22"
    ],
-   "count": 41,
+   "count": 50,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
     "Senior Developer Technology Engineer, High-Performance Databases",
@@ -13346,7 +13353,16 @@
     "Principal System Software Engineer - CUDA Driver",
     "Senior Manager, Network Automation and Intelligence Platforms",
     "Senior System Software Engineer, GPU Server",
-    "Senior Scale-Up Network System Architect"
+    "Senior Scale-Up Network System Architect",
+    "Senior Manager, Software Engineering - Agentic Development for Safety-Critical Systems",
+    "Senior Software Engineer, Distributed Systems Engineering - DGX Cloud",
+    "Senior System Software Engineer - GPU Power and Performance Management",
+    "Senior System Software Engineer - GPU SW",
+    "Senior System Software Engineer - Datacenter Power Management",
+    "Senior System Software Engineer - GPU Power Management",
+    "Director, FSI Predictive Technology",
+    "Open Source Platform Architect",
+    "Senior Data Application Engineer \u2013 Enterprise Data Management"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
