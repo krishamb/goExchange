@@ -26416,6 +26416,16 @@
    "roles": [
     "Engineering Lead"
    ]
+  },
+  "infoblox": {
+   "name": "Infoblox",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Data, Analytics and Reporting"
+   ]
   }
  }
 }
