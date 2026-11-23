@@ -13383,7 +13383,7 @@
     "2026-10-01",
     "2026-11-22"
    ],
-   "count": 137,
+   "count": 158,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
     "Senior Developer Technology Engineer, High-Performance Databases",
@@ -13521,7 +13521,28 @@
     "Senior Performance Architect - Heterogeneous Workload Optimization",
     "Senior I/O Subsystem Architect",
     "Director, Rack Scale Software Architecture",
-    "Distinguished Engineer - Rack Scale Architecture"
+    "Distinguished Engineer - Rack Scale Architecture",
+    "Senior Deep Learning Framework Communications Engineer",
+    "Senior Power Analysis and Optimization Engineer",
+    "Manager, GPU Accelerated Data Analytics",
+    "Senior Software Development Engineer, Neural Graph Infrastructure",
+    "Distinguished Engineer - Dynamo",
+    "Senior Software Architect, AI Systems and Networking",
+    "Senior GPU PCIe and Boot Architect",
+    "Senior Memory System Engineer",
+    "Senior System Software Engineer, Enterprise MODS",
+    "Senior Software Architect - Deep Learning and HPC Communications",
+    "Senior HPC Architect, Automation and At-Scale Deployment",
+    "Principal Software Engineer \u2013 CSP Engagements",
+    "Senior Deep Learning Communication Architect",
+    "Senior System Software Engineer - GPU Performance",
+    "Engineering Manager, AI Developer Technology",
+    "Senior Research Engineer, Simulation",
+    "Senior Research Engineer, Foundation Model Training Infrastructure",
+    "Software Engineering Manager - Image and Data Compression Libraries",
+    "Software Engineering Manager - GPU Communications Libraries",
+    "Distinguished Engineer \u2013 Data Center System Software Architect",
+    "Senior Software Architect - Data Center Systems"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
@@ -19727,11 +19748,13 @@
    "name": "Turing",
    "dates": [
     "2026-09-29",
-    "2026-11-09"
+    "2026-11-09",
+    "2026-11-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Research Engineering Manager, STEM"
+    "Research Engineering Manager, STEM",
+    "Head of Platform Engineering, Enterprise AI"
    ]
   },
   "turnblockio": {
