@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 60,
+   "count": 66,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1286,7 +1286,13 @@
     "Senior Staff Software Engineer, API",
     "Staff+ Software Engineer, Product Sandboxing",
     "Staff Software Engineer, Claude Code",
-    "Staff + Sr. Software Engineer, Cloud Inference"
+    "Staff + Sr. Software Engineer, Cloud Inference",
+    "Staff+ Software Engineer, Platform Distribution",
+    "Staff+ Software Engineer, Consumer",
+    "Staff+ Software Engineer, Inference Velocity",
+    "Software Engineer, Tokens and Prompt Structures",
+    "Staff+ Software Engineer, Platform Acceleration",
+    "Software Engineer, Research Tools"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
