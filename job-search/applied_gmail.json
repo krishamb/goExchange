@@ -18081,12 +18081,14 @@
    "name": "Spotify",
    "dates": [
     "2026-10-07",
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff Machine Learning Engineer, Home Surfaces",
-    "VP, Head of Engineering - Advertising"
+    "VP, Head of Engineering - Advertising",
+    "Senior Engineering Manager - Agentic Products"
    ]
   },
   "squire": {
@@ -22554,11 +22556,13 @@
   "headway": {
    "name": "Headway",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "Senior Engineering Manager - Group Practices"
    ]
   },
   "mainstay": {
@@ -26381,7 +26385,7 @@
     "2026-11-22",
     "2026-11-23"
    ],
-   "count": 29,
+   "count": 36,
    "roles": [
     "Engineering Manager, Multimodal (API)",
     "Engineering Manager, Core Services",
@@ -26411,7 +26415,14 @@
     "Product Cost Management Lead - AI Infrastructure",
     "Brand Data Infrastructure Lead",
     "Network Infrastructure Lead",
-    "Applied AI Delivery Lead - NYC"
+    "Applied AI Delivery Lead - NYC",
+    "Backend Software Engineer - Codex for Finance",
+    "Financial Systems Engineer",
+    "Forward Deployed Engineer (FDE), Financial Services- NYC",
+    "Full Stack Software Engineer, ChatGPT Finances",
+    "Full Stack Software Engineer - Codex for Finance",
+    "Full Stack Software Engineer, Monetization Platform",
+    "Software Engineer, Financial Engineering"
    ]
   },
   "thinkingmachineslab": {
