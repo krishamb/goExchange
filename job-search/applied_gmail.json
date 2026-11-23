@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 70,
+   "count": 77,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1296,7 +1296,14 @@
     "Staff+ Software Engineer, Memory & Search",
     "Staff+ Software Engineer, Backend",
     "Staff+ Software Engineer, Platform Intelligence",
-    "Staff Software Engineer, Product"
+    "Staff Software Engineer, Product",
+    "Staff+ Software Engineer, ML Sampling Path",
+    "Engineering Manager, Research Data Platform",
+    "Data Engineer, Billing & Payments",
+    "Research Engineer, Post-Training Model Evaluations",
+    "Principal Engineer, Privacy",
+    "Engineering Manager, Growth",
+    "Staff + Sr. Software Engineer, Scaling"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -10077,7 +10084,14 @@
   "invesco": {
    "company": "Invesco",
    "first": "2026-10-01",
-   "via": "workday-cloud"
+   "via": "workday-cloud",
+   "roles": [
+    "Americas Product Director, Digital Assets"
+   ],
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1
   },
   "invisibletech": {
    "company": "invisibletech",
@@ -11776,9 +11790,13 @@
   "mastercard": {
    "name": "Mastercard",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-22"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Director, Product Management - Tokenized Deposits"
+   ]
   },
   "matchgroup": {
    "name": "Match Group",
@@ -13355,7 +13373,7 @@
     "2026-10-01",
     "2026-11-22"
    ],
-   "count": 103,
+   "count": 137,
    "roles": [
     "Senior Developer Technology Engineer, High-Performance Databases (JR2003231)",
     "Senior Developer Technology Engineer, High-Performance Databases",
@@ -13459,7 +13477,41 @@
     "Manager, Software Engineering - Cumulus Linux",
     "Manager, Molecular Simulation Engineering",
     "Senior Systems Prototyping and Emulation Engineer",
-    "Principal Software Engineer - Rack Scale Systems Infrastructure"
+    "Principal Software Engineer - Rack Scale Systems Infrastructure",
+    "Senior Software Engineer - Simulation",
+    "Distinguished Engineer, Storage \u2013 AI Cloud",
+    "Senior System Simulation Architect",
+    "Principal Software Architect, Networking AI",
+    "Senior Performance Modeling Architect, CPU Fabric and LLC",
+    "Senior Deep Learning Frameworks CUDA Software Engineer",
+    "Principal AI and ML Infra Software Engineer, GPU Clusters",
+    "Principal High-Performance LLM Training Engineer",
+    "Principal CPU Performance Architect",
+    "Senior Cache Coherency Architect",
+    "Senior Accelerated Computing Architect",
+    "Senior Architect",
+    "Manager, Software Architecture",
+    "Principal Architect, AI Networking",
+    "Senior CPU Performance Architect",
+    "CPU Performance Architect",
+    "Principal Software Engineer \u2014 Agentic AI Applications and Foundations",
+    "Senior Manager, Software Engineering - JAX",
+    "Principal Deep Learning Communication Architect",
+    "Manager, Compiler Engineering",
+    "Platform Performance Architect, GeForce Now",
+    "Principal System Software Engineer - Data Center MODS",
+    "Principal Engineer, CUDA UMD - GPU Kernel Scheduling",
+    "Senior Compiler Engineer - Backend GPU",
+    "Principal GPU Memory Architect",
+    "GPU/SOC Low-Power Feature Architect",
+    "Senior GPU Functional Modeling Architect",
+    "Global Connectivity Distinguished Engineer",
+    "Principal Datacenter HSIO Engineer",
+    "Principal Power and Performance Architect",
+    "Senior Performance Architect - Heterogeneous Workload Optimization",
+    "Senior I/O Subsystem Architect",
+    "Director, Rack Scale Software Architecture",
+    "Distinguished Engineer - Rack Scale Architecture"
    ],
    "note": "gmail history (pre-Sep 2026)"
   },
