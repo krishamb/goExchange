@@ -5598,12 +5598,14 @@
   "delinea": {
    "name": "Delinea",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
-    "Senior Software Development Engineer - Workforce Integrations"
+    "Senior Software Development Engineer - Workforce Integrations",
+    "Field CTO"
    ]
   },
   "dell": {
@@ -24104,7 +24106,8 @@
    "roles": [
     "Staff Product Engineer (Full Stack)",
     "Senior Product Engineer (Full Stack)"
-   ]
+   ],
+   "status": "rejected 2026-11-23: Greenhouse email: not proceeding with candidacy"
   },
   "candidly": {
    "name": "Candidly",
@@ -26382,6 +26385,16 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer"
+   ]
+  },
+  "toptal": {
+   "name": "Toptal",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Chief Technology Officer - US-Based"
    ]
   }
  }
