@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 77,
+   "count": 81,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1303,7 +1303,11 @@
     "Research Engineer, Post-Training Model Evaluations",
     "Principal Engineer, Privacy",
     "Engineering Manager, Growth",
-    "Staff + Sr. Software Engineer, Scaling"
+    "Staff + Sr. Software Engineer, Scaling",
+    "Staff Software Engineer, Search",
+    "Engineering Manager, Inference Infrastructure",
+    "Staff+ Software Engineer, ML Inference Path",
+    "Engineering Manager, Enterprise"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
@@ -26335,6 +26339,16 @@
    "count": 1,
    "roles": [
     "Director of Product, AML & Digital Asset Compliance"
+   ]
+  },
+  "fermat": {
+   "name": "fermat",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
    ]
   }
  }
