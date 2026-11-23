@@ -1607,10 +1607,14 @@
   "artisan": {
    "name": "artisan",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-22"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Staff AI Engineer - Agent Architecture & Behavior"
+   ]
   },
   "artisanstudios": {
    "name": "Artisan Studios",
@@ -2396,10 +2400,14 @@
   "baseten": {
    "name": "Baseten",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-22"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Engineering Manager, Inference Performance"
+   ]
   },
   "basil": {
    "company": "basil",
@@ -4564,10 +4572,14 @@
   "coframe": {
    "name": "Coframe",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-22"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Backend System Architect"
+   ]
   },
   "cogentsecurity": {
    "company": "Cogent Security",
@@ -5489,10 +5501,14 @@
   "decagon": {
    "name": "Decagon",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-22"
    ],
-   "count": 1,
-   "note": "user-confirmed applied"
+   "count": 2,
+   "note": "user-confirmed applied",
+   "roles": [
+    "Engineering Manager, Research"
+   ]
   },
   "deepgram": {
    "name": "Deepgram",
@@ -6288,10 +6304,14 @@
   "edisonscientific": {
    "name": "Edison Scientific",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-22"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Engineering Manager - AI Product"
+   ]
   },
   "edo": {
    "name": "EDO",
@@ -9788,10 +9808,14 @@
   "inferact": {
    "name": "Inferact",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-22"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Engineering Manager"
+   ]
   },
   "infinitecomputersolutionsics": {
    "name": "Infinite Computer Solutions (ICS)",
@@ -20906,10 +20930,14 @@
   "workos": {
    "name": "Workos",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-22"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Engineering Manager - Dashboard"
+   ]
   },
   "workstream": {
    "name": "Workstream",
@@ -20943,9 +20971,13 @@
   "wovenbytoyota": {
    "name": "Woven by Toyota",
    "dates": [
-    "2026-10-11"
+    "2026-10-11",
+    "2026-11-22"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Engineering Manager, ML Training Infrastructure"
+   ]
   },
   "wpromote": {
    "name": "Wpromote",
@@ -22137,11 +22169,16 @@
   "cohere": {
    "name": "Cohere",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-22"
    ],
-   "count": 1,
+   "count": 5,
    "roles": [
-    "Staff/Senior Staff Software Engineer, Agent Infrastructure"
+    "Staff/Senior Staff Software Engineer, Agent Infrastructure",
+    "Staff Software Engineer, Inference Infrastructure",
+    "Staff Software Engineer, Agentic Analytics",
+    "Senior/Staff Software Engineer (Back-End), Inference",
+    "Senior Staff Data Engineer"
    ]
   },
   "radar": {
@@ -26007,6 +26044,137 @@
    "count": 1,
    "roles": [
     "Sr/Staff ML Engineer "
+   ]
+  },
+  "openai": {
+   "name": "OpenAI",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 21,
+   "roles": [
+    "Engineering Manager, Multimodal (API)",
+    "Engineering Manager, Core Services",
+    "Engineering Manager, Distillation & Detection Platform",
+    "Engineering Manager, ChatGPT Space",
+    "Engineering Manager, MLE",
+    "Data Engineering Manager, IO/Devices",
+    "Manager, Data Engineering, Trust & Safety",
+    "Engineering Manager, Client Platform Engineering",
+    "Engineering Manager, Cooperative Systems",
+    "Engineering Manager, Preparedness",
+    "Engineering Manager, API Multicloud",
+    "Engineering Manager, Core Experimentation",
+    "Forward Deployed Engineering Manager, Financial Services",
+    "Certification Architect",
+    "Agent Standards Architect, Global Affairs",
+    "Principal Software Engineer, Full Stack \u2014 Codex",
+    "Staff PLM & Engineering Applications Engineer, Consumer Devices",
+    "Full Stack Staff & Software Engineer, Consumer Monetization",
+    "Staff & Software Engineer, Payments & Billing, Consumer Monetization",
+    "Principal Software Engineer, Productivity",
+    "Staff Backend Engineer, Financial Engineering"
+   ]
+  },
+  "thinkingmachineslab": {
+   "name": "Thinking Machines Lab",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "harperinsure": {
+   "name": "harperinsure",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager/TLM, Platform"
+   ]
+  },
+  "kira": {
+   "name": "kira",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "notion": {
+   "name": "notion",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Data Platform Foundations ",
+    "Forward Deployed Architect"
+   ]
+  },
+  "hive": {
+   "name": "hive",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "numeric": {
+   "name": "numeric",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
+   ]
+  },
+  "aiprise": {
+   "name": "aiprise",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager (AI)"
+   ]
+  },
+  "vgs": {
+   "name": "VGS",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Engineering"
+   ]
+  },
+  "sygaldrytechnologies": {
+   "name": "sygaldry-technologies",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "AI Systems Performance Architect"
+   ]
+  },
+  "withinai": {
+   "name": "within.ai",
+   "dates": [
+    "2026-11-22"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Forward Deployed Architect"
    ]
   }
  }
