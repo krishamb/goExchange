@@ -473,9 +473,13 @@
   "aeratechnology": {
    "name": "Aera Technology",
    "dates": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-11-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer | Backend"
+   ]
   },
   "aerolot": {
    "name": "Aerolot",
@@ -821,7 +825,14 @@
   "allspice": {
    "company": "allspice",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Senior/Staff Software Engineer, AI Platform"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1
   },
   "allstate": {
    "name": "Allstate",
@@ -1400,10 +1411,14 @@
   "applied": {
    "name": "Applied",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Senior Software Engineer - Data Engine"
+   ]
   },
   "applovin": {
    "name": "AppLovin",
@@ -1785,7 +1800,14 @@
   "astra": {
    "company": "astra",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Staff Backend Engineer"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1
   },
   "astronomer": {
    "name": "astronomer",
@@ -2155,11 +2177,13 @@
   "axion": {
    "name": "Axion",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior/Staff Software Engineer, Data Intelligence"
+    "Senior/Staff Software Engineer, Data Intelligence",
+    "Senior Forward Deployed Engineer"
    ]
   },
   "axios": {
@@ -2856,10 +2880,14 @@
   "blee": {
    "name": "blee",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Staff AI Engineer"
+   ]
   },
   "blitzy": {
    "name": "blitzy",
@@ -3343,11 +3371,14 @@
    "name": "BuildOps",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "rejected": "2026-10-05/06",
-   "roles": [],
+   "roles": [
+    "Senior Software Engineer"
+   ],
    "status": "closed 2026-10-05 (Senior Engineering Manager, Financial Platform): no longer hiring for this position (closed); closed 2026-10-09 (Staff Software Engineer, Integration Platform): no longer hiring for this position (closed)"
   },
   "bullhorn": {
@@ -3934,12 +3965,14 @@
    "name": "Cerebras",
    "dates": [
     "2026-10-05",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "prior Ashby queue (applied-before per user)",
    "roles": [
-    "Director/Sr. Manager, AI Inference Model Scaling"
+    "Director/Sr. Manager, AI Inference Model Scaling",
+    "Staff AWS Platform Engineer"
    ]
   },
   "cerence": {
@@ -4612,7 +4645,15 @@
   "cogentsecurity": {
    "company": "Cogent Security",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "roles": [
+    "Software Engineer - Data Platform (Staff+)",
+    "Software Engineer - Infrastructure (Senior+)"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2
   },
   "cognisofttechnologies": {
    "name": "CogniSoft Technologies",
@@ -5533,12 +5574,14 @@
    "name": "Decagon",
    "dates": [
     "2026-10-05",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "user-confirmed applied",
    "roles": [
-    "Engineering Manager, Research"
+    "Engineering Manager, Research",
+    "Senior Software Engineer, Data Infrastructure"
    ]
   },
   "deepgram": {
@@ -5686,10 +5729,14 @@
   "develophealth": {
    "name": "Develop Health",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Lead Analytics Engineer"
+   ]
   },
   "devotedhealth": {
    "name": "Devoted Health",
@@ -5930,12 +5977,14 @@
    "name": "Docker",
    "dates": [
     "2026-10-05",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "prior Ashby queue (applied-before per user)",
    "roles": [
-    "Senior Software Engineer, Tooling (West Coast Preferred)"
+    "Senior Software Engineer, Tooling (West Coast Preferred)",
+    "Staff Software Engineer, AI Gateway"
    ]
   },
   "doctronic": {
@@ -6475,9 +6524,13 @@
   "elicit": {
    "name": "Elicit",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer, Data and Integrations"
+   ]
   },
   "elilillyandcompany": {
    "name": "Eli Lilly and Company",
@@ -7407,9 +7460,10 @@
    "name": "Firework",
    "dates": [
     "2026-10-11",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "applied by the applicant from the Apply-Yourself list (Oct 11)",
    "roles": [
     "Sr./Staff Data Engineer"
@@ -11318,7 +11372,14 @@
   "lightfield": {
    "company": "lightfield",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Software Engineer, Applied AI (Staff+)"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1
   },
   "lightningai": {
    "name": "Lightning AI",
@@ -11687,7 +11748,14 @@
   "macroscope": {
    "company": "macroscope",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Senior Infrastructure Engineer"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1
   },
   "magical": {
    "company": "magical",
@@ -12868,10 +12936,14 @@
   "negotiateai": {
    "name": "negotiate-ai",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "nekohealth": {
    "name": "nekohealth",
@@ -13336,10 +13408,14 @@
   "nuna": {
    "name": "Nuna",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "Gmail confirmation found 2026-10-19 (Ashby)"
+   "count": 2,
+   "via": "Gmail confirmation found 2026-10-19 (Ashby)",
+   "roles": [
+    "Lead Software Engineer"
+   ]
   },
   "nuro": {
    "name": "Nuro",
@@ -13842,10 +13918,14 @@
   "onoshealth": {
    "name": "Onoshealth",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Staff Software Engineer (AI)"
+   ]
   },
   "ontoinnovation": {
    "name": "Onto Innovation",
@@ -13887,10 +13967,14 @@
   "openartai": {
    "name": "OpenArt AI",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-23"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Senior/Staff Software Engineer, Enterprise AI Platform"
+   ]
   },
   "openlane": {
    "name": "OPENLANE",
@@ -14294,11 +14378,13 @@
   "paraform": {
    "name": "Paraform",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Technical Lead Manager, AI Platform"
+    "Technical Lead Manager, AI Platform",
+    "Senior Product Engineer"
    ]
   },
   "parakeethealth": {
@@ -14883,12 +14969,14 @@
    "name": "Plaid",
    "dates": [
     "2026-10-05",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "prior Ashby queue (applied-before per user)",
    "roles": [
-    "Engineering Manager - Network Health"
+    "Engineering Manager - Network Health",
+    "Senior Analytics Engineer"
    ]
   },
   "planet": {
@@ -15071,9 +15159,13 @@
   "pomelocare": {
    "name": "Pomelo Care",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer (Product)"
+   ]
   },
   "positronai": {
    "name": "Positron AI",
@@ -15911,11 +16003,31 @@
   "reflection": {
    "name": "reflection",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 18,
    "note": "prior Ashby queue (applied-before per user)",
-   "roles": [],
+   "roles": [
+    "Member of Technical Staff - Engineering Lead, Compute Platform",
+    "Member of Technical Staff - Engineering Lead, Shared Services",
+    "Member of Technical Staff - Engineering Lead, Data Platform",
+    "Member of Technical Staff - Engineering Lead, Platform Foundations",
+    "Member of Technical Staff - Engineering Lead, Data Acquisition",
+    "Member of Technical Staff - Pre-Training",
+    "Member of Technical Staff - Post-Training",
+    "Member of Technical Staff - Safety",
+    "Member of Technical Staff - Evaluations",
+    "Member of Technical Staff, Data Ingestion Engineer",
+    "Member of Technical Staff - Shared Services",
+    "Member of Technical Staff - Platform Foundations",
+    "Member of Technical Staff - Pre-Training Infra",
+    "Member of Technical Staff, Web Crawl Engineer",
+    "Member of Technical Staff, Data Flywheel",
+    "Member of Technical Staff - Multilingual Data",
+    "Member of Technical Staff - Pre-Training Evals Infra",
+    "Member of Technical Staff - Pre-Training  Data"
+   ],
    "status": "rejected 2026-10-12: after careful review, moving forward with other candidates"
   },
   "regal": {
@@ -16282,10 +16394,14 @@
   "rivianvwtech": {
    "name": "Rivianvw.Tech",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-23"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Senior Staff Software Engineer, AI Platform"
+   ]
   },
   "roadpass": {
    "company": "roadpass",
@@ -16704,7 +16820,14 @@
   "sardine": {
    "company": "sardine",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Staff Engineer - Fraud Prevention"
+   ],
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1
   },
   "satlyt": {
    "name": "Satlyt",
@@ -17071,12 +17194,14 @@
    "name": "sentry",
    "dates": [
     "2026-10-05",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-23"
    ],
-   "count": 2,
+   "count": 3,
    "note": "prior Ashby queue (applied-before per user)",
    "roles": [
-    "Engineering Manager, Data Platform"
+    "Engineering Manager, Data Platform",
+    "Staff Software Engineer, AI Platform"
    ]
   },
   "septerna": {
@@ -18193,10 +18318,14 @@
   "strava": {
    "name": "strava",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-23"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Senior Server Engineer, Data Products"
+   ]
   },
   "streamlinehealthcaresolutions": {
    "name": "Streamline Healthcare Solutions",
@@ -18583,9 +18712,13 @@
   "sysdig": {
    "name": "Sysdig",
    "dates": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-11-23"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff AI Platform Engineer"
+   ]
   },
   "systemone": {
    "name": "System One",
@@ -22340,15 +22473,31 @@
    "name": "Cohere",
    "dates": [
     "2026-10-29",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23"
    ],
-   "count": 5,
+   "count": 20,
    "roles": [
     "Staff/Senior Staff Software Engineer, Agent Infrastructure",
     "Staff Software Engineer, Inference Infrastructure",
     "Staff Software Engineer, Agentic Analytics",
     "Senior/Staff Software Engineer (Back-End), Inference",
-    "Senior Staff Data Engineer"
+    "Senior Staff Data Engineer",
+    "Senior/Staff Software Engineer, Developer Experience",
+    "Staff Software Engineer, Data Infrastructure",
+    "Senior Member of Technical Staff, Multimodal AI",
+    "Senior Full-Stack Engineer, Annotation Platform",
+    "Senior Research Engineer - Safety Tooling and Data",
+    "Member of Technical Staff, Modeling",
+    "Member of Technical Staff, Training Infra Engineer",
+    "Member of Technical Staff, Search",
+    "Member of Technical Staff, Post-Training",
+    "Member of Technical Staff, Data Analysis and Evaluation",
+    "Member of Technical Staff, Pre-Training Data",
+    "Member of Technical Staff, Model Efficiency",
+    "Member of Technical Staff, Training Performance Engineer",
+    "Member of Technical Staff, Integration/RL Team (Research Engineer)",
+    "Member of Technical Staff, Agent Code"
    ]
   },
   "radar": {
@@ -23105,11 +23254,13 @@
   "maintainx": {
    "name": "MaintainX",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Sr. Director, MaintainX AI"
+    "Sr. Director, MaintainX AI",
+    "Senior AI Platform Engineer"
    ]
   },
   "magnalegalservices": {
@@ -23368,11 +23519,13 @@
   "paradigm": {
    "name": "Paradigm",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager, Software Engineering - Omni"
+    "Manager, Software Engineering - Omni",
+    "Senior Product Engineer"
    ]
   },
   "caterpillar": {
@@ -23528,11 +23681,13 @@
   "allara": {
    "name": "Allara",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Director of Engineering, Data"
+    "Director of Engineering, Data",
+    "Staff Software Engineer"
    ]
   },
   "charteroakfederalcreditunion": {
@@ -24322,11 +24477,13 @@
   "agave": {
    "name": "Agave",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Senior Software Engineer "
    ]
   },
   "aiuc": {
@@ -26221,9 +26378,10 @@
   "openai": {
    "name": "OpenAI",
    "dates": [
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23"
    ],
-   "count": 21,
+   "count": 29,
    "roles": [
     "Engineering Manager, Multimodal (API)",
     "Engineering Manager, Core Services",
@@ -26245,7 +26403,15 @@
     "Full Stack Staff & Software Engineer, Consumer Monetization",
     "Staff & Software Engineer, Payments & Billing, Consumer Monetization",
     "Principal Software Engineer, Productivity",
-    "Staff Backend Engineer, Financial Engineering"
+    "Staff Backend Engineer, Financial Engineering",
+    "Technical Lead - Training Runtime, Data(set) Movement",
+    "Applied AI Delivery Lead",
+    "Deployment Lead, Forward Deployed Engineering (FDE) - Platform",
+    "Applied AI Delivery Lead - Mountain View",
+    "Product Cost Management Lead - AI Infrastructure",
+    "Brand Data Infrastructure Lead",
+    "Network Infrastructure Lead",
+    "Applied AI Delivery Lead - NYC"
    ]
   },
   "thinkingmachineslab": {
@@ -26322,11 +26488,14 @@
   "vgs": {
    "name": "VGS",
    "dates": [
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Senior Manager, Engineering"
+    "Senior Manager, Engineering",
+    "Sr. Staff Infrastructure Engineer",
+    "Sr. Software Engineer - DevEx"
    ]
   },
   "sygaldrytechnologies": {
@@ -26437,6 +26606,452 @@
    "count": 1,
    "roles": [
     "Vice President, Software Development"
+   ]
+  },
+  "genesismolecularai": {
+   "name": "genesis-molecular-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Product Software Engineer (Senior / Staff)"
+   ]
+  },
+  "asapp2": {
+   "name": "asapp-2",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Machine Learning Engineer, Evaluations"
+   ]
+  },
+  "render": {
+   "name": "render",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff Analytics Engineer "
+   ]
+  },
+  "geniusai": {
+   "name": "geniusai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Infrastructure"
+   ]
+  },
+  "hercules": {
+   "name": "hercules",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Product",
+    "Senior Analytics Engineer, Full-stack"
+   ]
+  },
+  "khoslaventures": {
+   "name": "khoslaventures",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "KV | Staff Software Engineer",
+    "KV | Senior Software Engineer"
+   ]
+  },
+  "legionhealth": {
+   "name": "legionhealth",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Engineer (backed by Y Combinator, $5M+ ARR, $23M+ raised)"
+   ]
+  },
+  "nianticspatial": {
+   "name": "niantic-spatial",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff/Senior Staff Computer Vision Engineer - Map team",
+    "Senior Computer Vision Engineer (Localization)"
+   ]
+  },
+  "prudentiasciences": {
+   "name": "prudentia-sciences",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer (Full Stack)",
+    "Senior Software Engineer (Full Stack)"
+   ]
+  },
+  "unify": {
+   "name": "unify",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Platform",
+    "Senior Product Engineer, Product"
+   ]
+  },
+  "currentsurgical": {
+   "name": "currentsurgical",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead/Principal Software Engineer"
+   ]
+  },
+  "alphadesignaiinc": {
+   "name": "alpha-design-ai-inc",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior/Staff AI Engineer, Agents"
+   ]
+  },
+  "doss": {
+   "name": "doss",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Platform Engineer"
+   ]
+  },
+  "furtherai": {
+   "name": "FurtherAI",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior / Staff AI Engineer \u2014 Evals & Model Quality"
+   ]
+  },
+  "tar": {
+   "name": "TAR",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "quizletinc": {
+   "name": "quizlet-inc",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Software Engineer, Web Foundations"
+   ]
+  },
+  "f2ai": {
+   "name": "f2-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
+  "way": {
+   "name": "Way",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Product Engineer"
+   ]
+  },
+  "powerline": {
+   "name": "powerline",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer "
+   ]
+  },
+  "calder": {
+   "name": "calder",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Platform"
+   ]
+  },
+  "coderabbit": {
+   "name": "coderabbit",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Analytics Engineer"
+   ]
+  },
+  "collective": {
+   "name": "collective",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Cloud Infrastructure Engineer"
+   ]
+  },
+  "gumloop": {
+   "name": "gumloop",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Forward Deployed Agentic Engineer"
+   ]
+  },
+  "hamiltonai": {
+   "name": "hamilton-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Fullstack Engineer"
+   ]
+  },
+  "artosai": {
+   "name": "artosai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr AI Software Engineer"
+   ]
+  },
+  "buildai": {
+   "name": "build-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Engineer, ML Data Infrastructure & Systems"
+   ]
+  },
+  "healthleap": {
+   "name": "healthleap",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "saunaai": {
+   "name": "sauna.ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Product Engineer"
+   ]
+  },
+  "sciforium": {
+   "name": "sciforium",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior HPC & GPU Infrastructure Engineer"
+   ]
+  },
+  "hud": {
+   "name": "hud",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Infrastructure"
+   ]
+  },
+  "scribe": {
+   "name": "scribe",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Full-Stack Engineer"
+   ]
+  },
+  "hyperbolic": {
+   "name": "hyperbolic",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer"
+   ]
+  },
+  "inworldai": {
+   "name": "inworld-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Machine Learning Engineer, Inference - USA"
+   ]
+  },
+  "grindr20llc": {
+   "name": "grindr%20llc",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Data Engineer, Analytics"
+   ]
+  },
+  "jeevyfabrication": {
+   "name": "jeevyfabrication",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Agent Engineer (Senior)"
+   ]
+  },
+  "juicebox": {
+   "name": "juicebox",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 2,
+   "roles": [
+    "Engineering Lead",
+    "Senior Software Engineer"
+   ]
+  },
+  "sprig": {
+   "name": "sprig",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Developer Productivity"
+   ]
+  },
+  "aegisai": {
+   "name": "aegis-ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Infrastructure Engineer Lead"
+   ]
+  },
+  "curiumai": {
+   "name": "curium ai",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
+  "vizcom": {
+   "name": "vizcom",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Product Engineer "
+   ]
+  },
+  "dodo": {
+   "name": "dodo",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior ML Engineer"
+   ]
+  },
+  "electricplant": {
+   "name": "electricplant",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer"
+   ]
+  },
+  "adaptive": {
+   "name": "Adaptive",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer (Backend)"
+   ]
+  },
+  "payabli": {
+   "name": "Payabli",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Backend"
    ]
   }
  }
