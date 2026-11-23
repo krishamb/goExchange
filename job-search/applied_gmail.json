@@ -26428,6 +26428,16 @@
    "roles": [
     "Senior Director, Data, Analytics and Reporting"
    ]
+  },
+  "cytel": {
+   "name": "Cytel",
+   "dates": [
+    "2026-11-23"
+   ],
+   "count": 1,
+   "roles": [
+    "Vice President, Software Development"
+   ]
   }
  }
 }
