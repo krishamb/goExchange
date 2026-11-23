@@ -1225,7 +1225,7 @@
     "2026-10-18",
     "2026-11-22"
    ],
-   "count": 81,
+   "count": 84,
    "roles": [
     "Manager of Applied AI Architecture, Startups",
     "Engineering Manager, Agent Runtime Platform",
@@ -1307,7 +1307,10 @@
     "Staff Software Engineer, Search",
     "Engineering Manager, Inference Infrastructure",
     "Staff+ Software Engineer, ML Inference Path",
-    "Engineering Manager, Enterprise"
+    "Engineering Manager, Enterprise",
+    "Staff+ Software Engineer, Billing Platform",
+    "Engineering Manager, Claude Platform",
+    "Staff+ Software Engineer, Platform Safety"
    ],
    "via": "applicant's own application (Greenhouse confirmation email)",
    "status": "rejected 2026-10-22 (Manager of Applied AI Architecture, Startups)"
