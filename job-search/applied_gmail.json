@@ -3145,9 +3145,10 @@
    "dates": [
     "2026-07-25",
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-22"
    ],
-   "count": 3,
+   "count": 4,
    "note": "rejected (do not re-apply); gmail history (pre-Sep 2026)",
    "rejected": true,
    "roles": [
@@ -5382,10 +5383,13 @@
    "name": "Databricks",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-22"
    ],
-   "count": 2,
-   "roles": [],
+   "count": 3,
+   "roles": [
+    "Field CTO - America Industries"
+   ],
    "status": "rejected 2026-09-30 (Staff Software Engineer): after review, decided not to move forward with application"
   },
   "datacor": {
@@ -7078,9 +7082,10 @@
    "name": "FalconX",
    "dates": [
     "2026-10-08",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Trading Systems Infrastructure Staff Engineer"
    ]
@@ -8040,9 +8045,10 @@
    "name": "Galaxy",
    "dates": [
     "2026-10-10",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "VP, Forward Deployed Lead"
    ]
@@ -13655,11 +13661,13 @@
    "name": "OKX",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior AI Full-Stack / Applications Engineer"
+    "Senior AI Full-Stack / Applications Engineer",
+    "Director, Model Risk \u2014 AI & Fraud"
    ],
    "status": "rejected 2026-10-29 (Senior AI Full-Stack / Applications Engineer): Greenhouse notice: moving forward with other candidates who more closely fit current needs."
   },
@@ -16156,9 +16164,10 @@
    "name": "Ripple",
    "dates": [
     "2026-09-29",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-11-22"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Senior Staff Software Engineer, Financial Crimes"
    ],
@@ -21788,9 +21797,10 @@
   "treasuryprime": {
    "name": "Treasury Prime",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
     "Vice President of Engineering"
    ]
@@ -23912,9 +23922,10 @@
   "digitalasset": {
    "name": "Digital Asset",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-22"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
     "Director, Data Architecture (AI Enablement)"
    ],
