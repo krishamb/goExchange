@@ -17789,10 +17789,13 @@
   "snorkelai": {
    "name": "Snorkel AI",
    "dates": [
-    "2026-09-29"
+    "2026-09-29",
+    "2026-11-24"
    ],
-   "count": 1,
-   "roles": [],
+   "count": 2,
+   "roles": [
+    "Engineering Manager, Platform"
+   ],
    "status": "rejected 2026-10-01 (Senior / Staff Software Engineer - AI / ML): after careful consideration, not moving forward; rejected 2026-10-07 (VP, Head of Forward Deployed Engineering): after careful consideration, not moving forward"
   },
   "snout": {
