@@ -5747,7 +5747,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-24 (Principal Software Engineer): Workday status email: position filled"
   },
   "dexcom": {
    "company": "Dexcom",
