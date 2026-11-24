@@ -3539,10 +3539,14 @@
   "campfire": {
    "name": "Campfire",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-24"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "AI Engineer - Agents"
+   ]
   },
   "campminder": {
    "name": "Campminder",
@@ -15752,7 +15756,15 @@
   "quora": {
    "company": "quora",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Senior Machine Learning Engineer, Ads - Quora (Remote)",
+    "Staff Machine Learning Engineer, Recommendation Systems - Quora (Remote)"
+   ],
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2
   },
   "quorumsoftware": {
    "name": "Quorum Software",
@@ -16572,7 +16584,14 @@
   "rula": {
    "company": "rula",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Sr. Software Engineer - RCM"
+   ],
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1
   },
   "runtime": {
    "name": "Runtime (YC)",
@@ -22444,12 +22463,14 @@
   "horizon3ai": {
    "name": "Horizon3.ai",
    "dates": [
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-24"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Director of Engineering, Webapp & AI Attack",
-    "Staff Software Engineer, Data Platform"
+    "Staff Software Engineer, Data Platform",
+    "Engineering Manager, Reliability Tools"
    ]
   },
   "runlayer": {
@@ -24574,11 +24595,13 @@
   "virtahealth": {
    "name": "Virta Health",
    "dates": [
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Engineer, Machine Learning"
+    "Senior Engineer, Machine Learning",
+    "Senior Manager, Applied AI & Machine Learning"
    ]
   },
   "sycamore": {
@@ -26384,9 +26407,10 @@
    "name": "OpenAI",
    "dates": [
     "2026-11-22",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-24"
    ],
-   "count": 36,
+   "count": 68,
    "roles": [
     "Engineering Manager, Multimodal (API)",
     "Engineering Manager, Core Services",
@@ -26423,7 +26447,39 @@
     "Full Stack Software Engineer, ChatGPT Finances",
     "Full Stack Software Engineer - Codex for Finance",
     "Full Stack Software Engineer, Monetization Platform",
-    "Software Engineer, Financial Engineering"
+    "Software Engineer, Financial Engineering",
+    "Research Engineer",
+    "Researcher, Safety Training",
+    "Software Engineer, Data Infrastructure",
+    "Software Engineer, Developer Productivity",
+    "Data Engineer",
+    "Software Engineer, Observability",
+    "Software Engineer, Collective Communication",
+    "Software Engineer, Youth Well-Being",
+    "Software Engineer, Fleet Management",
+    "Software Engineer, Fleet Infrastructure",
+    "Software Engineer, Agent Infrastructure",
+    "Researcher, Training",
+    "Software Engineer, Frontier Systems - Power Management",
+    "Software Engineer, Compute Foundations Systems",
+    "Software Engineer, Compute - Storage",
+    "Forward Deployed Software Engineer - SF",
+    "Software Engineer, Resilience Engineering",
+    "Backend Software Engineer, Gov",
+    "Full Stack Engineer, Fleet Scheduling",
+    "ChatGPT Performance Engineer",
+    "Software Engineer, GPU Infrastructure - HPC",
+    "Software Engineer, Database Systems",
+    "Software Engineer, Core Services",
+    "Software Engineer, Caching Infrastructure",
+    "RE/RS, Data Understanding (MM)",
+    "Software Engineer, Cloud Infrastructure",
+    "Research Engineer, Privacy",
+    "Research Engineer, Codex",
+    "Full Stack Software Engineer, Growth",
+    "Forward Deployed Software Engineer, Gov",
+    "Software Engineer, Research Developer Productivity",
+    "Training Performance Engineer"
    ]
   },
   "thinkingmachineslab": {
@@ -26449,11 +26505,13 @@
   "kira": {
    "name": "kira",
    "dates": [
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Senior Software Engineer (Backend, Infrastructure Focus)"
    ]
   },
   "notion": {
@@ -26470,11 +26528,13 @@
   "hive": {
    "name": "hive",
    "dates": [
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Machine Learning Manager"
    ]
   },
   "numeric": {
@@ -27064,6 +27124,116 @@
    "count": 1,
    "roles": [
     "Senior Software Engineer, Backend"
+   ]
+  },
+  "kobiemarketing": {
+   "name": "Kobie Marketing",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Platform Engineering"
+   ]
+  },
+  "peopleloop": {
+   "name": "PeopleLoop",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "lambda": {
+   "name": "Lambda",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Director - Network Software Services"
+   ]
+  },
+  "exa": {
+   "name": "exa",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Software Engineer, Knowledge Engine \u2013 Data Infrastructure"
+   ]
+  },
+  "rundoo": {
+   "name": "rundoo",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Engineering"
+   ]
+  },
+  "pika": {
+   "name": "pika",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Principal Software Engineer, Product"
+   ]
+  },
+  "boon": {
+   "name": "boon",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer"
+   ]
+  },
+  "sandboxaq": {
+   "name": "sandboxaq",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Manager, AI Engineering"
+   ]
+  },
+  "liltcorporate": {
+   "name": "lilt-corporate",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Fullstack Engineer - Internal Tools"
+   ]
+  },
+  "montecarlodata": {
+   "name": "montecarlodata",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Backend Engineer"
+   ]
+  },
+  "volta": {
+   "name": "volta",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director Infrastructure Engineering"
    ]
   }
  }
