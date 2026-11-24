@@ -20799,9 +20799,10 @@
   "vumedi": {
    "name": "Vumedi",
    "dates": [
-    "2026-10-13"
+    "2026-10-13",
+    "2026-11-24"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Director of Engineering"
    ],
