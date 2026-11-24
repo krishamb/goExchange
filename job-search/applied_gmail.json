@@ -16779,9 +16779,10 @@
    "name": "Samsara",
    "dates": [
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-24"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff Software Engineer, Maps Services",
     "ML/AI - Supply Chain"
