@@ -26071,7 +26071,8 @@
    "count": 1,
    "roles": [
     "Director of Technology & Innovation"
-   ]
+   ],
+   "status": "rejected 2026-11-25 (Director of Technology & Innovation): Teamtailor email (Future Bylt powered by DeAngelis Diamond): pursuing another candidate"
   },
   "prove": {
    "name": "Prove",
@@ -27274,6 +27275,13 @@
    "roles": [
     "Sr. Director, Technical Support"
    ]
+  },
+  "deangelisdiamond": {
+   "name": "DeAngelis Diamond",
+   "dates": [],
+   "count": 0,
+   "roles": [],
+   "status": "rejected 2026-11-25 (Director of Technology & Innovation (Future Bylt)): Same rejection as Future Bylt (parent company); blocks both names"
   }
  }
 }
