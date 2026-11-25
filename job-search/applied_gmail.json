@@ -11139,7 +11139,8 @@
    "count": 3,
    "roles": [
     "Senior Full Stack Engineer, AgentControl"
-   ]
+   ],
+   "status": "rejected 2026-11-25 (Engineering Manager, Cloud Engineering): Talent team email: position filled, no other openings on that team"
   },
   "laurel": {
    "name": "Laurel",
@@ -13667,7 +13668,7 @@
    "roles": [
     "Director, Software Engineering"
    ],
-   "status": "rejected 2026-10-28 (Director, Software Engineering)"
+   "status": "rejected 2026-10-28 (Director, Software Engineering); rejected 2026-11-25 (Director of Data Science): Email 'Important information about your application': not proceeding"
   },
   "oatfi": {
    "name": "OatFi",
