@@ -2072,7 +2072,8 @@
    "count": 2,
    "roles": [
     "Sr. Manager, Enterprise Data & Analytics"
-   ]
+   ],
+   "status": "rejected 2026-11-25 (Sr. Manager, Enterprise Data & Analytics): Workday email 'Update on your candidacy': not moving forward"
   },
   "automatisor": {
    "company": "automatisor",
@@ -16242,7 +16243,9 @@
    "dates": [
     "2026-10-02"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-25 (Technical Lead, Data Engineering): Greenhouse email 'Information about your application to Revance Therapeutics': not proceeding"
   },
   "revealtechnology": {
    "name": "Reveal Technology",
@@ -20256,7 +20259,7 @@
    "roles": [
     "Senior Data Engineer"
    ],
-   "status": "rejected 2026-11-18 (Lead Software Engineer): not moving forward"
+   "status": "rejected 2026-11-18 (Lead Software Engineer): not moving forward; closed 2026-11-25 (Senior Data Engineer): Greenhouse email 'Update from Unite Us': role paused, no longer hiring"
   },
   "unity": {
    "name": "Unity",
@@ -27818,6 +27821,14 @@
    "roles": [
     "VP, Data Engineering and Data Science"
    ]
+  },
+  "relay": {
+   "name": "Relay",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": []
   }
  }
 }
