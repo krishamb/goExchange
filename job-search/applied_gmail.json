@@ -8394,7 +8394,9 @@
    "dates": [
     "2026-10-08"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "rejected 2026-11-25 (Sr Principal AI Software Engineer): Workday email 'Job Application Update' R5054740: not selected"
   },
   "gfiber": {
    "name": "gFiber",
@@ -27293,6 +27295,16 @@
    "count": 1,
    "roles": [
     "Sr Robotics Software Manager, Perception"
+   ]
+  },
+  "ryzlabs": {
+   "name": "RYZ Labs",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": [
+    "CTO"
    ]
   }
  }
