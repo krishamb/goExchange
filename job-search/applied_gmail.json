@@ -7577,11 +7577,13 @@
    "name": "Five9",
    "dates": [
     "2026-09-29",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-24"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Senior Manager, Engineering - AI Agents"
+    "Senior Manager, Engineering - AI Agents",
+    "Senior Director, GTM Data Engineering"
    ]
   },
   "fivetran": {
@@ -21504,9 +21506,13 @@
   "yipitdata": {
    "name": "YipitData",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-24"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Head of Data Feeds"
+   ]
   },
   "yohadayzimmermancompany": {
    "name": "Yoh - A Day & Zimmerman Company",
@@ -27744,6 +27750,36 @@
    "count": 1,
    "roles": [
     "Engineering Manager"
+   ]
+  },
+  "edmentum": {
+   "name": "Edmentum",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering (Portfolio)"
+   ]
+  },
+  "wurl": {
+   "name": "Wurl",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer, Ad Platform"
+   ]
+  },
+  "nikohealth": {
+   "name": "NikoHealth",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Platform Engineer"
    ]
   }
  }
