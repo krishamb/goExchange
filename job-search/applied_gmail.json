@@ -18833,7 +18833,7 @@
     "Senior Solution Architect",
     "Forward Deployed AI Engineer"
    ],
-   "status": "rejected 2026-11-10: Greenhouse email 'Talkdesk: Update': not moving forward"
+   "status": "rejected 2026-11-10: Greenhouse email 'Talkdesk: Update': not moving forward; rejected 2026-11-25: Greenhouse 'Talkdesk: Update' rejection (moved forward with other candidates)"
   },
   "talkspace": {
    "name": "Talkspace",
@@ -21321,11 +21321,13 @@
   "wpromote": {
    "name": "Wpromote",
    "dates": [
-    "2026-10-17"
+    "2026-10-17",
+    "2026-11-25"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "VP of Engineering"
+    "VP of Engineering",
+    "Director, AI Solutions"
    ],
    "via": "applied by the applicant on the 48h Ashby page (applicant said so on Oct 17)"
   },
@@ -27261,6 +27263,16 @@
    ],
    "count": 1,
    "roles": []
+  },
+  "corelight": {
+   "name": "Corelight",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr. Director, Technical Support"
+   ]
   }
  }
 }
