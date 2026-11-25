@@ -1609,10 +1609,16 @@
   "armadin": {
    "name": "Armadin",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-24"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 3,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Technical Lead Manager - Platform",
+    "Member of Technical Staff - Agent",
+    "Forward Deployed Engineer"
+   ]
   },
   "armanino": {
    "name": "Armanino",
@@ -1812,10 +1818,14 @@
   "astronomer": {
    "name": "astronomer",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-24"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 2,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Senior Software Engineer, AI Orchestration (OSS) - Bay Area"
+   ]
   },
   "asurion": {
    "name": "Asurion",
@@ -4630,7 +4640,14 @@
   "coder": {
    "company": "coder",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Senior Forward Deployed Engineer (United States)"
+   ],
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1
   },
   "codexa": {
    "company": "codexa",
@@ -9287,10 +9304,16 @@
   "hex": {
    "name": "Hex",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-24"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 3,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Engineering Director, AI Engineering",
+    "Engineering Lead",
+    "AI Research Engineer"
+   ]
   },
   "heygen": {
    "name": "HeyGen",
@@ -9942,11 +9965,13 @@
   "infisical": {
    "name": "Infisical",
    "dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Senior Full Stack Engineer"
+    "Senior Full Stack Engineer",
+    "Engineering Manager"
    ]
   },
   "inflectionai": {
@@ -12315,7 +12340,15 @@
   "metriport": {
    "company": "metriport",
    "first": "2026-10-05",
-   "via": "cloud_greenhouse"
+   "via": "cloud_greenhouse",
+   "roles": [
+    "Staff Data Engineer",
+    "Senior AI/ML Engineer"
+   ],
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2
   },
   "metropolis": {
    "name": "Metropolis",
@@ -12452,10 +12485,16 @@
   "mirendil": {
    "name": "mirendil",
    "dates": [
-    "2026-10-08"
+    "2026-10-08",
+    "2026-11-24"
    ],
-   "count": 1,
-   "via": "ashby browser run (part 1)"
+   "count": 3,
+   "via": "ashby browser run (part 1)",
+   "roles": [
+    "Member of Technical Staff, Infrastructure",
+    "Member of Technical Staff, Model Evaluation",
+    "Member of Technical Staff, Inference"
+   ]
   },
   "miris": {
    "name": "Miris",
@@ -12479,14 +12518,16 @@
    "name": "Mistral",
    "dates": [
     "2026-10-08",
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-24"
    ],
-   "count": 3,
+   "count": 4,
    "via": "Gmail reconciliation 2026-10-19 (read-only search since Oct 7)",
    "roles": [
     "Engineering Manager, Partnerships",
     "Compute Solution Architect",
-    "Research Engineer, Data Infrastructure"
+    "Research Engineer, Data Infrastructure",
+    "Engineering Manager, Inference"
    ]
   },
   "miter": {
@@ -16030,9 +16071,10 @@
    "name": "reflection",
    "dates": [
     "2026-10-05",
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-24"
    ],
-   "count": 18,
+   "count": 19,
    "note": "prior Ashby queue (applied-before per user)",
    "roles": [
     "Member of Technical Staff - Engineering Lead, Compute Platform",
@@ -16052,7 +16094,8 @@
     "Member of Technical Staff, Data Flywheel",
     "Member of Technical Staff - Multilingual Data",
     "Member of Technical Staff - Pre-Training Evals Infra",
-    "Member of Technical Staff - Pre-Training  Data"
+    "Member of Technical Staff - Pre-Training  Data",
+    "Forward Deployed Engineer"
    ],
    "status": "rejected 2026-10-12: after careful review, moving forward with other candidates"
   },
@@ -16125,9 +16168,13 @@
   "replit": {
    "name": "Replit (applied; do-not-reapply)",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-24"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer, Financial Infrastructure"
+   ]
   },
   "requesttechnologyllc": {
    "name": "Request Technology, LLC",
@@ -19127,10 +19174,14 @@
   "tensorwave": {
    "name": "Tensorwave",
    "dates": [
-    "2026-10-05"
+    "2026-10-05",
+    "2026-11-24"
    ],
-   "count": 1,
-   "note": "prior Ashby queue (applied-before per user)"
+   "count": 2,
+   "note": "prior Ashby queue (applied-before per user)",
+   "roles": [
+    "Network Automation Software Lead"
+   ]
   },
   "tenstorrent": {
    "name": "Tenstorrent",
@@ -23242,11 +23293,13 @@
   "gendigital": {
    "name": "Gen Digital",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Lead, Forward Deployed Engineer"
+    "Lead, Forward Deployed Engineer",
+    "Sr.Director Engineering for Licensing/Accounts"
    ]
   },
   "zania": {
@@ -23487,11 +23540,14 @@
   "modal": {
    "name": "Modal",
    "dates": [
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Systems Engineering Manager"
+    "Systems Engineering Manager",
+    "Inference Engineering and Product Lead",
+    "Forward Deployed Engineer - ML"
    ]
   },
   "origin": {
@@ -26436,7 +26492,7 @@
     "2026-11-23",
     "2026-11-24"
    ],
-   "count": 68,
+   "count": 187,
    "roles": [
     "Engineering Manager, Multimodal (API)",
     "Engineering Manager, Core Services",
@@ -26505,17 +26561,161 @@
     "Full Stack Software Engineer, Growth",
     "Forward Deployed Software Engineer, Gov",
     "Software Engineer, Research Developer Productivity",
-    "Training Performance Engineer"
+    "Training Performance Engineer",
+    "Global Head of Applied AI Engineering, SMB / Mid-Market",
+    "Integrations Architect - Enterprise Systems",
+    "Senior Staff Software Engineer, Identity",
+    "Tech Lead, Deployment & Operations \u2014 Custom Infrastructure",
+    "Thermal Engineer",
+    "Software Engineer, Monetization Delivery",
+    "Software Engineer, ChatGPT Infrastructure",
+    "Camera Software Engineer, Consumer Devices",
+    "Software Engineer, Monetization Product & Platform",
+    "Software Engineer, Codex Enterprise",
+    "Software Engineer, Build Systems / CI",
+    "Backend Engineer, Consumer Devices",
+    "Software Engineer, Platform Systems",
+    "Machine Learning Engineer, Monetization AI/ML",
+    "Product Evals Engineer, ChatGPT Learning",
+    "Operating Systems Engineer | Consumer Devices",
+    "Operating Systems Engineer, Linux Kernel | Consumer Devices",
+    "Value Engineer - San Francisco",
+    "Training - Runtime Foundations Engineer",
+    "Software Engineer, Delivery / CD",
+    "Software Engineer, Localization",
+    "Software Engineer, Codex Core Agents",
+    "Product Manufacturing Engineer - PCBA",
+    "Software Engineer, Infrastructure - Analytics Platform",
+    "Software Engineer, Foundations Search",
+    "Performance Modeling Engineer",
+    "Software Engineer, Kernel Performance & AI Tooling",
+    "Performance Modeling Engineer ~2",
+    "Connectivity Software Engineer, Consumer Devices",
+    "Machine Learning Engineer, API Multicloud",
+    "Software Engineer, Compute Infrastructure",
+    "Capacity Systems Software Engineer",
+    "Backend Software Engineer, Applied Foundations",
+    "Full-Stack Software Engineer, Applied Foundations",
+    "Systems Software Engineer, BMC & Management Plane",
+    "Software Engineer, API Safety",
+    "AI Systems Engineer, Codex Agents",
+    "Software Engineer, Ad Formats",
+    "Agent Post-Training, Computer Use Research",
+    "Engineering Technician, Actuators",
+    "Software Engineer, Monetization ML Infrastructure",
+    "Host Systems Software Engineer",
+    "Software Engineer, Cloud Agents",
+    "Software Engineer, API Multicloud",
+    "Full Stack Software Engineer, ChatGPT ImageGen",
+    "Software Engineer, Private Computing",
+    "Full Stack Software Engineer, Consumer Verticals",
+    "System Performance Engineer, Consumer Devices",
+    "Software Engineer, ChatGPT Shopping",
+    "Software Engineer, Codex Cyber",
+    "Full Stack Engineer, Enterprise Expansions",
+    "Software Engineer, AI accelerator Runtime",
+    "Early Access Deployment Engineer",
+    "Software Engineer - Data Aquisition (systems)",
+    "Software Engineer, Enterprise Verticals",
+    "Software Engineer, API Multimodal",
+    "Software Engineer, API Agents",
+    "Software Engineer, API Enterprise Controls",
+    "Forward Deployed Engineer (FDE), Healthcare - SF",
+    "Software Engineer, Plugin Developer Platform",
+    "Software Engineer, Model Runtime",
+    "Controls Engineer, BMS & EPMS",
+    "Systems Integration Manager | Consumer Devices",
+    "Software Engineer, Presence",
+    "Full Stack Software Engineer, DotCom",
+    "Software Engineer, Native Learning Experiences",
+    "Machine Learning Engineer, Implicit Signals",
+    "Software Engineer, Safety Engineering",
+    "Product Engineer, Cyber",
+    "Researcher, Agent Safety, Training and Evaluations",
+    "Software Engineer, Host Assurance",
+    "Full Stack Software Engineer, Product Explorations",
+    "Software Engineer, Manufacturing Infrastructure",
+    "Manufacturing Engineer, Motors & Actuators",
+    "Forward Deployed Engineer (FDE) - SF",
+    "Software Engineer, Healthcare",
+    "Software Engineer, API Frontiers",
+    "Developer Experience Engineer, Cyber",
+    "Software Engineer, Plugin Ecosystem",
+    "Full-Stack Software Engineer, Child Safety Tools & Systems",
+    "Software Engineer, Search Infrastructure",
+    "Software Engineer, CI/CD & ML Infrastructure",
+    "Software Engineer, IP Infrastructure",
+    "Software Engineer, Product Velocity",
+    "Software Engineer, Implicit Signals",
+    "Software Engineer, Enterprise Controls",
+    "Physical Network & Structured Cabling Engineer",
+    "Software Engineer, Shop/Feed Ads",
+    "Software Engineer, Cooperative AI",
+    "SoC Engineer",
+    "Client Platform Engineer",
+    "Forward Deployed Engineer (FDE) - AI Infra - SF",
+    "Software Engineer, TPU Compilers",
+    "Network Infrastructure Engineer, Global Network Infra (WAN)",
+    "Founding Software Engineer, Physical Engineering",
+    "Software Engineer, Infranomics",
+    "Software Engineer, Traffic Infrastructure",
+    "EDA Cloud & Developer Infrastructure Engineer",
+    "Founding Full Stack Software Engineer, Consulting",
+    "Software Engineer, Agent Platform",
+    "Forward Deployed Engineer (FDE), Cyber - NYC",
+    "Project Manager, Infrastructure Transformation",
+    "Forward Deployed Engineer (FDE), Cyber - SF",
+    "Full Stack Software Engineer, Consumer Health",
+    "Full Stack Software Engineer, Travel",
+    "Full Stack Software Engineer, Dots for Companies",
+    "Manager, Forward Deployed Engineering- NYC",
+    "Forward Deployed Software Engineer - NYC",
+    "Forward Deployed Software Engineer - Seattle",
+    "Value Engineer - NYC",
+    "Software Engineer, Ads Manager",
+    "Forward Deployed Engineer - UAE",
+    "Forward Deployed Engineer (FDE), Healthcare - NYC",
+    "Machine Learning Engineer, Core Experimentation",
+    "Forward Deployed Engineer (FDE) - Seattle",
+    "Software Engineer, Full Stack \u2014 Dots",
+    "Software Engineer, Backend \u2014 Dots",
+    "Field Service Engineer",
+    "Fire Protection Engineer"
    ]
   },
   "thinkingmachineslab": {
    "name": "Thinking Machines Lab",
    "dates": [
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 25,
    "roles": [
-    "Engineering Manager"
+    "Engineering Manager",
+    "Software Engineer, Sandboxing",
+    "Software Engineer, Data Infrastructure",
+    "Software Engineer, Inference",
+    "Software Engineer, Infrastructure",
+    "Software Engineer, Distributed Systems",
+    "Software Engineer, Systems Generalist",
+    "Research Engineer, Infrastructure, Numerics",
+    "Research Engineer, Infrastructure, Inference",
+    "Research Engineer, Infrastructure, Training Systems",
+    "Research Engineer, Infrastructure, Kernels",
+    "Software Engineer, Supercomputing",
+    "Research, Pre-Training Data",
+    "Research, Post-Training Evals",
+    "Software Engineer, Evaluation Platform / Infra",
+    "Software Engineer, Research Tools",
+    "Software Engineer, Product",
+    "Software Engineer, Tinker Infrastructure",
+    "Research Software Engineer, Post Training",
+    "Research, Tinker, RL Systems",
+    "Research, Mid Training",
+    "Research Engineer, Web Crawling",
+    "Software Engineer, Privacy & Data Governance",
+    "Software Engineer, Frameworks & Libraries",
+    "Software Engineer, Training Infrastructure"
    ]
   },
   "harperinsure": {
@@ -27024,11 +27224,14 @@
   "hyperbolic": {
    "name": "hyperbolic",
    "dates": [
-    "2026-11-23"
+    "2026-11-23",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 3,
    "roles": [
-    "Senior Data Engineer"
+    "Senior Data Engineer",
+    "VP of Engineering",
+    "Member of Technical Staff - Platform"
    ]
   },
   "inworldai": {
@@ -27305,6 +27508,242 @@
    "count": 1,
    "roles": [
     "CTO"
+   ]
+  },
+  "sparrow": {
+   "name": "sparrow",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Engineering Manager"
+   ]
+  },
+  "vidmob": {
+   "name": "vidmob",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Director, Engineering"
+   ]
+  },
+  "reflow": {
+   "name": "reflow",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior AI Engineer"
+   ]
+  },
+  "dave": {
+   "name": "dave",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Manager, Data Engineering"
+   ]
+  },
+  "tennr": {
+   "name": "tennr",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Lead Software Engineer"
+   ]
+  },
+  "truemed": {
+   "name": "truemed",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Engineer - Checkout"
+   ]
+  },
+  "protege": {
+   "name": "protege",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Staff Software Engineer, Transformations"
+   ]
+  },
+  "glide": {
+   "name": "glide",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Fullstack"
+   ]
+  },
+  "duet": {
+   "name": "duet",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Product Engineer, RCM Operations",
+    "VP of Engineering"
+   ]
+  },
+  "litellm": {
+   "name": "litellm",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Senior Backend Engineer",
+    "Staff Backend Engineer"
+   ]
+  },
+  "andera": {
+   "name": "andera",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Product Engineering Lead"
+   ]
+  },
+  "bedrockrobotics": {
+   "name": "bedrock-robotics",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Product Engineering Lead",
+    "Software Engineer, Fleet Platform"
+   ]
+  },
+  "generalcompute": {
+   "name": "generalcompute",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Head of Infrastructure"
+   ]
+  },
+  "mavria": {
+   "name": "mavria",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward-Deployed Engineer"
+   ]
+  },
+  "meckaai": {
+   "name": "mecka.ai",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Member of Technical Staff, Data Platform",
+    "Senior Product Engineer, Sciences"
+   ]
+  },
+  "preferencemodel": {
+   "name": "preference-model",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Member of Technical Staff - ML Platform Engineer"
+   ]
+  },
+  "roxdatacorp": {
+   "name": "rox-data-corp",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer (FDE)"
+   ]
+  },
+  "speakeasy": {
+   "name": "speakeasy",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Forward Deployed Engineer"
+   ]
+  },
+  "town": {
+   "name": "town",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Backend Engineer"
+   ]
+  },
+  "genesis": {
+   "name": "genesis",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Platform",
+    "Training / AI Infrastructure"
+   ]
+  },
+  "clickup": {
+   "name": "clickup",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 2,
+   "roles": [
+    "Manager, Engineering - Product",
+    "Staff Backend Engineer, Hierarchy"
+   ]
+  },
+  "filevine": {
+   "name": "filevine",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineer - Developer Experience"
+   ]
+  },
+  "domu": {
+   "name": "domu",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Engineering Manager"
    ]
   }
  }
