@@ -6087,11 +6087,13 @@
    "name": "DoorDash",
    "dates": [
     "2026-09-29",
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-25"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Software Engineer, Traffic"
+    "Staff Software Engineer, Traffic",
+    "Engineering Manager, Advertiser Experience"
    ]
   },
   "doordashusa": {
@@ -6957,12 +6959,14 @@
    "name": "Everlaw",
    "dates": [
     "2026-10-12",
-    "2026-10-29"
+    "2026-10-29",
+    "2026-11-25"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
     "Staff AI Engineer",
-    "Senior Software Engineer, AI Platform"
+    "Senior Software Engineer, AI Platform",
+    "Director, Engineering"
    ]
   },
   "everpure": {
