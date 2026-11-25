@@ -27781,6 +27781,26 @@
    "roles": [
     "Staff Platform Engineer"
    ]
+  },
+  "connectwise": {
+   "name": "ConnectWise",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": [
+    "Senior Software Engineering Manager"
+   ]
+  },
+  "acumatica": {
+   "name": "Acumatica",
+   "dates": [
+    "2026-11-25"
+   ],
+   "count": 1,
+   "roles": [
+    "VP, Data Engineering and Data Science"
+   ]
   }
  }
 }
