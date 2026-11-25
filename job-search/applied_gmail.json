@@ -6708,7 +6708,8 @@
    "roles": [
     "Solutions Architect - West",
     "Director of Engineering"
-   ]
+   ],
+   "status": "rejected 2026-11-25 ((role not named)): Greenhouse email 'Update on your application to Endor Labs': not moving forward"
   },
   "energyhub": {
    "name": "EnergyHub",
@@ -11437,7 +11438,8 @@
    "roles": [
     "Senior Infrastructure Software Engineer",
     "Engineering Manager, Infrastructure Software"
-   ]
+   ],
+   "status": "rejected 2026-11-25 (Engineering Manager, Infrastructure Software): Greenhouse email: not moving forward"
   },
   "lightsage": {
    "name": "lightsage",
@@ -13298,7 +13300,10 @@
   "nimblerobotics": {
    "company": "Nimble Robotics",
    "first": "2026-10-05",
-   "via": "gmail confirmation (Oct 3-6 scan)"
+   "via": "gmail confirmation (Oct 3-6 scan)",
+   "roles": [],
+   "dates": [],
+   "status": "rejected 2026-11-25 ((role not named)): Greenhouse email 'Please keep in touch for future opportunities': not moving forward"
   },
   "ninjaholdings": {
    "name": "NinjaHoldings",
