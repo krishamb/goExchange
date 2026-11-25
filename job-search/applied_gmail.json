@@ -8923,7 +8923,9 @@
    "dates": [
     "2026-10-03"
    ],
-   "count": 1
+   "count": 1,
+   "roles": [],
+   "status": "closed 2026-11-25 (Director of Data Engineering): Greenhouse email 'Update from Gr\u00fcns': position filled"
   },
   "guardanthealth": {
    "name": "Guardant Health",
@@ -10714,7 +10716,8 @@
    "count": 1,
    "roles": [
     "Sr Staff Distributed Systems Engineer, Platform - Storage"
-   ]
+   ],
+   "status": "closed 2026-11-25 (Sr Staff Distributed Systems Engineer, Platform - Storage): Kentik email: role put on hold (Kentik joined Infoblox)"
   },
   "keycard": {
    "company": "keycard",
@@ -26356,7 +26359,8 @@
    "roles": [
     "Staff Backend Engineer, Business Technology",
     "Senior Backend Engineer"
-   ]
+   ],
+   "status": "rejected 2026-11-25 (Senior Backend Engineer): Greenhouse email 'Update about your application to Ernesta': moving forward with other candidates"
   },
   "prolificmachines": {
    "name": "Prolific Machines",
