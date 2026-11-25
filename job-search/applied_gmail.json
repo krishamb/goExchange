@@ -3905,11 +3905,13 @@
    "name": "Censys",
    "dates": [
     "2026-09-30",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-24"
    ],
-   "count": 2,
+   "count": 3,
    "roles": [
-    "Staff Scanning Engineer"
+    "Staff Scanning Engineer",
+    "Senior Engineering Manager, Exposure Management"
    ]
   },
   "centerforinternetsecurity": {
@@ -27282,6 +27284,16 @@
    "count": 0,
    "roles": [],
    "status": "rejected 2026-11-25 (Director of Technology & Innovation (Future Bylt)): Same rejection as Future Bylt (parent company); blocks both names"
+  },
+  "bluerivertech": {
+   "name": "bluerivertech",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "Sr Robotics Software Manager, Perception"
+   ]
   }
  }
 }
