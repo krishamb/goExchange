@@ -20499,13 +20499,15 @@
    "name": "Veeam",
    "dates": [
     "2026-10-05",
-    "2026-11-09"
+    "2026-11-09",
+    "2026-11-25"
    ],
-   "count": 2,
+   "count": 3,
    "note": "rejected (do not re-apply)",
    "rejected": true,
    "roles": [
-    "Senior Software Engineer"
+    "Senior Software Engineer",
+    "Staff Software Engineer, Connectors (DPSM)"
    ]
   },
   "veeamsoftware": {
