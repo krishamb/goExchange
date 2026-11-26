@@ -20862,9 +20862,13 @@
   "voyagertechnologies": {
    "name": "Voyager Technologies",
    "dates": [
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-26"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Staff Software Engineer \u2013 Agentic Platform Core"
+   ]
   },
   "voyagertechnologiesinc": {
    "company": "voyagertechnologiesinc",
