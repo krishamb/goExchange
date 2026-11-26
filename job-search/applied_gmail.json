@@ -3241,9 +3241,13 @@
    "name": "Bridgeway Benefit Technologies",
    "dates": [
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-11-26"
    ],
-   "count": 2
+   "count": 3,
+   "roles": [
+    "Manager, Data Engineering"
+   ]
   },
   "brightai": {
    "name": "BrightAI",
@@ -10381,9 +10385,13 @@
   "ixllearning": {
    "name": "IXL Learning",
    "dates": [
-    "2026-10-03"
+    "2026-10-03",
+    "2026-11-26"
    ],
-   "count": 1
+   "count": 2,
+   "roles": [
+    "Senior Software Engineer"
+   ]
   },
   "jared": {
    "company": "jared",
@@ -20727,11 +20735,13 @@
   "vestwell": {
    "name": "Vestwell",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-26"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "Manager, Software Engineer (AI)"
+    "Manager, Software Engineer (AI)",
+    "Staff Software Engineer"
    ]
   },
   "via": {
