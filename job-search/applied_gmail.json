@@ -1423,11 +1423,13 @@
   "applovin": {
    "name": "AppLovin",
    "dates": [
-    "2026-10-16"
+    "2026-10-16",
+    "2026-11-24"
    ],
-   "count": 1,
+   "count": 2,
    "roles": [
-    "ML Data Infrastructure Engineer"
+    "ML Data Infrastructure Engineer",
+    "Senior Software Engineer, Ad Platform"
    ]
   },
   "applyapply": {
@@ -27830,6 +27832,16 @@
    ],
    "count": 1,
    "roles": []
+  },
+  "apexanalytix": {
+   "name": "apexanalytix",
+   "dates": [
+    "2026-11-24"
+   ],
+   "count": 1,
+   "roles": [
+    "VP of Engineering"
+   ]
   }
  }
 }
