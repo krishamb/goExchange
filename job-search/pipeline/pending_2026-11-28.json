@@ -1,0 +1,67 @@
+{
+ "saved": "2026-11-28T04:30Z (container reset wiped the session scratchpad at ~04:22Z; this file keeps the open work in the repo)",
+ "one_click_new": [
+  {
+   "ats": "ashby",
+   "company": "Polygon Labs",
+   "title": "Senior Rust Engineer",
+   "url": "https://jobs.ashbyhq.com/polygon-labs/b07d2908-84a7-45b6-87d6-0b96f2f258d9",
+   "apply_url": "https://jobs.ashbyhq.com/polygon-labs/b07d2908-84a7-45b6-87d6-0b96f2f258d9/application",
+   "note": "Published 2026-11-27 19:06Z; Remote (EMEA, Americas or APAC; USA listed); pay not stated; blockchain payments infrastructure (Agglayer + paychannels), Rust."
+  }
+ ],
+ "apply_myself_new": [
+  {
+   "company": "Forescout",
+   "title": "Sr. Full Stack Software Engineer",
+   "url": "https://jobs.jobvite.com/forescout/job/o7MsAfwF",
+   "note": "Posted 2026-11-27; remote US or Plano/Dallas hybrid; US citizens only (FedRAMP). Jobvite bot stopped on export-control questions and a typed attestation only the applicant can complete."
+  },
+  {
+   "company": "Canyon Code",
+   "title": "Head of Enterprise AI",
+   "url": "https://canyoncode.ai/about/careers",
+   "note": "Posted 2026-11-27; Sunnyvale (Silicon Valley), founding team; pre-seed AI-infrastructure startup (CanyonOS). Applications by email only via the careers page link (subject 'Head of Enterprise AI')."
+  }
+ ],
+ "workday_holds_after_2026-11-28T16:14:41Z": [
+  {
+   "company": "SLR Consulting",
+   "title": "Chief Technology Leader \u2013 Americas",
+   "tenant": "slrconsulting.wd103.myworkdayjobs.com/SLRCareers",
+   "note": "Remote USA, Built In 2026-11-28; CTO-level digital-products leadership (IoT, cloud, data platforms); not consulting delivery. Workday bot."
+  },
+  {
+   "company": "Roswell Park Comprehensive Cancer Center",
+   "title": "Chief Data & Artificial Intelligence Officer and Vice President",
+   "tenant": "roswellpark.wd5.myworkdayjobs.com/ExternalCareers",
+   "note": "LinkedIn remote filter; apply only if the Workday posting is remote US."
+  },
+  {
+   "company": "KBI Biopharma",
+   "title": "Senior Quality Systems Software Architect",
+   "tenant": "wd1 (from kbibiopharma.com careers)",
+   "note": "Check remote US, 7-day window, and that it is software architecture."
+  },
+  {
+   "company": "BioMarin (probable; LinkedIn listing posted by BioSpace)",
+   "title": "Head of AI and Data Solutions Delivery",
+   "tenant": "BioMarin Workday (find tenant)",
+   "note": "San Rafael CA; employer not verified; 1 prior BioMarin application (different role)."
+  }
+ ],
+ "blocked_until": {
+  "linkedin": "2026-11-29T02:40Z (429 at 2026-11-28T02:40:23Z)",
+  "jobvite": "~2026-11-28T15:18Z",
+  "workday": "2026-11-28T16:14:41Z",
+  "greenhouse_boards_api": "2026-11-28T04:19:36Z (then harvest every other hour)",
+  "himalayas_search_api": "retry 2026-11-28 daytime (429 twice on 2026-11-27)",
+  "bamboohr_recruitee": "~2026-11-28T10:35Z"
+ },
+ "never_read": [
+  "seatgeek Greenhouse board",
+  "a16z Consider board",
+  "indeed.com",
+  "theladders.com"
+ ]
+}
