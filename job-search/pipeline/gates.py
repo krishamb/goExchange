@@ -86,17 +86,32 @@ def prior(company):
     roles = [r for v in hits for r in (v.get("roles") or [])]
     return {"entries": len(hits), "roles": roles, "count": max([v.get("count") or 0 for v in hits] or [0])}
 
+_SLUGRX = re.compile(r"(?:jobs\.ashbyhq\.com|jobs\.lever\.co|(?:job-)?boards\.greenhouse\.io)/([A-Za-z0-9%._-]+)", re.I)
+def slug_of(u):
+    m = _SLUGRX.search(u or "")
+    return m.group(1).lower() if m and m.group(1).lower() not in ("embed", "v1") else ""
+def same_company(x, k1, k2, slug=""):
+    """x (a queued / listed row) is the company (norm k1 / key k2) by name, alias, or the ATS board slug in its URL."""
+    if any(n and (key(n) == k2 or norm(n) == k1) for n in [x.get("company")] + list(x.get("aliases") or [])): return True
+    s = slug_of(x.get("url")) or slug_of(x.get("apply_url"))
+    return bool(s) and (s == slug or norm(s) in (k1, k2))
+
 def allow(company, title, url="", extra=()):
     """extra: rows the calling sweep already kept in this run (dicts with company / title), counted like queued rows."""
     k1, k2 = norm(company), key(company)
     blob = " ".join([company or "", title or "", url or ""])
     if NEVER.search(blob) or EXTRA_NEVER.search(blob): return False, "never-apply list"
+    u0 = (url or "").split("?")[0].rstrip("/").lower()
+    if u0 and any(u0 in ((x.get("url") or "").split("?")[0].rstrip("/").lower(), (x.get("apply_url") or "").split("?")[0].rstrip("/").lower().removesuffix("/application"))
+                  for x in list(queued()) + list(extra)):
+        return False, "same role already queued / listed (same posting URL)"   # catches company-name aliases (e.g. an ATS slug)
     if k1 in INTERVIEWING or k2 in INTERVIEWING: return False, "interviewing with the applicant"
     nolimit = k2 in NO_LIMIT or k1 in NO_LIMIT   # applicant 2026-11-22: lift limits for NVIDIA / frontier labs (a rejection of one role does not block the others)
     if not nolimit and (k1 in REJECTED or k2 in REJECTED): return False, "rejected the applicant before"
     p = prior(company)
     if any(same_role(title, r) for r in p["roles"]): return False, "same role already applied"
-    q = [x for x in list(queued()) + list(extra) if key(x.get("company")) == k2 or norm(x.get("company")) == k1]
+    slug = slug_of(url)
+    q = [x for x in list(queued()) + list(extra) if same_company(x, k1, k2, slug)]
     q = [x for x in q if not any(same_role(x.get("title"), r) for r in p["roles"])]   # a listed role the applicant has since applied to counts once
     if any(same_role(title, x.get("title")) for x in q): return False, "same role already queued / listed"
     if nolimit: return True, f"ok (no-limit company, {len(p['roles'])} prior)"
