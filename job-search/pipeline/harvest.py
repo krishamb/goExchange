@@ -60,7 +60,7 @@ def loc_ok(locs, remote, wp):
     if US_CITY.search(s): return True, "remote (US city listed)"
     return False, "remote outside the US"
 
-STAFF = re.compile(r"jobgether|talent solutions|staffing|recruit|headhunt|search partners|true-talent|bjakcareer|lensa|jobot|cybercoders|hackajob|meet-archer|digital waffle|oho group|signify technology|futuretech", re.I)
+STAFF = re.compile(r"sourcedirect|raydar|miratech|actionet|devaltus|slalom|deloitte|accenture|cognizant|infosys|wipro|\btcs\b|tata consultancy|capgemini|\bepam\b|globant|provectus|lazer technologies|tech mahindra|ntt data|jobgether|talent solutions|staffing|recruit|headhunt|search partners|true-talent|bjakcareer|lensa|jobot|cybercoders|hackajob|meet-archer|digital waffle|oho group|signify technology|futuretech", re.I)
 def pay_max(s):
     v = [float(a.replace(",", "")) * (1000 if k.lower() == "k" else 1) for a, k in re.findall(r"\$\s?([\d,]+(?:\.\d+)?)\s*([kK]?)", s or "")]
     v = [x for x in v if x >= 1000]
