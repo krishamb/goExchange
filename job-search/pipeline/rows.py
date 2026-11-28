@@ -3,7 +3,8 @@
 rows.json (repository, no personal data) holds every role routed to the applicant's files:
   route "one_click" (Ashby / Lever), "apply_myself" (everything without a bot), or "bot_hold" (a bot lane that
   cannot submit yet; listed in the Apply Myself file under "Waiting for a bot" so nothing goes stale unseen).
-Each row: id, route, ats, company, title, url, apply_url, note, added (UTC ISO), sent (list of UTC ISO stamps).
+Each row: id, route, ats, company, title, url, apply_url, note, added (UTC ISO), sent (list of UTC ISO stamps),
+optional dropped (reason: the row is left out of every later file).
 
   rows.py add <rows.json-like file>   add rows (list of dicts with route / company / title / url ...); duplicates skipped
   rows.py status                      unsent counts per route
@@ -65,7 +66,7 @@ def main():
     elif cmd == "build":
         mode = sys.argv[2] if len(sys.argv) > 2 else "new"; days = float(sys.argv[3]) if len(sys.argv) > 3 else 7
         cut = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() - days * 86400))
-        pick = [x for x in R if (not x["sent"] if mode == "new" else x["added"] >= cut) and not applied(x)]
+        pick = [x for x in R if not x.get("dropped") and (not x["sent"] if mode == "new" else x["added"] >= cut) and not applied(x)]
         stamp = time.strftime("%Y-%m-%d_%H%MZ", time.gmtime()); paths = []
         oc = [x for x in pick if x["route"] == "one_click"]; am = [x for x in pick if x["route"] == "apply_myself"]; bh = [x for x in pick if x["route"] == "bot_hold"]
         what = "New roles since the last file" if mode == "new" else f"Open roles from the last {days:g} days"

@@ -82,5 +82,7 @@
 {"url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers", "tenant": "cvshealth", "site": "CVS_Health_Careers", "company": "CVS Health"},
 {"url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers", "tenant": "cisco", "site": "Cisco_Careers", "company": "Cisco"},
 {"url": "https://baldwin.wd1.myworkdayjobs.com/Baldwin", "tenant": "baldwin", "site": "Baldwin", "company": "The Baldwin Group"},
-{"url": "https://asurion.wd5.myworkdayjobs.com/AsurionCareers_US", "tenant": "asurion", "site": "AsurionCareers_US", "company": "Asurion"}
+{"url": "https://asurion.wd5.myworkdayjobs.com/AsurionCareers_US", "tenant": "asurion", "site": "AsurionCareers_US", "company": "Asurion"},
+{"url": "https://extremenetworks.wd503.myworkdayjobs.com/Extreme_Networks", "tenant": "extremenetworks", "site": "Extreme_Networks", "company": "Extreme Networks"},
+{"url": "https://jsrglobal.wd1.myworkdayjobs.com/KBI_Biopharma", "tenant": "jsrglobal", "site": "KBI_Biopharma", "company": "KBI Biopharma"}
 ]
