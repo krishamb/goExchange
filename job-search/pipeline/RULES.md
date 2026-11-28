@@ -51,6 +51,16 @@ here, in the repository, and are committed after each change. Personal data neve
 - Salary answer, when asked: "$220,000 - $350,000 (negotiable, depending on scope)".
 - Before every commit: no email addresses and no phone numbers in the diff.
 
+## Sweep tools (pipeline/, rebuilt 2026-11-28)
+Rows land in `<scratchpad>/harvest/`; review them, then route them with `rows.py add`.
+- `harvest.py <tag> [days] [ats]`: Ashby / Lever every check-in; Greenhouse every other hour (`gh_last` in blocks.json).
+- `builtin.py <tag>`: Built In remote / Bay Area listings, every check-in.
+- `feeds.py <tag>`: RemoteOK, We Work Remotely, Working Nomads every check-in; Remotive at most every 6 h and Jobicy
+  every 3 h (the tool enforces both).
+- `getro.py <tag> [hours]`: VC / crypto Getro boards, every few hours.
+- `gates.py "Company|Title"`: the company / role gates; `rows.py`: the file rows.
+- Job-alert emails (Indeed, LinkedIn, Built In ...): read in Gmail, resolve each role on the employer's own site.
+
 ## Seen cutoff after the reset
 The old pipeline had screened every Ashby / Lever posting published before 2026-11-28T03:40Z and every Greenhouse
 posting published before 2026-11-27T04:19:36Z (its rows are in the applicant's files, applied, or dropped on closer
