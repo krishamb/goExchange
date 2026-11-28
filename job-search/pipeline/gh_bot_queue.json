@@ -1,57 +1,5 @@
 {
  "note": "Greenhouse rows waiting for the bot (needs the private profile + resumes in JOBS_DIR). Re-check the 7-day window and the gates before launching.",
- "rows": [
-  {
-   "ats": "greenhouse",
-   "board": "doordashusa",
-   "company": "DoorDash USA",
-   "title": "Principal Engineer AI/ML Platform",
-   "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8417670",
-   "posted_iso": "2026-11-25T18:24Z",
-   "locs": [
-    "San Francisco, CA; Sunnyvale, CA; Seattle, WA"
-   ],
-   "pay": "",
-   "why_loc": "bay area"
-  },
-  {
-   "ats": "greenhouse",
-   "board": "doordashusa",
-   "company": "DoorDash USA",
-   "title": "Engineering Manager, Advertiser Experience",
-   "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8416784",
-   "posted_iso": "2026-11-25T12:23Z",
-   "locs": [
-    "San Francisco, CA; Sunnyvale, CA"
-   ],
-   "pay": "",
-   "why_loc": "bay area"
-  },
-  {
-   "ats": "greenhouse",
-   "board": "dataiku",
-   "company": "Dataiku",
-   "title": "Sr Data Platform Engineer",
-   "url": "https://job-boards.greenhouse.io/dataiku/jobs/6270038004",
-   "posted_iso": "2026-11-24T16:49Z",
-   "locs": [
-    "France, Remote; Spain, Remote; United Kingdom, Remote"
-   ],
-   "pay": "",
-   "why_loc": "remote (US)"
-  },
-  {
-   "ats": "greenhouse",
-   "board": "smartsheet",
-   "company": "Smartsheet",
-   "title": "Senior Software Engineer I, Agent Engineering (Remote Eligible)",
-   "url": "https://job-boards.greenhouse.io/smartsheet/jobs/8412206",
-   "posted_iso": "2026-11-23T19:22Z",
-   "locs": [
-    " -REMOTE, USA-"
-   ],
-   "pay": "",
-   "why_loc": "remote (US)"
-  }
- ]
+ "rows": [],
+ "cleared": "2026-11-28T05:02Z: the first rows all predated the old pipeline's last screen (already handled)"
 }

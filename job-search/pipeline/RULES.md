@@ -47,6 +47,11 @@ here, in the repository, and are committed after each change. Personal data neve
 - Salary answer, when asked: "$220,000 - $350,000 (negotiable, depending on scope)".
 - Before every commit: no email addresses and no phone numbers in the diff.
 
+## Seen cutoff after the reset
+The old pipeline had screened every Ashby / Lever posting published before 2026-11-28T03:40Z and every Greenhouse
+posting published before 2026-11-27T04:19:36Z (its rows are in the applicant's files, applied, or dropped on closer
+reading), so harvest.py only surfaces newer postings (HARVEST_ALL=1 disables the cutoff).
+
 ## Private files (outside the repo; must be re-provided after a container reset)
 `JOBS_DIR` (the bots default to `<scratchpad>/f`): profile.json, the resume PDFs (main, executive, architect),
 the cover letter PDF, answers.json, wf_creds.json (email-code reader / Workday sign-in) and the private rejected list.

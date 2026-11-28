@@ -116,9 +116,15 @@ for a in ([] if FROM else ATS):
     if a == "greenhouse": BLOCKS["gh_last"] = {"t": time.time()}; json.dump(BLOCKS, open(BLK, "w"), indent=1)
 if FROM: jobs = json.load(open(FROM))
 else: json.dump(jobs, open(os.path.join(OUTD, f"{tag}_raw.json"), "w"))
+# 2026-11-28: the old scratchpad pipeline (lost in the reset) had already screened every Ashby / Lever posting published
+# before its last cycle (c627, ~03:43Z Nov 28) and every Greenhouse posting before its boards-api pause (04:19:36Z Nov 27);
+# those rows are already in the applicant's files, applied, or were dropped on closer reading -> only newer postings are new.
+OLD_SCREENED = {"ashby": "2026-11-28T03:40:00", "lever": "2026-11-28T03:40:00", "greenhouse": "2026-11-27T04:19:36"}
+OLD_CUT = {a: datetime.datetime.fromisoformat(v).replace(tzinfo=datetime.timezone.utc).timestamp() for a, v in OLD_SCREENED.items()}
 keep, seen = [], set()
 for j in jobs:
     if not j["ts"] or j["ts"] < CUT: W("older than window"); continue
+    if j["ts"] < OLD_CUT.get(j["ats"], 0) and not os.environ.get("HARVEST_ALL"): W("screened by the old pipeline"); continue
     t = j["title"]
     if not ENG.search(t) or not LEVEL.search(t) or NO.search(t): W("title"); continue
     if re.search(r"part[- ]?time|intern|temporary|contract", j["emp"], re.I): W("not full-time"); continue
