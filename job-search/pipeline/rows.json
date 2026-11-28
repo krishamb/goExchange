@@ -144,5 +144,17 @@
   "sent": [],
   "id": "ce55a7ca24b2",
   "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "oracle",
+  "company": "JPMorganChase",
+  "title": "Senior Lead Software Engineer - Java or Python, Agentic AI",
+  "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210770122",
+  "apply_url": "",
+  "note": "Posted 2026-11-27; SF Bay Area (Jersey City, NJ, United States / Palo Alto, CA, United States / Jersey City, NJ, US); pay not stated; Oracle Recruiting Cloud (bot).",
+  "id": "6c3a35379572",
+  "added": "2026-11-28T09:01:54Z",
+  "sent": []
  }
 ]

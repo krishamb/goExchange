@@ -25,6 +25,10 @@ FORBID = re.compile(r"(^|\.)(indeed\.com|theladders\.com|a16z\.com|consider\.com
 BLK = os.path.join(HERE, "blocks.json")
 try: BLOCKS = json.load(open(BLK))
 except Exception: BLOCKS = {}
+def save_block(key, val):   # merge-on-write: other sweeps may have written blocks.json since this one started
+    try: cur = json.load(open(BLK))
+    except Exception: cur = {}
+    cur[key] = val; BLOCKS[key] = val; json.dump(cur, open(BLK, "w"), indent=1)
 src = open(os.path.join(HERE, "harvest.py")).read(); ns = {"re": re}
 for nm in ("ENG", "LEVEL", "NO", "NONUS", "USOK", "BAY", "US_CITY", "STAFF", "FRONTIER", "FIN"):
     exec(re.search(rf"^{nm} = re\.compile\(.*\)$", src, re.M).group(0), ns)
@@ -32,7 +36,6 @@ exec(src[src.index("def loc_ok("):src.index("STAFF = re.compile(")], ns)
 exec(src[src.index("def pay_max("):src.index("def txt(")], ns)
 loc_ok, pay_max = ns["loc_ok"], ns["pay_max"]
 REFUSED = set()
-def saveb(): json.dump(BLOCKS, open(BLK, "w"), indent=1)
 
 class _NoRedir(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *a, **k): return None
@@ -42,7 +45,7 @@ def get(u, follow=True):
     if not h or FORBID.search(h) or h in REFUSED or time.time() < float(BLOCKS.get(h, {}).get("until", 0)): return None, "skipped"
     if base in MIN_GAP and "/api/" in urllib.parse.urlsplit(u).path:   # the call limits are for the APIs, not the job pages
         if time.time() - float(BLOCKS.get(base + "_last", {}).get("at_ts", 0)) < MIN_GAP[base]: return None, "too soon"
-        BLOCKS[base + "_last"] = {"at_ts": time.time()}; saveb()
+        save_block(base + "_last", {"at_ts": time.time()})
     time.sleep(1.5)
     try:
         r = (urllib.request.urlopen if follow else _noredir.open)(urllib.request.Request(u, headers=UA), timeout=40)
@@ -51,7 +54,7 @@ def get(u, follow=True):
     except urllib.error.HTTPError as e:
         if not follow and e.code in (301, 302, 303, 307, 308): return urllib.parse.urljoin(u, e.headers.get("Location") or ""), e.code
         if e.code in (401, 403, 406, 429, 503):
-            REFUSED.add(h); BLOCKS[h] = {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}; saveb()
+            REFUSED.add(h); save_block(h, {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())})
             print("  REFUSED", e.code, h, "- paused 24 h")
         return None, e.code
     except Exception as e: return None, type(e).__name__
@@ -98,7 +101,6 @@ def feed_rows(s):
         for j in (json.loads(b) if b else []):
             yield {"src": s, "company": j.get("company_name"), "title": j.get("title"), "page": j.get("url"), "apply": "", "ts": pts(j.get("pub_date")),
                    "locs": [j.get("location") or ""], "pay": None, "desc": j.get("description")}
-    if s in ("remoteok", "wwr", "remotive", "jobicy", "workingnomads"): print(f"{s}: read")
 
 ATSRX = re.compile(r"https?://[^\s\"'<>]*(greenhouse\.io|ashbyhq\.com|lever\.co|myworkdayjobs\.com|oraclecloud\.com|jobvite\.com|smartrecruiters\.com|workable\.com|bamboohr\.com|rippling|recruitee\.com|breezy\.hr|applytojob\.com|teamtailor\.com|personio|pinpointhq\.com|icims\.com|dover\.com|wellfound\.com)[^\s\"'<>]*", re.I)
 def apply_link(r):
@@ -141,10 +143,12 @@ def ats_check(u):
         if k in u: return {"myworkdayjobs": "workday", "oraclecloud": "oracle", "jobvite": "jobvite"}[k], None, True
     return (urllib.parse.urlsplit(u).hostname or "").replace("www.", ""), None, True
 
-keep, why, seen = [], {}, set()
+keep, why, seen, COUNT = [], {}, set(), {}
 def W(k): why[k] = why.get(k, 0) + 1
 for s in SRC:
+    n = 0
     for r in feed_rows(s):
+        n += 1; COUNT[s] = n
         t, co = (r["title"] or "").strip(), (r["company"] or "").strip()
         k = (g.key(co), t.lower())
         if not t or not co or k in seen: continue
@@ -158,7 +162,7 @@ for s in SRC:
         if not ok: W("location: " + lw); continue
         if r["pay"] and r["pay"] < 180000: W("pay below floor"); continue
         if not r["pay"] and pay_max(txt(r["desc"])) and pay_max(txt(r["desc"])) < 180000: W("pay below floor (description)"); continue
-        okg, gw = g.allow(co, t, r["page"] or "")
+        okg, gw = g.allow(co, t, r["page"] or "", extra=keep)
         if not okg: W("gate: " + gw.split("(")[0].strip()); continue
         u = apply_link(r)
         if u and FORBID.search(urllib.parse.urlsplit(u).hostname or ""): u = ""   # never list or fetch links onto forbidden hosts
@@ -172,5 +176,5 @@ for s in SRC:
                              + ("" if u else " Apply from the feed page (no employer link found)."), "feed_page": r["page"]})
 keep.sort(key=lambda x: (x["route"], x["company"].lower()))
 json.dump(keep, open(os.path.join(OUTD, f"feeds_{tag}.json"), "w"), indent=0)
-print(f"feeds {tag}: kept {len(keep)} | refused {sorted(REFUSED)} | dropped {dict(sorted(why.items(), key=lambda x: -x[1]))}")
+print(f"feeds {tag}: rows read { {f: COUNT.get(f, 0) for f in SRC} } (0 = not read: paused, too soon or failed) | kept {len(keep)} | refused {sorted(REFUSED)} | dropped {dict(sorted(why.items(), key=lambda x: -x[1]))}")
 for x in keep: print(f"  {x['route']:12} | {x['company'][:26]:26} | {x['title'][:58]:58} | {x['note'][:60]:60} | {x['url'][:100]}")

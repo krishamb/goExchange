@@ -17,11 +17,14 @@ UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, 
 BLK = os.path.join(HERE, "blocks.json"); LOCK = threading.Lock()
 try: BLOCKS = json.load(open(BLK))
 except Exception: BLOCKS = {}
+def save_block(key, val):   # merge-on-write: other sweeps may have written blocks.json since this one started
+    try: cur = json.load(open(BLK))
+    except Exception: cur = {}
+    cur[key] = val; BLOCKS[key] = val; json.dump(cur, open(BLK, "w"), indent=1)
 def paused(host): return NOW < float(BLOCKS.get(host, {}).get("until", 0))
 def pause(host, code):
     with LOCK:
-        BLOCKS[host] = {"until": time.time() + 86400, "code": code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-        json.dump(BLOCKS, open(BLK, "w"), indent=1)
+        save_block(host, {"until": time.time() + 86400, "code": code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())})
 REFUSED = set()
 def get(u, t=30):
     h = urllib.parse.urlsplit(u).hostname
@@ -38,7 +41,7 @@ import urllib.parse
 
 ENG = re.compile(r"engineer|engineering|software|platform|infrastructure|\bdata\b|\bai\b|\bml\b|machine learning|architect|\btechnology\b|\btechnical\b|developer|backend|back-end|full[- ]?stack|\bsystems\b|\bcto\b|chief technology|forward deployed", re.I)
 LEVEL = re.compile(r"\b(cto|chief|vp|svp|vice president|head of|director|manager|principal|staff|senior|sr\.?|lead|architect|distinguished|fellow)\b", re.I)
-NO = re.compile(r"\b(sales|pre-?sales|account (executive|manager|director)|solutions? (engineer|consultant|architect)\w*|customer (success|support|experience|engineer)\w*|support engineer|product (manager|management|owner|marketing|design)|design\w*|security|devsecops|devops|sre\b|site reliability|reliability|\bqa\b|quality|\btest\w*|front[- ]?end|\bios\b|android|mobile|hardware|firmware|mechanical|electrical|manufactur\w*|\basic\b|\bsoc\b|silicon|\bchip|\brtl\b|verification|analog|physical design|\brf\b|research\w*|recruit\w*|talent|marketing|legal|counsel|intern\b|internship|junior|associate|founding|member of technical staff|\bmts\b|co-?founder|contract\w*|clearance|ts/sci|polygraph|field|implementation|professional services|technical writer|teacher|tutor|medical|clinical|nurse|pharma\w*|supply chain|finance\b|financial planning|accounting|risk\b|compliance|business development|partnerships?|creative|advertising|operations\b|people|hr\b|human resources|program manager|project manager|scrum|delivery manager|controls engineer|robotic controls|optical|laser|fiber|amplifier|photonic\w*|power\b|data center|site development|planner|data scientist|developer advocate|developer relations|devrel|advocate|evangelist|governance|payroll|partner\b|consultant|asset management|cooling|safety|r&d|optics|mechatronics|controls\b|analyst|detection|incident response|\bcpu\b|\bgpu (design|architect)|master data|\bepic\b|robotics engineer|deployments\b)", re.I)
+NO = re.compile(r"\b(sales|pre-?sales|account (executive|manager|director)|solutions? (engineer|consultant|architect)\w*|customer (success|support|experience|engineer)\w*|support engineer|product (manager|management|owner|marketing|design)|design\w*|security|devsecops|devops|sre\b|site reliability|reliability|\bqa\b|quality|\btest\w*|front[- ]?end|\bios\b|android|mobile|hardware|firmware|mechanical|electrical|manufactur\w*|\basic\b|\bsoc\b|silicon|\bchip|\brtl\b|verification|analog|physical design|\brf\b|research\w*|recruit\w*|talent|marketing|legal|counsel|intern\b|internship|junior|associate|founding|member of technical staff|\bmts\b|co-?founder|contract\w*|clearance|ts/sci|polygraph|field|implementation|professional services|technical writer|teacher|tutor|medical|clinical|nurse|pharma\w*|supply chain|finance\b|financial planning|accounting|risk\b|compliance|business development|partnerships?|creative|advertising|operations\b|people|hr\b|human resources|program manager|project manager|scrum|delivery manager|controls engineer|robotic controls|optical|laser|fiber|amplifier|photonic\w*|power\b|data center|site development|planner|data scientist|developer advocate|developer relations|devrel|advocate|evangelist|governance|payroll|partner\b|consultant|asset management|cooling|safety|r&d|optics|mechatronics|controls\b|analyst|detection|incident response|\bcpu\b|\bgpu (design|architect)|master data|\bepic\b|robotics engineer|deployments\b|network (access|security|engineer\w*|architect\w*|operations|administrat\w*)|\bnac\b|wireless|enterprise connectivity|telecom\w*)", re.I)
 FRONTIER = re.compile(r"^(openai|xai|x\.ai|spacex ?si|anthropic|meta|thinking machines|thinkingmachines|ssi|safe superintelligence|mistral|cohere|deepmind|google deepmind)$", re.I)
 FIN = re.compile(r"financ|payment|billing|fintech|revenue|treasury|accounting|commerce|monetiz|trading|risk", re.I)
 NONUS = re.compile(r"\b(malaysia|kuala lumpur|china|beijing|shanghai|shenzhen|hong kong|taiwan|taipei|thailand|bangkok|new zealand|nz|wellington|auckland|pakistan|bangladesh|egypt|cairo|morocco|saudi|qatar|costa rica|uruguay|guatemala|canada|toronto|vancouver|montreal|mexico|brazil|argentina|colombia|chile|peru|uk|united kingdom|london|england|ireland|dublin|europe|emea|apac|germany|berlin|munich|france|paris|spain|madrid|barcelona|portugal|lisbon|netherlands|amsterdam|poland|warsaw|india|bengaluru|bangalore|hyderabad|pune|singapore|australia|sydney|japan|tokyo|korea|israel|tel aviv|switzerland|zurich|sweden|stockholm|denmark|norway|finland|italy|romania|ukraine|philippines|vietnam|indonesia|uae|dubai|south africa|nigeria|kenya|turkey|czech|hungary|austria|belgium|greece|estonia|latvia|lithuania|serbia|croatia)\b", re.I)
@@ -113,7 +116,7 @@ def W(k): why[k] = why.get(k, 0) + 1
 for a in ([] if FROM else ATS):
     with cf.ThreadPoolExecutor(WORKERS[a]) as ex:
         for res in ex.map(FN[a], B.get(a, [])): jobs.extend(res)
-    if a == "greenhouse": BLOCKS["gh_last"] = {"t": time.time()}; json.dump(BLOCKS, open(BLK, "w"), indent=1)
+    if a == "greenhouse": save_block("gh_last", {"t": time.time()})
 if FROM: jobs = json.load(open(FROM))
 else: json.dump(jobs, open(os.path.join(OUTD, f"{tag}_raw.json"), "w"))
 # 2026-11-28: the old scratchpad pipeline (lost in the reset) had already screened every Ashby / Lever posting published
@@ -121,6 +124,8 @@ else: json.dump(jobs, open(os.path.join(OUTD, f"{tag}_raw.json"), "w"))
 # those rows are already in the applicant's files, applied, or were dropped on closer reading -> only newer postings are new.
 OLD_SCREENED = {"ashby": "2026-11-28T03:40:00", "lever": "2026-11-28T03:40:00", "greenhouse": "2026-11-27T04:19:36"}
 OLD_CUT = {a: datetime.datetime.fromisoformat(v).replace(tzinfo=datetime.timezone.utc).timestamp() for a, v in OLD_SCREENED.items()}
+RANK = {"exec": 0, "director": 1, "manager": 2, "staff": 3, "senior": 4}
+jobs.sort(key=lambda j: (RANK.get(g.level(j.get("title")), 9), -(j.get("ts") or 0)))   # leadership first, so the 3-role cap keeps the senior-most roles
 keep, seen = [], set()
 for j in jobs:
     if not j["ts"] or j["ts"] < CUT: W("older than window"); continue
@@ -134,7 +139,7 @@ for j in jobs:
     if pm is not None and pm < 180000: W("pay below floor"); continue
     if STAFF.search(j["company"] + " " + j["board"]): W("staffing / aggregator"); continue
     if (FRONTIER.search(j["company"].strip()) or FRONTIER.search(j["board"].strip())) and not FIN.search(t): W("frontier lab: finance roles only"); continue
-    ok, gw = g.allow(j["company"], t, j["url"])
+    ok, gw = g.allow(j["company"], t, j["url"], extra=keep)
     if not ok: W("gate: " + gw.split("(")[0].strip()); continue
     k = (g.key(j["company"]), t.lower())
     if k in seen: W("duplicate"); continue

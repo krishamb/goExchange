@@ -25,6 +25,10 @@ UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, 
 BLK = os.path.join(HERE, "blocks.json")
 try: BLOCKS = json.load(open(BLK))
 except Exception: BLOCKS = {}
+def save_block(key, val):   # merge-on-write: other sweeps may have written blocks.json since this one started
+    try: cur = json.load(open(BLK))
+    except Exception: cur = {}
+    cur[key] = val; BLOCKS[key] = val; json.dump(cur, open(BLK, "w"), indent=1)
 src = open(os.path.join(HERE, "harvest.py")).read()
 ns = {"re": re}
 for nm in ("ENG", "LEVEL", "NO", "NONUS", "USOK", "BAY", "US_CITY", "STAFF", "FRONTIER", "FIN"):
@@ -40,8 +44,7 @@ def fetch(u):
         with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40) as r: return r.read().decode("utf-8", "replace"), 200
     except urllib.error.HTTPError as e:
         if e.code in (401, 403, 406, 429, 503):
-            BLOCKS[h] = {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-            json.dump(BLOCKS, open(BLK, "w"), indent=1)
+            save_block(h, {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())})
         return None, e.code
     except Exception as e: return None, type(e).__name__
 
@@ -83,7 +86,7 @@ for b in BOARDS:
             if not ok: W("location: " + lw); continue
             mx = j.get("compensationAmountMaxCents")
             if mx and (j.get("compensationCurrency") or "USD") == "USD" and mx / 100 < 180000 and (j.get("compensationPeriod") or "year") in ("year", "period_not_defined"): W("pay below floor"); continue
-            okg, gw = g.allow(co, t, u)
+            okg, gw = g.allow(co, t, u, extra=keep)
             if not okg: W("gate: " + gw.split("(")[0].strip()); continue
             keep.append({"board": b, "company": co, "title": t, "url": u, "created": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime(ts)), "locs": locs, "work_mode": wm,
                          "pay": f"{(j.get('compensationAmountMinCents') or 0)/100:.0f}-{(mx or 0)/100:.0f} {j.get('compensationCurrency') or ''}".strip() if mx else "", "why_loc": lw})

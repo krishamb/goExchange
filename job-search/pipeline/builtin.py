@@ -20,6 +20,10 @@ UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, 
 BLK = os.path.join(HERE, "blocks.json"); SEEN = os.path.join(HERE, "bi_seen.json")
 try: BLOCKS = json.load(open(BLK))
 except Exception: BLOCKS = {}
+def save_block(key, val):   # merge-on-write: other sweeps may have written blocks.json since this one started
+    try: cur = json.load(open(BLK))
+    except Exception: cur = {}
+    cur[key] = val; BLOCKS[key] = val; json.dump(cur, open(BLK, "w"), indent=1)
 try: seen = set(json.load(open(SEEN)))
 except Exception: seen = set()
 src = open(os.path.join(HERE, "harvest.py")).read(); ns = {"re": re}
@@ -34,8 +38,7 @@ def get(u):
         with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30) as r: return r.read().decode("utf-8", "replace")
     except urllib.error.HTTPError as e:
         if e.code in (401, 403, 406, 429, 503):
-            REFUSED.add(h); BLOCKS[h] = {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-            json.dump(BLOCKS, open(BLK, "w"), indent=1); print("  REFUSED", e.code, h, "- paused 24 h")
+            REFUSED.add(h); save_block(h, {"until": time.time() + 86400, "code": e.code, "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}); print("  REFUSED", e.code, h, "- paused 24 h")
         return None
     except Exception: return None
 def txt(x): return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", x or ""))).strip()
@@ -67,7 +70,7 @@ for c in cards.values():
     seen.add(c["id"])   # screened from here on (a job page that cannot be read is un-marked below and retried next run)
     if not ns["ENG"].search(t) or not ns["LEVEL"].search(t) or ns["NO"].search(t): W("title"); continue
     if ns["STAFF"].search(co): W("staffing"); continue
-    ok, gw = g.allow(co, t, c["url"])
+    ok, gw = g.allow(co, t, c["url"])   # company-level gates first; the in-run cap is checked once the job page passes
     if not ok: W("gate: " + gw.split("(")[0].strip()); continue
     h = get(c["url"])
     if not h: W("job page not read"); seen.discard(c["id"]); continue
@@ -90,6 +93,8 @@ for c in cards.values():
     if not remote and not ns["BAY"].search(s): W("location: on-site / hybrid outside the Bay Area"); continue
     if remote and ns["NONUS"].search(s) and not ns["USOK"].search(s): W("location: non-US"); continue
     if (jp.get("datePosted") or "9999") < "2026-11-28" and not os.environ.get("HARVEST_ALL"): W("screened by the old pipeline"); continue   # the old Built In lane ran hourly until 03:43Z Nov 28
+    ok, gw = g.allow(org.get("name") or co, jp.get("title") or t, c["url"], extra=rows)
+    if not ok: W("gate (in-run cap): " + gw.split("(")[0].strip()); continue
     rows.append({"id": c["id"], "company": org.get("name") or co, "title": jp.get("title") or t, "builtin_url": c["url"], "company_site": org.get("sameAs") or org.get("url") or "",
                  "posted": jp.get("datePosted") or "", "remote": remote, "locs": locs, "pay": f"{val.get('minValue')}-{pmax}" if pmax else "",
                  "jd": txt(jp.get("description"))[:3000]})

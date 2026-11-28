@@ -47,9 +47,18 @@ def _never():
 NEVER = _never()
 EXTRA_NEVER = re.compile(r"global settlement|morgan stanley|apaca", re.I)   # applicant 2026-11-25
 
+ROWS = os.path.join(HERE, "rows.json")
 def queued():
-    try: return json.load(open(QUEUED))
-    except Exception: return []
+    """Rows listed or waiting: queued.json plus the file rows in rows.json (rows.py), one entry per company + title."""
+    q = []
+    for f in (QUEUED, ROWS):
+        try: q += json.load(open(f))
+        except Exception: pass
+    seen, out = set(), []
+    for x in q:
+        k = (key(x.get("company")), (x.get("title") or "").strip().lower())
+        if k not in seen: seen.add(k); out.append(x)
+    return out
 
 def add_queued(company, title, url, note=""):
     q = queued(); q.append({"company": company, "title": title, "url": url, "note": note}); json.dump(q, open(QUEUED, "w"), indent=0)
@@ -77,7 +86,8 @@ def prior(company):
     roles = [r for v in hits for r in (v.get("roles") or [])]
     return {"entries": len(hits), "roles": roles, "count": max([v.get("count") or 0 for v in hits] or [0])}
 
-def allow(company, title, url=""):
+def allow(company, title, url="", extra=()):
+    """extra: rows the calling sweep already kept in this run (dicts with company / title), counted like queued rows."""
     k1, k2 = norm(company), key(company)
     blob = " ".join([company or "", title or "", url or ""])
     if NEVER.search(blob) or EXTRA_NEVER.search(blob): return False, "never-apply list"
@@ -86,7 +96,8 @@ def allow(company, title, url=""):
     if not nolimit and (k1 in REJECTED or k2 in REJECTED): return False, "rejected the applicant before"
     p = prior(company)
     if any(same_role(title, r) for r in p["roles"]): return False, "same role already applied"
-    q = [x for x in queued() if key(x.get("company")) == k2 or norm(x.get("company")) == k1]
+    q = [x for x in list(queued()) + list(extra) if key(x.get("company")) == k2 or norm(x.get("company")) == k1]
+    q = [x for x in q if not any(same_role(x.get("title"), r) for r in p["roles"])]   # a listed role the applicant has since applied to counts once
     if any(same_role(title, x.get("title")) for x in q): return False, "same role already queued / listed"
     if nolimit: return True, f"ok (no-limit company, {len(p['roles'])} prior)"
     used = [level(r) for r in p["roles"]] + [level(x.get("title")) for x in q]
