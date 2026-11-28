@@ -18,8 +18,8 @@ OUTD = os.path.join(SC, "harvest"); os.makedirs(OUTD, exist_ok=True)
 tag = sys.argv[1]; DAYS = float(sys.argv[2]) if len(sys.argv) > 2 else 7
 NOW = time.time(); CUT = NOW - DAYS * 86400
 OLD_FEEDS = datetime.datetime(2026, 11, 28, 3, 40, tzinfo=datetime.timezone.utc).timestamp()   # the old feed lane ran hourly until the reset
-SRC = (os.environ.get("FEEDS") or "remoteok,wwr,remotive,jobicy,workingnomads").split(",")
-MIN_GAP = {"remotive.com": 6 * 3600, "jobicy.com": 3 * 3600}
+SRC = (os.environ.get("FEEDS") or "remoteok,wwr,remotive,jobicy,workingnomads,himalayas").split(",")
+MIN_GAP = {"remotive.com": 6 * 3600, "jobicy.com": 3 * 3600, "himalayas.app": 6 * 3600}   # Himalayas: 429 twice on 2026-11-27, so at most every 6 h
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "Accept-Language": "en-US,en;q=0.9"}
 FORBID = re.compile(r"(^|\.)(indeed\.com|theladders\.com|a16z\.com|consider\.com|consider\.co|linkedin\.com)$", re.I)
 BLK = os.path.join(HERE, "blocks.json")
@@ -43,7 +43,7 @@ _noredir = urllib.request.build_opener(_NoRedir)
 def get(u, follow=True):
     h = (urllib.parse.urlsplit(u).hostname or "").lower(); base = re.sub(r"^www\.", "", h)
     if not h or FORBID.search(h) or h in REFUSED or time.time() < float(BLOCKS.get(h, {}).get("until", 0)): return None, "skipped"
-    if base in MIN_GAP and "/api/" in urllib.parse.urlsplit(u).path:   # the call limits are for the APIs, not the job pages
+    if base in MIN_GAP and re.search(r"/api(/|$)", urllib.parse.urlsplit(u).path):   # the call limits are for the APIs, not the job pages
         if time.time() - float(BLOCKS.get(base + "_last", {}).get("at_ts", 0)) < MIN_GAP[base]: return None, "too soon"
         save_block(base + "_last", {"at_ts": time.time()})
     time.sleep(1.5)
@@ -96,6 +96,12 @@ def feed_rows(s):
             mx = j.get("annualSalaryMax") if (j.get("salaryCurrency") or "USD") == "USD" else None
             yield {"src": s, "company": j.get("companyName"), "title": html.unescape(j.get("jobTitle") or ""), "page": j.get("url"), "apply": "", "ts": pts(j.get("pubDate")),
                    "locs": [j.get("jobGeo") or ""], "pay": float(mx) if mx else None, "desc": j.get("jobDescription")}
+    elif s == "himalayas":
+        b, c = get("https://himalayas.app/jobs/api?limit=20&offset=0")
+        for j in (json.loads(b).get("jobs", []) if b else []):
+            usd = (j.get("currency") or "USD") == "USD"
+            yield {"src": s, "company": j.get("companyName"), "title": j.get("title"), "page": j.get("guid") or j.get("applicationLink") or "", "apply": j.get("applicationLink") or "",
+                   "ts": pts(j.get("pubDate")), "locs": list(j.get("locationRestrictions") or []) or [""], "pay": (float(j.get("maxSalary") or 0) or None) if usd else None, "desc": j.get("description")}
     elif s == "workingnomads":
         b, c = get("https://www.workingnomads.com/api/exposed_jobs/")
         for j in (json.loads(b) if b else []):
@@ -112,6 +118,7 @@ def apply_link(r):
             u = loc
             if "remoteok.com" not in (urllib.parse.urlsplit(u).hostname or ""): return u
         return ""
+    if r.get("apply") and not re.search(r"himalayas\.app|remotive\.com|jobicy\.com|weworkremotely\.com|workingnomads\.com", r["apply"]): return r["apply"]   # the feed already gives the employer link
     b, c = get(r["page"])
     if not b: return ""
     m = ATSRX.search(html.unescape(b))
