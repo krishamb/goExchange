@@ -92,6 +92,8 @@ for c in cards.values():
     s = " / ".join(l for l in locs if l)
     if not remote and not ns["BAY"].search(s): W("location: on-site / hybrid outside the Bay Area"); continue
     if remote and ns["NONUS"].search(s) and not ns["USOK"].search(s): W("location: non-US"); continue
+    if re.search(r"support(ing)? (a|the|our) (large )?(federal|government|dod|va)\b|federal (government )?(client|contract|agency|program)|public trust|security clearance|\bts/sci\b|polygraph", txt(jp.get("description")), re.I):
+        W("federal contractor / clearance"); continue
     if (jp.get("datePosted") or "9999") < "2026-11-28" and not os.environ.get("HARVEST_ALL"): W("screened by the old pipeline"); continue   # the old Built In lane ran hourly until 03:43Z Nov 28
     ok, gw = g.allow(org.get("name") or co, jp.get("title") or t, c["url"], extra=rows)
     if not ok: W("gate (in-run cap): " + gw.split("(")[0].strip()); continue
