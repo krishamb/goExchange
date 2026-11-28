@@ -3,7 +3,7 @@
 {"id": "SAPITBusinessSysteme", "company": "SAP IT Business Systeme"},
 {"id": "TheNielsenCompany", "company": "The Nielsen Company"},
 {"id": "experian", "company": "Experian"},
-{"id": "Travoom", "company": "Travoom"},
+{"id": "Travoom", "company": "Travoom", "skip": "salary deferred until the company is funded (effectively unpaid)"},
 {"id": "WesternDigital", "company": "Western Digital"},
 {"id": "SGS", "company": "SGS"},
 {"id": "EVB", "company": "EVB"},
