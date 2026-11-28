@@ -63,6 +63,7 @@ Rows land in `<scratchpad>/harvest/`; review them, then route them with `rows.py
 - `workday.py <tag> [days]`: Workday career sites in wd_tenants.json (84 recovered from git history; skip flags for
   never-apply / consulting / law / staffing tenants), US business hours; WD_DAYS=1 for same-day re-sweeps. The
   `myworkdayjobs.com` key in blocks.json pauses every tenant; the first refusal pauses them all 24 h.
+- `sr.py <tag> [days]`: SmartRecruiters companies in sr_companies.json (no bot: rows go to the Apply Myself file), every few hours.
 - `gates.py "Company|Title"`: the company / role gates; `rows.py`: the file rows.
 - Job-alert emails (Indeed, LinkedIn, Built In ...): read in Gmail, resolve each role on the employer's own site.
 
