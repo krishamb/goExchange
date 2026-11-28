@@ -74,7 +74,7 @@ for t in TEN:
                 sec = " / ".join(s.get("Name") or "" for s in (r.get("secondaryLocations") or []))
                 locs = " / ".join(filter(None, [r.get("PrimaryLocation") or "", sec, wl]))
                 wt = (r.get("WorkplaceTypeCode") or x.get("WorkplaceTypeCode") or r.get("WorkplaceType") or "").upper()
-                remote = "REMOTE" in wt or bool(re.search(r"\b(fully remote|remote[- ]first|this (role|position) (is|can be) (fully )?remote|remote within the (us|united states))\b", body, re.I))
+                remote = "REMOTE" in wt or bool(re.search(r"\b(fully remote|remote[- ]first|this (role|position) (is|can be) (fully )?remote|remote within the (us|united states)|100% telecommut\w*|fully telecommut\w*|telecommut\w* (is )?permitted from any (us|u\.s\.) location|work from anywhere in the (us|united states))\b", body, re.I))
                 us = (r.get("PrimaryLocationCountry") or "") == "US" or bool(ns["USOK"].search(locs))
                 if ns["BAY"].search(locs) and not ("HYBRID" in wt and not ns["BAY"].search(r.get("PrimaryLocation") or "")): place = "SF Bay Area"
                 elif remote and us: place = "remote (US)"

@@ -3,6 +3,7 @@
 {"host": "egug.fa.us2.oraclecloud.com", "site": "CX_1", "company": "American Express", "fin": true},
 {"host": "eofe.fa.us2.oraclecloud.com", "site": "CX_3001", "company": "BNY", "fin": true},
 {"host": "jpmc.fa.oraclecloud.com", "site": "CX_1001", "company": "JPMorganChase", "fin": true},
+{"host": "hcgn.fa.us2.oraclecloud.com", "site": "CX_1", "company": "Citizens", "fin": true},
 {"host": "hctz.fa.us2.oraclecloud.com", "site": "CX_1001", "company": "onsemi", "fin": false},
 {"host": "emit.fa.ca3.oraclecloud.com", "site": "CX_2001", "company": "WSP", "fin": false, "skip": "engineering consulting firm (consulting delivery)"},
 {"host": "fa-ewjt-saasfaprod1.fa.ocs.oraclecloud.com", "site": "CX_2", "company": "EXL", "fin": false, "skip": "analytics / BPO services firm (consulting delivery)"}
