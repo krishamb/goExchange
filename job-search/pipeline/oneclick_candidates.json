@@ -1,0 +1,294 @@
+{
+ "note": "Ashby / Lever rows for the next one-click file. Some may repeat rows already in the applicant's earlier files (the old queued list was lost in the reset).",
+ "rows": [
+  {
+   "ats": "ashby",
+   "board": "affinity.co",
+   "company": "affinity.co",
+   "title": "Senior Engineering Manager, Core",
+   "url": "https://jobs.ashbyhq.com/affinity.co/e21e7884-1325-4d08-8739-dd89ff273c2a",
+   "posted_iso": "2026-11-26T14:25Z",
+   "locs": [
+    "United States",
+    "San Francisco",
+    "New York"
+   ],
+   "pay": "",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "clickhouse",
+   "company": "clickhouse",
+   "title": "Sr. Software Engineer - Control Plane Platform",
+   "url": "https://jobs.ashbyhq.com/clickhouse/6ac48ac0-de03-4897-b956-b6567493d44b",
+   "posted_iso": "2026-11-25T23:09Z",
+   "locs": [
+    "United States"
+   ],
+   "pay": "$142K \u2013 $250K",
+   "why_loc": "remote (US)"
+  },
+  {
+   "ats": "ashby",
+   "board": "architect",
+   "company": "architect",
+   "title": "Chief Architect",
+   "url": "https://jobs.ashbyhq.com/architect/addc6025-b382-462c-9f1f-e12c552fe7d7",
+   "posted_iso": "2026-11-25T20:56Z",
+   "locs": [
+    "Palo Alto"
+   ],
+   "pay": "",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "parallel",
+   "company": "parallel",
+   "title": "Engineering Lead, DevEx",
+   "url": "https://jobs.ashbyhq.com/parallel/08bf27d2-a289-4820-93a4-f163a1fe27b2",
+   "posted_iso": "2026-11-25T18:29Z",
+   "locs": [
+    "San Francisco",
+    "New York, New York",
+    "Palo Alto"
+   ],
+   "pay": "$150K \u2013 $300K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "parallel",
+   "company": "parallel",
+   "title": "Engineering Lead, Core Infrastructure",
+   "url": "https://jobs.ashbyhq.com/parallel/b4dd2e4b-f850-4e90-8283-5bd425424600",
+   "posted_iso": "2026-11-25T18:29Z",
+   "locs": [
+    "San Francisco",
+    "New York, New York",
+    "Palo Alto"
+   ],
+   "pay": "$150K \u2013 $300K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "hadrian-automation",
+   "company": "hadrian-automation",
+   "title": "Director, Build Engineering",
+   "url": "https://jobs.ashbyhq.com/hadrian-automation/9aabb2ce-169b-4552-a28d-8c5bda0f6b0f",
+   "posted_iso": "2026-11-25T17:57Z",
+   "locs": [
+    "Los Angeles, CA",
+    "San Francisco Bay Area, CA"
+   ],
+   "pay": "$300K \u2013 $350K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "sanity",
+   "company": "sanity",
+   "title": "Staff Forward Deployed Engineer",
+   "url": "https://jobs.ashbyhq.com/sanity/d31a0f24-e85c-4038-94f3-98f1e4f2912d",
+   "posted_iso": "2026-11-25T15:12Z",
+   "locs": [
+    "Remote in the United States"
+   ],
+   "pay": "",
+   "why_loc": "remote (US)"
+  },
+  {
+   "ats": "ashby",
+   "board": "webai",
+   "company": "webai",
+   "title": "Senior AI Product Engineer",
+   "url": "https://jobs.ashbyhq.com/webAI/d5fda830-f12d-4350-863b-824f203846da",
+   "posted_iso": "2026-11-25T13:38Z",
+   "locs": [
+    "Austin, TX",
+    "Remote Office",
+    "Washington D.C. Area"
+   ],
+   "pay": "",
+   "why_loc": "remote (US city listed)"
+  },
+  {
+   "ats": "ashby",
+   "board": "helius",
+   "company": "helius",
+   "title": "Senior Platform Engineer, Infrastructure",
+   "url": "https://jobs.ashbyhq.com/helius/ef6939bf-2f91-44fb-ae32-df9ba9272dc3",
+   "posted_iso": "2026-11-24T23:07Z",
+   "locs": [
+    "North America"
+   ],
+   "pay": "",
+   "why_loc": "remote (US)"
+  },
+  {
+   "ats": "ashby",
+   "board": "helius",
+   "company": "helius",
+   "title": "Senior Rust Engineer, Privacy",
+   "url": "https://jobs.ashbyhq.com/helius/30a026a0-ec65-401e-b6e9-86356a74d7fe",
+   "posted_iso": "2026-11-24T22:29Z",
+   "locs": [
+    "North America",
+    "EMEA"
+   ],
+   "pay": "",
+   "why_loc": "remote (US)"
+  },
+  {
+   "ats": "ashby",
+   "board": "ddn",
+   "company": "ddn",
+   "title": "Principal Architect - DEX & AI",
+   "url": "https://jobs.ashbyhq.com/ddn/f6176c6f-1921-4ccc-84f9-907c05d7edd9",
+   "posted_iso": "2026-11-24T20:31Z",
+   "locs": [
+    "Santa Clara Office"
+   ],
+   "pay": "$180K \u2013 $230K \u2022 Offers Equity \u2022 Offers Bonus",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "swarmaero",
+   "company": "swarmaero",
+   "title": "Staff Software Engineer, Real-Time Systems",
+   "url": "https://jobs.ashbyhq.com/swarmaero/0150ba3d-ef35-4c30-8e33-2c0a878cf94d",
+   "posted_iso": "2026-11-24T20:14Z",
+   "locs": [
+    "San Francisco"
+   ],
+   "pay": "$200K \u2013 $310K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "swarmaero",
+   "company": "swarmaero",
+   "title": "Staff Software Engineer, Autonomy ",
+   "url": "https://jobs.ashbyhq.com/swarmaero/96eadbec-9a27-4212-b3bf-a4c06a5671ec",
+   "posted_iso": "2026-11-24T20:14Z",
+   "locs": [
+    "Remote"
+   ],
+   "pay": "$220K \u2013 $300K \u2022 Offers Equity",
+   "why_loc": "remote (region unstated)"
+  },
+  {
+   "ats": "ashby",
+   "board": "swarmaero",
+   "company": "swarmaero",
+   "title": "Staff Forward Deployed Engineer",
+   "url": "https://jobs.ashbyhq.com/swarmaero/a6a64e50-7420-4da0-838d-e6c02cc073dc",
+   "posted_iso": "2026-11-24T20:14Z",
+   "locs": [
+    "Remote"
+   ],
+   "pay": "$220K \u2013 $300K \u2022 Offers Equity",
+   "why_loc": "remote (region unstated)"
+  },
+  {
+   "ats": "ashby",
+   "board": "onoshealth",
+   "company": "onoshealth",
+   "title": "Lead Software Engineer (AI)",
+   "url": "https://jobs.ashbyhq.com/onoshealth/c1930f55-3d31-4634-9786-3c466f36a003",
+   "posted_iso": "2026-11-24T19:57Z",
+   "locs": [
+    "San Francisco"
+   ],
+   "pay": "$200K \u2013 $275K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "scope-labs",
+   "company": "scope-labs",
+   "title": "Head of Engineering (UpNext)",
+   "url": "https://jobs.ashbyhq.com/scope-labs/79585a1a-ae03-46a9-83f0-eb92dd4ff829",
+   "posted_iso": "2026-11-24T16:26Z",
+   "locs": [
+    "Remote"
+   ],
+   "pay": "$120K \u2013 $200K \u2022 Offers Equity",
+   "why_loc": "remote (region unstated)"
+  },
+  {
+   "ats": "ashby",
+   "board": "decagon",
+   "company": "decagon",
+   "title": "Staff Software Engineer, Data Infrastructure",
+   "url": "https://jobs.ashbyhq.com/decagon/68a779f4-5d46-42c9-ab7b-1c7ad3624939",
+   "posted_iso": "2026-11-23T22:37Z",
+   "locs": [
+    "San Francisco",
+    "New York City"
+   ],
+   "pay": "$200K \u2013 $400K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "clickhouse",
+   "company": "clickhouse",
+   "title": "Senior Software Engineer - Data Warehousing & Transformation Ecosystem",
+   "url": "https://jobs.ashbyhq.com/clickhouse/9b55104c-6579-4bd2-9589-afdfe2c2450c",
+   "posted_iso": "2026-11-23T20:21Z",
+   "locs": [
+    "New York",
+    "Philadelphia",
+    "Chicago",
+    "Boston"
+   ],
+   "pay": "$147K \u2013 $238K \u2022 Offers Equity \u2022 Multiple Ranges",
+   "why_loc": "remote (US city listed)"
+  },
+  {
+   "ats": "ashby",
+   "board": "commure",
+   "company": "commure",
+   "title": "Senior Software Engineer, Data Integrations",
+   "url": "https://jobs.ashbyhq.com/Commure/cbb4604d-dcdc-4601-98c0-21a8550768e6",
+   "posted_iso": "2026-11-23T19:33Z",
+   "locs": [
+    "Mountain View, CA",
+    "Los Angeles, CA",
+    "San Francisco, CA"
+   ],
+   "pay": "$180K \u2013 $230K \u2022 Offers Equity",
+   "why_loc": "bay area"
+  },
+  {
+   "ats": "ashby",
+   "board": "vultr",
+   "company": "vultr",
+   "title": "Senior Software Engineer, Cloud Networking",
+   "url": "https://jobs.ashbyhq.com/Vultr/25790d75-6afb-48a1-a6a0-f58cfc2e5bf3",
+   "posted_iso": "2026-11-23T18:03Z",
+   "locs": [
+    "Remote - United States"
+   ],
+   "pay": "",
+   "why_loc": "remote (US)"
+  },
+  {
+   "ats": "ashby",
+   "board": "harvey",
+   "company": "harvey",
+   "title": "Engineering Manager, Production Engineering",
+   "url": "https://jobs.ashbyhq.com/harvey/8e420b36-6711-49dd-8a64-f246270af7d3",
+   "posted_iso": "2026-11-23T16:49Z",
+   "locs": [
+    "San Francisco"
+   ],
+   "pay": "$260K \u2013 $340K \u2022 Offers Equity \u2022 Offers Bonus",
+   "why_loc": "bay area"
+  }
+ ]
+}
