@@ -11,6 +11,10 @@ here, in the repository, and are committed after each change. Personal data neve
 - Ashby and Lever roles go to the one-click file (never submitted from the cloud).
 - Everything else goes to the Apply Myself file (contact-free).
 - Send each file in its own message when 5+ new rows have accumulated, and in the 9 PM routine.
+- Rows for the files live in `pipeline/rows.json` (`rows.py add` a JSON list with route one_click / apply_myself /
+  bot_hold). When 5+ unsent one_click + apply_myself rows exist run `rows.py build new`; in the 9 PM routine run
+  `rows.py build all`. Send each built file in its own SendUserFile call, then `rows.py mark-sent`. Bot-lane roles
+  that cannot submit yet are bot_hold rows, listed last in the Apply Myself file.
 
 ## Screening
 - Pay: the stated maximum must be at least $180K; unstated pay is fine.

@@ -71,28 +71,8 @@
   "theladders.com"
  ],
  "addendum_sent": "2026-11-28T04:25Z: one_click_new, apply_myself_new and the Workday holds above went to the applicant in NEW_ROLES_2026-11-27.html; rows below are not sent yet",
- "unsent_apply_myself": [
-  {
-   "company": "Xnurta",
-   "title": "Chief Technology Officer \u2014 AI Systems & Agentic Intelligence",
-   "url": "https://xnurta.rippling-ats.com/job/1078835/chief-technology-officer-ai-systems-agentic-intelligence",
-   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$500K. AI-native retail-media ad platform (multi-agent AI, Amazon / Walmart / Criteo)."
-  },
-  {
-   "company": "Xnurta",
-   "title": "Senior Engineering Manager / Director of Engineering \u2014 AI Systems",
-   "url": "https://xnurta.rippling-ats.com/job/1078834/senior-engineering-manager-director-of-engineering-ai-systems",
-   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K; one hiring track, level set at offer."
-  },
-  {
-   "company": "Xnurta",
-   "title": "Staff / Principal Data Engineer \u2014 AI Data Platform",
-   "url": "https://xnurta.rippling-ats.com/job/1078832/staff-principal-data-engineer-ai-data-platform",
-   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K. (Senior AI Engineer also open; left out by the 3-role cap.)"
-  }
- ],
- "unsent_one_click": [],
  "dropped_2026-11-28": [
   "JPMorganChase Full Stack AI Cloud Lead Software Engineer (req 210807129): Built In says remote, but the requisition's work location is the Columbus OH office with no remote statement; financial institution -> remote or Bay Area only"
- ]
+ ],
+ "rows": "Rows for the applicant's files (one-click, Apply Myself, bot holds) live in rows.json; use rows.py (add / status / build new|all / mark-sent)."
 }

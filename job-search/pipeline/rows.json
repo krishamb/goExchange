@@ -1,0 +1,148 @@
+[
+ {
+  "route": "one_click",
+  "ats": "ashby",
+  "company": "Polygon Labs",
+  "title": "Senior Rust Engineer",
+  "url": "https://jobs.ashbyhq.com/polygon-labs/b07d2908-84a7-45b6-87d6-0b96f2f258d9",
+  "apply_url": "https://jobs.ashbyhq.com/polygon-labs/b07d2908-84a7-45b6-87d6-0b96f2f258d9/application",
+  "note": "Published 2026-11-27 19:06Z; Remote (EMEA, Americas or APAC; USA listed); pay not stated; blockchain payments infrastructure (Agglayer + paychannels), Rust.",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "f1bd273abfd4"
+ },
+ {
+  "route": "apply_myself",
+  "ats": "jobvite",
+  "company": "Forescout",
+  "title": "Sr. Full Stack Software Engineer",
+  "url": "https://jobs.jobvite.com/forescout/job/o7MsAfwF",
+  "note": "Posted 2026-11-27; remote US or Plano/Dallas hybrid; US citizens only (FedRAMP). Jobvite bot stopped on export-control questions and a typed attestation only the applicant can complete.",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "c5c0e7aabba9",
+  "apply_url": ""
+ },
+ {
+  "route": "apply_myself",
+  "ats": "email",
+  "company": "Canyon Code",
+  "title": "Head of Enterprise AI",
+  "url": "https://canyoncode.ai/about/careers",
+  "note": "Posted 2026-11-27; Sunnyvale (Silicon Valley), founding team; pre-seed AI-infrastructure startup (CanyonOS). Applications by email only via the careers page link (subject 'Head of Enterprise AI').",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "50e1f3caabe6",
+  "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "SLR Consulting",
+  "title": "Chief Technology Leader \u2013 Americas",
+  "url": "https://slrconsulting.wd103.myworkdayjobs.com/SLRCareers",
+  "note": "Remote USA, Built In 2026-11-28; CTO-level digital-products leadership (IoT, cloud, data platforms); not consulting delivery. Workday bot.",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "47bc3ae31f83",
+  "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "Roswell Park Comprehensive Cancer Center",
+  "title": "Chief Data & Artificial Intelligence Officer and Vice President",
+  "url": "https://roswellpark.wd5.myworkdayjobs.com/ExternalCareers",
+  "note": "LinkedIn remote filter; apply only if the Workday posting is remote US.",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "d73dee21b7f9",
+  "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "KBI Biopharma",
+  "title": "Senior Quality Systems Software Architect",
+  "url": "",
+  "note": "Check remote US, 7-day window, and that it is software architecture.",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "0abeb29f20b0",
+  "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "BioMarin (probable; LinkedIn listing posted by BioSpace)",
+  "title": "Head of AI and Data Solutions Delivery",
+  "url": "",
+  "note": "San Rafael CA; employer not verified; 1 prior BioMarin application (different role).",
+  "added": "2026-11-28T04:25:00Z",
+  "sent": [
+   "2026-11-28T04:25:00Z"
+  ],
+  "id": "486e92dd58e9",
+  "apply_url": ""
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "Extreme Networks",
+  "title": "Innovation Lead - Office of the CTO | AI",
+  "url": "",
+  "note": "Indeed alert 2026-11-28: remote US, $220K-$230K, posted ~2026-11-26. Verify on the employer site that it is an engineering role (not research / strategy) and the publish date.",
+  "added": "2026-11-28T07:58:00Z",
+  "sent": [],
+  "id": "5ad96f995270",
+  "apply_url": ""
+ },
+ {
+  "route": "apply_myself",
+  "ats": "hiringthing",
+  "company": "Xnurta",
+  "title": "Chief Technology Officer \u2014 AI Systems & Agentic Intelligence",
+  "url": "https://xnurta.rippling-ats.com/job/1078835/chief-technology-officer-ai-systems-agentic-intelligence",
+  "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$500K. AI-native retail-media ad platform (multi-agent AI, Amazon / Walmart / Criteo).",
+  "added": "2026-11-28T07:58:00Z",
+  "sent": [],
+  "id": "2d3bb79a66e6",
+  "apply_url": ""
+ },
+ {
+  "route": "apply_myself",
+  "ats": "hiringthing",
+  "company": "Xnurta",
+  "title": "Senior Engineering Manager / Director of Engineering \u2014 AI Systems",
+  "url": "https://xnurta.rippling-ats.com/job/1078834/senior-engineering-manager-director-of-engineering-ai-systems",
+  "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K; one hiring track, level set at offer.",
+  "added": "2026-11-28T07:58:00Z",
+  "sent": [],
+  "id": "bc0ac1152835",
+  "apply_url": ""
+ },
+ {
+  "route": "apply_myself",
+  "ats": "hiringthing",
+  "company": "Xnurta",
+  "title": "Staff / Principal Data Engineer \u2014 AI Data Platform",
+  "url": "https://xnurta.rippling-ats.com/job/1078832/staff-principal-data-engineer-ai-data-platform",
+  "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K. (Senior AI Engineer also open; left out by the 3-role cap.)",
+  "added": "2026-11-28T07:58:00Z",
+  "sent": [],
+  "id": "ce55a7ca24b2",
+  "apply_url": ""
+ }
+]
