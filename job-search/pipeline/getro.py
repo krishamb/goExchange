@@ -13,6 +13,7 @@ SC = "/tmp/claude-0/-home-user-goExchange/8d20ffb7-2488-5f8f-a666-35334b9e3ba6/s
 OUTD = os.path.join(SC, "harvest"); os.makedirs(OUTD, exist_ok=True)
 tag = sys.argv[1]; HOURS = float(sys.argv[2]) if len(sys.argv) > 2 else 48
 NOW = time.time(); CUT = NOW - HOURS * 3600
+OLD_GETRO = 1795800480.0   # 2026-11-27T17:28Z: the old pipeline's last Getro VC / crypto run (vc1127a / crypto1127a) screened everything created before it
 VC = ["jobs.generalcatalyst.com", "jobs.khoslaventures.com", "jobs.accel.com", "jobs.thrivecap.com", "jobs.luxcapital.com", "jobs.insightpartners.com",
       "jobs.menlovc.com", "careers.antler.co", "careers.bitkraft.vc", "jobs.8vc.com", "jobs.ggvc.com"]
 CRYPTO = ["jobs.solana.com", "jobs.variant.fund", "jobs.multicoin.capital", "jobs.electriccapital.com", "jobs.dragonfly.xyz", "jobs.coinfund.io",
@@ -71,6 +72,7 @@ for b in BOARDS:
                 if mm and mm.group(1).lower() not in known[a] and mm.group(1).lower() not in ("v1", "embed", "jobs"): newb[a].add(mm.group(1))
             ts = float(j.get("createdAt") or 0)
             if ts < CUT: W("older than window"); continue
+            if ts < OLD_GETRO and not os.environ.get("HARVEST_ALL"): W("screened by the old pipeline"); continue
             co = (j.get("organization") or {}).get("name") or ""; t = j.get("title") or ""
             if not ns["ENG"].search(t) or not ns["LEVEL"].search(t) or ns["NO"].search(t): W("title"); continue
             if ns["STAFF"].search(co): W("staffing"); continue
