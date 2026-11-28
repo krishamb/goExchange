@@ -1,11 +1,26 @@
 {
  "gh_last": {
-  "t": 1795855955.92315
+  "t": 1795863340.601394
  },
  "remotive.com_last": {
   "at_ts": 1795852762.4508607
  },
  "jobicy.com_last": {
   "at_ts": 1795852764.0946355
+ },
+ "myworkdayjobs.com": {
+  "until": 1795882481,
+  "code": "carried",
+  "at": "pause carried over from the old pipeline (all Workday tenants)"
+ },
+ "www.linkedin.com": {
+  "until": 1795920000,
+  "code": "carried",
+  "at": "429 at 2026-11-28T02:40Z (guest pages)"
+ },
+ "jobs.jobvite.com": {
+  "until": 1795879080,
+  "code": "carried",
+  "at": "pause carried over from the old pipeline"
  }
 }

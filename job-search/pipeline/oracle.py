@@ -76,7 +76,8 @@ for t in TEN:
                 wt = (r.get("WorkplaceTypeCode") or x.get("WorkplaceTypeCode") or r.get("WorkplaceType") or "").upper()
                 remote = "REMOTE" in wt or bool(re.search(r"\b(fully remote|remote[- ]first|this (role|position) (is|can be) (fully )?remote|remote within the (us|united states)|100% telecommut\w*|fully telecommut\w*|telecommut\w* (is )?permitted from any (us|u\.s\.) location|work from anywhere in the (us|united states))\b", body, re.I))
                 us = (r.get("PrimaryLocationCountry") or "") == "US" or bool(ns["USOK"].search(locs))
-                if ns["BAY"].search(locs) and not ("HYBRID" in wt and not ns["BAY"].search(r.get("PrimaryLocation") or "")): place = "SF Bay Area"
+                bay = ns["BAY"].search(locs) and not (ns["NONUS"].search(locs) and not re.search(r"\bca\b|california|bay area", locs, re.I))
+                if bay and not ("HYBRID" in wt and not ns["BAY"].search(r.get("PrimaryLocation") or "")): place = "SF Bay Area"
                 elif remote and us: place = "remote (US)"
                 else: W("location: " + ("non-US" if not us else "on-site / hybrid outside the Bay Area")); continue
                 pm = pay_max(body)

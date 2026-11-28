@@ -60,6 +60,9 @@ Rows land in `<scratchpad>/harvest/`; review them, then route them with `rows.py
 - `getro.py <tag> [hours]`: VC / crypto Getro boards, every few hours.
 - `oracle.py <tag> [days]`: Oracle Recruiting Cloud tenants in orc_tenants.json (keyword searches, newest first),
   every few hours; add tenants found on other boards (host + CX site number) to orc_tenants.json.
+- `workday.py <tag> [days]`: Workday career sites in wd_tenants.json (84 recovered from git history; skip flags for
+  never-apply / consulting / law / staffing tenants), US business hours; WD_DAYS=1 for same-day re-sweeps. The
+  `myworkdayjobs.com` key in blocks.json pauses every tenant; the first refusal pauses them all 24 h.
 - `gates.py "Company|Title"`: the company / role gates; `rows.py`: the file rows.
 - Job-alert emails (Indeed, LinkedIn, Built In ...): read in Gmail, resolve each role on the employer's own site.
 
