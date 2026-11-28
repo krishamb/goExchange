@@ -81,7 +81,8 @@
    "2026-11-28T04:25:00Z"
   ],
   "id": "0abeb29f20b0",
-  "apply_url": ""
+  "apply_url": "",
+  "dropped": "2026-11-28: employer Workday posting outside the 7-day window"
  },
  {
   "route": "bot_hold",
@@ -108,7 +109,8 @@
   "added": "2026-11-28T07:58:00Z",
   "sent": [],
   "id": "5ad96f995270",
-  "apply_url": ""
+  "apply_url": "",
+  "dropped": "2026-11-28: employer Workday posting outside the 7-day window"
  },
  {
   "route": "apply_myself",
@@ -118,7 +120,9 @@
   "url": "https://xnurta.rippling-ats.com/job/1078835/chief-technology-officer-ai-systems-agentic-intelligence",
   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$500K. AI-native retail-media ad platform (multi-agent AI, Amazon / Walmart / Criteo).",
   "added": "2026-11-28T07:58:00Z",
-  "sent": [],
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ],
   "id": "2d3bb79a66e6",
   "apply_url": ""
  },
@@ -130,7 +134,9 @@
   "url": "https://xnurta.rippling-ats.com/job/1078834/senior-engineering-manager-director-of-engineering-ai-systems",
   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K; one hiring track, level set at offer.",
   "added": "2026-11-28T07:58:00Z",
-  "sent": [],
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ],
   "id": "bc0ac1152835",
   "apply_url": ""
  },
@@ -142,7 +148,9 @@
   "url": "https://xnurta.rippling-ats.com/job/1078832/staff-principal-data-engineer-ai-data-platform",
   "note": "Posted 2026-11-25; HiringThing board (xnurta.rippling-ats.com), from an Indeed alert; resolved on the employer site. Campbell, CA (hybrid), full-time. Base $200K-$350K. (Senior AI Engineer also open; left out by the 3-role cap.)",
   "added": "2026-11-28T07:58:00Z",
-  "sent": [],
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ],
   "id": "ce55a7ca24b2",
   "apply_url": ""
  },
@@ -156,7 +164,9 @@
   "note": "Posted 2026-11-27; SF Bay Area (Jersey City, NJ, United States / Palo Alto, CA, United States / Jersey City, NJ, US); pay not stated; Oracle Recruiting Cloud (bot).",
   "id": "6c3a35379572",
   "added": "2026-11-28T09:01:54Z",
-  "sent": []
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
  },
  {
   "route": "one_click",
@@ -168,6 +178,190 @@
   "note": "Published 2026-11-28 06:06Z on Ashby (walrusfi); Remote (US); $190K-$280K (Built In); B2B payment-verification fintech (DoubleCheck), full-stack product engineering.",
   "id": "6385d731edb8",
   "added": "2026-11-28T14:09:51Z",
-  "sent": []
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior AI Workflow Engineer",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-AI-Workflow-Engineer_JR1999298",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "ae44a819de62",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior Full-Stack Engineer - DL Automation Platform",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Full-Stack-Engineer---DL-Automation-Platform_JR2025638",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, IL, Remote / US, WA, Remote / US, CA, Remote / 4 Locations); pay not stated; Workday (bot).",
+  "id": "0bfadc190f21",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Director, Engineering - Autonomous Vehicles",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Director--Engineering---Autonomous-Vehicles_JR2023529",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "dc23580b3477",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior Staff Software Engineer",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Staff-Software-Engineer_JR2029897",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Remote / 2 Locations); pay not stated; Workday (bot).",
+  "id": "541e4bf4ee84",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior Staff FinOps Engineer",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Staff-FinOps-Engineer_JR2030444",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, NC, Durham / US, NC, Remote / 3 Locations); pay not stated; Workday (bot).",
+  "id": "a055e14ab643",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Staff Software Engineer - Agentic Automation",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Staff-Software-Engineer---Agentic-Automation_JR2028169",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "bb1471885917",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior Staff Software Engineer - Data Engineering",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Staff-Software-Engineer---Data-Engineering_JR2028539-1",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "6fecb67b27f8",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Senior Staff Software Engineer - AI Agent Platform",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Senior-Staff-Software-Engineer---AI-Agent-Platform_JR2027565",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "d4e4f8ceb2d5",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "NVIDIA",
+  "title": "Staff Cloud Infrastructure Engineer - IT Cloud Foundation",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Staff-Cloud-Infrastructure-Engineer---IT-Cloud-Foundation_JR2028272",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; SF Bay Area (US, CA, Santa Clara / US, CA, Santa Clara); pay not stated; Workday (bot).",
+  "id": "0520c81fdbc4",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "Marvell",
+  "title": "FinOps & Technical Cloud Architect",
+  "url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/FinOps---Technical-Cloud-Architect_2604766-1",
+  "apply_url": "",
+  "note": "Posted 2026-11-23; SF Bay Area (Santa Clara, CA / Santa Clara, CA); pay not stated; Workday (bot).",
+  "id": "da4dda7b4b05",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "Wealth Enhancement Group",
+  "title": "Senior Drupal Developer",
+  "url": "https://wealthenhancement.wd1.myworkdayjobs.com/WEG_Careers/job/Remote---Any/Senior-Drupal-Developer_R-102866",
+  "apply_url": "",
+  "note": "Posted 2026-11-24; remote (US) (Remote - Any / Remote - Any); pay up to $198K; Workday (bot).",
+  "id": "2b75b0b91610",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "CVS Health",
+  "title": "Principal Software Engineer (Health100 Platform)",
+  "url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/Work-At-Home-Texas/Principal-Software-Engineer--Health100-Platform-_R0918008-1",
+  "apply_url": "",
+  "note": "Posted 2026-11-24; remote (US) (Work At Home-Texas / Work At Home-Washington / Work At Home-Connecticut / Work At Home-New); pay up to $288K; Workday (bot).",
+  "id": "2c84a0e55ff3",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
+ },
+ {
+  "route": "bot_hold",
+  "ats": "workday",
+  "company": "Extreme Networks",
+  "title": "AI Staff SW Systems Engineer",
+  "url": "https://extremenetworks.wd503.myworkdayjobs.com/Extreme_Networks/job/Seattle-WA-USA/AI-Staff-SW-Systems-Engineer--AI-Infra--Distributed-Systems-Microservice--AI-Infrastructure-Agentic_JR100173",
+  "apply_url": "",
+  "note": "Posted 2026-11-25; remote (US) (Seattle, WA USA / Seattle, WA USA); pay not stated; Workday (bot).",
+  "id": "6780b9266ad9",
+  "added": "2026-11-28T16:35:02Z",
+  "sent": [
+   "2026-11-28T16:35:31Z"
+  ]
  }
 ]

@@ -9,9 +9,10 @@
   "at_ts": 1795878220.9190032
  },
  "myworkdayjobs.com": {
-  "until": 1795882481,
-  "code": "carried",
-  "at": "pause carried over from the old pipeline (all Workday tenants)"
+  "until": 1795970067.525266,
+  "code": 429,
+  "at": "2026-11-28T16:34:27Z",
+  "host": "slrconsulting.wd103 / roswellpark.wd5 (after the first full sweep)"
  },
  "www.linkedin.com": {
   "until": 1795920000,

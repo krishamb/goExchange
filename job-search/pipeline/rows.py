@@ -62,7 +62,8 @@ def main():
         save(R); print(f"added {n} (store {len(R)})")
     elif cmd == "status":
         for rt in ("one_click", "apply_myself", "bot_hold"):
-            print(f"{rt}: {sum(1 for x in R if x['route'] == rt and not x['sent'])} unsent / {sum(1 for x in R if x['route'] == rt)} total")
+            live = [x for x in R if x["route"] == rt and not x.get("dropped")]
+            print(f"{rt}: {sum(1 for x in live if not x['sent'])} unsent / {len(live)} total ({sum(1 for x in R if x['route'] == rt and x.get('dropped'))} dropped)")
     elif cmd == "build":
         mode = sys.argv[2] if len(sys.argv) > 2 else "new"; days = float(sys.argv[3]) if len(sys.argv) > 3 else 7
         cut = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() - days * 86400))

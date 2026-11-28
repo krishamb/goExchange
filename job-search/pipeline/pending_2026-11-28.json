@@ -36,24 +36,12 @@
    "title": "Chief Data & Artificial Intelligence Officer and Vice President",
    "tenant": "roswellpark.wd5.myworkdayjobs.com/ExternalCareers",
    "note": "LinkedIn remote filter; apply only if the Workday posting is remote US."
-  },
-  {
-   "company": "KBI Biopharma",
-   "title": "Senior Quality Systems Software Architect",
-   "tenant": "jsrglobal.wd1.myworkdayjobs.com/KBI_Biopharma",
-   "note": "Check remote US, 7-day window, and that it is software architecture."
-  },
-  {
-   "company": "Extreme Networks",
-   "title": "Innovation Lead - Office of the CTO | AI",
-   "tenant": "extremenetworks.wd503.myworkdayjobs.com/Extreme_Networks",
-   "note": "Indeed alert 2026-11-28: remote US, $220K-$230K, posted ~2026-11-26. Verify on the employer site that it is an engineering role (not research / strategy) and the publish date."
   }
  ],
  "blocked_until": {
   "linkedin": "2026-11-29T02:40Z (429 at 2026-11-28T02:40:23Z)",
   "jobvite": "~2026-11-28T15:18Z",
-  "workday": "2026-11-28T16:14:41Z",
+  "workday": "2026-11-29T16:34Z (429 from two tenants at 16:3xZ after the first sweep)",
   "greenhouse_boards_api": "2026-11-28T04:19:36Z (then harvest every other hour)",
   "himalayas_search_api": "retry 2026-11-28 daytime (429 twice on 2026-11-27)",
   "bamboohr_recruitee": "~2026-11-28T10:35Z"
@@ -67,7 +55,9 @@
  "addendum_sent": "2026-11-28T04:25Z: one_click_new, apply_myself_new and the Workday holds above went to the applicant in NEW_ROLES_2026-11-27.html; rows below are not sent yet",
  "dropped_2026-11-28": [
   "JPMorganChase Full Stack AI Cloud Lead Software Engineer (req 210807129): Built In says remote, but the requisition's work location is the Columbus OH office with no remote statement; financial institution -> remote or Bay Area only",
-  "BioMarin Head of AI and Data Solutions Delivery: applies via Jobvite (not Workday); employer posting dated 2026-11-16 (outside the 7-day window)"
+  "BioMarin Head of AI and Data Solutions Delivery: applies via Jobvite (not Workday); employer posting dated 2026-11-16 (outside the 7-day window)",
+  "KBI Biopharma Senior Quality Systems Software Architect: Workday start date 2026-10-22 (outside the window)",
+  "Extreme Networks Innovation Lead - Office of the CTO | AI: Workday start date 2026-11-09 (outside the window), hybrid Pacific NW"
  ],
  "rows": "Rows for the applicant's files (one-click, Apply Myself, bot holds) live in rows.json; use rows.py (add / status / build new|all / mark-sent)."
 }

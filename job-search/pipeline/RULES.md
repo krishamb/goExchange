@@ -15,6 +15,8 @@ here, in the repository, and are committed after each change. Personal data neve
   bot_hold). When 5+ unsent one_click + apply_myself rows exist run `rows.py build new`; in the 9 PM routine run
   `rows.py build all`. Send each built file in its own SendUserFile call, then `rows.py mark-sent`. Bot-lane roles
   that cannot submit yet are bot_hold rows, listed last in the Apply Myself file.
+- While the bots cannot submit (private files missing), bot_hold rows count toward the 5-row send threshold: the
+  applicant can apply to them directly from the Apply Myself file.
 
 ## Screening
 - Pay: the stated maximum must be at least $180K; unstated pay is fine.
