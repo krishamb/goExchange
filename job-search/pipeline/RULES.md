@@ -64,6 +64,8 @@ Rows land in `<scratchpad>/harvest/`; review them, then route them with `rows.py
   never-apply / consulting / law / staffing tenants), US business hours; WD_DAYS=1 for same-day re-sweeps. The
   `myworkdayjobs.com` key in blocks.json pauses every tenant; the first refusal pauses them all 24 h.
 - `sr.py <tag> [days]`: SmartRecruiters companies in sr_companies.json (no bot: rows go to the Apply Myself file), every few hours.
+- `yc.py <tag> [days]`: public ycombinator.com/jobs pages (SF, remote, all; never signed in), a few times a day; rows
+  without a known employer board go to the Apply Myself file (the applicant applies with their own YC account).
 - `li.py <tag>`: ONE public LinkedIn search per check-in (8 rotating Boolean queries, past 24 h; the tool enforces
   the 50-minute spacing and the pause). Rows routed "resolve" need the employer's own posting found by hand first.
 - `gates.py "Company|Title"`: the company / role gates; `rows.py`: the file rows.
