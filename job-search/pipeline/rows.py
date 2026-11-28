@@ -32,19 +32,19 @@ def applied(x):
 
 CSS = ("body{font:15px/1.45 system-ui,sans-serif;margin:16px;color:#111;background:#fff}table{border-collapse:collapse;width:100%}"
        "td,th{border:1px solid #ccc;padding:8px;vertical-align:top;text-align:left}th{background:#f3f3f3}a{color:#0b57d0}"
-       "p.note{color:#444}h2{margin-top:28px}@media (prefers-color-scheme:dark){body{background:#111;color:#eee}th{background:#222}td,th{border-color:#444}a{color:#8ab4f8}p.note{color:#bbb}}")
+       "p.note{color:#444}h2{margin-top:28px}@media (max-width:600px){table,tbody,tr,td{display:block;width:100%;box-sizing:border-box}tr{border:1px solid #ccc;border-radius:8px;margin:0 0 12px;padding:8px 10px}thead{display:none}td{border:none;padding:3px 0}td:first-child{display:none}}@media (prefers-color-scheme:dark){body{background:#111;color:#eee}th{background:#222}td,th{border-color:#444}a{color:#8ab4f8}p.note{color:#bbb}}")
 def page(title, intro, sections):
     e = html.escape
     out = [f'<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><style>{CSS}</style></head><body>',
            f"<h1>{e(title)}</h1><p class=\"note\">{e(intro)}</p>"]
     for head, rows, link_text in sections:
         if not rows: continue
-        out.append(f"<h2>{e(head)} ({len(rows)})</h2><table><tr><th>#</th><th>Role</th><th>Link</th><th>Notes</th></tr>")
+        out.append(f"<h2>{e(head)} ({len(rows)})</h2><table><thead><tr><th>#</th><th>Role</th><th>Link</th><th>Notes</th></tr></thead><tbody>")
         for i, x in enumerate(rows, 1):
             u = x.get("apply_url") or x.get("url") or ""
             a = f'<a href="{e(u)}" target="_blank" rel="noopener">{e(link_text)}</a>' if u else "-"
             out.append(f"<tr><td>{i}</td><td><b>{e(x['company'])}</b><br>{e(x['title'])}</td><td>{a}</td><td>{e(x.get('note') or '')}</td></tr>")
-        out.append("</table>")
+        out.append("</tbody></table>")
     out.append("</body></html>")
     return "\n".join(out)
 
