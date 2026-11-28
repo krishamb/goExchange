@@ -18,7 +18,7 @@ VC = ["jobs.generalcatalyst.com", "jobs.khoslaventures.com", "jobs.accel.com", "
       "jobs.menlovc.com", "careers.antler.co", "careers.bitkraft.vc", "jobs.8vc.com", "jobs.ggvc.com"]
 CRYPTO = ["jobs.solana.com", "jobs.variant.fund", "jobs.multicoin.capital", "jobs.electriccapital.com", "jobs.dragonfly.xyz", "jobs.coinfund.io",
           "jobs.polychain.capital", "jobs.framework.ventures", "jobs.avax.network", "jobs.blockchaincapital.com", "jobs.dcg.co", "jobs.castleisland.vc",
-          "jobs.placeholder.vc", "jobs.archetype.fund", "jobs.delphiventures.io", "jobs.nascent.xyz"]
+          "jobs.placeholder.vc", "jobs.delphiventures.io", "jobs.nascent.xyz"]
 BOARDS = [b for b in (os.environ.get("GETRO_BOARDS") or ",".join(VC + CRYPTO)).split(",") if b]
 QUERIES = (os.environ.get("GETRO_QUERIES") or "CTO,VP,head,director,principal,staff,architect,manager,lead").split(",")   # single words (multi-word queries act as exact phrases)
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
