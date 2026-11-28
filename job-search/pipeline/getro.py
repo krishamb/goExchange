@@ -93,6 +93,12 @@ for b in BOARDS:
         time.sleep(1.5)
     print(f"{b}: {nb} jobs")
 added = {a: sorted(v) for a, v in newb.items()}
+BA = os.path.join(HERE, "boards_added.json")   # boards added after the reset: harvest.py screens all their postings (no old-pipeline cutoff)
+try: ba = json.load(open(BA))
+except Exception: ba = {}
+for a, v in added.items():
+    for s_ in v: ba.setdefault(a, {}).setdefault(s_, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+json.dump(ba, open(BA, "w"), indent=1)
 for a, v in added.items(): B[a] = sorted(set(B.get(a, [])) | set(v))
 json.dump(B, open(os.path.join(HERE, "boards.json"), "w"), indent=0)
 keep.sort(key=lambda r: r["created"], reverse=True)

@@ -110,6 +110,9 @@ FROM = os.environ.get("HARVEST_FROM")   # re-screen saved rows (no requests), e.
 if not FROM and "greenhouse" in ATS and NOW - float(BLOCKS.get("gh_last", {}).get("t", 0)) < 7000:
     print("greenhouse skipped (harvested less than 2 h ago; every-other-hour rule)"); ATS = [a for a in ATS if a != "greenhouse"]
 B = json.load(open(os.path.join(HERE, "boards.json")))
+try: ADDED = {a: {x.lower() for x in v} for a, v in json.load(open(os.path.join(HERE, "boards_added.json"))).items()}   # boards added after the reset
+except Exception: ADDED = {}
+if os.environ.get("HARVEST_ONLY_ADDED"): B = {a: [x for x in v if x.lower() in ADDED.get(a, set())] for a, v in B.items()}
 FN = {"ashby": ashby, "lever": lever, "greenhouse": greenhouse}; WORKERS = {"ashby": 8, "lever": 8, "greenhouse": 4}
 jobs, why = [], {}
 def W(k): why[k] = why.get(k, 0) + 1
@@ -129,7 +132,7 @@ jobs.sort(key=lambda j: (RANK.get(g.level(j.get("title")), 9), -(j.get("ts") or 
 keep, seen = [], set()
 for j in jobs:
     if not j["ts"] or j["ts"] < CUT: W("older than window"); continue
-    if j["ts"] < OLD_CUT.get(j["ats"], 0) and not os.environ.get("HARVEST_ALL"): W("screened by the old pipeline"); continue
+    if j["ts"] < OLD_CUT.get(j["ats"], 0) and not os.environ.get("HARVEST_ALL") and j["board"].lower() not in ADDED.get(j["ats"], set()): W("screened by the old pipeline"); continue
     t = j["title"]
     if not ENG.search(t) or not LEVEL.search(t) or NO.search(t): W("title"); continue
     if re.search(r"part[- ]?time|intern|temporary|contract", j["emp"], re.I): W("not full-time"); continue
